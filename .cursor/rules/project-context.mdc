@@ -1,0 +1,31 @@
+---
+description: Project overview and conventions for the Qualitative Outcome Coder app.
+alwaysApply: true
+---
+# Qualitative Outcome Coder
+
+React + Vite + TypeScript app that uses the Google Gemini API to batch-code qualitative outcome text against configurable codebooks.
+
+## Stack
+- **Frontend:** React 19, Vite 6, TypeScript
+- **AI:** `@google/genai` via `services/geminiService.ts`
+- **Secrets:** `GEMINI_API_KEY` in `.env.local` (never commit)
+
+## Layout (flat root, no `src/`)
+- `App.tsx` — main app shell and batch upload flow
+- `components/` — UI (ReviewDashboard, ResultDisplay, ProcessingStatus, etc.)
+- `services/geminiService.ts` — Gemini integration and batch processing
+- `types.ts` — shared TypeScript interfaces
+- `constants.ts` — codebook definitions and prompt instructions
+- `docs/specs/` — PRDs and technical specs (use with @product, @architect)
+
+## Commands
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # production build
+npm run preview  # preview production build
+```
+
+## Agent roster
+Invoke specialized agents with `@` in chat: @product, @architect, @integrator, @ux, @critic, @microcopy, @pattern-analyst, @user-tester, @devops

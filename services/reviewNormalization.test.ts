@@ -31,6 +31,15 @@ describe('normalizeImportedCoding (original codebook)', () => {
     expect(result.primary_domain).toBe('Domain 1. Joy, Interest & Motivation in Learning');
   });
 
+  it('fuzzy-matches a two-digit domain number missing the "Domain " prefix', () => {
+    const result = normalizeImportedCoding(
+      { primary_domain: '11. Academic Learning & Achievement', primary_confidence: 'high', uncoded: false },
+      original,
+      'original'
+    );
+    expect(result.primary_domain).toBe('Domain 11. Academic Learning & Achievement');
+  });
+
   it('fuzzy-matches a subcategory given only its numeric prefix', () => {
     const result = normalizeImportedCoding(
       {

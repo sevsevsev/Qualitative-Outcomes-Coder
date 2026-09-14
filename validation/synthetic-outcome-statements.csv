@@ -1,0 +1,95 @@
+row_id,group,outcome_text,v1_0_0_simulated_tag,v1_0_0_simulated_domain
+1,afterschool_ost,Students will increase their homework completion rate from 60% to 85%.,CLEAN,4.1
+2,afterschool_ost,Youth will report feeling excited and happy to attend program each day.,CLEAN,1.1
+3,afterschool_ost,Participants will build new friendships with peers from different schools and grade levels.,CLEAN,2.3
+4,afterschool_ost,"Youth will demonstrate improved frustration tolerance during homework time, leading to more assignments completed on time.",AWKWARD,forced to 3.2.1
+5,afterschool_ost,Program will maintain 85% average daily attendance across all sites.,UNCODED,
+6,afterschool_ost,"Students will try new enrichment activities they've never done before (cooking, coding, art).",AWKWARD,forced to 1.2
+7,mentoring,Mentees will report having a trusted adult they can go to with problems.,CLEAN,2.2
+8,mentoring,Match pairs will meet consistently for at least 12 months.,UNCODED,
+9,mentoring,Youth will set and work toward a personal goal with support from their mentor.,CLEAN,3.2.3
+10,mentoring,Mentors will report increased confidence in their ability to support youth from different cultural backgrounds.,AWKWARD,forced to 10.1
+11,mentoring,Youth will feel like someone believes in them.,CLEAN,2.2
+12,arts_education,Students will develop technical proficiency on their chosen instrument.,AWKWARD,forced to 1.4
+13,arts_education,"Youth will present their artwork in a public exhibition, building pride and confidence.",AWKWARD,forced to 3.1.4
+14,arts_education,Students will use art as a healthy outlet for processing emotions.,AWKWARD,split between 7.3 and 3.2.2
+15,arts_education,Participants will collaborate with peers on a group theater production.,CLEAN,3.4.2
+16,arts_education,Youth will discover a new passion for dance.,CLEAN,1.2
+17,sports_recreation,Youth will improve physical fitness and cardiovascular endurance.,CLEAN,7.1
+18,sports_recreation,Athletes will demonstrate good sportsmanship (win or lose gracefully).,AWKWARD,forced to 5.2
+19,sports_recreation,Youth will learn to work as part of a team to achieve a common goal.,CLEAN,3.4.2
+20,sports_recreation,Participants will reduce screen time and increase physical activity outside of program hours.,CLEAN,7.1
+21,sports_recreation,Coaches will report improved ability to de-escalate conflicts between players during games.,AWKWARD,forced to 10.1
+22,environmental_outdoor,Youth will increase their knowledge of local ecosystems and environmental science concepts.,AWKWARD,forced to 8.1
+23,environmental_outdoor,Youth will develop a sense of stewardship and connection to nature.,UNCODED,
+24,environmental_outdoor,"Participants will build confidence in outdoor physical skills (hiking, kayaking, rock climbing).",CLEAN,3.1.4
+25,environmental_outdoor,Youth will demonstrate leadership skills while leading a trail cleanup for the community.,AWKWARD,forced to 6.3
+26,environmental_outdoor,Students will identify careers in environmental science and conservation.,CLEAN,8.4
+27,workforce_cte,Youth will complete a resume and practice interview skills.,CLEAN,8.3
+28,workforce_cte,"Participants will earn an industry-recognized certification (OSHA-10, ServSafe, CPR).",CLEAN,8.6
+29,workforce_cte,"Youth will demonstrate punctuality, professional communication, and appropriate workplace attire.",CLEAN,8.5
+30,workforce_cte,Interns will report increased understanding of workplace culture and expectations at their internship site.,CLEAN,8.6
+31,workforce_cte,Youth will explore at least three career pathways aligned to their interests using labor market data.,CLEAN,8.4
+32,family_support,Parents will report increased confidence in their parenting skills.,AWKWARD,forced to 10.4
+33,family_support,Families will increase their knowledge of child development milestones.,AWKWARD,forced to 10.4
+34,family_support,Parents will report feeling more connected to their child's school community.,CLEAN,2.5
+35,family_support,Caregivers will demonstrate use of positive discipline strategies at home.,AWKWARD,forced to 10.4
+36,family_support,Parents will attend at least 4 family workshops during the program year.,UNCODED,
+37,housing_basic_needs,"Families will secure stable, safe housing within 90 days of program enrollment.",CLEAN,9.1
+38,housing_basic_needs,Families will reduce housing instability and report decreased stress related to housing insecurity.,AWKWARD,forced to 9.1
+39,housing_basic_needs,Youth experiencing homelessness will maintain school enrollment and attendance despite housing disruptions.,AWKWARD,forced to 4.1
+40,housing_basic_needs,"Families will connect with case management and access public benefits (SNAP, TANF, Medicaid).",CLEAN,9.1
+41,housing_basic_needs,Case managers will report improved ability to navigate the county benefits system on behalf of clients.,CLEAN,10.1
+42,immigrant_refugee,Youth will improve their English language proficiency.,UNCODED,
+43,immigrant_refugee,Families will navigate school enrollment and special education processes despite language barriers.,CLEAN,9.2
+44,immigrant_refugee,Parents will access interpretation and translation services to communicate with teachers.,CLEAN,9.1
+45,immigrant_refugee,Refugee youth will develop a strong sense of both their heritage culture and their new community.,CLEAN,2.4
+46,immigrant_refugee,Newcomer students will reduce social isolation and build friendships with peers who share similar experiences.,CLEAN,2.3
+47,disability_inclusion,Youth with disabilities will participate fully in program activities alongside their peers.,CLEAN,9.2
+48,disability_inclusion,Staff will increase their knowledge of inclusive practices and accommodations for youth with diverse abilities.,CLEAN,10.1
+49,disability_inclusion,Youth will develop self-advocacy skills to communicate their needs and accommodations.,AWKWARD,forced to 3.4.4
+50,disability_inclusion,Families of children with disabilities will report reduced caregiver stress and burnout.,AWKWARD,forced to 7.2
+51,disability_inclusion,Youth will build friendships with both disabled and non-disabled peers in an inclusive setting.,CLEAN,2.3
+52,school_based_mental_health,Students will report reduced symptoms of anxiety and depression.,CLEAN,7.2
+53,school_based_mental_health,Students will develop coping strategies for managing stress.,CLEAN,3.2.2
+54,school_based_mental_health,Youth will demonstrate increased willingness to seek help when struggling emotionally.,CLEAN,3.4.4
+55,school_based_mental_health,Students identified as high-risk will be connected to community mental health providers for ongoing care.,CLEAN,7.4
+56,school_based_mental_health,"Students will show improved emotional regulation, reduced disciplinary referrals, and better peer relationships.",AWKWARD,forced to 3.2.1
+57,civic_engagement,Youth will identify a community issue and develop an action plan to address it.,CLEAN,6.3
+58,civic_engagement,Youth will register to vote and participate in local elections.,CLEAN,6.1
+59,civic_engagement,Youth will articulate how systemic racism affects their community and advocate for policy change.,CLEAN,6.4
+60,civic_engagement,Youth organizers will present testimony to the city council on a policy issue affecting their neighborhood.,CLEAN,6.3
+61,civic_engagement,Youth will complete 20 hours of community service through park cleanups and food drives.,CLEAN,6.2
+62,faith_based,Youth will deepen their spiritual life and relationship with God.,UNCODED,
+63,faith_based,Youth will develop a personal set of moral values grounded in their faith tradition.,AWKWARD,forced to 5.2
+64,faith_based,Youth will build a supportive peer community within the youth group.,CLEAN,2.3
+65,faith_based,Youth will participate in a mission trip and serve people experiencing poverty.,CLEAN,6.2
+66,faith_based,Youth will report a stronger sense of purpose and belonging within their faith community.,AWKWARD,forced to 2.1
+67,juvenile_justice_reentry,Youth will reduce recidivism and avoid re-arrest within 12 months of program completion.,UNCODED,
+68,juvenile_justice_reentry,Youth will develop skills to resist peer pressure and avoid risky behaviors.,CLEAN,3.5.4
+69,juvenile_justice_reentry,Youth will successfully complete probation requirements and court-ordered conditions.,UNCODED,
+70,juvenile_justice_reentry,Youth will reconnect with family members and rebuild trust after a period of incarceration.,AWKWARD,forced to 2.5
+71,juvenile_justice_reentry,Youth will re-enroll in school or obtain a GED following release.,AWKWARD,forced to 8.3
+72,early_childhood,"Children will demonstrate age-appropriate pre-literacy skills (letter recognition, phonemic awareness).",AWKWARD,forced to 8.1
+73,early_childhood,Parents will read to their child at least 3 times per week.,AWKWARD,forced to 10.4
+74,early_childhood,Children will demonstrate improved self-regulation and ability to follow classroom routines.,CLEAN,3.2.1
+75,early_childhood,Families will establish a consistent bedtime and daily routine at home.,UNCODED,
+76,early_childhood,Parents will increase their understanding of child developmental milestones and appropriate expectations.,AWKWARD,forced to 10.4
+77,food_security,Families will report reduced food insecurity and increased access to healthy food.,CLEAN,9.1
+78,food_security,Youth will increase their knowledge of nutrition and healthy cooking skills.,CLEAN,7.1
+79,food_security,Participants will grow and harvest vegetables in the community garden.,CLEAN,7.1
+80,food_security,Families will reduce reliance on emergency food assistance over time.,AWKWARD,forced to 9.1
+81,food_security,Volunteers will report a greater understanding of food insecurity issues in their community after serving at the food pantry.,AWKWARD,forced to 6.4
+82,digital_equity,Families will receive a laptop and home internet access.,CLEAN,9.1
+83,digital_equity,Youth will develop coding and computational thinking skills.,AWKWARD,forced to 8.6
+84,digital_equity,"Youth will demonstrate safe and responsible online behavior, including recognizing scams and protecting personal information.",CLEAN,6.5
+85,digital_equity,Family members will increase their digital literacy and confidence using technology for telehealth and school portals.,AWKWARD,forced to 6.5
+86,digital_equity,Program will distribute 200 refurbished laptops to low-income families this year.,UNCODED,
+87,general_education_tutoring,Students will improve reading fluency by one grade level.,AWKWARD,forced to 8.1
+88,general_education_tutoring,Students will improve their math problem-solving skills and grade-level proficiency.,AWKWARD,forced to 8.1
+89,general_education_tutoring,Students will increase their use of effective study strategies such as note-taking and test preparation.,CLEAN,4.3
+90,general_education_tutoring,Students will demonstrate increased confidence in their academic abilities.,CLEAN,4.4
+91,general_education_tutoring,Tutors (college volunteers) will strengthen their own communication and mentoring skills through the experience.,AWKWARD,forced to 10.1
+92,general_education_tutoring,N/A,UNCODED,
+93,general_education_tutoring,See logic model above.,UNCODED,
+94,general_education_tutoring,Improve outcomes for students.,UNCODED,

@@ -273,11 +273,11 @@ Framework Basis: CDC WSCC (Physical), Dual Continua Model (Mental Health), SAMHS
    - Example: "Youth will demonstrate knowledge of methods to prevent unintended pregnancy and STIs."
 7.7 Violence, Bullying & Injury Prevention
    - Definition: Outcomes related to reducing involvement in fighting, bullying (as perpetrator or victim), community violence, or unintentional injury.
-   - Source Framework: CDC YRBSS; CDC bullying/violence-prevention definitions.
+   - Source Framework: CDC YRBSS; CDC & U.S. Dept. of Education, "Bullying Surveillance Among Youths: Uniform Definitions for Public Health and Recommended Data Elements" (2014).
    - Example: "Youth will reduce involvement in physical fights at school."
 7.8 Justice Involvement, Diversion & Reentry
    - Definition: Outcomes related to avoiding justice-system involvement, successful diversion, or successful reentry/reduced recidivism after justice involvement.
-   - Source Framework: OJJDP recidivism measurement standards.
+   - Source Framework: Council of Juvenile Correctional Administrators (CJCA) White Paper, "Defining and Measuring Recidivism" (2009, OJJDP-supported).
    - Note: This is often the PRIMARY outcome for juvenile-justice and reentry programs -- do not leave these uncoded just because they are legal/systems-flavored language.
    - Example: "Youth will reduce recidivism and avoid re-arrest within 12 months of program completion." OR "Youth will successfully complete probation requirements."
 
@@ -342,7 +342,7 @@ Framework Basis: Learning Forward Standards & Epstein Type 3/6; Weikart Center Y
    - Example: "The program will establish a Parent Advisory Council."
 10.5 Program Participation, Retention & Reach (Output Metric)
    - Definition: Program-level attendance, enrollment, retention, or dosage metrics (e.g., attendance rate, sessions completed, number of youth served).
-   - Source Framework: Weikart Center Youth Program Quality Assessment; Harvard Family Research Project out-of-school-time participation dimensions.
+   - Source Framework: Weikart Center Youth Program Quality Assessment; Harvard Family Research Project (now archived under Global Family Research Project, 2017-) out-of-school-time participation dimensions.
    - Note: These are program OUTPUTS, not youth outcomes. Use this code rather than forcing a dosage/attendance statistic into an unrelated youth-outcome domain, and rather than marking it "uncoded" -- it is a real, codeable statement; it simply does not describe a change in a young person.
    - Example: "Program will maintain 85% average daily attendance across all sites." OR "Match pairs will meet consistently for at least 12 months."
 

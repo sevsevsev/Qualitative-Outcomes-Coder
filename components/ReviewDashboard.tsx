@@ -1,15 +1,10 @@
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { AtomicBatchItem, BatchAnalysisResult, CodebookType } from '../types';
-import { 
-  CODEBOOK_DOMAINS, 
-  CODEBOOK_SUBCATEGORIES, 
-  ACCELERATE_PHILLY_DOMAINS,
-  ACCELERATE_PHILLY_SUBCATEGORIES,
-  SUBJECT_AREA_OPTIONS, 
-  TARGET_POPULATION_OPTIONS 
-} from '../constants';
+import { getCodebook, allDomainCodes, subcategoriesForDomain } from '../codebooks';
 import { atomicJsonToCSV } from '../services/geminiService';
+import { saveReviewState, clearReviewState } from '../services/reviewStorage';
+import { normalizeImportedCoding } from '../services/reviewNormalization';
 
 interface ReviewDashboardProps {
   result: BatchAnalysisResult;
@@ -21,10 +16,20 @@ interface ReviewDashboardProps {
 type ReviewItem = AtomicBatchItem & { internal_id: string };
 
 const ITEMS_PER_PAGE = 20;
+const AUTOSAVE_DEBOUNCE_MS = 800;
 
 const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, codebookType }) => {
-  const domains = codebookType === 'accelerate_philly' ? ACCELERATE_PHILLY_DOMAINS : CODEBOOK_DOMAINS;
-  const subcategories = codebookType === 'accelerate_philly' ? ACCELERATE_PHILLY_SUBCATEGORIES : CODEBOOK_SUBCATEGORIES;
+  const codebookDef = getCodebook(codebookType);
+  const domains = useMemo(() => allDomainCodes(codebookDef), [codebookDef]);
+  const { hasSubcategories, hasSubjectArea, hasTargetPopulation } = codebookDef.capabilities;
+  const subjectAreaOptions = codebookDef.subjectAreaOptions ?? [];
+  const targetPopulationOptions = codebookDef.targetPopulationOptions ?? [];
+
+  const domainHint = (domainCode: string): string | undefined =>
+    codebookDef.domains.find(d => d.code === domainCode)?.hint;
+
+  const subcategoryHint = (domainCode: string, subCode: string): string | undefined =>
+    subcategoriesForDomain(codebookDef, domainCode).find(s => s.code === subCode)?.hint;
 
   // ---------------------------------------------------------------------------
   // 1. ROBUST INITIALIZATION & KEY GENERATION
@@ -35,73 +40,17 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
         // GENERATE UNIQUE ID: Critical for handling CSVs with duplicate row_ids
         const internal_id = `row_${index}_${Math.random().toString(36).substr(2, 9)}`;
 
-        let cleanDomain = (item.primary_domain || "").trim();
-        let cleanSub = (item.primary_subcategory || "").trim();
-        let cleanConf = (item.primary_confidence || "none").trim().toLowerCase();
-        let isUncoded = item.uncoded === true || String(item.uncoded).toLowerCase() === 'true';
-
-        // --- Domain Normalization ---
-        let matchedDomain = domains.find(d => d.toLowerCase() === cleanDomain.toLowerCase());
-        
-        // Fuzzy match: "1. Joy..." -> "Domain 1. Joy..."
-        if (!matchedDomain && cleanDomain) {
-            let checkDomain = cleanDomain;
-            if (codebookType === 'original') {
-                // Handle "1. Joy"
-                if (/^\d+(\.\d+)*\s/.test(checkDomain) && !checkDomain.toLowerCase().startsWith('domain')) {
-                     checkDomain = "Domain " + checkDomain;
-                }
-                // Handle "Domain 1" -> "Domain 1."
-                if (/^Domain \d+$/.test(checkDomain)) {
-                    checkDomain += ".";
-                }
-                const domainParts = checkDomain.split(/[. ]/); 
-                if (domainParts.length > 1 && domainParts[0].toLowerCase() === "domain") {
-                     const prefix = `${domainParts[0]} ${domainParts[1]}.`; 
-                     matchedDomain = domains.find(d => d.toLowerCase().startsWith(prefix.toLowerCase()));
-                }
-            } else if (codebookType === 'accelerate_philly') {
-                if (/^\d+/.test(checkDomain) && !checkDomain.toLowerCase().startsWith('code')) {
-                     checkDomain = "Code " + checkDomain.padStart(2, '0');
-                }
-                matchedDomain = domains.find(d => d.toLowerCase().includes(checkDomain.toLowerCase()));
-            }
-        }
-
-        if (matchedDomain) {
-            cleanDomain = matchedDomain;
-            // Trust Domain over Uncoded flag if conflict
-            if (isUncoded) isUncoded = false;
-        } else {
-            // Invalid Domain: Clear it to force selection
-            cleanDomain = ""; 
-            if (!isUncoded) {
-                cleanConf = "none";
-            }
-        }
-
-        // --- Subcategory Normalization ---
-        if (cleanDomain) {
-            const validSubs = subcategories[cleanDomain] || [];
-            let matchedSub = validSubs.find(s => s.toLowerCase() === cleanSub.toLowerCase());
-            
-            if (!matchedSub && cleanSub) {
-                 const subPrefix = cleanSub.split(' ')[0]; 
-                 matchedSub = validSubs.find(s => s.startsWith(subPrefix));
-            }
-            cleanSub = matchedSub || ""; 
-        } else {
-            cleanSub = "";
-        }
+        const normalized = normalizeImportedCoding(item, codebookDef, codebookType);
 
         return {
             ...item,
             internal_id, // Use this for React Keys and Updates
-            primary_domain: cleanDomain,
-            primary_subcategory: cleanSub,
-            primary_confidence: cleanConf,
-            uncoded: isUncoded,
-            is_corrected: item.is_corrected || false
+            primary_domain: normalized.primary_domain,
+            primary_subcategory: normalized.primary_subcategory,
+            primary_confidence: normalized.primary_confidence as ReviewItem['primary_confidence'],
+            uncoded: normalized.uncoded,
+            is_corrected: item.is_corrected || false,
+            codebook_version: item.codebook_version || `${codebookDef.id}@${codebookDef.version}`,
         };
     });
   });
@@ -109,6 +58,30 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
   const [filterMode, setFilterMode] = useState<'all' | 'review'>('all');
   const [page, setPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
+
+  // ---------------------------------------------------------------------------
+  // 1b. AUTOSAVE -- persist review progress so a refresh/crash can't lose it
+  // ---------------------------------------------------------------------------
+  const autosaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isFirstRender = useRef(true);
+
+  useEffect(() => {
+    // Skip the save-on-mount; the initial snapshot is already what was
+    // just loaded/restored, nothing new to persist yet.
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    if (autosaveTimer.current) clearTimeout(autosaveTimer.current);
+    autosaveTimer.current = setTimeout(() => {
+      const cleanItems = items.map(({ internal_id, ...rest }) => rest);
+      saveReviewState({ codebookType, items: cleanItems, savedAt: Date.now() });
+    }, AUTOSAVE_DEBOUNCE_MS);
+
+    return () => {
+      if (autosaveTimer.current) clearTimeout(autosaveTimer.current);
+    };
+  }, [items, codebookType]);
 
   // ---------------------------------------------------------------------------
   // 2. NEEDS REVIEW LOGIC
@@ -122,7 +95,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
 
       // RULE 3: If Coded, verify completeness.
       if (!item.primary_domain) return true;
-      
+
       const conf = (item.primary_confidence || 'none').trim().toLowerCase();
       // 'low', 'none', or empty string need review. 'medium' and 'high' are OK.
       if (['low', 'none', ''].includes(conf)) return true;
@@ -140,7 +113,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
     const filtered = items.filter(item => {
        if (item.uncoded) currentStats.uncoded++;
        if ((item.primary_confidence || '').trim().toLowerCase() === 'low') currentStats.lowConf++;
-       
+
        const needsReview = checkNeedsReview(item);
        if (needsReview) reviewCount++;
 
@@ -175,6 +148,11 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
   const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
   const displayedItems = filteredItems.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
 
+  // Actual number of <th>/<td> columns rendered, given this codebook's
+  // optional dimensions -- keeps the empty-state colSpan correct instead of
+  // a number that only happened to match the "original" codebook's layout.
+  const columnCount = 8 + (hasSubcategories ? 1 : 0) + (hasSubjectArea ? 1 : 0) + (hasTargetPopulation ? 1 : 0);
+
   // ---------------------------------------------------------------------------
   // 4. UPDATE HANDLERS (Using Internal ID)
   // ---------------------------------------------------------------------------
@@ -182,9 +160,9 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
     setItems(prev => prev.map(item => {
       if (item.internal_id === internalId) {
         const updated = { ...item, [field]: value, is_corrected: true };
-        
+
         if (field === 'primary_domain') {
-          updated.primary_subcategory = ''; 
+          updated.primary_subcategory = '';
           if (value && value !== "") {
               updated.uncoded = false;
               if ((updated.primary_confidence || 'none').toLowerCase() === 'none') {
@@ -233,6 +211,13 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    // The work is safely exported -- no need to keep holding it in autosave.
+    clearReviewState();
+  };
+
+  const handleStartOver = () => {
+    clearReviewState();
+    onReset();
   };
 
   // ---------------------------------------------------------------------------
@@ -255,16 +240,16 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
           <div>
             <h2 className="text-2xl font-bold text-slate-900">Review & Verify Outcomes</h2>
-            <p className="text-slate-500 text-sm mt-1">Review the AI's coding. Items disappear from "Needs Review" as you verify them.</p>
+            <p className="text-slate-500 text-sm mt-1">Review the AI's coding. Items disappear from "Needs Review" as you verify them. Progress is autosaved in this browser.</p>
           </div>
           <div className="flex gap-3">
-             <button 
-                onClick={onReset}
+             <button
+                onClick={handleStartOver}
                 className="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-800 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors"
              >
                 Start Over
              </button>
-             <button 
+             <button
                 onClick={handleDownload}
                 className="px-5 py-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg shadow-sm transition-all flex items-center"
              >
@@ -313,8 +298,8 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
          </div>
 
          <div className="relative w-full sm:w-auto">
-            <input 
-               type="text" 
+            <input
+               type="text"
                placeholder="Search text or ID..."
                value={searchQuery}
                onChange={(e) => setSearchQuery(e.target.value)}
@@ -336,10 +321,10 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                 <th className="px-4 py-3 w-auto min-w-[200px]">Outcome Text</th>
                 {/* WIDENED COLUMNS */}
                 <th className="px-4 py-3 w-[20%] min-w-[240px]">Primary Domain</th>
-                {codebookType === 'original' && <th className="px-4 py-3 w-[20%] min-w-[240px]">Subcategory</th>}
+                {hasSubcategories && <th className="px-4 py-3 w-[20%] min-w-[240px]">Subcategory</th>}
                 <th className="px-4 py-3 w-28 min-w-[100px]">Confidence</th>
-                {codebookType === 'original' && <th className="px-4 py-3 w-32 min-w-[130px]">Subject Area</th>}
-                {codebookType === 'original' && <th className="px-4 py-3 w-32 min-w-[130px]">Population</th>}
+                {hasSubjectArea && <th className="px-4 py-3 w-32 min-w-[130px]">Subject Area</th>}
+                {hasTargetPopulation && <th className="px-4 py-3 w-32 min-w-[130px]">Population</th>}
                 <th className="px-4 py-3 w-16 text-center">Uncoded</th>
                 <th className="px-4 py-3 w-48 min-w-[180px]">Notes</th>
               </tr>
@@ -347,7 +332,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
             <tbody className="divide-y divide-slate-100">
               {displayedItems.length === 0 ? (
                  <tr>
-                    <td colSpan={11} className="px-6 py-16 text-center text-slate-500 flex flex-col items-center justify-center w-full">
+                    <td colSpan={columnCount} className="px-6 py-16 text-center text-slate-500 flex flex-col items-center justify-center w-full">
                        <svg className="w-12 h-12 text-slate-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                        <p className="text-lg font-medium text-slate-700">All caught up!</p>
                        <p className="text-sm">No items matching your current filters.</p>
@@ -356,6 +341,10 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
               ) : (
                 displayedItems.map((item) => {
                   const reason = getReviewReason(item);
+                  const selectedDomainHint = item.primary_domain ? domainHint(item.primary_domain) : undefined;
+                  const selectedSubHint = item.primary_domain && item.primary_subcategory
+                     ? subcategoryHint(item.primary_domain, item.primary_subcategory)
+                     : undefined;
                   return (
                   // TALLER ROW via py-5
                   <tr key={item.internal_id} className={`hover:bg-slate-50/80 transition-colors group ${item.is_corrected ? 'bg-blue-50/20' : ''}`}>
@@ -363,7 +352,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                       <div className="font-semibold text-slate-600 flex items-center justify-between gap-1">
                           {item.row_id}_{item.atomic_outcome_index}
                           {reason && !item.is_corrected && (
-                              <button 
+                              <button
                                 onClick={() => handleManualVerify(item.internal_id)}
                                 className="text-slate-400 hover:text-green-600 transition-colors p-1"
                                 title="Confirm/Verify this item (clears from Needs Review)"
@@ -372,7 +361,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                               </button>
                           )}
                       </div>
-                      
+
                       <div className="flex flex-col gap-1 mt-1.5">
                         {item.is_corrected && (
                           <span className="inline-flex items-center px-1.5 py-0.5 rounded bg-blue-100 text-blue-700 text-[10px] font-bold tracking-wide w-fit">
@@ -386,7 +375,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                         )}
                       </div>
                     </td>
-                    
+
                     <td className="px-4 py-5 align-top">
                        <div className="text-xs text-slate-600 font-medium truncate max-w-[150px]" title={item.organization || item.Organization || ''}>
                           {item.organization || item.Organization || '-'}
@@ -397,7 +386,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                           {item.program || item.Program || '-'}
                        </div>
                     </td>
-                    
+
                     <td className="px-4 py-5 align-top">
                        {/* UNCONSTRAINED TEXT */}
                        <div className="text-sm text-slate-800 leading-relaxed whitespace-pre-wrap">
@@ -411,7 +400,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                     </td>
 
                     <td className="px-4 py-5 align-top">
-                      <select 
+                      <select
                          className={`w-full text-xs border-slate-300 rounded focus:ring-blue-500 focus:border-blue-500 bg-white text-slate-900 py-1.5 ${!item.primary_domain && !item.uncoded ? 'ring-2 ring-red-300 border-red-300' : ''}`}
                          value={item.primary_domain || ''}
                          onChange={(e) => handleUpdate(item.internal_id, 'primary_domain', e.target.value)}
@@ -422,26 +411,32 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                             <option key={d} value={d}>{d}</option>
                          ))}
                       </select>
+                      {selectedDomainHint && (
+                         <p className="mt-1 text-[11px] leading-snug text-slate-400 italic">{selectedDomainHint}</p>
+                      )}
                     </td>
 
-                    {codebookType === 'original' && (
+                    {hasSubcategories && (
                       <td className="px-4 py-5 align-top">
-                         <select 
+                         <select
                            className="w-full text-xs border-slate-300 rounded focus:ring-blue-500 focus:border-blue-500 bg-white text-slate-900 disabled:bg-slate-50 disabled:text-slate-400 py-1.5"
                            value={item.primary_subcategory || ''}
                            onChange={(e) => handleUpdate(item.internal_id, 'primary_subcategory', e.target.value)}
-                           disabled={!item.primary_domain || !!item.uncoded || subcategories[item.primary_domain]?.length === 0}
+                           disabled={!item.primary_domain || !!item.uncoded || subcategoriesForDomain(codebookDef, item.primary_domain).length === 0}
                         >
                            <option value="">-- Select Subcategory --</option>
-                           {(subcategories[item.primary_domain] || []).map(sc => (
-                              <option key={sc} value={sc}>{sc}</option>
+                           {subcategoriesForDomain(codebookDef, item.primary_domain).map(sc => (
+                              <option key={sc.code} value={sc.code}>{sc.code}</option>
                            ))}
                         </select>
+                        {selectedSubHint && (
+                           <p className="mt-1 text-[11px] leading-snug text-slate-400 italic">{selectedSubHint}</p>
+                        )}
                       </td>
                     )}
 
                     <td className="px-4 py-5 align-top">
-                       <select 
+                       <select
                          className={`w-full text-xs border-slate-300 rounded focus:ring-blue-500 focus:border-blue-500 font-medium py-1.5 bg-white disabled:bg-slate-50 disabled:text-slate-400 ${
                             (item.primary_confidence || 'none').toLowerCase() === 'high' ? 'text-green-700' :
                             (item.primary_confidence || 'none').toLowerCase() === 'medium' ? 'text-yellow-700' :
@@ -458,32 +453,32 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                       </select>
                     </td>
 
-                    {codebookType === 'original' && (
+                    {hasSubjectArea && (
                       <td className="px-4 py-5 align-top">
-                         <select 
+                         <select
                            className="w-full text-xs border-slate-300 rounded focus:ring-blue-500 focus:border-blue-500 bg-white text-slate-900 py-1.5 disabled:bg-slate-50 disabled:text-slate-400"
                            value={item.primary_subject_area || ''}
                            onChange={(e) => handleUpdate(item.internal_id, 'primary_subject_area', e.target.value)}
                            disabled={!!item.uncoded}
                         >
                            <option value="">-- Select --</option>
-                           {SUBJECT_AREA_OPTIONS.map(opt => (
+                           {subjectAreaOptions.map(opt => (
                               <option key={opt} value={opt}>{opt}</option>
                            ))}
                         </select>
                       </td>
                     )}
 
-                    {codebookType === 'original' && (
+                    {hasTargetPopulation && (
                       <td className="px-4 py-5 align-top">
-                         <select 
+                         <select
                            className="w-full text-xs border-slate-300 rounded focus:ring-blue-500 focus:border-blue-500 bg-white text-slate-900 py-1.5 disabled:bg-slate-50 disabled:text-slate-400"
                            value={item.primary_target_population || ''}
                            onChange={(e) => handleUpdate(item.internal_id, 'primary_target_population', e.target.value)}
                            disabled={!!item.uncoded}
                         >
                            <option value="">-- Select --</option>
-                           {TARGET_POPULATION_OPTIONS.map(opt => (
+                           {targetPopulationOptions.map(opt => (
                               <option key={opt} value={opt}>{opt}</option>
                            ))}
                         </select>
@@ -491,7 +486,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                     )}
 
                     <td className="px-4 py-5 text-center align-top pt-2">
-                       <input 
+                       <input
                           type="checkbox"
                           className="w-4 h-4 rounded text-red-600 focus:ring-red-500 border-slate-300 cursor-pointer"
                           checked={!!item.uncoded}
@@ -501,7 +496,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                     </td>
 
                     <td className="px-4 py-5 align-top">
-                       <textarea 
+                       <textarea
                           className="w-full text-xs border-slate-300 rounded focus:ring-blue-500 focus:border-blue-500 text-slate-700 bg-white resize-y min-h-[80px]"
                           value={item.notes || ''}
                           onChange={(e) => handleUpdate(item.internal_id, 'notes', e.target.value)}
@@ -520,7 +515,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
       {/* Pagination */}
       {totalPages > 1 && (
          <div className="flex justify-center items-center gap-4 pt-2">
-            <button 
+            <button
                onClick={() => setPage(p => Math.max(1, p - 1))}
                disabled={page === 1}
                className="px-4 py-2 text-sm border border-slate-300 rounded-lg hover:bg-slate-50 disabled:opacity-50 disabled:hover:bg-white text-slate-700 bg-white font-medium transition-colors shadow-sm"
@@ -528,7 +523,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                Previous
             </button>
             <span className="text-sm text-slate-600 font-medium">Page {page} of {totalPages}</span>
-            <button 
+            <button
                onClick={() => setPage(p => Math.min(totalPages, p + 1))}
                disabled={page === totalPages}
                className="px-4 py-2 text-sm border border-slate-300 rounded-lg hover:bg-slate-50 disabled:opacity-50 disabled:hover:bg-white text-slate-700 bg-white font-medium transition-colors shadow-sm"

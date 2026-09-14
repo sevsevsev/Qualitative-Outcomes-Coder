@@ -1,6 +1,13 @@
+// codebooks/original.ts
+//
+// "Original" youth-development outcomes codebook. Integrates:
+// Gholdy Muhammad (Joy & Criticality), Hidi & Renninger (Interest),
+// CDC (Connectedness & Physical Health), CASEL (SEL), UChicago (Academic
+// Habits), Search Institute (Assets), CIRCLE (Civics), ISTE (Digital
+// Citizenship), Dual Continua Model & SAMHSA (Behavioral Health/Trauma),
+// Perkins V (Career/CTE), Epstein (Family Engagement).
 
-
-// constants.ts
+import { Codebook } from './types';
 
 export const SUBJECT_AREA_OPTIONS = [
   "N/A / General",
@@ -30,118 +37,7 @@ export const TARGET_POPULATION_OPTIONS = [
   "unclear"
 ];
 
-export const CODEBOOK_DOMAINS = [
-  "Domain 1. Joy, Interest & Motivation in Learning",
-  "Domain 2. Belonging, Relationships & School Connectedness",
-  "Domain 3. Social & Emotional Learning (CASEL-aligned)",
-  "Domain 4. Academic Engagement & Habits",
-  "Domain 5. Positive Youth Development (PYD) & Assets",
-  "Domain 6. Civic Engagement & Community",
-  "Domain 7. Physical & Behavioral Health",
-  "Domain 8. College & Career Readiness",
-  "Domain 9. Access & Equity",
-  "Domain 10. Adult & System Capacity"
-];
-
-export const CODEBOOK_SUBCATEGORIES: Record<string, string[]> = {
-  "Domain 1. Joy, Interest & Motivation in Learning": [
-    "1.1 Joy & Emotional Wellness",
-    "1.2 Triggered Situational Interest (Curiosity)",
-    "1.3 Value & Meaning (Utility Value)",
-    "1.4 Creative Exploration"
-  ],
-  "Domain 2. Belonging, Relationships & School Connectedness": [
-    "2.1 School/Program Connectedness (Belonging)",
-    "2.2 Adult Support & Care",
-    "2.3 Peer Connection & Social Integration",
-    "2.4 Cultural Identity & Affirmation",
-    "2.5 Family Partnership & Connection"
-  ],
-  "Domain 3. Social & Emotional Learning (CASEL-aligned)": [
-    "3.1.1 Identifying and naming emotions",
-    "3.1.2 Understanding self & identity",
-    "3.1.3 Recognizing strengths",
-    "3.1.4 Confidence, self-efficacy & growth mindset",
-    "3.2.1 Emotion regulation & impulse control",
-    "3.2.2 Stress management & coping skills",
-    "3.2.3 Goal-setting & follow-through",
-    "3.2.4 Organization, persistence & self-discipline",
-    "3.3.1 Empathy & perspective-taking",
-    "3.3.2 Respect for diversity & inclusion",
-    "3.3.3 Understanding norms & expectations",
-    "3.3.4 Awareness of supports and resources",
-    "3.4.1 Communication & active listening",
-    "3.4.2 Cooperation, teamwork & collaboration",
-    "3.4.3 Conflict management & problem-solving in relationships",
-    "3.4.4 Help-seeking & providing support",
-    "3.4.5 Building and sustaining positive relationships",
-    "3.5.1 Evaluating options & consequences",
-    "3.5.2 Ethical and prosocial choices",
-    "3.5.3 Personal and social problem-solving",
-    "3.5.4 Safety-oriented decisions & risk avoidance",
-    "3.5.5 Contributions to class/program/community wellbeing"
-  ],
-  "Domain 4. Academic Engagement & Habits": [
-    "4.1 Academic Behaviors (Engagement)",
-    "4.2 Academic Perseverance (Grit/Tenacity)",
-    "4.3 Learning Strategies (Study Skills)",
-    "4.4 Academic Confidence (Self-Efficacy)"
-  ],
-  "Domain 5. Positive Youth Development (PYD) & Assets": [
-    "5.1 Empowerment & Safety",
-    "5.2 Positive Values",
-    "5.3 Constructive Use of Time",
-    "5.4 Positive Identity"
-  ],
-  "Domain 6. Civic Engagement & Community": [
-    "6.1 Civic Skills & Knowledge",
-    "6.2 Community Service & Action",
-    "6.3 Youth Voice & Leadership",
-    "6.4 Criticality & Social Justice",
-    "6.5 Digital Citizenship & Safety"
-  ],
-  "Domain 7. Physical & Behavioral Health": [
-    "7.1 Physical Activity & Nutrition",
-    "7.2 Mental Health Status (Symptom Reduction)",
-    "7.3 Healing & Trauma Recovery",
-    "7.4 Access to Mental Health Services"
-  ],
-  "Domain 8. College & Career Readiness": [
-    "8.1 Key Content Knowledge",
-    "8.2 Key Cognitive Strategies",
-    "8.3 Transition Knowledge & Skills",
-    "8.4 Career Awareness & Exploration",
-    "8.5 Employability Skills",
-    "8.6 Technical Skills & Work-Based Learning"
-  ],
-  "Domain 9. Access & Equity": [
-    "9.1 Access to Resources",
-    "9.2 Participation & Inclusion"
-  ],
-  "Domain 10. Adult & System Capacity": [
-    "10.1 Professional Knowledge & Skill",
-    "10.2 Instructional Practice Change",
-    "10.3 Systemic Improvement",
-    "10.4 Family Engagement Capacity"
-  ]
-};
-
-/**
- * REVISED OUTCOME CODEBOOK
- * Integrating frameworks:
- * - Gholdy Muhammad (Joy & Criticality)
- * - Hidi & Renninger (Interest)
- * - CDC (Connectedness & Physical Health)
- * - CASEL (SEL)
- * - UChicago (Academic Habits)
- * - Search Institute (Assets)
- * - CIRCLE (Civics)
- * - ISTE (Digital Citizenship)
- * - Dual Continua Model & SAMHSA (Behavioral Health/Trauma)
- * - Perkins V (Career/CTE)
- * - Epstein (Family Engagement)
- */
-export const OUTCOME_CODEBOOK_DEFINITIONS = `
+const definitionsText = `
 Domain 1. Joy, Interest & Motivation in Learning
 Framework Basis: Gholdy Muhammad (Joy) & Hidi/Renninger (Interest)
 1.1 Joy & Emotional Wellness
@@ -260,7 +156,7 @@ Framework Basis: CASEL (Collaborative for Academic, Social, and Emotional Learni
 3.5.5 Contributions to class/program/community wellbeing
    - Definition: Students take small, daily actions to maintain or improve their immediate environment (classroom, program space).
    - Note: For larger community service projects or volunteering, use 6.2 (formerly 8.3).
-   - Example: "Students will help clean up the classroom and assist teachers with tasks.""
+   - Example: "Students will help clean up the classroom and assist teachers with tasks."
 
 Domain 4. Academic Engagement & Habits
 Framework Basis: UChicago Consortium "Academic Mindsets and Behaviors"
@@ -378,89 +274,7 @@ Framework Basis: Learning Forward Standards & Epstein Type 3/6
    - Example: "The program will establish a Parent Advisory Council."
 `;
 
-export const ACCELERATE_PHILLY_DOMAINS = [
-  "Code 01: Improve Safety and Well-being",
-  "Code 02: Partner with Families and Community",
-  "Code 03: Accelerate Academic Achievement",
-  "Code 04: Recruit and Retain Diverse and Highly Effective Educators",
-  "Code 05: Deliver Efficient, High-Quality, Cost-Effective Operations"
-];
-
-export const ACCELERATE_PHILLY_SUBCATEGORIES: Record<string, string[]> = {
-  "Code 01: Improve Safety and Well-being": [],
-  "Code 02: Partner with Families and Community": [],
-  "Code 03: Accelerate Academic Achievement": [],
-  "Code 04: Recruit and Retain Diverse and Highly Effective Educators": [],
-  "Code 05: Deliver Efficient, High-Quality, Cost-Effective Operations": []
-};
-
-export const ACCELERATE_PHILLY_INSTRUCTIONS = `
-Task: Your objective is to perform rigorous qualitative coding on non-profit program logic models. You will crosswalk the stated outcomes of these programs against the Accelerate Philly Strategic Plan Codebook provided below.
-
-Strict Coding Rules:
-    Substantive Connection Only: You must only apply a code if the non-profit's outcome demonstrates a direct, substantive, and logical contribution to the strategic plan priority. Do not infer or stretch connections. If an outcome only tangentially touches a priority area, do not code it.
-    Mutually Exclusive vs. Exhaustive: A single outcome may align with multiple codes. Apply multiple codes only if distinct elements of the outcome independently satisfy the inclusion criteria for each code.
-    Confidence Threshold: If you are unsure whether an outcome meets the inclusion criteria, default to excluding it. Precision is more important than volume.
-
-RULES:
-1. Input is a JSON array of objects. Each object has "row_id", "outcome_text", and optionally "group".
-2. For each item:
-   - Determine if it contains multiple distinct outcomes (split_needed: "yes" or "no").
-   - If "yes" (e.g. "Students will improve math scores AND make new friends"):
-     - Create multiple "split_items".
-     - Assign codes to each split item separately.
-   - If "no":
-     - Create a single "split_item" with the original text.
-3. CODING PROCESS for each item:
-   - Select the BEST FIT "Primary Domain" from the codebook.
-   - Assign a "Confidence" level (high, medium, low, none).
-   - "Uncoded": Set to true IF the text is vague, irrelevant, or does not fit any domain (e.g. "N/A", "See above").
-
-Accelerate Philly Codebook:
-    Code 01: Improve Safety and Well-being
-        Definition: Focuses on improving the physical, social-emotional, and environmental safety of students and staff.
-        Inclusion Criteria: Apply this code when the outcome explicitly addresses school facility improvements (e.g., lead/asbestos remediation, security cameras) , safe travel to and from school , school climate and restorative justice programs (e.g., PBIS, SEL) , mental and behavioral health services , nursing and physical health supports , food security and breakfast programs , or supervised recess models.
-        Exclusion Criteria: Do NOT apply this code if the outcome focuses strictly on academic tutoring or family communication that does not directly address physical or emotional safety.
-
-    Code 02: Partner with Families and Community
-        Definition: Focuses on fostering trusting relationships, two-way communication, and collaborative structures with parents, guardians, and the community.
-        Inclusion Criteria: Apply this code when the outcome explicitly mentions developing multilingual communication systems , facilitating parent/guardian or community advisory groups , improving coordination of community partnerships , adult education via Parent University , utilizing parent ambassadors , or replicating Community School wrap-around models.
-        Exclusion Criteria: Do NOT apply this code for general student out-of-school time that lacks a structural family engagement component.
-
-    Code 03: Accelerate Academic Achievement
-        Definition: Focuses on improving student learning, achieving grade-level proficiency on state assessments, providing well-rounded educational opportunities, and keeping students on track for graduation.
-        Inclusion Criteria: Apply this code when the outcome explicitly targets access to high-quality Pre-K , standards-aligned core curriculum (Math, ELA/Science of Reading, Science) , high-impact tutoring , extended-day or out-of-school time programming , Individualized Education Plan (IEP) compliance or English Learner support , expansion of arts, music, and rigorous course offerings , Career and Technical Education (CTE) , 9th Grade On-Track initiatives , dropout reduction , or financial literacy.
-        Exclusion Criteria: Do NOT apply this code for programs focused solely on basic physiological needs or standalone teacher recruitment.
-
-    Code 04: Recruit and Retain Diverse and Highly Effective Educators
-        Definition: Focuses on hiring, developing, and retaining a workforce of teachers and leaders that reflect the diversity of the student population and are well-supported.
-        Inclusion Criteria: Apply this code when the outcome explicitly addresses teacher/principal recruitment and retention incentives , recruiting Black and Latino male educators , "Grow-Your-Own" and paraprofessional-to-teacher pathways , establishing instructional leadership teams , instructional coaching and feedback models , or providing ongoing professional development for instructional and non-instructional staff.
-        Exclusion Criteria: Do NOT apply this code for direct student instruction or student mentoring programs.
-
-    Code 05: Deliver Efficient, High-Quality, Cost-Effective Operations
-        Definition: Focuses on improving district-level systems, budgeting transparency, facilities maintenance, and central office accountability.
-        Inclusion Criteria: Apply this code when the outcome explicitly mentions building project management capacity , streamlining staff onboarding/hiring timelines , organizational succession planning , implementing equitable school selection processes , maintaining school cleanliness standards , or extending evidence-based budgeting practices.
-        Exclusion Criteria: Do NOT apply this code for school-level student climate initiatives or individual classroom curriculum execution.
-
-OUTPUT FORMAT:
-   - Return a strictly valid JSON object.
-   - Root property: "coded_items" (array).
-   - Match the schema provided in the tool definition exactly.
-   - For each item, output the results as a flat, structured JSON array of objects in "split_items". Do not nest arrays within the objects to ensure seamless transformation into tabular datasets. Use the following keys for each split item:
-     - text: The exact text of the non-profit's stated outcome (or the specific split portion).
-     - primary_domain: The specific code applied (e.g., "Code 03: Accelerate Academic Achievement").
-     - primary_subcategory: Use "none".
-     - primary_confidence: High or Medium.
-     - notes: A brief explanation citing the specific language from the logic model that triggered the code.
-     - subject_area: Use "none".
-     - target_population_primary: Use "none".
-     - secondary_codes: Leave empty array.
-     - uncoded: true if no code applies, false otherwise.
-`;
-
-export const CODEBOOK_CONTEXT = OUTCOME_CODEBOOK_DEFINITIONS;
-
-export const BATCH_MODE_INSTRUCTIONS = `
+const rulesText = `
 You are an expert qualitative data coder specializing in youth development programs.
 Your task is to analyze a batch of outcome statements and code them according to the provided taxonomy/codebook.
 
@@ -477,7 +291,7 @@ RULES:
    - Select the BEST FIT "Primary Domain" and "Primary Subcategory" from the codebook.
    - Assign a "Confidence" level (high, medium, low, none).
    - "Uncoded": Set to true IF the text is vague, irrelevant, or does not fit any domain (e.g. "N/A", "See above").
-   
+
    - "Target Population":
      - Default to "students_youth" for outcomes about participants, children, or students.
      - Use "families_caregivers" ONLY if parents/families are the subject (e.g. "Parents will attend...").
@@ -535,3 +349,181 @@ CRITICAL for Formatting:
 - Ensure the 'primary_domain' string exactly matches the codebook headers (e.g. "Domain 1. Joy, Interest & Motivation in Learning").
 - Ensure the 'primary_subcategory' string exactly matches the codebook items (e.g. "1.1 Joy & Emotional Wellness").
 `;
+
+export const originalCodebook: Codebook = {
+  id: 'original',
+  version: '1.0.0',
+  label: 'Original (Youth Development)',
+  rulesText,
+  definitionsText,
+  capabilities: {
+    hasSubcategories: true,
+    hasSubjectArea: true,
+    hasTargetPopulation: true,
+  },
+  subjectAreaOptions: SUBJECT_AREA_OPTIONS,
+  targetPopulationOptions: TARGET_POPULATION_OPTIONS,
+  domains: [
+    {
+      code: "Domain 1. Joy, Interest & Motivation in Learning",
+      hint: "EXPERIENCES/STATES (e.g. \"feels happy\"), not skills -- see Domain 3 for SEL skills.",
+      subcategories: [
+        { code: "1.1 Joy & Emotional Wellness" },
+        { code: "1.2 Triggered Situational Interest (Curiosity)" },
+        { code: "1.3 Value & Meaning (Utility Value)" },
+        { code: "1.4 Creative Exploration" },
+      ],
+    },
+    {
+      code: "Domain 2. Belonging, Relationships & School Connectedness",
+      hint: "EXPERIENCES/STATES (e.g. \"feels safe\", \"feels connected\"), not skills -- see Domain 3 for SEL skills.",
+      subcategories: [
+        { code: "2.1 School/Program Connectedness (Belonging)" },
+        { code: "2.2 Adult Support & Care" },
+        {
+          code: "2.3 Peer Connection & Social Integration",
+          hint: "vs 3.4.2 (Cooperation): use 2.3 for the relational outcome of making friends/feeling accepted; use 3.4.2 for the skill of working together.",
+        },
+        { code: "2.4 Cultural Identity & Affirmation" },
+        { code: "2.5 Family Partnership & Connection" },
+      ],
+    },
+    {
+      code: "Domain 3. Social & Emotional Learning (CASEL-aligned)",
+      hint: "SKILLS/COMPETENCIES (e.g. \"uses coping strategies\"). Use the specific 3.x.x sub-codes only, never the 3.x category headers. Don't code a feeling as a skill unless the text implies growth in capacity.",
+      subcategories: [
+        { code: "3.1.1 Identifying and naming emotions" },
+        { code: "3.1.2 Understanding self & identity" },
+        { code: "3.1.3 Recognizing strengths" },
+        {
+          code: "3.1.4 Confidence, self-efficacy & growth mindset",
+          hint: "vs 4.4 (Academic Confidence): use 3.1.4 for general self-confidence/growth mindset; use 4.4 only when tied specifically to schoolwork/grades.",
+        },
+        {
+          code: "3.2.1 Emotion regulation & impulse control",
+          hint: "vs 3.2.2: use for immediate impulse control/calming down, not applying a specific coping strategy over time.",
+        },
+        {
+          code: "3.2.2 Stress management & coping skills",
+          hint: "vs 3.2.1: use when a student learns/applies a specific coping tool, not momentary impulse control. vs 7.2 (Mental Health Status): use 3.2.2 for learning/using a coping skill; use 7.2 for a reported reduction in symptoms (e.g. \"decreased anxiety\").",
+        },
+        {
+          code: "3.2.3 Goal-setting & follow-through",
+          hint: "vs 3.2.4: use for the act of planning/setting a goal, not sticking with it.",
+        },
+        {
+          code: "3.2.4 Organization, persistence & self-discipline",
+          hint: "vs 3.2.3: use for sticking with/working hard toward a goal, not the act of setting it.",
+        },
+        {
+          code: "3.3.1 Empathy & perspective-taking",
+          hint: "vs 3.4.1 (Active Listening): empathy is internal understanding of others' feelings; active listening is the demonstrated behavior.",
+        },
+        { code: "3.3.2 Respect for diversity & inclusion" },
+        { code: "3.3.3 Understanding norms & expectations" },
+        { code: "3.3.4 Awareness of supports and resources" },
+        {
+          code: "3.4.1 Communication & active listening",
+          hint: "vs 3.3.1 (Empathy): this is the demonstrated behavior of listening/communicating, not internal understanding.",
+        },
+        {
+          code: "3.4.2 Cooperation, teamwork & collaboration",
+          hint: "Focus is on the skill of working together. For friendship/bonding, use 2.3 (Peer Connection) instead.",
+        },
+        { code: "3.4.3 Conflict management & problem-solving in relationships" },
+        { code: "3.4.4 Help-seeking & providing support" },
+        { code: "3.4.5 Building and sustaining positive relationships" },
+        { code: "3.5.1 Evaluating options & consequences" },
+        {
+          code: "3.5.2 Ethical and prosocial choices",
+          hint: "vs 5.2 (Positive Values): use 3.5.2 when a decision is made in a specific situation; use 5.2 for general character traits/values.",
+        },
+        { code: "3.5.3 Personal and social problem-solving" },
+        { code: "3.5.4 Safety-oriented decisions & risk avoidance" },
+        {
+          code: "3.5.5 Contributions to class/program/community wellbeing",
+          hint: "For small, daily classroom/program contributions. For larger community service projects or volunteering, use 6.2 instead.",
+        },
+      ],
+    },
+    {
+      code: "Domain 4. Academic Engagement & Habits",
+      subcategories: [
+        { code: "4.1 Academic Behaviors (Engagement)" },
+        { code: "4.2 Academic Perseverance (Grit/Tenacity)" },
+        { code: "4.3 Learning Strategies (Study Skills)" },
+        {
+          code: "4.4 Academic Confidence (Self-Efficacy)",
+          hint: "vs 3.1.4 (general Confidence): use 4.4 ONLY for confidence specifically about schoolwork/grades.",
+        },
+      ],
+    },
+    {
+      code: "Domain 5. Positive Youth Development (PYD) & Assets",
+      subcategories: [
+        { code: "5.1 Empowerment & Safety" },
+        {
+          code: "5.2 Positive Values",
+          hint: "vs 3.5.2 (Ethical Choices): use 5.2 for general character traits/values, not a decision made in a specific situation.",
+        },
+        { code: "5.3 Constructive Use of Time" },
+        { code: "5.4 Positive Identity" },
+      ],
+    },
+    {
+      code: "Domain 6. Civic Engagement & Community",
+      subcategories: [
+        { code: "6.1 Civic Skills & Knowledge" },
+        {
+          code: "6.2 Community Service & Action",
+          hint: "For larger community service projects/volunteering. For small daily classroom/program contributions, use 3.5.5 instead.",
+        },
+        { code: "6.3 Youth Voice & Leadership" },
+        { code: "6.4 Criticality & Social Justice" },
+        { code: "6.5 Digital Citizenship & Safety" },
+      ],
+    },
+    {
+      code: "Domain 7. Physical & Behavioral Health",
+      subcategories: [
+        { code: "7.1 Physical Activity & Nutrition" },
+        {
+          code: "7.2 Mental Health Status (Symptom Reduction)",
+          hint: "Use for state of being (e.g. \"feeling less anxious\"). Use 3.2.2 for skills (e.g. \"learning to cope\").",
+        },
+        { code: "7.3 Healing & Trauma Recovery" },
+        { code: "7.4 Access to Mental Health Services" },
+      ],
+    },
+    {
+      code: "Domain 8. College & Career Readiness",
+      subcategories: [
+        { code: "8.1 Key Content Knowledge" },
+        { code: "8.2 Key Cognitive Strategies" },
+        { code: "8.3 Transition Knowledge & Skills" },
+        { code: "8.4 Career Awareness & Exploration" },
+        {
+          code: "8.5 Employability Skills",
+          hint: "Use instead of Domain 3 (SEL) when the context is explicitly professional/work-readiness.",
+        },
+        { code: "8.6 Technical Skills & Work-Based Learning" },
+      ],
+    },
+    {
+      code: "Domain 9. Access & Equity",
+      subcategories: [
+        { code: "9.1 Access to Resources" },
+        { code: "9.2 Participation & Inclusion" },
+      ],
+    },
+    {
+      code: "Domain 10. Adult & System Capacity",
+      subcategories: [
+        { code: "10.1 Professional Knowledge & Skill" },
+        { code: "10.2 Instructional Practice Change" },
+        { code: "10.3 Systemic Improvement" },
+        { code: "10.4 Family Engagement Capacity" },
+      ],
+    },
+  ],
+};

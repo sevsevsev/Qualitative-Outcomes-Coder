@@ -1,6 +1,8 @@
-import React, { useState, useRef } from 'react';
-import { processBatch } from './services/geminiService';
+import React, { useState, useRef, useEffect } from 'react';
+import { processBatch, atomicJsonToCSV } from './services/geminiService';
 import { BatchAnalysisResult, LoadingState, CodebookType } from './types';
+import { CODEBOOK_LIST, DEFAULT_CODEBOOK_ID } from './codebooks';
+import { loadReviewState, clearReviewState, SavedReviewState } from './services/reviewStorage';
 import ReviewDashboard from './components/ReviewDashboard';
 import ProcessingStatus from './components/ProcessingStatus';
 
@@ -10,14 +12,35 @@ const App: React.FC = () => {
   const [batchResult, setBatchResult] = useState<BatchAnalysisResult | null>(null);
   const [status, setStatus] = useState<LoadingState>('idle');
   const [error, setError] = useState<string | null>(null);
-  const [codebook, setCodebook] = useState<CodebookType>('original');
-  
+  const [codebook, setCodebook] = useState<CodebookType>(DEFAULT_CODEBOOK_ID);
+  const [restorableSession, setRestorableSession] = useState<SavedReviewState | null>(null);
+
   // Progress State
   const [processedCount, setProcessedCount] = useState(0);
   const [totalCount, setTotalCount] = useState(0);
   const [logs, setLogs] = useState<string[]>([]);
-  
+
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Offer to resume an autosaved review session (see services/reviewStorage)
+  // if one exists from before a refresh, crash, or closed tab.
+  useEffect(() => {
+    setRestorableSession(loadReviewState());
+  }, []);
+
+  const handleResumeSession = () => {
+    if (!restorableSession) return;
+    const { codebookType, items } = restorableSession;
+    setCodebook(codebookType);
+    setBatchResult({ type: 'csv', data: atomicJsonToCSV(items), items });
+    setStatus('success');
+    setRestorableSession(null);
+  };
+
+  const handleDiscardSession = () => {
+    clearReviewState();
+    setRestorableSession(null);
+  };
 
   const handleReset = () => {
     setBatchResult(null);
@@ -116,7 +139,31 @@ const App: React.FC = () => {
 
       {/* Main Content: Changed max-w-7xl to w-full to utilize full screen width */}
       <main className="w-full px-4 sm:px-6 lg:px-8 py-10 flex flex-col">
-        
+
+        {/* Restorable Session Banner */}
+        {restorableSession && !batchResult && status !== 'analyzing' && (
+          <div className="max-w-4xl mx-auto w-full mb-6 p-4 bg-blue-50 border border-blue-200 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="text-sm text-blue-900">
+              <span className="font-semibold">Unsaved review session found</span> from{' '}
+              {new Date(restorableSession.savedAt).toLocaleString()} ({restorableSession.items.length} items, codebook: {restorableSession.codebookType}).
+            </div>
+            <div className="flex gap-2 flex-shrink-0">
+              <button
+                onClick={handleResumeSession}
+                className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+              >
+                Resume Session
+              </button>
+              <button
+                onClick={handleDiscardSession}
+                className="px-4 py-2 text-sm font-medium text-blue-700 hover:text-blue-900 bg-white border border-blue-200 hover:bg-blue-50 rounded-lg transition-colors"
+              >
+                Discard
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Intro / Hero - Hide when analyzing or showing results */}
         {!batchResult && status !== 'analyzing' && (
           <div className="text-center max-w-2xl mx-auto mb-10 flex-grow-0">
@@ -147,8 +194,9 @@ const App: React.FC = () => {
                   onChange={(e) => setCodebook(e.target.value as CodebookType)}
                   className="w-full sm:w-1/2 p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-slate-900"
                 >
-                  <option value="original">Original (Youth Development)</option>
-                  <option value="accelerate_philly">Accelerate Philly Strategic Plan</option>
+                  {CODEBOOK_LIST.map(cb => (
+                    <option key={cb.id} value={cb.id}>{cb.label}</option>
+                  ))}
                 </select>
               </div>
 

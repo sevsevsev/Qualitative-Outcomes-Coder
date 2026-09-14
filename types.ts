@@ -1,5 +1,7 @@
 
-export type CodebookType = 'original' | 'accelerate_philly';
+export type { CodebookType } from './codebooks';
+
+export type Confidence = "high" | "medium" | "low" | "none";
 
 export interface SecondaryCode {
   domain: string;
@@ -11,7 +13,7 @@ export interface SplitItem {
   text: string;
   primary_domain: string;
   primary_subcategory: string;
-  primary_confidence: "high" | "medium" | "low" | "none";
+  primary_confidence: Confidence;
   subject_area: string;
   target_population_primary: string;
   secondary_codes: SecondaryCode[];
@@ -31,11 +33,13 @@ export interface BatchItemResult extends AnalysisResult {
   program?: string;
   primary_domain?: string;
   primary_subcategory?: string;
-  primary_confidence?: string;
+  primary_confidence?: Confidence;
   primary_subject_area?: string;
   primary_target_population?: string;
   uncoded?: boolean;
-  [key: string]: any; // Allow other CSV columns to pass through
+  // Arbitrary passthrough columns from the uploaded CSV (headers are
+  // user-defined and unknown at compile time), plus the fields above.
+  [key: string]: any;
 }
 
 export interface AtomicBatchItem {
@@ -46,19 +50,22 @@ export interface AtomicBatchItem {
   atomic_outcome_index: number;
   primary_domain: string;
   primary_subcategory: string;
-  primary_confidence: string;
+  primary_confidence: Confidence | "";
   primary_subject_area: string;
   primary_target_population: string;
   secondary_domain_1: string;
   secondary_subcategory_1: string;
-  secondary_confidence_1: string;
+  secondary_confidence_1: Confidence | "";
   secondary_domain_2: string;
   secondary_subcategory_2: string;
-  secondary_confidence_2: string;
+  secondary_confidence_2: Confidence | "";
   uncoded: boolean;
   notes: string;
   is_corrected?: boolean;
-  [key: string]: any; // Allow original metadata columns to pass through
+  /** Codebook id + version this row was coded against (see codebooks/). */
+  codebook_version?: string;
+  // Arbitrary passthrough metadata columns from the uploaded CSV.
+  [key: string]: any;
 }
 
 export interface BatchJsonResult {

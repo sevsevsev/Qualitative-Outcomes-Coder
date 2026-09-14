@@ -49,7 +49,13 @@ const buildSplitItemSchema = (enums: CodebookEnums): Schema => ({
         type: Type.OBJECT,
         properties: {
           domain: { type: Type.STRING, enum: enums.domain },
-          subcategory: { type: Type.STRING, enum: enums.subcategory },
+          // NOT enum-constrained -- see the note on buildBatchResponseSchema
+          // about the combined-enum-size limit. subcategory is the large
+          // (80+ item) enum; domain (a dozen items) stays constrained.
+          // cleanCodebookString() still trims this client-side, and it's
+          // not surfaced/editable in the review table UI, so free text here
+          // is a deliberately low-stakes place to spend the budget.
+          subcategory: { type: Type.STRING },
           confidence: { type: Type.STRING, enum: ["high", "medium", "low"] },
         },
       },
@@ -74,16 +80,30 @@ export const buildBatchResponseSchema = (codebook: Codebook): Schema => {
             row_id: { type: Type.STRING },
             outcome_text: { type: Type.STRING },
             split_needed: { type: Type.STRING, enum: ["yes", "no"] },
+            // Per rulesText, every item must produce at least one split_item
+            // (a single item when split_needed is "no"), so that's the only
+            // place actual coding data lives -- this level intentionally has
+            // no duplicate primary_domain/subcategory/etc. fields. They were
+            // genuinely unused anyway (flattenToAtomic only reads
+            // split_items; its split_items.length === 0 fallback is a
+            // defensive path for malformed output, not a real target), but
+            // removing them is also load-bearing: a live run against the
+            // real API found Gemini's structured output rejects a request
+            // once a schema's TOTAL enum footprint (summed across every
+            // enum-bearing property reachable from one object, not just one
+            // field repeated) crosses some threshold -- empirically between
+            // ~125 and ~220 enum values for this schema shape. This 83-item
+            // subcategory enum plus the smaller ones (domain, subject_area,
+            // target_population, confidence) already approach that just
+            // within splitItemSchema/secondary_codes (see the note there);
+            // a third full copy of domain+subcategory at this level pushed
+            // it over, and every request failed with a generic "Request
+            // contains an invalid argument" 400 that gave no indication
+            // which part of the schema was the problem.
             split_items: { type: Type.ARRAY, items: splitItemSchema },
-            primary_domain: { type: Type.STRING, enum: enums.domain },
-            primary_subcategory: { type: Type.STRING, enum: enums.subcategory },
-            primary_confidence: { type: Type.STRING, enum: ["high", "medium", "low", "none"] },
-            primary_subject_area: { type: Type.STRING, enum: enums.subjectArea },
-            primary_target_population: { type: Type.STRING, enum: enums.targetPopulation },
-            uncoded: { type: Type.BOOLEAN },
             notes: { type: Type.STRING }
           },
-          required: ["row_id", "split_needed", "split_items", "notes", "primary_domain", "primary_subcategory", "primary_confidence", "primary_subject_area", "primary_target_population", "uncoded"]
+          required: ["row_id", "split_needed", "split_items", "notes"]
         }
       }
     }

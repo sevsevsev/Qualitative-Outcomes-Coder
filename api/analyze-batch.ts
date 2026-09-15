@@ -73,10 +73,21 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return;
   }
 
-  const codebook = getCodebook(codebookType);
-  const ai = new GoogleGenAI({ apiKey });
-
+  // Everything below -- including constructing the SDK client and building
+  // the codebook-derived request pieces -- is deliberately inside this one
+  // try/catch. A prior version left getCodebook()/new GoogleGenAI() outside
+  // it: if either throws (e.g. an SDK import that doesn't resolve cleanly
+  // in Vercel's bundled function environment), that's an uncaught exception
+  // that crashes the whole invocation before any response is sent -- the
+  // client sees a bare platform-level 500 (Vercel: FUNCTION_INVOCATION_FAILED)
+  // with no JSON body, instead of one of the specific error messages this
+  // file is supposed to always return. Wrapping it all here guarantees a
+  // real error message reaches both the client and this function's logs no
+  // matter which line fails.
   try {
+    const codebook = getCodebook(codebookType);
+    const ai = new GoogleGenAI({ apiKey });
+
     const response = await ai.models.generateContent({
       model: MODEL,
       contents: `Analyze these ${items.length} items.\nInput Data:\n${JSON.stringify(items, null, 2)}`,
@@ -99,6 +110,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const parsed = JSON.parse(text);
     res.status(200).json(parsed);
   } catch (e: any) {
+    // Logged server-side (visible in Vercel's Function logs) in addition to
+    // being returned to the client -- the client-facing message is what a
+    // user sees in the batch-progress log, but the full stack is what
+    // actually diagnoses a bug like the one this comment describes.
+    console.error('analyze-batch failed:', e);
     res.status(502).json({ error: e?.message || 'Gemini request failed.' });
   }
 }

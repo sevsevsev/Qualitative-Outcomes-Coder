@@ -38,20 +38,24 @@ export const maxDuration = 60;
 // removes your chance to review a behavior change before it reaches
 // production. Pin an explicit version, update it deliberately.
 //
-// This is the one model this codebook has been empirically validated
-// against with a live batch run (see validation/live-run-2026-09-14.csv),
-// and it's still listed as a known model in the installed @google/genai
-// SDK's own type definitions (node_modules/@google/genai, check
-// `Model_2` in dist/genai.d.ts if you're re-verifying this later).
-// Several web sources claimed newer "gemini-3.x-flash" generations exist
-// and that this one had already been retired -- none of those names
-// appear in the SDK's own model list, which is a strong signal those
-// sources were unreliable (a known problem with anything model-release-
-// related on the open web). Don't take this constant's correctness on
-// faith either, by the time you're reading this -- verify against
-// https://ai.google.dev/gemini-api/docs/models or the AI Studio model
-// picker directly before assuming it's still current.
-const DEFAULT_MODEL = 'gemini-3-flash-preview';
+// Explicitly requested (2026-09-15) over the previously-pinned
+// gemini-3-flash-preview, which is the one model this codebook has actual
+// live validation data for (see validation/live-run-2026-09-14.csv) --
+// gemini-3.8-flash does not. It wasn't independently verified against
+// Google's own docs/model list before switching (ai.google.dev was
+// unreachable from the environment that made this change); if it turns
+// out to be wrong, GEMINI_MODEL can override this with no code change,
+// and a 404 here automatically falls back to FALLBACK_MODEL below. The
+// installed @google/genai SDK's ThinkingConfig type (node_modules,
+// dist/genai.d.ts) supports both `thinkingBudget` and `thinkingLevel` as
+// independent optional fields, so the `thinkingBudget: 1024` below stays
+// valid at the SDK level regardless of which model it's sent to -- but
+// the SDK's own docs note "allowed ranges are model dependent", so a
+// model-specific rejection of this exact value is still possible and
+// wouldn't be caught by the 404-only fallback below; it would surface as
+// a readable error in the batch progress log rather than a crash, per
+// this file's existing error handling.
+const DEFAULT_MODEL = 'gemini-3.8-flash';
 // Used only if the primary model call fails with a model-unavailable-style
 // error (see isModelUnavailableError below). Deliberately a different,
 // non-preview *stable* generation (also confirmed in the SDK's model

@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { AtomicBatchItem, BatchAnalysisResult, CodebookType } from '../types';
-import { getCodebook, allDomainCodes, subcategoriesForDomain } from '../codebooks';
-import { atomicJsonToCSV } from '../services/geminiService';
-import { saveReviewState, clearReviewState } from '../services/reviewStorage';
-import { normalizeImportedCoding } from '../services/reviewNormalization';
+import { AtomicBatchItem, BatchAnalysisResult, CodebookType } from '../types.js';
+import { getCodebook, allDomainCodes, subcategoriesForDomain } from '../codebooks/index.js';
+import { atomicJsonToCSV } from '../services/geminiService.js';
+import { saveReviewState, clearReviewState } from '../services/reviewStorage.js';
+import { normalizeImportedCoding } from '../services/reviewNormalization.js';
 
 interface ReviewDashboardProps {
   result: BatchAnalysisResult;

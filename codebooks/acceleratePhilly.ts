@@ -5,7 +5,7 @@
 // "original" codebook, this is a flat crosswalk (no subcategories, subject
 // area, or target population dimensions).
 
-import { Codebook } from './types';
+import { Codebook } from './types.js';
 
 const definitionsText = `
 Accelerate Philly Codebook:

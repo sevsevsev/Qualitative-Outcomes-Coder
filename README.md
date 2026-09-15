@@ -26,7 +26,8 @@ Originally scaffolded in [AI Studio](https://ai.studio/apps/ade107f6-adfe-429e-b
 
 - `npm test` — runs the Vitest suite (CSV parsing, domain/subcategory normalization).
 - `npm run lint` — runs ESLint.
-- `npx tsc --noEmit` — type-checks the whole project, including the `api/` serverless function.
+- `npm run typecheck` — type-checks the whole project under the same "bundler" resolution Vite uses.
+- `npm run typecheck:server` — type-checks `api/` + `codebooks/` under strict Node ESM resolution (`moduleResolution: "NodeNext"`) -- the same rules Vercel's Node.js Function runtime actually enforces at request time. **Run this one whenever you add or move a file under `api/` or `codebooks/`, or add a new relative import between them** -- `tsconfig.json`'s "bundler" resolution is deliberately lenient (it tolerates a bare directory import like `from '../codebooks'`, which Vite/tsx resolve fine) and will not catch a relative import missing its `.js` extension the way this config does. A codebook-registry import graph that passes `typecheck` but fails `typecheck:server` shipped a completely broken `/api/analyze-batch` to production once already (`ERR_UNSUPPORTED_DIR_IMPORT` on every single request) before this check existed.
 
 ### Deploying
 

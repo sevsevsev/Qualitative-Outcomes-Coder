@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { buildBatchResponseSchema } from './geminiSchema';
-import { getCodebook, allDomainCodes, allSubcategoryCodes } from './index';
+import { buildBatchResponseSchema } from './geminiSchema.js';
+import { getCodebook, allDomainCodes, allSubcategoryCodes } from './index.js';
 
 // Recursively sums every enum array's length reachable from a schema node.
 // Exists because a live run against the real Gemini API found it rejects a

@@ -12,7 +12,7 @@
 // barrel export) -- only from api/analyze-batch.ts.
 
 import { Type, Schema } from "@google/genai";
-import { Codebook, allDomainCodes, allSubcategoryCodes } from "./types";
+import { Codebook, allDomainCodes, allSubcategoryCodes } from "./types.js";
 
 interface CodebookEnums {
   domain: string[];

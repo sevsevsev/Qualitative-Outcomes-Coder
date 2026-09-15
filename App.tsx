@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { processBatch, atomicJsonToCSV } from './services/geminiService';
-import { BatchAnalysisResult, LoadingState, CodebookType } from './types';
-import { CODEBOOK_LIST, DEFAULT_CODEBOOK_ID } from './codebooks';
-import { loadReviewState, clearReviewState, SavedReviewState } from './services/reviewStorage';
-import ReviewDashboard from './components/ReviewDashboard';
-import ProcessingStatus from './components/ProcessingStatus';
+import { processBatch, atomicJsonToCSV } from './services/geminiService.js';
+import { BatchAnalysisResult, LoadingState, CodebookType } from './types.js';
+import { CODEBOOK_LIST, DEFAULT_CODEBOOK_ID } from './codebooks/index.js';
+import { loadReviewState, clearReviewState, SavedReviewState } from './services/reviewStorage.js';
+import ReviewDashboard from './components/ReviewDashboard.js';
+import ProcessingStatus from './components/ProcessingStatus.js';
 
 const App: React.FC = () => {
   const [inputText, setInputText] = useState<string>('');

@@ -22,7 +22,7 @@
 // few others) were deliberately deferred rather than added here -- see the
 // "Deferred for a future revision" note at the bottom of this file.
 
-import { Codebook } from './types';
+import { Codebook } from './types.js';
 
 export const SUBJECT_AREA_OPTIONS = [
   "N/A / General",

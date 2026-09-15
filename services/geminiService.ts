@@ -1,6 +1,6 @@
 
-import { BatchAnalysisResult, BatchItemResult, AtomicBatchItem, CodebookType } from "../types";
-import { getCodebook } from "../codebooks";
+import { BatchAnalysisResult, BatchItemResult, AtomicBatchItem, CodebookType } from "../types.js";
+import { getCodebook } from "../codebooks/index.js";
 
 // Trim/normalize a codebook string coming back from the model. Domain and
 // subcategory values are now constrained via enum in the response schema

@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { parseCSV } from '../services/geminiService';
+import { parseCSV } from '../services/geminiService.js';
 
 // Guards the validation fixture itself: it's meant to be uploaded as-is to
 // the running app (via the CSV upload form) to spot-check the v1.1.0

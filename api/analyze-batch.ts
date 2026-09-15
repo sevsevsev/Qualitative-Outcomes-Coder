@@ -13,8 +13,8 @@
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { GoogleGenAI } from '@google/genai';
-import { CODEBOOK_REGISTRY, CodebookType, buildSystemInstruction, getCodebook } from '../codebooks';
-import { buildBatchResponseSchema } from '../codebooks/geminiSchema';
+import { CODEBOOK_REGISTRY, CodebookType, buildSystemInstruction, getCodebook } from '../codebooks/index.js';
+import { buildBatchResponseSchema } from '../codebooks/geminiSchema.js';
 
 // Vercel's default Node.js Function timeout is 10s, which is too tight for
 // a Gemini call with thinking enabled against a ~10K-token system

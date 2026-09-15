@@ -10,8 +10,8 @@
 // Pulled out of ReviewDashboard's render logic so this bug-prone string
 // matching can be unit tested directly (see reviewNormalization.test.ts).
 
-import { CodebookType } from '../types';
-import { Codebook, allDomainCodes, subcategoriesForDomain } from '../codebooks';
+import { CodebookType } from '../types.js';
+import { Codebook, allDomainCodes, subcategoriesForDomain } from '../codebooks/index.js';
 
 export interface NormalizableCoding {
   primary_domain?: string;

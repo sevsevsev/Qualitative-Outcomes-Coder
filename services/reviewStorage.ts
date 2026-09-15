@@ -7,7 +7,7 @@
 // close silently discarded it. This persists a snapshot after every change
 // so App.tsx can offer to resume it.
 
-import { AtomicBatchItem, CodebookType } from '../types';
+import { AtomicBatchItem, CodebookType } from '../types.js';
 
 const STORAGE_KEY = 'qoc_review_session_v1';
 

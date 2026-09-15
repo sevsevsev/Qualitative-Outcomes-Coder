@@ -1,5 +1,5 @@
 
-export type { CodebookType } from './codebooks';
+export type { CodebookType } from './codebooks/index.js';
 
 export type Confidence = "high" | "medium" | "low" | "none";
 

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { normalizeImportedCoding } from './reviewNormalization';
-import { getCodebook } from '../codebooks';
+import { normalizeImportedCoding } from './reviewNormalization.js';
+import { getCodebook } from '../codebooks/index.js';
 
 const original = getCodebook('original');
 const acceleratePhilly = getCodebook('accelerate_philly');

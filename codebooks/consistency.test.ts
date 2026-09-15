@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CODEBOOK_LIST, allDomainCodes, allSubcategoryCodes } from './index';
+import { CODEBOOK_LIST, allDomainCodes, allSubcategoryCodes } from './index.js';
 
 // Guards against the exact kind of drift that's easy to introduce by hand:
 // codebooks/*.ts carries two representations of the same content --

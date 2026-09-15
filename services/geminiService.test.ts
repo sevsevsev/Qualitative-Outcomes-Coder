@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { parseCSV, atomicJsonToCSV } from './geminiService';
-import { AtomicBatchItem } from '../types';
+import { parseCSV, atomicJsonToCSV } from './geminiService.js';
+import { AtomicBatchItem } from '../types.js';
 
 describe('parseCSV', () => {
   it('parses a simple CSV and normalizes the outcome_text header', () => {

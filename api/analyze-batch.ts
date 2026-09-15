@@ -16,6 +16,15 @@ import { GoogleGenAI } from '@google/genai';
 import { CODEBOOK_REGISTRY, CodebookType, buildSystemInstruction, getCodebook } from '../codebooks';
 import { buildBatchResponseSchema } from '../codebooks/geminiSchema';
 
+// Vercel's default Node.js Function timeout is 10s, which is too tight for
+// a Gemini call with thinking enabled against a ~10K-token system
+// instruction -- a timed-out invocation is killed by the platform before
+// this file's own try/catch ever runs, so the client sees a bare 500/504
+// with no JSON body (no `error` field) rather than one of the specific
+// error messages below. 60s is the max allowed on Vercel's Hobby plan and
+// leaves real headroom on Pro.
+export const maxDuration = 60;
+
 const MODEL = 'gemini-3-flash-preview';
 const MAX_ITEMS_PER_REQUEST = 25; // generous ceiling above the client's chunk size (5)
 

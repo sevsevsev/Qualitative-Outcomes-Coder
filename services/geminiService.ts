@@ -1,11 +1,34 @@
 
 import { GoogleGenAI, Type, Schema } from "@google/genai";
-import { AnalysisResult, BatchAnalysisResult, BatchJsonResult, BatchItemResult, AtomicBatchItem, CodebookType } from "../types";
-import { CODEBOOK_CONTEXT, BATCH_MODE_INSTRUCTIONS, ACCELERATE_PHILLY_INSTRUCTIONS, CODEBOOK_DOMAINS, ACCELERATE_PHILLY_DOMAINS } from "../constants";
+import { AnalysisResult, BatchAnalysisResult, BatchJsonResult, BatchItemResult, AtomicBatchItem, CodebookType, CodebookGap } from "../types";
+import { CODEBOOK_CONTEXT, BATCH_MODE_INSTRUCTIONS, ACCELERATE_PHILLY_INSTRUCTIONS, CODEBOOK_DOMAINS, ACCELERATE_PHILLY_DOMAINS, ESCALATION_ADDENDUM } from "../constants";
 
 const apiKey = process.env.API_KEY || '';
 
 const ai = new GoogleGenAI({ apiKey });
+
+// Primary pass: fast/cheap model used for every item.
+const PRIMARY_MODEL = 'gemini-3-flash-preview';
+// Escalation pass: stronger model, only used for items the primary pass
+// couldn't confidently code (uncoded, or low/no confidence).
+const ESCALATION_MODEL = 'gemini-3-pro-preview';
+
+// Confidence values (on either the row or a split item) that trigger escalation.
+const LOW_CONFIDENCE_VALUES = ['low', 'none', ''];
+
+// Decide whether a primary-pass result needs a second, more careful look from
+// a stronger model: either nothing was coded at all, or any split came back
+// uncoded / low / no confidence.
+const needsEscalation = (item: BatchItemResult): boolean => {
+  const splits = item.split_items && item.split_items.length > 0 ? item.split_items : null;
+  if (!splits) return true; // Model returned no split items at all - treat as needing another attempt.
+
+  return splits.some((s: any) => {
+    if (s.uncoded === true || String(s.uncoded).toLowerCase() === 'true') return true;
+    const conf = String(s.primary_confidence || '').trim().toLowerCase();
+    return LOW_CONFIDENCE_VALUES.includes(conf);
+  });
+};
 
 // Helper to sanitize codebook values (remove definitions/newlines if hallucinated)
 const cleanCodebookString = (val: string | undefined): string => {
@@ -207,20 +230,23 @@ const flattenToAtomic = (results: BatchItemResult[], codebookType: CodebookType)
 
   results.forEach(item => {
     const splits = item.split_items && item.split_items.length > 0 ? item.split_items : [];
-    const { 
-      split_items, 
-      split_needed, 
-      original_text, 
+    const wasEscalated = !!(item as any)._escalated;
+    const {
+      split_items,
+      split_needed,
+      original_text,
       outcome_text,
-      primary_domain, 
-      primary_subcategory, 
-      primary_confidence, 
-      primary_subject_area, 
-      primary_target_population, 
-      uncoded, 
-      notes, 
-      ...metadata 
-    } = item;
+      primary_domain,
+      primary_subcategory,
+      primary_confidence,
+      primary_subject_area,
+      primary_target_population,
+      uncoded,
+      notes,
+      _escalated,
+      _escalation_model,
+      ...metadata
+    } = item as any;
 
     const safeRowId = String(item.row_id);
 
@@ -245,7 +271,8 @@ const flattenToAtomic = (results: BatchItemResult[], codebookType: CodebookType)
         secondary_confidence_2: "",
         uncoded: true,
         notes: item.notes || "Processing failed or no codes assigned",
-        is_corrected: false
+        is_corrected: false,
+        was_escalated: wasEscalated
       });
     } else {
       splits.forEach((split, index) => {
@@ -268,18 +295,19 @@ const flattenToAtomic = (results: BatchItemResult[], codebookType: CodebookType)
           primary_confidence: split.primary_confidence || "none",
           primary_subject_area: split.subject_area === "none" ? "" : (split.subject_area || ""),
           primary_target_population: split.target_population_primary === "none" ? "" : (split.target_population_primary || ""),
-          
+
           secondary_domain_1: fixDomainPrefix(sec1?.domain, codebookType),
           secondary_subcategory_1: cleanCodebookString(sec1?.subcategory),
           secondary_confidence_1: sec1?.confidence || "",
-          
+
           secondary_domain_2: fixDomainPrefix(sec2?.domain, codebookType),
           secondary_subcategory_2: cleanCodebookString(sec2?.subcategory),
           secondary_confidence_2: sec2?.confidence || "",
-          
+
           uncoded: isUncoded,
           notes: item.notes || "",
-          is_corrected: false
+          is_corrected: false,
+          was_escalated: wasEscalated
         });
       });
     }
@@ -309,15 +337,31 @@ export const atomicJsonToCSV = (items: AtomicBatchItem[]): string => {
   return [headerRow, ...rows].join("\n");
 };
 
+export const codebookGapsToCSV = (gaps: CodebookGap[]): string => {
+  if (gaps.length === 0) return "";
+  const headers = ["row_id", "atomic_outcome_id", "outcome_text", "notes", "model_used", "group", "organization", "program"];
+  const escapeCsv = (val: any) => {
+    if (val === null || val === undefined) return "";
+    const str = String(val);
+    if (str.includes(',') || str.includes('"') || str.includes('\n') || str.includes('\r')) {
+      return `"${str.replace(/"/g, '""')}"`;
+    }
+    return str;
+  };
+  const headerRow = headers.map(escapeCsv).join(",");
+  const rows = gaps.map(gap => headers.map(h => escapeCsv((gap as any)[h])).join(","));
+  return [headerRow, ...rows].join("\n");
+};
+
 // Retry wrapper logic with Logging
-const analyzeBatchChunkWithRetry = async (items: any[], codebookType: CodebookType, logCallback: (msg: string) => void, retries = 3): Promise<BatchItemResult[]> => {
+const analyzeBatchChunkWithRetry = async (items: any[], codebookType: CodebookType, logCallback: (msg: string) => void, retries = 3, model: string = PRIMARY_MODEL): Promise<BatchItemResult[]> => {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      return await analyzeBatchChunk(items, codebookType);
+      return await analyzeBatchChunk(items, codebookType, model);
     } catch (e: any) {
       const isLastAttempt = attempt === retries;
       if (isLastAttempt) throw e;
-      
+
       const delay = 1000 * Math.pow(2, attempt - 1); // Exponential backoff: 1s, 2s, 4s
       logCallback(`⚠️ Error: ${e.message.slice(0, 50)}... Retrying in ${delay/1000}s (Attempt ${attempt})`);
       await new Promise(resolve => setTimeout(resolve, delay));
@@ -326,28 +370,30 @@ const analyzeBatchChunkWithRetry = async (items: any[], codebookType: CodebookTy
   return [];
 };
 
-const analyzeBatchChunk = async (items: any[], codebookType: CodebookType): Promise<BatchItemResult[]> => {
+const analyzeBatchChunk = async (items: any[], codebookType: CodebookType, model: string = PRIMARY_MODEL): Promise<BatchItemResult[]> => {
   if (!apiKey) throw new Error("API Key is missing.");
 
   const simplifiedInput = items.map(item => ({
-    row_id: String(item.row_id), 
+    row_id: String(item.row_id),
     outcome_text: item.outcome_text || item.original_text,
     group: item.group || "General"
   }));
 
-  const systemInstruction = codebookType === 'accelerate_philly' 
-    ? ACCELERATE_PHILLY_INSTRUCTIONS 
+  const isEscalation = model === ESCALATION_MODEL;
+  const baseInstruction = codebookType === 'accelerate_philly'
+    ? ACCELERATE_PHILLY_INSTRUCTIONS
     : BATCH_MODE_INSTRUCTIONS;
+  const systemInstruction = isEscalation ? baseInstruction + ESCALATION_ADDENDUM : baseInstruction;
 
   const response = await ai.models.generateContent({
-    model: 'gemini-3-flash-preview',
+    model,
     contents: `Analyze these ${items.length} items.\nInput Data:\n${JSON.stringify(simplifiedInput, null, 2)}`,
     config: {
       systemInstruction: systemInstruction,
       responseMimeType: "application/json",
-      // Thinking Config: Forces the model to reason before answering. 
-      // 1024 tokens is sufficient for processing a batch of 5 items.
-      thinkingConfig: { thinkingBudget: 1024 }, 
+      // Thinking Config: Forces the model to reason before answering.
+      // Escalation pass gets a larger budget since it's meant to think harder about edge cases.
+      thinkingConfig: { thinkingBudget: isEscalation ? 4096 : 1024 },
       responseSchema: {
         type: Type.OBJECT,
         properties: {
@@ -488,7 +534,82 @@ export const processBatch = async (fileContent: string, codebookType: CodebookTy
     if(res) allResults = allResults.concat(res);
   });
 
+  // ---------------------------------------------------------------------------
+  // ESCALATION PASS: re-review anything uncoded/low-confidence with a stronger model.
+  // ---------------------------------------------------------------------------
+  const escalationTargets = allResults
+    .map((item, idx) => ({ item, idx }))
+    .filter(({ item }) => needsEscalation(item));
+
+  if (escalationTargets.length > 0) {
+    onProgress(processedItems, total, `Escalation pass: ${escalationTargets.length} item(s) need a closer look from ${ESCALATION_MODEL}...`);
+
+    const escalationInputs = escalationTargets.map(({ item }) => ({
+      row_id: item.row_id,
+      outcome_text: item.original_text || (item as any).outcome_text || "",
+      group: (item as any).group || "General"
+    }));
+
+    const escChunks = [];
+    for (let i = 0; i < escalationInputs.length; i += CHUNK_SIZE) {
+      escChunks.push(escalationInputs.slice(i, i + CHUNK_SIZE));
+    }
+
+    const escalatedByRowId = new Map<string, BatchItemResult>();
+    const escQueue = [...escChunks];
+    let escChunksDone = 0;
+
+    const escWorkers = Array(Math.min(CONCURRENCY, escChunks.length)).fill(null).map(async () => {
+      while (escQueue.length > 0) {
+        const chunk = escQueue.shift();
+        if (!chunk) continue;
+        escChunksDone++;
+        const logPrefix = `[Escalation ${escChunksDone}/${escChunks.length}]`;
+        const log = (msg: string) => onProgress(processedItems, total, `${logPrefix} ${msg}`);
+        log(`Re-reviewing ${chunk.length} item(s) with ${ESCALATION_MODEL}...`);
+        try {
+          const results = await analyzeBatchChunkWithRetry(chunk, codebookType, log, 3, ESCALATION_MODEL);
+          results.forEach(r => escalatedByRowId.set(String(r.row_id), r));
+          log(`Done.`);
+        } catch (e: any) {
+          log(`❌ Escalation failed, keeping original result: ${e.message}`);
+        }
+        await new Promise(r => setTimeout(r, 500));
+      }
+    });
+
+    await Promise.all(escWorkers);
+
+    escalationTargets.forEach(({ idx, item }) => {
+      const escalated = escalatedByRowId.get(String(item.row_id));
+      if (escalated) {
+        allResults[idx] = { ...escalated, _escalated: true, _escalation_model: ESCALATION_MODEL };
+      }
+    });
+
+    onProgress(processedItems, total, `Escalation pass complete.`);
+  }
+
   const atomicResults = flattenToAtomic(allResults, codebookType);
+
+  // ---------------------------------------------------------------------------
+  // CODEBOOK GAP LOG: items still uncoded even after the escalation model's
+  // careful second look are logged separately so a researcher can review them
+  // and decide whether the codebook needs new or expanded categories.
+  // ---------------------------------------------------------------------------
+  const codebookGaps: CodebookGap[] = atomicResults
+    .filter(item => item.uncoded === true)
+    .map(item => ({
+      row_id: item.row_id,
+      atomic_outcome_id: item.atomic_outcome_id,
+      outcome_text: item.outcome_text_atomic,
+      notes: item.notes,
+      model_used: item.was_escalated ? ESCALATION_MODEL : PRIMARY_MODEL,
+      group: (item as any).group,
+      organization: (item as any).organization || (item as any).Organization,
+      program: (item as any).program || (item as any).Program,
+    }));
+
   // Return both items array and CSV string
-  return { type: 'csv', data: atomicJsonToCSV(atomicResults), items: atomicResults };
+  return { type: 'csv', data: atomicJsonToCSV(atomicResults), items: atomicResults, codebookGaps };
 };

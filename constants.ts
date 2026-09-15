@@ -535,3 +535,19 @@ CRITICAL for Formatting:
 - Ensure the 'primary_domain' string exactly matches the codebook headers (e.g. "Domain 1. Joy, Interest & Motivation in Learning").
 - Ensure the 'primary_subcategory' string exactly matches the codebook items (e.g. "1.1 Joy & Emotional Wellness").
 `;
+
+// Appended to the base system instructions only on the escalation (second) pass, when an
+// item came back uncoded or low/no-confidence from the primary pass and is being re-reviewed
+// by a stronger model.
+export const ESCALATION_ADDENDUM = `
+
+SECOND-PASS ESCALATION REVIEW:
+This item was flagged after an initial coding pass as uncoded, low-confidence, or no-confidence. You are a more capable reviewer doing a deliberate, careful second look — take your time and reason through it rather than pattern-matching quickly.
+
+- Re-read the ENTIRE codebook provided above (every domain and subcategory), and consider indirect, partial, or non-obvious matches, not just exact keyword matches.
+- If you find a code that genuinely fits on this closer read, assign it with your honest confidence level (do not inflate confidence just to avoid an "uncoded" result).
+- If, after this careful review, NO domain/subcategory in the codebook reasonably captures what this outcome is describing, set "uncoded": true AND write a "notes" field that:
+  1. Briefly states, in plain language, what concept or outcome the text is actually describing.
+  2. Explicitly names the gap — e.g. "Describes alumni/graduate follow-up tracking, which no current domain covers" — in language a researcher could use later to decide whether the codebook needs a new or expanded category.
+- Do not write vague notes like "no code applies" or "does not fit" with no explanation of what the outcome actually is. The point of this note is to help a human researcher later assess whether the codebook itself needs to be revised.
+`;

@@ -9,7 +9,7 @@ import {
   SUBJECT_AREA_OPTIONS, 
   TARGET_POPULATION_OPTIONS 
 } from '../constants';
-import { atomicJsonToCSV } from '../services/geminiService';
+import { atomicJsonToCSV, codebookGapsToCSV } from '../services/geminiService';
 
 interface ReviewDashboardProps {
   result: BatchAnalysisResult;
@@ -25,6 +25,7 @@ const ITEMS_PER_PAGE = 20;
 const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, codebookType }) => {
   const domains = codebookType === 'accelerate_philly' ? ACCELERATE_PHILLY_DOMAINS : CODEBOOK_DOMAINS;
   const subcategories = codebookType === 'accelerate_philly' ? ACCELERATE_PHILLY_SUBCATEGORIES : CODEBOOK_SUBCATEGORIES;
+  const codebookGaps = result.codebookGaps || [];
 
   // ---------------------------------------------------------------------------
   // 1. ROBUST INITIALIZATION & KEY GENERATION
@@ -135,11 +136,12 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
   // ---------------------------------------------------------------------------
   const { filteredItems, needsReviewCount, stats } = useMemo(() => {
     let reviewCount = 0;
-    const currentStats = { total: items.length, uncoded: 0, lowConf: 0 };
+    const currentStats = { total: items.length, uncoded: 0, lowConf: 0, escalated: 0 };
 
     const filtered = items.filter(item => {
        if (item.uncoded) currentStats.uncoded++;
        if ((item.primary_confidence || '').trim().toLowerCase() === 'low') currentStats.lowConf++;
+       if (item.was_escalated) currentStats.escalated++;
        
        const needsReview = checkNeedsReview(item);
        if (needsReview) reviewCount++;
@@ -235,6 +237,19 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
     document.body.removeChild(link);
   };
 
+  const handleDownloadGaps = () => {
+    const csvContent = codebookGapsToCSV(codebookGaps);
+    const filename = "codebook_gap_log.csv";
+    const blob = new Blob([csvContent], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   // ---------------------------------------------------------------------------
   // 5. RENDER HELPERS
   // ---------------------------------------------------------------------------
@@ -264,13 +279,23 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
              >
                 Start Over
              </button>
-             <button 
+             <button
                 onClick={handleDownload}
                 className="px-5 py-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg shadow-sm transition-all flex items-center"
              >
                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                Export Verified CSV
              </button>
+             {codebookGaps.length > 0 && (
+               <button
+                  onClick={handleDownloadGaps}
+                  title="Items where even the escalation model couldn't find a fitting code — review for possible codebook gaps"
+                  className="px-5 py-2 text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 rounded-lg shadow-sm transition-all flex items-center"
+               >
+                 <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                 Export Codebook Gap Log ({codebookGaps.length})
+               </button>
+             )}
           </div>
         </div>
 
@@ -286,6 +311,14 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
            <div className="px-4 py-2 bg-orange-50 rounded-lg border border-orange-100">
               <span className="block text-orange-500 text-xs font-semibold uppercase">Low Confidence</span>
               <span className="font-mono font-bold text-lg text-orange-700">{stats.lowConf}</span>
+           </div>
+           <div className="px-4 py-2 bg-blue-50 rounded-lg border border-blue-100" title="Items re-reviewed by the stronger escalation model">
+              <span className="block text-blue-500 text-xs font-semibold uppercase">Escalated</span>
+              <span className="font-mono font-bold text-lg text-blue-700">{stats.escalated}</span>
+           </div>
+           <div className="px-4 py-2 bg-purple-50 rounded-lg border border-purple-100" title="Items with no fitting codebook label, even after escalation">
+              <span className="block text-purple-500 text-xs font-semibold uppercase">Codebook Gaps</span>
+              <span className="font-mono font-bold text-lg text-purple-700">{codebookGaps.length}</span>
            </div>
         </div>
       </div>
@@ -374,6 +407,14 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                       </div>
                       
                       <div className="flex flex-col gap-1 mt-1.5">
+                        {item.was_escalated && (
+                          <span
+                            className="inline-flex items-center px-1.5 py-0.5 rounded bg-purple-100 text-purple-700 text-[10px] font-bold tracking-wide w-fit"
+                            title="Re-reviewed by the escalation model after low confidence / uncoded on the first pass"
+                          >
+                            ESCALATED
+                          </span>
+                        )}
                         {item.is_corrected && (
                           <span className="inline-flex items-center px-1.5 py-0.5 rounded bg-blue-100 text-blue-700 text-[10px] font-bold tracking-wide w-fit">
                             VERIFIED

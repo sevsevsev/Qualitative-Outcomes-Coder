@@ -58,6 +58,7 @@ export interface AtomicBatchItem {
   uncoded: boolean;
   notes: string;
   is_corrected?: boolean;
+  was_escalated?: boolean; // True if this row was re-reviewed by the escalation model
   [key: string]: any; // Allow original metadata columns to pass through
 }
 
@@ -65,10 +66,25 @@ export interface BatchJsonResult {
   atomic_outcomes: AtomicBatchItem[];
 }
 
+// A logged instance where even the strongest available model, after a deliberate
+// second look, could not find an appropriate label in the codebook. Meant to be
+// reviewed by a researcher to decide whether the codebook needs new/expanded codes.
+export interface CodebookGap {
+  row_id: string;
+  atomic_outcome_id: string;
+  outcome_text: string;
+  notes: string;
+  model_used: string;
+  group?: string;
+  organization?: string;
+  program?: string;
+}
+
 export interface BatchAnalysisResult {
   type: 'json' | 'csv';
   data: BatchJsonResult | string;
   items?: AtomicBatchItem[]; // Added items array for table display
+  codebookGaps?: CodebookGap[]; // Items flagged as genuine codebook gaps for later review
 }
 
 export type LoadingState = 'idle' | 'analyzing' | 'success' | 'error';

@@ -1,0 +1,29 @@
+{
+  // Type-checks the server-only code (api/ + the codebooks/ it depends on)
+  // under the SAME module resolution rules Node's native ESM loader
+  // actually enforces at runtime on Vercel -- unlike tsconfig.json's
+  // "bundler" resolution (correct for the Vite-bundled client, but far more
+  // forgiving than what actually runs this code in production).
+  //
+  // "bundler" resolution let a bare directory import (`from '../codebooks'`)
+  // and extensionless relative imports pass silently for months: they work
+  // fine under Vite and under tsx, but Vercel's Node.js Function runtime
+  // executes the transpiled .js directly through Node's own ESM loader,
+  // which requires explicit file extensions and does not resolve a
+  // directory to its index file. That mismatch shipped a completely broken
+  // /api/analyze-batch to production (ERR_UNSUPPORTED_DIR_IMPORT on every
+  // single invocation) with no local check ever catching it -- this config
+  // exists so `npx tsc --noEmit -p tsconfig.server.json` catches the next
+  // one before it deploys. Run it alongside the regular typecheck/lint step.
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true
+  },
+  "include": ["api/**/*.ts", "codebooks/**/*.ts"],
+  "exclude": ["**/*.test.ts"]
+}

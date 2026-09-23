@@ -97,7 +97,7 @@ describe('normalizeImportedCoding (original codebook)', () => {
     expect(result.uncoded).toBe(true);
   });
 
-  it('un-marks uncoded when a valid domain is present (domain wins over a stale uncoded flag)', () => {
+  it('keeps uncoded and drops the domain the schema forced the model to name', () => {
     const result = normalizeImportedCoding(
       {
         primary_domain: 'Domain 2. Belonging, Relationships & School Connectedness',
@@ -107,7 +107,32 @@ describe('normalizeImportedCoding (original codebook)', () => {
       original,
       'original'
     );
+    expect(result).toEqual({ primary_domain: '', primary_subcategory: '', primary_confidence: 'none', uncoded: true });
+  });
+
+  it('treats confidence "none" with a domain as uncoded (how the model flags a header or fragment)', () => {
+    // Shape of a real gemini-3.8-flash row for "Students demonstrate improvements in:".
+    const result = normalizeImportedCoding(
+      {
+        primary_domain: 'Domain 11. Academic Learning & Achievement',
+        primary_subcategory: '',
+        primary_confidence: 'none',
+        uncoded: false,
+      },
+      original,
+      'original'
+    );
+    expect(result).toEqual({ primary_domain: '', primary_subcategory: '', primary_confidence: 'none', uncoded: true });
+  });
+
+  it('does not treat a missing confidence (legacy CSV) as uncoded', () => {
+    const result = normalizeImportedCoding(
+      { primary_domain: 'Domain 2. Belonging, Relationships & School Connectedness', uncoded: false },
+      original,
+      'original'
+    );
     expect(result.uncoded).toBe(false);
+    expect(result.primary_domain).toBe('Domain 2. Belonging, Relationships & School Connectedness');
   });
 });
 

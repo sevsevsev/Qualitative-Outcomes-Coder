@@ -37,6 +37,7 @@ export interface BatchItemResult extends AnalysisResult {
   primary_subject_area?: string;
   primary_target_population?: string;
   uncoded?: boolean;
+  model_used?: string;
   // Arbitrary passthrough columns from the uploaded CSV (headers are
   // user-defined and unknown at compile time), plus the fields above.
   [key: string]: any;
@@ -64,6 +65,8 @@ export interface AtomicBatchItem {
   is_corrected?: boolean;
   /** Codebook id + version this row was coded against (see codebooks/). */
   codebook_version?: string;
+  /** Gemini model that actually coded this row (differs from the configured one after a fallback). */
+  model_used?: string;
   // Arbitrary passthrough metadata columns from the uploaded CSV.
   [key: string]: any;
 }

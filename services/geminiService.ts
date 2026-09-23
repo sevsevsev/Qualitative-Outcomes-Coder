@@ -1,6 +1,7 @@
 
 import { BatchAnalysisResult, BatchItemResult, AtomicBatchItem, CodebookType } from "../types.js";
 import { getCodebook } from "../codebooks/index.js";
+import { normalizeSecondarySubcategory } from "./reviewNormalization.js";
 
 // Trim/normalize a codebook string coming back from the model. Domain and
 // subcategory values are now constrained via enum in the response schema
@@ -138,6 +139,7 @@ const flattenToAtomic = (results: BatchItemResult[], codebookType: CodebookType)
       primary_target_population,
       uncoded,
       notes,
+      model_used,
       ...metadata
     } = item;
 
@@ -166,6 +168,7 @@ const flattenToAtomic = (results: BatchItemResult[], codebookType: CodebookType)
         notes: item.notes || "Processing failed or no codes assigned",
         is_corrected: false,
         codebook_version: codebookVersion,
+        model_used: model_used || "",
       });
     } else {
       splits.forEach((split, index) => {
@@ -201,6 +204,7 @@ const flattenToAtomic = (results: BatchItemResult[], codebookType: CodebookType)
           notes: item.notes || "",
           is_corrected: false,
           codebook_version: codebookVersion,
+          model_used: model_used || "",
         });
       });
     }
@@ -212,7 +216,7 @@ const flattenToAtomic = (results: BatchItemResult[], codebookType: CodebookType)
 export const atomicJsonToCSV = (items: AtomicBatchItem[]): string => {
   if (items.length === 0) return "";
   const fixedStart = ["row_id", "is_corrected", "outcome_text_original", "outcome_text_atomic", "atomic_outcome_index", "atomic_outcome_id"];
-  const fixedEnd = ["primary_domain", "primary_subcategory", "primary_confidence", "primary_subject_area", "primary_target_population", "secondary_domain_1", "secondary_subcategory_1", "secondary_confidence_1", "secondary_domain_2", "secondary_subcategory_2", "secondary_confidence_2", "uncoded", "notes", "codebook_version"];
+  const fixedEnd = ["primary_domain", "primary_subcategory", "primary_confidence", "primary_subject_area", "primary_target_population", "secondary_domain_1", "secondary_subcategory_1", "secondary_confidence_1", "secondary_domain_2", "secondary_subcategory_2", "secondary_confidence_2", "uncoded", "notes", "codebook_version", "model_used"];
   const allKeys = new Set<string>();
   items.forEach(item => Object.keys(item).forEach(k => allKeys.add(k)));
   const dynamicKeys = Array.from(allKeys).filter(k => !fixedStart.includes(k) && !fixedEnd.includes(k) && k !== 'is_corrected').sort();
@@ -251,6 +255,7 @@ const analyzeBatchChunkWithRetry = async (items: any[], codebookType: CodebookTy
 // Gemini SDK directly -- the API key lives server-side only (see
 // api/analyze-batch.ts) so it never ships in the client bundle.
 const analyzeBatchChunk = async (items: any[], codebookType: CodebookType): Promise<BatchItemResult[]> => {
+  const codebook = getCodebook(codebookType);
   const simplifiedInput = items.map(item => ({
     row_id: String(item.row_id),
     outcome_text: item.outcome_text || item.original_text,
@@ -269,24 +274,25 @@ const analyzeBatchChunk = async (items: any[], codebookType: CodebookType): Prom
   }
 
   const result = await response.json();
+  const model_used = response.headers.get('X-Gemini-Model-Used') || "";
 
   return items.map(original => {
     const coded = result.coded_items?.find((c: any) => String(c.row_id) === String(original.row_id));
-    if (!coded) return { ...original, original_text: original.outcome_text, split_needed: "no", split_items: [], uncoded: true, notes: "Error: AI processing skipped this row." };
+    if (!coded) return { ...original, original_text: original.outcome_text, split_needed: "no", split_items: [], uncoded: true, notes: "Error: AI processing skipped this row.", model_used };
 
     return {
       ...original,
+      model_used,
       original_text: coded.outcome_text || original.outcome_text,
       split_needed: coded.split_needed,
       split_items: (coded.split_items || []).map((si: any) => ({
         ...si,
         primary_domain: cleanCodebookString(si.primary_domain),
         primary_subcategory: cleanCodebookString(si.primary_subcategory),
-        secondary_codes: si.secondary_codes?.map((sc: any) => ({
-          ...sc,
-          domain: cleanCodebookString(sc.domain),
-          subcategory: cleanCodebookString(sc.subcategory)
-        })) || []
+        secondary_codes: si.secondary_codes?.map((sc: any) => {
+          const domain = cleanCodebookString(sc.domain);
+          return { ...sc, domain, subcategory: normalizeSecondarySubcategory(sc.subcategory, domain, codebook) };
+        }) || []
       })),
       primary_domain: cleanCodebookString(coded.primary_domain),
       primary_subcategory: cleanCodebookString(coded.primary_subcategory),
@@ -340,6 +346,8 @@ export const processBatch = async (fileContent: string, codebookType: CodebookTy
     try {
       const chunkResults = await analyzeBatchChunkWithRetry(chunk.data, codebookType, log);
       resultsMap.set(chunk.index, chunkResults);
+      const modelUsed = chunkResults[0]?.model_used;
+      if (modelUsed) log(`Coded with ${modelUsed}.`);
     } catch (e: any) {
        const errorResults = chunk.data.map(item => ({
          ...item,

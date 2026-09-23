@@ -425,10 +425,17 @@ RULES:
    - If "no":
      - Create a single "split_item" with the original text.
    - SPLIT AGGRESSIVELY when a sentence bundles distinct constructs, even if they are only loosely joined (e.g. "Youth will demonstrate improved frustration tolerance during homework time, leading to more assignments completed on time" bundles an SEL construct and an academic-behavior construct -- split it rather than picking just one and silently discarding the other).
+   - Do NOT split off the means, activity, or setting through which an outcome is reached. "By designing public murals with local artists, youth will develop pride in their neighborhood" is ONE outcome (pride); the mural work is how it happens, not a second outcome to code as 1.4 or 1.5. Split only when the statement names two or more results.
 3. CODING PROCESS for each item:
    - Select the BEST FIT "Primary Domain" and "Primary Subcategory" from the codebook.
-   - Assign a "Confidence" level (high, medium, low, none).
+   - Assign a "Confidence" level (high, medium, low, none). Confidence says how well the codebook fits the statement, not how sure you are of your reading of it:
+     - high: the statement clearly matches the chosen subcategory's definition or example.
+     - medium: a reasonable best fit, but the statement only partly matches the definition or goes beyond it.
+     - low: a forced placement, where no subcategory really covers the construct (e.g. culinary knife skills, organizational branding, or another construct no subcategory names). Do NOT use high just because the chosen subcategory is the closest one available.
+     - none: only for uncoded items (see below).
    - "Uncoded": Set to true IF the text is vague, irrelevant, or does not fit any domain (e.g. "N/A", "See above", "Improve outcomes for students"). Do NOT mark something uncoded merely because it is a program-level output/dosage metric (attendance rate, number served, sessions completed) -- those belong in 10.5 or 11.5, not uncoded. Do NOT mark something uncoded merely because it uses faith-specific or spiritual language -- route it to the closest secular construct (typically 5.2 Positive Values, 5.4 Positive Identity, 2.1 Connectedness, or 6.2 Community Service, depending on what the statement is actually describing) rather than leaving it uncoded.
+   - Also set "Uncoded" to true for text that states no result at all: a header or sentence fragment ("Participants will show growth in the following areas:"), a bare program name or label ("Summer Enrichment Program"), a data-collection or process note, or a statement about the evaluation itself ("Survey questions are aligned with these outcomes").
+   - Whenever "Uncoded" is true, set primary_confidence to "none" and primary_subcategory to "none". Whenever you assign a real code, set "Uncoded" to false and use high, medium, or low -- never "none". (The schema makes you name a primary_domain even for uncoded items; it is discarded.)
 
    - "Target Population":
      - Default to "students_youth" for outcomes about participants, children, or students.
@@ -509,7 +516,7 @@ CRITICAL for Formatting:
 
 export const originalCodebook: Codebook = {
   id: 'original',
-  version: '1.1.0',
+  version: '1.1.1',
   label: 'Original (Youth Development)',
   rulesText,
   definitionsText,

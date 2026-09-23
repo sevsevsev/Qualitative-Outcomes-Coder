@@ -60,6 +60,12 @@ describe('buildBatchResponseSchema', () => {
     expect(secondaryCodeSchema.properties.domain.enum).toEqual(allDomainCodes(codebook));
     expect(secondaryCodeSchema.properties.subcategory.enum).toBeUndefined();
   });
+
+  it('requires a confidence on every secondary code', () => {
+    const schema = buildBatchResponseSchema(getCodebook('original'));
+    const splitItemSchema = (schema.properties as any).coded_items.items.properties.split_items.items;
+    expect(splitItemSchema.properties.secondary_codes.items.required).toEqual(['domain', 'subcategory', 'confidence']);
+  });
   it('constrains primary_domain to all 12 domains of the original codebook, including the new ones', () => {
     const codebook = getCodebook('original');
     const schema = buildBatchResponseSchema(codebook);

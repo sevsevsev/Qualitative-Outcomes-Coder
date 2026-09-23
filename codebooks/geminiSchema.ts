@@ -58,6 +58,9 @@ const buildSplitItemSchema = (enums: CodebookEnums): Schema => ({
           subcategory: { type: Type.STRING },
           confidence: { type: Type.STRING, enum: ["high", "medium", "low"] },
         },
+        // Without this, a live run left confidence blank on 31 of 49
+        // secondary codes.
+        required: ["domain", "subcategory", "confidence"],
       },
     },
     uncoded: { type: Type.BOOLEAN },

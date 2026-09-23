@@ -80,7 +80,19 @@ export const normalizeImportedCoding = (
   let cleanDomain = (item.primary_domain || "").trim();
   let cleanSub = (item.primary_subcategory || "").trim();
   let cleanConf = (item.primary_confidence || "none").trim().toLowerCase();
-  let isUncoded = item.uncoded === true || String(item.uncoded).toLowerCase() === 'true';
+  const isUncoded = item.uncoded === true || String(item.uncoded).toLowerCase() === 'true';
+
+  // An uncoded flag, or an explicit confidence of "none", means no code fits.
+  // The response schema's domain enum has no "none" option, so the model has
+  // to name a domain even then; that forced domain is dropped, not trusted.
+  // The review table never pairs a domain with either signal (picking a
+  // domain clears uncoded and lifts confidence off "none"), so this only
+  // changes raw AI output. A missing confidence (a legacy CSV without the
+  // column) is not treated as "none".
+  const explicitNone = (item.primary_confidence ?? '').trim().toLowerCase() === 'none';
+  if (isUncoded || explicitNone) {
+    return { primary_domain: "", primary_subcategory: "", primary_confidence: "none", uncoded: true };
+  }
 
   // --- Domain Normalization ---
   let matchedDomain = domains.find(d => d.toLowerCase() === cleanDomain.toLowerCase());
@@ -90,14 +102,10 @@ export const normalizeImportedCoding = (
 
   if (matchedDomain) {
     cleanDomain = matchedDomain;
-    // Trust Domain over Uncoded flag if conflict
-    if (isUncoded) isUncoded = false;
   } else {
     // Invalid Domain: Clear it to force selection
     cleanDomain = "";
-    if (!isUncoded) {
-      cleanConf = "none";
-    }
+    cleanConf = "none";
   }
 
   // --- Subcategory Normalization ---

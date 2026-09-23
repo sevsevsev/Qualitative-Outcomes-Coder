@@ -82,7 +82,7 @@ describe('original codebook v1.1.0 additions', () => {
     expect(codes).toContain('10.5 Program Participation, Retention & Reach (Output Metric)');
   });
 
-  it('bumped the codebook version from 1.0.0', () => {
-    expect(original.version).toBe('1.1.0');
+  it('bumped the codebook version for the v1.1.1 prompt rules', () => {
+    expect(original.version).toBe('1.1.1');
   });
 });

@@ -167,9 +167,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return;
     }
 
-    if (modelUsed !== MODEL) {
-      res.setHeader('X-Gemini-Model-Used', modelUsed);
-    }
+    // Always sent (not just on fallback) so the client can stamp the model
+    // that actually coded each row into the export as model_used.
+    res.setHeader('X-Gemini-Model-Used', modelUsed);
 
     const parsed = JSON.parse(text);
     res.status(200).json(parsed);

@@ -76,6 +76,7 @@ describe('atomicJsonToCSV', () => {
     notes: 'Some "quoted" note',
     is_corrected: false,
     codebook_version: 'original@1.0.0',
+    model_used: 'gemini-3.8-flash',
   };
 
   it('returns an empty string for no items', () => {
@@ -99,9 +100,11 @@ describe('atomicJsonToCSV', () => {
     expect(headers.indexOf('organization')).toBeLessThan(headers.indexOf('primary_domain'));
   });
 
-  it('includes codebook_version as a trailing column', () => {
+  it('ends with codebook_version and model_used columns', () => {
     const csv = atomicJsonToCSV([baseItem]);
-    const headers = csv.split('\n')[0].split(',');
-    expect(headers[headers.length - 1]).toBe('codebook_version');
+    const lines = csv.split('\n');
+    const headers = lines[0].split(',');
+    expect(headers.slice(-2)).toEqual(['codebook_version', 'model_used']);
+    expect(lines[1].endsWith(',original@1.0.0,gemini-3.8-flash')).toBe(true);
   });
 });

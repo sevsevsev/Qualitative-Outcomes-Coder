@@ -1,6 +1,7 @@
 
 import { BatchAnalysisResult, BatchItemResult, AtomicBatchItem, CodebookType } from "../types.js";
 import { getCodebook } from "../codebooks/index.js";
+import { normalizeSecondarySubcategory } from "./reviewNormalization.js";
 
 // Trim/normalize a codebook string coming back from the model. Domain and
 // subcategory values are now constrained via enum in the response schema
@@ -254,6 +255,7 @@ const analyzeBatchChunkWithRetry = async (items: any[], codebookType: CodebookTy
 // Gemini SDK directly -- the API key lives server-side only (see
 // api/analyze-batch.ts) so it never ships in the client bundle.
 const analyzeBatchChunk = async (items: any[], codebookType: CodebookType): Promise<BatchItemResult[]> => {
+  const codebook = getCodebook(codebookType);
   const simplifiedInput = items.map(item => ({
     row_id: String(item.row_id),
     outcome_text: item.outcome_text || item.original_text,
@@ -287,11 +289,10 @@ const analyzeBatchChunk = async (items: any[], codebookType: CodebookType): Prom
         ...si,
         primary_domain: cleanCodebookString(si.primary_domain),
         primary_subcategory: cleanCodebookString(si.primary_subcategory),
-        secondary_codes: si.secondary_codes?.map((sc: any) => ({
-          ...sc,
-          domain: cleanCodebookString(sc.domain),
-          subcategory: cleanCodebookString(sc.subcategory)
-        })) || []
+        secondary_codes: si.secondary_codes?.map((sc: any) => {
+          const domain = cleanCodebookString(sc.domain);
+          return { ...sc, domain, subcategory: normalizeSecondarySubcategory(sc.subcategory, domain, codebook) };
+        }) || []
       })),
       primary_domain: cleanCodebookString(coded.primary_domain),
       primary_subcategory: cleanCodebookString(coded.primary_subcategory),

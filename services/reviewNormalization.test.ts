@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { normalizeImportedCoding } from './reviewNormalization.js';
+import { normalizeImportedCoding, normalizeSecondarySubcategory } from './reviewNormalization.js';
 import { getCodebook } from '../codebooks/index.js';
 
 const original = getCodebook('original');
@@ -128,5 +128,35 @@ describe('normalizeImportedCoding (accelerate_philly codebook)', () => {
       'accelerate_philly'
     );
     expect(result.primary_subcategory).toBe('');
+  });
+});
+
+// Real malformed values from a 2,081-row gemini-3.8-flash export (2026-09-23).
+describe('normalizeSecondarySubcategory', () => {
+  const domain5 = 'Domain 5. Positive Youth Development (PYD) & Assets';
+  const domain6 = 'Domain 6. Civic Engagement & Community';
+
+  it('keeps a canonical subcategory unchanged', () => {
+    expect(normalizeSecondarySubcategory('5.4 Positive Identity', domain5, original)).toBe('5.4 Positive Identity');
+  });
+
+  it('strips a confidence level glued onto the label', () => {
+    expect(normalizeSecondarySubcategory('5.4 Positive Identity-medium', domain5, original)).toBe('5.4 Positive Identity');
+  });
+
+  it('recovers the code from a runaway generation', () => {
+    const runaway = '6.3 Youth Voice & Leadership Juror Alternative if Youth-Led Club ' + 'context mapping '.repeat(20000);
+    expect(normalizeSecondarySubcategory(runaway, domain6, original)).toBe('6.3 Youth Voice & Leadership');
+  });
+
+  it('matches the whole code, not a prefix of a longer one', () => {
+    const domain3 = 'Domain 3. Social & Emotional Learning (CASEL-aligned)';
+    expect(normalizeSecondarySubcategory('3.1 Self-Awareness', domain3, original)).toBe('');
+  });
+
+  it('returns empty when the code belongs to a different domain or is missing', () => {
+    expect(normalizeSecondarySubcategory('6.3 Youth Voice & Leadership', domain5, original)).toBe('');
+    expect(normalizeSecondarySubcategory('', domain5, original)).toBe('');
+    expect(normalizeSecondarySubcategory('5.4 Positive Identity', '', original)).toBe('');
   });
 });

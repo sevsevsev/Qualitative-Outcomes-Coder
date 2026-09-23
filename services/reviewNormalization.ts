@@ -121,3 +121,21 @@ export const normalizeImportedCoding = (
     uncoded: isUncoded,
   };
 };
+
+/**
+ * Secondary subcategories are plain strings in the response schema (see the
+ * enum-size note in codebooks/geminiSchema.ts), so the model can return
+ * values outside the codebook: a confidence glued on ("5.4 Positive
+ * Identity-medium"), a reworded label, or a runaway generation hundreds of
+ * KB long. Maps the value back to a canonical subcategory of `domainCode` by
+ * its leading code number, or returns "" when none matches.
+ */
+export const normalizeSecondarySubcategory = (
+  rawSubcategory: string | undefined,
+  domainCode: string | undefined,
+  codebook: Codebook
+): string => {
+  const code = (rawSubcategory ?? "").trim().split(/\s/)[0];
+  if (!code || !domainCode) return "";
+  return subcategoriesForDomain(codebook, domainCode).find(s => s.code.split(' ')[0] === code)?.code ?? "";
+};

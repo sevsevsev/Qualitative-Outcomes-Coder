@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Type | CITATION_FIX |
-| Codes touched | Domain 6 header (6.1–6.3), Domain 9 header (9.1–9.2) |
+| Codes touched | Domain 7 header (7.1–7.3), Domain 10 header (10.1–10.2) |
 | Version bump | PATCH |
 | Requirement served | R1 |
 | Status | **blocked on verification** |
@@ -16,7 +16,7 @@
   citation cannot be verified as written.
 - **"Opportunity-to-Learn (OTL) Standards."** OTL standards were a 1990s policy
   concept (Goals 2000). They are not a single document, so a reader cannot look up
-  what 9.1 and 9.2 are grounded in.
+  what 10.1 and 10.2 are grounded in.
 
 ## Proposed process
 
@@ -33,7 +33,7 @@ replacement goes in until it is verified.
      National Academies' *Monitoring Educational Equity* (2019).
 2. Whatever comes back `SUPPORTED` becomes the replacement text in a follow-up
    revision of this CP.
-3. If nothing verifies for Domain 9, move 9.1 and 9.2 permanently to
+3. If nothing verifies for Domain 10, move 10.1 and 10.2 permanently to
    `codebook_extensions`, with a written reason.
 
 ## Gold impact

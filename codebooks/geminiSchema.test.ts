@@ -74,7 +74,7 @@ describe('buildBatchResponseSchema', () => {
     const domainEnum = splitItemSchema.properties.primary_domain.enum as string[];
 
     expect(domainEnum).toEqual(allDomainCodes(codebook));
-    expect(domainEnum).toContain('Domain 11. Academic Learning & Achievement');
+    expect(domainEnum).toContain('Domain 1. Academic Learning & Achievement');
     expect(domainEnum).toContain('Domain 12. Family Strengthening & Basic Needs');
     expect(domainEnum).toHaveLength(12);
   });

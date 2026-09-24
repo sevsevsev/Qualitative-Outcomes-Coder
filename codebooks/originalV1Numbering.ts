@@ -1,0 +1,121 @@
+// codebooks/originalV1Numbering.ts
+//
+// GENERATED from codebook-refinement/renumbering/v1.2.0-to-v2.0.0.csv by
+// codebook-refinement/renumbering/renumber_v2_0_0.py (CP-04-08). Do not edit
+// by hand; codebooks/renumbering.test.ts checks this file against the CSV.
+//
+// v2.0.0 renumbered the original codebook's domains to match their listed
+// order (Academic Learning & Achievement became Domain 1). Each pair is
+// [v1.2.0 label, v2.0.0 label]. Only the number changes; the text after it
+// is identical. Used to re-import exports coded under v1.2.0 or earlier.
+
+/** Exports stamped with an original codebook version below this use the old numbers. */
+export const RENUMBERED_IN_VERSION = '2.0.0';
+
+export const V1_2_0_DOMAIN_LABELS: ReadonlyArray<readonly [string, string]> = [
+  ["Domain 11. Academic Learning & Achievement", "Domain 1. Academic Learning & Achievement"],
+  ["Domain 1. Joy, Interest & Motivation in Learning", "Domain 2. Joy, Interest & Motivation in Learning"],
+  ["Domain 2. Belonging, Relationships & School Connectedness", "Domain 3. Belonging, Relationships & School Connectedness"],
+  ["Domain 3. Social & Emotional Learning (CASEL-aligned)", "Domain 4. Social & Emotional Learning (CASEL-aligned)"],
+  ["Domain 4. Academic Engagement & Habits", "Domain 5. Academic Engagement & Habits"],
+  ["Domain 5. Positive Youth Development (PYD) & Assets", "Domain 6. Positive Youth Development (PYD) & Assets"],
+  ["Domain 6. Civic Engagement & Community", "Domain 7. Civic Engagement & Community"],
+  ["Domain 7. Physical & Behavioral Health", "Domain 8. Physical & Behavioral Health"],
+  ["Domain 8. College & Career Readiness", "Domain 9. College & Career Readiness"],
+  ["Domain 9. Access & Equity", "Domain 10. Access & Equity"],
+  ["Domain 10. Adult & System Capacity", "Domain 11. Adult & System Capacity"],
+  ["Domain 12. Family Strengthening & Basic Needs", "Domain 12. Family Strengthening & Basic Needs"],
+];
+
+export const V1_2_0_SUBCATEGORY_LABELS: ReadonlyArray<readonly [string, string]> = [
+  ["11.1 Literacy: Reading & Writing", "1.1 Literacy: Reading & Writing"],
+  ["11.2 Numeracy & Mathematical Skill", "1.2 Numeracy & Mathematical Skill"],
+  ["11.3 Knowledge & Skill in Other Academic Subjects", "1.3 Knowledge & Skill in Other Academic Subjects"],
+  ["11.4 English Language Proficiency & Multilingual Development", "1.4 English Language Proficiency & Multilingual Development"],
+  ["11.5 Attendance, Chronic Absence & School Stability", "1.5 Attendance, Chronic Absence & School Stability"],
+  ["11.6 Grades, Credits, On-Track Status & Graduation", "1.6 Grades, Credits, On-Track Status & Graduation"],
+  ["11.7 School Readiness & Early Learning", "1.7 School Readiness & Early Learning"],
+  ["11.8 Science, Technology & Engineering", "1.8 Science, Technology & Engineering"],
+  ["11.9 Arts Learning & Performance", "1.9 Arts Learning & Performance"],
+  ["1.1 Joy & Emotional Wellness", "2.1 Joy & Emotional Wellness"],
+  ["1.2 Triggered Situational Interest (Curiosity)", "2.2 Triggered Situational Interest (Curiosity)"],
+  ["1.3 Value & Meaning (Utility Value)", "2.3 Value & Meaning (Utility Value)"],
+  ["1.4 Creative Expression & Making", "2.4 Creative Expression & Making"],
+  ["1.5 Performance, Presentation & Artistic Response", "2.5 Performance, Presentation & Artistic Response"],
+  ["2.1 School/Program Connectedness (Belonging)", "3.1 School/Program Connectedness (Belonging)"],
+  ["2.2 Adult Support & Care", "3.2 Adult Support & Care"],
+  ["2.3 Peer Connection & Social Integration", "3.3 Peer Connection & Social Integration"],
+  ["2.4 Cultural Identity & Affirmation", "3.4 Cultural Identity & Affirmation"],
+  ["2.5 Family Partnership & Connection", "3.5 Family Partnership & Connection"],
+  ["3.1.1 Identifying and naming emotions", "4.1.1 Identifying and naming emotions"],
+  ["3.1.2 Understanding self & identity", "4.1.2 Understanding self & identity"],
+  ["3.1.3 Recognizing strengths", "4.1.3 Recognizing strengths"],
+  ["3.1.4 Confidence, self-efficacy & growth mindset", "4.1.4 Confidence, self-efficacy & growth mindset"],
+  ["3.2.1 Emotion regulation & impulse control", "4.2.1 Emotion regulation & impulse control"],
+  ["3.2.2 Stress management & coping skills", "4.2.2 Stress management & coping skills"],
+  ["3.2.3 Goal-setting & follow-through", "4.2.3 Goal-setting & follow-through"],
+  ["3.2.4 Organization, persistence & self-discipline", "4.2.4 Organization, persistence & self-discipline"],
+  ["3.3.1 Empathy & perspective-taking", "4.3.1 Empathy & perspective-taking"],
+  ["3.3.2 Respect for diversity & inclusion", "4.3.2 Respect for diversity & inclusion"],
+  ["3.3.3 Understanding norms & expectations", "4.3.3 Understanding norms & expectations"],
+  ["3.3.4 Awareness of supports and resources", "4.3.4 Awareness of supports and resources"],
+  ["3.4.1 Communication & active listening", "4.4.1 Communication & active listening"],
+  ["3.4.2 Cooperation, teamwork & collaboration", "4.4.2 Cooperation, teamwork & collaboration"],
+  ["3.4.3 Conflict management & problem-solving in relationships", "4.4.3 Conflict management & problem-solving in relationships"],
+  ["3.4.4 Help-seeking & providing support", "4.4.4 Help-seeking & providing support"],
+  ["3.4.5 Building and sustaining positive relationships", "4.4.5 Building and sustaining positive relationships"],
+  ["3.5.1 Evaluating options & consequences", "4.5.1 Evaluating options & consequences"],
+  ["3.5.2 Ethical and prosocial choices", "4.5.2 Ethical and prosocial choices"],
+  ["3.5.3 Personal and social problem-solving", "4.5.3 Personal and social problem-solving"],
+  ["3.5.4 Safety-oriented decisions & risk avoidance", "4.5.4 Safety-oriented decisions & risk avoidance"],
+  ["3.5.5 Contributions to class/program/community wellbeing", "4.5.5 Contributions to class/program/community wellbeing"],
+  ["4.1 Academic Behaviors (Engagement)", "5.1 Academic Behaviors (Engagement)"],
+  ["4.2 Academic Perseverance (Grit/Tenacity)", "5.2 Academic Perseverance (Grit/Tenacity)"],
+  ["4.3 Learning Strategies (Study Skills)", "5.3 Learning Strategies (Study Skills)"],
+  ["4.4 Academic Confidence (Self-Efficacy)", "5.4 Academic Confidence (Self-Efficacy)"],
+  ["5.1 Empowerment & Safety", "6.1 Empowerment & Safety"],
+  ["5.2 Positive Values", "6.2 Positive Values"],
+  ["5.3 Constructive Use of Time", "6.3 Constructive Use of Time"],
+  ["5.4 Positive Identity", "6.4 Positive Identity"],
+  ["6.1 Civic Skills & Knowledge", "7.1 Civic Skills & Knowledge"],
+  ["6.2 Community Service & Action", "7.2 Community Service & Action"],
+  ["6.3 Youth Voice & Leadership", "7.3 Youth Voice & Leadership"],
+  ["6.4 Criticality & Social Justice", "7.4 Criticality & Social Justice"],
+  ["6.5 Digital Citizenship & Safety", "7.5 Digital Citizenship & Safety"],
+  ["7.1 Physical Activity & Nutrition", "8.1 Physical Activity & Nutrition"],
+  ["7.2 Mental Health Status (Symptom Reduction)", "8.2 Mental Health Status (Symptom Reduction)"],
+  ["7.3 Healing & Trauma Recovery", "8.3 Healing & Trauma Recovery"],
+  ["7.4 Access to Mental Health Services", "8.4 Access to Mental Health Services"],
+  ["7.5 Substance Use Prevention & Reduction", "8.5 Substance Use Prevention & Reduction"],
+  ["7.6 Sexual & Reproductive Health Behaviors", "8.6 Sexual & Reproductive Health Behaviors"],
+  ["7.7 Violence, Bullying & Injury Prevention", "8.7 Violence, Bullying & Injury Prevention"],
+  ["7.8 Justice Involvement, Diversion & Reentry", "8.8 Justice Involvement, Diversion & Reentry"],
+  ["8.1 Key Content Knowledge", "9.1 Key Content Knowledge"],
+  ["8.2 Key Cognitive Strategies", "9.2 Key Cognitive Strategies"],
+  ["8.3 Transition Knowledge & Skills", "9.3 Transition Knowledge & Skills"],
+  ["8.4 Career Awareness & Exploration", "9.4 Career Awareness & Exploration"],
+  ["8.5 Employability Skills", "9.5 Employability Skills"],
+  ["8.6 Technical Skills & Work-Based Learning", "9.6 Technical Skills & Work-Based Learning"],
+  ["8.7 Postsecondary Enrollment, Persistence & Completion", "9.7 Postsecondary Enrollment, Persistence & Completion"],
+  ["8.8 Employment Placement, Retention & Earnings", "9.8 Employment Placement, Retention & Earnings"],
+  ["9.1 Access to Resources", "10.1 Access to Resources"],
+  ["9.2 Participation & Inclusion", "10.2 Participation & Inclusion"],
+  ["10.1 Professional Knowledge & Skill", "11.1 Professional Knowledge & Skill"],
+  ["10.2 Instructional Practice Change", "11.2 Instructional Practice Change"],
+  ["10.3 Systemic Improvement", "11.3 Systemic Improvement"],
+  ["10.4 Family Engagement Capacity", "11.4 Family Engagement Capacity"],
+  ["10.5 Program Participation, Retention & Reach (Output Metric)", "11.5 Program Participation, Retention & Reach (Output Metric)"],
+  ["12.1 Parenting Knowledge & Practices", "12.1 Parenting Knowledge & Practices"],
+  ["12.2 Parental Resilience & Caregiver Well-being", "12.2 Parental Resilience & Caregiver Well-being"],
+  ["12.3 Caregiver Social Connections & Support Networks", "12.3 Caregiver Social Connections & Support Networks"],
+  ["12.4 Home Learning Environment", "12.4 Home Learning Environment"],
+  ["12.5 Household Economic Stability & Benefits Access", "12.5 Household Economic Stability & Benefits Access"],
+  ["12.6 Food Security & Nutrition Access", "12.6 Food Security & Nutrition Access"],
+  ["12.7 Housing Stability", "12.7 Housing Stability"],
+];
+
+/** Old code number -> new code number, e.g. "11.3" -> "1.3", "3.2.1" -> "4.2.1", "11" -> "1" for a domain. */
+export const V1_2_0_CODE_NUMBERS: ReadonlyMap<string, string> = new Map([
+  ...V1_2_0_DOMAIN_LABELS.map(([from, to]) => [from.split(' ')[1].replace(/\.$/, ''), to.split(' ')[1].replace(/\.$/, '')] as const),
+  ...V1_2_0_SUBCATEGORY_LABELS.map(([from, to]) => [from.split(' ')[0], to.split(' ')[0]] as const),
+]);

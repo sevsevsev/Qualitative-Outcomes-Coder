@@ -46,7 +46,7 @@ the crosswalk and gold are regenerated anyway.
 
 **Also updated:**
 - tie-breaks: the same rules as v1's rule 5b and CF-025/CF-026;
-- `v2/v1-to-v2-crosswalk.csv`: 11.8 → Y7.3, 11.9 → Y7.4, 11.3 → Y7.5;
+- `v2/v1-to-v2-crosswalk.csv`: 1.8 → Y7.3, 1.9 → Y7.4, 1.3 → Y7.5;
 - `gold/gold-cycle02.csv`: v2_gold rows using Y7.2 or Y7.5/Y7.10 get re-mapped. All
   rows are still `proposed`.
 

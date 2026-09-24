@@ -23,87 +23,87 @@
       "excerpt": "SELF-MANAGEMENT: Managing one's emotions; Identifying and using stress-management strategies; Exhibiting self-discipline and self-motivation; Setting personal and collective goals; Using planning and organizational skills",
       "supports": [
         {
-          "code": "3.1.1",
+          "code": "4.1.1",
           "component": "Self-Awareness: 'Identifying one's emotions'"
         },
         {
-          "code": "3.1.2",
+          "code": "4.1.2",
           "component": "Self-Awareness: 'Integrating personal and social identities'"
         },
         {
-          "code": "3.1.3",
+          "code": "4.1.3",
           "component": "Self-Awareness: 'Identifying personal, cultural, and linguistic assets'"
         },
         {
-          "code": "3.1.4",
+          "code": "4.1.4",
           "component": "Self-Awareness: 'Experiencing self-efficacy'; 'Having a growth mindset'"
         },
         {
-          "code": "3.2.1",
+          "code": "4.2.1",
           "component": "Self-Management: 'Managing one's emotions'"
         },
         {
-          "code": "3.2.2",
+          "code": "4.2.2",
           "component": "Self-Management: 'Identifying and using stress-management strategies'"
         },
         {
-          "code": "3.2.3",
+          "code": "4.2.3",
           "component": "Self-Management: 'Setting personal and collective goals'"
         },
         {
-          "code": "3.2.4",
+          "code": "4.2.4",
           "component": "Self-Management: 'Exhibiting self-discipline and self-motivation'; 'Using planning and organizational skills'"
         },
         {
-          "code": "3.3.1",
+          "code": "4.3.1",
           "component": "Social Awareness: 'Taking others' perspectives'; 'Demonstrating empathy and compassion'"
         },
         {
-          "code": "3.3.2",
+          "code": "4.3.2",
           "component": "Relationship Skills: 'Demonstrating cultural competency'; Self-Awareness: 'Examining prejudices and biases'"
         },
         {
-          "code": "3.3.3",
+          "code": "4.3.3",
           "component": "Social Awareness: 'Identifying diverse social norms, including unjust ones'"
         },
         {
-          "code": "3.4.1",
+          "code": "4.4.1",
           "component": "Relationship Skills: 'Communicating effectively'"
         },
         {
-          "code": "3.4.2",
+          "code": "4.4.2",
           "component": "Relationship Skills: 'Practicing teamwork and collaborative problem-solving'"
         },
         {
-          "code": "3.4.3",
+          "code": "4.4.3",
           "component": "Relationship Skills: 'Resolving conflicts constructively'"
         },
         {
-          "code": "3.4.4",
+          "code": "4.4.4",
           "component": "Relationship Skills: 'Seeking or offering support and help when needed'"
         },
         {
-          "code": "3.4.5",
+          "code": "4.4.5",
           "component": "Relationship Skills: 'Developing positive relationships'"
         },
         {
-          "code": "3.5.1",
+          "code": "4.5.1",
           "component": "Responsible Decision-Making: 'Anticipating and evaluating the consequences of one's actions'"
         },
         {
-          "code": "3.5.2",
+          "code": "4.5.2",
           "component": "Responsible Decision-Making: 'Evaluating personal, interpersonal, community, and institutional impacts'"
         },
         {
-          "code": "3.5.3",
+          "code": "4.5.3",
           "component": "Responsible Decision-Making: 'Identifying solutions for personal and social problems'"
         },
         {
-          "code": "3.5.5",
+          "code": "4.5.5",
           "component": "Responsible Decision-Making: 'Reflecting on one's role to promote personal, family, and community well-being'"
         }
       ],
-      "notes": "Codes 3.3.4 and 3.5.4 do NOT map to a 2020 CASEL example skill, so they are listed under codebook_extensions. CASEL skills that have no subcategory yet, and the routing decided for each, are in CONFUSIONS.md CF-016."
+      "notes": "Codes 4.3.4 and 4.5.4 do NOT map to a 2020 CASEL example skill, so they are listed under codebook_extensions. CASEL skills that have no subcategory yet, and the routing decided for each, are in CONFUSIONS.md CF-016."
     },
     {
       "id": "muhammad-five-pursuits",
@@ -118,15 +118,15 @@
       "excerpt": "Identity – teaching and learning the multiple and diverse identities of students ... Criticality – teaching students how to name, understand, question, and disrupt injustice ... Joy – teaching, uplifting, and recognition of beauty, aesthetics, truth",
       "supports": [
         {
-          "code": "1.1",
+          "code": "2.1",
           "component": "Pursuit 5: Joy"
         },
         {
-          "code": "2.4",
+          "code": "3.4",
           "component": "Pursuit 1: Identity"
         },
         {
-          "code": "6.4",
+          "code": "7.4",
           "component": "Pursuit 4: Criticality"
         }
       ],
@@ -143,11 +143,11 @@
       "open_cp": "CP-01-01",
       "supports": [
         {
-          "code": "1.1",
+          "code": "2.1",
           "component": "as currently written in definitionsText"
         },
         {
-          "code": "6.4",
+          "code": "7.4",
           "component": "as currently written in definitionsText"
         }
       ],
@@ -166,11 +166,11 @@
       "excerpt": "triggered situational interest, maintained situational interest, emerging (less-developed) individual interest, and well-developed individual interest",
       "supports": [
         {
-          "code": "1.2",
+          "code": "2.2",
           "component": "Phase 1: triggered situational interest"
         }
       ],
-      "notes": "The codebook also cites 'Hidi & Renninger (Phase 3/4)' for 1.3 Utility Value. Phases 3 and 4 are about individual interest, not utility value, so that citation is misapplied (CP-01-04). Phases 2–4 currently have no subcategory."
+      "notes": "The codebook also cites 'Hidi & Renninger (Phase 3/4)' for 2.3 Utility Value. Phases 3 and 4 are about individual interest, not utility value, so that citation is misapplied (CP-01-04). Phases 2–4 currently have no subcategory."
     },
     {
       "id": "eccles-expectancy-value",
@@ -182,7 +182,7 @@
       "status": "located",
       "supports": [
         {
-          "code": "1.3",
+          "code": "2.3",
           "component": "Utility value",
           "verdict": "PARTIAL",
           "source_kind": "secondary",
@@ -206,7 +206,7 @@
       "status": "verified",
       "supports": [
         {
-          "code": "1.4",
+          "code": "2.4",
           "component": "Creating",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -215,7 +215,7 @@
           "url_checked": "https://www.nationalartsstandards.org/"
         },
         {
-          "code": "1.5",
+          "code": "2.5",
           "component": "Performing/Presenting/Producing; Responding; Connecting",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -224,7 +224,7 @@
           "url_checked": "https://www.nationalartsstandards.org/"
         },
         {
-          "code": "11.9",
+          "code": "1.9",
           "component": "Four artistic processes (Creating; Performing/Presenting/Producing; Responding; Connecting) across dance, media arts, music, theatre and visual arts",
           "verdict": "PARTIAL",
           "source_kind": "primary",
@@ -247,7 +247,7 @@
       "status": "verified",
       "supports": [
         {
-          "code": "2.1",
+          "code": "3.1",
           "component": "School connectedness",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -256,7 +256,7 @@
           "url_checked": "https://www.cdc.gov/healthyyouth/protective/pdf/connectedness.pdf"
         },
         {
-          "code": "2.2",
+          "code": "3.2",
           "component": "Adult support",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -265,7 +265,7 @@
           "url_checked": "https://www.cdc.gov/healthyyouth/protective/pdf/connectedness.pdf"
         },
         {
-          "code": "2.3",
+          "code": "3.3",
           "component": "Belonging to a positive peer group",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -291,11 +291,11 @@
       "excerpt": "Express Care — Show me that I matter to you. ... Share Power — Treat me with respect and give me a say. Expand Possibilities — Connect me with people and places to broaden my world.",
       "supports": [
         {
-          "code": "2.2",
+          "code": "3.2",
           "component": "Express Care; Provide Support"
         }
       ],
-      "notes": "Not yet cited in the codebook. Proposed as an added citation for 2.2 in CP-01-07. 'Expand Possibilities' is the construct for the deferred social-capital gap."
+      "notes": "Not yet cited in the codebook. Proposed as an added citation for 3.2 in CP-01-07. 'Expand Possibilities' is the construct for the deferred social-capital gap."
     },
     {
       "id": "learning-for-justice-sjs",
@@ -307,7 +307,7 @@
       "status": "verified",
       "supports": [
         {
-          "code": "2.4",
+          "code": "3.4",
           "component": "Identity anchor standards",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -333,11 +333,11 @@
       "excerpt": "Type 4 (Learning at Home): help students at home with homework and other curriculum-related activities, decisions, and planning. Type 5 (Decision Making): include parents in school decisions ... develop parent leaders and representatives.",
       "supports": [
         {
-          "code": "2.5",
+          "code": "3.5",
           "component": "Type 2 Communicating; Type 3 Volunteering"
         },
         {
-          "code": "10.4",
+          "code": "11.4",
           "component": "Type 5 Decision Making; Type 6 Collaborating with the Community"
         },
         {
@@ -349,7 +349,7 @@
           "component": "Type 4 Learning at Home"
         }
       ],
-      "notes": "Verified from a secondary summary only, so the status stays 'located' until the primary source (Epstein et al., School, Family, and Community Partnerships: Your Handbook for Action) is checked. Current codebook mapping errors: 2.5 cites Type 4 (Learning at Home belongs to 12.4); the Domain 10 header cites Types 3/6, but 10.4's own example (Parent Advisory Council) is Type 5. See CP-01-03."
+      "notes": "Verified from a secondary summary only, so the status stays 'located' until the primary source (Epstein et al., School, Family, and Community Partnerships: Your Handbook for Action) is checked. Current codebook mapping errors: 3.5 cites Type 4 (Learning at Home belongs to 12.4); the Domain 11 header cites Types 3/6, but 11.4's own example (Parent Advisory Council) is Type 5. See CP-01-03."
     },
     {
       "id": "farrington-2012",
@@ -364,23 +364,23 @@
       "excerpt": "Academic behaviors; Academic perseverance; Academic mindsets; Learning strategies; Social skills ... I belong in this academic community. My ability and competence grow with my effort. I can succeed at this. This work has value for me.",
       "supports": [
         {
-          "code": "4.1",
+          "code": "5.1",
           "component": "Academic Behaviors"
         },
         {
-          "code": "4.2",
+          "code": "5.2",
           "component": "Academic Perseverance"
         },
         {
-          "code": "4.3",
+          "code": "5.3",
           "component": "Learning Strategies"
         },
         {
-          "code": "4.4",
+          "code": "5.4",
           "component": "Academic Mindsets: 'I can succeed at this'; 'My ability and competence grow with my effort'"
         }
       ],
-      "notes": "The codebook calls this UChicago 'Academic Mindsets and Behaviors'. The precise title is above. Its 'My ability and competence grow with my effort' mindset means academic growth mindset belongs in 4.4, not 3.1.4. See CF-005."
+      "notes": "The codebook calls this UChicago 'Academic Mindsets and Behaviors'. The precise title is above. Its 'My ability and competence grow with my effort' mindset means academic growth mindset belongs in 5.4, not 4.1.4. See CF-005."
     },
     {
       "id": "search-40-assets",
@@ -392,7 +392,7 @@
       "status": "located",
       "supports": [
         {
-          "code": "5.1",
+          "code": "6.1",
           "component": "Empowerment (incl. asset 'Safety')",
           "verdict": "PARTIAL",
           "source_kind": "primary",
@@ -401,7 +401,7 @@
           "url_checked": "https://searchinstitute.org/resources-hub/developmental-assets-framework"
         },
         {
-          "code": "5.2",
+          "code": "6.2",
           "component": "Positive Values",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -410,7 +410,7 @@
           "url_checked": "https://searchinstitute.org/resources-hub/developmental-assets-framework"
         },
         {
-          "code": "5.3",
+          "code": "6.3",
           "component": "Constructive Use of Time",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -419,7 +419,7 @@
           "url_checked": "https://searchinstitute.org/resources-hub/developmental-assets-framework"
         },
         {
-          "code": "5.4",
+          "code": "6.4",
           "component": "Positive Identity",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -443,15 +443,15 @@
       "open_cp": "CP-01-10",
       "supports": [
         {
-          "code": "6.1",
+          "code": "7.1",
           "component": "civic knowledge"
         },
         {
-          "code": "6.2",
+          "code": "7.2",
           "component": "civic action"
         },
         {
-          "code": "6.3",
+          "code": "7.3",
           "component": "youth voice"
         }
       ],
@@ -467,7 +467,7 @@
       "status": "verified",
       "supports": [
         {
-          "code": "6.5",
+          "code": "7.5",
           "component": "Standard 2: Digital Citizen",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -490,7 +490,7 @@
       "status": "verified",
       "supports": [
         {
-          "code": "7.1",
+          "code": "8.1",
           "component": "Physical Education & Physical Activity; Nutrition Environment & Services",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -499,7 +499,7 @@
           "url_checked": "https://www.cdc.gov/whole-school-community-child/about/index.html"
         },
         {
-          "code": "7.4",
+          "code": "8.4",
           "component": "Counseling, Psychological, and Social Services",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -522,7 +522,7 @@
       "status": "verified",
       "supports": [
         {
-          "code": "7.2",
+          "code": "8.2",
           "component": "Mental illness continuum",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -547,7 +547,7 @@
       "status": "located",
       "supports": [
         {
-          "code": "7.3",
+          "code": "8.3",
           "component": "Core concepts",
           "verdict": "PARTIAL",
           "source_kind": "primary",
@@ -572,7 +572,7 @@
       "verified_by": "cycle-01 (WebSearch)",
       "supports": [
         {
-          "code": "10.2",
+          "code": "11.2",
           "component": "Six key principles of a trauma-informed approach"
         }
       ]
@@ -587,7 +587,7 @@
       "status": "verified",
       "supports": [
         {
-          "code": "7.5",
+          "code": "8.5",
           "component": "Tobacco, alcohol, and other drug use",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -596,7 +596,7 @@
           "url_checked": "https://www.cdc.gov/yrbs/about/index.html"
         },
         {
-          "code": "7.6",
+          "code": "8.6",
           "component": "Sexual behaviors",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -605,7 +605,7 @@
           "url_checked": "https://www.cdc.gov/mmwr/preview/mmwrhtml/ss5905a1.htm"
         },
         {
-          "code": "7.7",
+          "code": "8.7",
           "component": "Behaviors that contribute to unintentional injuries and violence",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -628,7 +628,7 @@
       "status": "located",
       "supports": [
         {
-          "code": "7.5",
+          "code": "8.5",
           "component": "Prevention planning",
           "verdict": "PARTIAL",
           "source_kind": "secondary",
@@ -652,7 +652,7 @@
       "verified_by": "commit 9536bfe (prior session, WebSearch; no excerpt recorded)",
       "supports": [
         {
-          "code": "7.7",
+          "code": "8.7",
           "component": "Uniform definition of bullying"
         }
       ]
@@ -668,7 +668,7 @@
       "verified_by": "cycle-03 independent codebook-citation-verifier (claim W01 in v2/source-verification-2026-09-24.json)",
       "supports": [
         {
-          "code": "7.8",
+          "code": "8.8",
           "component": "Recidivism definitions: multiple measures (re-arrest, adjudication, reincarceration)",
           "verdict": "SUPPORTED",
           "excerpt": "Multiple measures of recidivism – such as re-arrest for a new offense, adjudication and reincarceration for a new offense – make comparisons more meaningful"
@@ -690,15 +690,15 @@
       "verified_by": "cycle-01 (WebSearch)",
       "supports": [
         {
-          "code": "8.1",
+          "code": "9.1",
           "component": "Key Content Knowledge"
         },
         {
-          "code": "8.2",
+          "code": "9.2",
           "component": "Key Cognitive Strategies"
         },
         {
-          "code": "8.3",
+          "code": "9.3",
           "component": "Key Transition Knowledge & Skills"
         }
       ]
@@ -713,7 +713,7 @@
       "status": "verified",
       "supports": [
         {
-          "code": "8.4",
+          "code": "9.4",
           "component": "Career exploration / career guidance",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -722,7 +722,7 @@
           "url_checked": "https://www.law.cornell.edu/uscode/text/20/2302"
         },
         {
-          "code": "8.6",
+          "code": "9.6",
           "component": "Work-based learning; recognized postsecondary credentials",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -748,16 +748,16 @@
       "excerpt": "Applied Knowledge ... Effective Relationships ... Workplace Skills ... Resource management skills ... 'Manages time' 'Manages money' 'Manages materials' 'Manages personnel'",
       "supports": [
         {
-          "code": "8.5",
+          "code": "9.5",
           "component": "Effective Relationships; Workplace Skills"
         },
         {
-          "code": "8.9",
+          "code": "9.9",
           "component": "Workplace Skills > Resource Management: 'Manages money' (proposed code)",
           "proposed": true
         }
       ],
-      "notes": "Proposed as the primary citation for 8.5 (CP-01-08), replacing the looser 'Perkins V / Soft Skills'."
+      "notes": "Proposed as the primary citation for 9.5 (CP-01-08), replacing the looser 'Perkins V / Soft Skills'."
     },
     {
       "id": "nsc-hs-benchmarks",
@@ -769,7 +769,7 @@
       "status": "verified",
       "supports": [
         {
-          "code": "8.7",
+          "code": "9.7",
           "component": "College enrollment, persistence, completion",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -795,11 +795,11 @@
       "excerpt": "Percentage of participants who are in education or training activities, or in unsubsidized employment, during the second quarter after exit from the program ... Median earnings of participants who are in unsubsidized employment",
       "supports": [
         {
-          "code": "8.6",
+          "code": "9.6",
           "component": "Measurable skill gains; credential attainment"
         },
         {
-          "code": "8.8",
+          "code": "9.8",
           "component": "Education/training or employment in Q2 and Q4 after exit; median earnings"
         }
       ]
@@ -815,7 +815,7 @@
       "open_cp": "CP-01-02",
       "supports": [
         {
-          "code": "8.8",
+          "code": "9.8",
           "component": "as currently written in definitionsText"
         }
       ],
@@ -832,11 +832,11 @@
       "open_cp": "CP-01-10",
       "supports": [
         {
-          "code": "9.1",
+          "code": "10.1",
           "component": "Resources"
         },
         {
-          "code": "9.2",
+          "code": "10.2",
           "component": "Access/inclusion"
         }
       ],
@@ -854,15 +854,15 @@
       "verified_by": "cycle-01 (WebSearch)",
       "supports": [
         {
-          "code": "10.1",
+          "code": "11.1",
           "component": "Professional learning content"
         },
         {
-          "code": "10.2",
+          "code": "11.2",
           "component": "Implementation"
         },
         {
-          "code": "10.3",
+          "code": "11.3",
           "component": "Culture/leadership/resources (systems)"
         }
       ]
@@ -879,7 +879,7 @@
       "verified_by": "cycle-01 (WebSearch)",
       "supports": [
         {
-          "code": "10.5",
+          "code": "11.5",
           "component": "Participation dimensions (intensity, duration, breadth)"
         }
       ],
@@ -897,7 +897,7 @@
       "verified_by": "cycle-01 (WebSearch)",
       "supports": [
         {
-          "code": "10.5",
+          "code": "11.5",
           "component": "as currently written in definitionsText"
         }
       ],
@@ -913,7 +913,7 @@
       "status": "located",
       "supports": [
         {
-          "code": "11.1",
+          "code": "1.1",
           "component": "Five components",
           "verdict": "PARTIAL",
           "source_kind": "primary",
@@ -937,7 +937,7 @@
       "status": "located",
       "supports": [
         {
-          "code": "11.2",
+          "code": "1.2",
           "component": "Academic achievement indicator",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -946,7 +946,7 @@
           "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section6311&num=0&edition=prelim"
         },
         {
-          "code": "11.3",
+          "code": "1.3",
           "component": "Academic achievement indicator (other subjects)",
           "verdict": "UNSUPPORTED",
           "source_kind": "primary",
@@ -956,16 +956,16 @@
           "unsupported": true
         },
         {
-          "code": "11.6",
+          "code": "1.6",
           "component": "Four-year adjusted cohort graduation rate",
           "verdict": "PARTIAL",
           "source_kind": "primary",
           "excerpt": "the four-year adjusted cohort graduation rate; and at the State's discretion, the extended-year adjusted cohort graduation rate",
-          "verifier_note": "This supports only the graduation part of 11.6. It does not cover credits, on-track status, discipline or GED.",
+          "verifier_note": "This supports only the graduation part of 1.6. It does not cover credits, on-track status, discipline or GED.",
           "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section6311&num=0&edition=prelim"
         }
       ],
-      "notes": "11.2 and 11.3 currently have no per-subcategory citation line in definitionsText, only the Domain 11 header. Mapped here so coverage is visible. 2026-09-24 (CP-04-01/02): 11.2 and 11.3 now cite 6311(b)(1)(C) and 7801(52) respectively; the 11.3 UNSUPPORTED row is kept as the record of cycle-01b's finding.",
+      "notes": "1.2 and 1.3 currently have no per-subcategory citation line in definitionsText, only the Domain 1 header. Mapped here so coverage is visible. 2026-09-24 (CP-04-01/02): 1.2 and 1.3 now cite 6311(b)(1)(C) and 7801(52) respectively; the 1.3 UNSUPPORTED row is kept as the record of cycle-01b's finding.",
       "cite_as_in_codebook": "Every Student Succeeds Act (2015) — statewide accountability indicators (academic achievement; graduation rate; English learner progress)",
       "verified_on": "2026-09-23",
       "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
@@ -981,7 +981,7 @@
       "status": "located",
       "supports": [
         {
-          "code": "11.4",
+          "code": "1.4",
           "component": "Language domains: listening, speaking, reading, writing",
           "verdict": "PARTIAL",
           "source_kind": "primary",
@@ -1004,7 +1004,7 @@
       "status": "verified",
       "supports": [
         {
-          "code": "11.5",
+          "code": "1.5",
           "component": "Chronic absence definition",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -1027,7 +1027,7 @@
       "status": "located",
       "supports": [
         {
-          "code": "11.5",
+          "code": "1.5",
           "component": "School stability",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -1061,11 +1061,11 @@
       "verified_by": "cycle-01 (WebSearch)",
       "supports": [
         {
-          "code": "11.6",
+          "code": "1.6",
           "component": "Freshman on-track (credits + course failures)"
         }
       ],
-      "notes": "The on-track indicator covers credits and course failures. It does NOT cover exclusionary discipline, which 11.6's definition includes (CP-01-09)."
+      "notes": "The on-track indicator covers credits and course failures. It does NOT cover exclusionary discipline, which 1.6's definition includes (CP-01-09)."
     },
     {
       "id": "head-start-elof",
@@ -1079,7 +1079,7 @@
       "verified_by": "cycle-01 (official page confirms 'five broad areas ... central domains'; names confirmed only via secondary uw.pressbooks.pub)",
       "supports": [
         {
-          "code": "11.7",
+          "code": "1.7",
           "component": "Language and Literacy; Cognition"
         }
       ]
@@ -1172,7 +1172,7 @@
       "excerpt": "Financial Knowledge and Decision-making Skills: The knowledge and skills needed to understand the financial world and make informed financial decisions.",
       "supports": [
         {
-          "code": "8.9",
+          "code": "9.9",
           "component": "Financial Habits and Norms; Financial Knowledge and Decision-making Skills (proposed code)",
           "proposed": true
         }
@@ -1191,7 +1191,7 @@
       "excerpt": "Earning Income; Spending; Saving; Investing; Managing Credit; Managing Risk",
       "supports": [
         {
-          "code": "8.9",
+          "code": "9.9",
           "component": "All six topic areas (proposed code)",
           "proposed": true
         }
@@ -1230,7 +1230,7 @@
       "excerpt": "The State shall have such academic standards for mathematics, reading or language arts, and science, and may have such standards for any other subject determined by the State.",
       "supports": [
         {
-          "code": "11.1",
+          "code": "1.1",
           "component": "State academic standards for reading or language arts",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -1239,7 +1239,7 @@
           "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section6311&num=0&edition=prelim"
         },
         {
-          "code": "11.2",
+          "code": "1.2",
           "component": "State academic standards for mathematics",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -1248,7 +1248,7 @@
           "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section6311&num=0&edition=prelim"
         },
         {
-          "code": "11.8",
+          "code": "1.8",
           "component": "State academic standards and assessments for science",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -1271,12 +1271,12 @@
       "excerpt": "courses, activities, and programming in subjects such as ... foreign languages, civics and government, economics, arts, history, geography, ... career and technical education, health, physical education, and any other subject, as determined by the State or local educational agency",
       "supports": [
         {
-          "code": "11.3",
+          "code": "1.3",
           "component": "Subjects of a well-rounded education (civics and government, economics, history, geography, foreign languages, health, any other subject)",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
           "excerpt": "courses, activities, and programming in subjects such as ... foreign languages, civics and government, economics, arts, history, geography, ... career and technical education, health, physical education, and any other subject, as determined by the State or local educational agency",
-          "verifier_note": "V04-04. The full list also names English, writing, science, technology, engineering, mathematics, arts, computer science and music; it defines access to courses, so it anchors 11.3 by scope.",
+          "verifier_note": "V04-04. The full list also names English, writing, science, technology, engineering, mathematics, arts, computer science and music; it defines access to courses, so it anchors 1.3 by scope.",
           "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section7801&num=0&edition=prelim"
         }
       ]
@@ -1294,7 +1294,7 @@
       "excerpt": "conduct additional national assessments ... in additional subject matter, including writing, science, history, geography, civics, economics, foreign languages, and arts, and the trend assessment",
       "supports": [
         {
-          "code": "11.3",
+          "code": "1.3",
           "component": "Additional subject matter NAEP may assess (history, geography, civics, economics, foreign languages)",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -1317,7 +1317,7 @@
       "excerpt": "describe what scientists do to investigate the natural world and what engineers do to design and build systems ... the key ideas in science that have broad importance within or across multiple science or engineering disciplines",
       "supports": [
         {
-          "code": "11.8",
+          "code": "1.8",
           "component": "Three dimensions: science and engineering practices, crosscutting concepts, disciplinary core ideas",
           "verdict": "PARTIAL",
           "source_kind": "primary",
@@ -1341,7 +1341,7 @@
       "excerpt": "delineate a core set of learning objectives designed to provide the foundation for a complete computer science curriculum and its implementation at the K–12 level.",
       "supports": [
         {
-          "code": "11.8",
+          "code": "1.8",
           "component": "Learning objectives for computer science (Algorithms and Programming; Computing Systems; Data and Analysis)",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -1364,7 +1364,7 @@
       "excerpt": "Text Types and Purposes ... Production and Distribution of Writing ... Research to Build and Present Knowledge ... Range of Writing",
       "supports": [
         {
-          "code": "11.1",
+          "code": "1.1",
           "component": "Anchor standards for writing (text types and purposes; production and distribution of writing; research; range of writing)",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -1387,7 +1387,7 @@
       "excerpt": "Whether a student is on-track, GPA, and the number of semester course failures all correctly identify graduates and nongraduates 80 percent of the time.",
       "supports": [
         {
-          "code": "11.6",
+          "code": "1.6",
           "component": "Course grades, GPA and course failures as on-track indicators",
           "verdict": "SUPPORTED",
           "source_kind": "primary",
@@ -1400,19 +1400,19 @@
   ],
   "codebook_extensions": [
     {
-      "code": "3.3.4",
+      "code": "4.3.4",
       "reason": "Awareness of supports and resources. Not a CASEL 2020 example skill. Kept because help-seeking prerequisites are a common stated outcome in school-based mental health programs. Candidate anchor for the verifier: CDC WSCC Counseling, Psychological, and Social Services."
     },
     {
-      "code": "3.5.4",
+      "code": "4.5.4",
       "reason": "Safety-oriented decisions. Not a CASEL 2020 example skill (earlier CASEL definitions mentioned 'safety concerns'). Kept as the routing target for refusal skills and risk avoidance (CF-016). The verifier should look for a prevention-science anchor."
     },
     {
-      "code": "9.1",
+      "code": "10.1",
       "reason": "Pending replacement of the OTL citation (CP-01-10)."
     },
     {
-      "code": "9.2",
+      "code": "10.2",
       "reason": "Pending replacement of the OTL citation (CP-01-10)."
     }
   ]

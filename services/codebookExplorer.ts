@@ -206,7 +206,9 @@ export const buildExplorerCodebook = (codebook: Codebook): ExplorerCodebook => {
     return registry.sources
       .flatMap(s =>
         s.supports
-          .filter(sup => sup.code === number)
+          // Flagged supports (a code not yet live, or one a verifier rejected)
+          // aren't evidence for the code, so they aren't shown as its sources.
+          .filter(sup => sup.code === number && !sup.proposed && !sup.unsupported)
           .map(sup => toExplorerSource(s, sup.component)),
       )
       .sort(byStatus);

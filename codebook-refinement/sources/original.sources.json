@@ -13,6 +13,9 @@
     {
       "id": "casel-2020",
       "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+      "codebook_names": [
+        "CASEL"
+      ],
       "tier": "B",
       "publisher": "Collaborative for Academic, Social, and Emotional Learning (CASEL)",
       "year": 2020,
@@ -108,6 +111,9 @@
     {
       "id": "muhammad-five-pursuits",
       "cite_as": "Muhammad, G. — Culturally and Historically Responsive Literacy / Five Pursuits Framework (Identity, Skills, Intellect, Criticality, Joy); Cultivating Genius (2020), Unearthing Joy (2023)",
+      "codebook_names": [
+        "Gholdy Muhammad"
+      ],
       "tier": "C",
       "publisher": "Gholdy Muhammad / HILL Pedagogies (Scholastic)",
       "year": 2023,
@@ -135,6 +141,9 @@
     {
       "id": "muhammad-hill-model-label",
       "cite_as": "Gholdy Muhammad's Hill Model",
+      "codebook_names": [
+        "Hill Model"
+      ],
       "tier": "C",
       "publisher": null,
       "year": null,
@@ -156,6 +165,10 @@
     {
       "id": "hidi-renninger-2006",
       "cite_as": "Hidi, S., & Renninger, K. A. (2006). The Four-Phase Model of Interest Development. Educational Psychologist, 41(2), 111–127.",
+      "codebook_names": [
+        "Hidi & Renninger",
+        "Hidi/Renninger"
+      ],
       "tier": "C",
       "publisher": "Educational Psychologist",
       "year": 2006,
@@ -168,6 +181,12 @@
         {
           "code": "1.2",
           "component": "Phase 1: triggered situational interest"
+        },
+        {
+          "code": "1.3",
+          "component": "Cited in the codebook as 'Hidi & Renninger (Phase 3/4)' for utility value. The cycle-01 verifier found phases 3-4 describe individual interest, not utility value.",
+          "unsupported": true,
+          "open_cp": "CP-01-04"
         }
       ],
       "notes": "The codebook also cites 'Hidi & Renninger (Phase 3/4)' for 1.3 Utility Value. Phases 3 and 4 are about individual interest, not utility value, so that citation is misapplied (CP-01-04). Phases 2–4 currently have no subcategory."
@@ -175,6 +194,9 @@
     {
       "id": "eccles-expectancy-value",
       "cite_as": "Wigfield, A., & Eccles, J. S. (2000). Expectancy-value theory of achievement motivation. Contemporary Educational Psychology, 25, 68–81. (utility value)",
+      "codebook_names": [
+        "Eccles"
+      ],
       "tier": "C",
       "publisher": null,
       "year": null,
@@ -199,6 +221,9 @@
     {
       "id": "national-core-arts-standards",
       "cite_as": "National Core Arts Standards (2014) — Artistic Processes: Creating; Performing/Presenting/Producing; Responding; Connecting",
+      "codebook_names": [
+        "National Core Arts Standards"
+      ],
       "tier": "B",
       "publisher": "National Coalition for Core Arts Standards",
       "year": 2014,
@@ -240,6 +265,9 @@
     {
       "id": "cdc-school-connectedness-2009",
       "cite_as": "CDC (2009). School Connectedness: Strategies for Increasing Protective Factors Among Youth.",
+      "codebook_names": [
+        "CDC School Connectedness"
+      ],
       "tier": "A",
       "publisher": "Centers for Disease Control and Prevention",
       "year": 2009,
@@ -300,6 +328,9 @@
     {
       "id": "learning-for-justice-sjs",
       "cite_as": "Learning for Justice — Social Justice Standards (Identity, Diversity, Justice, Action)",
+      "codebook_names": [
+        "Learning for Justice"
+      ],
       "tier": "D",
       "publisher": "Learning for Justice (Southern Poverty Law Center)",
       "year": null,
@@ -323,6 +354,9 @@
     {
       "id": "epstein-six-types",
       "cite_as": "Epstein, J. L. et al. — Framework of Six Types of Involvement (1 Parenting, 2 Communicating, 3 Volunteering, 4 Learning at Home, 5 Decision Making, 6 Collaborating with the Community)",
+      "codebook_names": [
+        "Epstein"
+      ],
       "tier": "C",
       "publisher": "Johns Hopkins University / National Network of Partnership Schools",
       "year": null,
@@ -354,6 +388,9 @@
     {
       "id": "farrington-2012",
       "cite_as": "Farrington, C. A., et al. (2012). Teaching Adolescents to Become Learners: The Role of Noncognitive Factors in Shaping School Performance. UChicago Consortium on Chicago School Research.",
+      "codebook_names": [
+        "Academic Mindsets and Behaviors"
+      ],
       "tier": "C",
       "publisher": "University of Chicago Consortium on School Research",
       "year": 2012,
@@ -385,6 +422,9 @@
     {
       "id": "search-40-assets",
       "cite_as": "Search Institute — 40 Developmental Assets for Adolescents",
+      "codebook_names": [
+        "40 Developmental Assets"
+      ],
       "tier": "D",
       "publisher": "Search Institute",
       "year": null,
@@ -435,6 +475,9 @@
     {
       "id": "circle-framework",
       "cite_as": "CIRCLE Framework",
+      "codebook_names": [
+        "CIRCLE Framework"
+      ],
       "tier": "C",
       "publisher": "CIRCLE, Tisch College, Tufts University",
       "year": null,
@@ -460,6 +503,9 @@
     {
       "id": "iste-students-2016",
       "cite_as": "ISTE Standards for Students (2016), Standard 2: Digital Citizen",
+      "codebook_names": [
+        "ISTE Standards"
+      ],
       "tier": "B",
       "publisher": "International Society for Technology in Education",
       "year": 2016,
@@ -483,6 +529,9 @@
     {
       "id": "cdc-wscc",
       "cite_as": "CDC / ASCD — Whole School, Whole Community, Whole Child (WSCC) model",
+      "codebook_names": [
+        "CDC WSCC"
+      ],
       "tier": "A",
       "publisher": "Centers for Disease Control and Prevention; ASCD",
       "year": 2014,
@@ -515,6 +564,9 @@
     {
       "id": "keyes-dual-continua",
       "cite_as": "Keyes, C. L. M. — Dual Continua (two continua) Model; as stated in Westerhof, G. J., & Keyes, C. L. M. (2010). Mental illness and mental health: The two continua model across the lifespan. Journal of Adult Development, 17, 110–119.",
+      "codebook_names": [
+        "Dual Continua Model"
+      ],
       "tier": "C",
       "publisher": null,
       "year": null,
@@ -540,6 +592,9 @@
     {
       "id": "nctsn-core-curriculum",
       "cite_as": "Layne, C. M., Strand, V., & NCTSN Core Curriculum on Childhood Trauma Task Force (2012). The 12 Core Concepts: Concepts for Understanding Traumatic Stress Responses in Children and Families.",
+      "codebook_names": [
+        "National Child Traumatic Stress Network"
+      ],
       "tier": "D",
       "publisher": "NCTSN",
       "year": null,
@@ -563,6 +618,9 @@
     {
       "id": "samhsa-tic-2014",
       "cite_as": "SAMHSA (2014). SAMHSA's Concept of Trauma and Guidance for a Trauma-Informed Approach (HHS Pub. No. SMA 14-4884).",
+      "codebook_names": [
+        "SAMHSA"
+      ],
       "tier": "A",
       "publisher": "Substance Abuse and Mental Health Services Administration",
       "year": 2014,
@@ -574,12 +632,22 @@
         {
           "code": "10.2",
           "component": "Six key principles of a trauma-informed approach"
+        },
+        {
+          "code": "7.3",
+          "component": "Named as 'SAMHSA (Trauma)' in the Domain 7 Framework Basis line. This source is about trauma-informed practice by staff and organizations (10.2); 7.3 cites NCTSN.",
+          "unsupported": true,
+          "open_cp": "CP-05-01"
         }
       ]
     },
     {
       "id": "cdc-yrbss",
       "cite_as": "CDC Youth Risk Behavior Surveillance System (YRBSS)",
+      "codebook_names": [
+        "CDC Youth Risk Behavior Surveillance System",
+        "CDC YRBSS"
+      ],
       "tier": "A",
       "publisher": "Centers for Disease Control and Prevention",
       "year": null,
@@ -621,6 +689,9 @@
     {
       "id": "samhsa-spf",
       "cite_as": "SAMHSA (2019). A Guide to SAMHSA's Strategic Prevention Framework (PEP19-01).",
+      "codebook_names": [
+        "SAMHSA Strategic Prevention Framework"
+      ],
       "tier": "A",
       "publisher": "SAMHSA",
       "year": null,
@@ -644,6 +715,9 @@
     {
       "id": "cdc-ed-bullying-2014",
       "cite_as": "CDC & U.S. Dept. of Education (2014). Bullying Surveillance Among Youths: Uniform Definitions for Public Health and Recommended Data Elements.",
+      "codebook_names": [
+        "Bullying Surveillance Among Youths"
+      ],
       "tier": "A",
       "publisher": "CDC; U.S. Department of Education",
       "year": 2014,
@@ -660,6 +734,9 @@
     {
       "id": "cjca-2009",
       "cite_as": "Harris, P., Lockwood, B., & Mengers, L. (2009, November). Defining and Measuring Recidivism: A CJCA White Paper. Council of Juvenile Correctional Administrators.",
+      "codebook_names": [
+        "Council of Juvenile Correctional Administrators"
+      ],
       "tier": "D",
       "publisher": "CJCA",
       "year": 2009,
@@ -681,6 +758,9 @@
     {
       "id": "conley-four-keys",
       "cite_as": "Conley, D. T. — Four Keys to College and Career Readiness (Key Cognitive Strategies, Key Content Knowledge, Key Learning Skills & Techniques, Key Transition Knowledge & Skills)",
+      "codebook_names": [
+        "Conley"
+      ],
       "tier": "C",
       "publisher": "David T. Conley / EPIC",
       "year": null,
@@ -706,6 +786,9 @@
     {
       "id": "perkins-v",
       "cite_as": "Strengthening Career and Technical Education for the 21st Century Act (Perkins V), 2018",
+      "codebook_names": [
+        "Perkins V"
+      ],
       "tier": "A",
       "publisher": "U.S. Congress",
       "year": 2018,
@@ -762,6 +845,9 @@
     {
       "id": "nsc-hs-benchmarks",
       "cite_as": "National Student Clearinghouse Research Center — High School Benchmarks",
+      "codebook_names": [
+        "National Student Clearinghouse"
+      ],
       "tier": "D",
       "publisher": "National Student Clearinghouse Research Center",
       "year": null,
@@ -785,6 +871,9 @@
     {
       "id": "wioa-20cfr677155",
       "cite_as": "20 CFR 677.155 — Primary indicators of performance under WIOA (Title I Youth program)",
+      "codebook_names": [
+        "WIOA"
+      ],
       "tier": "A",
       "publisher": "U.S. Department of Labor (eCFR)",
       "year": null,
@@ -807,6 +896,9 @@
     {
       "id": "wioa-34cfr463155-label",
       "cite_as": "WIOA Title I Youth Primary Indicators of Performance (34 CFR 463.155)",
+      "codebook_names": [
+        "34 CFR 463.155"
+      ],
       "tier": "A",
       "publisher": null,
       "year": null,
@@ -824,6 +916,9 @@
     {
       "id": "otl-standards",
       "cite_as": "Opportunity-to-Learn (OTL) Standards",
+      "codebook_names": [
+        "Opportunity-to-Learn"
+      ],
       "tier": "A",
       "publisher": null,
       "year": null,
@@ -845,6 +940,9 @@
     {
       "id": "learning-forward-2022",
       "cite_as": "Learning Forward (2022). Standards for Professional Learning.",
+      "codebook_names": [
+        "Learning Forward"
+      ],
       "tier": "B",
       "publisher": "Learning Forward",
       "year": 2022,
@@ -870,6 +968,9 @@
     {
       "id": "weiss-little-bouffard-2005",
       "cite_as": "Weiss, H. B., Little, P. M. D., & Bouffard, S. M. (2005). More than just being there: Balancing the participation equation. New Directions for Youth Development, 105. (Harvard Family Research Project)",
+      "codebook_names": [
+        "Harvard Family Research Project"
+      ],
       "tier": "C",
       "publisher": "Wiley / Harvard Family Research Project",
       "year": 2005,
@@ -888,6 +989,9 @@
     {
       "id": "weikart-ypqa",
       "cite_as": "Weikart Center for Youth Program Quality — Youth Program Quality Assessment (YPQA)",
+      "codebook_names": [
+        "Weikart Center Youth Program Quality Assessment"
+      ],
       "tier": "D",
       "publisher": "David P. Weikart Center for Youth Program Quality (Forum for Youth Investment)",
       "year": null,
@@ -906,6 +1010,9 @@
     {
       "id": "national-reading-panel-2000",
       "cite_as": "National Reading Panel (2000). Report of the National Reading Panel: Teaching Children to Read (NICHD).",
+      "codebook_names": [
+        "National Reading Panel"
+      ],
       "tier": "A",
       "publisher": "NICHD",
       "year": 2000,
@@ -930,6 +1037,10 @@
     {
       "id": "essa-indicators",
       "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 6311(c)(4)(B) — academic achievement indicator (math, reading/language arts) and four-year adjusted cohort graduation rate",
+      "codebook_names": [
+        "ESSA four-year adjusted cohort graduation rate",
+        "ESSA graduation-rate indicator"
+      ],
       "tier": "A",
       "publisher": "U.S. Congress",
       "year": 2015,
@@ -974,6 +1085,9 @@
     {
       "id": "wida-eld",
       "cite_as": "WIDA English Language Development Standards Framework, 2020 Edition (modes of communication: interpretive — listening, reading, viewing; expressive — speaking, writing, representing)",
+      "codebook_names": [
+        "WIDA"
+      ],
       "tier": "B",
       "publisher": "WIDA, University of Wisconsin–Madison",
       "year": 2020,
@@ -997,6 +1111,9 @@
     {
       "id": "attendance-works",
       "cite_as": "Attendance Works — Chronic Absence (missing 10% or more of school days)",
+      "codebook_names": [
+        "Attendance Works"
+      ],
       "tier": "D",
       "publisher": "Attendance Works",
       "year": null,
@@ -1020,6 +1137,9 @@
     {
       "id": "mckinney-vento",
       "cite_as": "McKinney-Vento Homeless Assistance Act, Subtitle VII-B (Education for Homeless Children and Youths)",
+      "codebook_names": [
+        "McKinney-Vento"
+      ],
       "tier": "A",
       "publisher": "U.S. Congress",
       "year": null,
@@ -1052,6 +1172,10 @@
     {
       "id": "allensworth-easton-2005",
       "cite_as": "Allensworth, E. M., & Easton, J. Q. (2005). The On-Track Indicator as a Predictor of High School Graduation. Consortium on Chicago School Research.",
+      "codebook_names": [
+        "UChicago Consortium On-Track Indicator",
+        "Allensworth & Easton, 2005"
+      ],
       "tier": "C",
       "publisher": "UChicago Consortium on School Research",
       "year": 2005,
@@ -1070,6 +1194,9 @@
     {
       "id": "head-start-elof",
       "cite_as": "Office of Head Start (2015). Head Start Early Learning Outcomes Framework: Ages Birth to Five — central domains: Approaches to Learning; Social and Emotional Development; Language and Literacy; Cognition; Perceptual, Motor, and Physical Development.",
+      "codebook_names": [
+        "Head Start Early Learning Outcomes Framework"
+      ],
       "tier": "A",
       "publisher": "U.S. DHHS, Administration for Children and Families, Office of Head Start",
       "year": 2015,
@@ -1087,6 +1214,9 @@
     {
       "id": "cssp-strengthening-families",
       "cite_as": "Center for the Study of Social Policy — Strengthening Families Protective Factors Framework",
+      "codebook_names": [
+        "CSSP Strengthening Families"
+      ],
       "tier": "D",
       "publisher": "CSSP",
       "year": null,
@@ -1117,6 +1247,9 @@
     {
       "id": "ascend-2gen",
       "cite_as": "Ascend at the Aspen Institute — 2Gen Approach building blocks (Early Childhood Education; K-12; Postsecondary & Employment Pathways; Economic Assets; Health incl. Mental Health; Social Capital)",
+      "codebook_names": [
+        "Ascend"
+      ],
       "tier": "D",
       "publisher": "Ascend at the Aspen Institute",
       "year": null,
@@ -1139,6 +1272,9 @@
     {
       "id": "usda-hfssm",
       "cite_as": "USDA Economic Research Service — U.S. Household Food Security Survey Module",
+      "codebook_names": [
+        "Household Food Security Survey Module"
+      ],
       "tier": "A",
       "publisher": "USDA ERS",
       "year": null,
@@ -1220,6 +1356,9 @@
     {
       "id": "essa-6311-b1c-standards",
       "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 6311(b)(1)(C) -- challenging State academic standards (mathematics, reading or language arts, science); 6311(b)(2)(B)(v)(II) science assessments",
+      "codebook_names": [
+        "20 U.S.C. 6311(b)(1)(C)"
+      ],
       "tier": "A",
       "publisher": "U.S. Congress",
       "year": 2015,
@@ -1261,6 +1400,9 @@
     {
       "id": "essa-7801-52-well-rounded",
       "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 7801(52) -- definition of 'well-rounded education'",
+      "codebook_names": [
+        "20 U.S.C. 7801(52)"
+      ],
       "tier": "A",
       "publisher": "U.S. Congress",
       "year": 2015,
@@ -1284,6 +1426,9 @@
     {
       "id": "naep-9622-b2d",
       "cite_as": "National Assessment of Educational Progress Authorization Act, 20 U.S.C. 9622(b)(2)(D) -- additional subject matter",
+      "codebook_names": [
+        "NAEP"
+      ],
       "tier": "A",
       "publisher": "U.S. Congress",
       "year": 2002,
@@ -1307,6 +1452,10 @@
     {
       "id": "ngss-2013",
       "cite_as": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. National Academies Press.",
+      "codebook_names": [
+        "Next Generation Science Standards",
+        "NGSS"
+      ],
       "tier": "B",
       "publisher": "NGSS Lead States (Achieve)",
       "year": 2013,
@@ -1331,6 +1480,9 @@
     {
       "id": "csta-k12-2017",
       "cite_as": "Computer Science Teachers Association (2017). CSTA K-12 Computer Science Standards, Revised 2017.",
+      "codebook_names": [
+        "CSTA"
+      ],
       "tier": "B",
       "publisher": "Computer Science Teachers Association",
       "year": 2017,
@@ -1354,6 +1506,9 @@
     {
       "id": "ccss-writing-anchors",
       "cite_as": "NGA Center & CCSSO (2010). Common Core State Standards for English Language Arts: College and Career Readiness Anchor Standards for Writing.",
+      "codebook_names": [
+        "Common Core"
+      ],
       "tier": "B",
       "publisher": "National Governors Association Center for Best Practices; Council of Chief State School Officers",
       "year": 2010,
@@ -1377,6 +1532,9 @@
     {
       "id": "allensworth-easton-2007",
       "cite_as": "Allensworth, E. M., & Easton, J. Q. (2007, July). What Matters for Staying On-Track and Graduating in Chicago Public High Schools: A Close Look at Course Grades, Failures, and Attendance in the Freshman Year. Consortium on Chicago School Research at the University of Chicago.",
+      "codebook_names": [
+        "Allensworth & Easton, 2007"
+      ],
       "tier": "C",
       "publisher": "Consortium on Chicago School Research",
       "year": 2007,

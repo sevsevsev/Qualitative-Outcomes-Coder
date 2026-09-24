@@ -19,9 +19,13 @@ export interface ExplorerRoute {
   target?: string;
 }
 
-export const parseExplorerRoute = (segments: string[]): ExplorerRoute => {
+export const parseExplorerRoute = (
+  segments: string[],
+  allowed: readonly CodebookType[] = Object.keys(CODEBOOK_REGISTRY) as CodebookType[],
+): ExplorerRoute => {
   const id = segments[0] as CodebookType;
-  const codebookId = id && id in CODEBOOK_REGISTRY ? id : DEFAULT_CODEBOOK_ID;
+  const fallback = allowed.includes(DEFAULT_CODEBOOK_ID) ? DEFAULT_CODEBOOK_ID : allowed[0];
+  const codebookId = id && allowed.includes(id) ? id : fallback;
   return { codebookId, target: segments.slice(1).join('/') || undefined };
 };
 
@@ -32,6 +36,8 @@ interface Props {
   route: ExplorerRoute;
   /** Show visitor comments and feedback forms (the public explorer site). */
   withFeedback?: boolean;
+  /** Codebooks offered in the switcher. Defaults to all of them. */
+  codebookIds?: readonly CodebookType[];
 }
 
 // ---------------------------------------------------------------------------
@@ -105,7 +111,8 @@ const highlight = (text: string, tokens: string[]): React.ReactNode => {
 // Component
 // ---------------------------------------------------------------------------
 
-const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false }) => {
+const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebookIds }) => {
+  const codebookList = codebookIds ? CODEBOOK_LIST.filter(cb => codebookIds.includes(cb.id as CodebookType)) : CODEBOOK_LIST;
   const codebook = CODEBOOK_REGISTRY[route.codebookId];
   const data = useMemo(() => buildExplorerCodebook(codebook), [codebook]);
   const legend = getSourceRegistry(codebook.id)?.status_legend;
@@ -680,9 +687,9 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false }) => {
             )}
           </div>
         </div>
-        {CODEBOOK_LIST.length > 1 && (
+        {codebookList.length > 1 && (
           <div role="tablist" aria-label="Codebook" className="inline-flex self-start lg:self-auto rounded-lg bg-slate-200/60 p-1">
-            {CODEBOOK_LIST.map(cb => (
+            {codebookList.map(cb => (
               <a
                 key={cb.id}
                 role="tab"

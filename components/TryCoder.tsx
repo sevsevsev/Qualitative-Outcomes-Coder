@@ -28,6 +28,8 @@ const CONFIDENCE_STYLE: Record<string, string> = {
 
 interface Props {
   codebookId: CodebookType;
+  /** Codebooks offered in the picker. */
+  codebookIds: readonly CodebookType[];
   onCodebookChange: (id: CodebookType) => void;
 }
 
@@ -46,7 +48,8 @@ const CodeLink: React.FC<{ codebookId: string; code: string; isDomain?: boolean 
   );
 };
 
-const TryCoder: React.FC<Props> = ({ codebookId, onCodebookChange }) => {
+const TryCoder: React.FC<Props> = ({ codebookId, codebookIds, onCodebookChange }) => {
+  const codebookList = CODEBOOK_LIST.filter(cb => codebookIds.includes(cb.id as CodebookType));
   const codebook = CODEBOOK_REGISTRY[codebookId];
   const [text, setText] = useState('');
   const [state, setState] = useState<'idle' | 'coding'>('idle');
@@ -98,7 +101,7 @@ const TryCoder: React.FC<Props> = ({ codebookId, onCodebookChange }) => {
       </p>
 
       <form onSubmit={run} className="mt-8 rounded-xl border border-slate-200 bg-white p-5 shadow-sm space-y-4">
-        {CODEBOOK_LIST.length > 1 && (
+        {codebookList.length > 1 && (
           <label className="block text-sm">
             <span className="text-slate-600 mr-2">Codebook</span>
             <select
@@ -106,7 +109,7 @@ const TryCoder: React.FC<Props> = ({ codebookId, onCodebookChange }) => {
               onChange={e => { onCodebookChange(e.target.value as CodebookType); setResponse(null); }}
               className="rounded-lg border border-slate-200 bg-white px-2 py-1 text-slate-900"
             >
-              {CODEBOOK_LIST.map(cb => <option key={cb.id} value={cb.id}>{cb.label}</option>)}
+              {codebookList.map(cb => <option key={cb.id} value={cb.id}>{cb.label}</option>)}
             </select>
           </label>
         )}

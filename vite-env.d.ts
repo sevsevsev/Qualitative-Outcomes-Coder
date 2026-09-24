@@ -5,6 +5,8 @@ interface ImportMetaEnv {
   readonly VITE_SITE?: string;
   /** Name shown in the explorer site's header and browser tab. */
   readonly VITE_SITE_NAME?: string;
+  /** Comma-separated codebook ids the explorer site shows (default "original"). */
+  readonly VITE_EXPLORER_CODEBOOKS?: string;
 }
 
 interface ImportMeta {

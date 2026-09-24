@@ -1,0 +1,1701 @@
+[
+ {
+  "sid": "S128",
+  "outcomes": [
+   {
+    "text": "Students will ask questions and show curiosity during science demonstrations.",
+    "code": "1.2 Triggered Situational Interest (Curiosity)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "1.1 Joy & Emotional Wellness",
+  "codebook_issue": "",
+  "rationale": "Asking questions and curiosity matches 1.2 definition and example."
+ },
+ {
+  "sid": "S129",
+  "outcomes": [
+   {
+    "text": "Youth will report greater self-acceptance of their sexual orientation and gender identity.",
+    "code": "2.4 Cultural Identity & Affirmation",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "3.1.2 Understanding self & identity",
+  "codebook_issue": "2.4 defined around heritage/culture; LGBTQ self-acceptance straddles 2.4, 3.1.2 and 5.4 with no rule.",
+  "rationale": "Self-acceptance/affirmation of own identity; closest to 2.4 pride in own identity."
+ },
+ {
+  "sid": "S130",
+  "outcomes": [
+   {
+    "text": "Participants will show growth in the following areas:",
+    "code": "none",
+    "confidence": "none"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Header fragment stating no result; uncoded per rules."
+ },
+ {
+  "sid": "S131",
+  "outcomes": [
+   {
+    "text": "LGBTQ+ youth will report feeling safe and affirmed in program spaces.",
+    "code": "2.1 School/Program Connectedness (Belonging)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "5.1 Empowerment & Safety",
+  "codebook_issue": "Felt safety in program: 5.1 label includes Safety but 5.1 note routes program belonging to 2.1.",
+  "rationale": "Feeling safe/affirmed in program is a belonging state; skill-vs-state rule sends to Domain 2."
+ },
+ {
+  "sid": "S132",
+  "outcomes": [
+   {
+    "text": "4-H members will demonstrate public speaking skills by giving a demonstration at the county fair.",
+    "code": "3.4.1 Communication & active listening",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "1.5 Performance, Presentation & Artistic Response",
+  "codebook_issue": "Public speaking skill has no explicit home; split between 3.4.1 and 1.5 presenting.",
+  "rationale": "Public speaking is a communication skill; county fair demonstration is the means."
+ },
+ {
+  "sid": "S133",
+  "outcomes": [
+   {
+    "text": "Youth will use a step-by-step process to identify a problem, brainstorm solutions, and act on one.",
+    "code": "3.5.3 Personal and social problem-solving",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.5.1 Evaluating options & consequences",
+  "codebook_issue": "",
+  "rationale": "Full identify-brainstorm-act cycle matches 3.5.3 exactly."
+ },
+ {
+  "sid": "S134",
+  "outcomes": [
+   {
+    "text": "Youth will be involved in fewer physical fights.",
+    "code": "7.7 Violence, Bullying & Injury Prevention",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.4.3 Conflict management & problem-solving in relationships",
+  "codebook_issue": "",
+  "rationale": "Reduced fighting matches 7.7 example."
+ },
+ {
+  "sid": "S135",
+  "outcomes": [
+   {
+    "text": "Parents will report increased confidence in their parenting skills.",
+    "code": "12.1 Parenting Knowledge & Practices",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.2 Parental Resilience & Caregiver Well-being",
+  "codebook_issue": "Parenting self-efficacy/confidence not explicitly covered by 12.1 or 12.2.",
+  "rationale": "Caregiver confidence in parenting skills; closest to parenting knowledge & practices."
+ },
+ {
+  "sid": "S136",
+  "outcomes": [
+   {
+    "text": "Youth organizers will present testimony to the city council on a policy issue affecting their neighborhood.",
+    "code": "6.3 Youth Voice & Leadership",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "6.1 Civic Skills & Knowledge",
+  "codebook_issue": "",
+  "rationale": "Presenting testimony to influence policy is youth voice."
+ },
+ {
+  "sid": "S137",
+  "outcomes": [
+   {
+    "text": "Youth will report enjoying program activities.",
+    "code": "1.1 Joy & Emotional Wellness",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Enjoyment of activities matches 1.1."
+ },
+ {
+  "sid": "S138",
+  "outcomes": [
+   {
+    "text": "Interns will report increased understanding of workplace culture and expectations at their internship site.",
+    "code": "8.5 Employability Skills (Perkins V / Soft Skills)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "3.3.3 Understanding norms & expectations",
+  "codebook_issue": "",
+  "rationale": "Understanding workplace norms; explicit work context routes to 8.5 over 3.3.3."
+ },
+ {
+  "sid": "S139",
+  "outcomes": [
+   {
+    "text": "Families will connect with case management and access public benefits (SNAP, TANF, Medicaid).",
+    "code": "12.5 Household Economic Stability & Benefits Access",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Verbatim 12.5 example."
+ },
+ {
+  "sid": "S140",
+  "outcomes": [
+   {
+    "text": "Students will use art as a healthy outlet for processing emotions.",
+    "code": "3.2.2 Stress management & coping skills",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "1.4 Creative Expression & Making",
+  "codebook_issue": "",
+  "rationale": "Using art as a healthy coping outlet for emotions; art is the means."
+ },
+ {
+  "sid": "S141",
+  "outcomes": [
+   {
+    "text": "LGBTQ+ youth will report fewer experiences of harassment at school after the GSA launch.",
+    "code": "7.7 Violence, Bullying & Injury Prevention",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "5.1 Empowerment & Safety",
+  "codebook_issue": "",
+  "rationale": "Reduced harassment victimization falls under bullying (victim) in 7.7."
+ },
+ {
+  "sid": "S142",
+  "outcomes": [
+   {
+    "text": "Coaches will report improved ability to de-escalate conflicts between players during games.",
+    "code": "10.1 Professional Knowledge & Skill",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "10.2 Instructional Practice Change",
+  "codebook_issue": "",
+  "rationale": "Coaches gaining de-escalation skill; 10.1 covers coaches."
+ },
+ {
+  "sid": "S143",
+  "outcomes": [
+   {
+    "text": "Refugee youth will maintain fluency in their home language",
+    "code": "11.4 English Language Proficiency & Multilingual Development",
+    "confidence": "medium"
+   },
+   {
+    "text": "Refugee youth will learn English",
+    "code": "11.4 English Language Proficiency & Multilingual Development",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "2.4 Cultural Identity & Affirmation",
+  "codebook_issue": "11.4 label says Multilingual Development but definition covers only English acquisition; home-language maintenance has no clear home.",
+  "rationale": "Split home-language maintenance and English learning; both closest to 11.4."
+ },
+ {
+  "sid": "S144",
+  "outcomes": [
+   {
+    "text": "Participants will report feeling calmer and more restored after time spent in nature.",
+    "code": "1.1 Joy & Emotional Wellness",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "7.2 Mental Health Status (Symptom Reduction)",
+  "codebook_issue": "",
+  "rationale": "Feeling calmer/restored is positive emotional response to environment; state, not symptom reduction."
+ },
+ {
+  "sid": "S145",
+  "outcomes": [
+   {
+    "text": "Youth will develop a personal set of moral values grounded in their faith tradition.",
+    "code": "5.2 Positive Values",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "5.4 Positive Identity",
+  "codebook_issue": "",
+  "rationale": "Faith-grounded moral values route to 5.2 per faith rule."
+ },
+ {
+  "sid": "S146",
+  "outcomes": [
+   {
+    "text": "Mentors will report increased confidence in their ability to support youth from different cultural backgrounds.",
+    "code": "10.1 Professional Knowledge & Skill",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Verbatim 10.1 example."
+ },
+ {
+  "sid": "S147",
+  "outcomes": [
+   {
+    "text": "Students will score proficient on the state science assessment.",
+    "code": "11.3 General Content Knowledge & Conceptual Understanding",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "8.1 Key Content Knowledge",
+  "codebook_issue": "",
+  "rationale": "Science proficiency, not college-framed, is 11.3."
+ },
+ {
+  "sid": "S148",
+  "outcomes": [
+   {
+    "text": "School counselors will implement a universal SEL screener.",
+    "code": "10.2 Instructional Practice Change",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "10.3 Systemic Improvement",
+  "codebook_issue": "",
+  "rationale": "Adults implementing a new practice (screener); could be systemic."
+ },
+ {
+  "sid": "S149",
+  "outcomes": [
+   {
+    "text": "Staff turnover will decrease to below 20% annually.",
+    "code": "10.3 Systemic Improvement",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "10.5 Program Participation, Retention & Reach (Output Metric)",
+  "codebook_issue": "No subcategory covers staff retention/workforce stability; 10.5 is youth participation.",
+  "rationale": "Staff turnover is an organizational/infrastructure change; forced placement."
+ },
+ {
+  "sid": "S150",
+  "outcomes": [
+   {
+    "text": "Student reporters will publish at least two articles in the community newspaper.",
+    "code": "1.5 Performance, Presentation & Artistic Response",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "1.4 Creative Expression & Making",
+  "codebook_issue": "",
+  "rationale": "Publishing work publicly is presenting/producing finished creative work."
+ },
+ {
+  "sid": "S151",
+  "outcomes": [
+   {
+    "text": "Youth with disabilities will transition into competitive integrated employment after high school.",
+    "code": "8.8 Employment Placement, Retention & Earnings",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "8.6 Technical Skills & Work-Based Learning (Perkins V)",
+  "codebook_issue": "",
+  "rationale": "Obtaining employment matches 8.8."
+ },
+ {
+  "sid": "S152",
+  "outcomes": [
+   {
+    "text": "Youth will explore at least three career pathways aligned to their interests using labor market data.",
+    "code": "8.4 Career Awareness & Exploration (Perkins V)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Exploring career pathways matches 8.4."
+ },
+ {
+  "sid": "S153",
+  "outcomes": [
+   {
+    "text": "Home visitors will observe increased positive parent-child interactions.",
+    "code": "12.1 Parenting Knowledge & Practices",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.4 Home Learning Environment",
+  "codebook_issue": "",
+  "rationale": "Parent-child interaction quality is a parenting practice; home visitors are observers."
+ },
+ {
+  "sid": "S154",
+  "outcomes": [
+   {
+    "text": "Neighborhood residents will report increased trust in one another and willingness to intervene for youth safety.",
+    "code": "12.3 Caregiver Social Connections & Support Networks",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "10.3 Systemic Improvement",
+  "codebook_issue": "No home for community-level social cohesion/collective efficacy among residents.",
+  "rationale": "Residents' mutual trust resembles caregiver community connections; forced."
+ },
+ {
+  "sid": "S155",
+  "outcomes": [
+   {
+    "text": "Youth will evaluate the credibility of online news sources and identify misinformation.",
+    "code": "8.2 Key Cognitive Strategies",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "6.5 Digital Citizenship & Safety",
+  "codebook_issue": "Media literacy fits 8.2 example but 8.2 is scoped to college/career; 6.5 is safety-focused.",
+  "rationale": "Evaluating source credibility matches 8.2 example on analyzing sources."
+ },
+ {
+  "sid": "S156",
+  "outcomes": [
+   {
+    "text": "Out-of-school suspensions will decrease by 30% at partner schools.",
+    "code": "11.6 Credit Accumulation, On-Track Status & Graduation",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "10.3 Systemic Improvement",
+  "codebook_issue": "",
+  "rationale": "Reduced exclusionary discipline (suspension) is explicitly in 11.6."
+ },
+ {
+  "sid": "S157",
+  "outcomes": [
+   {
+    "text": "Families will report trusting program staff and feeling welcome at the center.",
+    "code": "2.5 Family Partnership & Connection",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Family trust in program matches 2.5."
+ },
+ {
+  "sid": "S158",
+  "outcomes": [
+   {
+    "text": "Youth will feel more confident trying new challenges.",
+    "code": "3.1.4 Confidence, self-efficacy & growth mindset",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "5.4 Positive Identity",
+  "codebook_issue": "",
+  "rationale": "General confidence tackling challenges matches 3.1.4 example."
+ },
+ {
+  "sid": "S159",
+  "outcomes": [
+   {
+    "text": "Participants will enroll in an advanced STEM course the following school year.",
+    "code": "4.1 Academic Behaviors (Engagement)",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "8.1 Key Content Knowledge",
+  "codebook_issue": "No home for advanced course-taking / STEM pathway continuation.",
+  "rationale": "Course enrollment is an academic engagement behavior; forced placement."
+ },
+ {
+  "sid": "S160",
+  "outcomes": [
+   {
+    "text": "Youth will reduce recidivism and avoid re-arrest within 12 months of program completion.",
+    "code": "7.8 Justice Involvement, Diversion & Reentry",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Verbatim 7.8 example."
+ },
+ {
+  "sid": "S161",
+  "outcomes": [
+   {
+    "text": "Youth will demonstrate safe use of tools in the construction trades lab.",
+    "code": "8.6 Technical Skills & Work-Based Learning (Perkins V)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.5.4 Safety-oriented decisions & risk avoidance",
+  "codebook_issue": "",
+  "rationale": "Safe tool use in trades lab is a specific industry technical skill."
+ },
+ {
+  "sid": "S162",
+  "outcomes": [
+   {
+    "text": "Campers will demonstrate increased independence in self-care tasks away from home.",
+    "code": "3.2.4 Organization, persistence & self-discipline",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "7.1 Physical Activity & Nutrition",
+  "codebook_issue": "No home for independent living/self-care skills.",
+  "rationale": "Self-management of daily tasks; forced into 3.2.4."
+ },
+ {
+  "sid": "S163",
+  "outcomes": [
+   {
+    "text": "Students will feel safe and accepted at the program.",
+    "code": "2.1 School/Program Connectedness (Belonging)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "5.1 Empowerment & Safety",
+  "codebook_issue": "",
+  "rationale": "Feeling safe and accepted at program is belonging state per rule 1."
+ },
+ {
+  "sid": "S164",
+  "outcomes": [
+   {
+    "text": "Parents will serve on the program's family advisory council.",
+    "code": "2.5 Family Partnership & Connection",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "10.4 Family Engagement Capacity",
+  "codebook_issue": "Parent participation in program governance (Epstein decision-making) sits between 2.5 and 10.4.",
+  "rationale": "Parents are subject engaging with program; family-program relationship."
+ },
+ {
+  "sid": "S165",
+  "outcomes": [
+   {
+    "text": "Parents will read to their child at least 3 times per week.",
+    "code": "12.4 Home Learning Environment",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "12.1 Parenting Knowledge & Practices",
+  "codebook_issue": "",
+  "rationale": "Verbatim 12.4 example."
+ },
+ {
+  "sid": "S166",
+  "outcomes": [
+   {
+    "text": "Apprentices will complete a registered apprenticeship program.",
+    "code": "8.6 Technical Skills & Work-Based Learning (Perkins V)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "8.7 Postsecondary Enrollment, Persistence & Completion",
+  "codebook_issue": "",
+  "rationale": "Completing apprenticeship is explicitly 8.6."
+ },
+ {
+  "sid": "S167",
+  "outcomes": [
+   {
+    "text": "Youth will practice forgiveness in their relationships with family and friends.",
+    "code": "3.4.5 Building and sustaining positive relationships",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "5.2 Positive Values",
+  "codebook_issue": "",
+  "rationale": "Forgiveness maintains/repairs relationships; faith language routed to secular skill."
+ },
+ {
+  "sid": "S168",
+  "outcomes": [
+   {
+    "text": "Students will be able to read a pay stub and explain payroll deductions.",
+    "code": "11.3 General Content Knowledge & Conceptual Understanding",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "8.5 Employability Skills (Perkins V / Soft Skills)",
+  "codebook_issue": "No financial literacy subcategory despite Mathematics subject area listing it.",
+  "rationale": "Financial literacy knowledge; forced into general content knowledge."
+ },
+ {
+  "sid": "S169",
+  "outcomes": [
+   {
+    "text": "Participants will collaborate with peers on a group theater production.",
+    "code": "3.4.2 Cooperation, teamwork & collaboration",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "1.4 Creative Expression & Making",
+  "codebook_issue": "",
+  "rationale": "Collaborating with peers on group project; theater is the setting."
+ },
+ {
+  "sid": "S170",
+  "outcomes": [
+   {
+    "text": "Students will show improved emotional regulation",
+    "code": "3.2.1 Emotion regulation & impulse control",
+    "confidence": "high"
+   },
+   {
+    "text": "Students will have reduced disciplinary referrals",
+    "code": "11.6 Credit Accumulation, On-Track Status & Graduation",
+    "confidence": "medium"
+   },
+   {
+    "text": "Students will have better peer relationships",
+    "code": "2.3 Peer Connection & Social Integration",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "7.2 Mental Health Status (Symptom Reduction)",
+  "codebook_issue": "Office disciplinary referrals are not exclusionary discipline; split between 11.6 and 7.2 behavioral symptoms.",
+  "rationale": "Three distinct results split: regulation, discipline, peer relationships."
+ },
+ {
+  "sid": "S171",
+  "outcomes": [
+   {
+    "text": "Youth will demonstrate punctuality, professional communication, and appropriate workplace attire.",
+    "code": "8.5 Employability Skills (Perkins V / Soft Skills)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Professionalism and workplace communication are 8.5."
+ },
+ {
+  "sid": "S172",
+  "outcomes": [
+   {
+    "text": "Youth will develop skills to resist peer pressure and avoid risky behaviors.",
+    "code": "3.5.4 Safety-oriented decisions & risk avoidance",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "7.5 Substance Use Prevention & Reduction",
+  "codebook_issue": "",
+  "rationale": "Skills to resist pressure and avoid risk match 3.5.4 skill side."
+ },
+ {
+  "sid": "S173",
+  "outcomes": [
+   {
+    "text": "Parents will increase their understanding of child developmental milestones and appropriate expectations.",
+    "code": "12.1 Parenting Knowledge & Practices",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Verbatim 12.1 example."
+ },
+ {
+  "sid": "S174",
+  "outcomes": [
+   {
+    "text": "Sites will improve their Youth Program Quality Assessment scores in the interaction and engagement domains.",
+    "code": "10.2 Instructional Practice Change",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "10.3 Systemic Improvement",
+  "codebook_issue": "",
+  "rationale": "YPQA interaction scores reflect staff practice change."
+ },
+ {
+  "sid": "S175",
+  "outcomes": [
+   {
+    "text": "Mentees will report that their mentor challenges them to keep improving.",
+    "code": "2.2 Adult Support & Care",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "3.1.4 Confidence, self-efficacy & growth mindset",
+  "codebook_issue": "",
+  "rationale": "Supportive adult relationship that challenges growth."
+ },
+ {
+  "sid": "S176",
+  "outcomes": [
+   {
+    "text": "The program will create a family advisory board with parent representatives.",
+    "code": "10.4 Family Engagement Capacity",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "2.5 Family Partnership & Connection",
+  "codebook_issue": "",
+  "rationale": "Organization creating family advisory structure matches 10.4."
+ },
+ {
+  "sid": "S177",
+  "outcomes": [
+   {
+    "text": "Participants will build new friendships with peers from different schools and grade levels.",
+    "code": "2.3 Peer Connection & Social Integration",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.4.5 Building and sustaining positive relationships",
+  "codebook_issue": "",
+  "rationale": "Building friendships is 2.3."
+ },
+ {
+  "sid": "S178",
+  "outcomes": [
+   {
+    "text": "First-generation students will persist into their second year of college.",
+    "code": "8.7 Postsecondary Enrollment, Persistence & Completion",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "College persistence is 8.7."
+ },
+ {
+  "sid": "S179",
+  "outcomes": [
+   {
+    "text": "Youth will demonstrate improved frustration tolerance during homework time",
+    "code": "3.2.2 Stress management & coping skills",
+    "confidence": "medium"
+   },
+   {
+    "text": "Youth will complete more assignments on time",
+    "code": "4.1 Academic Behaviors (Engagement)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.2.1 Emotion regulation & impulse control",
+  "codebook_issue": "",
+  "rationale": "Split per codebook example: SEL frustration coping plus homework completion."
+ },
+ {
+  "sid": "S180",
+  "outcomes": [
+   {
+    "text": "Athletes will demonstrate good sportsmanship (win or lose gracefully).",
+    "code": "5.2 Positive Values",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "3.5.2 Ethical and prosocial choices",
+  "codebook_issue": "Sportsmanship fits 5.2, 3.5.2 or 3.2.1 with no clear rule.",
+  "rationale": "Sportsmanship as general character value."
+ },
+ {
+  "sid": "S181",
+  "outcomes": [
+   {
+    "text": "Parents will report feeling more connected to their child's school community.",
+    "code": "2.5 Family Partnership & Connection",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.3 Caregiver Social Connections & Support Networks",
+  "codebook_issue": "2.5 is family-program relationship; connection to school community not program.",
+  "rationale": "Parent connectedness with child's school community resembles 2.5 example."
+ },
+ {
+  "sid": "S182",
+  "outcomes": [
+   {
+    "text": "Youth will register to vote and participate in local elections.",
+    "code": "6.3 Youth Voice & Leadership",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "6.1 Civic Skills & Knowledge",
+  "codebook_issue": "No explicit home for electoral participation/voting.",
+  "rationale": "Voting is expressing opinion and influencing decisions."
+ },
+ {
+  "sid": "S183",
+  "outcomes": [
+   {
+    "text": "Mentors will complete 6 hours of pre-match training.",
+    "code": "10.5 Program Participation, Retention & Reach (Output Metric)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "10.1 Professional Knowledge & Skill",
+  "codebook_issue": "10.5 defined for youth program dosage; adult training dosage unclear between 10.5 and 10.1.",
+  "rationale": "Training hours completed is a dosage output, not a knowledge gain."
+ },
+ {
+  "sid": "S184",
+  "outcomes": [
+   {
+    "text": "Youth will complete 20 hours of community service through park cleanups and food drives.",
+    "code": "6.2 Community Service & Action",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.5.5 Contributions to class/program/community wellbeing",
+  "codebook_issue": "",
+  "rationale": "Organized community service matches 6.2."
+ },
+ {
+  "sid": "S185",
+  "outcomes": [
+   {
+    "text": "Youth will increase their knowledge of local ecosystems and environmental science concepts.",
+    "code": "11.3 General Content Knowledge & Conceptual Understanding",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Verbatim 11.3 example."
+ },
+ {
+  "sid": "S186",
+  "outcomes": [
+   {
+    "text": "Youth will build friendships with both disabled and non-disabled peers in an inclusive setting.",
+    "code": "2.3 Peer Connection & Social Integration",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.3.2 Respect for diversity & inclusion",
+  "codebook_issue": "",
+  "rationale": "Friendship building is 2.3."
+ },
+ {
+  "sid": "S187",
+  "outcomes": [
+   {
+    "text": "Youth will increase their knowledge of nutrition",
+    "code": "7.1 Physical Activity & Nutrition",
+    "confidence": "medium"
+   },
+   {
+    "text": "Youth will increase their healthy cooking skills",
+    "code": "7.1 Physical Activity & Nutrition",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.6 Food Security & Nutrition Access",
+  "codebook_issue": "",
+  "rationale": "Split nutrition knowledge and cooking skills; both closest to 7.1 healthy eating."
+ },
+ {
+  "sid": "S188",
+  "outcomes": [
+   {
+    "text": "Students will visit at least three college campuses before senior year.",
+    "code": "8.3 Transition Knowledge & Skills",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "8.4 Career Awareness & Exploration (Perkins V)",
+  "codebook_issue": "",
+  "rationale": "College visits support college transition process knowledge."
+ },
+ {
+  "sid": "S189",
+  "outcomes": [
+   {
+    "text": "Youth will successfully complete probation requirements and court-ordered conditions.",
+    "code": "7.8 Justice Involvement, Diversion & Reentry",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Probation completion matches 7.8 example."
+ },
+ {
+  "sid": "S190",
+  "outcomes": [
+   {
+    "text": "Graduates will enroll in a two- or four-year college the fall after high school.",
+    "code": "8.7 Postsecondary Enrollment, Persistence & Completion",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "College enrollment matches 8.7 example."
+ },
+ {
+  "sid": "S191",
+  "outcomes": [
+   {
+    "text": "Youth in extended foster care will enroll in health insurance through Medicaid until age 26.",
+    "code": "12.5 Household Economic Stability & Benefits Access",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "7.4 Access to Mental Health Services",
+  "codebook_issue": "Domain 12 framed as caregiver/household; youth's own benefits enrollment has no clear home.",
+  "rationale": "Medicaid enrollment is benefits access."
+ },
+ {
+  "sid": "S192",
+  "outcomes": [
+   {
+    "text": "Children will demonstrate fine motor skills such as holding a pencil and using scissors.",
+    "code": "11.7 School Readiness & Early Learning",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "7.1 Physical Activity & Nutrition",
+  "codebook_issue": "11.7 source note names only Language/Literacy and Cognition; physical/motor development not addressed.",
+  "rationale": "Early childhood developmental milestone."
+ },
+ {
+  "sid": "S193",
+  "outcomes": [
+   {
+    "text": "Parents will report knowing where to turn for help in a crisis.",
+    "code": "12.5 Household Economic Stability & Benefits Access",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.3 Caregiver Social Connections & Support Networks",
+  "codebook_issue": "",
+  "rationale": "Knowing where to get help in crisis is concrete support in times of need."
+ },
+ {
+  "sid": "S194",
+  "outcomes": [
+   {
+    "text": "New students will make at least two friends in the program.",
+    "code": "2.3 Peer Connection & Social Integration",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Making friends matches 2.3 example."
+ },
+ {
+  "sid": "S195",
+  "outcomes": [
+   {
+    "text": "The coalition will establish a shared data system across five youth-serving agencies.",
+    "code": "10.3 Systemic Improvement",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Cross-agency infrastructure is systemic improvement."
+ },
+ {
+  "sid": "S196",
+  "outcomes": [
+   {
+    "text": "Families will receive a laptop and home internet access.",
+    "code": "9.1 Access to Resources",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "10.5 Program Participation, Retention & Reach (Output Metric)",
+  "codebook_issue": "",
+  "rationale": "Access to technology/connectivity is 9.1."
+ },
+ {
+  "sid": "S197",
+  "outcomes": [
+   {
+    "text": "Students will critique a peer's artwork using the language of the discipline.",
+    "code": "1.5 Performance, Presentation & Artistic Response",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "1.4 Creative Expression & Making",
+  "codebook_issue": "",
+  "rationale": "Critiquing art is responding in 1.5."
+ },
+ {
+  "sid": "S198",
+  "outcomes": [
+   {
+    "text": "Families will secure stable, safe housing within 90 days of program enrollment.",
+    "code": "12.7 Housing Stability",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Verbatim 12.7 example."
+ },
+ {
+  "sid": "S199",
+  "outcomes": [
+   {
+    "text": "Students will develop technical proficiency on their chosen instrument.",
+    "code": "11.3 General Content Knowledge & Conceptual Understanding",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "1.4 Creative Expression & Making",
+  "codebook_issue": "Arts technical skill development has no explicit home.",
+  "rationale": "Instrument proficiency as arts content learning."
+ },
+ {
+  "sid": "S200",
+  "outcomes": [
+   {
+    "text": "Youth experiencing homelessness will reduce nights spent on the street or in unsafe locations.",
+    "code": "12.7 Housing Stability",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "5.1 Empowerment & Safety",
+  "codebook_issue": "Housing stability framed around families; unaccompanied youth housing not addressed.",
+  "rationale": "Reducing unsafe nights is housing stability."
+ },
+ {
+  "sid": "S201",
+  "outcomes": [
+   {
+    "text": "Summer youth employees will receive a positive supervisor evaluation.",
+    "code": "8.5 Employability Skills (Perkins V / Soft Skills)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "8.8 Employment Placement, Retention & Earnings",
+  "codebook_issue": "",
+  "rationale": "Supervisor evaluation reflects workplace soft skills."
+ },
+ {
+  "sid": "S202",
+  "outcomes": [
+   {
+    "text": "Students will demonstrate increased confidence in their academic abilities.",
+    "code": "4.4 Academic Confidence (Self-Efficacy)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.1.4 Confidence, self-efficacy & growth mindset",
+  "codebook_issue": "",
+  "rationale": "Academic confidence is 4.4."
+ },
+ {
+  "sid": "S203",
+  "outcomes": [
+   {
+    "text": "Youth will learn about local watershed ecology.",
+    "code": "11.3 General Content Knowledge & Conceptual Understanding",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Environmental science content learning."
+ },
+ {
+  "sid": "S204",
+  "outcomes": [
+   {
+    "text": "Staff will adopt trauma-informed practices in their classrooms.",
+    "code": "10.2 Instructional Practice Change",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "7.3 Healing & Trauma Recovery",
+  "codebook_issue": "",
+  "rationale": "Adopting trauma-informed practice is 10.2 per definition."
+ },
+ {
+  "sid": "S205",
+  "outcomes": [
+   {
+    "text": "Youth will get at least eight hours of sleep on school nights.",
+    "code": "7.1 Physical Activity & Nutrition",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "Sleep health not named in 7.1.",
+  "rationale": "Health behavior closest to 7.1."
+ },
+ {
+  "sid": "S206",
+  "outcomes": [
+   {
+    "text": "Family members will increase their digital literacy and confidence using technology for telehealth and school portals.",
+    "code": "12.5 Household Economic Stability & Benefits Access",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "9.1 Access to Resources",
+  "codebook_issue": "No home for caregiver digital literacy.",
+  "rationale": "Caregiver skill to access services; forced placement."
+ },
+ {
+  "sid": "S207",
+  "outcomes": [
+   {
+    "text": "Participants will reduce screen time",
+    "code": "7.1 Physical Activity & Nutrition",
+    "confidence": "medium"
+   },
+   {
+    "text": "Participants will increase physical activity outside of program hours",
+    "code": "7.1 Physical Activity & Nutrition",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "5.3 Constructive Use of Time",
+  "codebook_issue": "",
+  "rationale": "Split screen time and physical activity; both health behaviors in 7.1."
+ },
+ {
+  "sid": "S208",
+  "outcomes": [
+   {
+    "text": "Students will improve their math problem-solving skills and grade-level proficiency.",
+    "code": "11.2 Numeracy & Mathematical Skill",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Verbatim 11.2 example."
+ },
+ {
+  "sid": "S209",
+  "outcomes": [
+   {
+    "text": "Youth will resolve disagreements with peers without fighting.",
+    "code": "3.4.3 Conflict management & problem-solving in relationships",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "7.7 Violence, Bullying & Injury Prevention",
+  "codebook_issue": "",
+  "rationale": "Resolving peer disagreements constructively is 3.4.3."
+ },
+ {
+  "sid": "S210",
+  "outcomes": [
+   {
+    "text": "Families will reduce reliance on emergency food assistance over time.",
+    "code": "12.6 Food Security & Nutrition Access",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.5 Household Economic Stability & Benefits Access",
+  "codebook_issue": "",
+  "rationale": "Reduced emergency food reliance reflects food security."
+ },
+ {
+  "sid": "S211",
+  "outcomes": [
+   {
+    "text": "Youth council members will present policy recommendations to city council.",
+    "code": "6.3 Youth Voice & Leadership",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "6.1 Civic Skills & Knowledge",
+  "codebook_issue": "",
+  "rationale": "Presenting recommendations to influence decisions."
+ },
+ {
+  "sid": "S212",
+  "outcomes": [
+   {
+    "text": "Students who experienced trauma will report feeling safe at school.",
+    "code": "7.3 Healing & Trauma Recovery",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "2.1 School/Program Connectedness (Belonging)",
+  "codebook_issue": "7.3 includes feeling psychologically safe, but rule 1 sends felt safety to Domain 2; no tie-breaker.",
+  "rationale": "Trauma-exposed youth feeling safe matches 7.3 definition."
+ },
+ {
+  "sid": "S213",
+  "outcomes": [
+   {
+    "text": "Youth will discover a new passion for dance.",
+    "code": "1.2 Triggered Situational Interest (Curiosity)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "1.3 Value & Meaning (Utility Value)",
+  "codebook_issue": "Developed/individual interest (Hidi phase 2-4) has no clear subcategory.",
+  "rationale": "Newly sparked interest in dance."
+ },
+ {
+  "sid": "S214",
+  "outcomes": [
+   {
+    "text": "Youth will continue pursuing robotics after the program ends, joining a school team.",
+    "code": "5.3 Constructive Use of Time",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "1.3 Value & Meaning (Utility Value)",
+  "codebook_issue": "",
+  "rationale": "Joining a team outside the program is constructive use of time."
+ },
+ {
+  "sid": "S215",
+  "outcomes": [
+   {
+    "text": "Youth will demonstrate safe and responsible online behavior, including recognizing scams and protecting personal information.",
+    "code": "6.5 Digital Citizenship & Safety",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Safe online behavior and privacy is 6.5."
+ },
+ {
+  "sid": "S216",
+  "outcomes": [
+   {
+    "text": "Students will believe they can pass their algebra class.",
+    "code": "4.4 Academic Confidence (Self-Efficacy)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Belief in succeeding in class matches 4.4 example."
+ },
+ {
+  "sid": "S217",
+  "outcomes": [
+   {
+    "text": "Improve outcomes for students.",
+    "code": "none",
+    "confidence": "none"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Vague; codebook lists as uncoded example."
+ },
+ {
+  "sid": "S218",
+  "outcomes": [
+   {
+    "text": "Youth will secure a job within 90 days of release.",
+    "code": "8.8 Employment Placement, Retention & Earnings",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "7.8 Justice Involvement, Diversion & Reentry",
+  "codebook_issue": "",
+  "rationale": "Job placement is 8.8."
+ },
+ {
+  "sid": "S219",
+  "outcomes": [
+   {
+    "text": "Students will earn college credit through dual enrollment in a CTE pathway.",
+    "code": "8.7 Postsecondary Enrollment, Persistence & Completion",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "11.6 Credit Accumulation, On-Track Status & Graduation",
+  "codebook_issue": "Dual-enrollment college credit sits between 8.7 and 11.6 credit accumulation.",
+  "rationale": "Earning college credit is postsecondary progress."
+ },
+ {
+  "sid": "S220",
+  "outcomes": [
+   {
+    "text": "Children will show persistence when working on puzzles and new tasks",
+    "code": "4.2 Academic Perseverance (Grit/Tenacity)",
+    "confidence": "medium"
+   },
+   {
+    "text": "Children will show curiosity when working on puzzles and new tasks",
+    "code": "1.2 Triggered Situational Interest (Curiosity)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "3.2.4 Organization, persistence & self-discipline",
+  "codebook_issue": "11.7 note routes Approaches-to-Learning (incl. curiosity) to Domain 4, conflicting with 1.2 curiosity.",
+  "rationale": "Split persistence and curiosity for young children."
+ },
+ {
+  "sid": "S221",
+  "outcomes": [
+   {
+    "text": "Students will increase their use of effective study strategies such as note-taking and test preparation.",
+    "code": "4.3 Learning Strategies (Study Skills)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Note-taking study strategies are 4.3."
+ },
+ {
+  "sid": "S222",
+  "outcomes": [
+   {
+    "text": "Students will report that there is an adult at the program who notices when they are absent.",
+    "code": "2.2 Adult Support & Care",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Caring adult relationship is 2.2."
+ },
+ {
+  "sid": "S223",
+  "outcomes": [
+   {
+    "text": "Youth will stand up for classmates who are being treated unfairly.",
+    "code": "3.5.2 Ethical and prosocial choices",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "6.4 Criticality & Social Justice",
+  "codebook_issue": "",
+  "rationale": "Prosocial action for others treated unfairly."
+ },
+ {
+  "sid": "S224",
+  "outcomes": [
+   {
+    "text": "Youth will demonstrate independent living skills such as cooking, budgeting, and scheduling appointments.",
+    "code": "3.2.4 Organization, persistence & self-discipline",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "12.5 Household Economic Stability & Benefits Access",
+  "codebook_issue": "No home for independent living skills.",
+  "rationale": "Life-skill task management; forced placement."
+ },
+ {
+  "sid": "S225",
+  "outcomes": [
+   {
+    "text": "Youth staying at the shelter will exit to a safe and stable housing situation.",
+    "code": "12.7 Housing Stability",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "5.1 Empowerment & Safety",
+  "codebook_issue": "Housing stability framed for families; youth shelter exits not addressed.",
+  "rationale": "Exit to stable housing is housing stability."
+ },
+ {
+  "sid": "S226",
+  "outcomes": [
+   {
+    "text": "Youth will participate in a church-led service trip to rebuild homes.",
+    "code": "6.2 Community Service & Action",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "5.3 Constructive Use of Time",
+  "codebook_issue": "",
+  "rationale": "Faith service trip routes to community service per faith rule."
+ },
+ {
+  "sid": "S227",
+  "outcomes": [
+   {
+    "text": "Youth will help set up and clean up the program space each day.",
+    "code": "3.5.5 Contributions to class/program/community wellbeing",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "6.2 Community Service & Action",
+  "codebook_issue": "",
+  "rationale": "Daily program-space contributions match 3.5.5."
+ },
+ {
+  "sid": "S228",
+  "outcomes": [
+   {
+    "text": "Program will distribute 200 refurbished laptops to low-income families this year.",
+    "code": "9.1 Access to Resources",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "10.5 Program Participation, Retention & Reach (Output Metric)",
+  "codebook_issue": "Resource distribution count ambiguous between 9.1 and 10.5 output.",
+  "rationale": "Distributing laptops provides access to technology."
+ },
+ {
+  "sid": "S229",
+  "outcomes": [
+   {
+    "text": "Participants will report carrying a weapon less often.",
+    "code": "7.7 Violence, Bullying & Injury Prevention",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.5.4 Safety-oriented decisions & risk avoidance",
+  "codebook_issue": "",
+  "rationale": "Weapon carrying is a YRBSS violence indicator."
+ },
+ {
+  "sid": "S230",
+  "outcomes": [
+   {
+    "text": "Team members will collaborate to design and build a robot.",
+    "code": "3.4.2 Cooperation, teamwork & collaboration",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "1.4 Creative Expression & Making",
+  "codebook_issue": "",
+  "rationale": "Collaboration is the result; building robot is the activity."
+ },
+ {
+  "sid": "S231",
+  "outcomes": [
+   {
+    "text": "Families of children with disabilities will report reduced caregiver stress and burnout.",
+    "code": "12.2 Parental Resilience & Caregiver Well-being",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Verbatim 12.2 example."
+ },
+ {
+  "sid": "S232",
+  "outcomes": [
+   {
+    "text": "Youth will develop coding and computational thinking skills.",
+    "code": "11.3 General Content Knowledge & Conceptual Understanding",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "8.6 Technical Skills & Work-Based Learning (Perkins V)",
+  "codebook_issue": "",
+  "rationale": "Coding skills as general content learning, not career framed."
+ },
+ {
+  "sid": "S233",
+  "outcomes": [
+   {
+    "text": "Participating students will reduce chronic absenteeism from school.",
+    "code": "11.5 Attendance, Chronic Absence & School Stability",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Chronic absenteeism is 11.5."
+ },
+ {
+  "sid": "S234",
+  "outcomes": [
+   {
+    "text": "Youth will report feeling excited and happy to attend program each day.",
+    "code": "1.1 Joy & Emotional Wellness",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "2.1 School/Program Connectedness (Belonging)",
+  "codebook_issue": "",
+  "rationale": "Feeling excited and happy is 1.1."
+ },
+ {
+  "sid": "S235",
+  "outcomes": [
+   {
+    "text": "Students will turn in homework on time.",
+    "code": "4.1 Academic Behaviors (Engagement)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.2.4 Organization, persistence & self-discipline",
+  "codebook_issue": "",
+  "rationale": "Homework completion is 4.1."
+ },
+ {
+  "sid": "S236",
+  "outcomes": [
+   {
+    "text": "Youth will develop self-advocacy skills to communicate their needs and accommodations.",
+    "code": "3.4.4 Help-seeking & providing support",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "3.4.1 Communication & active listening",
+  "codebook_issue": "Self-advocacy lacks explicit subcategory.",
+  "rationale": "Communicating needs and asking for accommodations resembles help-seeking."
+ },
+ {
+  "sid": "S237",
+  "outcomes": [
+   {
+    "text": "Students will develop coping strategies for managing stress.",
+    "code": "3.2.2 Stress management & coping skills",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Coping strategies for stress match 3.2.2."
+ },
+ {
+  "sid": "S238",
+  "outcomes": [
+   {
+    "text": "The program will serve 300 youth across four sites.",
+    "code": "10.5 Program Participation, Retention & Reach (Output Metric)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Number served is 10.5 output."
+ },
+ {
+  "sid": "S239",
+  "outcomes": [
+   {
+    "text": "Caregivers of children with autism will report reduced parenting stress.",
+    "code": "12.2 Parental Resilience & Caregiver Well-being",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "7.2 Mental Health Status (Symptom Reduction)",
+  "codebook_issue": "",
+  "rationale": "Caregiver stress routes to 12.2."
+ },
+ {
+  "sid": "S240",
+  "outcomes": [
+   {
+    "text": "Every participating family will have a working laptop and home internet.",
+    "code": "9.1 Access to Resources",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "12.5 Household Economic Stability & Benefits Access",
+  "codebook_issue": "",
+  "rationale": "Access to laptop and internet is 9.1."
+ },
+ {
+  "sid": "S241",
+  "outcomes": [
+   {
+    "text": "Youth will re-enroll in school or obtain a GED following release.",
+    "code": "11.6 Credit Accumulation, On-Track Status & Graduation",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "7.8 Justice Involvement, Diversion & Reentry",
+  "codebook_issue": "",
+  "rationale": "Verbatim 11.6 example."
+ },
+ {
+  "sid": "S242",
+  "outcomes": [
+   {
+    "text": "Youth will practice gratitude by writing thank-you notes to community volunteers.",
+    "code": "5.2 Positive Values",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "3.5.2 Ethical and prosocial choices",
+  "codebook_issue": "Gratitude not named in any definition.",
+  "rationale": "Gratitude as general positive value; writing notes is the means."
+ },
+ {
+  "sid": "S243",
+  "outcomes": [
+   {
+    "text": "Youth will adopt a growth mindset when facing setbacks.",
+    "code": "3.1.4 Confidence, self-efficacy & growth mindset",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "4.2 Academic Perseverance (Grit/Tenacity)",
+  "codebook_issue": "",
+  "rationale": "Growth mindset is 3.1.4."
+ },
+ {
+  "sid": "S244",
+  "outcomes": [
+   {
+    "text": "Tutors (college volunteers) will strengthen their own communication and mentoring skills through the experience.",
+    "code": "10.1 Professional Knowledge & Skill",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "8.5 Employability Skills (Perkins V / Soft Skills)",
+  "codebook_issue": "",
+  "rationale": "Volunteer tutors gaining skills is 10.1."
+ },
+ {
+  "sid": "S245",
+  "outcomes": [
+   {
+    "text": "Caregivers will demonstrate use of positive discipline strategies at home.",
+    "code": "12.1 Parenting Knowledge & Practices",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Verbatim 12.1 example."
+ },
+ {
+  "sid": "S246",
+  "outcomes": [
+   {
+    "text": "Mentees will report that their mentor cares about them.",
+    "code": "2.2 Adult Support & Care",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Caring mentor relationship is 2.2."
+ },
+ {
+  "sid": "S247",
+  "outcomes": [
+   {
+    "text": "Participants will grow and harvest vegetables in the community garden.",
+    "code": "7.1 Physical Activity & Nutrition",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "6.2 Community Service & Action",
+  "codebook_issue": "Gardening/food-growing activity stated as outcome has no home.",
+  "rationale": "Growing vegetables relates loosely to nutrition; forced."
+ },
+ {
+  "sid": "S248",
+  "outcomes": [
+   {
+    "text": "Youth will be able to identify warning signs of dating violence.",
+    "code": "7.7 Violence, Bullying & Injury Prevention",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "3.5.4 Safety-oriented decisions & risk avoidance",
+  "codebook_issue": "",
+  "rationale": "Dating violence recognition is violence prevention knowledge."
+ },
+ {
+  "sid": "S249",
+  "outcomes": [
+   {
+    "text": "Students will improve reading comprehension scores by one grade level.",
+    "code": "11.1 Literacy & Reading Skill",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Reading comprehension gain is 11.1."
+ },
+ {
+  "sid": "S250",
+  "outcomes": [
+   {
+    "text": "Youth will develop a sense of purpose for their lives.",
+    "code": "5.4 Positive Identity",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.1.2 Understanding self & identity",
+  "codebook_issue": "",
+  "rationale": "Sense of purpose is 5.4."
+ },
+ {
+  "sid": "S251",
+  "outcomes": [
+   {
+    "text": "Teen parents will delay a second pregnancy for at least 24 months.",
+    "code": "7.6 Sexual & Reproductive Health Behaviors",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Teen pregnancy prevention is 7.6."
+ },
+ {
+  "sid": "S252",
+  "outcomes": [
+   {
+    "text": "Families will navigate school enrollment and special education processes despite language barriers.",
+    "code": "6.1 Civic Skills & Knowledge",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.1 Parenting Knowledge & Practices",
+  "codebook_issue": "6.1 fits navigating systems but is youth civic; Domain 12 lacks caregiver system-navigation.",
+  "rationale": "Navigating enrollment and special ed systems."
+ },
+ {
+  "sid": "S253",
+  "outcomes": [
+   {
+    "text": "Interns will demonstrate leadership and initiative in the workplace.",
+    "code": "8.5 Employability Skills (Perkins V / Soft Skills)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "6.3 Youth Voice & Leadership",
+  "codebook_issue": "",
+  "rationale": "Workplace leadership/initiative as employability soft skill."
+ },
+ {
+  "sid": "S254",
+  "outcomes": [
+   {
+    "text": "Youth will explain how a bill becomes a law in their state.",
+    "code": "6.1 Civic Skills & Knowledge",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "How laws are made is civic knowledge."
+ },
+ {
+  "sid": "S255",
+  "outcomes": [
+   {
+    "text": "Participants will build confidence in outdoor physical skills (hiking, kayaking, rock climbing).",
+    "code": "3.1.4 Confidence, self-efficacy & growth mindset",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "7.1 Physical Activity & Nutrition",
+  "codebook_issue": "",
+  "rationale": "Confidence in physical skills; general self-efficacy."
+ }
+]

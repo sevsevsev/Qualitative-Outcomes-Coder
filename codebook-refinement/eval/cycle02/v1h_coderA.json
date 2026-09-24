@@ -1,0 +1,1267 @@
+[
+ {
+  "sid": "H001",
+  "outcomes": [
+   {
+    "text": "85% of enrolled youth attended at least 30 program sessions",
+    "code": "10.5 Program Participation, Retention & Reach (Output Metric)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "11.5 Attendance, Chronic Absence & School Stability",
+  "codebook_issue": "",
+  "rationale": "Program-level dosage metric; matches 10.5 definition."
+ },
+ {
+  "sid": "H002",
+  "outcomes": [
+   {
+    "text": "Parents more confident child has a safe, supervised place after school",
+    "code": "2.5 Family Partnership & Connection (Gap Fill: Epstein Types 2 & 4)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.2 Parental Resilience & Caregiver Well-being",
+  "codebook_issue": "Caregiver peace of mind/trust in program safety has no explicit home; 2.5 is closest.",
+  "rationale": "Parent trust in program as safe setting; family-program relationship."
+ },
+ {
+  "sid": "H003",
+  "outcomes": [
+   {
+    "text": "Youth improved homework completion habits",
+    "code": "4.1 Academic Behaviors (Engagement)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.2.4 Organization, persistence & self-discipline",
+  "codebook_issue": "",
+  "rationale": "Homework completion is 4.1 example; regular attendance is the means."
+ },
+ {
+  "sid": "H004",
+  "outcomes": [
+   {
+    "text": "Increased oral reading fluency by 12 wpm",
+    "code": "11.1 Literacy & Reading Skill",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "4.1 Academic Behaviors (Engagement)",
+  "codebook_issue": "",
+  "rationale": "Reading fluency gain matches 11.1 example."
+ },
+ {
+  "sid": "H005",
+  "outcomes": [
+   {
+    "text": "Tutors completed 40 hours of training",
+    "code": "10.1 Professional Knowledge & Skill",
+    "confidence": "medium"
+   },
+   {
+    "text": "Tutors began weekly one-on-one sessions with students",
+    "code": "10.5 Program Participation, Retention & Reach (Output Metric)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "10.5 Program Participation, Retention & Reach (Output Metric)",
+  "codebook_issue": "Adult training hours/service delivery are outputs; 10.5 defined around youth participation, 10.1 around learning.",
+  "rationale": "Tutor training completion (adult capacity) plus session delivery output."
+ },
+ {
+  "sid": "H006",
+  "outcomes": [
+   {
+    "text": "Youth more confident reading aloud in class",
+    "code": "4.4 Academic Confidence (Self-Efficacy)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.1.4 Confidence, self-efficacy & growth mindset",
+  "codebook_issue": "",
+  "rationale": "Confidence tied to classroom reading task is academic confidence."
+ },
+ {
+  "sid": "H007",
+  "outcomes": [
+   {
+    "text": "Increased interest in pursuing a STEM career",
+    "code": "8.4 Career Awareness & Exploration (Perkins V)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "1.3 Value & Meaning (Utility Value)",
+  "codebook_issue": "Career interest (vs. exploration activity) straddles 8.4 and 1.3/1.2.",
+  "rationale": "Career interest fits career awareness/exploration best, partial match."
+ },
+ {
+  "sid": "H008",
+  "outcomes": [
+   {
+    "text": "Youth designed and built a functioning robot",
+    "code": "1.4 Creative Expression & Making",
+    "confidence": "medium"
+   },
+   {
+    "text": "Presented robot at regional competition",
+    "code": "1.5 Performance, Presentation & Artistic Response",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "11.3 General Content Knowledge & Conceptual Understanding",
+  "codebook_issue": "Engineering design/build products are only loosely 'creative making'; no STEM-making code.",
+  "rationale": "Split making vs presenting per 1.4/1.5 note; STEM context partial fit."
+ },
+ {
+  "sid": "H009",
+  "outcomes": [
+   {
+    "text": "Girls' enrollment in advanced STEM electives increased 15%",
+    "code": "9.2 Participation & Inclusion",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "10.5 Program Participation, Retention & Reach (Output Metric)",
+  "codebook_issue": "",
+  "rationale": "Increased participation of an underrepresented group; closest is 9.2 inclusion."
+ },
+ {
+  "sid": "H010",
+  "outcomes": [
+   {
+    "text": "Improved technical skill on instrument per jury assessment",
+    "code": "11.3 General Content Knowledge & Conceptual Understanding",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "1.5 Performance, Presentation & Artistic Response",
+  "codebook_issue": "Arts technical skill mastery has no explicit home; 11.3 lists arts but 1.4/1.5 also plausible.",
+  "rationale": "Demonstrated arts skill gain = content learning; jury is measure."
+ },
+ {
+  "sid": "H011",
+  "outcomes": [
+   {
+    "text": "Program presented 12 community performances",
+    "code": "10.5 Program Participation, Retention & Reach (Output Metric)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "1.5 Performance, Presentation & Artistic Response",
+  "codebook_issue": "Program-level count of performances: output (10.5) vs performance (1.5) unclear.",
+  "rationale": "Program-level output count, not a youth change."
+ },
+ {
+  "sid": "H012",
+  "outcomes": [
+   {
+    "text": "Youth more comfortable expressing themselves creatively",
+    "code": "1.4 Creative Expression & Making",
+    "confidence": "medium"
+   },
+   {
+    "text": "Made new friends in the program",
+    "code": "2.3 Peer Connection & Social Integration",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.1.4 Confidence, self-efficacy & growth mindset",
+  "codebook_issue": "",
+  "rationale": "Split: creative self-expression comfort; friendship is 2.3 example."
+ },
+ {
+  "sid": "H013",
+  "outcomes": [
+   {
+    "text": "Increased weekly physical activity to 60 min on 5+ days",
+    "code": "7.1 Physical Activity & Nutrition",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Matches 7.1 exercise example."
+ },
+ {
+  "sid": "H014",
+  "outcomes": [
+   {
+    "text": "Coaches learned to lead a conflict-resolution curriculum",
+    "code": "10.1 Professional Knowledge & Skill",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "10.2 Instructional Practice Change",
+  "codebook_issue": "",
+  "rationale": "Coaches acquiring new skill; 10.1 covers coaches explicitly."
+ },
+ {
+  "sid": "H015",
+  "outcomes": [
+   {
+    "text": "Youth showed improved sportsmanship",
+    "code": "5.2 Positive Values",
+    "confidence": "medium"
+   },
+   {
+    "text": "Youth showed improved teamwork during games",
+    "code": "3.4.2 Cooperation, teamwork & collaboration",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.5.2 Ethical and prosocial choices",
+  "codebook_issue": "",
+  "rationale": "Split sportsmanship (character/values) from teamwork skill."
+ },
+ {
+  "sid": "H016",
+  "outcomes": [
+   {
+    "text": "85% of matches remained active at least 12 months",
+    "code": "10.5 Program Participation, Retention & Reach (Output Metric)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "2.2 Adult Support & Care",
+  "codebook_issue": "",
+  "rationale": "Match duration is 10.5 example."
+ },
+ {
+  "sid": "H017",
+  "outcomes": [
+   {
+    "text": "Mentees reported stronger sense of belonging",
+    "code": "2.1 School/Program Connectedness (Belonging)",
+    "confidence": "high"
+   },
+   {
+    "text": "Stronger connection to a caring adult",
+    "code": "2.2 Adult Support & Care",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "2.2 Adult Support & Care",
+  "codebook_issue": "",
+  "rationale": "Split belonging and adult relationship."
+ },
+ {
+  "sid": "H018",
+  "outcomes": [
+   {
+    "text": "Youth-mentor pairs met weekly",
+    "code": "10.5 Program Participation, Retention & Reach (Output Metric)",
+    "confidence": "high"
+   },
+   {
+    "text": "Mentees' school attendance improved",
+    "code": "11.5 Attendance, Chronic Absence & School Stability",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "4.1 Academic Behaviors (Engagement)",
+  "codebook_issue": "Unclear whether a dosage clause is a 'means' (don't split) or a codeable 10.5 output (split).",
+  "rationale": "Match dosage output plus student attendance outcome."
+ },
+ {
+  "sid": "H019",
+  "outcomes": [
+   {
+    "text": "Seniors submitted FAFSA and at least one college application",
+    "code": "8.3 Transition Knowledge & Skills",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "8.7 Postsecondary Enrollment, Persistence & Completion",
+  "codebook_issue": "",
+  "rationale": "FAFSA/application completion matches 8.3 example."
+ },
+ {
+  "sid": "H020",
+  "outcomes": [
+   {
+    "text": "90% enrolled in college the fall after graduation",
+    "code": "8.7 Postsecondary Enrollment, Persistence & Completion",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Matches 8.7 enrollment example."
+ },
+ {
+  "sid": "H021",
+  "outcomes": [
+   {
+    "text": "Increased understanding of financial aid process",
+    "code": "8.3 Transition Knowledge & Skills",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "12.5 Household Economic Stability & Benefits Access",
+  "codebook_issue": "",
+  "rationale": "Transition process knowledge (financial aid)."
+ },
+ {
+  "sid": "H022",
+  "outcomes": [
+   {
+    "text": "Youth obtained subsidized summer employment and completed 120 paid hours",
+    "code": "8.8 Employment Placement, Retention & Earnings",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "8.6 Technical Skills & Work-Based Learning (Perkins V)",
+  "codebook_issue": "Subsidized summer jobs straddle 8.6 work-based learning and 8.8 employment placement.",
+  "rationale": "Obtaining paid employment; could be work-based learning."
+ },
+ {
+  "sid": "H023",
+  "outcomes": [
+   {
+    "text": "Improved workplace communication and professionalism",
+    "code": "8.5 Employability Skills (Perkins V / Soft Skills)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.4.1 Communication & active listening",
+  "codebook_issue": "",
+  "rationale": "Directly matches 8.5 definition."
+ },
+ {
+  "sid": "H024",
+  "outcomes": [
+   {
+    "text": "75% employed or enrolled in postsecondary six months after completion",
+    "code": "8.8 Employment Placement, Retention & Earnings",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "8.7 Postsecondary Enrollment, Persistence & Completion",
+  "codebook_issue": "Composite employment-or-education indicator spans 8.7 and 8.8; no rule.",
+  "rationale": "WIOA-style placement composite; split not meaningful for either/or metric."
+ },
+ {
+  "sid": "H025",
+  "outcomes": [
+   {
+    "text": "Participants opened a savings account",
+    "code": "12.5 Household Economic Stability & Benefits Access",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "11.2 Numeracy & Mathematical Skill",
+  "codebook_issue": "Youth financial behavior has no home; 12.5 is household-level.",
+  "rationale": "Individual financial action; forced to 12.5."
+ },
+ {
+  "sid": "H026",
+  "outcomes": [
+   {
+    "text": "Increased knowledge of budgeting, credit, saving",
+    "code": "11.3 General Content Knowledge & Conceptual Understanding",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "11.2 Numeracy & Mathematical Skill",
+  "codebook_issue": "Financial literacy content: subject area says Mathematics but 11.2 is math skill; 11.3 vs 11.2 unclear.",
+  "rationale": "Demonstrated content knowledge gain via pre/post quiz."
+ },
+ {
+  "sid": "H027",
+  "outcomes": [
+   {
+    "text": "Families more confident managing household finances",
+    "code": "12.5 Household Economic Stability & Benefits Access",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.2 Parental Resilience & Caregiver Well-being",
+  "codebook_issue": "",
+  "rationale": "Household financial stability/capacity; caregiver domain."
+ },
+ {
+  "sid": "H028",
+  "outcomes": [
+   {
+    "text": "Youth organizers led campaign resulting in new city ordinance",
+    "code": "6.3 Youth Voice & Leadership",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "10.3 Systemic Improvement",
+  "codebook_issue": "",
+  "rationale": "Youth influencing decisions through organizing."
+ },
+ {
+  "sid": "H029",
+  "outcomes": [
+   {
+    "text": "Increased knowledge of voter registration process",
+    "code": "6.1 Civic Skills & Knowledge",
+    "confidence": "high"
+   },
+   {
+    "text": "Registered eligible peers",
+    "code": "6.2 Community Service & Action",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "6.3 Youth Voice & Leadership",
+  "codebook_issue": "",
+  "rationale": "Split civic knowledge and civic action."
+ },
+ {
+  "sid": "H030",
+  "outcomes": [
+   {
+    "text": "Increased sense they can influence community decisions",
+    "code": "6.3 Youth Voice & Leadership",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "5.1 Empowerment & Safety",
+  "codebook_issue": "Felt civic efficacy sits between 5.1 (felt voice) and 6.3 (voice/influence); 5.1 note routes to 6.3.",
+  "rationale": "Civic efficacy; 5.1 note routes civic voice to 6.3."
+ },
+ {
+  "sid": "H031",
+  "outcomes": [
+   {
+    "text": "Correctly identified 80% more native species",
+    "code": "11.3 General Content Knowledge & Conceptual Understanding",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "8.1 Key Content Knowledge",
+  "codebook_issue": "",
+  "rationale": "Environmental science content gain, like 11.3 example."
+ },
+ {
+  "sid": "H032",
+  "outcomes": [
+   {
+    "text": "Demonstrated leadership in group decision-making",
+    "code": "6.3 Youth Voice & Leadership",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "3.4.2 Cooperation, teamwork & collaboration",
+  "codebook_issue": "Non-civic group leadership lacks a home; expedition completion treated as means.",
+  "rationale": "Leadership coded 6.3; expedition is activity/setting."
+ },
+ {
+  "sid": "H033",
+  "outcomes": [
+   {
+    "text": "Increased comfort and confidence spending time outdoors",
+    "code": "3.1.4 Confidence, self-efficacy & growth mindset",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "1.1 Joy & Emotional Wellness",
+  "codebook_issue": "",
+  "rationale": "Confidence in a new setting; general self-efficacy, partial fit."
+ },
+ {
+  "sid": "H034",
+  "outcomes": [
+   {
+    "text": "Reduction in self-reported anxiety symptoms (GAD-7)",
+    "code": "7.2 Mental Health Status (Symptom Reduction)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "7.4 Access to Mental Health Services",
+  "codebook_issue": "",
+  "rationale": "Youth anxiety symptom reduction; counseling is means."
+ },
+ {
+  "sid": "H035",
+  "outcomes": [
+   {
+    "text": "Referrals to school-based clinician increased 20%",
+    "code": "10.2 Instructional Practice Change",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "7.4 Access to Mental Health Services",
+  "codebook_issue": "Referral increase could be staff practice (10.2) or youth service access (7.4).",
+  "rationale": "Staff applying training by referring more; practice change."
+ },
+ {
+  "sid": "H036",
+  "outcomes": [
+   {
+    "text": "Developed healthier coping strategies for stress",
+    "code": "3.2.2 Stress management & coping skills",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "7.2 Mental Health Status (Symptom Reduction)",
+  "codebook_issue": "",
+  "rationale": "Matches 3.2.2 coping definition."
+ },
+ {
+  "sid": "H037",
+  "outcomes": [
+   {
+    "text": "Delayed age of first alcohol use",
+    "code": "7.5 Substance Use Prevention & Reduction",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.5.4 Safety-oriented decisions & risk avoidance",
+  "codebook_issue": "",
+  "rationale": "Substance use prevention."
+ },
+ {
+  "sid": "H038",
+  "outcomes": [
+   {
+    "text": "Increased knowledge of vaping health risks",
+    "code": "7.5 Substance Use Prevention & Reduction",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "3.5.4 Safety-oriented decisions & risk avoidance",
+  "codebook_issue": "",
+  "rationale": "Prevention knowledge, not behavior change; partial match to 7.5."
+ },
+ {
+  "sid": "H039",
+  "outcomes": [
+   {
+    "text": "Delivered curricula to 500 students at 6 schools",
+    "code": "10.5 Program Participation, Retention & Reach (Output Metric)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "7.5 Substance Use Prevention & Reduction",
+  "codebook_issue": "",
+  "rationale": "Program reach output."
+ },
+ {
+  "sid": "H040",
+  "outcomes": [
+   {
+    "text": "Improved conflict de-escalation skills",
+    "code": "3.4.3 Conflict management & problem-solving in relationships",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "7.7 Violence, Bullying & Injury Prevention",
+  "codebook_issue": "",
+  "rationale": "Interpersonal conflict management skill."
+ },
+ {
+  "sid": "H041",
+  "outcomes": [
+   {
+    "text": "Decrease in physical altercations",
+    "code": "7.7 Violence, Bullying & Injury Prevention",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "11.6 Credit Accumulation, On-Track Status & Graduation",
+  "codebook_issue": "",
+  "rationale": "Reduction in fighting; restorative justice is means."
+ },
+ {
+  "sid": "H042",
+  "outcomes": [
+   {
+    "text": "Youth feel safer walking to and from school",
+    "code": "5.1 Empowerment & Safety",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "7.7 Violence, Bullying & Injury Prevention",
+  "codebook_issue": "",
+  "rationale": "Matches 5.1 example (feel safe in neighborhood)."
+ },
+ {
+  "sid": "H043",
+  "outcomes": [
+   {
+    "text": "70% had no new adjudications within 12 months",
+    "code": "7.8 Justice Involvement, Diversion & Reentry",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Recidivism outcome."
+ },
+ {
+  "sid": "H044",
+  "outcomes": [
+   {
+    "text": "Participants secured stable housing",
+    "code": "12.7 Housing Stability",
+    "confidence": "medium"
+   },
+   {
+    "text": "Enrolled in school or employment within 30 days",
+    "code": "11.6 Credit Accumulation, On-Track Status & Graduation",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "7.8 Justice Involvement, Diversion & Reentry",
+  "codebook_issue": "12.7 scoped to families; youth's own housing has no youth-level code. School-or-work composite spans 11.6/8.8.",
+  "rationale": "Split housing and re-engagement after release."
+ },
+ {
+  "sid": "H045",
+  "outcomes": [
+   {
+    "text": "Improved ability to set and work toward personal goals",
+    "code": "3.2.3 Goal-setting & follow-through",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.2.4 Organization, persistence & self-discipline",
+  "codebook_issue": "",
+  "rationale": "Matches 3.2.3 goal-setting definition."
+ },
+ {
+  "sid": "H046",
+  "outcomes": [
+   {
+    "text": "Obtained state ID, SS card, birth certificate",
+    "code": "8.3 Transition Knowledge & Skills",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "12.5 Household Economic Stability & Benefits Access",
+  "codebook_issue": "Vital documents/independent-living milestones have no home.",
+  "rationale": "Transition-to-adulthood prerequisite; forced to 8.3."
+ },
+ {
+  "sid": "H047",
+  "outcomes": [
+   {
+    "text": "At least one permanent, supportive adult connection",
+    "code": "2.2 Adult Support & Care",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.4.5 Building and sustaining positive relationships",
+  "codebook_issue": "",
+  "rationale": "Supportive adult relationship."
+ },
+ {
+  "sid": "H048",
+  "outcomes": [
+   {
+    "text": "Increased independent living skills (cooking, budgeting, transit)",
+    "code": "8.3 Transition Knowledge & Skills",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "7.1 Physical Activity & Nutrition",
+  "codebook_issue": "Independent living/life skills have no subcategory.",
+  "rationale": "Transition life skills; no code fits well."
+ },
+ {
+  "sid": "H049",
+  "outcomes": [
+   {
+    "text": "Exited shelter into safe and stable housing",
+    "code": "12.7 Housing Stability",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "11.5 Attendance, Chronic Absence & School Stability",
+  "codebook_issue": "12.7 defined for families; youth housing outcome has no youth code.",
+  "rationale": "Housing stability outcome for youth."
+ },
+ {
+  "sid": "H050",
+  "outcomes": [
+   {
+    "text": "Participants engaged in case management",
+    "code": "12.5 Household Economic Stability & Benefits Access",
+    "confidence": "medium"
+   },
+   {
+    "text": "Reduced nights spent unsheltered",
+    "code": "12.7 Housing Stability",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "10.5 Program Participation, Retention & Reach (Output Metric)",
+  "codebook_issue": "Case management engagement could be means or output; 12.x scoped to families.",
+  "rationale": "Split service engagement and housing outcome."
+ },
+ {
+  "sid": "H051",
+  "outcomes": [
+   {
+    "text": "Increased sense of safety",
+    "code": "5.1 Empowerment & Safety",
+    "confidence": "medium"
+   },
+   {
+    "text": "Increased trust in program staff",
+    "code": "2.2 Adult Support & Care",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "2.1 School/Program Connectedness (Belonging)",
+  "codebook_issue": "",
+  "rationale": "Split felt safety and adult trust."
+ },
+ {
+  "sid": "H052",
+  "outcomes": [
+   {
+    "text": "Teen mothers continued or re-enrolled in school",
+    "code": "11.6 Credit Accumulation, On-Track Status & Graduation",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "11.5 Attendance, Chronic Absence & School Stability",
+  "codebook_issue": "",
+  "rationale": "School re-engagement/completion."
+ },
+ {
+  "sid": "H053",
+  "outcomes": [
+   {
+    "text": "Improved knowledge of infant health and safe sleep",
+    "code": "12.1 Parenting Knowledge & Practices",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "7.6 Sexual & Reproductive Health Behaviors",
+  "codebook_issue": "",
+  "rationale": "Parenting knowledge; participants are caregivers."
+ },
+ {
+  "sid": "H054",
+  "outcomes": [
+   {
+    "text": "Young parents more confident in parenting abilities",
+    "code": "12.1 Parenting Knowledge & Practices",
+    "confidence": "medium"
+   },
+   {
+    "text": "Less isolated from peers",
+    "code": "12.3 Caregiver Social Connections & Support Networks",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.2 Parental Resilience & Caregiver Well-being",
+  "codebook_issue": "Parenting self-efficacy not named; peer isolation for teen parents: 12.3 vs 2.3.",
+  "rationale": "Split parenting confidence and social connection."
+ },
+ {
+  "sid": "H055",
+  "outcomes": [
+   {
+    "text": "Decrease in feelings of isolation",
+    "code": "2.3 Peer Connection & Social Integration",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "7.2 Mental Health Status (Symptom Reduction)",
+  "codebook_issue": "Isolation as relational state (2.3) vs distress symptom (7.2); no rule.",
+  "rationale": "Reduced isolation via peer support group; relational outcome."
+ },
+ {
+  "sid": "H056",
+  "outcomes": [
+   {
+    "text": "Identified at least one trusted adult",
+    "code": "2.2 Adult Support & Care",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "3.3.4 Awareness of supports and resources",
+  "codebook_issue": "",
+  "rationale": "Matches 2.2 example."
+ },
+ {
+  "sid": "H057",
+  "outcomes": [
+   {
+    "text": "Program fostered more welcoming, affirming environment",
+    "code": "10.3 Systemic Improvement",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "2.1 School/Program Connectedness (Belonging)",
+  "codebook_issue": "",
+  "rationale": "Program climate/culture change; not a youth-level outcome."
+ },
+ {
+  "sid": "H058",
+  "outcomes": [
+   {
+    "text": "Youth with disabilities participated in inclusive recreation",
+    "code": "9.2 Participation & Inclusion",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "5.3 Constructive Use of Time",
+  "codebook_issue": "",
+  "rationale": "Inclusion of youth with disabilities; participation outcome."
+ },
+ {
+  "sid": "H059",
+  "outcomes": [
+   {
+    "text": "Parents increased knowledge of child's IDEA rights",
+    "code": "12.1 Parenting Knowledge & Practices",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "6.1 Civic Skills & Knowledge",
+  "codebook_issue": "Caregiver rights/system-navigation knowledge has no Domain 12 home.",
+  "rationale": "Caregiver's own knowledge; closest is 12.1."
+ },
+ {
+  "sid": "H060",
+  "outcomes": [
+   {
+    "text": "Improved self-advocacy skills in IEP meetings",
+    "code": "6.3 Youth Voice & Leadership",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "3.4.4 Help-seeking & providing support",
+  "codebook_issue": "Self-advocacy has no explicit code; 6.3 vs 3.4.4.",
+  "rationale": "Expressing views and influencing own IEP decisions."
+ },
+ {
+  "sid": "H061",
+  "outcomes": [
+   {
+    "text": "Families understand school enrollment and healthcare systems",
+    "code": "6.1 Civic Skills & Knowledge",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.5 Household Economic Stability & Benefits Access",
+  "codebook_issue": "Caregiver system-navigation knowledge: 6.1 is youth civic; Domain 12 lacks it.",
+  "rationale": "Understanding how systems work and navigating them."
+ },
+ {
+  "sid": "H062",
+  "outcomes": [
+   {
+    "text": "Adults improved English proficiency by one CASAS level",
+    "code": "11.4 English Language Proficiency & Multilingual Development",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.5 Household Economic Stability & Benefits Access",
+  "codebook_issue": "11.4 framed for youth/ELs; adult learners are outside scope.",
+  "rationale": "English acquisition by English learners; adult population."
+ },
+ {
+  "sid": "H063",
+  "outcomes": [
+   {
+    "text": "Youth feel more connected to new community",
+    "code": "2.1 School/Program Connectedness (Belonging)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "5.1 Empowerment & Safety",
+  "codebook_issue": "2.1 scoped to school/program; broader community connectedness has no home.",
+  "rationale": "Belonging/connectedness, applied to community."
+ },
+ {
+  "sid": "H064",
+  "outcomes": [
+   {
+    "text": "Age-appropriate developmental milestones on ASQ",
+    "code": "11.7 School Readiness & Early Learning",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Developmental screening milestones in 11.7 definition."
+ },
+ {
+  "sid": "H065",
+  "outcomes": [
+   {
+    "text": "Home visitors conducted monthly visits",
+    "code": "10.5 Program Participation, Retention & Reach (Output Metric)",
+    "confidence": "medium"
+   },
+   {
+    "text": "Caregivers more confident supporting early literacy at home",
+    "code": "12.4 Home Learning Environment",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "10.2 Instructional Practice Change",
+  "codebook_issue": "",
+  "rationale": "Split visit dosage and home literacy support."
+ },
+ {
+  "sid": "H066",
+  "outcomes": [
+   {
+    "text": "Mothers initiated and sustained breastfeeding 6 months",
+    "code": "12.1 Parenting Knowledge & Practices",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "7.1 Physical Activity & Nutrition",
+  "codebook_issue": "Maternal/infant health behaviors have no explicit home.",
+  "rationale": "Caregiver practice supporting child health."
+ },
+ {
+  "sid": "H067",
+  "outcomes": [
+   {
+    "text": "Families increased household income",
+    "code": "12.5 Household Economic Stability & Benefits Access",
+    "confidence": "high"
+   },
+   {
+    "text": "Parents completed occupational skills training",
+    "code": "8.6 Technical Skills & Work-Based Learning (Perkins V)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "8.8 Employment Placement, Retention & Earnings",
+  "codebook_issue": "8.6 is youth-focused; parent training has no Domain 12 code.",
+  "rationale": "Split income gain and parent training completion."
+ },
+ {
+  "sid": "H068",
+  "outcomes": [
+   {
+    "text": "Parents improved communication and reduced conflict with children",
+    "code": "12.1 Parenting Knowledge & Practices",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "3.4.3 Conflict management & problem-solving in relationships",
+  "codebook_issue": "Parent-child relationship quality not named in Domain 12.",
+  "rationale": "Caregiver practices in parent-child interaction."
+ },
+ {
+  "sid": "H069",
+  "outcomes": [
+   {
+    "text": "Caregivers connected to community resources or benefits",
+    "code": "12.5 Household Economic Stability & Benefits Access",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "12.3 Caregiver Social Connections & Support Networks",
+  "codebook_issue": "",
+  "rationale": "Benefits access, matches 12.5 example."
+ },
+ {
+  "sid": "H070",
+  "outcomes": [
+   {
+    "text": "Reduced food insecurity per USDA screener",
+    "code": "12.6 Food Security & Nutrition Access",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Matches 12.6 example."
+ },
+ {
+  "sid": "H071",
+  "outcomes": [
+   {
+    "text": "Pantry distributed 50,000 lbs to 1,200 households",
+    "code": "10.5 Program Participation, Retention & Reach (Output Metric)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.6 Food Security & Nutrition Access",
+  "codebook_issue": "10.5 defined for youth participation; non-youth service output fits imperfectly.",
+  "rationale": "Program reach/output metric."
+ },
+ {
+  "sid": "H072",
+  "outcomes": [
+   {
+    "text": "Families increased fruit and vegetable consumption",
+    "code": "12.6 Food Security & Nutrition Access",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "7.1 Physical Activity & Nutrition",
+  "codebook_issue": "",
+  "rationale": "Household healthy-food access/consumption."
+ },
+ {
+  "sid": "H073",
+  "outcomes": [
+   {
+    "text": "Exited to permanent housing and maintained 6 months",
+    "code": "12.7 Housing Stability",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "12.5 Household Economic Stability & Benefits Access",
+  "codebook_issue": "",
+  "rationale": "Housing stability."
+ },
+ {
+  "sid": "H074",
+  "outcomes": [
+   {
+    "text": "Households reduced rent burden below 30% of income",
+    "code": "12.5 Household Economic Stability & Benefits Access",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "12.7 Housing Stability",
+  "codebook_issue": "",
+  "rationale": "Household financial stability; housing affordability."
+ },
+ {
+  "sid": "H075",
+  "outcomes": [
+   {
+    "text": "Case managers helped clients submit voucher applications",
+    "code": "12.7 Housing Stability",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "10.5 Program Participation, Retention & Reach (Output Metric)",
+  "codebook_issue": "Staff service-activity statement; outcome vs output unclear.",
+  "rationale": "Progress toward housing; activity-like."
+ },
+ {
+  "sid": "H076",
+  "outcomes": [
+   {
+    "text": "Households received laptop and broadband subsidy",
+    "code": "9.1 Access to Resources",
+    "confidence": "high"
+   },
+   {
+    "text": "Increased ability to complete tasks online",
+    "code": "11.3 General Content Knowledge & Conceptual Understanding",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "12.5 Household Economic Stability & Benefits Access",
+  "codebook_issue": "Digital literacy/skills have no subcategory.",
+  "rationale": "Split resource access and digital skill."
+ },
+ {
+  "sid": "H077",
+  "outcomes": [
+   {
+    "text": "Improved digital literacy skills (email, video conferencing)",
+    "code": "11.3 General Content Knowledge & Conceptual Understanding",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "6.5 Digital Citizenship & Safety",
+  "codebook_issue": "Digital literacy has no subcategory.",
+  "rationale": "Forced placement for digital skills."
+ },
+ {
+  "sid": "H078",
+  "outcomes": [
+   {
+    "text": "Older adults less anxious using technology",
+    "code": "7.2 Mental Health Status (Symptom Reduction)",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "12.2 Parental Resilience & Caregiver Well-being",
+  "codebook_issue": "Older-adult population and tech anxiety are outside codebook scope.",
+  "rationale": "Reduced anxiety; forced for non-youth."
+ },
+ {
+  "sid": "H079",
+  "outcomes": [
+   {
+    "text": "Youth grew in their faith",
+    "code": "5.2 Positive Values",
+    "confidence": "medium"
+   },
+   {
+    "text": "Stronger connection to spiritual community",
+    "code": "2.1 School/Program Connectedness (Belonging)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "5.4 Positive Identity",
+  "codebook_issue": "Faith growth: 5.2 vs 5.4 both listed as routes, no rule.",
+  "rationale": "Faith language routed to secular values and connectedness."
+ },
+ {
+  "sid": "H080",
+  "outcomes": [
+   {
+    "text": "Attended weekly youth group",
+    "code": "10.5 Program Participation, Retention & Reach (Output Metric)",
+    "confidence": "medium"
+   },
+   {
+    "text": "Volunteered at least once in the community",
+    "code": "6.2 Community Service & Action",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "5.3 Constructive Use of Time",
+  "codebook_issue": "",
+  "rationale": "Split attendance output and community volunteering."
+ },
+ {
+  "sid": "H081",
+  "outcomes": [
+   {
+    "text": "Increased trust in adult mentors",
+    "code": "2.2 Adult Support & Care",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "2.1 School/Program Connectedness (Belonging)",
+  "codebook_issue": "",
+  "rationale": "Adult support relationship."
+ },
+ {
+  "sid": "H082",
+  "outcomes": [
+   {
+    "text": "Improved swimming proficiency",
+    "code": "7.1 Physical Activity & Nutrition",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "11.3 General Content Knowledge & Conceptual Understanding",
+  "codebook_issue": "Physical skill acquisition not in 7.1 definition.",
+  "rationale": "Physical skill; closest physical-health code."
+ },
+ {
+  "sid": "H083",
+  "outcomes": [
+   {
+    "text": "Youth made new friends",
+    "code": "2.3 Peer Connection & Social Integration",
+    "confidence": "high"
+   },
+   {
+    "text": "Sense of belonging at camp",
+    "code": "2.1 School/Program Connectedness (Belonging)",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "2.1 School/Program Connectedness (Belonging)",
+  "codebook_issue": "",
+  "rationale": "Split friendship and belonging."
+ },
+ {
+  "sid": "H084",
+  "outcomes": [
+   {
+    "text": "Completed project record books",
+    "code": "3.2.4 Organization, persistence & self-discipline",
+    "confidence": "medium"
+   },
+   {
+    "text": "Presented them at county fair",
+    "code": "1.5 Performance, Presentation & Artistic Response",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "4.1 Academic Behaviors (Engagement)",
+  "codebook_issue": "",
+  "rationale": "Split task completion and public presentation."
+ },
+ {
+  "sid": "H085",
+  "outcomes": [
+   {
+    "text": "Increased nutrition knowledge",
+    "code": "7.1 Physical Activity & Nutrition",
+    "confidence": "medium"
+   },
+   {
+    "text": "Made healthier cafeteria food choices",
+    "code": "7.1 Physical Activity & Nutrition",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "11.3 General Content Knowledge & Conceptual Understanding",
+  "codebook_issue": "",
+  "rationale": "Split nutrition knowledge and healthy eating behavior."
+ },
+ {
+  "sid": "H086",
+  "outcomes": [
+   {
+    "text": "Reduced recreational screen time to under 2 hours",
+    "code": "7.1 Physical Activity & Nutrition",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "5.3 Constructive Use of Time",
+  "codebook_issue": "Screen time not named in 7.1.",
+  "rationale": "Health behavior; closest is 7.1."
+ },
+ {
+  "sid": "H087",
+  "outcomes": [
+   {
+    "text": "See attached logic model",
+    "code": "none",
+    "confidence": "none"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Reference note, no outcome."
+ },
+ {
+  "sid": "H088",
+  "outcomes": [
+   {
+    "text": "Outcomes: Systems and Policy Change",
+    "code": "none",
+    "confidence": "none"
+   }
+  ],
+  "runner_up": "10.3 Systemic Improvement",
+  "codebook_issue": "",
+  "rationale": "Header only, no result stated."
+ },
+ {
+  "sid": "H089",
+  "outcomes": [
+   {
+    "text": "Coalition secured ordinance restricting flavored tobacco",
+    "code": "10.3 Systemic Improvement",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "7.5 Substance Use Prevention & Reduction",
+  "codebook_issue": "",
+  "rationale": "Policy change."
+ },
+ {
+  "sid": "H090",
+  "outcomes": [
+   {
+    "text": "Member organizations increased collaboration and data sharing",
+    "code": "10.3 Systemic Improvement",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "10.2 Instructional Practice Change",
+  "codebook_issue": "",
+  "rationale": "Cross-system infrastructure/culture change."
+ }
+]

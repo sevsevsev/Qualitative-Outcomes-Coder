@@ -1,0 +1,2542 @@
+[
+ {
+  "sid": "S023",
+  "outcomes": [
+   {
+    "text": "maintain 85% average daily attendance across sites",
+    "code": "A2.2",
+    "confidence": "high",
+    "outcome_type": "output"
+   }
+  ],
+  "runner_up": "Y8.1",
+  "codebook_issue": "",
+  "rationale": "Program-level attendance rate is a dosage/participation output."
+ },
+ {
+  "sid": "H005",
+  "outcomes": [
+   {
+    "text": "tutors completed 40 hours of training and began weekly sessions",
+    "code": "A2.2",
+    "confidence": "high",
+    "outcome_type": "output"
+   }
+  ],
+  "runner_up": "A1.1",
+  "codebook_issue": "",
+  "rationale": "Training hours and sessions started are program dosage, not a change in people."
+ },
+ {
+  "sid": "H044",
+  "outcomes": [
+   {
+    "text": "participants secured stable housing",
+    "code": "F2.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   },
+   {
+    "text": "enrolled in school or employment within 30 days of release",
+    "code": "Y9.5",
+    "confidence": "medium",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y12.4",
+  "codebook_issue": "",
+  "rationale": "Youth's own housing goes to F2; education-or-employment after exit is Y9.5."
+ },
+ {
+  "sid": "S087",
+  "outcomes": [
+   {
+    "text": "staff increase knowledge of inclusive practices and accommodations",
+    "code": "A1.1",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "A2.4",
+  "codebook_issue": "",
+  "rationale": "Staff gaining knowledge."
+ },
+ {
+  "sid": "S079",
+  "outcomes": [
+   {
+    "text": "youth use calming strategies when upset",
+    "code": "Y3.2",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y3.3",
+  "codebook_issue": "",
+  "rationale": "Calming down in the moment when upset is momentary regulation."
+ },
+ {
+  "sid": "S221",
+  "outcomes": [
+   {
+    "text": "increase use of study strategies such as note-taking and test preparation",
+    "code": "Y6.3",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y6.1",
+  "codebook_issue": "",
+  "rationale": "Matches Y6.3 definition exactly."
+ },
+ {
+  "sid": "H024",
+  "outcomes": [
+   {
+    "text": "graduates employed or enrolled in postsecondary education six months after completion",
+    "code": "Y9.5",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y8.7",
+  "codebook_issue": "",
+  "rationale": "Y9.5 names education or employment after exit."
+ },
+ {
+  "sid": "S180",
+  "outcomes": [
+   {
+    "text": "demonstrate good sportsmanship",
+    "code": "Y5.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y3.15",
+  "codebook_issue": "",
+  "rationale": "Sportsmanship is named in Y5.1."
+ },
+ {
+  "sid": "H003",
+  "outcomes": [
+   {
+    "text": "improved homework completion habits",
+    "code": "Y6.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y3.5",
+  "codebook_issue": "",
+  "rationale": "Homework is academic engagement behavior; regular attendance is the means."
+ },
+ {
+  "sid": "S037",
+  "outcomes": [
+   {
+    "text": "maintain own apartment lease for 12 months",
+    "code": "F2.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y9.7",
+  "codebook_issue": "",
+  "rationale": "Independent leases named in F2.3; youth's own housing goes to F2."
+ },
+ {
+  "sid": "S042",
+  "outcomes": [
+   {
+    "text": "increase homework completion rate",
+    "code": "Y6.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y8.3",
+  "codebook_issue": "",
+  "rationale": "Homework completion is academic engagement behavior."
+ },
+ {
+  "sid": "S178",
+  "outcomes": [
+   {
+    "text": "persist into second year of college",
+    "code": "Y8.7",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "College persistence named in Y8.7."
+ },
+ {
+  "sid": "H020",
+  "outcomes": [
+   {
+    "text": "enrolled in a two- or four-year college the fall after graduation",
+    "code": "Y8.7",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "College enrollment matches Y8.7 example."
+ },
+ {
+  "sid": "S242",
+  "outcomes": [
+   {
+    "text": "practice gratitude by writing thank-you notes",
+    "code": "Y3.6",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y5.1",
+  "codebook_issue": "",
+  "rationale": "Expressing gratitude is in Y3.6; notes are the means."
+ },
+ {
+  "sid": "S113",
+  "outcomes": [
+   {
+    "text": "provide accommodations so all youth can participate",
+    "code": "A2.4",
+    "confidence": "high",
+    "outcome_type": "output"
+   }
+  ],
+  "runner_up": "A2.3",
+  "codebook_issue": "",
+  "rationale": "Removing barriers so all youth can take part."
+ },
+ {
+  "sid": "S039",
+  "outcomes": [
+   {
+    "text": "youth council members co-design program activities with staff",
+    "code": "Y5.3",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y4.6",
+  "codebook_issue": "",
+  "rationale": "Youth councils and co-design named in Y5.3."
+ },
+ {
+  "sid": "H067",
+  "outcomes": [
+   {
+    "text": "families increased household income",
+    "code": "F2.1",
+    "confidence": "high",
+    "outcome_type": "status"
+   },
+   {
+    "text": "parents completed occupational skills training",
+    "code": "F1.5",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "F1.5",
+  "codebook_issue": "'While' clause resembles the no-split means example, but caregiver training completion is itself an F1.5 result.",
+  "rationale": "Household income F2.1; caregiver training F1.5."
+ },
+ {
+  "sid": "S135",
+  "outcomes": [
+   {
+    "text": "parents report increased confidence in parenting skills",
+    "code": "F1.1",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "F1.2",
+  "codebook_issue": "",
+  "rationale": "Parenting self-efficacy is in F1.1."
+ },
+ {
+  "sid": "S147",
+  "outcomes": [
+   {
+    "text": "score proficient on state science assessment",
+    "code": "Y7.4",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "Y8.3",
+  "codebook_issue": "",
+  "rationale": "Demonstrated science proficiency is Y7.4."
+ },
+ {
+  "sid": "S146",
+  "outcomes": [
+   {
+    "text": "mentors increased confidence supporting youth from different cultural backgrounds",
+    "code": "A1.1",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "A1.2",
+  "codebook_issue": "No A1 code names staff confidence/self-efficacy; A1.1 covers only knowledge and skills.",
+  "rationale": "Adult capacity; closest is A1.1."
+ },
+ {
+  "sid": "H086",
+  "outcomes": [
+   {
+    "text": "reduced recreational screen time to under 2 hours per day",
+    "code": "Y10.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y10.4",
+  "codebook_issue": "",
+  "rationale": "Less sedentary time is named in Y10.1."
+ },
+ {
+  "sid": "S128",
+  "outcomes": [
+   {
+    "text": "ask questions and show curiosity during science demonstrations",
+    "code": "Y1.2",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y6.1",
+  "codebook_issue": "",
+  "rationale": "Matches Y1.2 definition and example."
+ },
+ {
+  "sid": "H019",
+  "outcomes": [
+   {
+    "text": "seniors submitted the FAFSA",
+    "code": "Y9.2",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   },
+   {
+    "text": "submitted at least one college application",
+    "code": "Y9.2",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y8.7",
+  "codebook_issue": "",
+  "rationale": "FAFSA and applications both named in Y9.2."
+ },
+ {
+  "sid": "S065",
+  "outcomes": [
+   {
+    "text": "lower intentions to vape",
+    "code": "Y12.2",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y3.16",
+  "codebook_issue": "",
+  "rationale": "Substance use intentions named in Y12.2."
+ },
+ {
+  "sid": "S164",
+  "outcomes": [
+   {
+    "text": "parents serve on family advisory council",
+    "code": "F3.2",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y5.3",
+  "codebook_issue": "",
+  "rationale": "Family taking part in program decisions."
+ },
+ {
+  "sid": "S172",
+  "outcomes": [
+   {
+    "text": "develop skills to resist peer pressure and avoid risky behaviors",
+    "code": "Y3.16",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y12.2",
+  "codebook_issue": "",
+  "rationale": "Refusal skill goes to Y3.16 per tie-breaker."
+ },
+ {
+  "sid": "S179",
+  "outcomes": [
+   {
+    "text": "improved frustration tolerance during homework time",
+    "code": "Y3.2",
+    "confidence": "high",
+    "outcome_type": "skill"
+   },
+   {
+    "text": "more assignments completed on time",
+    "code": "Y6.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y6.2",
+  "codebook_issue": "",
+  "rationale": "Frustration tolerance is Y3.2; assignment completion is Y6.1."
+ },
+ {
+  "sid": "S007",
+  "outcomes": [
+   {
+    "text": "increased willingness to seek help when struggling emotionally",
+    "code": "Y3.12",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y11.4",
+  "codebook_issue": "",
+  "rationale": "Asking for help is Y3.12."
+ },
+ {
+  "sid": "S097",
+  "outcomes": [
+   {
+    "text": "identify careers in environmental science and conservation",
+    "code": "Y9.1",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "Y5.6",
+  "codebook_issue": "",
+  "rationale": "Learning about careers."
+ },
+ {
+  "sid": "S205",
+  "outcomes": [
+   {
+    "text": "get at least eight hours of sleep on school nights",
+    "code": "Y10.4",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y10.1",
+  "codebook_issue": "",
+  "rationale": "Sleep named in Y10.4."
+ },
+ {
+  "sid": "S234",
+  "outcomes": [
+   {
+    "text": "feel excited and happy to attend program each day",
+    "code": "Y1.1",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y2.1",
+  "codebook_issue": "",
+  "rationale": "Excitement and happiness about program is Y1.1."
+ },
+ {
+  "sid": "S025",
+  "outcomes": [
+   {
+    "text": "age-appropriate pre-literacy skills",
+    "code": "Y7.8",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y7.1",
+  "codebook_issue": "",
+  "rationale": "Pre-K literacy is Y7.8."
+ },
+ {
+  "sid": "S014",
+  "outcomes": [
+   {
+    "text": "complete college-level coursework in high school",
+    "code": "Y8.6",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y8.3",
+  "codebook_issue": "",
+  "rationale": "Earning college credit in high school is Y8.6."
+ },
+ {
+  "sid": "H047",
+  "outcomes": [
+   {
+    "text": "at least one permanent, supportive adult connection",
+    "code": "Y2.2",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y2.5",
+  "codebook_issue": "",
+  "rationale": "One supportive adult relationship is Y2.2."
+ },
+ {
+  "sid": "H069",
+  "outcomes": [
+   {
+    "text": "caregivers connected to community resources or public benefits",
+    "code": "F2.1",
+    "confidence": "medium",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "F1.6",
+  "codebook_issue": "Resource/concrete-support connection has no clear home; splits between F1.6 (where to turn) and F2.1 (benefits).",
+  "rationale": "Public benefits in F2.1; resources partially F1.6."
+ },
+ {
+  "sid": "S191",
+  "outcomes": [
+   {
+    "text": "enroll in health insurance through Medicaid",
+    "code": "Y10.7",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "F2.1",
+  "codebook_issue": "",
+  "rationale": "Insurance named in Y10.7."
+ },
+ {
+  "sid": "S084",
+  "outcomes": [
+   {
+    "text": "complete a bachelor's degree within six years",
+    "code": "Y8.7",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Degree completion named in Y8.7."
+ },
+ {
+  "sid": "S223",
+  "outcomes": [
+   {
+    "text": "stand up for classmates treated unfairly",
+    "code": "Y5.5",
+    "confidence": "medium",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y3.15",
+  "codebook_issue": "Y5.5 (standing up against injustice) and Y3.15 (reporting bullying) both fit; no tie-breaker.",
+  "rationale": "Standing up against unfairness named in Y5.5."
+ },
+ {
+  "sid": "S254",
+  "outcomes": [
+   {
+    "text": "explain how a bill becomes a law",
+    "code": "Y5.2",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "Y7.5",
+  "codebook_issue": "",
+  "rationale": "Civic systems knowledge."
+ },
+ {
+  "sid": "H043",
+  "outcomes": [
+   {
+    "text": "no new adjudications within 12 months of release",
+    "code": "Y12.4",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Recidivism/adjudication named in Y12.4."
+ },
+ {
+  "sid": "S196",
+  "outcomes": [
+   {
+    "text": "families receive a laptop and home internet access",
+    "code": "A2.3",
+    "confidence": "medium",
+    "outcome_type": "output"
+   }
+  ],
+  "runner_up": "F1.5",
+  "codebook_issue": "Who-changed rule sends households to Part F, but only A2.3 names technology/connectivity access.",
+  "rationale": "Providing technology and connectivity is A2.3."
+ },
+ {
+  "sid": "S029",
+  "outcomes": [
+   {
+    "text": "secure stable housing by age 21",
+    "code": "F2.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Youth's own housing goes to F2.3."
+ },
+ {
+  "sid": "H030",
+  "outcomes": [
+   {
+    "text": "increased sense they can influence community decisions",
+    "code": "Y5.3",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y4.3",
+  "codebook_issue": "Civic efficacy (belief) not named; Y5.3 defined as acting to influence decisions.",
+  "rationale": "Influencing collective decisions per Y4.6 vs Y5.3 tie-breaker."
+ },
+ {
+  "sid": "H071",
+  "outcomes": [
+   {
+    "text": "pantry distributed 50,000 pounds of food to 1,200 households",
+    "code": "A2.2",
+    "confidence": "high",
+    "outcome_type": "output"
+   }
+  ],
+  "runner_up": "F2.2",
+  "codebook_issue": "",
+  "rationale": "Program-level counts go to A2.2."
+ },
+ {
+  "sid": "S071",
+  "outcomes": [
+   {
+    "text": "higher life satisfaction and sense of flourishing",
+    "code": "Y11.2",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Matches Y11.2 definition."
+ },
+ {
+  "sid": "S137",
+  "outcomes": [
+   {
+    "text": "report enjoying program activities",
+    "code": "Y1.1",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "A2.5",
+  "codebook_issue": "",
+  "rationale": "Enjoyment of program is Y1.1."
+ },
+ {
+  "sid": "H014",
+  "outcomes": [
+   {
+    "text": "coaches learned to lead a new conflict-resolution curriculum",
+    "code": "A1.1",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "A1.2",
+  "codebook_issue": "",
+  "rationale": "Adults gaining skills."
+ },
+ {
+  "sid": "S140",
+  "outcomes": [
+   {
+    "text": "use art as a healthy outlet for processing emotions",
+    "code": "Y3.3",
+    "confidence": "medium",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y3.2",
+  "codebook_issue": "",
+  "rationale": "Art used as a coping strategy; closest is Y3.3."
+ },
+ {
+  "sid": "S166",
+  "outcomes": [
+   {
+    "text": "complete a registered apprenticeship program",
+    "code": "Y9.4",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Apprenticeships named in Y9.4."
+ },
+ {
+  "sid": "S083",
+  "outcomes": [
+   {
+    "text": "volunteers greater understanding of food insecurity in community",
+    "code": "A1.1",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "A3.3",
+  "codebook_issue": "",
+  "rationale": "Volunteers gaining knowledge."
+ },
+ {
+  "sid": "H042",
+  "outcomes": [
+   {
+    "text": "feel safer walking to and from school",
+    "code": "Y12.1",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y2.1",
+  "codebook_issue": "",
+  "rationale": "General neighborhood felt safety goes to Y12.1."
+ },
+ {
+  "sid": "S138",
+  "outcomes": [
+   {
+    "text": "increased understanding of workplace culture and expectations",
+    "code": "Y9.3",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "Y3.8",
+  "codebook_issue": "",
+  "rationale": "Work-framed norms go to Y9.3 per tie-breaker."
+ },
+ {
+  "sid": "H055",
+  "outcomes": [
+   {
+    "text": "decrease in feelings of isolation",
+    "code": "Y2.1",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y11.1",
+  "codebook_issue": "Loneliness/isolation is not named in any definition; Y2.1 and Y11.1 both plausible.",
+  "rationale": "Isolation is the inverse of belonging."
+ },
+ {
+  "sid": "H072",
+  "outcomes": [
+   {
+    "text": "families increased weekly consumption of fresh fruits and vegetables",
+    "code": "F2.2",
+    "confidence": "medium",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y10.3",
+  "codebook_issue": "Household eating behavior has no F code; F2.2 covers access, Y10.3 is youth-only.",
+  "rationale": "Family-level healthy food; closest F2.2."
+ },
+ {
+  "sid": "S092",
+  "outcomes": [
+   {
+    "text": "deposit at least 25% of each paycheck into savings",
+    "code": "Y9.6",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "F2.1",
+  "codebook_issue": "",
+  "rationale": "Youth's own saving is Y9.6."
+ },
+ {
+  "sid": "S121",
+  "outcomes": [
+   {
+    "text": "increase daily consumption of fruits and vegetables",
+    "code": "Y10.3",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Eating behavior is Y10.3."
+ },
+ {
+  "sid": "S068",
+  "outcomes": [
+   {
+    "text": "develop fundamental movement skills",
+    "code": "Y10.2",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y10.1",
+  "codebook_issue": "",
+  "rationale": "Fundamental movement named in Y10.2."
+ },
+ {
+  "sid": "S190",
+  "outcomes": [
+   {
+    "text": "enroll in a two- or four-year college",
+    "code": "Y8.7",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Matches Y8.7 example."
+ },
+ {
+  "sid": "S032",
+  "outcomes": [
+   {
+    "text": "lead their own IEP meetings",
+    "code": "Y4.6",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y5.3",
+  "codebook_issue": "",
+  "rationale": "Directing one's own supports is Y4.6."
+ },
+ {
+  "sid": "H010",
+  "outcomes": [
+   {
+    "text": "improved technical skill on instrument",
+    "code": "Y7.6",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y4.7",
+  "codebook_issue": "",
+  "rationale": "Technical skill in art form is Y7.6."
+ },
+ {
+  "sid": "S159",
+  "outcomes": [
+   {
+    "text": "enroll in an advanced STEM course",
+    "code": "Y8.6",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y1.3",
+  "codebook_issue": "",
+  "rationale": "Taking advanced courses is Y8.6."
+ },
+ {
+  "sid": "S125",
+  "outcomes": [
+   {
+    "text": "grow in their faith",
+    "code": "Y4.5",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   },
+   {
+    "text": "live out their values",
+    "code": "Y5.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y5.1",
+  "codebook_issue": "",
+  "rationale": "Faith growth to spiritual purpose Y4.5; values to Y5.1."
+ },
+ {
+  "sid": "S089",
+  "outcomes": [
+   {
+    "text": "create and follow a monthly personal budget",
+    "code": "Y9.6",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y9.7",
+  "codebook_issue": "",
+  "rationale": "Budgeting is Y9.6."
+ },
+ {
+  "sid": "H037",
+  "outcomes": [
+   {
+    "text": "delaying age of first alcohol use",
+    "code": "Y12.2",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y3.16",
+  "codebook_issue": "",
+  "rationale": "Alcohol use named in Y12.2."
+ },
+ {
+  "sid": "H065",
+  "outcomes": [
+   {
+    "text": "home visitors conducted monthly visits",
+    "code": "A2.2",
+    "confidence": "high",
+    "outcome_type": "output"
+   },
+   {
+    "text": "caregivers increased confidence supporting early literacy at home",
+    "code": "F1.4",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "Second outcome: F1.1 (parenting self-efficacy) and F1.4 (home learning) both fit; no tie-breaker.",
+  "rationale": "Visits are dosage; home literacy support to F1.4."
+ },
+ {
+  "sid": "S145",
+  "outcomes": [
+   {
+    "text": "develop personal moral values grounded in faith",
+    "code": "Y5.1",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y4.5",
+  "codebook_issue": "",
+  "rationale": "Faith-grounded values named in Y5.1."
+ },
+ {
+  "sid": "S133",
+  "outcomes": [
+   {
+    "text": "use step-by-step problem-solving process",
+    "code": "Y3.14",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Identifying problem to acting is Y3.14."
+ },
+ {
+  "sid": "S225",
+  "outcomes": [
+   {
+    "text": "exit shelter to safe and stable housing",
+    "code": "F2.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Youth shelter exits named in F2.3."
+ },
+ {
+  "sid": "S218",
+  "outcomes": [
+   {
+    "text": "secure a job within 90 days of release",
+    "code": "Y9.5",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y12.4",
+  "codebook_issue": "",
+  "rationale": "Getting a job is Y9.5."
+ },
+ {
+  "sid": "H049",
+  "outcomes": [
+   {
+    "text": "exited shelter into safe and stable housing",
+    "code": "F2.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Youth shelter exits named in F2.3."
+ },
+ {
+  "sid": "S109",
+  "outcomes": [
+   {
+    "text": "maintain passing grades",
+    "code": "Y8.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y1.5",
+  "codebook_issue": "",
+  "rationale": "Passing grades named in Y8.3; eligibility is context."
+ },
+ {
+  "sid": "S060",
+  "outcomes": [
+   {
+    "text": "earn an average of $2,400 in wages",
+    "code": "Y9.5",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "F2.1",
+  "codebook_issue": "",
+  "rationale": "Wages named in Y9.5."
+ },
+ {
+  "sid": "S057",
+  "outcomes": [
+   {
+    "text": "See logic model above.",
+    "code": "none",
+    "confidence": "none",
+    "outcome_type": "none"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Fragment/reference, not an outcome."
+ },
+ {
+  "sid": "H075",
+  "outcomes": [
+   {
+    "text": "case managers helped clients submit housing voucher applications",
+    "code": "A2.2",
+    "confidence": "medium",
+    "outcome_type": "output"
+   }
+  ],
+  "runner_up": "F2.3",
+  "codebook_issue": "Staff-delivered service activity (not a count) has no clear home; A2.2, F1.6, F2.3 all partial.",
+  "rationale": "Program service delivery, reported as activity."
+ },
+ {
+  "sid": "S086",
+  "outcomes": [
+   {
+    "text": "set and work toward a personal goal",
+    "code": "Y3.4",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y2.2",
+  "codebook_issue": "",
+  "rationale": "Goal-setting; mentor is the means."
+ },
+ {
+  "sid": "S050",
+  "outcomes": [
+   {
+    "text": "calculate percentages and interest in math class",
+    "code": "Y7.3",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y9.6",
+  "codebook_issue": "",
+  "rationale": "Money-context math goes to Y7.3 per tie-breaker."
+ },
+ {
+  "sid": "H040",
+  "outcomes": [
+   {
+    "text": "improved conflict de-escalation skills",
+    "code": "Y3.11",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y3.2",
+  "codebook_issue": "",
+  "rationale": "Resolving conflict constructively."
+ },
+ {
+  "sid": "S104",
+  "outcomes": [
+   {
+    "text": "apply engineering design process to build and test a prototype",
+    "code": "Y7.4",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Engineering design named in Y7.4."
+ },
+ {
+  "sid": "S186",
+  "outcomes": [
+   {
+    "text": "build friendships with disabled and non-disabled peers",
+    "code": "Y2.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y3.7",
+  "codebook_issue": "",
+  "rationale": "Friendship outcome is Y2.3."
+ },
+ {
+  "sid": "S015",
+  "outcomes": [
+   {
+    "text": "perceive greater risk of harm from marijuana",
+    "code": "Y12.2",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Perceived risk named in Y12.2."
+ },
+ {
+  "sid": "S181",
+  "outcomes": [
+   {
+    "text": "parents feel more connected to child's school community",
+    "code": "F3.1",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "F1.3",
+  "codebook_issue": "",
+  "rationale": "Family relationship with school is F3.1."
+ },
+ {
+  "sid": "S192",
+  "outcomes": [
+   {
+    "text": "fine motor skills such as holding a pencil and using scissors",
+    "code": "Y10.2",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y7.8",
+  "codebook_issue": "",
+  "rationale": "Fine motor named in Y10.2."
+ },
+ {
+  "sid": "S200",
+  "outcomes": [
+   {
+    "text": "reduce nights on the street or in unsafe locations",
+    "code": "F2.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y12.1",
+  "codebook_issue": "",
+  "rationale": "Youth's own safe living situation is F2.3."
+ },
+ {
+  "sid": "S233",
+  "outcomes": [
+   {
+    "text": "reduce chronic absenteeism",
+    "code": "Y8.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Chronic absence named in Y8.1."
+ },
+ {
+  "sid": "S103",
+  "outcomes": [
+   {
+    "text": "improved self-regulation",
+    "code": "Y3.2",
+    "confidence": "high",
+    "outcome_type": "skill"
+   },
+   {
+    "text": "ability to follow classroom routines",
+    "code": "Y3.8",
+    "confidence": "medium",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y3.5",
+  "codebook_issue": "",
+  "rationale": "Self-regulation to Y3.2; setting expectations to Y3.8."
+ },
+ {
+  "sid": "S075",
+  "outcomes": [
+   {
+    "text": "achieve accreditation",
+    "code": "A2.1",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Accreditation named in A2.1."
+ },
+ {
+  "sid": "H059",
+  "outcomes": [
+   {
+    "text": "parents increased knowledge of child's rights under IDEA",
+    "code": "F1.6",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Families knowing rights is F1.6."
+ },
+ {
+  "sid": "S184",
+  "outcomes": [
+   {
+    "text": "complete 20 hours of community service",
+    "code": "Y5.4",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "A2.2",
+  "codebook_issue": "",
+  "rationale": "Organized service; cleanups/drives are means."
+ },
+ {
+  "sid": "S169",
+  "outcomes": [
+   {
+    "text": "collaborate with peers on group theater production",
+    "code": "Y3.10",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y7.6",
+  "codebook_issue": "",
+  "rationale": "Collaboration skill is Y3.10."
+ },
+ {
+  "sid": "S248",
+  "outcomes": [
+   {
+    "text": "identify warning signs of dating violence",
+    "code": "Y12.3",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "Y10.6",
+  "codebook_issue": "",
+  "rationale": "Violence focus goes to Y12.3 per tie-breaker."
+ },
+ {
+  "sid": "S002",
+  "outcomes": [
+   {
+    "text": "name three methods of preventing STIs",
+    "code": "Y10.6",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "Y10.5",
+  "codebook_issue": "",
+  "rationale": "STI prevention named in Y10.6."
+ },
+ {
+  "sid": "S074",
+  "outcomes": [
+   {
+    "text": "improve dribbling, passing, and shooting skills",
+    "code": "Y10.2",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Sport-specific skills."
+ },
+ {
+  "sid": "S202",
+  "outcomes": [
+   {
+    "text": "increased confidence in academic abilities",
+    "code": "Y6.4",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y4.3",
+  "codebook_issue": "",
+  "rationale": "Academic confidence goes to Y6.4 per tie-breaker."
+ },
+ {
+  "sid": "H080",
+  "outcomes": [
+   {
+    "text": "attended weekly youth group",
+    "code": "Y1.5",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   },
+   {
+    "text": "volunteered at least once in the community",
+    "code": "Y5.4",
+    "confidence": "medium",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "A2.2",
+  "codebook_issue": "",
+  "rationale": "Faith group participation is Y1.5; volunteering is service."
+ },
+ {
+  "sid": "S207",
+  "outcomes": [
+   {
+    "text": "reduce screen time",
+    "code": "Y10.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   },
+   {
+    "text": "increase physical activity outside program hours",
+    "code": "Y10.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y10.4",
+  "codebook_issue": "",
+  "rationale": "Less sedentary time and physical activity both Y10.1."
+ },
+ {
+  "sid": "S111",
+  "outcomes": [
+   {
+    "text": "ask questions in class and participate in discussions",
+    "code": "Y6.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y1.2",
+  "codebook_issue": "",
+  "rationale": "Class participation named in Y6.1."
+ },
+ {
+  "sid": "H036",
+  "outcomes": [
+   {
+    "text": "healthier coping strategies for managing stress",
+    "code": "Y3.3",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y11.1",
+  "codebook_issue": "",
+  "rationale": "Matches Y3.3."
+ },
+ {
+  "sid": "S088",
+  "outcomes": [
+   {
+    "text": "avoid a new adjudication while on probation",
+    "code": "Y12.4",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Adjudication named in Y12.4."
+ },
+ {
+  "sid": "S236",
+  "outcomes": [
+   {
+    "text": "develop self-advocacy skills to communicate needs and accommodations",
+    "code": "Y4.6",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y3.9",
+  "codebook_issue": "",
+  "rationale": "Self-advocacy named in Y4.6."
+ },
+ {
+  "sid": "S182",
+  "outcomes": [
+   {
+    "text": "register to vote",
+    "code": "Y5.3",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   },
+   {
+    "text": "participate in local elections",
+    "code": "Y5.3",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y5.2",
+  "codebook_issue": "",
+  "rationale": "Voting named in Y5.3."
+ },
+ {
+  "sid": "H045",
+  "outcomes": [
+   {
+    "text": "improved ability to set and work toward personal goals",
+    "code": "Y3.4",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y4.6",
+  "codebook_issue": "",
+  "rationale": "Goal-setting."
+ },
+ {
+  "sid": "S017",
+  "outcomes": [
+   {
+    "text": "newcomer families understand rights regarding school enrollment",
+    "code": "F1.6",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "F3.3",
+  "codebook_issue": "",
+  "rationale": "Families knowing their rights."
+ },
+ {
+  "sid": "S091",
+  "outcomes": [
+   {
+    "text": "N/A",
+    "code": "none",
+    "confidence": "none",
+    "outcome_type": "none"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Not an outcome."
+ },
+ {
+  "sid": "S105",
+  "outcomes": [
+   {
+    "text": "track spending and identify one change to habits",
+    "code": "Y9.6",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Youth money habits are Y9.6."
+ },
+ {
+  "sid": "S107",
+  "outcomes": [
+   {
+    "text": "learn to protect personal information online",
+    "code": "Y5.7",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "Y7.9",
+  "codebook_issue": "",
+  "rationale": "Online safety is Y5.7."
+ },
+ {
+  "sid": "S231",
+  "outcomes": [
+   {
+    "text": "reduced caregiver stress and burnout",
+    "code": "F1.2",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Caregiver stress named in F1.2."
+ },
+ {
+  "sid": "H015",
+  "outcomes": [
+   {
+    "text": "improved sportsmanship",
+    "code": "Y5.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   },
+   {
+    "text": "improved teamwork during games",
+    "code": "Y3.10",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y3.15",
+  "codebook_issue": "",
+  "rationale": "Sportsmanship Y5.1; teamwork Y3.10."
+ },
+ {
+  "sid": "H076",
+  "outcomes": [
+   {
+    "text": "households received laptop and broadband subsidy",
+    "code": "A2.3",
+    "confidence": "medium",
+    "outcome_type": "output"
+   },
+   {
+    "text": "increased ability to complete tasks online",
+    "code": "F1.5",
+    "confidence": "medium",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "F2.1",
+  "codebook_issue": "Household technology receipt: who-changed rule points to Part F but only A2.3 names it.",
+  "rationale": "Technology provision A2.3; household digital literacy F1.5."
+ },
+ {
+  "sid": "S237",
+  "outcomes": [
+   {
+    "text": "develop coping strategies for managing stress",
+    "code": "Y3.3",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Matches Y3.3."
+ },
+ {
+  "sid": "S058",
+  "outcomes": [
+   {
+    "text": "compose an original song",
+    "code": "Y7.6",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Creating art is Y7.6."
+ },
+ {
+  "sid": "S112",
+  "outcomes": [
+   {
+    "text": "reduce social isolation",
+    "code": "Y2.1",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   },
+   {
+    "text": "build friendships with peers with similar experiences",
+    "code": "Y2.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y2.3",
+  "codebook_issue": "",
+  "rationale": "Isolation to belonging; friendships to Y2.3."
+ },
+ {
+  "sid": "S119",
+  "outcomes": [
+   {
+    "text": "parents read with child at home three nights per week",
+    "code": "F1.4",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "F1.1",
+  "codebook_issue": "",
+  "rationale": "Reading at home named in F1.4."
+ },
+ {
+  "sid": "S194",
+  "outcomes": [
+   {
+    "text": "make at least two friends in the program",
+    "code": "Y2.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y2.1",
+  "codebook_issue": "",
+  "rationale": "Friendship result is Y2.3."
+ },
+ {
+  "sid": "S183",
+  "outcomes": [
+   {
+    "text": "mentors complete 6 hours of pre-match training",
+    "code": "A2.2",
+    "confidence": "high",
+    "outcome_type": "output"
+   }
+  ],
+  "runner_up": "A1.1",
+  "codebook_issue": "",
+  "rationale": "Training hours named in A2.2."
+ },
+ {
+  "sid": "S177",
+  "outcomes": [
+   {
+    "text": "build new friendships with peers from different schools and grades",
+    "code": "Y2.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y3.7",
+  "codebook_issue": "",
+  "rationale": "Friendship result is Y2.3."
+ },
+ {
+  "sid": "S094",
+  "outcomes": [
+   {
+    "text": "students with asthma reduce ER visits",
+    "code": "Y10.7",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y10.5",
+  "codebook_issue": "",
+  "rationale": "Chronic condition management; self-management is the means."
+ },
+ {
+  "sid": "S130",
+  "outcomes": [
+   {
+    "text": "Participants will show growth in the following areas:",
+    "code": "none",
+    "confidence": "none",
+    "outcome_type": "none"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Header."
+ },
+ {
+  "sid": "S167",
+  "outcomes": [
+   {
+    "text": "practice forgiveness with family and friends",
+    "code": "Y5.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y2.4",
+  "codebook_issue": "",
+  "rationale": "Forgiveness named in Y5.1."
+ },
+ {
+  "sid": "S170",
+  "outcomes": [
+   {
+    "text": "improved emotional regulation",
+    "code": "Y3.2",
+    "confidence": "high",
+    "outcome_type": "skill"
+   },
+   {
+    "text": "reduced disciplinary referrals",
+    "code": "Y8.4",
+    "confidence": "high",
+    "outcome_type": "status"
+   },
+   {
+    "text": "better peer relationships",
+    "code": "Y2.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y3.3",
+  "codebook_issue": "",
+  "rationale": "Three distinct results."
+ },
+ {
+  "sid": "S082",
+  "outcomes": [
+   {
+    "text": "express gratitude toward family and mentors",
+    "code": "Y3.6",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y2.4",
+  "codebook_issue": "",
+  "rationale": "Gratitude named in Y3.6."
+ },
+ {
+  "sid": "S077",
+  "outcomes": [
+   {
+    "text": "present artwork in a public exhibition",
+    "code": "Y7.6",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   },
+   {
+    "text": "building pride and confidence",
+    "code": "Y4.3",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y3.9",
+  "codebook_issue": "",
+  "rationale": "Presenting art is Y7.6; confidence to Y4.3."
+ },
+ {
+  "sid": "S217",
+  "outcomes": [
+   {
+    "text": "Improve outcomes for students.",
+    "code": "none",
+    "confidence": "none",
+    "outcome_type": "none"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Too vague; codebook example."
+ },
+ {
+  "sid": "S129",
+  "outcomes": [
+   {
+    "text": "greater self-acceptance of sexual orientation and gender identity",
+    "code": "Y4.2",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y4.4",
+  "codebook_issue": "",
+  "rationale": "Identity acceptance named in Y4.2."
+ },
+ {
+  "sid": "S189",
+  "outcomes": [
+   {
+    "text": "complete probation requirements and court-ordered conditions",
+    "code": "Y12.4",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Completing probation named in Y12.4."
+ },
+ {
+  "sid": "S090",
+  "outcomes": [
+   {
+    "text": "connect a historical artwork to own cultural experience",
+    "code": "Y7.6",
+    "confidence": "medium",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y4.2",
+  "codebook_issue": "",
+  "rationale": "Responding to art is an NCAS process."
+ },
+ {
+  "sid": "S141",
+  "outcomes": [
+   {
+    "text": "fewer experiences of harassment at school",
+    "code": "Y12.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y2.1",
+  "codebook_issue": "",
+  "rationale": "Harassment victimization is Y12.3."
+ },
+ {
+  "sid": "S216",
+  "outcomes": [
+   {
+    "text": "believe they can pass algebra class",
+    "code": "Y6.4",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y4.3",
+  "codebook_issue": "",
+  "rationale": "Academic self-efficacy."
+ },
+ {
+  "sid": "S122",
+  "outcomes": [
+   {
+    "text": "name three trusted adults or resources for mental health crisis",
+    "code": "Y3.12",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "Y11.4",
+  "codebook_issue": "",
+  "rationale": "Knowing where support is."
+ },
+ {
+  "sid": "H029",
+  "outcomes": [
+   {
+    "text": "increased knowledge of voter registration process",
+    "code": "Y5.2",
+    "confidence": "medium",
+    "outcome_type": "knowledge"
+   },
+   {
+    "text": "registered eligible peers",
+    "code": "Y5.3",
+    "confidence": "medium",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y5.3",
+  "codebook_issue": "",
+  "rationale": "Civic process knowledge; peer registration is civic participation."
+ },
+ {
+  "sid": "H026",
+  "outcomes": [
+   {
+    "text": "increased knowledge of budgeting, credit, and saving",
+    "code": "Y9.6",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Financial knowledge named in Y9.6."
+ },
+ {
+  "sid": "S199",
+  "outcomes": [
+   {
+    "text": "technical proficiency on instrument",
+    "code": "Y7.6",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Technical skill in art form."
+ },
+ {
+  "sid": "S214",
+  "outcomes": [
+   {
+    "text": "continue pursuing robotics after program by joining a school team",
+    "code": "Y1.3",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y1.5",
+  "codebook_issue": "",
+  "rationale": "Continuing a pursuit beyond the program."
+ },
+ {
+  "sid": "S116",
+  "outcomes": [
+   {
+    "text": "feel like someone believes in them",
+    "code": "Y2.2",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y2.1",
+  "codebook_issue": "",
+  "rationale": "Mentoring context; supportive adult relationship quality."
+ },
+ {
+  "sid": "H033",
+  "outcomes": [
+   {
+    "text": "increased comfort and confidence spending time outdoors",
+    "code": "Y4.3",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y5.6",
+  "codebook_issue": "Domain-specific non-academic confidence has no home; Y4.3 is general, Y5.6 connection to nature partial.",
+  "rationale": "Confidence best fits Y4.3."
+ },
+ {
+  "sid": "S093",
+  "outcomes": [
+   {
+    "text": "improve physical fitness and cardiovascular endurance",
+    "code": "Y10.1",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Fitness named in Y10.1."
+ },
+ {
+  "sid": "S208",
+  "outcomes": [
+   {
+    "text": "improve math problem-solving skills and grade-level proficiency",
+    "code": "Y7.3",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y3.14",
+  "codebook_issue": "",
+  "rationale": "Math proficiency."
+ },
+ {
+  "sid": "S246",
+  "outcomes": [
+   {
+    "text": "report that mentor cares about them",
+    "code": "Y2.2",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y2.1",
+  "codebook_issue": "",
+  "rationale": "Caring mentor relationship."
+ },
+ {
+  "sid": "S136",
+  "outcomes": [
+   {
+    "text": "present testimony to city council",
+    "code": "Y5.3",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y3.9",
+  "codebook_issue": "",
+  "rationale": "Testimony named in Y5.3."
+ },
+ {
+  "sid": "S201",
+  "outcomes": [
+   {
+    "text": "receive a positive supervisor evaluation",
+    "code": "Y9.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y9.5",
+  "codebook_issue": "",
+  "rationale": "Job performance named in Y9.3."
+ },
+ {
+  "sid": "H074",
+  "outcomes": [
+   {
+    "text": "reduce rent burden below 30% of income",
+    "code": "F2.3",
+    "confidence": "medium",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "F2.1",
+  "codebook_issue": "Rent burden fits both housing stability (F2.3) and financial stability (F2.1); no tie-breaker.",
+  "rationale": "Housing affordability is housing stability."
+ },
+ {
+  "sid": "S255",
+  "outcomes": [
+   {
+    "text": "build confidence in outdoor physical skills",
+    "code": "Y4.3",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y10.2",
+  "codebook_issue": "Skill-specific confidence has no home; Y4.3 is general confidence.",
+  "rationale": "Confidence construct, not skill itself."
+ },
+ {
+  "sid": "S012",
+  "outcomes": [
+   {
+    "text": "demonstrate honesty and integrity",
+    "code": "Y5.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Named in Y5.1."
+ },
+ {
+  "sid": "H034",
+  "outcomes": [
+   {
+    "text": "reduction in anxiety symptoms",
+    "code": "Y11.1",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y11.4",
+  "codebook_issue": "",
+  "rationale": "Reduced symptoms."
+ },
+ {
+  "sid": "S185",
+  "outcomes": [
+   {
+    "text": "increase knowledge of local ecosystems and environmental science",
+    "code": "Y7.4",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "Y5.6",
+  "codebook_issue": "",
+  "rationale": "Ecosystem knowledge goes to Y7.4 per tie-breaker."
+ },
+ {
+  "sid": "S251",
+  "outcomes": [
+   {
+    "text": "delay a second pregnancy for 24 months",
+    "code": "Y10.6",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "F1.1",
+  "codebook_issue": "",
+  "rationale": "Pregnancy prevention named in Y10.6."
+ },
+ {
+  "sid": "S106",
+  "outcomes": [
+   {
+    "text": "families enroll in SNAP and public benefits",
+    "code": "F2.1",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "F2.2",
+  "codebook_issue": "",
+  "rationale": "Public benefits named in F2.1."
+ },
+ {
+  "sid": "H007",
+  "outcomes": [
+   {
+    "text": "increased interest in pursuing a STEM career",
+    "code": "Y1.3",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y4.5",
+  "codebook_issue": "Career interest/aspiration fits Y1.3, Y4.5, and Y9.1 with no tie-breaker.",
+  "rationale": "Lasting interest in a field."
+ },
+ {
+  "sid": "S158",
+  "outcomes": [
+   {
+    "text": "feel more confident trying new challenges",
+    "code": "Y4.3",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y1.2",
+  "codebook_issue": "",
+  "rationale": "General confidence handling challenges."
+ },
+ {
+  "sid": "S005",
+  "outcomes": [
+   {
+    "text": "complete 20 hours of community service",
+    "code": "Y5.4",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "A2.2",
+  "codebook_issue": "",
+  "rationale": "Organized community service."
+ },
+ {
+  "sid": "S053",
+  "outcomes": [
+   {
+    "text": "families increase knowledge of child development milestones",
+    "code": "F1.1",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Child-development knowledge named in F1.1."
+ },
+ {
+  "sid": "S220",
+  "outcomes": [
+   {
+    "text": "show persistence on puzzles and new tasks",
+    "code": "Y6.2",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   },
+   {
+    "text": "show curiosity on puzzles and new tasks",
+    "code": "Y1.2",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y3.5",
+  "codebook_issue": "",
+  "rationale": "Early-childhood tie-breaker: persistence Y6.2, curiosity Y1.2."
+ },
+ {
+  "sid": "S072",
+  "outcomes": [
+   {
+    "text": "believe math ability can grow with effort",
+    "code": "Y6.4",
+    "confidence": "high",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y4.3",
+  "codebook_issue": "",
+  "rationale": "Academic growth mindset goes to Y6.4."
+ },
+ {
+  "sid": "H009",
+  "outcomes": [
+   {
+    "text": "girls' enrollment in advanced STEM electives increased 15%",
+    "code": "Y8.6",
+    "confidence": "medium",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "A2.2",
+  "codebook_issue": "",
+  "rationale": "Advanced coursework taking, reported as a rate."
+ },
+ {
+  "sid": "S253",
+  "outcomes": [
+   {
+    "text": "demonstrate leadership and initiative in the workplace",
+    "code": "Y9.3",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y3.10",
+  "codebook_issue": "",
+  "rationale": "Work-framed skill goes to Y9.3."
+ },
+ {
+  "sid": "S123",
+  "outcomes": [
+   {
+    "text": "articulate how systemic racism affects community",
+    "code": "Y5.5",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   },
+   {
+    "text": "advocate for policy change",
+    "code": "Y5.3",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y5.3",
+  "codebook_issue": "",
+  "rationale": "Critical analysis Y5.5; advocacy Y5.3."
+ },
+ {
+  "sid": "S187",
+  "outcomes": [
+   {
+    "text": "increase knowledge of nutrition",
+    "code": "Y10.3",
+    "confidence": "high",
+    "outcome_type": "knowledge"
+   },
+   {
+    "text": "increase healthy cooking skills",
+    "code": "Y10.3",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y9.7",
+  "codebook_issue": "",
+  "rationale": "Nutrition knowledge and healthy cooking named in Y10.3."
+ },
+ {
+  "sid": "S247",
+  "outcomes": [
+   {
+    "text": "grow and harvest vegetables",
+    "code": "Y7.10",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y5.6",
+  "codebook_issue": "",
+  "rationale": "Gardening named in Y7.10."
+ },
+ {
+  "sid": "S018",
+  "outcomes": [
+   {
+    "text": "complete restorative agreement",
+    "code": "Y12.4",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Restorative agreements named in Y12.4."
+ },
+ {
+  "sid": "H013",
+  "outcomes": [
+   {
+    "text": "increased weekly physical activity",
+    "code": "Y10.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Physical activity."
+ },
+ {
+  "sid": "S134",
+  "outcomes": [
+   {
+    "text": "involved in fewer physical fights",
+    "code": "Y12.3",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "Y8.4",
+  "codebook_issue": "",
+  "rationale": "Fighting named in Y12.3."
+ },
+ {
+  "sid": "S212",
+  "outcomes": [
+   {
+    "text": "students who experienced trauma feel safe at school",
+    "code": "Y2.1",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y12.1",
+  "codebook_issue": "Y12.1 definition includes 'at school', but tie-breaker sends school-specific safety to Y2.1; contradictory.",
+  "rationale": "Tie-breaker: school-specific felt safety to Y2.1."
+ },
+ {
+  "sid": "S126",
+  "outcomes": [
+   {
+    "text": "caregivers build friendships with other parents",
+    "code": "F1.3",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Caregiver social connections."
+ },
+ {
+  "sid": "S153",
+  "outcomes": [
+   {
+    "text": "increased positive parent-child interactions",
+    "code": "F1.1",
+    "confidence": "high",
+    "outcome_type": "behavior"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Parent-child interaction named in F1.1."
+ },
+ {
+  "sid": "S174",
+  "outcomes": [
+   {
+    "text": "improve YPQA scores",
+    "code": "A2.1",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Assessed program quality."
+ },
+ {
+  "sid": "H054",
+  "outcomes": [
+   {
+    "text": "young parents more confident in parenting abilities",
+    "code": "F1.1",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   },
+   {
+    "text": "less isolated from peers",
+    "code": "F1.3",
+    "confidence": "medium",
+    "outcome_type": "attitude"
+   }
+  ],
+  "runner_up": "Y4.3",
+  "codebook_issue": "Teen parents are young people; 'stop at first match' puts them in Part Y, but parenting constructs exist only in F.",
+  "rationale": "Parenting self-efficacy F1.1; peer isolation F1.3."
+ },
+ {
+  "sid": "S228",
+  "outcomes": [
+   {
+    "text": "distribute 200 refurbished laptops",
+    "code": "A2.2",
+    "confidence": "medium",
+    "outcome_type": "output"
+   }
+  ],
+  "runner_up": "A2.3",
+  "codebook_issue": "Program counts of distributed resources fit A2.2 (counts) and A2.3 (providing technology); no tie-breaker.",
+  "rationale": "Program count per never-uncoded rule."
+ },
+ {
+  "sid": "S062",
+  "outcomes": [
+   {
+    "text": "reduced food insecurity",
+    "code": "F2.2",
+    "confidence": "high",
+    "outcome_type": "status"
+   },
+   {
+    "text": "increased access to healthy food",
+    "code": "F2.2",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "F2.1",
+  "codebook_issue": "",
+  "rationale": "Both named in F2.2."
+ },
+ {
+  "sid": "S066",
+  "outcomes": [
+   {
+    "text": "improve persuasive writing skills",
+    "code": "Y7.2",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y7.9",
+  "codebook_issue": "",
+  "rationale": "Writing skill."
+ },
+ {
+  "sid": "S132",
+  "outcomes": [
+   {
+    "text": "demonstrate public speaking skills",
+    "code": "Y3.9",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "Y7.6",
+  "codebook_issue": "",
+  "rationale": "Public speaking named in Y3.9."
+ },
+ {
+  "sid": "S010",
+  "outcomes": [
+   {
+    "text": "staff collect pre- and post-surveys",
+    "code": "none",
+    "confidence": "none",
+    "outcome_type": "none"
+   }
+  ],
+  "runner_up": "A2.2",
+  "codebook_issue": "",
+  "rationale": "Evaluation/data note."
+ },
+ {
+  "sid": "S028",
+  "outcomes": [
+   {
+    "text": "improve English language proficiency",
+    "code": "Y7.7",
+    "confidence": "high",
+    "outcome_type": "skill"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "English acquisition."
+ },
+ {
+  "sid": "H022",
+  "outcomes": [
+   {
+    "text": "obtained subsidized summer employment and completed 120 paid work hours",
+    "code": "Y9.5",
+    "confidence": "high",
+    "outcome_type": "status"
+   }
+  ],
+  "runner_up": "Y9.4",
+  "codebook_issue": "",
+  "rationale": "Getting a job; hours are part of the same result."
+ }
+]

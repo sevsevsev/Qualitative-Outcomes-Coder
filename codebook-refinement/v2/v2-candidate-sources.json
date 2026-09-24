@@ -1,0 +1,291 @@
+{
+  "cycle": "02",
+  "date": "2026-09-23",
+  "note": "Candidate sources for the v2 draft, checked in cycle 02 by the orchestrating agent (not the blind verifier). 'located' means existence and title confirmed; 'verified' means a supporting excerpt was fetched. All of them must go through codebook-citation-verifier before v2 is adopted (PLAN.md phase 1).",
+  "sources": [
+    {
+      "id": "uw-extension-logic-model",
+      "cite_as": "University of Wisconsin–Extension, Program Action Logic Model (outcomes: short-term learning, medium-term action, long-term conditions)",
+      "status": "verified",
+      "url": "https://fyi.extension.wisc.edu/programdevelopment/files/2020/05/LogicModel2020-graphic-2.pdf",
+      "excerpt": "Awareness, Knowledge, Attitudes, Skills, Opinions, Aspirations, Motivations ... Behavior, Practice, Decisionmaking, Policies, Social action ... Social, Economic, Civic, Environmental",
+      "used_by": [
+        "outcome_type field"
+      ]
+    },
+    {
+      "id": "lerner-five-cs",
+      "cite_as": "Lerner, R. M. — The Five (Six) Cs of Positive Youth Development (Wisconsin 4-H handout, Lerner 2007)",
+      "status": "located",
+      "url": "https://fyi.extension.wisc.edu/wi4hvolunteers/files/2017/09/1-5-Cs-Handout-Lerner-2007.pdf",
+      "excerpt": "Contribution: Active participation and leadership in a variety of settings; making a difference",
+      "used_by": [
+        "Y2",
+        "Y4",
+        "Y5"
+      ]
+    },
+    {
+      "id": "nagaoka-2015-foundations",
+      "cite_as": "Nagaoka, J., Farrington, C. A., et al. (2015). Foundations for Young Adult Success: A Developmental Framework. UChicago Consortium.",
+      "status": "located",
+      "url": "https://wallacefoundation.org/resource/article/how-do-we-define-success-young-people",
+      "excerpt": "",
+      "used_by": [
+        "Y4"
+      ]
+    },
+    {
+      "id": "explore-sel-domains",
+      "cite_as": "Harvard EASEL Lab — Explore SEL domain taxonomy (Cognitive, Emotion, Social, Values, Perspectives, Identity)",
+      "status": "located",
+      "url": "http://exploresel.gse.harvard.edu/frameworks/52/",
+      "excerpt": "",
+      "used_by": [
+        "Y3",
+        "Y4",
+        "Y5 structure"
+      ]
+    },
+    {
+      "id": "urban-outcome-indicators",
+      "cite_as": "Urban Institute & Center for What Works — Candidate Outcome Indicators: Youth Mentoring Program",
+      "status": "located",
+      "url": "https://www.urban.org/sites/default/files/2015/04/10/youth_mentoring.pdf",
+      "excerpt": "",
+      "used_by": [
+        "A2.5",
+        "breadth check"
+      ]
+    },
+    {
+      "id": "shape-pe-2024",
+      "cite_as": "SHAPE America (2024). National Physical Education Standards, Standard 1: Develops a variety of motor skills.",
+      "status": "verified",
+      "url": "https://shapeamerica.org/standards/pe/new-pe-standards/",
+      "excerpt": "Through learning experiences in physical education, the student develops motor skills across a variety of environments.",
+      "used_by": [
+        "Y10.1",
+        "Y10.2"
+      ]
+    },
+    {
+      "id": "shape-nhes-2024",
+      "cite_as": "SHAPE America (2024). National Health Education Standards (8 standards).",
+      "status": "verified",
+      "url": "https://shapeamerica.org/standards/health/new-he-standards/",
+      "excerpt": "Use functional health information to support health and well-being of self and others.",
+      "used_by": [
+        "Y10.5"
+      ]
+    },
+    {
+      "id": "naaee-k12-2019",
+      "cite_as": "NAAEE (2019). K–12 Environmental Education: Guidelines for Excellence — strand 'Personal and Civic Responsibility'.",
+      "status": "verified",
+      "url": "https://eepro.naaee.org/sites/default/files/eepro-post-files/k-12_ee.executive_summary_2019_0.pdf",
+      "excerpt": "Questioning, Analysis, and Interpretation Skills ... Environmental Processes and Systems ... Skills for Understanding and Addressing Environmental Issues ... Personal and Civic Responsibility",
+      "used_by": [
+        "Y5.6",
+        "Y7.4"
+      ]
+    },
+    {
+      "id": "nses-2020",
+      "cite_as": "Future of Sex Education Initiative / Advocates for Youth (2020). National Sex Education Standards, 2nd ed.",
+      "status": "located",
+      "url": "https://www.advocatesforyouth.org/resources/future-of-sex-education-national-sexuality-education-standards/",
+      "excerpt": "",
+      "used_by": [
+        "Y10.6"
+      ]
+    },
+    {
+      "id": "keyes-mhc-sf",
+      "cite_as": "Keyes, C. L. M. (2002). The mental health continuum: From languishing to flourishing in life; MHC-SF.",
+      "status": "located",
+      "url": "https://peplab.web.unc.edu/wp-content/uploads/sites/18901/2018/11/MHC-SFoverview.pdf",
+      "excerpt": "",
+      "used_by": [
+        "Y11.2"
+      ]
+    },
+    {
+      "id": "hp2030-sh04",
+      "cite_as": "Healthy People 2030, SH-04: Increase the proportion of high school students who get enough sleep.",
+      "status": "located",
+      "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/sleep/increase-proportion-high-school-students-who-get-enough-sleep-sh-04",
+      "excerpt": "",
+      "used_by": [
+        "Y10.4"
+      ]
+    },
+    {
+      "id": "hp2030-ah01-ahs01",
+      "cite_as": "Healthy People 2030, AH-01 (adolescent preventive health care visit) and AHS-01 (health insurance).",
+      "status": "located",
+      "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/adolescents/increase-proportion-adolescents-who-had-preventive-health-care-visit-past-year-ah-01",
+      "excerpt": "",
+      "used_by": [
+        "Y10.7"
+      ]
+    },
+    {
+      "id": "sampson-1997",
+      "cite_as": "Sampson, R. J., Raudenbush, S. W., & Earls, F. (1997). Neighborhoods and violent crime: A multilevel study of collective efficacy. Science, 277, 918–924.",
+      "status": "verified",
+      "url": "https://faculty.washington.edu/matsueda/courses/517/Readings/Sampson%201997%20Science.pdf",
+      "excerpt": "social cohesion among neighbors combined with their willingness to intervene on behalf of the common good",
+      "used_by": [
+        "A3.3"
+      ]
+    },
+    {
+      "id": "kania-kramer-2011",
+      "cite_as": "Kania, J., & Kramer, M. (2011). Collective Impact. Stanford Social Innovation Review.",
+      "status": "verified",
+      "url": "https://ssir.org/articles/entry/collective_impact",
+      "excerpt": "All participants must agree on the primary goals for the collective impact initiative as a whole.",
+      "used_by": [
+        "A3.2"
+      ]
+    },
+    {
+      "id": "chafee-42usc677",
+      "cite_as": "42 U.S.C. 677(a)(1) — John H. Chafee Foster Care Program for Successful Transition to Adulthood",
+      "status": "verified",
+      "url": "https://www.law.cornell.edu/uscode/text/42/677",
+      "excerpt": "training and opportunities to practice daily living skills (such as financial literacy training and driving instruction)",
+      "used_by": [
+        "Y9.7",
+        "Y9.6"
+      ]
+    },
+    {
+      "id": "positive-youth-justice-2010",
+      "cite_as": "Butts, J. A., Bazemore, G., & Meroe, A. S. (2010). Positive Youth Justice: Framing Justice Interventions Using the Concepts of Positive Youth Development. Coalition for Juvenile Justice.",
+      "status": "located",
+      "url": "https://johnjayrec.nyc/pyj_background/",
+      "excerpt": "",
+      "used_by": [
+        "Y12.4",
+        "Y2.4"
+      ]
+    },
+    {
+      "id": "namle-core-principles",
+      "cite_as": "NAMLE — Core Principles of Media Literacy Education (definition of media literacy)",
+      "status": "verified",
+      "url": "https://namle.org/resources/core-principles/",
+      "excerpt": "the ability to access, analyze, evaluate, create, and act using all forms of communication",
+      "used_by": [
+        "Y7.9"
+      ]
+    },
+    {
+      "id": "digital-equity-act",
+      "cite_as": "Digital Equity Act of 2021, 47 U.S.C. 1721(12) — definition of digital literacy",
+      "status": "verified",
+      "url": "https://uscode.house.gov/view.xhtml?path=%2Fprelim%40title47%2Fchapter16%2Fsubchapter2&edition=prelim",
+      "excerpt": "the skills associated with using technology to enable users to find, evaluate, organize, create, and communicate information",
+      "used_by": [
+        "F1.5",
+        "A2.3"
+      ]
+    },
+    {
+      "id": "ed-doj-2015-lep",
+      "cite_as": "U.S. Dept. of Justice & U.S. Dept. of Education (2015). Dear Colleague Letter: English Learner Students and Limited English Proficient Parents.",
+      "status": "located",
+      "url": "https://eric.ed.gov/?q=source:%22US+Department+of+Justice%22&id=ED578886",
+      "excerpt": "",
+      "used_by": [
+        "F3.3",
+        "F1.6"
+      ]
+    },
+    {
+      "id": "carlone-johnson-2007",
+      "cite_as": "Carlone, H. B., & Johnson, A. (2007). Understanding the science experiences of successful women of color: Science identity as an analytic lens. JRST, 44(8), 1187–1218.",
+      "status": "located",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.20237",
+      "excerpt": "",
+      "used_by": [
+        "Y4.7"
+      ]
+    },
+    {
+      "id": "causal-agency-theory",
+      "cite_as": "Shogren, K. A., Wehmeyer, M. L., et al. (2015). Causal Agency Theory: Reconceptualizing a functional model of self-determination.",
+      "status": "located",
+      "url": "https://intelligentlives.org/wp-content/uploads/2022/03/SD-Reconceptualization.pdf",
+      "excerpt": "",
+      "used_by": [
+        "Y4.6"
+      ]
+    },
+    {
+      "id": "idea-indicator-14",
+      "cite_as": "IDEA Part B SPP/APR Indicator 14 — Post-school outcomes",
+      "status": "located",
+      "url": "https://sites.ed.gov/idea/part-b-spp-apr-indicator-14/",
+      "excerpt": "",
+      "used_by": [
+        "Y8.7",
+        "Y9.5"
+      ]
+    },
+    {
+      "id": "ncss-c3-2013",
+      "cite_as": "NCSS (2013). College, Career, and Civic Life (C3) Framework for Social Studies State Standards.",
+      "status": "located",
+      "url": "https://www.socialstudies.org/standards/c3",
+      "excerpt": "",
+      "used_by": [
+        "Y5.2",
+        "Y5.3",
+        "Y7.5"
+      ]
+    },
+    {
+      "id": "ngss-three-dimensions",
+      "cite_as": "Next Generation Science Standards — three dimensions (practices, crosscutting concepts, disciplinary core ideas)",
+      "status": "located",
+      "url": "https://www.nextgenscience.org/glossary/three-dimensions",
+      "excerpt": "",
+      "used_by": [
+        "Y7.4"
+      ]
+    },
+    {
+      "id": "ccss-writing-anchors",
+      "cite_as": "Common Core State Standards — College and Career Readiness Anchor Standards for Writing",
+      "status": "located",
+      "url": "https://www.thecorestandards.org/ELA-Literacy/CCRA/W/",
+      "excerpt": "",
+      "used_by": [
+        "Y7.2"
+      ]
+    },
+    {
+      "id": "e2w-framework",
+      "cite_as": "Mathematica / Gates Foundation — Education-to-Workforce Indicator Framework (social capital)",
+      "status": "located",
+      "url": "https://educationtoworkforce.org/indicators/social-capital",
+      "excerpt": "Individuals have access to and are able to mobilize relationships that help them further their goals.",
+      "used_by": [
+        "Y2.5"
+      ]
+    },
+    {
+      "id": "ypqa-pyramid",
+      "cite_as": "Weikart Center — Youth Program Quality pyramid (safe, supportive, interactive, engaging)",
+      "status": "located",
+      "url": "https://forumfyi.org/weikartcenter/",
+      "excerpt": "",
+      "used_by": [
+        "A2.1"
+      ]
+    }
+  ]
+}

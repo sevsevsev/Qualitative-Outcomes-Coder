@@ -1,0 +1,452 @@
+[
+ {
+  "sid": "H001",
+  "program_type": "afterschool/OST",
+  "outcome_text": "85% of enrolled youth attended at least 30 program sessions during the school year."
+ },
+ {
+  "sid": "H002",
+  "program_type": "afterschool/OST",
+  "outcome_text": "Parents reported feeling more confident that their child has a safe, supervised place to go after school."
+ },
+ {
+  "sid": "H003",
+  "program_type": "afterschool/OST",
+  "outcome_text": "Youth who attended the program regularly improved their homework completion habits."
+ },
+ {
+  "sid": "H004",
+  "program_type": "tutoring & literacy",
+  "outcome_text": "Students reading below grade level increased their oral reading fluency by an average of 12 words per minute."
+ },
+ {
+  "sid": "H005",
+  "program_type": "tutoring & literacy",
+  "outcome_text": "Tutors completed 40 hours of training and began weekly one-on-one sessions with assigned students."
+ },
+ {
+  "sid": "H006",
+  "program_type": "tutoring & literacy",
+  "outcome_text": "Youth feel more confident reading aloud in front of their class."
+ },
+ {
+  "sid": "H007",
+  "program_type": "STEM/robotics",
+  "outcome_text": "70% of participants reported increased interest in pursuing a career in a STEM field."
+ },
+ {
+  "sid": "H008",
+  "program_type": "STEM/robotics",
+  "outcome_text": "Youth designed and built a functioning robot and presented it at the regional competition."
+ },
+ {
+  "sid": "H009",
+  "program_type": "STEM/robotics",
+  "outcome_text": "Girls' enrollment in advanced STEM electives at partner schools increased 15% over the prior year."
+ },
+ {
+  "sid": "H010",
+  "program_type": "arts & music",
+  "outcome_text": "Participants demonstrated improved technical skill on their instrument as measured by a jury assessment."
+ },
+ {
+  "sid": "H011",
+  "program_type": "arts & music",
+  "outcome_text": "The program presented 12 community performances this season."
+ },
+ {
+  "sid": "H012",
+  "program_type": "arts & music",
+  "outcome_text": "Youth reported feeling more comfortable expressing themselves creatively and made new friends in the program."
+ },
+ {
+  "sid": "H013",
+  "program_type": "sports & recreation",
+  "outcome_text": "Participants increased their weekly physical activity to at least 60 minutes on 5 or more days."
+ },
+ {
+  "sid": "H014",
+  "program_type": "sports & recreation",
+  "outcome_text": "Coaches learned to lead a new conflict-resolution curriculum during pre-season training."
+ },
+ {
+  "sid": "H015",
+  "program_type": "sports & recreation",
+  "outcome_text": "Youth showed improved sportsmanship and teamwork during games."
+ },
+ {
+  "sid": "H016",
+  "program_type": "mentoring",
+  "outcome_text": "85% of mentor-mentee matches remained active for at least 12 months."
+ },
+ {
+  "sid": "H017",
+  "program_type": "mentoring",
+  "outcome_text": "Mentees reported a stronger sense of belonging and connection to a caring adult."
+ },
+ {
+  "sid": "H018",
+  "program_type": "mentoring",
+  "outcome_text": "Youth-mentor pairs met weekly, and mentees' school attendance improved over the program year."
+ },
+ {
+  "sid": "H019",
+  "program_type": "college access",
+  "outcome_text": "Seniors submitted the FAFSA and at least one college application by January 1."
+ },
+ {
+  "sid": "H020",
+  "program_type": "college access",
+  "outcome_text": "90% of participants enrolled in a two- or four-year college the fall after graduation."
+ },
+ {
+  "sid": "H021",
+  "program_type": "college access",
+  "outcome_text": "Students increased their understanding of the financial aid process, including grants and loans."
+ },
+ {
+  "sid": "H022",
+  "program_type": "youth employment & workforce",
+  "outcome_text": "Youth obtained subsidized summer employment and completed at least 120 paid work hours."
+ },
+ {
+  "sid": "H023",
+  "program_type": "youth employment & workforce",
+  "outcome_text": "Participants demonstrated improved workplace communication and professionalism."
+ },
+ {
+  "sid": "H024",
+  "program_type": "youth employment & workforce",
+  "outcome_text": "75% of program graduates were employed or enrolled in postsecondary education six months after completion."
+ },
+ {
+  "sid": "H025",
+  "program_type": "financial literacy",
+  "outcome_text": "Participants opened a savings account within three months of completing the workshop."
+ },
+ {
+  "sid": "H026",
+  "program_type": "financial literacy",
+  "outcome_text": "Youth increased their knowledge of budgeting, credit, and saving as measured by a pre/post quiz."
+ },
+ {
+  "sid": "H027",
+  "program_type": "financial literacy",
+  "outcome_text": "Families reported feeling more confident managing household finances."
+ },
+ {
+  "sid": "H028",
+  "program_type": "civic engagement & youth organizing",
+  "outcome_text": "Youth organizers led a campaign that resulted in a new city ordinance extending youth curfew hours during summer months."
+ },
+ {
+  "sid": "H029",
+  "program_type": "civic engagement & youth organizing",
+  "outcome_text": "Participants increased their knowledge of the voter registration process and registered eligible peers."
+ },
+ {
+  "sid": "H030",
+  "program_type": "civic engagement & youth organizing",
+  "outcome_text": "Youth reported an increased sense that they can influence decisions in their community."
+ },
+ {
+  "sid": "H031",
+  "program_type": "environmental/outdoor education",
+  "outcome_text": "Students correctly identified 80% more native plant and animal species on post-program assessments compared to pre-tests."
+ },
+ {
+  "sid": "H032",
+  "program_type": "environmental/outdoor education",
+  "outcome_text": "Youth completed a 3-day backpacking expedition and demonstrated leadership in group decision-making."
+ },
+ {
+  "sid": "H033",
+  "program_type": "environmental/outdoor education",
+  "outcome_text": "Participants reported increased comfort and confidence spending time outdoors."
+ },
+ {
+  "sid": "H034",
+  "program_type": "school-based mental health",
+  "outcome_text": "Students receiving counseling showed a reduction in self-reported anxiety symptoms on the GAD-7 screener."
+ },
+ {
+  "sid": "H035",
+  "program_type": "school-based mental health",
+  "outcome_text": "Referrals to the school-based clinician increased 20% following staff training on warning signs of distress."
+ },
+ {
+  "sid": "H036",
+  "program_type": "school-based mental health",
+  "outcome_text": "Youth developed healthier coping strategies for managing stress."
+ },
+ {
+  "sid": "H037",
+  "program_type": "substance-use prevention",
+  "outcome_text": "Participants reported delaying the age of first alcohol use."
+ },
+ {
+  "sid": "H038",
+  "program_type": "substance-use prevention",
+  "outcome_text": "Youth increased their knowledge of the health risks associated with vaping and e-cigarette use."
+ },
+ {
+  "sid": "H039",
+  "program_type": "substance-use prevention",
+  "outcome_text": "The program delivered prevention curricula to 500 students across 6 partner schools this year."
+ },
+ {
+  "sid": "H040",
+  "program_type": "violence prevention",
+  "outcome_text": "Students demonstrated improved conflict de-escalation skills in post-training role-play assessments."
+ },
+ {
+  "sid": "H041",
+  "program_type": "violence prevention",
+  "outcome_text": "School staff reported a decrease in physical altercations following implementation of the restorative justice program."
+ },
+ {
+  "sid": "H042",
+  "program_type": "violence prevention",
+  "outcome_text": "Youth feel safer walking to and from school."
+ },
+ {
+  "sid": "H043",
+  "program_type": "juvenile justice & reentry",
+  "outcome_text": "70% of youth released from detention had no new adjudications within 12 months of release."
+ },
+ {
+  "sid": "H044",
+  "program_type": "juvenile justice & reentry",
+  "outcome_text": "Participants secured stable housing and enrolled in school or employment within 30 days of release."
+ },
+ {
+  "sid": "H045",
+  "program_type": "juvenile justice & reentry",
+  "outcome_text": "Youth improved their ability to set and work toward personal goals."
+ },
+ {
+  "sid": "H046",
+  "program_type": "foster care & transition-age youth",
+  "outcome_text": "Youth aging out of care obtained a state-issued ID, Social Security card, and birth certificate before turning 18."
+ },
+ {
+  "sid": "H047",
+  "program_type": "foster care & transition-age youth",
+  "outcome_text": "Young people reported having at least one permanent, supportive adult connection."
+ },
+ {
+  "sid": "H048",
+  "program_type": "foster care & transition-age youth",
+  "outcome_text": "Participants increased their independent living skills, including cooking, budgeting, and using public transit."
+ },
+ {
+  "sid": "H049",
+  "program_type": "runaway & homeless youth",
+  "outcome_text": "Youth exited the shelter into safe and stable housing."
+ },
+ {
+  "sid": "H050",
+  "program_type": "runaway & homeless youth",
+  "outcome_text": "Participants engaged in case management and reduced the number of nights spent unsheltered."
+ },
+ {
+  "sid": "H051",
+  "program_type": "runaway & homeless youth",
+  "outcome_text": "Youth reported an increased sense of safety and trust in program staff."
+ },
+ {
+  "sid": "H052",
+  "program_type": "teen parents",
+  "outcome_text": "Teen mothers continued or re-enrolled in school within 6 weeks of giving birth."
+ },
+ {
+  "sid": "H053",
+  "program_type": "teen parents",
+  "outcome_text": "Parenting participants demonstrated improved knowledge of infant health and safety practices, including safe sleep."
+ },
+ {
+  "sid": "H054",
+  "program_type": "teen parents",
+  "outcome_text": "Young parents feel more confident in their parenting abilities and less isolated from peers."
+ },
+ {
+  "sid": "H055",
+  "program_type": "LGBTQ+ youth services",
+  "outcome_text": "Youth reported a decrease in feelings of isolation after joining the support group."
+ },
+ {
+  "sid": "H056",
+  "program_type": "LGBTQ+ youth services",
+  "outcome_text": "Participants identified at least one trusted adult they could turn to for support."
+ },
+ {
+  "sid": "H057",
+  "program_type": "LGBTQ+ youth services",
+  "outcome_text": "The program fostered a more welcoming and affirming environment for LGBTQ+ youth."
+ },
+ {
+  "sid": "H058",
+  "program_type": "disability inclusion",
+  "outcome_text": "Youth with disabilities participated in inclusive recreational activities alongside peers without disabilities."
+ },
+ {
+  "sid": "H059",
+  "program_type": "disability inclusion",
+  "outcome_text": "Parents of children with disabilities reported increased knowledge of their child's rights under IDEA."
+ },
+ {
+  "sid": "H060",
+  "program_type": "disability inclusion",
+  "outcome_text": "Participants demonstrated improved self-advocacy skills during IEP meetings."
+ },
+ {
+  "sid": "H061",
+  "program_type": "immigrant & refugee services",
+  "outcome_text": "Families increased their understanding of the U.S. school enrollment and healthcare systems."
+ },
+ {
+  "sid": "H062",
+  "program_type": "immigrant & refugee services",
+  "outcome_text": "Adult participants improved their English language proficiency by one CASAS level."
+ },
+ {
+  "sid": "H063",
+  "program_type": "immigrant & refugee services",
+  "outcome_text": "Youth reported feeling more connected to their new community."
+ },
+ {
+  "sid": "H064",
+  "program_type": "early childhood & home visiting",
+  "outcome_text": "Children demonstrated age-appropriate developmental milestones on the Ages & Stages Questionnaire."
+ },
+ {
+  "sid": "H065",
+  "program_type": "early childhood & home visiting",
+  "outcome_text": "Home visitors conducted monthly visits, and caregivers reported increased confidence supporting early literacy at home."
+ },
+ {
+  "sid": "H066",
+  "program_type": "early childhood & home visiting",
+  "outcome_text": "First-time mothers initiated and sustained breastfeeding for at least six months."
+ },
+ {
+  "sid": "H067",
+  "program_type": "family support/two-generation",
+  "outcome_text": "Families increased household income while parents completed occupational skills training."
+ },
+ {
+  "sid": "H068",
+  "program_type": "family support/two-generation",
+  "outcome_text": "Parents reported improved communication and reduced conflict with their children."
+ },
+ {
+  "sid": "H069",
+  "program_type": "family support/two-generation",
+  "outcome_text": "Caregivers connected to at least two new community resources or public benefits."
+ },
+ {
+  "sid": "H070",
+  "program_type": "food security",
+  "outcome_text": "Households reported reduced food insecurity as measured by the USDA six-item screener."
+ },
+ {
+  "sid": "H071",
+  "program_type": "food security",
+  "outcome_text": "The pantry distributed 50,000 pounds of food to 1,200 households this quarter."
+ },
+ {
+  "sid": "H072",
+  "program_type": "food security",
+  "outcome_text": "Families increased their weekly consumption of fresh fruits and vegetables."
+ },
+ {
+  "sid": "H073",
+  "program_type": "housing",
+  "outcome_text": "Participants exited transitional housing into permanent housing and maintained it for at least six months."
+ },
+ {
+  "sid": "H074",
+  "program_type": "housing",
+  "outcome_text": "Households reduced their rent burden to below 30% of income."
+ },
+ {
+  "sid": "H075",
+  "program_type": "housing",
+  "outcome_text": "Case managers helped clients complete and submit applications for housing choice vouchers."
+ },
+ {
+  "sid": "H076",
+  "program_type": "digital equity",
+  "outcome_text": "Households received a laptop and broadband subsidy and reported increased ability to complete tasks online."
+ },
+ {
+  "sid": "H077",
+  "program_type": "digital equity",
+  "outcome_text": "Participants improved their digital literacy skills, including email and video conferencing."
+ },
+ {
+  "sid": "H078",
+  "program_type": "digital equity",
+  "outcome_text": "Older adults reported feeling less anxious using technology."
+ },
+ {
+  "sid": "H079",
+  "program_type": "faith-based youth ministry",
+  "outcome_text": "Youth grew in their faith and felt a stronger connection to their spiritual community."
+ },
+ {
+  "sid": "H080",
+  "program_type": "faith-based youth ministry",
+  "outcome_text": "Participants attended weekly youth group and volunteered at least once in the community this semester."
+ },
+ {
+  "sid": "H081",
+  "program_type": "faith-based youth ministry",
+  "outcome_text": "Teens reported increased trust in adult mentors within the congregation."
+ },
+ {
+  "sid": "H082",
+  "program_type": "camps/4-H/scouting",
+  "outcome_text": "Campers demonstrated improved swimming proficiency, advancing at least one skill level."
+ },
+ {
+  "sid": "H083",
+  "program_type": "camps/4-H/scouting",
+  "outcome_text": "Youth reported making new friends and feeling a sense of belonging at camp."
+ },
+ {
+  "sid": "H084",
+  "program_type": "camps/4-H/scouting",
+  "outcome_text": "4-H members completed their project record books and presented them at the county fair."
+ },
+ {
+  "sid": "H085",
+  "program_type": "health promotion",
+  "outcome_text": "Adolescents increased their knowledge of nutrition and made healthier food choices in the school cafeteria."
+ },
+ {
+  "sid": "H086",
+  "program_type": "health promotion",
+  "outcome_text": "Participants reduced recreational screen time to less than 2 hours per day."
+ },
+ {
+  "sid": "H087",
+  "program_type": "health promotion",
+  "outcome_text": "See attached logic model for a full list of outcome measures."
+ },
+ {
+  "sid": "H088",
+  "program_type": "community/systems-change coalitions",
+  "outcome_text": "Outcomes: Systems and Policy Change"
+ },
+ {
+  "sid": "H089",
+  "program_type": "community/systems-change coalitions",
+  "outcome_text": "The coalition secured a new local ordinance restricting youth access to flavored tobacco products."
+ },
+ {
+  "sid": "H090",
+  "program_type": "community/systems-change coalitions",
+  "outcome_text": "Member organizations reported increased collaboration and shared data across systems serving youth."
+ }
+]

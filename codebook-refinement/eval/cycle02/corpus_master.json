@@ -1,0 +1,1532 @@
+[
+ {
+  "origin_id": "V-047",
+  "program_type": "disability_inclusion",
+  "outcome_text": "Youth with disabilities will participate fully in program activities alongside their peers.",
+  "sid": "S001"
+ },
+ {
+  "origin_id": "N-026",
+  "program_type": "health_promotion",
+  "outcome_text": "Youth will be able to name three methods of preventing sexually transmitted infections.",
+  "sid": "S002"
+ },
+ {
+  "origin_id": "N-079",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Youth will choose to return to the program for a second year.",
+  "sid": "S003"
+ },
+ {
+  "origin_id": "G-038",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Youth will take turns leading their small group during project work.",
+  "sid": "S004"
+ },
+ {
+  "origin_id": "G-033",
+  "program_type": "civic_engagement",
+  "outcome_text": "Youth will complete 20 hours of community service at local nonprofits.",
+  "sid": "S005"
+ },
+ {
+  "origin_id": "G-003",
+  "program_type": "family_support",
+  "outcome_text": "Parents will receive financial coaching and increase household savings.",
+  "sid": "S006"
+ },
+ {
+  "origin_id": "V-054",
+  "program_type": "school_based_mental_health",
+  "outcome_text": "Youth will demonstrate increased willingness to seek help when struggling emotionally.",
+  "sid": "S007"
+ },
+ {
+  "origin_id": "N-080",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Students will say they feel proud to be part of the program.",
+  "sid": "S008"
+ },
+ {
+  "origin_id": "V-045",
+  "program_type": "immigrant_refugee",
+  "outcome_text": "Refugee youth will develop a strong sense of both their heritage culture and their new community.",
+  "sid": "S009"
+ },
+ {
+  "origin_id": "N-102",
+  "program_type": "general",
+  "outcome_text": "Program staff will collect pre- and post-surveys from all participants.",
+  "sid": "S010"
+ },
+ {
+  "origin_id": "N-103",
+  "program_type": "general",
+  "outcome_text": "Participants will benefit from high-quality programming.",
+  "sid": "S011"
+ },
+ {
+  "origin_id": "G-028",
+  "program_type": "faith_based",
+  "outcome_text": "Youth will demonstrate honesty and integrity.",
+  "sid": "S012"
+ },
+ {
+  "origin_id": "N-041",
+  "program_type": "environmental_outdoor",
+  "outcome_text": "Youth will take action to reduce waste at home, such as recycling and composting.",
+  "sid": "S013"
+ },
+ {
+  "origin_id": "G-026",
+  "program_type": "college_access",
+  "outcome_text": "Seniors will complete college-level coursework to be ready for freshman year.",
+  "sid": "S014"
+ },
+ {
+  "origin_id": "N-066",
+  "program_type": "substance_prevention",
+  "outcome_text": "Students will perceive greater risk of harm from regular marijuana use.",
+  "sid": "S015"
+ },
+ {
+  "origin_id": "V-062",
+  "program_type": "faith_based",
+  "outcome_text": "Youth will deepen their spiritual life and relationship with God.",
+  "sid": "S016"
+ },
+ {
+  "origin_id": "N-039",
+  "program_type": "immigrant_refugee",
+  "outcome_text": "Newcomer families will understand their rights regarding school enrollment regardless of immigration status.",
+  "sid": "S017"
+ },
+ {
+  "origin_id": "N-064",
+  "program_type": "restorative_justice",
+  "outcome_text": "Youth diverted from court will complete their restorative agreement.",
+  "sid": "S018"
+ },
+ {
+  "origin_id": "N-034",
+  "program_type": "partnerships_systems",
+  "outcome_text": "The city will allocate dedicated funding for summer youth employment in the annual budget.",
+  "sid": "S019"
+ },
+ {
+  "origin_id": "V-028",
+  "program_type": "workforce_cte",
+  "outcome_text": "Participants will earn an industry-recognized certification (OSHA-10, ServSafe, CPR).",
+  "sid": "S020"
+ },
+ {
+  "origin_id": "V-064",
+  "program_type": "faith_based",
+  "outcome_text": "Youth will build a supportive peer community within the youth group.",
+  "sid": "S021"
+ },
+ {
+  "origin_id": "V-075",
+  "program_type": "early_childhood",
+  "outcome_text": "Families will establish a consistent bedtime and daily routine at home.",
+  "sid": "S022"
+ },
+ {
+  "origin_id": "V-005",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Program will maintain 85% average daily attendance across all sites.",
+  "sid": "S023"
+ },
+ {
+  "origin_id": "N-011",
+  "program_type": "runaway_homeless_youth",
+  "outcome_text": "Runaway youth will be reunified with family when it is safe to do so.",
+  "sid": "S024"
+ },
+ {
+  "origin_id": "V-072",
+  "program_type": "early_childhood",
+  "outcome_text": "Children will demonstrate age-appropriate pre-literacy skills (letter recognition, phonemic awareness).",
+  "sid": "S025"
+ },
+ {
+  "origin_id": "V-007",
+  "program_type": "mentoring",
+  "outcome_text": "Mentees will report having a trusted adult they can go to with problems.",
+  "sid": "S026"
+ },
+ {
+  "origin_id": "G-029",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Students will choose to report bullying they witness rather than join in.",
+  "sid": "S027"
+ },
+ {
+  "origin_id": "V-042",
+  "program_type": "immigrant_refugee",
+  "outcome_text": "Youth will improve their English language proficiency.",
+  "sid": "S028"
+ },
+ {
+  "origin_id": "G-045",
+  "program_type": "foster_care_transition",
+  "outcome_text": "Youth aging out of foster care will secure stable housing by age 21.",
+  "sid": "S029"
+ },
+ {
+  "origin_id": "G-060",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will receive fewer office discipline referrals for disruptive classroom behavior.",
+  "sid": "S030"
+ },
+ {
+  "origin_id": "G-050",
+  "program_type": "sports_recreation",
+  "outcome_text": "Players will improve their dribbling and passing skills.",
+  "sid": "S031"
+ },
+ {
+  "origin_id": "N-035",
+  "program_type": "disability_inclusion",
+  "outcome_text": "Students with IEPs will lead their own IEP meetings by the end of the school year.",
+  "sid": "S032"
+ },
+ {
+  "origin_id": "N-058",
+  "program_type": "youth_employment",
+  "outcome_text": "Program graduates will be employed or in education six months after exit.",
+  "sid": "S033"
+ },
+ {
+  "origin_id": "N-088",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will believe that their intelligence can grow with effort.",
+  "sid": "S034"
+ },
+ {
+  "origin_id": "V-038",
+  "program_type": "housing_basic_needs",
+  "outcome_text": "Families will reduce housing instability and report decreased stress related to housing insecurity.",
+  "sid": "S035"
+ },
+ {
+  "origin_id": "N-046",
+  "program_type": "stem_robotics",
+  "outcome_text": "Girls in the program will increasingly see themselves as 'a STEM person.'",
+  "sid": "S036"
+ },
+ {
+  "origin_id": "N-008",
+  "program_type": "foster_care_transition",
+  "outcome_text": "Young adults will maintain their own apartment lease for 12 consecutive months.",
+  "sid": "S037"
+ },
+ {
+  "origin_id": "G-042",
+  "program_type": "community",
+  "outcome_text": "Youth will feel safe walking in their neighborhood.",
+  "sid": "S038"
+ },
+ {
+  "origin_id": "N-093",
+  "program_type": "civic_engagement",
+  "outcome_text": "Youth council members will co-design program activities with staff.",
+  "sid": "S039"
+ },
+ {
+  "origin_id": "N-014",
+  "program_type": "teen_parents",
+  "outcome_text": "Young mothers will complete all recommended well-child visits for their infant.",
+  "sid": "S040"
+ },
+ {
+  "origin_id": "N-038",
+  "program_type": "immigrant_refugee",
+  "outcome_text": "Parents with limited English proficiency will receive school communications in their home language.",
+  "sid": "S041"
+ },
+ {
+  "origin_id": "V-001",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Students will increase their homework completion rate from 60% to 85%.",
+  "sid": "S042"
+ },
+ {
+  "origin_id": "V-041",
+  "program_type": "housing_basic_needs",
+  "outcome_text": "Case managers will report improved ability to navigate the county benefits system on behalf of clients.",
+  "sid": "S043"
+ },
+ {
+  "origin_id": "N-002",
+  "program_type": "financial_capability",
+  "outcome_text": "Participants will understand the difference between a debit card and a credit card and the cost of interest.",
+  "sid": "S044"
+ },
+ {
+  "origin_id": "V-023",
+  "program_type": "environmental_outdoor",
+  "outcome_text": "Youth will develop a sense of stewardship and connection to nature.",
+  "sid": "S045"
+ },
+ {
+  "origin_id": "V-052",
+  "program_type": "school_based_mental_health",
+  "outcome_text": "Students will report reduced symptoms of anxiety and depression.",
+  "sid": "S046"
+ },
+ {
+  "origin_id": "V-008",
+  "program_type": "mentoring",
+  "outcome_text": "Match pairs will meet consistently for at least 12 months.",
+  "sid": "S047"
+ },
+ {
+  "origin_id": "V-087",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will improve reading fluency by one grade level.",
+  "sid": "S048"
+ },
+ {
+  "origin_id": "N-022",
+  "program_type": "camp_4h_scouting",
+  "outcome_text": "Campers will try an activity that initially made them nervous, such as swimming in the lake.",
+  "sid": "S049"
+ },
+ {
+  "origin_id": "G-005",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will accurately calculate percentages and interest in math class.",
+  "sid": "S050"
+ },
+ {
+  "origin_id": "N-013",
+  "program_type": "teen_parents",
+  "outcome_text": "Teen parents will stay enrolled in high school through the birth of their child.",
+  "sid": "S051"
+ },
+ {
+  "origin_id": "G-040",
+  "program_type": "prevention",
+  "outcome_text": "Youth will resist peer pressure to use drugs or alcohol.",
+  "sid": "S052"
+ },
+ {
+  "origin_id": "V-033",
+  "program_type": "family_support",
+  "outcome_text": "Families will increase their knowledge of child development milestones.",
+  "sid": "S053"
+ },
+ {
+  "origin_id": "V-019",
+  "program_type": "sports_recreation",
+  "outcome_text": "Youth will learn to work as part of a team to achieve a common goal.",
+  "sid": "S054"
+ },
+ {
+  "origin_id": "N-062",
+  "program_type": "restorative_justice",
+  "outcome_text": "Students will participate in restorative circles to repair harm instead of receiving a suspension.",
+  "sid": "S055"
+ },
+ {
+  "origin_id": "N-087",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Ninth graders will earn enough credits to be promoted to tenth grade.",
+  "sid": "S056"
+ },
+ {
+  "origin_id": "V-093",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "See logic model above.",
+  "sid": "S057"
+ },
+ {
+  "origin_id": "N-095",
+  "program_type": "arts_education",
+  "outcome_text": "Youth will compose an original song.",
+  "sid": "S058"
+ },
+ {
+  "origin_id": "V-025",
+  "program_type": "environmental_outdoor",
+  "outcome_text": "Youth will demonstrate leadership skills while leading a trail cleanup for the community.",
+  "sid": "S059"
+ },
+ {
+  "origin_id": "G-004",
+  "program_type": "youth_employment",
+  "outcome_text": "Summer youth employees will earn an average of $2,400 in wages.",
+  "sid": "S060"
+ },
+ {
+  "origin_id": "N-072",
+  "program_type": "early_childhood",
+  "outcome_text": "Infants and toddlers will receive developmental screenings and referrals as needed.",
+  "sid": "S061"
+ },
+ {
+  "origin_id": "V-077",
+  "program_type": "food_security",
+  "outcome_text": "Families will report reduced food insecurity and increased access to healthy food.",
+  "sid": "S062"
+ },
+ {
+  "origin_id": "V-027",
+  "program_type": "workforce_cte",
+  "outcome_text": "Youth will complete a resume and practice interview skills.",
+  "sid": "S063"
+ },
+ {
+  "origin_id": "N-024",
+  "program_type": "health_promotion",
+  "outcome_text": "Participants will complete an annual dental and vision screening.",
+  "sid": "S064"
+ },
+ {
+  "origin_id": "N-065",
+  "program_type": "substance_prevention",
+  "outcome_text": "Youth will report lower intentions to vape in the next year.",
+  "sid": "S065"
+ },
+ {
+  "origin_id": "N-051",
+  "program_type": "media_journalism",
+  "outcome_text": "Youth will improve their persuasive writing skills.",
+  "sid": "S066"
+ },
+ {
+  "origin_id": "G-009",
+  "program_type": "school_based_mental_health",
+  "outcome_text": "Students will report fewer symptoms of depression on the PHQ-9.",
+  "sid": "S067"
+ },
+ {
+  "origin_id": "N-045",
+  "program_type": "sports_recreation",
+  "outcome_text": "Children will develop fundamental movement skills such as running, jumping, throwing, and catching.",
+  "sid": "S068"
+ },
+ {
+  "origin_id": "G-008",
+  "program_type": "school_based_mental_health",
+  "outcome_text": "Students will learn and practice deep-breathing techniques to manage test anxiety.",
+  "sid": "S069"
+ },
+ {
+  "origin_id": "V-070",
+  "program_type": "juvenile_justice_reentry",
+  "outcome_text": "Youth will reconnect with family members and rebuild trust after a period of incarceration.",
+  "sid": "S070"
+ },
+ {
+  "origin_id": "N-082",
+  "program_type": "school_based_mental_health",
+  "outcome_text": "Students will report higher life satisfaction and a sense of flourishing.",
+  "sid": "S071"
+ },
+ {
+  "origin_id": "G-014",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will believe their math ability can grow with effort and practice.",
+  "sid": "S072"
+ },
+ {
+  "origin_id": "N-061",
+  "program_type": "violence_prevention",
+  "outcome_text": "Outreach workers will mediate conflicts to prevent retaliatory shootings in the neighborhood.",
+  "sid": "S073"
+ },
+ {
+  "origin_id": "N-043",
+  "program_type": "sports_recreation",
+  "outcome_text": "Players will improve their dribbling, passing, and shooting skills.",
+  "sid": "S074"
+ },
+ {
+  "origin_id": "N-029",
+  "program_type": "program_quality",
+  "outcome_text": "The organization will achieve accreditation from the state afterschool network.",
+  "sid": "S075"
+ },
+ {
+  "origin_id": "V-065",
+  "program_type": "faith_based",
+  "outcome_text": "Youth will participate in a mission trip and serve people experiencing poverty.",
+  "sid": "S076"
+ },
+ {
+  "origin_id": "V-013",
+  "program_type": "arts_education",
+  "outcome_text": "Youth will present their artwork in a public exhibition, building pride and confidence.",
+  "sid": "S077"
+ },
+ {
+  "origin_id": "G-059",
+  "program_type": "school_based_mental_health",
+  "outcome_text": "Youth who have experienced trauma will report feeling psychologically safe and supported in processing it.",
+  "sid": "S078"
+ },
+ {
+  "origin_id": "G-007",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Youth will use calming strategies when upset.",
+  "sid": "S079"
+ },
+ {
+  "origin_id": "V-006",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Students will try new enrichment activities they've never done before (cooking, coding, art).",
+  "sid": "S080"
+ },
+ {
+  "origin_id": "N-054",
+  "program_type": "college_access",
+  "outcome_text": "Seniors will be able to compare financial aid award letters and calculate net cost.",
+  "sid": "S081"
+ },
+ {
+  "origin_id": "G-041",
+  "program_type": "mentoring",
+  "outcome_text": "Youth will express gratitude toward family and mentors.",
+  "sid": "S082"
+ },
+ {
+  "origin_id": "V-081",
+  "program_type": "food_security",
+  "outcome_text": "Volunteers will report a greater understanding of food insecurity issues in their community after serving at the food pantry.",
+  "sid": "S083"
+ },
+ {
+  "origin_id": "N-055",
+  "program_type": "college_access",
+  "outcome_text": "Alumni will complete a bachelor's degree within six years.",
+  "sid": "S084"
+ },
+ {
+  "origin_id": "G-048",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Participating students will have fewer out-of-school suspensions.",
+  "sid": "S085"
+ },
+ {
+  "origin_id": "V-009",
+  "program_type": "mentoring",
+  "outcome_text": "Youth will set and work toward a personal goal with support from their mentor.",
+  "sid": "S086"
+ },
+ {
+  "origin_id": "V-048",
+  "program_type": "disability_inclusion",
+  "outcome_text": "Staff will increase their knowledge of inclusive practices and accommodations for youth with diverse abilities.",
+  "sid": "S087"
+ },
+ {
+  "origin_id": "N-099",
+  "program_type": "juvenile_justice_reentry",
+  "outcome_text": "Youth will avoid a new adjudication while on probation.",
+  "sid": "S088"
+ },
+ {
+  "origin_id": "G-001",
+  "program_type": "financial_literacy",
+  "outcome_text": "Youth will create and follow a monthly personal budget.",
+  "sid": "S089"
+ },
+ {
+  "origin_id": "N-096",
+  "program_type": "arts_education",
+  "outcome_text": "Students will connect a historical artwork to their own cultural experience.",
+  "sid": "S090"
+ },
+ {
+  "origin_id": "V-092",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "N/A",
+  "sid": "S091"
+ },
+ {
+  "origin_id": "N-003",
+  "program_type": "financial_capability",
+  "outcome_text": "Teens earning summer wages will deposit at least 25% of each paycheck into a savings account.",
+  "sid": "S092"
+ },
+ {
+  "origin_id": "V-017",
+  "program_type": "sports_recreation",
+  "outcome_text": "Youth will improve physical fitness and cardiovascular endurance.",
+  "sid": "S093"
+ },
+ {
+  "origin_id": "N-025",
+  "program_type": "health_promotion",
+  "outcome_text": "Students with asthma will reduce emergency room visits through improved self-management.",
+  "sid": "S094"
+ },
+ {
+  "origin_id": "G-002",
+  "program_type": "youth_savings",
+  "outcome_text": "Participants will open a savings account and make regular deposits.",
+  "sid": "S095"
+ },
+ {
+  "origin_id": "V-039",
+  "program_type": "housing_basic_needs",
+  "outcome_text": "Youth experiencing homelessness will maintain school enrollment and attendance despite housing disruptions.",
+  "sid": "S096"
+ },
+ {
+  "origin_id": "V-026",
+  "program_type": "environmental_outdoor",
+  "outcome_text": "Students will identify careers in environmental science and conservation.",
+  "sid": "S097"
+ },
+ {
+  "origin_id": "V-044",
+  "program_type": "immigrant_refugee",
+  "outcome_text": "Parents will access interpretation and translation services to communicate with teachers.",
+  "sid": "S098"
+ },
+ {
+  "origin_id": "N-067",
+  "program_type": "mentoring",
+  "outcome_text": "Mentees will expand their professional network by connecting with at least three adults in careers of interest.",
+  "sid": "S099"
+ },
+ {
+  "origin_id": "N-086",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Third graders will read on grade level by the end of the year.",
+  "sid": "S100"
+ },
+ {
+  "origin_id": "N-032",
+  "program_type": "partnerships_systems",
+  "outcome_text": "The school district will adopt a policy guaranteeing afterschool transportation for all students.",
+  "sid": "S101"
+ },
+ {
+  "origin_id": "N-005",
+  "program_type": "foster_care_transition",
+  "outcome_text": "Youth aging out of foster care will have at least one permanent, caring adult connection by age 21.",
+  "sid": "S102"
+ },
+ {
+  "origin_id": "V-074",
+  "program_type": "early_childhood",
+  "outcome_text": "Children will demonstrate improved self-regulation and ability to follow classroom routines.",
+  "sid": "S103"
+ },
+ {
+  "origin_id": "N-047",
+  "program_type": "stem_robotics",
+  "outcome_text": "Students will apply the engineering design process to build and test a prototype.",
+  "sid": "S104"
+ },
+ {
+  "origin_id": "N-001",
+  "program_type": "financial_capability",
+  "outcome_text": "Youth will track their spending for four weeks and identify one change to their habits.",
+  "sid": "S105"
+ },
+ {
+  "origin_id": "G-046",
+  "program_type": "family_support",
+  "outcome_text": "Families will enroll in SNAP and other public benefits they are eligible for.",
+  "sid": "S106"
+ },
+ {
+  "origin_id": "G-054",
+  "program_type": "digital_equity",
+  "outcome_text": "Youth will learn to protect their personal information online.",
+  "sid": "S107"
+ },
+ {
+  "origin_id": "N-021",
+  "program_type": "camp_4h_scouting",
+  "outcome_text": "Scouts will learn wilderness first aid and outdoor safety skills.",
+  "sid": "S108"
+ },
+ {
+  "origin_id": "N-044",
+  "program_type": "sports_recreation",
+  "outcome_text": "Athletes will maintain passing grades to remain eligible for the team.",
+  "sid": "S109"
+ },
+ {
+  "origin_id": "V-057",
+  "program_type": "civic_engagement",
+  "outcome_text": "Youth will identify a community issue and develop an action plan to address it.",
+  "sid": "S110"
+ },
+ {
+  "origin_id": "N-089",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will ask questions in class and participate in discussions.",
+  "sid": "S111"
+ },
+ {
+  "origin_id": "V-046",
+  "program_type": "immigrant_refugee",
+  "outcome_text": "Newcomer students will reduce social isolation and build friendships with peers who share similar experiences.",
+  "sid": "S112"
+ },
+ {
+  "origin_id": "N-036",
+  "program_type": "disability_inclusion",
+  "outcome_text": "The program will provide accommodations (sensory kits, visual schedules) so all youth can participate.",
+  "sid": "S113"
+ },
+ {
+  "origin_id": "V-055",
+  "program_type": "school_based_mental_health",
+  "outcome_text": "Students identified as high-risk will be connected to community mental health providers for ongoing care.",
+  "sid": "S114"
+ },
+ {
+  "origin_id": "G-036",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will explain how algebra relates to careers they are interested in.",
+  "sid": "S115"
+ },
+ {
+  "origin_id": "V-011",
+  "program_type": "mentoring",
+  "outcome_text": "Youth will feel like someone believes in them.",
+  "sid": "S116"
+ },
+ {
+  "origin_id": "G-052",
+  "program_type": "college_access",
+  "outcome_text": "Seniors will submit at least three college applications and the FAFSA.",
+  "sid": "S117"
+ },
+ {
+  "origin_id": "N-074",
+  "program_type": "family_support",
+  "outcome_text": "Parents will complete their GED or enroll in job training.",
+  "sid": "S118"
+ },
+ {
+  "origin_id": "G-022",
+  "program_type": "early_childhood",
+  "outcome_text": "Parents will read with their child at home at least three nights per week.",
+  "sid": "S119"
+ },
+ {
+  "origin_id": "N-006",
+  "program_type": "foster_care_transition",
+  "outcome_text": "Transition-age youth will obtain their birth certificate, Social Security card, and state ID before exiting care.",
+  "sid": "S120"
+ },
+ {
+  "origin_id": "N-027",
+  "program_type": "health_promotion",
+  "outcome_text": "Students will increase daily consumption of fruits and vegetables.",
+  "sid": "S121"
+ },
+ {
+  "origin_id": "N-085",
+  "program_type": "school_based_mental_health",
+  "outcome_text": "Students will be able to name three trusted adults or resources they can contact in a mental health crisis.",
+  "sid": "S122"
+ },
+ {
+  "origin_id": "V-059",
+  "program_type": "civic_engagement",
+  "outcome_text": "Youth will articulate how systemic racism affects their community and advocate for policy change.",
+  "sid": "S123"
+ },
+ {
+  "origin_id": "V-066",
+  "program_type": "faith_based",
+  "outcome_text": "Youth will report a stronger sense of purpose and belonging within their faith community.",
+  "sid": "S124"
+ },
+ {
+  "origin_id": "G-051",
+  "program_type": "faith_based",
+  "outcome_text": "Youth will grow in their faith and live out their values.",
+  "sid": "S125"
+ },
+ {
+  "origin_id": "N-075",
+  "program_type": "family_support",
+  "outcome_text": "Caregivers will build friendships with other parents in the program.",
+  "sid": "S126"
+ },
+ {
+  "origin_id": "V-036",
+  "program_type": "family_support",
+  "outcome_text": "Parents will attend at least 4 family workshops during the program year.",
+  "sid": "S127"
+ },
+ {
+  "origin_id": "G-034",
+  "program_type": "stem_robotics",
+  "outcome_text": "Students will ask questions and show curiosity during science demonstrations.",
+  "sid": "S128"
+ },
+ {
+  "origin_id": "N-017",
+  "program_type": "lgbtq_youth",
+  "outcome_text": "Youth will report greater self-acceptance of their sexual orientation and gender identity.",
+  "sid": "S129"
+ },
+ {
+  "origin_id": "G-056",
+  "program_type": "general",
+  "outcome_text": "Participants will show growth in the following areas:",
+  "sid": "S130"
+ },
+ {
+  "origin_id": "N-016",
+  "program_type": "lgbtq_youth",
+  "outcome_text": "LGBTQ+ youth will report feeling safe and affirmed in program spaces.",
+  "sid": "S131"
+ },
+ {
+  "origin_id": "N-020",
+  "program_type": "camp_4h_scouting",
+  "outcome_text": "4-H members will demonstrate public speaking skills by giving a demonstration at the county fair.",
+  "sid": "S132"
+ },
+ {
+  "origin_id": "G-030",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Youth will use a step-by-step process to identify a problem, brainstorm solutions, and act on one.",
+  "sid": "S133"
+ },
+ {
+  "origin_id": "G-044",
+  "program_type": "violence_prevention",
+  "outcome_text": "Youth will be involved in fewer physical fights.",
+  "sid": "S134"
+ },
+ {
+  "origin_id": "V-032",
+  "program_type": "family_support",
+  "outcome_text": "Parents will report increased confidence in their parenting skills.",
+  "sid": "S135"
+ },
+ {
+  "origin_id": "V-060",
+  "program_type": "civic_engagement",
+  "outcome_text": "Youth organizers will present testimony to the city council on a policy issue affecting their neighborhood.",
+  "sid": "S136"
+ },
+ {
+  "origin_id": "G-006",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Youth will report enjoying program activities.",
+  "sid": "S137"
+ },
+ {
+  "origin_id": "V-030",
+  "program_type": "workforce_cte",
+  "outcome_text": "Interns will report increased understanding of workplace culture and expectations at their internship site.",
+  "sid": "S138"
+ },
+ {
+  "origin_id": "V-040",
+  "program_type": "housing_basic_needs",
+  "outcome_text": "Families will connect with case management and access public benefits (SNAP, TANF, Medicaid).",
+  "sid": "S139"
+ },
+ {
+  "origin_id": "V-014",
+  "program_type": "arts_education",
+  "outcome_text": "Students will use art as a healthy outlet for processing emotions.",
+  "sid": "S140"
+ },
+ {
+  "origin_id": "N-018",
+  "program_type": "lgbtq_youth",
+  "outcome_text": "LGBTQ+ youth will report fewer experiences of harassment at school after the GSA launch.",
+  "sid": "S141"
+ },
+ {
+  "origin_id": "V-021",
+  "program_type": "sports_recreation",
+  "outcome_text": "Coaches will report improved ability to de-escalate conflicts between players during games.",
+  "sid": "S142"
+ },
+ {
+  "origin_id": "N-040",
+  "program_type": "immigrant_refugee",
+  "outcome_text": "Refugee youth will maintain fluency in their home language while learning English.",
+  "sid": "S143"
+ },
+ {
+  "origin_id": "N-042",
+  "program_type": "environmental_outdoor",
+  "outcome_text": "Participants will report feeling calmer and more restored after time spent in nature.",
+  "sid": "S144"
+ },
+ {
+  "origin_id": "V-063",
+  "program_type": "faith_based",
+  "outcome_text": "Youth will develop a personal set of moral values grounded in their faith tradition.",
+  "sid": "S145"
+ },
+ {
+  "origin_id": "V-010",
+  "program_type": "mentoring",
+  "outcome_text": "Mentors will report increased confidence in their ability to support youth from different cultural backgrounds.",
+  "sid": "S146"
+ },
+ {
+  "origin_id": "N-090",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will score proficient on the state science assessment.",
+  "sid": "S147"
+ },
+ {
+  "origin_id": "N-083",
+  "program_type": "school_based_mental_health",
+  "outcome_text": "School counselors will implement a universal SEL screener.",
+  "sid": "S148"
+ },
+ {
+  "origin_id": "N-030",
+  "program_type": "program_quality",
+  "outcome_text": "Staff turnover will decrease to below 20% annually.",
+  "sid": "S149"
+ },
+ {
+  "origin_id": "N-050",
+  "program_type": "media_journalism",
+  "outcome_text": "Student reporters will publish at least two articles in the community newspaper.",
+  "sid": "S150"
+ },
+ {
+  "origin_id": "N-037",
+  "program_type": "disability_inclusion",
+  "outcome_text": "Youth with disabilities will transition into competitive integrated employment after high school.",
+  "sid": "S151"
+ },
+ {
+  "origin_id": "V-031",
+  "program_type": "workforce_cte",
+  "outcome_text": "Youth will explore at least three career pathways aligned to their interests using labor market data.",
+  "sid": "S152"
+ },
+ {
+  "origin_id": "N-073",
+  "program_type": "early_childhood",
+  "outcome_text": "Home visitors will observe increased positive parent-child interactions.",
+  "sid": "S153"
+ },
+ {
+  "origin_id": "N-033",
+  "program_type": "partnerships_systems",
+  "outcome_text": "Neighborhood residents will report increased trust in one another and willingness to intervene for youth safety.",
+  "sid": "S154"
+ },
+ {
+  "origin_id": "N-049",
+  "program_type": "media_journalism",
+  "outcome_text": "Youth will evaluate the credibility of online news sources and identify misinformation.",
+  "sid": "S155"
+ },
+ {
+  "origin_id": "N-063",
+  "program_type": "restorative_justice",
+  "outcome_text": "Out-of-school suspensions will decrease by 30% at partner schools.",
+  "sid": "S156"
+ },
+ {
+  "origin_id": "G-020",
+  "program_type": "family_support",
+  "outcome_text": "Families will report trusting program staff and feeling welcome at the center.",
+  "sid": "S157"
+ },
+ {
+  "origin_id": "G-011",
+  "program_type": "sports_recreation",
+  "outcome_text": "Youth will feel more confident trying new challenges.",
+  "sid": "S158"
+ },
+ {
+  "origin_id": "N-048",
+  "program_type": "stem_robotics",
+  "outcome_text": "Participants will enroll in an advanced STEM course the following school year.",
+  "sid": "S159"
+ },
+ {
+  "origin_id": "V-067",
+  "program_type": "juvenile_justice_reentry",
+  "outcome_text": "Youth will reduce recidivism and avoid re-arrest within 12 months of program completion.",
+  "sid": "S160"
+ },
+ {
+  "origin_id": "N-101",
+  "program_type": "workforce_cte",
+  "outcome_text": "Youth will demonstrate safe use of tools in the construction trades lab.",
+  "sid": "S161"
+ },
+ {
+  "origin_id": "N-019",
+  "program_type": "camp_4h_scouting",
+  "outcome_text": "Campers will demonstrate increased independence in self-care tasks away from home.",
+  "sid": "S162"
+ },
+ {
+  "origin_id": "G-043",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Students will feel safe and accepted at the program.",
+  "sid": "S163"
+ },
+ {
+  "origin_id": "N-077",
+  "program_type": "family_support",
+  "outcome_text": "Parents will serve on the program's family advisory council.",
+  "sid": "S164"
+ },
+ {
+  "origin_id": "V-073",
+  "program_type": "early_childhood",
+  "outcome_text": "Parents will read to their child at least 3 times per week.",
+  "sid": "S165"
+ },
+ {
+  "origin_id": "N-057",
+  "program_type": "youth_employment",
+  "outcome_text": "Apprentices will complete a registered apprenticeship program.",
+  "sid": "S166"
+ },
+ {
+  "origin_id": "N-097",
+  "program_type": "faith_based",
+  "outcome_text": "Youth will practice forgiveness in their relationships with family and friends.",
+  "sid": "S167"
+ },
+ {
+  "origin_id": "N-004",
+  "program_type": "financial_capability",
+  "outcome_text": "Students will be able to read a pay stub and explain payroll deductions.",
+  "sid": "S168"
+ },
+ {
+  "origin_id": "V-015",
+  "program_type": "arts_education",
+  "outcome_text": "Participants will collaborate with peers on a group theater production.",
+  "sid": "S169"
+ },
+ {
+  "origin_id": "V-056",
+  "program_type": "school_based_mental_health",
+  "outcome_text": "Students will show improved emotional regulation, reduced disciplinary referrals, and better peer relationships.",
+  "sid": "S170"
+ },
+ {
+  "origin_id": "V-029",
+  "program_type": "workforce_cte",
+  "outcome_text": "Youth will demonstrate punctuality, professional communication, and appropriate workplace attire.",
+  "sid": "S171"
+ },
+ {
+  "origin_id": "V-068",
+  "program_type": "juvenile_justice_reentry",
+  "outcome_text": "Youth will develop skills to resist peer pressure and avoid risky behaviors.",
+  "sid": "S172"
+ },
+ {
+  "origin_id": "V-076",
+  "program_type": "early_childhood",
+  "outcome_text": "Parents will increase their understanding of child developmental milestones and appropriate expectations.",
+  "sid": "S173"
+ },
+ {
+  "origin_id": "N-028",
+  "program_type": "program_quality",
+  "outcome_text": "Sites will improve their Youth Program Quality Assessment scores in the interaction and engagement domains.",
+  "sid": "S174"
+ },
+ {
+  "origin_id": "N-069",
+  "program_type": "mentoring",
+  "outcome_text": "Mentees will report that their mentor challenges them to keep improving.",
+  "sid": "S175"
+ },
+ {
+  "origin_id": "G-021",
+  "program_type": "family_support",
+  "outcome_text": "The program will create a family advisory board with parent representatives.",
+  "sid": "S176"
+ },
+ {
+  "origin_id": "V-003",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Participants will build new friendships with peers from different schools and grade levels.",
+  "sid": "S177"
+ },
+ {
+  "origin_id": "N-052",
+  "program_type": "college_access",
+  "outcome_text": "First-generation students will persist into their second year of college.",
+  "sid": "S178"
+ },
+ {
+  "origin_id": "V-004",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Youth will demonstrate improved frustration tolerance during homework time, leading to more assignments completed on time.",
+  "sid": "S179"
+ },
+ {
+  "origin_id": "V-018",
+  "program_type": "sports_recreation",
+  "outcome_text": "Athletes will demonstrate good sportsmanship (win or lose gracefully).",
+  "sid": "S180"
+ },
+ {
+  "origin_id": "V-034",
+  "program_type": "family_support",
+  "outcome_text": "Parents will report feeling more connected to their child's school community.",
+  "sid": "S181"
+ },
+ {
+  "origin_id": "V-058",
+  "program_type": "civic_engagement",
+  "outcome_text": "Youth will register to vote and participate in local elections.",
+  "sid": "S182"
+ },
+ {
+  "origin_id": "N-068",
+  "program_type": "mentoring",
+  "outcome_text": "Mentors will complete 6 hours of pre-match training.",
+  "sid": "S183"
+ },
+ {
+  "origin_id": "V-061",
+  "program_type": "civic_engagement",
+  "outcome_text": "Youth will complete 20 hours of community service through park cleanups and food drives.",
+  "sid": "S184"
+ },
+ {
+  "origin_id": "V-022",
+  "program_type": "environmental_outdoor",
+  "outcome_text": "Youth will increase their knowledge of local ecosystems and environmental science concepts.",
+  "sid": "S185"
+ },
+ {
+  "origin_id": "V-051",
+  "program_type": "disability_inclusion",
+  "outcome_text": "Youth will build friendships with both disabled and non-disabled peers in an inclusive setting.",
+  "sid": "S186"
+ },
+ {
+  "origin_id": "V-078",
+  "program_type": "food_security",
+  "outcome_text": "Youth will increase their knowledge of nutrition and healthy cooking skills.",
+  "sid": "S187"
+ },
+ {
+  "origin_id": "N-053",
+  "program_type": "college_access",
+  "outcome_text": "Students will visit at least three college campuses before senior year.",
+  "sid": "S188"
+ },
+ {
+  "origin_id": "V-069",
+  "program_type": "juvenile_justice_reentry",
+  "outcome_text": "Youth will successfully complete probation requirements and court-ordered conditions.",
+  "sid": "S189"
+ },
+ {
+  "origin_id": "G-053",
+  "program_type": "college_access",
+  "outcome_text": "Graduates will enroll in a two- or four-year college the fall after high school.",
+  "sid": "S190"
+ },
+ {
+  "origin_id": "N-007",
+  "program_type": "foster_care_transition",
+  "outcome_text": "Youth in extended foster care will enroll in health insurance through Medicaid until age 26.",
+  "sid": "S191"
+ },
+ {
+  "origin_id": "N-070",
+  "program_type": "early_childhood",
+  "outcome_text": "Children will demonstrate fine motor skills such as holding a pencil and using scissors.",
+  "sid": "S192"
+ },
+ {
+  "origin_id": "N-076",
+  "program_type": "family_support",
+  "outcome_text": "Parents will report knowing where to turn for help in a crisis.",
+  "sid": "S193"
+ },
+ {
+  "origin_id": "G-017",
+  "program_type": "afterschool_ost",
+  "outcome_text": "New students will make at least two friends in the program.",
+  "sid": "S194"
+ },
+ {
+  "origin_id": "N-031",
+  "program_type": "partnerships_systems",
+  "outcome_text": "The coalition will establish a shared data system across five youth-serving agencies.",
+  "sid": "S195"
+ },
+ {
+  "origin_id": "V-082",
+  "program_type": "digital_equity",
+  "outcome_text": "Families will receive a laptop and home internet access.",
+  "sid": "S196"
+ },
+ {
+  "origin_id": "N-094",
+  "program_type": "arts_education",
+  "outcome_text": "Students will critique a peer's artwork using the language of the discipline.",
+  "sid": "S197"
+ },
+ {
+  "origin_id": "V-037",
+  "program_type": "housing_basic_needs",
+  "outcome_text": "Families will secure stable, safe housing within 90 days of program enrollment.",
+  "sid": "S198"
+ },
+ {
+  "origin_id": "G-049",
+  "program_type": "arts_education",
+  "outcome_text": "Students will develop technical proficiency on their chosen instrument.",
+  "sid": "S199"
+ },
+ {
+  "origin_id": "N-012",
+  "program_type": "runaway_homeless_youth",
+  "outcome_text": "Youth experiencing homelessness will reduce nights spent on the street or in unsafe locations.",
+  "sid": "S200"
+ },
+ {
+  "origin_id": "N-056",
+  "program_type": "youth_employment",
+  "outcome_text": "Summer youth employees will receive a positive supervisor evaluation.",
+  "sid": "S201"
+ },
+ {
+  "origin_id": "V-090",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will demonstrate increased confidence in their academic abilities.",
+  "sid": "S202"
+ },
+ {
+  "origin_id": "G-027",
+  "program_type": "environmental_outdoor",
+  "outcome_text": "Youth will learn about local watershed ecology.",
+  "sid": "S203"
+ },
+ {
+  "origin_id": "G-047",
+  "program_type": "school_based_mental_health",
+  "outcome_text": "Staff will adopt trauma-informed practices in their classrooms.",
+  "sid": "S204"
+ },
+ {
+  "origin_id": "N-023",
+  "program_type": "health_promotion",
+  "outcome_text": "Youth will get at least eight hours of sleep on school nights.",
+  "sid": "S205"
+ },
+ {
+  "origin_id": "V-085",
+  "program_type": "digital_equity",
+  "outcome_text": "Family members will increase their digital literacy and confidence using technology for telehealth and school portals.",
+  "sid": "S206"
+ },
+ {
+  "origin_id": "V-020",
+  "program_type": "sports_recreation",
+  "outcome_text": "Participants will reduce screen time and increase physical activity outside of program hours.",
+  "sid": "S207"
+ },
+ {
+  "origin_id": "V-088",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will improve their math problem-solving skills and grade-level proficiency.",
+  "sid": "S208"
+ },
+ {
+  "origin_id": "G-031",
+  "program_type": "sports_recreation",
+  "outcome_text": "Youth will resolve disagreements with peers without fighting.",
+  "sid": "S209"
+ },
+ {
+  "origin_id": "V-080",
+  "program_type": "food_security",
+  "outcome_text": "Families will reduce reliance on emergency food assistance over time.",
+  "sid": "S210"
+ },
+ {
+  "origin_id": "G-037",
+  "program_type": "civic_engagement",
+  "outcome_text": "Youth council members will present policy recommendations to city council.",
+  "sid": "S211"
+ },
+ {
+  "origin_id": "N-084",
+  "program_type": "school_based_mental_health",
+  "outcome_text": "Students who experienced trauma will report feeling safe at school.",
+  "sid": "S212"
+ },
+ {
+  "origin_id": "V-016",
+  "program_type": "arts_education",
+  "outcome_text": "Youth will discover a new passion for dance.",
+  "sid": "S213"
+ },
+ {
+  "origin_id": "G-035",
+  "program_type": "stem_robotics",
+  "outcome_text": "Youth will continue pursuing robotics after the program ends, joining a school team.",
+  "sid": "S214"
+ },
+ {
+  "origin_id": "V-084",
+  "program_type": "digital_equity",
+  "outcome_text": "Youth will demonstrate safe and responsible online behavior, including recognizing scams and protecting personal information.",
+  "sid": "S215"
+ },
+ {
+  "origin_id": "G-012",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will believe they can pass their algebra class.",
+  "sid": "S216"
+ },
+ {
+  "origin_id": "G-057",
+  "program_type": "general",
+  "outcome_text": "Improve outcomes for students.",
+  "sid": "S217"
+ },
+ {
+  "origin_id": "N-098",
+  "program_type": "juvenile_justice_reentry",
+  "outcome_text": "Youth will secure a job within 90 days of release.",
+  "sid": "S218"
+ },
+ {
+  "origin_id": "N-100",
+  "program_type": "workforce_cte",
+  "outcome_text": "Students will earn college credit through dual enrollment in a CTE pathway.",
+  "sid": "S219"
+ },
+ {
+  "origin_id": "N-071",
+  "program_type": "early_childhood",
+  "outcome_text": "Children will show persistence and curiosity when working on puzzles and new tasks.",
+  "sid": "S220"
+ },
+ {
+  "origin_id": "V-089",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will increase their use of effective study strategies such as note-taking and test preparation.",
+  "sid": "S221"
+ },
+ {
+  "origin_id": "N-078",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Students will report that there is an adult at the program who notices when they are absent.",
+  "sid": "S222"
+ },
+ {
+  "origin_id": "N-092",
+  "program_type": "civic_engagement",
+  "outcome_text": "Youth will stand up for classmates who are being treated unfairly.",
+  "sid": "S223"
+ },
+ {
+  "origin_id": "N-009",
+  "program_type": "foster_care_transition",
+  "outcome_text": "Youth will demonstrate independent living skills such as cooking, budgeting, and scheduling appointments.",
+  "sid": "S224"
+ },
+ {
+  "origin_id": "N-010",
+  "program_type": "runaway_homeless_youth",
+  "outcome_text": "Youth staying at the shelter will exit to a safe and stable housing situation.",
+  "sid": "S225"
+ },
+ {
+  "origin_id": "G-058",
+  "program_type": "faith_based",
+  "outcome_text": "Youth will participate in a church-led service trip to rebuild homes.",
+  "sid": "S226"
+ },
+ {
+  "origin_id": "G-032",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Youth will help set up and clean up the program space each day.",
+  "sid": "S227"
+ },
+ {
+  "origin_id": "V-086",
+  "program_type": "digital_equity",
+  "outcome_text": "Program will distribute 200 refurbished laptops to low-income families this year.",
+  "sid": "S228"
+ },
+ {
+  "origin_id": "N-060",
+  "program_type": "violence_prevention",
+  "outcome_text": "Participants will report carrying a weapon less often.",
+  "sid": "S229"
+ },
+ {
+  "origin_id": "G-016",
+  "program_type": "stem_robotics",
+  "outcome_text": "Team members will collaborate to design and build a robot.",
+  "sid": "S230"
+ },
+ {
+  "origin_id": "V-050",
+  "program_type": "disability_inclusion",
+  "outcome_text": "Families of children with disabilities will report reduced caregiver stress and burnout.",
+  "sid": "S231"
+ },
+ {
+  "origin_id": "V-083",
+  "program_type": "digital_equity",
+  "outcome_text": "Youth will develop coding and computational thinking skills.",
+  "sid": "S232"
+ },
+ {
+  "origin_id": "G-024",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Participating students will reduce chronic absenteeism from school.",
+  "sid": "S233"
+ },
+ {
+  "origin_id": "V-002",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Youth will report feeling excited and happy to attend program each day.",
+  "sid": "S234"
+ },
+ {
+  "origin_id": "G-018",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will turn in homework on time.",
+  "sid": "S235"
+ },
+ {
+  "origin_id": "V-049",
+  "program_type": "disability_inclusion",
+  "outcome_text": "Youth will develop self-advocacy skills to communicate their needs and accommodations.",
+  "sid": "S236"
+ },
+ {
+  "origin_id": "V-053",
+  "program_type": "school_based_mental_health",
+  "outcome_text": "Students will develop coping strategies for managing stress.",
+  "sid": "S237"
+ },
+ {
+  "origin_id": "G-023",
+  "program_type": "afterschool_ost",
+  "outcome_text": "The program will serve 300 youth across four sites.",
+  "sid": "S238"
+ },
+ {
+  "origin_id": "G-010",
+  "program_type": "disability_inclusion",
+  "outcome_text": "Caregivers of children with autism will report reduced parenting stress.",
+  "sid": "S239"
+ },
+ {
+  "origin_id": "G-055",
+  "program_type": "digital_equity",
+  "outcome_text": "Every participating family will have a working laptop and home internet.",
+  "sid": "S240"
+ },
+ {
+  "origin_id": "V-071",
+  "program_type": "juvenile_justice_reentry",
+  "outcome_text": "Youth will re-enroll in school or obtain a GED following release.",
+  "sid": "S241"
+ },
+ {
+  "origin_id": "N-081",
+  "program_type": "afterschool_ost",
+  "outcome_text": "Youth will practice gratitude by writing thank-you notes to community volunteers.",
+  "sid": "S242"
+ },
+ {
+  "origin_id": "G-015",
+  "program_type": "mentoring",
+  "outcome_text": "Youth will adopt a growth mindset when facing setbacks.",
+  "sid": "S243"
+ },
+ {
+  "origin_id": "V-091",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Tutors (college volunteers) will strengthen their own communication and mentoring skills through the experience.",
+  "sid": "S244"
+ },
+ {
+  "origin_id": "V-035",
+  "program_type": "family_support",
+  "outcome_text": "Caregivers will demonstrate use of positive discipline strategies at home.",
+  "sid": "S245"
+ },
+ {
+  "origin_id": "G-025",
+  "program_type": "mentoring",
+  "outcome_text": "Mentees will report that their mentor cares about them.",
+  "sid": "S246"
+ },
+ {
+  "origin_id": "V-079",
+  "program_type": "food_security",
+  "outcome_text": "Participants will grow and harvest vegetables in the community garden.",
+  "sid": "S247"
+ },
+ {
+  "origin_id": "N-059",
+  "program_type": "violence_prevention",
+  "outcome_text": "Youth will be able to identify warning signs of dating violence.",
+  "sid": "S248"
+ },
+ {
+  "origin_id": "G-019",
+  "program_type": "general_education_tutoring",
+  "outcome_text": "Students will improve reading comprehension scores by one grade level.",
+  "sid": "S249"
+ },
+ {
+  "origin_id": "G-013",
+  "program_type": "faith_based",
+  "outcome_text": "Youth will develop a sense of purpose for their lives.",
+  "sid": "S250"
+ },
+ {
+  "origin_id": "N-015",
+  "program_type": "teen_parents",
+  "outcome_text": "Teen parents will delay a second pregnancy for at least 24 months.",
+  "sid": "S251"
+ },
+ {
+  "origin_id": "V-043",
+  "program_type": "immigrant_refugee",
+  "outcome_text": "Families will navigate school enrollment and special education processes despite language barriers.",
+  "sid": "S252"
+ },
+ {
+  "origin_id": "G-039",
+  "program_type": "workforce_cte",
+  "outcome_text": "Interns will demonstrate leadership and initiative in the workplace.",
+  "sid": "S253"
+ },
+ {
+  "origin_id": "N-091",
+  "program_type": "civic_engagement",
+  "outcome_text": "Youth will explain how a bill becomes a law in their state.",
+  "sid": "S254"
+ },
+ {
+  "origin_id": "V-024",
+  "program_type": "environmental_outdoor",
+  "outcome_text": "Participants will build confidence in outdoor physical skills (hiking, kayaking, rock climbing).",
+  "sid": "S255"
+ }
+]

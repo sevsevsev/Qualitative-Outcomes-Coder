@@ -17,6 +17,12 @@ export interface SubcategoryDefinition {
    * need one.
    */
   hint?: string;
+  /**
+   * Subject Area values that agree with this subcategory. When set, a coded
+   * row whose Subject Area is anything else is flagged for review (see
+   * subjectAreaMismatch). Leave unset for codes that apply to any subject.
+   */
+  subjectAreas?: string[];
 }
 
 export interface DomainDefinition {
@@ -81,3 +87,21 @@ export const subcategoriesForDomain = (
   domainCode: string
 ): SubcategoryDefinition[] =>
   codebook.domains.find(d => d.code === domainCode)?.subcategories ?? [];
+
+/**
+ * Returns the Subject Area values `subcategoryCode` expects when the row's
+ * `subjectArea` disagrees with them, or null when it agrees or the code
+ * does not pin a subject. Gemini's schema cannot make one field depend on
+ * another, so this check runs after coding and in the review UI instead.
+ */
+export const subjectAreaMismatch = (
+  codebook: Codebook,
+  subcategoryCode: string,
+  subjectArea: string
+): string[] | null => {
+  const sub = codebook.domains
+    .flatMap(d => d.subcategories)
+    .find(s => s.code === subcategoryCode);
+  if (!sub?.subjectAreas) return null;
+  return sub.subjectAreas.includes(subjectArea) ? null : sub.subjectAreas;
+};

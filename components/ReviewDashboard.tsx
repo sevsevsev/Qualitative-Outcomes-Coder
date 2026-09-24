@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { AtomicBatchItem, BatchAnalysisResult, CodebookType } from '../types.js';
-import { getCodebook, allDomainCodes, subcategoriesForDomain } from '../codebooks/index.js';
+import { getCodebook, allDomainCodes, subcategoriesForDomain, subjectAreaMismatch } from '../codebooks/index.js';
 import { atomicJsonToCSV } from '../services/geminiService.js';
 import { saveReviewState, clearReviewState } from '../services/reviewStorage.js';
 import { normalizeImportedCoding } from '../services/reviewNormalization.js';
@@ -345,6 +345,9 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                   const selectedSubHint = item.primary_domain && item.primary_subcategory
                      ? subcategoryHint(item.primary_domain, item.primary_subcategory)
                      : undefined;
+                  const expectedSubjects = hasSubjectArea && !item.uncoded && item.primary_subcategory
+                     ? subjectAreaMismatch(codebookDef, item.primary_subcategory, item.primary_subject_area || '')
+                     : null;
                   return (
                   // TALLER ROW via py-5
                   <tr key={item.internal_id} className={`hover:bg-slate-50/80 transition-colors group ${item.is_corrected ? 'bg-blue-50/20' : ''}`}>
@@ -456,7 +459,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                     {hasSubjectArea && (
                       <td className="px-4 py-5 align-top">
                          <select
-                           className="w-full text-xs border-slate-300 rounded focus:ring-blue-500 focus:border-blue-500 bg-white text-slate-900 py-1.5 disabled:bg-slate-50 disabled:text-slate-400"
+                           className={`w-full text-xs border-slate-300 rounded focus:ring-blue-500 focus:border-blue-500 bg-white text-slate-900 py-1.5 disabled:bg-slate-50 disabled:text-slate-400 ${expectedSubjects ? 'ring-2 ring-amber-300 border-amber-300' : ''}`}
                            value={item.primary_subject_area || ''}
                            onChange={(e) => handleUpdate(item.internal_id, 'primary_subject_area', e.target.value)}
                            disabled={!!item.uncoded}
@@ -466,6 +469,9 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                               <option key={opt} value={opt}>{opt}</option>
                            ))}
                         </select>
+                        {expectedSubjects && (
+                           <p className="mt-1 text-[11px] leading-snug text-amber-700">Doesn't match {item.primary_subcategory.split(' ')[0]}. Expected: {expectedSubjects.join(' or ')}</p>
+                        )}
                       </td>
                     )}
 

@@ -1,6 +1,6 @@
 {
   "codebook_id": "original",
-  "codebook_version_reviewed": "1.1.1",
+  "codebook_version_reviewed": "1.2.0",
   "last_reviewed": "2026-09-23 (cycle-01b verification)",
   "status_legend": {
     "verified": "Fetched from `url` during a recorded run. `excerpt` is verbatim and supports the listed codes/components.",
@@ -221,6 +221,15 @@
           "source_kind": "primary",
           "excerpt": "Performing: Realizing artistic ideas and work through interpretation and presentation. ... Responding: Understanding and evaluating how the arts convey meaning.",
           "verifier_note": "The excerpt joins separate process definitions from the same page.",
+          "url_checked": "https://www.nationalartsstandards.org/"
+        },
+        {
+          "code": "11.9",
+          "component": "Four artistic processes (Creating; Performing/Presenting/Producing; Responding; Connecting) across dance, media arts, music, theatre and visual arts",
+          "verdict": "PARTIAL",
+          "source_kind": "primary",
+          "excerpt": "Creating: Conceiving and developing new artistic ideas and work. ... Responding: Understanding and evaluating how the arts convey meaning. ... Connecting: Relating artistic ideas and work with personal meaning and external context.",
+          "verifier_note": "V04-06. The processes organize the standards across five disciplines; no wording calls them 'the definition of learning'. Authored by NCCAS; site hosted by Young Audiences.",
           "url_checked": "https://www.nationalartsstandards.org/"
         }
       ],
@@ -955,7 +964,7 @@
           "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section6311&num=0&edition=prelim"
         }
       ],
-      "notes": "11.2 and 11.3 currently have no per-subcategory citation line in definitionsText, only the Domain 11 header. Mapped here so coverage is visible.",
+      "notes": "11.2 and 11.3 currently have no per-subcategory citation line in definitionsText, only the Domain 11 header. Mapped here so coverage is visible. 2026-09-24 (CP-04-01/02): 11.2 and 11.3 now cite 6311(b)(1)(C) and 7801(52) respectively; the 11.3 UNSUPPORTED row is kept as the record of cycle-01b's finding.",
       "cite_as_in_codebook": "Every Student Succeeds Act (2015) — statewide accountability indicators (academic achievement; graduation rate; English learner progress)",
       "verified_on": "2026-09-23",
       "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
@@ -1206,6 +1215,185 @@
         }
       ],
       "notes": "Used as the coverage benchmark for foster-care and transition-age youth programs (cycle-01 coverage matrix)."
+    },
+    {
+      "id": "essa-6311-b1c-standards",
+      "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 6311(b)(1)(C) -- challenging State academic standards (mathematics, reading or language arts, science); 6311(b)(2)(B)(v)(II) science assessments",
+      "tier": "A",
+      "publisher": "U.S. Congress",
+      "year": 2015,
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section6311&num=0&edition=prelim",
+      "status": "verified",
+      "verified_on": "2026-09-24",
+      "verified_by": "cycle-04 (independent codebook-citation-verifier agent, blind to proposer reasoning; WebFetch)",
+      "excerpt": "The State shall have such academic standards for mathematics, reading or language arts, and science, and may have such standards for any other subject determined by the State.",
+      "supports": [
+        {
+          "code": "11.1",
+          "component": "State academic standards for reading or language arts",
+          "verdict": "SUPPORTED",
+          "source_kind": "primary",
+          "excerpt": "The State shall have such academic standards for mathematics, reading or language arts, and science, and may have such standards for any other subject determined by the State.",
+          "verifier_note": "V04-01.",
+          "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section6311&num=0&edition=prelim"
+        },
+        {
+          "code": "11.2",
+          "component": "State academic standards for mathematics",
+          "verdict": "SUPPORTED",
+          "source_kind": "primary",
+          "excerpt": "The State shall have such academic standards for mathematics, reading or language arts, and science, and may have such standards for any other subject determined by the State.",
+          "verifier_note": "V04-02.",
+          "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section6311&num=0&edition=prelim"
+        },
+        {
+          "code": "11.8",
+          "component": "State academic standards and assessments for science",
+          "verdict": "SUPPORTED",
+          "source_kind": "primary",
+          "excerpt": "academic standards for mathematics, reading or language arts, and science ... not less than one time during ... grades 3 through 5 ... grades 6 through 9 ... grades 10 through 12",
+          "verifier_note": "V04-03. Covers science only; technology and engineering rest on NGSS and CSTA.",
+          "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section6311&num=0&edition=prelim"
+        }
+      ]
+    },
+    {
+      "id": "essa-7801-52-well-rounded",
+      "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 7801(52) -- definition of 'well-rounded education'",
+      "tier": "A",
+      "publisher": "U.S. Congress",
+      "year": 2015,
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section7801&num=0&edition=prelim",
+      "status": "verified",
+      "verified_on": "2026-09-24",
+      "verified_by": "cycle-04 (independent codebook-citation-verifier agent, blind to proposer reasoning; WebFetch)",
+      "excerpt": "courses, activities, and programming in subjects such as ... foreign languages, civics and government, economics, arts, history, geography, ... career and technical education, health, physical education, and any other subject, as determined by the State or local educational agency",
+      "supports": [
+        {
+          "code": "11.3",
+          "component": "Subjects of a well-rounded education (civics and government, economics, history, geography, foreign languages, health, any other subject)",
+          "verdict": "SUPPORTED",
+          "source_kind": "primary",
+          "excerpt": "courses, activities, and programming in subjects such as ... foreign languages, civics and government, economics, arts, history, geography, ... career and technical education, health, physical education, and any other subject, as determined by the State or local educational agency",
+          "verifier_note": "V04-04. The full list also names English, writing, science, technology, engineering, mathematics, arts, computer science and music; it defines access to courses, so it anchors 11.3 by scope.",
+          "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section7801&num=0&edition=prelim"
+        }
+      ]
+    },
+    {
+      "id": "naep-9622-b2d",
+      "cite_as": "National Assessment of Educational Progress Authorization Act, 20 U.S.C. 9622(b)(2)(D) -- additional subject matter",
+      "tier": "A",
+      "publisher": "U.S. Congress",
+      "year": 2002,
+      "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap76-subchapIII-sec9622.htm",
+      "status": "verified",
+      "verified_on": "2026-09-24",
+      "verified_by": "cycle-04 (independent codebook-citation-verifier agent, blind to proposer reasoning; WebFetch)",
+      "excerpt": "conduct additional national assessments ... in additional subject matter, including writing, science, history, geography, civics, economics, foreign languages, and arts, and the trend assessment",
+      "supports": [
+        {
+          "code": "11.3",
+          "component": "Additional subject matter NAEP may assess (history, geography, civics, economics, foreign languages)",
+          "verdict": "SUPPORTED",
+          "source_kind": "primary",
+          "excerpt": "conduct additional national assessments ... in additional subject matter, including writing, science, history, geography, civics, economics, foreign languages, and arts, and the trend assessment",
+          "verifier_note": "V04-05. The statute makes these assessments conditional on time and resources.",
+          "url_checked": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap76-subchapIII-sec9622.htm"
+        }
+      ]
+    },
+    {
+      "id": "ngss-2013",
+      "cite_as": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. National Academies Press.",
+      "tier": "B",
+      "publisher": "NGSS Lead States (Achieve)",
+      "year": 2013,
+      "url": "https://www.nextgenscience.org/",
+      "status": "located",
+      "verified_on": "2026-09-24",
+      "verified_by": "cycle-04 (independent codebook-citation-verifier agent, blind to proposer reasoning; WebFetch)",
+      "excerpt": "describe what scientists do to investigate the natural world and what engineers do to design and build systems ... the key ideas in science that have broad importance within or across multiple science or engineering disciplines",
+      "supports": [
+        {
+          "code": "11.8",
+          "component": "Three dimensions: science and engineering practices, crosscutting concepts, disciplinary core ideas",
+          "verdict": "PARTIAL",
+          "source_kind": "primary",
+          "excerpt": "describe what scientists do to investigate the natural world and what engineers do to design and build systems ... the key ideas in science that have broad importance within or across multiple science or engineering disciplines",
+          "verifier_note": "V04-07. Three dimensions confirmed; the fetched pages do not place engineering design inside the core ideas (it is an appendix).",
+          "url_checked": "https://www.nextgenscience.org/"
+        }
+      ]
+    },
+    {
+      "id": "csta-k12-2017",
+      "cite_as": "Computer Science Teachers Association (2017). CSTA K-12 Computer Science Standards, Revised 2017.",
+      "tier": "B",
+      "publisher": "Computer Science Teachers Association",
+      "year": 2017,
+      "url": "https://csteachers.org/k12standards/",
+      "status": "verified",
+      "verified_on": "2026-09-24",
+      "verified_by": "cycle-04 (independent codebook-citation-verifier agent, blind to proposer reasoning; WebFetch)",
+      "excerpt": "delineate a core set of learning objectives designed to provide the foundation for a complete computer science curriculum and its implementation at the K–12 level.",
+      "supports": [
+        {
+          "code": "11.8",
+          "component": "Learning objectives for computer science (Algorithms and Programming; Computing Systems; Data and Analysis)",
+          "verdict": "SUPPORTED",
+          "source_kind": "primary",
+          "excerpt": "delineate a core set of learning objectives designed to provide the foundation for a complete computer science curriculum and its implementation at the K–12 level.",
+          "verifier_note": "V04-08.",
+          "url_checked": "https://csteachers.org/k12standards/"
+        }
+      ]
+    },
+    {
+      "id": "ccss-writing-anchors",
+      "cite_as": "NGA Center & CCSSO (2010). Common Core State Standards for English Language Arts: College and Career Readiness Anchor Standards for Writing.",
+      "tier": "B",
+      "publisher": "National Governors Association Center for Best Practices; Council of Chief State School Officers",
+      "year": 2010,
+      "url": "https://www.thecorestandards.org/ELA-Literacy/CCRA/W/",
+      "status": "verified",
+      "verified_on": "2026-09-24",
+      "verified_by": "cycle-04 (independent codebook-citation-verifier agent, blind to proposer reasoning; WebFetch)",
+      "excerpt": "Text Types and Purposes ... Production and Distribution of Writing ... Research to Build and Present Knowledge ... Range of Writing",
+      "supports": [
+        {
+          "code": "11.1",
+          "component": "Anchor standards for writing (text types and purposes; production and distribution of writing; research; range of writing)",
+          "verdict": "SUPPORTED",
+          "source_kind": "primary",
+          "excerpt": "Text Types and Purposes ... Production and Distribution of Writing ... Research to Build and Present Knowledge ... Range of Writing",
+          "verifier_note": "V04-09.",
+          "url_checked": "https://www.thecorestandards.org/ELA-Literacy/CCRA/W/"
+        }
+      ]
+    },
+    {
+      "id": "allensworth-easton-2007",
+      "cite_as": "Allensworth, E. M., & Easton, J. Q. (2007, July). What Matters for Staying On-Track and Graduating in Chicago Public High Schools: A Close Look at Course Grades, Failures, and Attendance in the Freshman Year. Consortium on Chicago School Research at the University of Chicago.",
+      "tier": "C",
+      "publisher": "Consortium on Chicago School Research",
+      "year": 2007,
+      "url": "https://consortium.uchicago.edu/sites/default/files/2018-10/07%20What%20Matters%20Final.pdf",
+      "status": "verified",
+      "verified_on": "2026-09-24",
+      "verified_by": "cycle-04 (independent codebook-citation-verifier agent, blind to proposer reasoning; WebFetch)",
+      "excerpt": "Whether a student is on-track, GPA, and the number of semester course failures all correctly identify graduates and nongraduates 80 percent of the time.",
+      "supports": [
+        {
+          "code": "11.6",
+          "component": "Course grades, GPA and course failures as on-track indicators",
+          "verdict": "SUPPORTED",
+          "source_kind": "primary",
+          "excerpt": "Whether a student is on-track, GPA, and the number of semester course failures all correctly identify graduates and nongraduates 80 percent of the time.",
+          "verifier_note": "V04-10. Excerpt extracted by the fetch tool from the PDF; re-check before quoting in print.",
+          "url_checked": "https://consortium.uchicago.edu/sites/default/files/2018-10/07%20What%20Matters%20Final.pdf"
+        }
+      ]
     }
   ],
   "codebook_extensions": [
@@ -1224,10 +1412,6 @@
     {
       "code": "9.2",
       "reason": "Pending replacement of the OTL citation (CP-01-10)."
-    },
-    {
-      "code": "11.3",
-      "reason": "Needs a source: cycle-01b's independent check found ESSA's academic achievement indicator covers only math and reading/language arts, so it does not support 11.3 (other subjects). Tracked in CP-01-13."
     }
   ]
 }

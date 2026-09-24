@@ -21,6 +21,15 @@
 // stewardship, digital access, cross-sector partnership capacity, and a
 // few others) were deliberately deferred rather than added here -- see the
 // "Deferred for a future revision" note at the bottom of this file.
+//
+// v1.2.0 (CP-04-01 to CP-04-04) splits Domain 11's learning codes by subject:
+// 11.1 now covers writing as well as reading, 11.3 is re-anchored on ESSA's
+// "well-rounded education" definition for the remaining academic subjects,
+// and new 11.8 (science, technology & engineering) and 11.9 (arts learning)
+// take the two largest subject groups out of 11.3. Grades, GPA and
+// unspecified "academic performance" move to 11.6. Domain 11 is listed
+// first, keeping its number, because academic outcomes are the top policy
+// priority for school and district users.
 
 import { Codebook } from './types.js';
 
@@ -55,6 +64,55 @@ export const TARGET_POPULATION_OPTIONS = [
 ];
 
 const definitionsText = `
+Domain 11. Academic Learning & Achievement
+Framework Basis: ESSA (2015) State academic standards, 20 U.S.C. 6311(b)(1)(C) (reading or language arts, mathematics, science) and "well-rounded education", 20 U.S.C. 7801(52); National Reading Panel & Common Core writing anchors (Literacy); NGSS & CSTA (Science, Technology & Engineering); National Core Arts Standards (Arts); UChicago Consortium On-Track Indicator (Allensworth & Easton); Attendance Works; WIDA English Language Development Standards; Head Start Early Learning Outcomes Framework (11.7)
+(Note: This domain covers DEMONSTRATED learning gains and enrollment/completion status. It is distinct from Domain 4, which covers behaviors and beliefs ABOUT learning, and from 8.1, which is scoped specifically to college/career-readiness content mastery.)
+(Note: Learning codes are split by SUBJECT: 11.1 literacy, 11.2 math, 11.8 science/technology/engineering, 11.9 the arts, and 11.3 every other academic subject. Grades, GPA, credits and "academic performance" with no subject named are a status, not a subject -- use 11.6.)
+(Note: This domain is listed first because academic outcomes are the top priority for many school and district users. The order of domains in this codebook carries no weight when choosing a code.)
+11.1 Literacy: Reading & Writing
+   - Definition: Demonstrated growth in reading skill (phonemic awareness, phonics, fluency, vocabulary, comprehension, reading level) or in writing and composition (planning, drafting and revising written work in any genre).
+   - Source Framework: Report of the National Reading Panel (NICHD, 2000): alphabetics, fluency, comprehension; Common Core State Standards, College and Career Readiness Anchor Standards for Writing; ESSA State standards for reading or language arts, 20 U.S.C. 6311(b)(1)(C).
+   - Note: Writing habits, effort or confidence about writing go to Domain 4. Oral communication and public speaking go to 3.4.1 (or 8.5 in a work context).
+   - Example: "Students will improve reading fluency by one grade level." OR "Students will write a well-organized informational essay."
+11.2 Numeracy & Mathematical Skill
+   - Definition: Demonstrated growth in math skill or grade-level proficiency.
+   - Source Framework: ESSA State academic standards for mathematics, 20 U.S.C. 6311(b)(1)(C).
+   - Example: "Students will increase math problem-solving skills and grade-level proficiency."
+11.3 Knowledge & Skill in Other Academic Subjects
+   - Definition: Demonstrated learning of content, concepts or skills in an academic subject other than literacy, math, science/technology/engineering and the arts -- for example history, geography, civics and government, economics, world languages, or health education -- NOT explicitly framed around college/career readiness.
+   - Source Framework: ESSA "well-rounded education", 20 U.S.C. 7801(52) (subjects such as civics and government, economics, history, geography, foreign languages, health); NAEP authorization, 20 U.S.C. 9622(b)(2)(D) (additional subject matter).
+   - Note: Sport or physical-skill proficiency goes to 7.1. A practical skill with no academic content (cooking technique, bicycle repair) is not a subject: code it to the closest fit at low confidence. Use 8.1 only when the outcome is explicitly framed around college/career readiness.
+   - Example: "Students will explain the causes of a major historical event."
+11.4 English Language Proficiency & Multilingual Development
+   - Definition: Growth in English language proficiency for multilingual learners/English learners (listening, speaking, reading, writing).
+   - Source Framework: WIDA English Language Development Standards Framework.
+   - Note: This is the inverse of the "World Languages" subject area (a native English speaker learning another language). Use 11.4 for an English learner acquiring English.
+   - Example: "Youth will improve their English language proficiency."
+11.5 Attendance, Chronic Absence & School Stability
+   - Definition: Outcomes related to a STUDENT'S regular attendance, reduced chronic absenteeism, or maintaining school enrollment/stability through disruption (e.g., housing instability, school transitions).
+   - Source Framework: Attendance Works Chronic Absence Framework; McKinney-Vento Act (school stability for students experiencing homelessness).
+   - Note: For PROGRAM-level attendance/dosage metrics (not a specific student's school attendance), use 10.5 instead.
+   - Example: "Program will reduce chronic absenteeism among participating students." OR "Youth experiencing homelessness will maintain school enrollment despite housing disruptions."
+11.6 Grades, Credits, On-Track Status & Graduation
+   - Definition: Outcomes related to course grades, GPA, course passing or failure, credit accumulation, grade promotion, 9th-grade on-track status, reduced exclusionary discipline (suspension/expulsion), or graduation/completion/re-engagement (including GED). Also use for general "academic performance/achievement" or test scores when no subject is named.
+   - Source Framework: UChicago Consortium On-Track Indicator (Allensworth & Easton, 2005; grades and GPA: Allensworth & Easton, 2007); ESSA four-year adjusted cohort graduation rate.
+   - Note: A test score or proficiency level in a NAMED subject goes to that subject's code (11.1, 11.2, 11.3, 11.8, 11.9). Grades or GPA go here even when a subject is named -- record the subject in Subject Area.
+   - Example: "Students will stay on-track for graduation by earning all required credits." OR "Participants with a GPA below 3.0 will raise their GPA." OR "Youth will re-enroll in school or obtain a GED following release."
+11.7 School Readiness & Early Learning
+   - Definition: Outcomes for young children (pre-K/early childhood) related to kindergarten readiness, pre-literacy/early language skills, or developmental screening and milestones.
+   - Source Framework: Head Start Early Learning Outcomes Framework (Language & Literacy and Cognition domains specifically -- Social-Emotional outcomes for this age group should use Domain 3, and Approaches-to-Learning outcomes should use Domain 4).
+   - Example: "Children will demonstrate age-appropriate pre-literacy skills (letter recognition, phonemic awareness)."
+11.8 Science, Technology & Engineering
+   - Definition: Demonstrated learning in science (life, physical, earth or environmental science), engineering design, or computer science (computing concepts, coding, programming), NOT explicitly framed around college/career readiness.
+   - Source Framework: ESSA State academic standards for science, 20 U.S.C. 6311(b)(1)(C); Next Generation Science Standards (science and engineering practices, crosscutting concepts, disciplinary core ideas); CSTA K-12 Computer Science Standards (2017).
+   - Note: Interest or curiosity about STEM goes to Domain 1, and STEM identity to 5.4. Responsible and safe technology use goes to 6.5. Use 8.1 only when the outcome is explicitly framed around college/career readiness.
+   - Example: "Youth will build and program a simple circuit." OR "Students will explain how local ecosystems respond to change."
+11.9 Arts Learning & Performance
+   - Definition: Demonstrated learning in an art form (dance, media arts, music, theatre, visual arts): technique, vocabulary, and knowledge of the discipline's forms, history and concepts.
+   - Source Framework: National Core Arts Standards (2014): standards for dance, media arts, music, theatre and visual arts, organized by the artistic processes of Creating; Performing/Presenting/Producing; Responding; and Connecting.
+   - Note: Use 11.9 for a skill or knowledge GAIN in the art form. Use 1.4 when the outcome is self-expression through making something, and 1.5 when it is presenting finished work or responding to art as an experience rather than a skill gain.
+   - Example: "Students will learn and demonstrate fundamental dance vocabulary." OR "Youth will demonstrate technical proficiency on their chosen instrument."
+
 Domain 1. Joy, Interest & Motivation in Learning
 Framework Basis: Gholdy Muhammad (Joy) & Hidi/Renninger (Interest); National Core Arts Standards (1.5)
 1.1 Joy & Emotional Wellness
@@ -76,7 +134,7 @@ Framework Basis: Gholdy Muhammad (Joy) & Hidi/Renninger (Interest); National Cor
 1.5 Performance, Presentation & Artistic Response
    - Definition: Outcomes involving performing or presenting creative work publicly (exhibitions, recitals, portfolios), or responding to/analyzing art (critique, aesthetic analysis, connecting art to personal or cultural meaning).
    - Source Framework: National Core Arts Standards (Artistic Processes: Performing/Presenting/Producing, Responding, Connecting).
-   - Note: Use 1.4 for the act of creating; use 1.5 for presenting/performing finished work or responding to art.
+   - Note: Use 1.4 for the act of creating; use 1.5 for presenting/performing finished work or responding to art. A demonstrated skill or knowledge gain in the art form (technique, vocabulary) goes to 11.9.
    - Example: "Youth will present their artwork in a public exhibition."
 
 Domain 2. Belonging, Relationships & School Connectedness
@@ -286,7 +344,7 @@ Framework Basis: David Conley’s "Four Keys" & Perkins V (CTE Framework); Natio
 (Note: Conley's fourth key, "Key Learning Skills and Techniques," is deliberately routed to Domain 4 (4.2, 4.3) and Domain 3 (3.2.3, 3.2.4) rather than duplicated here.)
 8.1 Key Content Knowledge
    - Definition: Mastery of core subjects EXPLICITLY FRAMED around post-secondary/college readiness.
-   - Note: Use 8.1 only when the outcome is explicitly framed around college/career readiness. For general content learning not framed that way (e.g., a younger student, or a general enrichment program), use 11.3.
+   - Note: Use 8.1 only when the outcome is explicitly framed around college/career readiness. For general content learning not framed that way (e.g., a younger student, or a general enrichment program), use the subject's Domain 11 code (11.1, 11.2, 11.3, 11.8 or 11.9).
    - Example: "Students will master Algebra I concepts."
 8.2 Key Cognitive Strategies
    - Definition: Critical thinking, research, and problem formulation skills relevant to career/college.
@@ -345,39 +403,6 @@ Framework Basis: Learning Forward Standards & Epstein Type 3/6; Weikart Center Y
    - Source Framework: Weikart Center Youth Program Quality Assessment; Harvard Family Research Project (now archived under Global Family Research Project, 2017-) out-of-school-time participation dimensions.
    - Note: These are program OUTPUTS, not youth outcomes. Use this code rather than forcing a dosage/attendance statistic into an unrelated youth-outcome domain, and rather than marking it "uncoded" -- it is a real, codeable statement; it simply does not describe a change in a young person.
    - Example: "Program will maintain 85% average daily attendance across all sites." OR "Match pairs will meet consistently for at least 12 months."
-
-Domain 11. Academic Learning & Achievement
-Framework Basis: National Reading Panel (Literacy); ESSA Academic Achievement & Progress Indicators; UChicago Consortium On-Track Indicator (Allensworth & Easton); Attendance Works; WIDA English Language Development Standards; Head Start Early Learning Outcomes Framework (11.7)
-(Note: This domain covers DEMONSTRATED learning gains and enrollment/completion status. It is distinct from Domain 4, which covers behaviors and beliefs ABOUT learning, and from 8.1, which is scoped specifically to college/career-readiness content mastery.)
-11.1 Literacy & Reading Skill
-   - Definition: Demonstrated growth in reading skill, such as fluency, phonics, phonemic awareness, vocabulary, or comprehension.
-   - Source Framework: National Reading Panel (Five Essential Components of Reading Instruction).
-   - Example: "Students will improve reading fluency by one grade level."
-11.2 Numeracy & Mathematical Skill
-   - Definition: Demonstrated growth in math skill or grade-level proficiency.
-   - Example: "Students will increase math problem-solving skills and grade-level proficiency."
-11.3 General Content Knowledge & Conceptual Understanding
-   - Definition: Demonstrated learning of subject-matter content or concepts (science, social studies, arts, etc.) NOT explicitly framed around college/career readiness.
-   - Note: Use this for general content learning. Use 8.1 only when the outcome is explicitly framed around college/career readiness.
-   - Example: "Youth will increase their knowledge of local ecosystems and environmental science concepts."
-11.4 English Language Proficiency & Multilingual Development
-   - Definition: Growth in English language proficiency for multilingual learners/English learners (listening, speaking, reading, writing).
-   - Source Framework: WIDA English Language Development Standards Framework.
-   - Note: This is the inverse of the "World Languages" subject area (a native English speaker learning another language). Use 11.4 for an English learner acquiring English.
-   - Example: "Youth will improve their English language proficiency."
-11.5 Attendance, Chronic Absence & School Stability
-   - Definition: Outcomes related to a STUDENT'S regular attendance, reduced chronic absenteeism, or maintaining school enrollment/stability through disruption (e.g., housing instability, school transitions).
-   - Source Framework: Attendance Works Chronic Absence Framework; McKinney-Vento Act (school stability for students experiencing homelessness).
-   - Note: For PROGRAM-level attendance/dosage metrics (not a specific student's school attendance), use 10.5 instead.
-   - Example: "Program will reduce chronic absenteeism among participating students." OR "Youth experiencing homelessness will maintain school enrollment despite housing disruptions."
-11.6 Credit Accumulation, On-Track Status & Graduation
-   - Definition: Outcomes related to course credit accumulation, 9th-grade on-track status, reduced exclusionary discipline (suspension/expulsion), or graduation/completion/re-engagement (including GED).
-   - Source Framework: UChicago Consortium On-Track Indicator (Allensworth & Easton, 2005); ESSA four-year adjusted cohort graduation rate.
-   - Example: "Students will stay on-track for graduation by earning all required credits." OR "Youth will re-enroll in school or obtain a GED following release."
-11.7 School Readiness & Early Learning
-   - Definition: Outcomes for young children (pre-K/early childhood) related to kindergarten readiness, pre-literacy/early language skills, or developmental screening and milestones.
-   - Source Framework: Head Start Early Learning Outcomes Framework (Language & Literacy and Cognition domains specifically -- Social-Emotional outcomes for this age group should use Domain 3, and Approaches-to-Learning outcomes should use Domain 4).
-   - Example: "Children will demonstrate age-appropriate pre-literacy skills (letter recognition, phonemic awareness)."
 
 Domain 12. Family Strengthening & Basic Needs
 Framework Basis: CSSP Strengthening Families Protective Factors Framework; Ascend at the Aspen Institute Two-Generation (2Gen) Approach; Epstein Type 1 (Parenting)
@@ -459,6 +484,7 @@ RULES:
      - "Early Childhood / Pre-K": Use for outcomes about children below kindergarten age, alongside Domain 11.7.
      - "Social & Emotional Learning (SEL Only)": Use ONLY if the outcome is specifically about SEL skills (Domain 3) AND no other academic subject is mentioned.
      - "N/A / General": Use for outcomes about belonging, fun, safety, or operations that are not tied to a curricular subject.
+   - Subject Area must agree with a Domain 11 learning code: 11.1 -> "English Language Arts (ELA) & Literacy"; 11.2 -> "Mathematics"; 11.8 -> "Science (Natural/Physical)", "Computer Science & Technology", "Engineering & Robotics" or "STEM (Integrated/Cross-disciplinary)"; 11.9 -> "Visual & Performing Arts"; 11.3 -> the specific subject named (never "N/A / General").
 
 4. OUTPUT FORMAT:
    - Return a strictly valid JSON object.
@@ -499,6 +525,13 @@ SPECIFIC CODING RULES & TIE-BREAKERS:
    - Domain 11 is about a DEMONSTRATED learning gain itself (reading fluency improved, math proficiency increased, on-track/graduation status).
    - "Students will complete their homework" -> 4.1. "Students will improve their reading level" -> 11.1. These are different constructs even when they appear in the same sentence -- split if both are present.
 
+5b. WHICH DOMAIN 11 CODE (subject decides the learning code):
+   - A learning gain, test score or proficiency level in a NAMED subject goes to that subject's code: reading or writing -> 11.1; math -> 11.2; science, engineering or computer science -> 11.8; an art form -> 11.9; any other academic subject (history, civics, geography, economics, world languages, health education) -> 11.3.
+   - Grades, GPA, course passing/failure and credits -> 11.6, even when a subject is named (record the subject in Subject Area).
+   - "Academic performance/achievement", grade-level proficiency or test scores with NO subject named -> 11.6.
+   - Arts: a technique or knowledge gain in the art form -> 11.9; self-expression through making -> 1.4; presenting finished work or responding to art as an experience -> 1.5.
+   - A statement naming several subjects: code the most specific subject as primary and the others as secondary codes (or split if they are separate outcomes).
+
 6. FAMILY-PROGRAM RELATIONSHIP (2.5) vs. FAMILY ENGAGEMENT CAPACITY (10.4) vs. FAMILY STRENGTHENING (Domain 12):
    - 2.5: the family's trust/connection/communication WITH the program.
    - 10.4: the ORGANIZATION's systems/policies for engaging families (e.g., "will establish a Parent Advisory Council").
@@ -512,11 +545,12 @@ CRITICAL for Formatting:
 - Ensure the 'primary_domain' string exactly matches the codebook headers (e.g. "Domain 1. Joy, Interest & Motivation in Learning").
 - Ensure the 'primary_subcategory' string exactly matches the codebook items (e.g. "1.1 Joy & Emotional Wellness").
 - This codebook has 12 domains (not 10) -- Domain 11 (Academic Learning & Achievement) and Domain 12 (Family Strengthening & Basic Needs) are full domains, not subcategories of Domain 4 or Domain 2. Do not skip them.
+- Domain 11 is listed first for readability. The order of domains carries no weight when choosing a code.
 `;
 
 export const originalCodebook: Codebook = {
   id: 'original',
-  version: '1.1.1',
+  version: '1.2.0',
   label: 'Original (Youth Development)',
   rulesText,
   definitionsText,
@@ -528,6 +562,52 @@ export const originalCodebook: Codebook = {
   subjectAreaOptions: SUBJECT_AREA_OPTIONS,
   targetPopulationOptions: TARGET_POPULATION_OPTIONS,
   domains: [
+    {
+      code: "Domain 11. Academic Learning & Achievement",
+      hint: "DEMONSTRATED learning gains and enrollment/completion status. Learning codes are split by subject (11.1 literacy, 11.2 math, 11.8 science/tech/engineering, 11.9 arts, 11.3 other subjects); grades, GPA and unspecified academic performance go to 11.6.",
+      subcategories: [
+        {
+          code: "11.1 Literacy: Reading & Writing",
+          hint: "Reading skill or written composition. Writing habits/confidence -> Domain 4; public speaking -> 3.4.1.",
+          subjectAreas: ["English Language Arts (ELA) & Literacy"],
+        },
+        {
+          code: "11.2 Numeracy & Mathematical Skill",
+          subjectAreas: ["Mathematics"],
+        },
+        {
+          code: "11.3 Knowledge & Skill in Other Academic Subjects",
+          hint: "History, civics, geography, economics, world languages, health education, and other subjects not covered by 11.1, 11.2, 11.8 or 11.9. vs 8.1: use 8.1 only when explicitly framed around college/career readiness.",
+          subjectAreas: ["Social Studies, History & Civics", "World Languages", "Health & Physical Education"],
+        },
+        {
+          code: "11.4 English Language Proficiency & Multilingual Development",
+          hint: "An English learner acquiring English (WIDA). Opposite direction from the \"World Languages\" subject area.",
+        },
+        {
+          code: "11.5 Attendance, Chronic Absence & School Stability",
+          hint: "A specific STUDENT's attendance. For program-level dosage/reach, use 10.5 instead.",
+        },
+        {
+          code: "11.6 Grades, Credits, On-Track Status & Graduation",
+          hint: "Includes grades, GPA and course passing even when a subject is named, and general \"academic performance\" with no subject named. A test score in a named subject goes to that subject's code.",
+        },
+        {
+          code: "11.7 School Readiness & Early Learning",
+          hint: "Pre-K/early-childhood language & cognition outcomes. Social-emotional -> Domain 3; approaches to learning -> Domain 4.",
+        },
+        {
+          code: "11.8 Science, Technology & Engineering",
+          hint: "Science, engineering design, computing and coding. STEM interest -> Domain 1; STEM identity -> 5.4; safe tech use -> 6.5.",
+          subjectAreas: ["Science (Natural/Physical)", "Computer Science & Technology", "Engineering & Robotics", "STEM (Integrated/Cross-disciplinary)"],
+        },
+        {
+          code: "11.9 Arts Learning & Performance",
+          hint: "A technique or knowledge gain in an art form. Self-expression through making -> 1.4; presenting or responding to art as an experience -> 1.5.",
+          subjectAreas: ["Visual & Performing Arts"],
+        },
+      ],
+    },
     {
       code: "Domain 1. Joy, Interest & Motivation in Learning",
       hint: "EXPERIENCES/STATES (e.g. \"feels happy\"), not skills -- see Domain 3 for SEL skills.",
@@ -703,7 +783,7 @@ export const originalCodebook: Codebook = {
       subcategories: [
         {
           code: "8.1 Key Content Knowledge",
-          hint: "Only when EXPLICITLY framed around college/career readiness. For general content learning, use 11.3 instead.",
+          hint: "Only when EXPLICITLY framed around college/career readiness. For general content learning, use the subject's Domain 11 code (11.1, 11.2, 11.3, 11.8 or 11.9) instead.",
         },
         { code: "8.2 Key Cognitive Strategies" },
         {
@@ -755,31 +835,6 @@ export const originalCodebook: Codebook = {
         {
           code: "10.5 Program Participation, Retention & Reach (Output Metric)",
           hint: "Program-level dosage/attendance/reach -- an OUTPUT, not a youth outcome. Use this instead of forcing it elsewhere or marking uncoded. For a specific student's attendance, use 11.5 instead.",
-        },
-      ],
-    },
-    {
-      code: "Domain 11. Academic Learning & Achievement",
-      hint: "DEMONSTRATED learning gains and enrollment/completion status -- distinct from Domain 4 (behaviors/beliefs about learning) and 8.1 (content mastery explicitly framed around college/career readiness).",
-      subcategories: [
-        { code: "11.1 Literacy & Reading Skill" },
-        { code: "11.2 Numeracy & Mathematical Skill" },
-        {
-          code: "11.3 General Content Knowledge & Conceptual Understanding",
-          hint: "vs 8.1: use 11.3 unless the outcome is explicitly framed around college/career readiness.",
-        },
-        {
-          code: "11.4 English Language Proficiency & Multilingual Development",
-          hint: "An English learner acquiring English (WIDA). Opposite direction from the \"World Languages\" subject area.",
-        },
-        {
-          code: "11.5 Attendance, Chronic Absence & School Stability",
-          hint: "A specific STUDENT's attendance. For program-level dosage/reach, use 10.5 instead.",
-        },
-        { code: "11.6 Credit Accumulation, On-Track Status & Graduation" },
-        {
-          code: "11.7 School Readiness & Early Learning",
-          hint: "Pre-K/early-childhood language & cognition outcomes. Social-emotional -> Domain 3; approaches to learning -> Domain 4.",
         },
       ],
     },

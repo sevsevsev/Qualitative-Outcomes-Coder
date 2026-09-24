@@ -26,10 +26,10 @@ F1.7).
   early-childhood-specific sources for it, because the codebook covers every
   youth-serving program.
 
-| Verdict (52 claims) | Count |
+| Verdict (62 claims, incl. follow-up) | Count |
 |---|---|
-| SUPPORTED | 31 |
-| PARTIAL | 15 |
+| SUPPORTED | 38 |
+| PARTIAL | 18 |
 | MISATTRIBUTED | 3 (all the Lerner handout) |
 | UNSUPPORTED | 3 |
 | UNREACHABLE | 0 |
@@ -98,50 +98,62 @@ reason given in its notes:
 | A3.3 | Sampson et al. (1997) | SUPPORTED | The copy is hosted on a course page, not the DOI. |
 | Y7.10 | none | extension | The proposer searched and found no framework for a residual category. |
 
-## What this leaves open for the phase 1 gate
+## Phase 1 gate status (updated after the follow-up checks)
 
 The gate requires the v2 sources to be "verified or explicitly marked as extensions".
-These items stand in the way:
+A follow-up on 2026-09-24 (claims W01–W04 and X01–X06) closed most of what was open.
 
-1. **Codes left without a supporting v2 source:**
-   - **A2.3:** its only v2 candidate failed, and v1's code 9.1 has an OTL citation that
-     still needs replacement. It needs a new source or an extension entry.
-   - **Y12.4:** it keeps CJCA (2009) from the v1 registry, but that entry is still
-     `located`.
-2. **Codes backed only by secondary copies:**
-   - Y4.6, Y4.7 and F1.6, plus the definitions in Lerner (2005) and the PIR turnover
-     items.
-   - A person with library access could confirm the three journal articles from the
-     publisher PDFs.
-3. **Decision D4 in cycle 02** can now be answered with evidence:
-   - **Y8.4:** cite CRDC and Irvin (2004).
-   - **F1.7:** cite MIECHV and Healthy People 2030 MICH-14/15.
-   - **A1.3:** cite the Surgeon General framework or NIOSH WellBQ for well-being, and
-     BLS JOLTS for turnover. Severin ruled out the Head Start sources on 2026-09-24.
-   - **F1.7:** keep MIECHV. It is a home-visiting (early childhood) measure set, but
-     Severin decided on 2026-09-24 to keep it, because some parenting programs state
-     these outcomes. He also noted that F1.7 is far from what most programs name as
-     outcomes, so phase 2 should check whether it is used often enough to keep.
-   - **Y7.10:** extension.
+**Closed:**
 
-## Corrections the v2 draft needs (through a CP, not applied here)
+- **A2.3 Access to Resources** now has three general federal sources, all SUPPORTED:
+  - the FCC Emergency Connectivity Fund rules (47 CFR 54 Subpart Q), which cover
+    devices and hotspots that schools and libraries lend, and an inventory of who
+    received them;
+  - ESSA Title IV-A, section 4109(a)(2), on purchasing devices and equipment;
+  - Digital Equity Act, 47 U.S.C. 1723(c)(1)(B), on broadband and device
+    availability.
 
-- **Remove these citations:**
-  - the Lerner 2007 handout;
-  - SHAPE Standard 1 as a source for Y10.1;
-  - Positive Youth Justice as a source for Y12.4;
-  - the Digital Equity Act as a source for A2.3.
-- **Fix these citations:**
-  - UW–Madison Division of Extension (2020);
-  - NGSS Lead States (2013);
-  - Keyes: cite the MHC-SF separately from Keyes (2002);
-  - Nagaoka: use the primary URL;
-  - IDEA Indicator 14: restate the claim for Y9.5 as Measure C.
-- **Add these sources:**
-  - Y8.4, F1.7 and A1.3, as listed above;
-  - SHAPE Standard 4 as a source for Y10.1.
-- **Change the extension status line:** mark Y7.10 as an extension in the draft's
-  status line.
+  None of them names physical facilities or general materials.
+- **Y12.4 Justice Involvement:** the CJCA (2009) white paper is now SUPPORTED. Its
+  authors are Harris, Lockwood & Mengers, and OJJDP was only the sponsor. The v1
+  registry entry for code 7.8 is updated to `verified`.
+- **F1.6 System Navigation & Rights Knowledge** now has three sources, all SUPPORTED:
+  - IDEA section 671(b), Parent Training and Information Centers: parents understand
+    their rights and procedural safeguards;
+  - CSSP Strengthening Families, Concrete Support in Times of Need: parents
+    "understand their rights in accessing services ... learn how to navigate through
+    service systems";
+  - Mapp & Kuttner (2013), Dual Capacity-Building Framework.
+
+  The 2015 ED/DOJ letter stays for F3.3 only. A verifier saw news reports that ED
+  rescinded the letter in August 2025; this has not been confirmed against ed.gov.
+  - CSSP Strengthening Families began in early-care settings but is used across child
+    welfare and family services. The v1 registry already cites it for F-domain codes.
+- **Decision D4** now has evidence for every code:
+  - **Y8.4:** CRDC and Irvin (2004).
+  - **F1.7:** MIECHV and Healthy People 2030 MICH-14/15. Severin decided to keep
+    MIECHV. He noted that F1.7 is far from what most programs name as outcomes, so
+    phase 2 should check how often it is used.
+  - **A1.3:** the Surgeon General framework and NIOSH WellBQ for well-being, and BLS
+    JOLTS for turnover. Severin ruled out the Head Start sources.
+  - **Y7.10:** extension.
+
+**Still open.** These codes are backed only by secondary copies:
+
+- **Y4.6:** Shogren et al. (2015). The copy checked is an author upload of the
+  published version. Two extracts disagree on "agentic" vs. "causal" action.
+- **Y4.7:** Carlone & Johnson (2007). Only a citing article names the three dimensions.
+  Wiley and the university repository both refused the fetch.
+- **Lerner et al. (2005):** the definitions of the Five Cs are confirmed only through
+  an academia.edu copy.
+
+For the two journal articles (Y4.6 and Y4.7), someone with library access can confirm
+the publisher PDF. The alternative is to accept them at PARTIAL, since existence and
+fit are confirmed.
+
+## Corrections the v2 draft needs
+
+See `proposals/CP-03-01-v2-source-corrections.md`.
 
 ## Method
 

@@ -650,19 +650,24 @@
     },
     {
       "id": "cjca-2009",
-      "cite_as": "Council of Juvenile Correctional Administrators (2009). Defining and Measuring Recidivism (white paper; OJJDP-supported).",
+      "cite_as": "Harris, P., Lockwood, B., & Mengers, L. (2009, November). Defining and Measuring Recidivism: A CJCA White Paper. Council of Juvenile Correctional Administrators.",
       "tier": "D",
       "publisher": "CJCA",
       "year": 2009,
-      "url": null,
-      "status": "located",
-      "verified_by": "commit 9536bfe (prior session, WebSearch; no excerpt recorded)",
+      "url": "https://www.doc.ks.gov/juvenile-services/committee/documentation/6-2017/CJCA/view",
+      "status": "verified",
+      "verified_by": "cycle-03 independent codebook-citation-verifier (claim W01 in v2/source-verification-2026-09-24.json)",
       "supports": [
         {
           "code": "7.8",
-          "component": "Recidivism definitions"
+          "component": "Recidivism definitions: multiple measures (re-arrest, adjudication, reincarceration)",
+          "verdict": "SUPPORTED",
+          "excerpt": "Multiple measures of recidivism – such as re-arrest for a new offense, adjudication and reincarceration for a new offense – make comparisons more meaningful"
         }
-      ]
+      ],
+      "verified_on": "2026-09-24",
+      "excerpt": "Multiple measures of recidivism – such as re-arrest for a new offense, adjudication and reincarceration for a new offense – make comparisons more meaningful",
+      "notes": "Publisher copy at cjja.net is blocked by robots.txt; full text checked on a Kansas Department of Corrections page. OJP/NCJRS record confirms CJCA as corporate author and OJJDP as sponsor only."
     },
     {
       "id": "conley-four-keys",

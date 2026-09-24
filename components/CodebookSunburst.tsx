@@ -5,13 +5,15 @@ import { explorerHref, hueFor } from './CodebookExplorer.js';
 
 // The landing page's picture of the codebook: domains on the inner ring,
 // their codes on the outer ring, drawn from the live codebook. Every slice
-// links into the explorer. While nobody is pointing at it, it steps through
-// the codes one at a time so visitors see real code names go by.
+// links into the explorer. Until a visitor points at it, taps it or tabs into
+// it, it lifts out one random code after another so real code names go by.
 
 const SIZE = 400;
 const C = SIZE / 2;
-const R = { hole: 94, domain: 136, code: 196 };
-const CYCLE_MS = 2600;
+const R = { hole: 94, domain: 136, code: 190 };
+const CYCLE_MS = 2200;
+/** How far the highlighted code lifts out of the ring. */
+const POP = 1.04;
 
 type Active = { kind: 'domain' | 'code'; index: number };
 
@@ -21,21 +23,28 @@ const prefersReducedMotion = () =>
 const CodebookSunburst: React.FC<{ data: ExplorerCodebook }> = ({ data }) => {
   const layout = useMemo(() => sunburstLayout(data.domains), [data]);
   const [pointer, setPointer] = useState<Active | null>(null);
-  const [auto, setAuto] = useState(0);
   const [animate] = useState(() => !prefersReducedMotion());
+  const [auto, setAuto] = useState(() => Math.floor(Math.random() * Math.max(layout.codes.length, 1)));
+  // Cycling stops for good once the visitor engages with the chart.
+  const [touched, setTouched] = useState(false);
+  const cycling = animate && !touched;
 
-  // Step through the codes with a stride that visits every one in a mixed order.
+  // Jump to a random code, in a different domain from the last one so the
+  // highlight moves around the ring.
   useEffect(() => {
-    if (!animate || pointer || layout.codes.length < 2) return;
-    const n = layout.codes.length;
-    let stride = Math.max(1, Math.round(n * 0.38));
-    const gcd = (a: number, b: number): number => (b ? gcd(b, a % b) : a);
-    while (gcd(stride, n) !== 1) stride++;
-    const id = window.setInterval(() => setAuto(i => (i + stride) % n), CYCLE_MS);
+    if (!cycling || layout.codes.length < 2) return;
+    const codes = layout.codes;
+    const id = window.setInterval(() => {
+      setAuto(prev => {
+        const others = codes.map((_, i) => i).filter(i => codes[i].domainIndex !== codes[prev]?.domainIndex);
+        const pool = others.length ? others : codes.map((_, i) => i).filter(i => i !== prev);
+        return pool[Math.floor(Math.random() * pool.length)];
+      });
+    }, CYCLE_MS);
     return () => window.clearInterval(id);
-  }, [animate, pointer, layout.codes.length]);
+  }, [cycling, layout.codes]);
 
-  const active: Active | null = pointer ?? (animate ? { kind: 'code', index: auto } : null);
+  const active: Active | null = pointer ?? (cycling ? { kind: 'code', index: auto } : null);
   const activeDomain =
     active?.kind === 'domain' ? active.index : active ? layout.codes[active.index]?.domainIndex : undefined;
   const codeCount = layout.codes.length;
@@ -53,18 +62,18 @@ const CodebookSunburst: React.FC<{ data: ExplorerCodebook }> = ({ data }) => {
   })();
 
   const on = (a: Active) => ({
-    onMouseEnter: () => setPointer(a),
+    onMouseEnter: () => { setTouched(true); setPointer(a); },
     onMouseLeave: () => setPointer(null),
-    onFocus: () => setPointer(a),
+    onFocus: () => { setTouched(true); setPointer(a); },
     onBlur: () => setPointer(null),
   });
 
   return (
-    <figure className="relative w-full max-w-[440px] mx-auto">
+    <figure className="relative w-full max-w-[440px] mx-auto" onTouchStart={() => setTouched(true)}>
       <style>{`
         @keyframes sb-in { from { opacity: 0; transform: scale(.92) rotate(-8deg); } to { opacity: 1; transform: none; } }
-        .sb-slice { transform-origin: ${C}px ${C}px; transition: fill-opacity .35s ease, fill .35s ease; }
-        .sb-animate .sb-slice { animation: sb-in .7s cubic-bezier(.2,.7,.2,1) both; }
+        .sb-slice { transform-origin: ${C}px ${C}px; transition: fill-opacity .35s ease, fill .35s ease, transform .45s cubic-bezier(.3,1.4,.5,1); }
+        .sb-animate .sb-slice { animation: sb-in .7s cubic-bezier(.2,.7,.2,1) backwards; }
         .sb-slice:focus { outline: none; }
         .sb-link:focus-visible .sb-slice { stroke: #0f172a; stroke-width: 2.5; }
         @keyframes sb-fade { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: none; } }
@@ -84,12 +93,12 @@ const CodebookSunburst: React.FC<{ data: ExplorerCodebook }> = ({ data }) => {
             <a key={c.number} href={explorerHref(data.id, c.number)} className="sb-link" aria-label={`Code ${c.number}: ${c.title}`} {...on({ kind: 'code', index: i })}>
               <path
                 className="sb-slice"
-                d={arcPath(C, C, R.domain + 3, isActive ? R.code + 4 : R.code, c.start, c.end)}
+                d={arcPath(C, C, R.domain + 3, R.code, c.start, c.end)}
                 fill={isActive ? `hsl(${hue} 62% 46%)` : `hsl(${hue} 70% ${activeDomain === c.domainIndex ? 72 : 80}%)`}
                 fillOpacity={dim ? 0.3 : 1}
                 stroke="#fff"
                 strokeWidth={1.25}
-                style={{ animationDelay: `${120 + i * 9}ms` }}
+                style={{ animationDelay: `${120 + i * 9}ms`, transform: isActive ? `scale(${POP})` : undefined }}
               />
             </a>
           );

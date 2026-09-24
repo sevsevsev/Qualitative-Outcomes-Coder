@@ -46,7 +46,7 @@ interface Props {
 
 // One quiet hue per domain, used only on the number tile and the rail marker.
 const DOMAIN_HUES = [28, 350, 262, 214, 158, 190, 4, 232, 44, 292, 128, 16];
-const hueFor = (index: number) => DOMAIN_HUES[index % DOMAIN_HUES.length];
+export const hueFor = (index: number) => DOMAIN_HUES[index % DOMAIN_HUES.length];
 const tileStyle = (index: number): React.CSSProperties => ({
   backgroundColor: `hsl(${hueFor(index)} 70% 95%)`,
   color: `hsl(${hueFor(index)} 55% 32%)`,

@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { CODEBOOK_REGISTRY, CodebookType } from '../codebooks/index.js';
 import { buildExplorerCodebook } from '../services/codebookExplorer.js';
 import { explorerHref } from './CodebookExplorer.js';
+import CodebookSunburst from './CodebookSunburst.js';
 
 // First screen of the public explorer site: what the codebook is, why it
 // exists, and what visitors can do here. The numbers are read from the live
@@ -42,34 +43,37 @@ const ExplorerLanding: React.FC<Props> = ({ siteName, codebookId, tryHref }) => 
   return (
     <div className="max-w-5xl mx-auto w-full">
       {/* Intro */}
-      <section className="pt-4 sm:pt-10">
-        <div className="text-xs font-semibold uppercase tracking-[0.1em] text-blue-600 mb-3">Draft for public feedback</div>
-        <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 leading-[1.1]">{siteName}</h1>
-        <p className="mt-5 text-lg sm:text-xl text-slate-700 leading-relaxed max-w-3xl">
-          A shared set of categories for the outcomes youth-serving programs work toward, from reading growth to a sense of
-          belonging to career readiness. Each code has a definition, examples, and the research it draws on.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a href={codebookHref} className="inline-flex items-center gap-1 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 shadow-sm transition-colors">
-            Explore the codebook <span aria-hidden>→</span>
-          </a>
-          <a href={tryHref} className="inline-flex items-center gap-1 rounded-lg bg-white border border-slate-300 hover:border-slate-400 text-slate-800 font-semibold px-5 py-2.5 transition-colors">
-            Code a statement
-          </a>
+      <section className="pt-4 sm:pt-10 grid gap-10 lg:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] lg:items-center">
+        <div>
+          <div className="text-xs font-semibold uppercase tracking-[0.1em] text-blue-600 mb-3">Draft for public feedback</div>
+          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 leading-[1.1]">{siteName}</h1>
+          <p className="mt-5 text-lg sm:text-xl text-slate-700 leading-relaxed max-w-3xl">
+            A shared set of categories for the outcomes youth-serving programs work toward, from reading growth to a sense of
+            belonging to career readiness. Each code has a definition, examples, and the research it draws on.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a href={codebookHref} className="inline-flex items-center gap-1 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 shadow-sm transition-colors">
+              Explore the codebook <span aria-hidden>→</span>
+            </a>
+            <a href={tryHref} className="inline-flex items-center gap-1 rounded-lg bg-white border border-slate-300 hover:border-slate-400 text-slate-800 font-semibold px-5 py-2.5 transition-colors">
+              Code a statement
+            </a>
+          </div>
+          <dl className="mt-10 grid grid-cols-3 gap-4 max-w-xl">
+            {[
+              [data.domains.length, 'domains'],
+              [codeCount, 'codes'],
+              [verified, 'sources checked against the original text'],
+            ].map(([value, label]) => (
+              <div key={label as string}>
+                <dt className="sr-only">{label}</dt>
+                <dd className="text-3xl font-semibold text-slate-900 tabular-nums">{value}</dd>
+                <dd className="text-sm text-slate-500 leading-snug mt-0.5">{label}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
-        <dl className="mt-10 grid grid-cols-3 gap-4 max-w-xl">
-          {[
-            [data.domains.length, 'domains'],
-            [codeCount, 'codes'],
-            [verified, 'sources checked against the original text'],
-          ].map(([value, label]) => (
-            <div key={label as string}>
-              <dt className="sr-only">{label}</dt>
-              <dd className="text-3xl font-semibold text-slate-900 tabular-nums">{value}</dd>
-              <dd className="text-sm text-slate-500 leading-snug mt-0.5">{label}</dd>
-            </div>
-          ))}
-        </dl>
+        <CodebookSunburst data={data} />
       </section>
 
       {/* Why */}

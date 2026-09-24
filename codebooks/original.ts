@@ -38,6 +38,10 @@
 // The full map is codebook-refinement/renumbering/v1.2.0-to-v2.0.0.csv;
 // exports coded under v1.2.0 or earlier re-import through it (see
 // originalV1Numbering.ts).
+//
+// v2.0.1 (CP-06-01) gives every domain a hint and a plain-language
+// `description` for the review UI and the codebook explorer. Neither is sent
+// to the model, so coding behavior is unchanged.
 
 import { Codebook } from './types.js';
 import { RENUMBERED_IN_VERSION, V1_2_0_CODE_NUMBERS, V1_2_0_DOMAIN_LABELS, V1_2_0_SUBCATEGORY_LABELS } from './originalV1Numbering.js';
@@ -561,7 +565,7 @@ CRITICAL for Formatting:
 
 export const originalCodebook: Codebook = {
   id: 'original',
-  version: '2.0.0',
+  version: '2.0.1',
   label: 'Original (Youth Development)',
   rulesText,
   definitionsText,
@@ -599,6 +603,7 @@ export const originalCodebook: Codebook = {
     {
       code: "Domain 1. Academic Learning & Achievement",
       hint: "DEMONSTRATED learning gains and enrollment/completion status -- distinct from Domain 5 (behaviors/beliefs about learning) and 9.1 (content mastery explicitly framed around college/career readiness). Learning codes are split by subject (1.1 literacy, 1.2 math, 1.8 science/tech/engineering, 1.9 arts, 1.3 other subjects); grades, GPA and unspecified academic performance go to 1.6.",
+      description: "Outcomes where young people show what they have learned: skill gains in a subject (literacy, math, science and technology, the arts, and other subjects), English language development, and early learning, plus school status measures such as attendance, grades, credits and graduation.",
       subcategories: [
         {
           code: "1.1 Literacy: Reading & Writing",
@@ -645,6 +650,7 @@ export const originalCodebook: Codebook = {
     {
       code: "Domain 2. Joy, Interest & Motivation in Learning",
       hint: "EXPERIENCES/STATES (e.g. \"feels happy\"), not skills -- see Domain 4 for SEL skills.",
+      description: "Outcomes about how young people feel about learning: enjoyment, curiosity, seeing learning as meaningful, and expressing themselves by creating, performing or responding to creative work.",
       subcategories: [
         { code: "2.1 Joy & Emotional Wellness" },
         { code: "2.2 Triggered Situational Interest (Curiosity)" },
@@ -662,6 +668,7 @@ export const originalCodebook: Codebook = {
     {
       code: "Domain 3. Belonging, Relationships & School Connectedness",
       hint: "EXPERIENCES/STATES (e.g. \"feels safe\", \"feels connected\"), not skills -- see Domain 4 for SEL skills.",
+      description: "Outcomes about the relationships around a young person: feeling part of the school or program, supportive adults, friendships with peers, pride in their own identity and culture, and the family's connection with the program.",
       subcategories: [
         { code: "3.1 School/Program Connectedness (Belonging)" },
         { code: "3.2 Adult Support & Care" },
@@ -682,6 +689,7 @@ export const originalCodebook: Codebook = {
     {
       code: "Domain 4. Social & Emotional Learning (CASEL-aligned)",
       hint: "SKILLS/COMPETENCIES (e.g. \"uses coping strategies\"). Use the specific 4.x.x sub-codes only, never the 4.x category headers. Don't code a feeling as a skill unless the text implies growth in capacity.",
+      description: "Outcomes where young people build social and emotional skills, organized by CASEL's five competencies: self-awareness, self-management, social awareness, relationship skills and responsible decision-making.",
       subcategories: [
         { code: "4.1.1 Identifying and naming emotions" },
         { code: "4.1.2 Understanding self & identity" },
@@ -746,6 +754,7 @@ export const originalCodebook: Codebook = {
     {
       code: "Domain 5. Academic Engagement & Habits",
       hint: "Behaviors/beliefs ABOUT learning, not the learning gain itself -- see Domain 1 for demonstrated academic skill gains.",
+      description: "Outcomes about how young people approach learning: engagement in class, persistence with schoolwork, study and learning strategies, and confidence about academics.",
       subcategories: [
         {
           code: "5.1 Academic Behaviors (Engagement)",
@@ -761,6 +770,8 @@ export const originalCodebook: Codebook = {
     },
     {
       code: "Domain 6. Positive Youth Development (PYD) & Assets",
+      hint: "Broad developmental assets and states (mattering, values, identity, time spent in activities outside this program), not specific SEL skills -- see Domain 4. Belonging to this school/program -> 3.1.",
+      description: "Outcomes about broad developmental assets: feeling empowered and safe, holding positive values, spending time in enriching activities outside the program, and a positive sense of identity and purpose.",
       subcategories: [
         {
           code: "6.1 Empowerment & Safety",
@@ -779,6 +790,8 @@ export const originalCodebook: Codebook = {
     },
     {
       code: "Domain 7. Civic Engagement & Community",
+      hint: "Youth understanding or acting on their community and its systems: civic knowledge, organized service, voice and leadership, criticality, and digital citizenship. Small daily classroom/program contributions -> 4.5.5.",
+      description: "Outcomes where young people understand and take part in community and civic life: knowing how systems work, service and community action, voice and leadership in decisions, analyzing power and injustice, and safe, responsible behavior online.",
       subcategories: [
         { code: "7.1 Civic Skills & Knowledge" },
         {
@@ -792,6 +805,8 @@ export const originalCodebook: Codebook = {
     },
     {
       code: "Domain 8. Physical & Behavioral Health",
+      hint: "The YOUTH's own physical, mental and behavioral health status, service use and risk behaviors. Learning a coping skill -> 4.2.2; a caregiver's own stress -> 12.2; staff adopting trauma-informed practice -> 11.2.",
+      description: "Outcomes about a young person's health: physical activity and nutrition, mental health symptoms, recovery from trauma, use of mental health services, and prevention of substance use, sexual risk, violence and injury, and justice involvement.",
       subcategories: [
         { code: "8.1 Physical Activity & Nutrition" },
         {
@@ -814,6 +829,8 @@ export const originalCodebook: Codebook = {
     },
     {
       code: "Domain 9. College & Career Readiness",
+      hint: "Readiness for and results after high school, EXPLICITLY framed around college or career. General learning gains not framed that way -> Domain 1; general SEL skills outside a work context -> Domain 4.",
+      description: "Outcomes about readiness for life after high school and what follows: college- and career-framed knowledge and thinking skills, navigating applications and financial aid, career exploration, employability and technical skills, and postsecondary enrollment, completion and employment.",
       subcategories: [
         {
           code: "9.1 Key Content Knowledge",
@@ -845,6 +862,8 @@ export const originalCodebook: Codebook = {
     },
     {
       code: "Domain 10. Access & Equity",
+      hint: "Availability of resources (materials, technology, connectivity, facilities) and removal of barriers to entry for specific groups -- whether youth can get to and take part in the opportunity.",
+      description: "Outcomes about whether young people can reach and take part in learning opportunities: access to materials, technology, connectivity and facilities, and removing barriers that keep specific groups from participating.",
       subcategories: [
         { code: "10.1 Access to Resources" },
         { code: "10.2 Participation & Inclusion" },
@@ -852,6 +871,8 @@ export const originalCodebook: Codebook = {
     },
     {
       code: "Domain 11. Adult & System Capacity",
+      hint: "Change in the ADULTS and ORGANIZATIONS around youth (staff/volunteer learning, practice change, systems, family-engagement systems), plus program outputs such as attendance and reach (11.5). Not a change in a young person.",
+      description: "Outcomes about the adults and organizations serving young people rather than the young people themselves: staff and volunteer learning, changes in practice, system and policy improvements, the organization's family-engagement systems, and program reach and participation counts.",
       subcategories: [
         {
           code: "11.1 Professional Knowledge & Skill",
@@ -875,6 +896,7 @@ export const originalCodebook: Codebook = {
     {
       code: "Domain 12. Family Strengthening & Basic Needs",
       hint: "The CAREGIVER'S OWN knowledge/well-being/stability -- distinct from 3.5 (family-program relationship) and 11.4 (org's family-engagement systems).",
+      description: "Outcomes about caregivers and households: parenting knowledge and practices, caregiver well-being and support networks, the home learning environment, and economic, food and housing stability.",
       subcategories: [
         { code: "12.1 Parenting Knowledge & Practices" },
         {

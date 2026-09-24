@@ -73,3 +73,17 @@ describe('codebook explorer data', () => {
     expect(philly.sources).toEqual([]);
   });
 });
+
+describe('domain overviews', () => {
+  it('gives every original-codebook domain a hint and a description whose code references exist', () => {
+    const data = buildExplorerCodebook(getCodebook('original'));
+    const codes = new Set(data.domains.flatMap(d => d.subcategories.map(c => c.number)));
+    const domains = new Set(data.domains.map(d => d.number));
+    for (const d of data.domains) {
+      expect(d.hint, d.code).toBeTruthy();
+      expect(d.description, d.code).toBeTruthy();
+      for (const ref of d.description!.match(/\b\d{1,2}(?:\.\d{1,2}){1,2}\b/g) ?? []) expect(codes, `${d.code} -> ${ref}`).toContain(ref);
+      for (const m of d.description!.matchAll(/Domain (\d{1,2})\b/g)) expect(domains, `${d.code} -> Domain ${m[1]}`).toContain(m[1]);
+    }
+  });
+});

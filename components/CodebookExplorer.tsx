@@ -419,6 +419,9 @@ const CodebookExplorer: React.FC<Props> = ({ route }) => {
             </div>
           </div>
 
+          {domain.description && (
+            <p className="mt-5 sm:pl-[4.5rem] text-base text-slate-700 leading-relaxed max-w-3xl">{linkify(domain.description)}</p>
+          )}
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {domain.hint && (
               <div className="rounded-xl bg-slate-900 text-slate-100 px-4 py-3.5">
@@ -582,8 +585,8 @@ const CodebookExplorer: React.FC<Props> = ({ route }) => {
                 <span className="min-w-0">
                   <span className="block font-semibold text-slate-900">{highlight(code.title, tokens)}</span>
                   {!isDomain && <span className="block text-xs text-slate-400 mt-0.5">{d.title}</span>}
-                  {(code.definition ?? code.hint) && (
-                    <span className="block text-sm text-slate-600 mt-1 line-clamp-2">{highlight(code.definition ?? code.hint ?? '', tokens)}</span>
+                  {(code.definition ?? ('description' in code ? code.description : undefined) ?? code.hint) && (
+                    <span className="block text-sm text-slate-600 mt-1 line-clamp-2">{highlight(code.definition ?? ('description' in code ? code.description : undefined) ?? code.hint ?? '', tokens)}</span>
                   )}
                 </span>
               </a>

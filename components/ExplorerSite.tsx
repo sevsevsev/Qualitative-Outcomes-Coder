@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { CodebookType } from '../codebooks/index.js';
 import { parseExplorerCodebooks } from '../services/explorerCodebooks.js';
 import CodebookExplorer, { explorerHref, parseExplorerRoute } from './CodebookExplorer.js';
+import ExplorerLanding from './ExplorerLanding.js';
 import FeedbackAdmin from './FeedbackAdmin.js';
 import TryCoder from './TryCoder.js';
 
@@ -9,7 +10,7 @@ import TryCoder from './TryCoder.js';
 // tab, plus visitor feedback and a "try it" box, and none of the coder.
 // Built from this repo with VITE_SITE=explorer (see index.tsx and README).
 //
-// Routes: #/codebook/<id>/<target> (default), #/try/<id>, #/admin.
+// Routes: #/ (landing), #/codebook/<id>/<target>, #/try/<id>, #/admin.
 
 const readHash = () => window.location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
 
@@ -55,8 +56,11 @@ const ExplorerSite: React.FC = () => {
   }, []);
   useEffect(() => { document.title = SITE_NAME; }, []);
 
-  const view: 'codebook' | 'try' | 'admin' =
-    hashPath[0] === 'try' ? 'try' : hashPath[0] === 'admin' ? 'admin' : 'codebook';
+  const view: 'home' | 'codebook' | 'try' | 'admin' =
+    hashPath[0] === 'try' ? 'try'
+      : hashPath[0] === 'admin' ? 'admin'
+      : hashPath[0] === 'codebook' ? 'codebook'
+      : 'home';
   const route = parseExplorerRoute(view === 'codebook' ? hashPath.slice(1) : [], SITE_CODEBOOKS);
   const tryCodebook: CodebookType =
     view === 'try' && SITE_CODEBOOKS.includes(hashPath[1] as CodebookType) ? (hashPath[1] as CodebookType) : route.codebookId;
@@ -67,7 +71,7 @@ const ExplorerSite: React.FC = () => {
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pb-20">
       <nav className="bg-white border-b border-slate-200 sticky top-0 z-10 shadow-sm">
         <div className="w-full px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 gap-4">
-          <a href={explorerHref(SITE_CODEBOOKS[0])} className="font-bold text-base sm:text-xl text-slate-800 tracking-tight truncate min-w-0">
+          <a href="#/" className="font-bold text-base sm:text-xl text-slate-800 tracking-tight truncate min-w-0">
             {SITE_NAME}
           </a>
           <div className="flex items-center gap-1.5 sm:gap-2 text-sm shrink-0">
@@ -96,6 +100,7 @@ const ExplorerSite: React.FC = () => {
       </nav>
 
       <div className="w-full px-4 sm:px-6 lg:px-8 py-10">
+        {view === 'home' && <ExplorerLanding siteName={SITE_NAME} codebookId={route.codebookId} tryHref={tryHref} />}
         {view === 'admin' && <FeedbackAdmin />}
         {view === 'try' && (
           <TryCoder codebookId={tryCodebook} codebookIds={SITE_CODEBOOKS} onCodebookChange={id => { window.location.hash = `#/try/${id}`; }} />

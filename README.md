@@ -89,7 +89,7 @@ The one exception: `services/reviewNormalization.ts`'s fuzzy-matching for re-imp
 
 ## Public codebook explorer site
 
-The same repo also builds a public site that shows only the codebook explorer, with visitor feedback and a "Try it" box. It reads the live codebook and source registries, so it can never drift from the coder: every merged codebook change shows up on both.
+The same repo also builds a public site that shows only the codebook explorer, with a landing page, visitor feedback and a "Try it" box. It reads the live codebook and source registries, so it can never drift from the coder: every merged codebook change shows up on both.
 
 **Set it up (once):**
 

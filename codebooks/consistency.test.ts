@@ -93,7 +93,7 @@ describe('original codebook v1.1.0 additions', () => {
   });
 
   it('bumped the codebook version to 2.0.0 for the domain renumbering', () => {
-    expect(original.version).toBe('2.0.0');
+    expect(original.version).toBe('2.0.1');
   });
 });
 

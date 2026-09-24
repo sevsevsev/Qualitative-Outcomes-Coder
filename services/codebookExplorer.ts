@@ -54,6 +54,8 @@ export interface ExplorerCode {
 }
 
 export interface ExplorerDomain extends Omit<ExplorerCode, 'group' | 'sourceGap'> {
+  /** Plain-language overview from the codebook's `description` field. */
+  description?: string;
   frameworkBasis?: string;
   subcategories: ExplorerCode[];
 }
@@ -256,6 +258,7 @@ export const buildExplorerCodebook = (codebook: Codebook): ExplorerCodebook => {
       title,
       tag: block?.tag,
       hint: d.hint,
+      description: d.description,
       definition: parts.definition,
       examples: parts.examples,
       frameworks: parts.frameworks,
@@ -292,6 +295,7 @@ export const searchText = (c: ExplorerCode | ExplorerDomain): string =>
     c.title,
     c.tag,
     c.hint,
+    'description' in c ? c.description : undefined,
     c.definition,
     ...c.examples,
     ...c.frameworks,

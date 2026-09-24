@@ -31,6 +31,12 @@ export interface DomainDefinition {
   subcategories: SubcategoryDefinition[];
   /** Optional domain-level disambiguation guidance shown in the review UI. */
   hint?: string;
+  /**
+   * Plain-language overview of what the domain covers, shown in the codebook
+   * explorer. Like hints, it is NOT sent to the model: definitionsText stays
+   * the only coding guidance in the prompt.
+   */
+  description?: string;
 }
 
 /**

@@ -7,7 +7,9 @@ marked "(rc1)" below.
 
 - Proposed in cycle 02 (2026-09-23). It restructures v1.1.1, which has 12 domains
   and 82 subcategories.
-- `v1-to-v2-crosswalk.csv` maps every v1.1.1 code to its v2 home.
+- `v1-to-v2-crosswalk.csv` maps every v1.1.1 code to its v2 home. Its v1 column uses
+  the v2.0.0 numbering (CP-04-08) but keeps v1.1.1 meanings: it has no rows yet for
+  1.8 and 1.9, which CP-04-05 adds.
 - `STRUCTURE.md` explains why each change was made.
 
 Every source listed under a domain has a status in

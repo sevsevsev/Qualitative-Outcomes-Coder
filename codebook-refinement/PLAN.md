@@ -88,7 +88,8 @@ Cycle 05.
    approved draft. Keep `original.ts` untouched.
 2. **Crosswalk support:**
    - add `v1-to-v2-crosswalk.csv` to `services/reviewNormalization.ts` so old exports
-     re-import;
+     re-import (exports stamped below original 2.0.0 go through
+     `renumbering/v1.2.0-to-v2.0.0.csv` first);
    - flag the 12 codes that split in two for re-review, rather than auto-mapping
      them.
 3. **Tests.** Consistency tests, the registry test pointed at the v2 registry, the

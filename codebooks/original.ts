@@ -566,7 +566,10 @@ CRITICAL for Formatting:
 export const originalCodebook: Codebook = {
   id: 'original',
   version: '2.0.1',
-  label: 'Original (Youth Development)',
+  label: 'Youth Outcomes Codebook',
+  // The prompt keeps the old name so renaming the codebook (2026-09-24)
+  // did not change what the model is sent.
+  promptLabel: 'Original (Youth Development)',
   rulesText,
   definitionsText,
   capabilities: {

@@ -14,6 +14,7 @@
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { CODEBOOK_REGISTRY, CodebookType } from '../codebooks/index.js';
+import { codebookAllowedOnThisSite } from '../services/explorerCodebooks.js';
 import { codeWithGemini } from './_lib/gemini.js';
 import { defaultFeedbackStore, FeedbackStore } from './_lib/feedbackStore.js';
 import { clientIp, hashIp } from './_lib/visitor.js';
@@ -52,7 +53,7 @@ export const createTryCodeHandler = (getStore: () => FeedbackStore | null, coder
     }
 
     const codebookType = req.body?.codebookType as CodebookType;
-    if (typeof codebookType !== 'string' || !(codebookType in CODEBOOK_REGISTRY)) {
+    if (typeof codebookType !== 'string' || !(codebookType in CODEBOOK_REGISTRY) || !codebookAllowedOnThisSite(codebookType)) {
       res.status(400).json({ error: 'Unknown codebook.' });
       return;
     }

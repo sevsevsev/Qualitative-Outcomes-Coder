@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { CODEBOOK_REGISTRY, CodebookType, DEFAULT_CODEBOOK_ID } from '../codebooks/index.js';
+import { CodebookType } from '../codebooks/index.js';
+import { parseExplorerCodebooks } from '../services/explorerCodebooks.js';
 import CodebookExplorer, { explorerHref, parseExplorerRoute } from './CodebookExplorer.js';
 import FeedbackAdmin from './FeedbackAdmin.js';
 import TryCoder from './TryCoder.js';
@@ -11,6 +12,9 @@ import TryCoder from './TryCoder.js';
 // Routes: #/codebook/<id>/<target> (default), #/try/<id>, #/admin.
 
 const readHash = () => window.location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
+
+// Codebooks this site shows (VITE_EXPLORER_CODEBOOKS; see services/explorerCodebooks.ts).
+const SITE_CODEBOOKS = parseExplorerCodebooks(import.meta.env.VITE_EXPLORER_CODEBOOKS);
 
 const SITE_NAME = import.meta.env.VITE_SITE_NAME || 'Youth Outcomes Codebook';
 
@@ -25,15 +29,15 @@ const ExplorerSite: React.FC = () => {
 
   const view: 'codebook' | 'try' | 'admin' =
     hashPath[0] === 'try' ? 'try' : hashPath[0] === 'admin' ? 'admin' : 'codebook';
-  const route = parseExplorerRoute(view === 'codebook' ? hashPath.slice(1) : []);
+  const route = parseExplorerRoute(view === 'codebook' ? hashPath.slice(1) : [], SITE_CODEBOOKS);
   const tryCodebook: CodebookType =
-    view === 'try' && hashPath[1] && hashPath[1] in CODEBOOK_REGISTRY ? (hashPath[1] as CodebookType) : route.codebookId;
+    view === 'try' && SITE_CODEBOOKS.includes(hashPath[1] as CodebookType) ? (hashPath[1] as CodebookType) : route.codebookId;
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pb-20">
       <nav className="bg-white border-b border-slate-200 sticky top-0 z-10 shadow-sm">
         <div className="w-full px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 gap-4">
-          <a href={explorerHref(DEFAULT_CODEBOOK_ID)} className="font-bold text-lg sm:text-xl text-slate-800 tracking-tight truncate">
+          <a href={explorerHref(SITE_CODEBOOKS[0])} className="font-bold text-lg sm:text-xl text-slate-800 tracking-tight truncate">
             {SITE_NAME}
           </a>
           <div className="flex items-center gap-1 text-sm">
@@ -59,10 +63,10 @@ const ExplorerSite: React.FC = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8 py-10">
         {view === 'admin' && <FeedbackAdmin />}
         {view === 'try' && (
-          <TryCoder codebookId={tryCodebook} onCodebookChange={id => { window.location.hash = `#/try/${id}`; }} />
+          <TryCoder codebookId={tryCodebook} codebookIds={SITE_CODEBOOKS} onCodebookChange={id => { window.location.hash = `#/try/${id}`; }} />
         )}
         {view === 'codebook' && (
-          <CodebookExplorer route={route} withFeedback />
+          <CodebookExplorer route={route} withFeedback codebookIds={SITE_CODEBOOKS} />
         )}
       </div>
     </div>

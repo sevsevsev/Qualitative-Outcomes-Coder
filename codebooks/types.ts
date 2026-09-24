@@ -71,8 +71,13 @@ export interface Codebook {
    * exported row as codebook_version.
    */
   version: string;
-  /** Display name in the codebook picker. */
+  /** Display name in the codebook picker and explorer. */
   label: string;
+  /**
+   * Name used in the model prompt's codebook header, when it differs from
+   * `label`. Lets the display name change without changing the prompt.
+   */
+  promptLabel?: string;
   domains: DomainDefinition[];
   /**
    * Process/output-format instructions for the model: how to split
@@ -106,7 +111,7 @@ export interface Codebook {
 export const buildSystemInstruction = (codebook: Codebook): string =>
   `${codebook.rulesText}\n\n` +
   `=====================\n` +
-  `${codebook.label} CODEBOOK (Definitions, Source Frameworks & Examples)\n` +
+  `${codebook.promptLabel ?? codebook.label} CODEBOOK (Definitions, Source Frameworks & Examples)\n` +
   `=====================\n` +
   `${codebook.definitionsText}`;
 

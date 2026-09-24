@@ -80,3 +80,16 @@ describe('api/try-code', () => {
     expect(tries).toHaveLength(1);
   });
 });
+
+describe('api/try-code on the explorer site', () => {
+  it('refuses a codebook the site hides', async () => {
+    vi.stubEnv('VITE_SITE', 'explorer');
+    const { store } = memoryStore();
+    const coder = fakeCoder();
+    const res = await call(createTryCodeHandler(() => store, coder), {
+      method: 'POST', body: { codebookType: 'accelerate_philly', text: 'A statement.' }, headers: {},
+    });
+    expect(res.statusCode).toBe(400);
+    expect(coder).not.toHaveBeenCalled();
+  });
+});

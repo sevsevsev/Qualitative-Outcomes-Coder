@@ -10,6 +10,7 @@
 // they prompt still goes through a change proposal (see STANDARDS.md).
 
 import { Codebook, CODEBOOK_REGISTRY, CodebookType } from '../codebooks/index.js';
+import { codebookAllowedOnThisSite } from './explorerCodebooks.js';
 
 export type FeedbackKind = 'comment' | 'missing';
 /** "general" is feedback on the codebook as a whole (targetCode is ""). */
@@ -132,7 +133,7 @@ export const validateSubmission = (input: unknown): ValidationResult => {
   }
 
   const codebookId = s.codebookId as CodebookType;
-  if (typeof codebookId !== 'string' || !(codebookId in CODEBOOK_REGISTRY)) {
+  if (typeof codebookId !== 'string' || !(codebookId in CODEBOOK_REGISTRY) || !codebookAllowedOnThisSite(codebookId)) {
     return { ok: false, error: 'Unknown codebook.' };
   }
   const codebook = CODEBOOK_REGISTRY[codebookId];

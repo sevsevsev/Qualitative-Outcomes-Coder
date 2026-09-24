@@ -25,6 +25,9 @@ Read these before touching any codebook:
   Learning & Achievement is Domain 1 (CP-04-08). Older files may use the old numbers;
   see `codebook-refinement/renumbering/`.
 - The v2 draft is not in code yet (phase 4).
+- A public explorer-only site is built from this repo with `VITE_SITE=explorer` (README,
+  "Public codebook explorer site"). Its visitor feedback lands in
+  `codebook-refinement/feedback/` as leads for a cycle, never as evidence or edits.
 
 ## Hard rules
 

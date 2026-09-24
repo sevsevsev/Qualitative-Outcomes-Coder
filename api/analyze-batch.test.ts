@@ -1,5 +1,6 @@
-import { describe, it, expect } from 'vitest';
-import { isModelUnavailableError } from './analyze-batch.js';
+import { afterEach, describe, it, expect, vi } from 'vitest';
+import handler, { isModelUnavailableError } from './analyze-batch.js';
+import { call } from './_lib/testing.js';
 
 // Guards the fallback-trigger condition specifically: it must fire for a
 // retired/nonexistent model (so the fallback in api/analyze-batch.ts
@@ -28,5 +29,16 @@ describe('isModelUnavailableError', () => {
   it('does not match an empty/malformed error object', () => {
     expect(isModelUnavailableError({})).toBe(false);
     expect(isModelUnavailableError(undefined)).toBe(false);
+  });
+});
+
+describe('analyze-batch on the explorer site', () => {
+  afterEach(() => vi.unstubAllEnvs());
+
+  it('is closed when VITE_SITE=explorer, even with a key set', async () => {
+    vi.stubEnv('VITE_SITE', 'explorer');
+    vi.stubEnv('GEMINI_API_KEY', 'test-key');
+    const res = await call(handler, { method: 'POST', body: { codebookType: 'original', items: [{ row_id: '1', outcome_text: 'x' }] } });
+    expect(res.statusCode).toBe(404);
   });
 });

@@ -65,9 +65,14 @@ codebooks/
   index.ts                      registry — CODEBOOK_REGISTRY maps id -> Codebook
   geminiSchema.ts                (server-only) builds the enum-constrained Gemini
                                  response schema from a Codebook
+  ExplorerSite.tsx              the public explorer site (VITE_SITE=explorer)
+  FeedbackPanel.tsx / FeedbackAdmin.tsx / TryCoder.tsx   its feedback, moderation and try-it screens
 api/
-  analyze-batch.ts              Vercel serverless function; the ONLY place that
-                                 holds GEMINI_API_KEY and calls the Gemini SDK
+  analyze-batch.ts              Vercel serverless function for the coder
+  try-code.ts                   codes one statement for the explorer site's "Try it"
+  feedback.ts / feedback-admin.ts   visitor feedback and its moderation
+  _lib/gemini.ts                the ONLY place that calls the Gemini SDK
+  _lib/feedbackStore.ts         Postgres (Neon) storage for feedback and try-it limits
 ```
 
 **Why a serverless function?** The original AI Studio scaffold called the Gemini SDK directly from the browser, which meant `GEMINI_API_KEY` was baked into the client bundle — visible to anyone who opened devtools. `api/analyze-batch.ts` now holds the key server-side; the client only ever calls its own `/api/analyze-batch` endpoint over `fetch`.
@@ -81,6 +86,25 @@ api/
 3. That's it — the codebook picker, review table columns, Gemini schema, and CSV export all read from the registry automatically.
 
 The one exception: `services/reviewNormalization.ts`'s fuzzy-matching for re-imported/legacy CSVs (e.g. recognizing `"2. Joy..."` as `"Domain 2. Joy..."`) is keyed on codebook id, because each codebook's domain-numbering syntax differs. If your new codebook's raw exports need the same forgiving re-import behavior, add a case there.
+
+## Public codebook explorer site
+
+The same repo also builds a public site that shows only the codebook explorer, with visitor feedback and a "Try it" box. It reads the live codebook and source registries, so it can never drift from the coder: every merged codebook change shows up on both.
+
+**Set it up (once):**
+
+1. In Vercel, import this repo a second time as a new project (for example `outcomes-codebook`).
+2. In that project's Environment Variables, set `VITE_SITE=explorer`. This builds the explorer site and closes `/api/analyze-batch` there.
+3. Add a database: Storage, then Neon (free plan). Connecting it sets `DATABASE_URL`. The tables are created on first use.
+4. Set `FEEDBACK_ADMIN_PASSWORD` to a password of 12 or more characters.
+5. Optional, for "Try it": set `GEMINI_API_KEY` to a key made just for this site (set a budget alert on it in Google Cloud).
+6. Redeploy.
+
+**Optional settings:** `VITE_SITE_NAME` (header name, default "Youth Outcomes Codebook"), `FEEDBACK_PUBLIC=false` (approved feedback visible only to the admin), `TRY_CODING_PER_HOUR` (default 10 per visitor), `TRY_CODING_DAILY_CAP` (default 300 for the whole site), `TRY_CODING=off`.
+
+**Moderating:** open `#/admin` on the site and sign in with the admin password. New feedback stays hidden until approved. Approved feedback appears under its code or domain as long as that code keeps the same wording. Feedback never changes the codebook: download the approved CSV into `codebook-refinement/feedback/` (see the README there) and it feeds the next refinement cycle.
+
+**Privacy:** "Try it" statements are sent to Gemini and not stored. Feedback stores what the visitor typed, an optional name, organization and email (emails are shown only on the admin page), and a salted hash of the IP address for rate limiting.
 
 ### Data note
 

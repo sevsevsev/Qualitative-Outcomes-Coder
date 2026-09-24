@@ -28,7 +28,9 @@ and old Domains 1–10 are 2–11. Live files (the codebook, `CONFUSIONS.md`, th
 registry, both gold sets, the crosswalk's v1 column, and open CPs) use the new
 numbers. Records of past work (cycle reports, applied CPs, `eval/cycle02/`,
 `validation/`) keep the numbers they were written with. Translate them with
-`renumbering/v1.2.0-to-v2.0.0.csv`.
+`renumbering/v1.2.0-to-v2.0.0.csv`. The v1 columns of `gold/gold-cycle02.csv`, the
+crosswalk and `v2/STRUCTURE.md` use the new numbers with v1.1.1 meanings (for
+example, 1.3 there is the old broad 11.3).
 
 ## The loop
 

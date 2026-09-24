@@ -1,5 +1,7 @@
 # Framework review and proposed v2 structure (cycle 02)
 
+> v1 code numbers here use the v2.0.0 numbering (CP-04-08), but they describe the codes as they stood in v1.1.1. For example, 1.3 still means v1.1.1's broad 11.3, before science and arts moved to 1.8 and 1.9.
+
 This document answers three questions:
 
 1. Are we using the best frameworks for the existing domains?

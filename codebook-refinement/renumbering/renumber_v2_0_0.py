@@ -59,6 +59,14 @@ def build_map(dump):
 # Numbers that look like codes but are not ours. Left exactly as written.
 PROTECT = [
     'The 2024 revision renumbers it as 1.2.',  # ISTE's own standard number (sources registry)
+    # v1.1.1 export labels and their v1.1.1 domain in the re-import tests: old
+    # labels by definition, so they keep their old numbers.
+    "it('maps the old 11.1 and 11.6 labels",
+    "it('routes an old 11.3 row",
+    "'11.1 Literacy & Reading Skill'",
+    "'11.6 Credit Accumulation, On-Track Status & Graduation'",
+    "'11.3 General Content Knowledge & Conceptual Understanding'",
+    "const D11 = 'Domain 11. Academic Learning & Achievement'",
 ]
 
 

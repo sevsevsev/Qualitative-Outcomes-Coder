@@ -56,7 +56,7 @@ A subcategory keeps its position inside its domain: 11.3 → 1.3, 3.2.1 → 4.2.
 CPs (CP-04-01 to CP-04-04, CP-04-07), `eval/cycle02/` coder outputs, `validation/`
 fixtures, and `v2/source-verification-2026-09-24.md`. Read them through the map.
 
-**Hand edits (a script can't judge these):**
+**Hand edits (a script can't judge these), all in the second commit:**
 
 - The version-history comment in `original.ts` gets a v2.0.0 paragraph. The older
   paragraphs keep the numbers they were written with.
@@ -67,6 +67,31 @@ fixtures, and `v2/source-verification-2026-09-24.md`. Read them through the map.
   says 1.10, as CONFUSIONS.md CF-020 already did.
 - The re-import labels for v1.1.1 (`11.1 Literacy & Reading Skill` and two others)
   keep their old numbers; they now point at the new codes.
+- The same three v1.1.1 labels, and their v1.1.1 domain, in
+  `services/reviewNormalization.test.ts`: the script had renumbered them and they
+  were restored. The script's `PROTECT` list now skips them, so a re-run reproduces
+  the result.
+- Test fixes that look codes up by bare number (`byNumber('4')`, `/11\.5/`), the
+  version test, and variable names that named old domains.
+
+**Docs and records updated alongside:**
+
+- The status lines of the applied CPs (CP-04-01 to CP-04-04, CP-04-07).
+- A renumbering note at the top of each renumbered open CP.
+- CONFUSIONS.md: a code-numbers note, "active" now meaning the live codebook, and
+  CF-010 and CF-026 marked active (CP-04-01 shipped in v1.2.0).
+- `sources/original.sources.json`: a `codes_renumbered` note.
+- `CLAUDE.md` current state, `README.md` (12 domains, the fuzzy-match example),
+  `codebook-refinement/README.md`, the cycle-04 addendum, and the `registry.test.ts`
+  test names.
+- The v2 draft, STRUCTURE.md and PLAN.md say the crosswalk's v1 column uses new
+  numbers with v1.1.1 meanings.
+- CP-04-05 proposes that the v2 draft follow the same rule (Y7/Y8 become Y1/Y2) at
+  cut-over. This is a proposal inside a CP that is still waiting on Severin, not a
+  decision.
+
+**STANDARDS.md is not changed.** It cites 10.5 and 7.8 as examples, which are now
+11.5 and 8.8. Only Severin can approve that edit.
 
 **Re-importing old exports** (`services/reviewNormalization.ts`):
 
@@ -74,9 +99,13 @@ fixtures, and `v2/source-verification-2026-09-24.md`. Read them through the map.
   text, so it needs no version stamp. Only Domain 12 has the same label in both
   versions, and it maps to itself.
 - A bare number ("Domain 11", "11.3") is translated only when the row is stamped
-  with a version below 2.0.0.
+  with a version below 2.0.0. With no stamp, a domain number that changed is left
+  blank for review rather than guessed (Domain 12 still matches).
 - A domain written as "1. Joy…" is matched by its name before its number.
-- Secondary codes with old labels are upgraded too.
+- Secondary codes with old labels are upgraded too, and so are bare old numbers on
+  rows stamped below 2.0.0.
+- Upgraded rows keep their original stamp, which records the version they were
+  coded under.
 - A current label is never remapped, so re-importing a re-saved file is safe.
 
 **Tests** (`codebooks/renumbering.test.ts`) prove:
@@ -94,6 +123,13 @@ future restructured codebook "v2.0.0". That codebook will be a separate file
 version string in code. The docs will need to say "original 2.0.0" and "the v2 draft"
 to keep them apart.
 
+## Merged alongside PR #10
+
+PR #10 (sync checks) merged into main just before this CP. It added two registry
+entries and CP-05-01 that used the old numbers, so main's sync test failed after
+both merged. The follow-up renumbered them with the same `make_prose` function:
+Utility Value 1.3 → 2.3, Healing & Trauma 7.3 → 8.3, and Domain 7 → 8 in CP-05-01.
+
 ## Risk
 
 - Codes may now be listed next to a lower number. The model may favor Domain 1 in
@@ -101,6 +137,8 @@ to keep them apart.
   the same risk CP-04-04 named, and the same live edge-case re-run checks it.
 - Anyone holding a printed or exported list of v1.x codes needs the map. The CSV
   in `renumbering/` is the reference.
+- Codebook-tab links saved before 2.0.0 (for example `…/11.3`) now open the code
+  that holds that number today.
 
 ## Gold impact
 

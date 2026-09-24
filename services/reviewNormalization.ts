@@ -19,7 +19,10 @@ export interface NormalizableCoding {
   primary_confidence?: string;
   primary_subject_area?: string;
   uncoded?: boolean | string;
-  /** "original@1.2.0" as stamped on export; tells old code numbers from new ones. */
+  /**
+   * "original@1.2.0" as stamped on export: the codebook version the row was
+   * coded under. Rows upgraded to current labels keep their original stamp.
+   */
   codebook_version?: string;
 }
 
@@ -42,16 +45,31 @@ export const isVersionBefore = (stamp: string | undefined, threshold: string): b
   return false;
 };
 
-/** The current label for an old domain or subcategory label, or the value unchanged. */
+/**
+ * The current label for an old domain or subcategory label, or the value
+ * unchanged. When `codebookVersion` is a stamp from before a renumbering, a
+ * bare old number ("11.3", "Domain 11") is translated too.
+ */
 export const upgradeLegacyLabel = <T extends string | undefined>(
   value: T,
   codebook: Codebook,
-  kind: 'domain' | 'subcategory'
+  kind: 'domain' | 'subcategory',
+  codebookVersion?: string
 ): T | string => {
   const clean = (value ?? '').trim().toLowerCase();
   if (!clean) return value;
   const list = kind === 'domain' ? codebook.legacyDomains : codebook.legacySubcategories;
-  return list?.find(m => m.from.toLowerCase() === clean)?.to ?? value;
+  const byLabel = list?.find(m => m.from.toLowerCase() === clean)?.to;
+  if (byLabel) return byLabel;
+  const renumbering = codebook.legacyCodeNumbers;
+  if (!renumbering || !isVersionBefore(codebookVersion, renumbering.before)) return value;
+  const current = kind === 'domain' ? allDomainCodes(codebook) : codebook.domains.flatMap(d => d.subcategories.map(s => s.code));
+  if (current.some(c => c.toLowerCase() === clean)) return value;
+  const pattern = kind === 'domain' ? /^(\s*(?:domain\s+)?)(\d+)(?=\b)/i : /^(\s*)(\d+(?:\.\d+)+)(?=\s|$)/;
+  return value!.replace(pattern, (whole, lead: string, num: string) => {
+    const mapped = renumbering.codes.get(num);
+    return mapped ? lead + mapped : whole;
+  });
 };
 
 /**
@@ -65,7 +83,8 @@ const fuzzyMatchDomain = (
   rawDomain: string,
   domains: string[],
   codebookType: CodebookType,
-  oldCodeNumbers?: ReadonlyMap<string, string>
+  oldCodeNumbers?: ReadonlyMap<string, string>,
+  renumberedCodes?: ReadonlyMap<string, string>
 ): string | undefined => {
   let checkDomain = rawDomain;
 
@@ -89,6 +108,10 @@ const fuzzyMatchDomain = (
     }
     const domainParts = checkDomain.split(/[. ]/);
     if (domainParts.length > 1 && domainParts[0].toLowerCase() === "domain") {
+      // With no version stamp, a number that changed in a renumbering could be
+      // old or new. Leave the domain blank for review rather than guess.
+      const changed = renumberedCodes?.get(domainParts[1]);
+      if (!oldCodeNumbers && changed !== undefined && changed !== domainParts[1]) return undefined;
       const number = oldCodeNumbers?.get(domainParts[1]) ?? domainParts[1];
       const prefix = `${domainParts[0]} ${number}.`;
       return domains.find(d => d.toLowerCase().startsWith(prefix.toLowerCase()));
@@ -148,7 +171,8 @@ export const normalizeImportedCoding = (
     }
   }
   if (!matchedDomain && cleanDomain) {
-    matchedDomain = fuzzyMatchDomain(cleanDomain, domains, codebookType, oldNumbers);
+    const unstamped = !(item.codebook_version ?? '').trim();
+    matchedDomain = fuzzyMatchDomain(cleanDomain, domains, codebookType, oldNumbers, unstamped ? renumbering?.codes : undefined);
   }
 
   if (matchedDomain) {

@@ -182,7 +182,7 @@ source for Domain 5.
 
 **Gold:** G-023, G-024, G-025
 
-### CF-010: Content knowledge · proposed amendment (CP-04-01)
+### CF-010: Content knowledge · active (amended by CP-04-01)
 
 **Codes:** 9.1 · 1.1 · 1.2 · 1.3 · 1.8 · 1.9
 
@@ -414,7 +414,7 @@ and assessments are defined per subject (20 U.S.C. 6311(b)(1)(C)).
 
 **Gold:** G-019, G-062, G-063, G-064, G-065
 
-### CF-026: Arts learning vs. creative expression and performance · proposed (CP-04-01)
+### CF-026: Arts learning vs. creative expression and performance · active (CP-04-01)
 
 **Codes:** 1.9 · 2.4 · 2.5
 

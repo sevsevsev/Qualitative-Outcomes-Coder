@@ -121,6 +121,17 @@ describe('re-importing exports coded before v2.0.0', () => {
     });
   });
 
+  it('leaves a changed domain number blank for review when the row has no version stamp', () => {
+    expect(reimport('Domain 11', '11.3', '').primary_domain).toBe('');
+    expect(reimport('Domain 11. Academic Learning and Achievement', '11.3', '').primary_domain).toBe('');
+    expect(reimport('Domain 3. Social and Emotional Learning', '', '').primary_domain).toBe('');
+    // Domain 12 kept its number, so there is nothing to guess.
+    expect(reimport('Domain 12', '12.7', '')).toMatchObject({
+      primary_domain: 'Domain 12. Family Strengthening & Basic Needs',
+      primary_subcategory: '12.7 Housing Stability',
+    });
+  });
+
   it('matches a domain by its name before its number', () => {
     expect(reimport('1. Joy, Interest & Motivation in Learning', '', '').primary_domain)
       .toBe('Domain 2. Joy, Interest & Motivation in Learning');
@@ -135,6 +146,13 @@ describe('re-importing exports coded before v2.0.0', () => {
       .toBe('4.2.1 Emotion regulation & impulse control');
     expect(upgradeLegacyLabel('4.2.1 Emotion regulation & impulse control', original, 'subcategory'))
       .toBe('4.2.1 Emotion regulation & impulse control');
+    // Bare old numbers only on rows stamped before 2.0.0.
+    expect(upgradeLegacyLabel('11.3', original, 'subcategory', 'original@1.2.0')).toBe('1.3');
+    expect(upgradeLegacyLabel('3.2.1 Emotion regulation', original, 'subcategory', 'original@1.2.0')).toBe('4.2.1 Emotion regulation');
+    expect(upgradeLegacyLabel('Domain 11', original, 'domain', 'original@1.2.0')).toBe('Domain 1');
+    expect(upgradeLegacyLabel('11.3', original, 'subcategory', 'original@2.0.0')).toBe('11.3');
+    expect(upgradeLegacyLabel('11.3', original, 'subcategory')).toBe('11.3');
+    expect(upgradeLegacyLabel('2.1 Joy & Emotional Wellness', original, 'subcategory', 'original@1.2.0')).toBe('2.1 Joy & Emotional Wellness');
     expect(upgradeLegacyLabel('', original, 'domain')).toBe('');
     expect(upgradeLegacyLabel(undefined, original, 'domain')).toBeUndefined();
   });

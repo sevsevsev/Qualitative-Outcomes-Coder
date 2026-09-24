@@ -1,7 +1,7 @@
 {
   "date": "2026-09-24",
   "cycle": "03 (PLAN.md phase 1, step 2)",
-  "method": "Claims V01-V39 were built from v2-candidate-sources.json (one claim per source-code pair) by the orchestrating session and split across four independent codebook-citation-verifier agents. Claims U01-U09 are candidates found by a separate proposer agent (U01-U07: sources for the unsourced codes Y8.4, F1.7, A1.3) or replacement leads (U08, U09) raised in verifier notes, and were checked by a fifth, fresh verifier. Verifiers saw only the claim fields and the code's construct, never the proposer's reasoning. Verdicts are recorded as returned; three over-length excerpts (V31, V36, V37) were trimmed by the orchestrator to a verbatim sub-span of 40 words or fewer, with the verifier's original text kept in excerpt_as_returned. After Severin ruled out early-childhood-specific sources for A1.3 (2026-09-24), U10-U11 (general worker well-being frameworks, first named by the proposer) and U12-U13 (general turnover definitions, from a second proposer search) were checked by two more fresh verifiers.",
+  "method": "Claims V01-V39 were built from v2-candidate-sources.json (one claim per source-code pair) by the orchestrating session and split across four independent codebook-citation-verifier agents. Claims U01-U09 are candidates found by a separate proposer agent (U01-U07: sources for the unsourced codes Y8.4, F1.7, A1.3) or replacement leads (U08, U09) raised in verifier notes, and were checked by a fifth, fresh verifier. Verifiers saw only the claim fields and the code's construct, never the proposer's reasoning. Verdicts are recorded as returned; three over-length excerpts (V31, V36, V37) were trimmed by the orchestrator to a verbatim sub-span of 40 words or fewer, with the verifier's original text kept in excerpt_as_returned. After Severin ruled out early-childhood-specific sources for A1.3 (2026-09-24), U10-U11 (general worker well-being frameworks, first named by the proposer) and U12-U13 (general turnover definitions, from a second proposer search) were checked by two more fresh verifiers. Follow-up on 2026-09-24 (after Severin asked to close the open gate items): W01-W04 re-checked CJCA and tried for primary copies of Shogren 2015, Carlone & Johnson 2007 and the ED/DOJ letter; X01-X06 are new A2.3 and F1.6 candidates from a separate proposer, checked by a separate verifier. W01's excerpt was trimmed to a verbatim sub-span.",
   "claims": [
     {
       "claim_id": "V01",
@@ -992,6 +992,197 @@
         "excerpt": "This document describes the elements of workforce turnover and retention and provides comparable measures for internal and external reporting.",
         "corrected_cite_as": "",
         "notes": "Exists; ISO/TC 260, May 2021; scope matches. The public abstract does not name turnover-rate or retention-rate measures and the full text is paywalled. Under review (stage 90.60, 2024-09-03). Fits only the retention/turnover part of A1.3."
+      }
+    },
+    {
+      "claim_id": "W01",
+      "source_id": "cjca-2009",
+      "claim": {
+        "code": "Y12.4",
+        "cite_as": "Council of Juvenile Correctional Administrators (2009). Defining and Measuring Recidivism (CJCA white paper).",
+        "claimed_component": "Recommended definitions and measures of juvenile recidivism (e.g., re-arrest, re-adjudication, re-incarceration)",
+        "url": null,
+        "code_construct": "Y12.4 Justice Involvement, Diversion & Reentry: arrest, adjudication, recidivism, completing probation or diversion, restorative agreements"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.doc.ks.gov/juvenile-services/committee/documentation/6-2017/CJCA/view",
+        "source_kind": "primary",
+        "excerpt": "Multiple measures of recidivism – such as re-arrest for a new offense, adjudication and reincarceration for a new offense – make comparisons more meaningful",
+        "corrected_cite_as": "Harris, P., Lockwood, B., & Mengers, L. (2009, November). Defining and Measuring Recidivism: A CJCA White Paper. Council of Juvenile Correctional Administrators.",
+        "notes": "Publisher copy (cjja.net) blocked by robots.txt; full text checked on a Kansas DOC page. OJP/NCJRS record confirms CJCA Recidivism Work Group as corporate author, November 2009, OJJDP only as sponsor.",
+        "excerpt_as_returned": "More than one measure of recidivism should be used in order to increase opportunities for comparison. Multiple measures of recidivism – such as re-arrest for a new offense, adjudication and reincarceration for a new offense – make comparisons more meaningful"
+      }
+    },
+    {
+      "claim_id": "W02",
+      "source_id": "causal-agency-theory",
+      "claim": {
+        "code": "Y4.6",
+        "cite_as": "Shogren, K. A., Wehmeyer, M. L., Palmer, S. B., Forber-Pratt, A. J., Little, T. J., & Lopez, S. (2015). Causal Agency Theory: Reconceptualizing a functional model of self-determination. Education and Training in Autism and Developmental Disabilities, 50(3), 251-263.",
+        "claimed_component": "Self-determination as acting as the causal agent in one's life; essential characteristics: volitional action, agentic action, action-control beliefs",
+        "url": null,
+        "code_construct": "Y4.6 Agency, Self-Determination & Self-Advocacy: acting as the causal agent in one's own life (making choices, advocating for one's needs)"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://www.academia.edu/10016093/Causal_agency_theory_reconceptualizing_a_functional_model_of_self_determination",
+        "source_kind": "secondary",
+        "excerpt": "Within the context of Causal Agency Theory, which represents specific layers of human agency, we define self-determination as a dispositional characteristic manifested as acting as the causal agent in one's life.",
+        "corrected_cite_as": "",
+        "notes": "ERIC EJ1072049 and the SAGE DOI page confirm the citation; full text is paywalled. Component taken from an author-uploaded copy of the published version. Subsection headings read Volitional Action, Agentic Action, Action-Control Beliefs, but one summary sentence extracted as 'causal action'; check against a publisher copy. Fit to Y4.6 is good."
+      }
+    },
+    {
+      "claim_id": "W03",
+      "source_id": "carlone-johnson-2007",
+      "claim": {
+        "code": "Y4.7",
+        "cite_as": "Carlone, H. B., & Johnson, A. (2007). Understanding the science experiences of successful women of color: Science identity as an analytic lens. Journal of Research in Science Teaching, 44(8), 1187-1218.",
+        "claimed_component": "Science identity model with dimensions of competence, performance, and recognition",
+        "url": null,
+        "code_construct": "Y4.7 Domain Identity: seeing oneself as a certain kind of person in a field (a STEM person, an artist, an athlete, a reader)"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://commons.und.edu/cgi/viewcontent.cgi?article=1063&context=bio-fac",
+        "source_kind": "secondary",
+        "excerpt": "Science identity is composed of three key components, including competence (possessing scientific knowledge), performance (the capacity to use scientific tools and language in appropriate settings), and recognition (earning validation from others in the field)",
+        "corrected_cite_as": "",
+        "notes": "No primary full text reachable (Wiley 403; UNCG repository copy blocked by robots.txt). Crossref and PER Central confirm the citation; the abstract does not name competence or performance. Supported only by a citing article (Pedersen et al., 2022). Fit to Y4.7 is good."
+      }
+    },
+    {
+      "claim_id": "W04",
+      "source_id": "ed-doj-2015-lep",
+      "claim": {
+        "code": "F1.6",
+        "cite_as": "U.S. Department of Justice & U.S. Department of Education (2015). Dear Colleague Letter: English Learner Students and Limited English Proficient Parents.",
+        "claimed_component": "Section J: school districts must ensure meaningful communication with LEP parents and adequately notify them of information about any program, service, or activity",
+        "url": "https://www2.ed.gov/about/offices/list/ocr/letters/colleague-el-201501.pdf",
+        "code_construct": "F1.6 System Navigation & Rights Knowledge: families knowing their rights, where to turn for help, navigating school or service systems"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://www.wrightslaw.com/blog/ensuring-meaningful-communication-with-parents-who-have-limited-english-proficiency/",
+        "source_kind": "secondary",
+        "excerpt": "School districts and SEAs have an obligation to ensure meaningful communication with LEP parents in a language they can understand and to adequately notify LEP parents of information about any program, service, or activity",
+        "corrected_cite_as": "U.S. Department of Justice, Civil Rights Division & U.S. Department of Education, Office for Civil Rights (2015, January 7). Dear Colleague Letter: English Learner Students and Limited English Proficient Parents.",
+        "notes": "Primary copies confirm title, date and joint authorship but their extracted text stopped before Section J; blog quote used. News reports say ED rescinded this letter in August 2025 (not confirmed against an ed.gov notice). Fit to F1.6 is loose."
+      }
+    },
+    {
+      "claim_id": "X01",
+      "source_id": "fcc-ecf-47cfr54-q",
+      "claim": {
+        "code": "A2.3",
+        "cite_as": "47 C.F.R. Part 54, Subpart Q (Emergency Connectivity Fund), FCC",
+        "claimed_component": "Eligible equipment and services (Wi-Fi hotspots, modems, routers, connected devices) that schools and libraries provide for off-campus use (54.1702, 54.1706), and the required inventory of each device or service provided and to whom (54.1715)",
+        "url": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-54/subpart-Q",
+        "code_construct": "A2.3 Access to Resources: the program provides materials, technology, connectivity, or facilities, including counts of resources distributed (a program-level condition or output, not a participant skill)"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-54/subpart-Q",
+        "source_kind": "primary",
+        "excerpt": "Wi-Fi hotspots; Modems; Routers; Devices that combine a modem and a router; and Connected devices. ... The full name of the person to whom the device or other piece of equipment was provided",
+        "corrected_cite_as": "",
+        "notes": "Subpart Q 'Emergency Connectivity Fund'. 54.1702 lists equipment; 54.1706 covers off-campus use; 54.1715(a) requires inventories recording who received each item. Items are numbered separately in eCFR; the semicolon-joined form is condensed."
+      }
+    },
+    {
+      "claim_id": "X02",
+      "source_id": "essa-4109-tech-capacity",
+      "claim": {
+        "code": "A2.3",
+        "cite_as": "Every Student Succeeds Act, Title IV-A, section 4109(a)(2), 20 U.S.C. 7119(a)(2)",
+        "claimed_component": "Building technological capacity and infrastructure, including procuring content and purchasing devices, equipment, and software applications",
+        "url": "https://www.law.cornell.edu/uscode/text/20/7119",
+        "code_construct": "A2.3 Access to Resources: the program provides materials, technology, connectivity, or facilities, including counts of resources distributed (a program-level condition or output, not a participant skill)"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.law.cornell.edu/uscode/text/20/7119",
+        "source_kind": "primary",
+        "excerpt": "(2) building technological capacity and infrastructure, which may include—(A) procuring content and ensuring content quality; and (B) purchasing devices, equipment, and software applications in order to address readiness shortfalls",
+        "corrected_cite_as": "",
+        "notes": "ESEA section 4109 as added by ESSA (Pub. L. 114-95). A permissive LEA use of funds; fit holds."
+      }
+    },
+    {
+      "claim_id": "X03",
+      "source_id": "digital-equity-act-1723",
+      "claim": {
+        "code": "A2.3",
+        "cite_as": "Digital Equity Act of 2021, 47 U.S.C. 1723 (State Digital Equity Plans) and 1721(11) (definition of digital inclusion)",
+        "claimed_component": "Measurable objectives for the availability and affordability of fixed and wireless broadband and of consumer devices and technical support; digital inclusion includes reliable broadband service and internet-enabled devices",
+        "url": "https://www.law.cornell.edu/uscode/text/47/1723",
+        "code_construct": "A2.3 Access to Resources: the program provides materials, technology, connectivity, or facilities, including counts of resources distributed (a program-level condition or output, not a participant skill)"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.law.cornell.edu/uscode/text/47/1723",
+        "source_kind": "primary",
+        "excerpt": "the availability of, and affordability of access to, fixed and wireless broadband technology ... the availability and affordability of consumer devices and technical support for those devices",
+        "corrected_cite_as": "",
+        "notes": "Measurable objectives in 1723(c)(1)(B). 1721(11) defines digital inclusion to include reliable broadband service and internet-enabled devices."
+      }
+    },
+    {
+      "claim_id": "X04",
+      "source_id": "idea-671-pti",
+      "claim": {
+        "code": "F1.6",
+        "cite_as": "Individuals with Disabilities Education Act, section 671(b), 20 U.S.C. 1471(b) (Parent Training and Information Centers)",
+        "claimed_component": "Centers assist parents to understand their rights and responsibilities, to understand and use procedural safeguards, and to obtain information about available resources",
+        "url": "https://www.law.cornell.edu/uscode/text/20/1471",
+        "code_construct": "F1.6 System Navigation & Rights Knowledge: families knowing their rights, knowing where to turn for help, navigating school or service systems, and getting connected to resources and referrals"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.law.cornell.edu/uscode/text/20/1471",
+        "source_kind": "primary",
+        "excerpt": "assist parents and students with disabilities to understand their rights and responsibilities under this chapter ... assist parents to understand the availability of, and how to effectively use, procedural safeguards",
+        "corrected_cite_as": "",
+        "notes": "1471(b)(7) rights, (b)(8) procedural safeguards, (b)(4)(D) information about resources. Scope is disability-specific."
+      }
+    },
+    {
+      "claim_id": "X05",
+      "source_id": "cssp-concrete-support",
+      "claim": {
+        "code": "F1.6",
+        "cite_as": "Center for the Study of Social Policy (CSSP), Strengthening Families: Concrete Support in Times of Need",
+        "claimed_component": "Protective factor Concrete Support in Times of Need: parents understand their rights in accessing services, gain knowledge of relevant services, learn to navigate service systems, and seek help",
+        "url": "https://cssp.org/wp-content/uploads/2025/03/SF_Concrete-Support-in-Times-of-Need.pdf",
+        "code_construct": "F1.6 System Navigation & Rights Knowledge: families knowing their rights, knowing where to turn for help, navigating school or service systems, and getting connected to resources and referrals"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://cssp.org/wp-content/uploads/2025/03/SF_Concrete-Support-in-Times-of-Need.pdf",
+        "source_kind": "primary",
+        "excerpt": "Parents need experiences that enable them to understand their rights in accessing services, gain knowledge of relevant services and learn how to navigate through service systems.",
+        "corrected_cite_as": "Center for the Study of Social Policy (CSSP). Strengthening Families Protective & Promotive Factors: Concrete Support in Times of Need.",
+        "notes": "Near-verbatim match; also 'seeking help is a step toward building resilience'. No clear publication year."
+      }
+    },
+    {
+      "claim_id": "X06",
+      "source_id": "mapp-kuttner-2013",
+      "claim": {
+        "code": "F1.6",
+        "cite_as": "Mapp, K. L., & Kuttner, P. J. (2013). Partners in Education: A Dual Capacity-Building Framework for Family-School Partnerships. SEDL and U.S. Department of Education.",
+        "claimed_component": "Family capacity outcomes: families have enhanced knowledge of educational policies and programs, and increased connections to community agencies and services",
+        "url": "https://files.eric.ed.gov/fulltext/ED593896.pdf",
+        "code_construct": "F1.6 System Navigation & Rights Knowledge: families knowing their rights, knowing where to turn for help, navigating school or service systems, and getting connected to resources and referrals"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://files.eric.ed.gov/fulltext/ED593896.pdf",
+        "source_kind": "primary",
+        "excerpt": "Families have enhanced knowledge and understanding of educational policies and programs, such as those associated with special needs and Title I.",
+        "corrected_cite_as": "Mapp, K. L., & Kuttner, P. J. (2013). Partners in Education: A Dual Capacity-Building Framework for Family-School Partnerships. SEDL in collaboration with the U.S. Department of Education.",
+        "notes": "p. 26, 4C 'Capabilities' and 'Connections' (families and staff have increased connections to community agencies and services). SEDL is the publisher; ED funded it."
       }
     }
   ]

@@ -127,7 +127,7 @@ to keep them apart.
 
 PR #10 (sync checks) merged into main just before this CP. It added two registry
 entries and CP-05-01 that used the old numbers, so main's sync test failed after
-both merged. The follow-up renumbered them with the same `make_prose` function:
+both merged. PR #12 moved them to the new numbers using the map in `renumbering/`:
 Utility Value 1.3 → 2.3, Healing & Trauma 7.3 → 8.3, and Domain 7 → 8 in CP-05-01.
 
 ## Risk

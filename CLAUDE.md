@@ -17,11 +17,13 @@ Read these before touching any codebook:
 5. `codebook-refinement/v2/`: the v2 draft (`codebook-v2-draft.md`), its rationale
    (`STRUCTURE.md`), the v1→v2 crosswalk, and candidate sources.
 
-**Current state (as of 2026-09-23):**
+**Current state (as of 2026-09-24):**
 
-- Cycle 02 is done. PLAN.md **phase 1** (human adjudication + source verification) is
-  next.
-- Production still runs `codebooks/original.ts` v1.1.1.
+- Cycle 04 (academic subjects) is done. PLAN.md **phase 1** (human adjudication +
+  source verification) is still open.
+- `codebooks/original.ts` is v2.0.0: v1.2.0's subject split, renumbered so Academic
+  Learning & Achievement is Domain 1 (CP-04-08). Older files may use the old numbers;
+  see `codebook-refinement/renumbering/`.
 - The v2 draft is not in code yet (phase 4).
 
 ## Hard rules

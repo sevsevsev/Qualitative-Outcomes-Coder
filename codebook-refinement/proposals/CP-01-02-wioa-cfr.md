@@ -1,9 +1,11 @@
-# CP-01-02: Fix the WIOA regulation citation on 8.8
+# CP-01-02: Fix the WIOA regulation citation on 9.8
+
+> Code numbers in this proposal were updated to the v2.0.0 numbering by CP-04-08 (mechanical; see `renumbering/v1.2.0-to-v2.0.0.csv`).
 
 | Field | Value |
 |---|---|
 | Type | CITATION_FIX |
-| Codes touched | 8.8 |
+| Codes touched | 9.8 |
 | Version bump | PATCH |
 | Requirement served | R1 |
 | Status | draft |
@@ -11,7 +13,7 @@
 
 ## Problem
 
-8.8 cites "WIOA Title I Youth Primary Indicators of Performance (34 CFR 463.155)".
+9.8 cites "WIOA Title I Youth Primary Indicators of Performance (34 CFR 463.155)".
 34 CFR Part 463 is the **Adult Education and Family Literacy Act** (WIOA Title II)
 regulation. It is the Department of Education's copy of the joint indicators. The
 **Title I Youth** program's indicators are at **20 CFR 677.155** (Department of

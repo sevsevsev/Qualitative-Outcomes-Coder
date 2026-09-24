@@ -1,9 +1,11 @@
 # CP-01-01: Correct the name of Gholdy Muhammad's framework
 
+> Code numbers in this proposal were updated to the v2.0.0 numbering by CP-04-08 (mechanical; see `renumbering/v1.2.0-to-v2.0.0.csv`).
+
 | Field | Value |
 |---|---|
 | Type | CITATION_FIX |
-| Codes touched | Domain 1 header, 1.1, 2.4, 6.4 (citation text only) |
+| Codes touched | Domain 2 header, 2.1, 3.4, 7.4 (citation text only) |
 | Version bump | PATCH |
 | Requirement served | R1 |
 | Status | draft |
@@ -11,7 +13,7 @@
 
 ## Problem
 
-`definitionsText` calls it "Gholdy Muhammad's Hill Model" (1.1, 6.4). The framework
+`definitionsText` calls it "Gholdy Muhammad's Hill Model" (2.1, 7.4). The framework
 is the **Culturally and Historically Responsive Literacy (HRL) / Five Pursuits
 framework** (Identity, Skills, Intellect, Criticality, Joy). It comes from
 *Cultivating Genius* (2020), which had four pursuits, and *Unearthing Joy* (2023),
@@ -26,9 +28,9 @@ The pursuit numbers the codebook uses are correct (1 Identity, 4 Criticality,
 
 | Location | Before | After |
 |---|---|---|
-| 1.1 Source | `Gholdy Muhammad’s Hill Model (Pursuit 5: Joy).` | `Muhammad, Five Pursuits / Culturally and Historically Responsive Literacy framework (Pursuit 5: Joy; Unearthing Joy, 2023).` |
-| 6.4 Source | `Gholdy Muhammad’s Hill Model (Pursuit 4: Criticality).` | `Muhammad, Five Pursuits / Culturally and Historically Responsive Literacy framework (Pursuit 4: Criticality; Cultivating Genius, 2020).` |
-| 2.4 Source | `Learning for Justice (Identity) & Gholdy Muhammad (Pursuit 1).` | `Learning for Justice Social Justice Standards (Identity) & Muhammad, Five Pursuits framework (Pursuit 1: Identity).` |
+| 2.1 Source | `Gholdy Muhammad’s Hill Model (Pursuit 5: Joy).` | `Muhammad, Five Pursuits / Culturally and Historically Responsive Literacy framework (Pursuit 5: Joy; Unearthing Joy, 2023).` |
+| 7.4 Source | `Gholdy Muhammad’s Hill Model (Pursuit 4: Criticality).` | `Muhammad, Five Pursuits / Culturally and Historically Responsive Literacy framework (Pursuit 4: Criticality; Cultivating Genius, 2020).` |
+| 3.4 Source | `Learning for Justice (Identity) & Gholdy Muhammad (Pursuit 1).` | `Learning for Justice Social Justice Standards (Identity) & Muhammad, Five Pursuits framework (Pursuit 1: Identity).` |
 | File header comment | `Gholdy Muhammad (Joy & Criticality)` | no change needed |
 
 **Registry:** when applied, delete `muhammad-hill-model-label`.

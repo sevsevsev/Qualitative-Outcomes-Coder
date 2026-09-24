@@ -6,7 +6,7 @@
 | Codes touched | 11.2 (citation text only) |
 | Version bump | PATCH |
 | Requirement served | R1 frameworks |
-| Status | ready-to-test (applied on branch `claude/project-thread-mpnj0j`) |
+| Status | applied in v1.2.0 (PR #9, merged 2026-09-24). Codes here use the pre-2.0.0 numbering; see CP-04-08 |
 | Enum cost | +0 |
 
 ## Problem

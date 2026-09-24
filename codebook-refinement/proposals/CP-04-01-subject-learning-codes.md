@@ -6,7 +6,7 @@
 | Codes touched | 11.3 (renamed, narrowed, re-anchored), 11.8 (new), 11.9 (new); hints on 8.1, 1.4/1.5 notes; CF-010, CF-021, CF-024, CF-026 |
 | Version bump | MAJOR under S4.6 as written (11.3 is renamed). Branch ships as 1.2.0 pending Severin's ruling; see "Version question" |
 | Requirement served | R1 frameworks · R2 breadth |
-| Status | ready-to-test (applied on branch `claude/project-thread-mpnj0j`) |
+| Status | applied in v1.2.0 (PR #9, merged 2026-09-24). Codes here use the pre-2.0.0 numbering; see CP-04-08 |
 | Enum cost | +2 (footprint 142 → 144, measured with `buildBatchResponseSchema`) |
 
 ## Problem

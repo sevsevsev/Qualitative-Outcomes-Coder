@@ -4,7 +4,7 @@ import { AtomicBatchItem, BatchAnalysisResult, CodebookType } from '../types.js'
 import { getCodebook, allDomainCodes, subcategoriesForDomain, subjectAreaMismatch } from '../codebooks/index.js';
 import { atomicJsonToCSV } from '../services/geminiService.js';
 import { saveReviewState, clearReviewState } from '../services/reviewStorage.js';
-import { normalizeImportedCoding } from '../services/reviewNormalization.js';
+import { normalizeImportedCoding, upgradeLegacyLabel } from '../services/reviewNormalization.js';
 
 interface ReviewDashboardProps {
   result: BatchAnalysisResult;
@@ -51,6 +51,12 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
             uncoded: normalized.uncoded,
             is_corrected: item.is_corrected || false,
             codebook_version: item.codebook_version || `${codebookDef.id}@${codebookDef.version}`,
+            // Secondary codes aren't re-validated here, but old labels (from a
+            // renumbered or renamed code) are carried over to the current ones.
+            secondary_domain_1: upgradeLegacyLabel(item.secondary_domain_1, codebookDef, 'domain'),
+            secondary_subcategory_1: upgradeLegacyLabel(item.secondary_subcategory_1, codebookDef, 'subcategory'),
+            secondary_domain_2: upgradeLegacyLabel(item.secondary_domain_2, codebookDef, 'domain'),
+            secondary_subcategory_2: upgradeLegacyLabel(item.secondary_subcategory_2, codebookDef, 'subcategory'),
         };
     });
   });

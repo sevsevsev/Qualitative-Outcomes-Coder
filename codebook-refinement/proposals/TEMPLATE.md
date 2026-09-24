@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Type | CITATION_FIX · HINT · EXAMPLE · DEFINITION_SCOPE · TIEBREAKER · ADD_CODE · SPLIT · MERGE · RENAME · RULES (choose one) |
-| Codes touched | e.g. 8.9 (new), 12.5 |
+| Codes touched | e.g. 9.9 (new), 12.5 |
 | Version bump | PATCH / MINOR / MAJOR |
 | Requirement served | R1 frameworks · R2 breadth · R3 tie-breakers · R4 drift |
 | Status | draft → ready-to-test → judged (PASS/FAIL/NEEDS-HUMAN) → approved / rejected |

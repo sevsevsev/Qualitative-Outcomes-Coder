@@ -45,6 +45,12 @@ export interface LegacySubcategoryMapping {
   bySubjectArea?: Record<string, string>;
 }
 
+/** An old domain label that re-imported exports may still carry, and the current label. */
+export interface LegacyLabelMapping {
+  from: string;
+  to: string;
+}
+
 export interface CodebookCapabilities {
   hasSubcategories: boolean;
   hasSubjectArea: boolean;
@@ -81,6 +87,14 @@ export interface Codebook {
   targetPopulationOptions?: string[];
   /** Renamed or split subcategory labels, for re-importing older exports. */
   legacySubcategories?: LegacySubcategoryMapping[];
+  /** Renumbered domain labels, for re-importing older exports. */
+  legacyDomains?: LegacyLabelMapping[];
+  /**
+   * Code numbers from before a renumbering (old -> new, e.g. "11.3" -> "1.3",
+   * and "11" -> "1" for a domain). Used only for rows stamped with a version
+   * below `before` whose codes are bare numbers or reworded labels.
+   */
+  legacyCodeNumbers?: { before: string; codes: ReadonlyMap<string, string> };
 }
 
 export const buildSystemInstruction = (codebook: Codebook): string =>

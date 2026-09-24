@@ -59,7 +59,8 @@ services/
 codebooks/
   types.ts                      the Codebook data model (domains, subcategories,
                                  hints, prompt text, capability flags)
-  original.ts                   the youth-development codebook (10 domains)
+  original.ts                   the youth-development codebook (12 domains)
+  originalV1Numbering.ts        generated v1.2.0 -> v2.0.0 label map, for re-importing old exports
   acceleratePhilly.ts           the Accelerate Philly strategic-plan crosswalk
   index.ts                      registry — CODEBOOK_REGISTRY maps id -> Codebook
   geminiSchema.ts                (server-only) builds the enum-constrained Gemini
@@ -79,7 +80,7 @@ api/
 2. Register it in `codebooks/index.ts`'s `CODEBOOK_REGISTRY`.
 3. That's it — the codebook picker, review table columns, Gemini schema, and CSV export all read from the registry automatically.
 
-The one exception: `services/reviewNormalization.ts`'s fuzzy-matching for re-imported/legacy CSVs (e.g. recognizing `"1. Joy..."` as `"Domain 1. Joy..."`) is keyed on codebook id, because each codebook's domain-numbering syntax differs. If your new codebook's raw exports need the same forgiving re-import behavior, add a case there.
+The one exception: `services/reviewNormalization.ts`'s fuzzy-matching for re-imported/legacy CSVs (e.g. recognizing `"2. Joy..."` as `"Domain 2. Joy..."`) is keyed on codebook id, because each codebook's domain-numbering syntax differs. If your new codebook's raw exports need the same forgiving re-import behavior, add a case there.
 
 ### Data note
 

@@ -1,5 +1,7 @@
 # CP-04-05: Carry the subject hybrid into the v2 draft (Y7 from 10 codes to 8; Y8.3 takes grades and general performance; Y7 and Y8 listed first)
 
+> Code numbers in this proposal were updated to the v2.0.0 numbering by CP-04-08 (mechanical; see `renumbering/v1.2.0-to-v2.0.0.csv`).
+
 | Field | Value |
 |---|---|
 | Type | MERGE |
@@ -40,13 +42,15 @@ Severin also asked for the academic domain to come first.
 leave Y7. Y9.7 is a stretch for them, so they need their own tie-break when v2's
 Y9 is next revised.
 
-**Order.** In Part Y, list Y7 and Y8 first and keep their numbers. If Severin wants
-the numbers to match the order (Academic = Y1), renumber once, at v2 cut-over, when
-the crosswalk and gold are regenerated anyway.
+**Order.** In Part Y, list Y7 and Y8 first. On 2026-09-24 Severin asked for numbers
+to match the order in v1 (CP-04-08), so v2 follows: Y7 becomes Y1, Y8 becomes Y2, Y1–Y6
+become Y3–Y8, and Y9 onward keep their numbers. That renumbering happens once, by script, at
+v2 cut-over (phase 4), when the crosswalk and gold are regenerated anyway. Doing it in
+the draft now would renumber a draft that is still waiting on approval.
 
 **Also updated:**
 - tie-breaks: the same rules as v1's rule 5b and CF-025/CF-026;
-- `v2/v1-to-v2-crosswalk.csv`: 11.8 → Y7.3, 11.9 → Y7.4, 11.3 → Y7.5;
+- `v2/v1-to-v2-crosswalk.csv`: 1.8 → Y7.3, 1.9 → Y7.4, 1.3 → Y7.5;
 - `gold/gold-cycle02.csv`: v2_gold rows using Y7.2 or Y7.5/Y7.10 get re-mapped. All
   rows are still `proposed`.
 

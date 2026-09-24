@@ -13,7 +13,7 @@ and your job is to catch the ones that are wrong.
 A JSON list of claims:
 
 ```json
-[{ "claim_id": "...", "code": "8.9", "cite_as": "...", "claimed_component": "...", "url": "... or null" }]
+[{ "claim_id": "...", "code": "9.9", "cite_as": "...", "claimed_component": "...", "url": "... or null" }]
 ```
 
 ## For each claim

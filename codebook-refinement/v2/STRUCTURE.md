@@ -59,7 +59,7 @@ measured:
   better. See PLAN.md, phase 2.
 - **Agreement is not accuracy.** Both coders are Claude models reading the same
   codebook, so they share blind spots. For example, in v1 both put sport skills in
-  7.1 at *low* confidence. Human adjudication of the gold set is still the anchor.
+  8.1 at *low* confidence. Human adjudication of the gold set is still the anchor.
 
 ## 2. Do the existing domains make sense?
 
@@ -68,26 +68,26 @@ of the confusions in CONFUSIONS.md.
 
 | Axis | v1 domains organized by it |
 |---|---|
-| **Who** changes | D10 (adults and system), D12 (caregiver) |
-| **Kind of result** | D1/D2 (experiences), D3 (skills), D4 vs. D11 (behaviors vs. gains) |
-| **Life area** | D6 civic, D7 health, D8 career |
-| **Output vs. outcome** | 10.5; D9 access (a condition, not an outcome) |
+| **Who** changes | D11 (adults and system), D12 (caregiver) |
+| **Kind of result** | D2/D3 (experiences), D4 (skills), D5 vs. D1 (behaviors vs. gains) |
+| **Life area** | D7 civic, D8 health, D9 career |
+| **Output vs. outcome** | 11.5; D10 access (a condition, not an outcome) |
 
 Domain-by-domain assessment:
 
 | v1 domain | Verdict | Why (evidence) |
 |---|---|---|
-| D1 Joy, Interest & Motivation | **Keep the core; move arts out** | The interest anchors are strong (Hidi & Renninger, Eccles). But 1.4/1.5 (creating and performing art) are content learning under the National Core Arts Standards, not motivation. Coders split "instrument proficiency" between 11.3 and 1.4. Phases 2–4 of interest had no code (validation row 16). |
-| D2 Belonging | **Keep; move identity and family out** | CDC connectedness and Developmental Relationships fit well. 2.4 (identity) is not belonging; coders confused it with 3.1.2 and 5.4 (LGBTQ+ identity, STEM identity). 2.5 is a family construct. |
-| D3 SEL (CASEL) | **Keep; make it skills-only and tighten to CASEL 2020** | CASEL is the right anchor (verified). Moving self-beliefs out (3.1.2–3.1.4 → Y4) removes the 3.1.4/4.4/5.4 triangle. Merging 3.5.1 and 3.5.3 removes a pair with no observable difference. Several CASEL skills (gratitude, refusal, group leadership) now have homes. |
-| D4 Academic habits (Farrington) | **Keep as is** | Strong anchor. The domain was clean in both runs. |
-| D5 PYD Assets (Search Institute) | **Dissolve** | The 40 Assets framework spans the whole field. As one domain it is a grab-bag: felt safety, values, activity participation, identity. The verifier found 5.1's definition matched the wrong asset category. Each piece now has a better home. |
-| D6 Civic | **Keep; re-anchor** | The "CIRCLE Framework" does not exist as a named framework. Use the NCSS C3 Framework and the Five Cs "Contribution". Voting, civic efficacy, and environmental stewardship had no home (validation rows 23 and 58). |
-| D7 Physical & Behavioral Health | **Split into three** | It bundled physical health, mental health, risk behavior, and justice. Nine statements were forced into 7.1: sleep, screenings, asthma, sport skills, cooking, gardening, screen time. Split into Y10 Physical Health, Y11 Mental Health, and Y12 Safety, Risk & Justice. |
-| D8 College & Career | **Keep; drop 8.1; add financial capability and life skills** | 8.1 vs. 11.3 was pure framing (CF-010). Financial literacy (6 statements) and independent-living skills (5) were forced fits. |
-| D9 Access & Equity | **Move to the program level** | These are conditions and inputs, not changes in people. The OTL citation can't be verified. |
-| D10 Adult & System | **Split by level** | Adult learning, program quality, family-engagement systems, outputs, and policy were all in one domain. YPQA (program quality) had no home; turnover, partnerships, and collective efficacy were forced fits. |
-| D11 Academic Learning | **Split learning from attainment** | Gains (reading, math) and statuses (attendance, credits, graduation) are different kinds of result. Also: writing had no home (reading-only 11.1), 11.3 had no valid source, and course-taking and grades were forced. |
+| D2 Joy, Interest & Motivation | **Keep the core; move arts out** | The interest anchors are strong (Hidi & Renninger, Eccles). But 2.4/2.5 (creating and performing art) are content learning under the National Core Arts Standards, not motivation. Coders split "instrument proficiency" between 1.3 and 2.4. Phases 2–4 of interest had no code (validation row 16). |
+| D3 Belonging | **Keep; move identity and family out** | CDC connectedness and Developmental Relationships fit well. 3.4 (identity) is not belonging; coders confused it with 4.1.2 and 6.4 (LGBTQ+ identity, STEM identity). 3.5 is a family construct. |
+| D4 SEL (CASEL) | **Keep; make it skills-only and tighten to CASEL 2020** | CASEL is the right anchor (verified). Moving self-beliefs out (4.1.2–4.1.4 → Y4) removes the 4.1.4/5.4/6.4 triangle. Merging 4.5.1 and 4.5.3 removes a pair with no observable difference. Several CASEL skills (gratitude, refusal, group leadership) now have homes. |
+| D5 Academic habits (Farrington) | **Keep as is** | Strong anchor. The domain was clean in both runs. |
+| D6 PYD Assets (Search Institute) | **Dissolve** | The 40 Assets framework spans the whole field. As one domain it is a grab-bag: felt safety, values, activity participation, identity. The verifier found 6.1's definition matched the wrong asset category. Each piece now has a better home. |
+| D7 Civic | **Keep; re-anchor** | The "CIRCLE Framework" does not exist as a named framework. Use the NCSS C3 Framework and the Five Cs "Contribution". Voting, civic efficacy, and environmental stewardship had no home (validation rows 23 and 58). |
+| D8 Physical & Behavioral Health | **Split into three** | It bundled physical health, mental health, risk behavior, and justice. Nine statements were forced into 8.1: sleep, screenings, asthma, sport skills, cooking, gardening, screen time. Split into Y10 Physical Health, Y11 Mental Health, and Y12 Safety, Risk & Justice. |
+| D9 College & Career | **Keep; drop 9.1; add financial capability and life skills** | 9.1 vs. 1.3 was pure framing (CF-010). Financial literacy (6 statements) and independent-living skills (5) were forced fits. |
+| D10 Access & Equity | **Move to the program level** | These are conditions and inputs, not changes in people. The OTL citation can't be verified. |
+| D11 Adult & System | **Split by level** | Adult learning, program quality, family-engagement systems, outputs, and policy were all in one domain. YPQA (program quality) had no home; turnover, partnerships, and collective efficacy were forced fits. |
+| D1 Academic Learning | **Split learning from attainment** | Gains (reading, math) and statuses (attendance, credits, graduation) are different kinds of result. Also: writing had no home (reading-only 1.1), 1.3 had no valid source, and course-taking and grades were forced. |
 | D12 Family | **Split; widen scope** | Caregiver-only scope stranded transition-age youth (own housing, own insurance) and non-caregiver adults (adult learners, older adults). See the gap table. Basic needs apply to any household, including a young person living independently. |
 
 ## 3. The proposed v2 structure
@@ -141,7 +141,7 @@ subcategory.
 | Mapping | Count | Handling |
 |---|---|---|
 | 1:1 or merge | 70 | Old exports convert automatically |
-| Split | 12 | Need re-coding or a rule (e.g., 7.1 → Y10.1/Y10.3/Y10.4) |
+| Split | 12 | Need re-coding or a rule (e.g., 8.1 → Y10.1/Y10.3/Y10.4) |
 
 ## 4. Are we using the best frameworks?
 
@@ -155,7 +155,7 @@ four places where a better framework exists:
 | Employability | "Perkins V / Soft Skills" | OCTAE Employability Skills Framework (verified) |
 | Mental health | Keyes, illness continuum only | Keyes, both continua: MHC-SF flourishing (located) |
 | Access | "OTL Standards" (unverifiable) | Digital Equity Act, 47 U.S.C. 1721 (verified); ED/DOJ 2015 LEP guidance (located); Weiss, Little & Bouffard (2005) participation (located) |
-| Domain 5 | Search 40 Assets as one domain | Search 40 Assets used **per category** across Y1, Y4, Y5, and Y12 (verified) |
+| Domain 6 | Search 40 Assets as one domain | Search 40 Assets used **per category** across Y1, Y4, Y5, and Y12 (verified) |
 
 **Cross-cutting frameworks considered for the overall structure:**
 
@@ -194,7 +194,7 @@ four places where a better framework exists:
 | Sexual health *knowledge* (source gap) | Y10.6 | National Sex Education Standards, 2nd ed. (2020) | located |
 | Flourishing (1) | Y11.2 | Keyes, MHC-SF | located |
 | Writing (1) | Y7.2 | Common Core College & Career Readiness Anchor Standards for Writing | located |
-| Science and engineering content (source gap in 11.3) | Y7.4 | NGSS three dimensions | located |
+| Science and engineering content (source gap in 1.3) | Y7.4 | NGSS three dimensions | located |
 | Social studies content | Y7.5 | NCSS C3 Framework | located |
 | Media literacy (1) | Y7.9 | NAMLE definition ("access, analyze, evaluate, create, and act") | verified |
 | Environmental stewardship (2) | Y5.6 | NAAEE (2019) K–12 Guidelines, "Personal and Civic Responsibility" | verified (strand names) |
@@ -202,11 +202,11 @@ four places where a better framework exists:
 | Social capital, networks (1) | Y2.5 | Search Institute DR "Expand Possibilities" (verified); Mathematica Education-to-Workforce framework (located) | |
 | Youth–family relationship, reunification (3) | Y2.4 | Chafee/NYTD "positive connections with adults"; Positive Youth Justice "attaching/belonging" | verified; located |
 | Justice outcomes framed developmentally | Y12.4 | Butts, Bazemore & Meroe (2010), Positive Youth Justice | located |
-| Family language access (v1 routed it to 9.2) | F3.3 | ED & DOJ (2015) Dear Colleague Letter, LEP parents | located |
+| Family language access (v1 routed it to 10.2) | F3.3 | ED & DOJ (2015) Dear Colleague Letter, LEP parents | located |
 | Caregiver or adult education, digital and financial literacy (6) | F1.5 | Ascend 2Gen "Postsecondary & Employment Pathways" (verified); Digital Equity Act "digital literacy" (verified) | |
 | Family system navigation, rights (4) | F1.6 | CSSP "Concrete Support in Times of Need" (verified); ED/DOJ (2015) (located) | |
 | Program quality (YPQA) (2) | A2.1 | Weikart Center YPQA pyramid: safe, supportive, interactive, engaging | located |
-| Partnerships, collective impact (no forced rows; v1's 10.3 was too broad) | A3.2 | Kania & Kramer (2011), five conditions | verified |
+| Partnerships, collective impact (no forced rows; v1's 11.3 was too broad) | A3.2 | Kania & Kramer (2011), five conditions | verified |
 | Community collective efficacy (1) | A3.3 | Sampson, Raudenbush & Earls (1997) | verified |
 | Participant satisfaction | A2.5 | Urban Institute Candidate Outcome Indicators | located |
 | **Still without a source** | Y8.4 discipline; A1.3 workforce stability; Y7.10 other applied skills; F1.7 family health practices | CRDC (lead); none; extension; Healthy People 2030 MICH (lead) | open |

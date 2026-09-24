@@ -1,5 +1,7 @@
 # CP-04-06: Clean up Subject Area values, and add the Subject Area gold column that could reopen a subject-neutral design
 
+> Code numbers in this proposal were updated to the v2.0.0 numbering by CP-04-08 (mechanical; see `renumbering/v1.2.0-to-v2.0.0.csv`).
+
 | Field | Value |
 |---|---|
 | Type | RENAME |
@@ -15,7 +17,7 @@
   482 rows were "SEL Only" and 106 arts-program *joy* rows were tagged Visual &
   Performing Arts. Counting "programs with growth in subject X" from this field alone
   over-counts, so today it has to be combined with the learning codes.
-- **"SEL Only" and "Early Childhood / Pre-K" are not subjects.** SEL is Domain 3, and
+- **"SEL Only" and "Early Childhood / Pre-K" are not subjects.** SEL is Domain 4, and
   early childhood is a grade span.
 
 ## Change (proposed)
@@ -23,7 +25,7 @@
 1. **Subject Area values:**
    - Replace "Social & Emotional Learning (SEL Only)" and "N/A / General" with "Not a
      subject-matter outcome".
-   - Add "Non-subject-specific academic" (SCED area 23) for 11.6 rows with no subject.
+   - Add "Non-subject-specific academic" (SCED area 23) for 1.6 rows with no subject.
 2. **Rule:** non-learning rows get "Not a subject-matter outcome". A program's subject
    context, if wanted, becomes a program-level field.
 3. **Re-import:** map the old values in `services/reviewNormalization.ts`.

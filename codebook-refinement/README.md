@@ -21,6 +21,14 @@ both honest.**
 | `v2/` | v2 draft codebook, structure rationale, crosswalk, candidate sources | Via CPs |
 | `gold/gold-cycle02.csv` | 345-row double-blind gold set, coded under v1.1.1 and v2 | Agents propose; human adjudicates |
 | `eval/cycle02/` | Raw coder outputs, coder instructions, statement sets (the audit trail for cycle 02) | Read-only record |
+| `renumbering/` | The v1.2.0 → v2.0.0 code map (CP-04-08), the script that applied it, and the v1.2.0 codebook it was derived from | Read-only record |
+
+**Code numbers.** Since v2.0.0 (CP-04-08), Academic Learning & Achievement is Domain 1
+and old Domains 1–10 are 2–11. Live files (the codebook, `CONFUSIONS.md`, the source
+registry, both gold sets, the crosswalk's v1 column, and open CPs) use the new
+numbers. Records of past work (cycle reports, applied CPs, `eval/cycle02/`,
+`validation/`) keep the numbers they were written with. Translate them with
+`renumbering/v1.2.0-to-v2.0.0.csv`.
 
 ## The loop
 

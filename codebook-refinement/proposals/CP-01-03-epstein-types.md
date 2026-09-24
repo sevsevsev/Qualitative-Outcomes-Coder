@@ -1,9 +1,11 @@
 # CP-01-03: Re-map Epstein's six types to the right codes
 
+> Code numbers in this proposal were updated to the v2.0.0 numbering by CP-04-08 (mechanical; see `renumbering/v1.2.0-to-v2.0.0.csv`).
+
 | Field | Value |
 |---|---|
 | Type | CITATION_FIX |
-| Codes touched | 2.5, Domain 10 header, 10.4, 12.4 (citation text only) |
+| Codes touched | 3.5, Domain 11 header, 11.4, 12.4 (citation text only) |
 | Version bump | PATCH |
 | Requirement served | R1, R3 (CF-008) |
 | Status | draft |
@@ -15,10 +17,10 @@ Epstein's framework is: 1 Parenting, 2 Communicating, 3 Volunteering, 4 Learning
 Home, 5 Decision Making, 6 Collaborating with the Community. Three places in the
 codebook cite the wrong type:
 
-- **2.5** (family–program relationship) cites **Types 2 & 4**. Type 4, Learning at
+- **3.5** (family–program relationship) cites **Types 2 & 4**. Type 4, Learning at
   Home, is the construct for **12.4 Home Learning Environment**, which cites no
   Epstein type at all.
-- The **Domain 10 header** cites **Types 3/6**. But 10.4's own example ("establish a
+- The **Domain 11 header** cites **Types 3/6**. But 11.4's own example ("establish a
   Parent Advisory Council") is **Type 5, Decision Making** ("include parents in
   school decisions ... develop parent leaders and representatives").
 
@@ -26,12 +28,12 @@ codebook cite the wrong type:
 
 | Location | Before | After |
 |---|---|---|
-| 2.4/2.5 heading | `2.5 Family Partnership & Connection (Gap Fill: Epstein Types 2 & 4)` | `2.5 Family Partnership & Connection (Gap Fill: Epstein Types 2 & 3 — Communicating, Volunteering)` |
-| Domain 10 header | `Learning Forward Standards & Epstein Type 3/6` | `Learning Forward Standards & Epstein Types 5/6 (Decision Making; Collaborating with the Community)` |
-| 10.4 | *(no source line)* | add `- Source Framework: Epstein Type 5 (Decision Making) & Type 6 (Collaborating with the Community).` |
+| 3.4/3.5 heading | `3.5 Family Partnership & Connection (Gap Fill: Epstein Types 2 & 4)` | `3.5 Family Partnership & Connection (Gap Fill: Epstein Types 2 & 3 — Communicating, Volunteering)` |
+| Domain 11 header | `Learning Forward Standards & Epstein Type 3/6` | `Learning Forward Standards & Epstein Types 5/6 (Decision Making; Collaborating with the Community)` |
+| 11.4 | *(no source line)* | add `- Source Framework: Epstein Type 5 (Decision Making) & Type 6 (Collaborating with the Community).` |
 | 12.4 | *(no source line)* | add `- Source Framework: Epstein Type 4 (Learning at Home).` |
 
-**Hint (12.4):** add `"Epstein Type 4 (Learning at Home). For the family's relationship with the program, use 2.5."`
+**Hint (12.4):** add `"Epstein Type 4 (Learning at Home). For the family's relationship with the program, use 3.5."`
 
 ## Sources
 

@@ -9,16 +9,16 @@ describe('normalizeImportedCoding (original codebook)', () => {
   it('keeps an already-canonical domain and subcategory unchanged', () => {
     const result = normalizeImportedCoding(
       {
-        primary_domain: 'Domain 1. Joy, Interest & Motivation in Learning',
-        primary_subcategory: '1.1 Joy & Emotional Wellness',
+        primary_domain: 'Domain 2. Joy, Interest & Motivation in Learning',
+        primary_subcategory: '2.1 Joy & Emotional Wellness',
         primary_confidence: 'high',
         uncoded: false,
       },
       original,
       'original'
     );
-    expect(result.primary_domain).toBe('Domain 1. Joy, Interest & Motivation in Learning');
-    expect(result.primary_subcategory).toBe('1.1 Joy & Emotional Wellness');
+    expect(result.primary_domain).toBe('Domain 2. Joy, Interest & Motivation in Learning');
+    expect(result.primary_subcategory).toBe('2.1 Joy & Emotional Wellness');
     expect(result.uncoded).toBe(false);
   });
 
@@ -28,7 +28,7 @@ describe('normalizeImportedCoding (original codebook)', () => {
       original,
       'original'
     );
-    expect(result.primary_domain).toBe('Domain 1. Joy, Interest & Motivation in Learning');
+    expect(result.primary_domain).toBe('Domain 2. Joy, Interest & Motivation in Learning');
   });
 
   it('fuzzy-matches a two-digit domain number missing the "Domain " prefix', () => {
@@ -37,35 +37,35 @@ describe('normalizeImportedCoding (original codebook)', () => {
       original,
       'original'
     );
-    expect(result.primary_domain).toBe('Domain 11. Academic Learning & Achievement');
+    expect(result.primary_domain).toBe('Domain 1. Academic Learning & Achievement');
   });
 
   it('fuzzy-matches a subcategory given only its numeric prefix', () => {
     const result = normalizeImportedCoding(
       {
-        primary_domain: 'Domain 3. Social & Emotional Learning (CASEL-aligned)',
-        primary_subcategory: '3.2.1',
+        primary_domain: 'Domain 4. Social & Emotional Learning (CASEL-aligned)',
+        primary_subcategory: '4.2.1',
         primary_confidence: 'high',
         uncoded: false,
       },
       original,
       'original'
     );
-    expect(result.primary_subcategory).toBe('3.2.1 Emotion regulation & impulse control');
+    expect(result.primary_subcategory).toBe('4.2.1 Emotion regulation & impulse control');
   });
 
   it('clears a subcategory that does not belong to the matched domain', () => {
     const result = normalizeImportedCoding(
       {
-        primary_domain: 'Domain 1. Joy, Interest & Motivation in Learning',
-        primary_subcategory: '3.2.1 Emotion regulation & impulse control',
+        primary_domain: 'Domain 2. Joy, Interest & Motivation in Learning',
+        primary_subcategory: '4.2.1 Emotion regulation & impulse control',
         primary_confidence: 'high',
         uncoded: false,
       },
       original,
       'original'
     );
-    expect(result.primary_domain).toBe('Domain 1. Joy, Interest & Motivation in Learning');
+    expect(result.primary_domain).toBe('Domain 2. Joy, Interest & Motivation in Learning');
     expect(result.primary_subcategory).toBe('');
   });
 
@@ -100,7 +100,7 @@ describe('normalizeImportedCoding (original codebook)', () => {
   it('keeps uncoded and drops the domain the schema forced the model to name', () => {
     const result = normalizeImportedCoding(
       {
-        primary_domain: 'Domain 2. Belonging, Relationships & School Connectedness',
+        primary_domain: 'Domain 3. Belonging, Relationships & School Connectedness',
         primary_confidence: 'medium',
         uncoded: true,
       },
@@ -114,7 +114,7 @@ describe('normalizeImportedCoding (original codebook)', () => {
     // Shape of a real gemini-3.8-flash row for "Students demonstrate improvements in:".
     const result = normalizeImportedCoding(
       {
-        primary_domain: 'Domain 11. Academic Learning & Achievement',
+        primary_domain: 'Domain 1. Academic Learning & Achievement',
         primary_subcategory: '',
         primary_confidence: 'none',
         uncoded: false,
@@ -127,12 +127,12 @@ describe('normalizeImportedCoding (original codebook)', () => {
 
   it('does not treat a missing confidence (legacy CSV) as uncoded', () => {
     const result = normalizeImportedCoding(
-      { primary_domain: 'Domain 2. Belonging, Relationships & School Connectedness', uncoded: false },
+      { primary_domain: 'Domain 3. Belonging, Relationships & School Connectedness', uncoded: false },
       original,
       'original'
     );
     expect(result.uncoded).toBe(false);
-    expect(result.primary_domain).toBe('Domain 2. Belonging, Relationships & School Connectedness');
+    expect(result.primary_domain).toBe('Domain 3. Belonging, Relationships & School Connectedness');
   });
 });
 
@@ -146,18 +146,18 @@ describe('normalizeImportedCoding (v1.1.1 labels renamed or split in v1.2.0)', (
     ).primary_subcategory;
 
   it('maps the old 11.1 and 11.6 labels to their renamed codes', () => {
-    expect(legacy('11.1 Literacy & Reading Skill', 'English Language Arts (ELA) & Literacy')).toBe('11.1 Literacy: Reading & Writing');
-    expect(legacy('11.6 Credit Accumulation, On-Track Status & Graduation', 'N/A / General')).toBe('11.6 Grades, Credits, On-Track Status & Graduation');
+    expect(legacy('11.1 Literacy & Reading Skill', 'English Language Arts (ELA) & Literacy')).toBe('1.1 Literacy: Reading & Writing');
+    expect(legacy('11.6 Credit Accumulation, On-Track Status & Graduation', 'N/A / General')).toBe('1.6 Grades, Credits, On-Track Status & Graduation');
   });
 
   it('routes an old 11.3 row to the new code for its subject', () => {
     const old113 = '11.3 General Content Knowledge & Conceptual Understanding';
-    expect(legacy(old113, 'Science (Natural/Physical)')).toBe('11.8 Science, Technology & Engineering');
-    expect(legacy(old113, 'STEM (Integrated/Cross-disciplinary)')).toBe('11.8 Science, Technology & Engineering');
-    expect(legacy(old113, 'Visual & Performing Arts')).toBe('11.9 Arts Learning & Performance');
-    expect(legacy(old113, 'Social Studies, History & Civics')).toBe('11.3 Knowledge & Skill in Other Academic Subjects');
-    // No subject: stays 11.3, where the review table flags the missing subject.
-    expect(legacy(old113, 'N/A / General')).toBe('11.3 Knowledge & Skill in Other Academic Subjects');
+    expect(legacy(old113, 'Science (Natural/Physical)')).toBe('1.8 Science, Technology & Engineering');
+    expect(legacy(old113, 'STEM (Integrated/Cross-disciplinary)')).toBe('1.8 Science, Technology & Engineering');
+    expect(legacy(old113, 'Visual & Performing Arts')).toBe('1.9 Arts Learning & Performance');
+    expect(legacy(old113, 'Social Studies, History & Civics')).toBe('1.3 Knowledge & Skill in Other Academic Subjects');
+    // No subject: stays 1.3, where the review table flags the missing subject.
+    expect(legacy(old113, 'N/A / General')).toBe('1.3 Knowledge & Skill in Other Academic Subjects');
   });
 });
 
@@ -183,30 +183,30 @@ describe('normalizeImportedCoding (accelerate_philly codebook)', () => {
 
 // Real malformed values from a 2,081-row gemini-3.8-flash export (2026-09-23).
 describe('normalizeSecondarySubcategory', () => {
-  const domain5 = 'Domain 5. Positive Youth Development (PYD) & Assets';
-  const domain6 = 'Domain 6. Civic Engagement & Community';
+  const pyd = 'Domain 6. Positive Youth Development (PYD) & Assets';
+  const civic = 'Domain 7. Civic Engagement & Community';
 
   it('keeps a canonical subcategory unchanged', () => {
-    expect(normalizeSecondarySubcategory('5.4 Positive Identity', domain5, original)).toBe('5.4 Positive Identity');
+    expect(normalizeSecondarySubcategory('6.4 Positive Identity', pyd, original)).toBe('6.4 Positive Identity');
   });
 
   it('strips a confidence level glued onto the label', () => {
-    expect(normalizeSecondarySubcategory('5.4 Positive Identity-medium', domain5, original)).toBe('5.4 Positive Identity');
+    expect(normalizeSecondarySubcategory('6.4 Positive Identity-medium', pyd, original)).toBe('6.4 Positive Identity');
   });
 
   it('recovers the code from a runaway generation', () => {
-    const runaway = '6.3 Youth Voice & Leadership Juror Alternative if Youth-Led Club ' + 'context mapping '.repeat(20000);
-    expect(normalizeSecondarySubcategory(runaway, domain6, original)).toBe('6.3 Youth Voice & Leadership');
+    const runaway = '7.3 Youth Voice & Leadership Juror Alternative if Youth-Led Club ' + 'context mapping '.repeat(20000);
+    expect(normalizeSecondarySubcategory(runaway, civic, original)).toBe('7.3 Youth Voice & Leadership');
   });
 
   it('matches the whole code, not a prefix of a longer one', () => {
-    const domain3 = 'Domain 3. Social & Emotional Learning (CASEL-aligned)';
-    expect(normalizeSecondarySubcategory('3.1 Self-Awareness', domain3, original)).toBe('');
+    const sel = 'Domain 4. Social & Emotional Learning (CASEL-aligned)';
+    expect(normalizeSecondarySubcategory('4.1 Self-Awareness', sel, original)).toBe('');
   });
 
   it('returns empty when the code belongs to a different domain or is missing', () => {
-    expect(normalizeSecondarySubcategory('6.3 Youth Voice & Leadership', domain5, original)).toBe('');
-    expect(normalizeSecondarySubcategory('', domain5, original)).toBe('');
-    expect(normalizeSecondarySubcategory('5.4 Positive Identity', '', original)).toBe('');
+    expect(normalizeSecondarySubcategory('7.3 Youth Voice & Leadership', pyd, original)).toBe('');
+    expect(normalizeSecondarySubcategory('', pyd, original)).toBe('');
+    expect(normalizeSecondarySubcategory('6.4 Positive Identity', '', original)).toBe('');
   });
 });

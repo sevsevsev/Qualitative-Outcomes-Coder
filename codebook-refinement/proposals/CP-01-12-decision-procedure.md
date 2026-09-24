@@ -1,5 +1,7 @@
 # CP-01-12: Add an ordered decision procedure to rulesText
 
+> Code numbers in this proposal were updated to the v2.0.0 numbering by CP-04-08 (mechanical; see `renumbering/v1.2.0-to-v2.0.0.csv`).
+
 | Field | Value |
 |---|---|
 | Type | RULES |
@@ -14,10 +16,10 @@
 The codebook's tie-breakers are pairwise (A vs. B). They already rely on an
 unstated common logic:
 
-- *who* changes (7.2 vs. 12.2);
-- output vs. outcome (10.5);
-- state vs. skill vs. gain (Domains 1/2 vs. 3 vs. 11);
-- context (3.1.4 vs. 4.4 vs. 8.5).
+- *who* changes (8.2 vs. 12.2);
+- output vs. outcome (11.5);
+- state vs. skill vs. gain (Domains 2/3 vs. 4 vs. 1);
+- context (4.1.4 vs. 5.4 vs. 9.5).
 
 Stating that logic once, in order, gives the model and human reviewers a fallback
 for pairs that no tie-breaker covers yet. It also makes new tie-breakers easier to
@@ -30,16 +32,16 @@ the "General decision procedure" section at the top of CONFUSIONS.md:
 
 ```
 GENERAL DECISION PROCEDURE (apply in order; stop at the first step that decides):
-1. WHO changes? Caregiver's own outcome -> Domain 12. Adult/staff/organization -> Domain 10. Otherwise continue.
-2. OUTPUT or OUTCOME? Program-level counts/dosage/reach -> 10.5.
-3. WHAT KIND of result? State/experience -> Domains 1, 2, 5, or 7.2. Skill/competency -> Domains 3, 4, 8.2, 8.5. Knowledge/learning gain -> Domain 11, 8.1, 8.9, 6.1. Change in risk-behavior incidence -> 7.5-7.8. Status/attainment -> 11.5, 11.6, 8.7, 8.8, 12.5-12.7.
-4. WHAT CONTEXT? The same skill routes by framing: schoolwork -> Domain 4; work/career -> Domain 8; civic/decision-making -> Domain 6; otherwise Domain 3.
+1. WHO changes? Caregiver's own outcome -> Domain 12. Adult/staff/organization -> Domain 11. Otherwise continue.
+2. OUTPUT or OUTCOME? Program-level counts/dosage/reach -> 11.5.
+3. WHAT KIND of result? State/experience -> Domains 2, 3, 6, or 8.2. Skill/competency -> Domains 4, 5, 9.2, 9.5. Knowledge/learning gain -> Domain 1, 9.1, 9.9, 7.1. Change in risk-behavior incidence -> 8.5-8.8. Status/attainment -> 1.5, 1.6, 9.7, 9.8, 12.5-12.7.
+4. WHAT CONTEXT? The same skill routes by framing: schoolwork -> Domain 5; work/career -> Domain 9; civic/decision-making -> Domain 7; otherwise Domain 4.
 5. MOST SPECIFIC wins: pick the subcategory whose DEFINITION (not just its label) names the construct.
 The specific tie-breakers below override this procedure where they apply.
 ```
 
-**Dependency:** step 3 mentions 8.9, so apply this after CP-01-05. If CP-01-05 is
-rejected, remove the 8.9 reference.
+**Dependency:** step 3 mentions 9.9, so apply this after CP-01-05. If CP-01-05 is
+rejected, remove the 9.9 reference.
 
 ## Risk
 

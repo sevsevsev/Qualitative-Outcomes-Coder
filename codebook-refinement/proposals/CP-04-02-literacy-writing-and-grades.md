@@ -6,7 +6,7 @@
 | Codes touched | 11.1 (scope widened; label becomes "Literacy: Reading & Writing"), 11.6 (scope widened; label becomes "Grades, Credits, On-Track Status & Graduation"), with their hints and examples; CF-025 |
 | Version bump | MINOR for the scope; the two label changes are MAJOR under S4.6 as written (see CP-04-01's version question). Both new scopes are supersets, so the re-import mapping is one-to-one |
 | Requirement served | R1 frameworks · R2 breadth · R3 tie-breakers |
-| Status | ready-to-test (applied on branch `claude/project-thread-mpnj0j`) |
+| Status | applied in v1.2.0 (PR #9, merged 2026-09-24). Codes here use the pre-2.0.0 numbering; see CP-04-08 |
 | Enum cost | +0 |
 
 ## Problem

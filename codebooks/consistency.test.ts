@@ -52,18 +52,18 @@ describe('original codebook v1.1.0 additions', () => {
   const original = CODEBOOK_LIST.find(c => c.id === 'original')!;
 
   it('includes the new Academic Learning & Achievement domain with its subcategories', () => {
-    const domain = original.domains.find(d => d.code === 'Domain 11. Academic Learning & Achievement');
+    const domain = original.domains.find(d => d.code === 'Domain 1. Academic Learning & Achievement');
     expect(domain).toBeDefined();
     expect(domain!.subcategories.map(s => s.code)).toEqual([
-      '11.1 Literacy: Reading & Writing',
-      '11.2 Numeracy & Mathematical Skill',
-      '11.3 Knowledge & Skill in Other Academic Subjects',
-      '11.4 English Language Proficiency & Multilingual Development',
-      '11.5 Attendance, Chronic Absence & School Stability',
-      '11.6 Grades, Credits, On-Track Status & Graduation',
-      '11.7 School Readiness & Early Learning',
-      '11.8 Science, Technology & Engineering',
-      '11.9 Arts Learning & Performance',
+      '1.1 Literacy: Reading & Writing',
+      '1.2 Numeracy & Mathematical Skill',
+      '1.3 Knowledge & Skill in Other Academic Subjects',
+      '1.4 English Language Proficiency & Multilingual Development',
+      '1.5 Attendance, Chronic Absence & School Stability',
+      '1.6 Grades, Credits, On-Track Status & Graduation',
+      '1.7 School Readiness & Early Learning',
+      '1.8 Science, Technology & Engineering',
+      '1.9 Arts Learning & Performance',
     ]);
   });
 
@@ -73,47 +73,47 @@ describe('original codebook v1.1.0 additions', () => {
     expect(domain!.subcategories).toHaveLength(7);
   });
 
-  it('includes the new risk-behavior-prevention subcategories under Domain 7', () => {
-    const domain = original.domains.find(d => d.code.startsWith('Domain 7.'));
-    const codes = domain!.subcategories.map(s => s.code);
-    expect(codes).toContain('7.8 Justice Involvement, Diversion & Reentry');
-  });
-
-  it('includes the new postsecondary/employment subcategories under Domain 8', () => {
+  it('includes the new risk-behavior-prevention subcategories under Domain 8', () => {
     const domain = original.domains.find(d => d.code.startsWith('Domain 8.'));
     const codes = domain!.subcategories.map(s => s.code);
-    expect(codes).toContain('8.7 Postsecondary Enrollment, Persistence & Completion');
-    expect(codes).toContain('8.8 Employment Placement, Retention & Earnings');
+    expect(codes).toContain('8.8 Justice Involvement, Diversion & Reentry');
   });
 
-  it('includes the output-metric subcategory under Domain 10', () => {
-    const domain = original.domains.find(d => d.code.startsWith('Domain 10.'));
+  it('includes the new postsecondary/employment subcategories under Domain 9', () => {
+    const domain = original.domains.find(d => d.code.startsWith('Domain 9.'));
     const codes = domain!.subcategories.map(s => s.code);
-    expect(codes).toContain('10.5 Program Participation, Retention & Reach (Output Metric)');
+    expect(codes).toContain('9.7 Postsecondary Enrollment, Persistence & Completion');
+    expect(codes).toContain('9.8 Employment Placement, Retention & Earnings');
   });
 
-  it('bumped the codebook version for the v1.2.0 academic subject codes', () => {
-    expect(original.version).toBe('1.2.0');
+  it('includes the output-metric subcategory under Domain 11', () => {
+    const domain = original.domains.find(d => d.code.startsWith('Domain 11.'));
+    const codes = domain!.subcategories.map(s => s.code);
+    expect(codes).toContain('11.5 Program Participation, Retention & Reach (Output Metric)');
+  });
+
+  it('bumped the codebook version to 2.0.0 for the domain renumbering', () => {
+    expect(original.version).toBe('2.0.0');
   });
 });
 
 describe('original codebook v1.2.0 academic subjects', () => {
   const original = CODEBOOK_LIST.find(c => c.id === 'original')!;
 
-  it('lists Domain 11 first without renumbering it', () => {
-    expect(original.domains[0].code).toBe('Domain 11. Academic Learning & Achievement');
-    expect(original.definitionsText.trimStart().startsWith('Domain 11. Academic Learning & Achievement')).toBe(true);
+  it('numbers Academic Learning & Achievement as Domain 1 and lists it first', () => {
+    expect(original.domains[0].code).toBe('Domain 1. Academic Learning & Achievement');
+    expect(original.definitionsText.trimStart().startsWith('Domain 1. Academic Learning & Achievement')).toBe(true);
   });
 
   it('flags a Subject Area that disagrees with a subject-pinned learning code', () => {
-    expect(subjectAreaMismatch(original, '11.2 Numeracy & Mathematical Skill', 'Mathematics')).toBeNull();
-    expect(subjectAreaMismatch(original, '11.2 Numeracy & Mathematical Skill', 'N/A / General')).toEqual(['Mathematics']);
-    expect(subjectAreaMismatch(original, '11.8 Science, Technology & Engineering', 'Engineering & Robotics')).toBeNull();
-    expect(subjectAreaMismatch(original, '11.9 Arts Learning & Performance', '')).toEqual(['Visual & Performing Arts']);
+    expect(subjectAreaMismatch(original, '1.2 Numeracy & Mathematical Skill', 'Mathematics')).toBeNull();
+    expect(subjectAreaMismatch(original, '1.2 Numeracy & Mathematical Skill', 'N/A / General')).toEqual(['Mathematics']);
+    expect(subjectAreaMismatch(original, '1.8 Science, Technology & Engineering', 'Engineering & Robotics')).toBeNull();
+    expect(subjectAreaMismatch(original, '1.9 Arts Learning & Performance', '')).toEqual(['Visual & Performing Arts']);
   });
 
   it('does not pin a subject on codes that apply to any subject', () => {
-    expect(subjectAreaMismatch(original, '11.6 Grades, Credits, On-Track Status & Graduation', 'Mathematics')).toBeNull();
-    expect(subjectAreaMismatch(original, '1.1 Joy & Emotional Wellness', 'N/A / General')).toBeNull();
+    expect(subjectAreaMismatch(original, '1.6 Grades, Credits, On-Track Status & Graduation', 'Mathematics')).toBeNull();
+    expect(subjectAreaMismatch(original, '2.1 Joy & Emotional Wellness', 'N/A / General')).toBeNull();
   });
 });

@@ -1,0 +1,922 @@
+{
+  "date": "2026-09-24",
+  "cycle": "03 (PLAN.md phase 1, step 2)",
+  "method": "Claims V01-V39 were built from v2-candidate-sources.json (one claim per source-code pair) by the orchestrating session and split across four independent codebook-citation-verifier agents. Claims U01-U09 are candidates found by a separate proposer agent (U01-U07: sources for the unsourced codes Y8.4, F1.7, A1.3) or replacement leads (U08, U09) raised in verifier notes, and were checked by a fifth, fresh verifier. Verifiers saw only the claim fields and the code's construct, never the proposer's reasoning. Verdicts are recorded as returned; three over-length excerpts (V31, V36, V37) were trimmed by the orchestrator to a verbatim sub-span of 40 words or fewer, with the verifier's original text kept in excerpt_as_returned.",
+  "claims": [
+    {
+      "claim_id": "V01",
+      "source_id": "uw-extension-logic-model",
+      "claim": {
+        "code": "outcome_type",
+        "cite_as": "University of Wisconsin–Extension, Program Action Logic Model",
+        "claimed_component": "Outcomes columns: Short (learning: awareness, knowledge, attitudes, skills, opinions, aspirations, motivations), Medium (action: behavior, practice, decision-making, policies, social action), Long (conditions: social, economic, civic, environmental)",
+        "url": "https://fyi.extension.wisc.edu/programdevelopment/files/2020/05/LogicModel2020-graphic-2.pdf",
+        "code_construct": "A field classifying each outcome as knowledge, skill, attitude, behavior, status (condition), or output"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://fyi.extension.wisc.edu/programdevelopment/files/2020/05/LogicModel2020-graphic-2.pdf",
+        "source_kind": "primary",
+        "excerpt": "Awareness, Knowledge, Attitudes, Skills, Opinions, Aspirations, Motivations ... Behavior, Practice, Decisionmaking, Policies, Social action ... Social, Economic, Civic, Environmental",
+        "corrected_cite_as": "University of Wisconsin–Madison Division of Extension (2020). Program Action Logic Model",
+        "notes": "All three outcome columns and items match. The 2020 graphic credits UW–Madison Division of Extension (successor to UW–Extension). The 'output' type comes from the separate Outputs column, not this component."
+      }
+    },
+    {
+      "claim_id": "V02",
+      "source_id": "lerner-five-cs",
+      "claim": {
+        "code": "Y2 (Belonging & Relationships domain)",
+        "cite_as": "Lerner, R. M. (2007). The Five (Six) Cs of Positive Youth Development (Wisconsin 4-H handout)",
+        "claimed_component": "Connection: positive bonds with people and institutions",
+        "url": "https://fyi.extension.wisc.edu/wi4hvolunteers/files/2017/09/1-5-Cs-Handout-Lerner-2007.pdf",
+        "code_construct": "Youth belonging, connectedness and relationships with adults, peers, family"
+      },
+      "result": {
+        "verdict": "MISATTRIBUTED",
+        "url_checked": "https://fyi.extension.wisc.edu/wi4hvolunteers/files/2017/09/1-5-Cs-Handout-Lerner-2007.pdf",
+        "source_kind": "secondary",
+        "excerpt": "A feeling of safety, structure, and belonging; positive bonds with people and social institutions",
+        "corrected_cite_as": "The 5 C's of Positive Youth Development (undated handout, no author named; hosted on the UW–Madison Extension Wisconsin 4-H volunteer site), citing Pittman et al. (2003) and NYS Advancing Youth Development Partnership (2006)",
+        "notes": "Handout names no author or date; it credits Lerner only with adding Caring in his 2007 book The Good Teen. Not a Lerner 2007 publication. Connection wording is close and fits Y2."
+      }
+    },
+    {
+      "claim_id": "V03",
+      "source_id": "lerner-five-cs",
+      "claim": {
+        "code": "Y4 (Identity, Confidence & Agency domain)",
+        "cite_as": "Lerner, R. M. (2007). The Five (Six) Cs of Positive Youth Development (Wisconsin 4-H handout)",
+        "claimed_component": "Confidence: an internal sense of overall positive self-worth and self-efficacy",
+        "url": "https://fyi.extension.wisc.edu/wi4hvolunteers/files/2017/09/1-5-Cs-Handout-Lerner-2007.pdf",
+        "code_construct": "Youth identity, self-confidence, self-efficacy, agency"
+      },
+      "result": {
+        "verdict": "MISATTRIBUTED",
+        "url_checked": "https://fyi.extension.wisc.edu/wi4hvolunteers/files/2017/09/1-5-Cs-Handout-Lerner-2007.pdf",
+        "source_kind": "secondary",
+        "excerpt": "A sense of self-worth and mastery; having a belief in one's capacity to succeed",
+        "corrected_cite_as": "The 5 C's of Positive Youth Development (undated handout, no author named; hosted on the UW–Madison Extension Wisconsin 4-H volunteer site), citing Pittman et al. (2003) and NYS Advancing Youth Development Partnership (2006)",
+        "notes": "Same attribution problem as V02. The claimed wording does not appear; the handout's own definition is close in meaning and fits Y4."
+      }
+    },
+    {
+      "claim_id": "V04",
+      "source_id": "lerner-five-cs",
+      "claim": {
+        "code": "Y5 (Character, Values & Civic Life domain)",
+        "cite_as": "Lerner, R. M. (2007). The Five (Six) Cs of Positive Youth Development (Wisconsin 4-H handout)",
+        "claimed_component": "Character, Caring, and Contribution (active participation and leadership; making a difference)",
+        "url": "https://fyi.extension.wisc.edu/wi4hvolunteers/files/2017/09/1-5-Cs-Handout-Lerner-2007.pdf",
+        "code_construct": "Youth values, integrity, caring for others, civic participation and service"
+      },
+      "result": {
+        "verdict": "MISATTRIBUTED",
+        "url_checked": "https://fyi.extension.wisc.edu/wi4hvolunteers/files/2017/09/1-5-Cs-Handout-Lerner-2007.pdf",
+        "source_kind": "secondary",
+        "excerpt": "Taking responsibility; a sense of independence and individuality; connection to principles and values ... Active participation and leadership in a variety of settings; making a difference",
+        "corrected_cite_as": "The 5 C's of Positive Youth Development (undated handout, no author named; hosted on the UW–Madison Extension Wisconsin 4-H volunteer site); Caring credited in the handout to Lerner (2007), The Good Teen",
+        "notes": "Character, Caring and Contribution are all present and fit Y5, but the handout is not authored by Lerner; only Caring is credited to his 2007 book."
+      }
+    },
+    {
+      "claim_id": "V05",
+      "source_id": "nagaoka-2015-foundations",
+      "claim": {
+        "code": "Y4 (Identity, Confidence & Agency domain)",
+        "cite_as": "Nagaoka, J., Farrington, C. A., Ehrlich, S. B., & Heath, R. D. (2015). Foundations for Young Adult Success: A Developmental Framework. University of Chicago Consortium on Chicago School Research.",
+        "claimed_component": "Key factors for young adult success: agency, integrated identity, and competencies",
+        "url": "https://wallacefoundation.org/resource/article/how-do-we-define-success-young-people",
+        "code_construct": "Youth identity, self-confidence, self-efficacy, agency"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://consortium.uchicago.edu/sites/default/files/2018-10/Foundations%20for%20Young%20Adult-Jun2015-Consortium.pdf",
+        "source_kind": "primary",
+        "excerpt": "Being successful means having the Agency to make active choices about one's life path, possessing the Competencies to adapt to the demands of different contexts, and incorporating different aspects of oneself into an Integrated Identity.",
+        "corrected_cite_as": "",
+        "notes": "The candidate URL (wallacefoundation.org) is a secondary interview summary; the primary June 2015 UChicago CCSR report confirms authors, publisher and the three factors (also ERIC ED559970). PARTIAL because only agency and integrated identity fit Y4. Replace the URL with the primary report."
+      }
+    },
+    {
+      "claim_id": "V06",
+      "source_id": "explore-sel-domains",
+      "claim": {
+        "code": "Y3, Y4, Y5 (domain structure)",
+        "cite_as": "Harvard EASEL Lab, Explore SEL: domain taxonomy",
+        "claimed_component": "Six domains: Cognitive, Emotion, Social, Values, Perspectives, Identity",
+        "url": "http://exploresel.gse.harvard.edu/frameworks/52/",
+        "code_construct": "Separate domains for social-emotional skills (Y3), identity/confidence/agency (Y4), and character/values/civic life (Y5)"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "http://exploresel.gse.harvard.edu/frameworks/52/",
+        "source_kind": "primary",
+        "excerpt": "Cognitive ... Emotion ... Social ... Values ... Perspectives ... Identity",
+        "corrected_cite_as": "Harvard EASEL Lab, Explore SEL (framework profile: Five Cs Model of Positive Youth Development; domain key)",
+        "notes": "URL is Explore SEL's profile of the Five Cs Model, not a domain-taxonomy page; its Domain Key lists the six names but definitions could not be retrieved (redirect loop). Values and Identity map to Y5 and Y4; Explore SEL separates Social and Emotion, which Y3 combines."
+      }
+    },
+    {
+      "claim_id": "V07",
+      "source_id": "urban-outcome-indicators",
+      "claim": {
+        "code": "A2.5",
+        "cite_as": "Urban Institute & The Center for What Works, Candidate Outcome Indicators: Youth Mentoring Program",
+        "claimed_component": "An outcome indicator on participant (youth and/or parent) satisfaction with the mentoring program",
+        "url": "https://www.urban.org/sites/default/files/2015/04/10/youth_mentoring.pdf",
+        "code_construct": "A2.5 Participant & Family Satisfaction: satisfaction with the program, and participants' or families' perceptions of its safety and quality"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://www.urban.org/sites/default/files/2015/04/10/youth_mentoring.pdf",
+        "source_kind": "primary",
+        "excerpt": "Satisfaction with program services is an outcome that occurs within almost every program area, yet does not necessarily have a sequential placement. The indicator may be: Number and percent of youth satisfied with youth mentoring programs and services.",
+        "corrected_cite_as": "",
+        "notes": "Title and both publishers confirmed. The indicator covers youth satisfaction only, not parent/family satisfaction or perceptions of safety or quality."
+      }
+    },
+    {
+      "claim_id": "V08",
+      "source_id": "shape-pe-2024",
+      "claim": {
+        "code": "Y10.2",
+        "cite_as": "SHAPE America (2024). National Physical Education Standards",
+        "claimed_component": "Standard 1: Develops a variety of motor skills",
+        "url": "https://shapeamerica.org/standards/pe/new-pe-standards/",
+        "code_construct": "Y10.2 Motor & Sport Skills: fundamental movement, fine and gross motor, and sport-specific skills"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://shapeamerica.org/standards/pe/new-pe-standards/",
+        "source_kind": "primary",
+        "excerpt": "Develops a variety of motor skills.",
+        "corrected_cite_as": "",
+        "notes": "Standard 1 matches verbatim; page labels these the 2024 Standards. Fits Y10.2 directly."
+      }
+    },
+    {
+      "claim_id": "V09",
+      "source_id": "shape-pe-2024",
+      "claim": {
+        "code": "Y10.1",
+        "cite_as": "SHAPE America (2024). National Physical Education Standards",
+        "claimed_component": "Standard 1: Develops a variety of motor skills",
+        "url": "https://shapeamerica.org/standards/pe/new-pe-standards/",
+        "code_construct": "Y10.1 Physical Activity & Fitness: exercise, fitness, less sedentary time"
+      },
+      "result": {
+        "verdict": "UNSUPPORTED",
+        "url_checked": "https://shapeamerica.org/standards/pe/new-pe-standards/",
+        "source_kind": "primary",
+        "excerpt": "Develops a variety of motor skills.",
+        "corrected_cite_as": "",
+        "notes": "Standard 1 is about motor skills, not physical activity, fitness or sedentary time, so it fails Fit for Y10.1. Standard 4 on the same page ('...chooses to engage in physical activity') is closer; it was not submitted as a claim."
+      }
+    },
+    {
+      "claim_id": "V10",
+      "source_id": "shape-nhes-2024",
+      "claim": {
+        "code": "Y10.5",
+        "cite_as": "SHAPE America (2024). National Health Education Standards (8 standards)",
+        "claimed_component": "Standard 1: Use functional health information to support health and well-being of self and others",
+        "url": "https://shapeamerica.org/standards/health/new-he-standards/",
+        "code_construct": "Y10.5 Health Knowledge & Health Literacy: health information and skills not covered elsewhere (first aid, safety knowledge, finding reliable health information)"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://shapeamerica.org/standards/health/new-he-standards/",
+        "source_kind": "primary",
+        "excerpt": "Use functional health information to support health and well-being of self and others.",
+        "corrected_cite_as": "",
+        "notes": "Standard 1 matches verbatim; eight standards presented. The 2024 year rests on the page's '2024 Standards' link label, not body text. Fits Y10.5."
+      }
+    },
+    {
+      "claim_id": "V11",
+      "source_id": "naaee-k12-2019",
+      "claim": {
+        "code": "Y5.6",
+        "cite_as": "NAAEE (2019). K-12 Environmental Education: Guidelines for Excellence",
+        "claimed_component": "Strand: Personal and Civic Responsibility",
+        "url": "https://eepro.naaee.org/sites/default/files/eepro-post-files/k-12_ee.executive_summary_2019_0.pdf",
+        "code_construct": "Y5.6 Environmental Stewardship: caring for the environment and acting on it; pro-environmental behavior; connection to nature"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://eepro.naaee.org/sites/default/files/eepro-post-files/k-12_ee.executive_summary_2019_0.pdf",
+        "source_kind": "primary",
+        "excerpt": "Environmentally literate community members are willing and able to act on their own conclusions about what should be done to ensure environmental quality, social equity, and economic prosperity.",
+        "corrected_cite_as": "",
+        "notes": "Strand 'Personal and Civic Responsibility' is present in NAAEE 2019; checked document is the Executive Summary, not the full Guidelines. Fits the acting-on-it part of Y5.6; does not cover 'connection to nature', and extends to social equity and economic prosperity."
+      }
+    },
+    {
+      "claim_id": "V12",
+      "source_id": "naaee-k12-2019",
+      "claim": {
+        "code": "Y7.4",
+        "cite_as": "NAAEE (2019). K-12 Environmental Education: Guidelines for Excellence",
+        "claimed_component": "Strand: Environmental Processes and Systems",
+        "url": "https://eepro.naaee.org/sites/default/files/eepro-post-files/k-12_ee.executive_summary_2019_0.pdf",
+        "code_construct": "Y7.4 Science, Technology & Engineering: science knowledge, engineering design, computing and coding"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://eepro.naaee.org/sites/default/files/eepro-post-files/k-12_ee.executive_summary_2019_0.pdf",
+        "source_kind": "primary",
+        "excerpt": "Environmental literacy is dependent on an understanding of the processes and systems that comprise the environment, including human social systems and influences.",
+        "corrected_cite_as": "",
+        "notes": "Strand exists and attribution is correct, but fit is weak: it covers environmental systems, not general science, engineering design, or computing/coding (Y7.4). Supports only the environmental-science slice."
+      }
+    },
+    {
+      "claim_id": "V13",
+      "source_id": "nses-2020",
+      "claim": {
+        "code": "Y10.6",
+        "cite_as": "Future of Sex Education Initiative (2020). National Sex Education Standards: Core Content and Skills, K-12, 2nd ed.",
+        "claimed_component": "Topics including sexual health, pregnancy and STI/HIV prevention, and healthy relationships",
+        "url": "https://www.advocatesforyouth.org/resources/future-of-sex-education-national-sexuality-education-standards/",
+        "code_construct": "Y10.6 Sexual & Reproductive Health: knowledge and behavior related to sexual health, STI and pregnancy prevention, and healthy relationships"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.advocatesforyouth.org/wp-content/uploads/2020/03/NSES-2020-web.pdf",
+        "source_kind": "primary",
+        "excerpt": "Sexual Health (SH). Outlines the functional knowledge and essentials skills students need to understand STDs and HIV, including how they are prevented and transmitted",
+        "corrected_cite_as": "",
+        "notes": "Landing page had no topic list, so the standards PDF was checked; its suggested citation matches. Sexual Health strand covers STD/HIV and pregnancy prevention; healthy relationships is a separate strand 'Consent and Healthy Relationships'. Claimed component paraphrases the two strands; source says 'STDs', not 'STI'."
+      }
+    },
+    {
+      "claim_id": "V14",
+      "source_id": "keyes-mhc-sf",
+      "claim": {
+        "code": "Y11.2",
+        "cite_as": "Keyes, C. L. M. (2002). The mental health continuum: From languishing to flourishing in life. J. Health Soc. Behav.; Mental Health Continuum-Short Form (MHC-SF)",
+        "claimed_component": "MHC-SF measures emotional (incl. life satisfaction), psychological, and social well-being; diagnosis of flourishing vs. languishing",
+        "url": "https://peplab.web.unc.edu/wp-content/uploads/sites/18901/2018/11/MHC-SFoverview.pdf",
+        "code_construct": "Y11.2 Flourishing & Life Satisfaction: positive mental health, life satisfaction, flourishing"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://peplab.web.unc.edu/wp-content/uploads/sites/18901/2018/11/MHC-SFoverview.pdf",
+        "source_kind": "primary",
+        "excerpt": "Three items were chosen (happy, interested in life, and satisfied) to represent emotional well-being, six items (one item from each of the 6 dimensions) were chosen to represent psychological well-being",
+        "corrected_cite_as": "Cite the MHC-SF separately from Keyes (2002), J. Health Soc. Behav., 43, 207-222, using the MHC-SF reference given in Keyes's overview (not verified here).",
+        "notes": "Keyes's MHC-SF overview supports the component (emotional, psychological, social well-being; flourishing/languishing). But the cite_as conflates the 2002 JHSB article with the MHC-SF, which the overview attributes to later Keyes works (2005-2009). The 2002 article could not be fetched (PubMed CAPTCHA)."
+      }
+    },
+    {
+      "claim_id": "V15",
+      "source_id": "hp2030-sh04",
+      "claim": {
+        "code": "Y10.4",
+        "cite_as": "U.S. HHS ODPHP, Healthy People 2030, objective SH-04",
+        "claimed_component": "Increase the proportion of high school students who get enough sleep",
+        "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/sleep/increase-proportion-high-school-students-who-get-enough-sleep-sh-04",
+        "code_construct": "Y10.4 Sleep, Hygiene & Daily Health Habits"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/sleep/increase-proportion-high-school-students-who-get-enough-sleep-sh-04",
+        "source_kind": "primary",
+        "excerpt": "Increase the proportion of high school students who get enough sleep — SH‑04",
+        "corrected_cite_as": "",
+        "notes": "Objective title and ID match exactly. Fits the sleep part of Y10.4 only, not hygiene or other daily habits."
+      }
+    },
+    {
+      "claim_id": "V16",
+      "source_id": "hp2030-ah01-ahs01",
+      "claim": {
+        "code": "Y10.7",
+        "cite_as": "U.S. HHS ODPHP, Healthy People 2030, objective AH-01",
+        "claimed_component": "Increase the proportion of adolescents who had a preventive health care visit in the past year",
+        "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/adolescents/increase-proportion-adolescents-who-had-preventive-health-care-visit-past-year-ah-01",
+        "code_construct": "Y10.7 Health Care Access & Condition Management: insurance, preventive and dental/vision visits, screenings, managing chronic conditions"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/adolescents/increase-proportion-adolescents-who-had-preventive-health-care-visit-past-year-ah-01",
+        "source_kind": "primary",
+        "excerpt": "Increase the proportion of adolescents who had a preventive health care visit in the past year — AH‑01",
+        "corrected_cite_as": "",
+        "notes": "Objective title and ID match exactly. Fits the preventive-visits part of Y10.7."
+      }
+    },
+    {
+      "claim_id": "V17",
+      "source_id": "hp2030-ah01-ahs01",
+      "claim": {
+        "code": "Y10.7",
+        "cite_as": "U.S. HHS ODPHP, Healthy People 2030, objective AHS-01",
+        "claimed_component": "Increase the proportion of people with health insurance",
+        "url": null,
+        "code_construct": "Y10.7 Health Care Access & Condition Management: insurance, preventive and dental/vision visits, screenings, managing chronic conditions"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/health-care-access-and-quality/increase-proportion-people-health-insurance-ahs-01",
+        "source_kind": "primary",
+        "excerpt": "Increase the proportion of people with health insurance — AHS‑01",
+        "corrected_cite_as": "",
+        "notes": "URL found by search; title and ID match exactly. Whole-population objective, but fits the insurance part of Y10.7."
+      }
+    },
+    {
+      "claim_id": "V18",
+      "source_id": "sampson-1997",
+      "claim": {
+        "code": "A3.3",
+        "cite_as": "Sampson, R. J., Raudenbush, S. W., & Earls, F. (1997). Neighborhoods and violent crime: A multilevel study of collective efficacy. Science, 277, 918-924.",
+        "claimed_component": "Definition of collective efficacy: social cohesion among neighbors combined with their willingness to intervene on behalf of the common good",
+        "url": "https://faculty.washington.edu/matsueda/courses/517/Readings/Sampson%201997%20Science.pdf",
+        "code_construct": "A3.3 Community Conditions & Collective Efficacy: neighborhood cohesion, trust, and willingness to act for the common good"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://faculty.washington.edu/matsueda/courses/517/Readings/Sampson%201997%20Science.pdf",
+        "source_kind": "secondary",
+        "excerpt": "collective efficacy, defined as social cohesion among neighbors combined with their willingness to intervene on behalf of the common good",
+        "corrected_cite_as": "",
+        "notes": "Definition matches verbatim; authors, journal, volume, pages and year match. Copy is the article PDF hosted on a course page, not the Science DOI page."
+      }
+    },
+    {
+      "claim_id": "V19",
+      "source_id": "kania-kramer-2011",
+      "claim": {
+        "code": "A3.2",
+        "cite_as": "Kania, J., & Kramer, M. (2011). Collective Impact. Stanford Social Innovation Review.",
+        "claimed_component": "Five conditions of collective impact: common agenda, shared measurement systems, mutually reinforcing activities, continuous communication, backbone support organizations",
+        "url": "https://ssir.org/articles/entry/collective_impact",
+        "code_construct": "A3.2 Cross-Sector Partnerships & Collective Impact: shared agendas, shared measurement, coordinated partnerships"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://ssir.org/articles/entry/collective_impact",
+        "source_kind": "primary",
+        "excerpt": "Our research shows that successful collective impact initiatives typically have five conditions that together produce true alignment and lead to powerful results:",
+        "corrected_cite_as": "",
+        "notes": "Kania & Kramer, SSIR, Winter 2011. The five conditions appear as section headings (Common Agenda; Shared Measurement Systems; Mutually Reinforcing Activities; Continuous Communication; Backbone Support Organizations), checked separately."
+      }
+    },
+    {
+      "claim_id": "V20",
+      "source_id": "chafee-42usc677",
+      "claim": {
+        "code": "Y9.7",
+        "cite_as": "42 U.S.C. 677(a)(1), John H. Chafee Foster Care Program for Successful Transition to Adulthood",
+        "claimed_component": "Purpose: training and opportunities to practice daily living skills (such as financial literacy training and driving instruction)",
+        "url": "https://www.law.cornell.edu/uscode/text/42/677",
+        "code_construct": "Y9.7 Independent Living Skills: daily living skills for self-sufficiency (cooking, scheduling, obtaining vital documents, self-care away from home)"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.law.cornell.edu/uscode/text/42/677",
+        "source_kind": "secondary",
+        "excerpt": "training and opportunities to practice daily living skills (such as financial literacy training and driving instruction), substance abuse prevention, and preventive health activities",
+        "corrected_cite_as": "",
+        "notes": "Wording appears in 42 U.S.C. 677(a)(1). Page is Cornell LII, a reliable mirror, not the official uscode.house.gov text. Fits Y9.7."
+      }
+    },
+    {
+      "claim_id": "V21",
+      "source_id": "chafee-42usc677",
+      "claim": {
+        "code": "Y9.6",
+        "cite_as": "42 U.S.C. 677(a)(1), John H. Chafee Foster Care Program for Successful Transition to Adulthood",
+        "claimed_component": "Purpose: training ... (such as financial literacy training ...)",
+        "url": "https://www.law.cornell.edu/uscode/text/42/677",
+        "code_construct": "Y9.6 Financial Capability: the youth's own financial knowledge, habits, and decisions (budgeting, saving, banking, credit)"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap7-subchapIV-partE-sec677.htm",
+        "source_kind": "primary",
+        "excerpt": "training and opportunities to practice daily living skills (such as financial literacy training and driving instruction)",
+        "corrected_cite_as": "",
+        "notes": "Cornell LII and govinfo give the same (a)(1) text. A statutory purpose clause listing services, not a definition of financial capability, but financial literacy as a youth daily-living skill fits Y9.6."
+      }
+    },
+    {
+      "claim_id": "V22",
+      "source_id": "positive-youth-justice-2010",
+      "claim": {
+        "code": "Y12.4",
+        "cite_as": "Butts, J. A., Bazemore, G., & Meroe, A. S. (2010). Positive Youth Justice: Framing Justice Interventions Using the Concepts of Positive Youth Development. Coalition for Juvenile Justice.",
+        "claimed_component": "Positive Youth Justice model: justice interventions framed around assets (learning/doing, attaching/belonging) across life domains",
+        "url": "https://johnjayrec.nyc/pyj_background/",
+        "code_construct": "Y12.4 Justice Involvement, Diversion & Reentry: arrest, adjudication, recidivism, completing probation or diversion, restorative agreements"
+      },
+      "result": {
+        "verdict": "UNSUPPORTED",
+        "url_checked": "https://johnjayrec.nyc/pyj_background/",
+        "source_kind": "primary",
+        "excerpt": "Each cell in the matrix represents the interaction of two key assets needed by all youth (learning/doing and attaching/belonging) with six separate life domains (work, education, relationships, community, health, and creativity).",
+        "corrected_cite_as": "",
+        "notes": "Source exists and attribution is correct (Coalition for Juvenile Justice, 2010; full report at johnjayrec.nyc/wp-content/uploads/2010/04/pyj2010.pdf). Fit fails: the component describes developmental assets and life domains, not arrest, adjudication, recidivism, or completing probation/diversion (Y12.4)."
+      }
+    },
+    {
+      "claim_id": "V23",
+      "source_id": "positive-youth-justice-2010",
+      "claim": {
+        "code": "Y2.4",
+        "cite_as": "Butts, J. A., Bazemore, G., & Meroe, A. S. (2010). Positive Youth Justice. Coalition for Juvenile Justice.",
+        "claimed_component": "Positive Youth Justice life domain: Relationships (including family)",
+        "url": "https://johnjayrec.nyc/pyj_background/",
+        "code_construct": "Y2.4 Family Relationships: the youth's relationship with their own family (connection, repair, reunification)"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://johnjayrec.nyc/wp-content/uploads/2010/04/pyj2010.pdf",
+        "source_kind": "primary",
+        "excerpt": "Relationships: Communication skills, Conflict resolution, Family systems, Intimacy and support",
+        "corrected_cite_as": "",
+        "notes": "The full report lists 'Family systems' under the Relationships domain; the background page does not mention family. The domain spans peers, families and communities, broader than Y2.4. Excerpt is a table row as the fetch tool reported it."
+      }
+    },
+    {
+      "claim_id": "V24",
+      "source_id": "namle-core-principles",
+      "claim": {
+        "code": "Y7.9",
+        "cite_as": "National Association for Media Literacy Education (NAMLE), Core Principles of Media Literacy Education",
+        "claimed_component": "Definition: the ability to access, analyze, evaluate, create, and act using all forms of communication",
+        "url": "https://namle.org/resources/core-principles/",
+        "code_construct": "Y7.9 Critical Thinking, Inquiry & Media Literacy: analyzing and evaluating information and sources; research and inquiry skills"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://namle.org/resources/core-principles/",
+        "source_kind": "primary",
+        "excerpt": "NAMLE views media literacy—the ability to access, analyze, evaluate, create, and act using all forms of communication—as an essential 21st-century literacy.",
+        "corrected_cite_as": "",
+        "notes": "Wording matches on NAMLE's Core Principles page (last modified March 7, 2024). The analyze/evaluate part fits Y7.9; access, create and act go beyond it."
+      }
+    },
+    {
+      "claim_id": "V25",
+      "source_id": "digital-equity-act",
+      "claim": {
+        "code": "F1.5",
+        "cite_as": "Digital Equity Act of 2021, 47 U.S.C. 1721",
+        "claimed_component": "Definition of 'digital literacy': the skills associated with using technology to enable users to find, evaluate, organize, create, and communicate information",
+        "url": "https://uscode.house.gov/view.xhtml?path=%2Fprelim%40title47%2Fchapter16%2Fsubchapter2&edition=prelim",
+        "code_construct": "F1.5 Adult Education, Skills & Employment: a caregiver's or adult participant's own education, training, English proficiency, digital and financial literacy, employment"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://uscode.house.gov/view.xhtml?path=%2Fprelim%40title47%2Fchapter16%2Fsubchapter2&edition=prelim",
+        "source_kind": "primary",
+        "excerpt": "The term 'digital literacy' means the skills associated with using technology to enable users to find, evaluate, organize, create, and communicate information.",
+        "corrected_cite_as": "Digital Equity Act of 2021, Pub. L. 117-58, div. F, title III; 47 U.S.C. 1721(12)",
+        "notes": "Wording matches at 47 U.S.C. 1721(12). Applies to anyone, so it supports only the digital-literacy part of F1.5."
+      }
+    },
+    {
+      "claim_id": "V26",
+      "source_id": "digital-equity-act",
+      "claim": {
+        "code": "A2.3",
+        "cite_as": "Digital Equity Act of 2021, 47 U.S.C. 1721",
+        "claimed_component": "Definition of 'digital literacy'",
+        "url": "https://uscode.house.gov/view.xhtml?path=%2Fprelim%40title47%2Fchapter16%2Fsubchapter2&edition=prelim",
+        "code_construct": "A2.3 Access to Resources: providing materials, technology, connectivity, or facilities, including counts of resources distributed"
+      },
+      "result": {
+        "verdict": "UNSUPPORTED",
+        "url_checked": "https://uscode.house.gov/view.xhtml?path=%2Fprelim%40title47%2Fchapter16%2Fsubchapter2&edition=prelim",
+        "source_kind": "primary",
+        "excerpt": "The term 'digital literacy' means the skills associated with using technology to enable users to find, evaluate, organize, create, and communicate information.",
+        "corrected_cite_as": "",
+        "notes": "Definition exists, but it is about users' skills; A2.3 is about providing materials, technology, connectivity or facilities. Fit fails."
+      }
+    },
+    {
+      "claim_id": "V27",
+      "source_id": "ed-doj-2015-lep",
+      "claim": {
+        "code": "F3.3",
+        "cite_as": "U.S. Department of Justice & U.S. Department of Education (2015). Dear Colleague Letter: English Learner Students and Limited English Proficient Parents",
+        "claimed_component": "Schools must communicate information to limited English proficient parents in a language they can understand (translation and interpretation)",
+        "url": "https://eric.ed.gov/?q=source:%22US+Department+of+Justice%22&id=ED578886",
+        "code_construct": "F3.3 Language Access: communication with families in their home language; interpretation and translation"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://files.eric.ed.gov/fulltext/ED578886.pdf",
+        "source_kind": "primary",
+        "excerpt": "School districts must, to the extent practicable, translate such notices in a language that the parent can understand.",
+        "corrected_cite_as": "",
+        "notes": "Jointly signed for ED OCR (Lhamon) and DOJ Civil Rights Division (Gupta), Jan. 7, 2015; ERIC lists only DOJ. Excerpt consistent across three copies; also 'must offer LEP parents free oral interpretation'. Excerpt is from Section A (EL identification notices)."
+      }
+    },
+    {
+      "claim_id": "V28",
+      "source_id": "ed-doj-2015-lep",
+      "claim": {
+        "code": "F1.6",
+        "cite_as": "U.S. Department of Justice & U.S. Department of Education (2015). Dear Colleague Letter: English Learner Students and Limited English Proficient Parents",
+        "claimed_component": "LEP parents must receive meaningful notice of school programs, services and activities, and their rights, in a language they understand",
+        "url": "https://eric.ed.gov/?q=source:%22US+Department+of+Justice%22&id=ED578886",
+        "code_construct": "F1.6 System Navigation & Rights Knowledge: families knowing their rights, where to turn for help, navigating school or service systems"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://www.wrightslaw.com/blog/ensuring-meaningful-communication-with-parents-who-have-limited-english-proficiency/",
+        "source_kind": "secondary",
+        "excerpt": "School districts and SEAs have an obligation to ensure meaningful communication with LEP parents in a language they can understand and to adequately notify LEP parents of information about any program, service, or activity",
+        "corrected_cite_as": "",
+        "notes": "Excerpt only from a secondary blog quoting the letter; the primary PDF gave inconsistent Section J text. No wording about notifying parents of 'their rights'. Fit is loose: a school's duty to give notice vs. families knowing their rights (F1.6)."
+      }
+    },
+    {
+      "claim_id": "V29",
+      "source_id": "carlone-johnson-2007",
+      "claim": {
+        "code": "Y4.7",
+        "cite_as": "Carlone, H. B., & Johnson, A. (2007). Understanding the science experiences of successful women of color: Science identity as an analytic lens. Journal of Research in Science Teaching, 44(8), 1187-1218.",
+        "claimed_component": "Science identity model with dimensions of competence, performance, and recognition",
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.20237",
+        "code_construct": "Y4.7 Domain Identity: seeing oneself as a certain kind of person in a field (a STEM person, an artist, an athlete, a reader)"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://stemeducationjournal.springeropen.com/articles/10.1186/s40594-018-0149-9",
+        "source_kind": "secondary",
+        "excerpt": "The framework suggests student science identity is made up of three dimensions: competence, performance, and recognition.",
+        "corrected_cite_as": "",
+        "notes": "Wiley returned 403. ERIC EJ776867 confirms title, authors, JRST 44(8), 1187-1218, but the abstract mentions only recognition; the three dimensions are supported only by a citing article. Fit with Y4.7 is good."
+      }
+    },
+    {
+      "claim_id": "V30",
+      "source_id": "causal-agency-theory",
+      "claim": {
+        "code": "Y4.6",
+        "cite_as": "Shogren, K. A., Wehmeyer, M. L., Palmer, S. B., Forber-Pratt, A. J., Little, T. J., & Lopez, S. (2015). Causal Agency Theory: Reconceptualizing a functional model of self-determination. Education and Training in Autism and Developmental Disabilities, 50(3), 251-263.",
+        "claimed_component": "Self-determination as acting as the causal agent in one's life; essential characteristics: volitional action, agentic action, action-control beliefs",
+        "url": "https://intelligentlives.org/wp-content/uploads/2022/03/SD-Reconceptualization.pdf",
+        "code_construct": "Y4.6 Agency, Self-Determination & Self-Advocacy: acting as the causal agent in one's own life (making choices, advocating for one's needs)"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://intelligentlives.org/wp-content/uploads/2022/03/SD-Reconceptualization.pdf",
+        "source_kind": "secondary",
+        "excerpt": "Self-determined people (i.e., causal agents) act in service to freely chosen goals.",
+        "corrected_cite_as": "",
+        "notes": "Citation matches ERIC EJ1072049 and the SAGE DOI page (ETADD 50(3), 251-263, 2015), abstract only. The three characteristics come only from an unpaginated manuscript copy, and separate fetches disagreed on 'agentic action' vs 'causal action'; check against the published version."
+      }
+    },
+    {
+      "claim_id": "V31",
+      "source_id": "idea-indicator-14",
+      "claim": {
+        "code": "Y8.7",
+        "cite_as": "U.S. Department of Education, IDEA Part B SPP/APR Indicator 14: Post-school outcomes",
+        "claimed_component": "Percent of youth with IEPs no longer in secondary school who were enrolled in higher education within one year of leaving high school",
+        "url": "https://sites.ed.gov/idea/part-b-spp-apr-indicator-14/",
+        "code_construct": "Y8.7 Postsecondary Enrollment, Persistence & Completion"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://sites.ed.gov/idea/part-b-spp-apr-indicator-14/",
+        "source_kind": "primary",
+        "excerpt": "percent of youth who are no longer in secondary school, had IEPs in effect at the time they left school, and were: Enrolled in higher education within one year of leaving high school.",
+        "corrected_cite_as": "",
+        "notes": "ED/OSEP IDEA site; claim matches Measure A. Measure A covers enrollment only, not persistence or completion; fits the enrollment part of Y8.7.",
+        "excerpt_as_returned": "Part B Indicator 14 requires states to report the percent of youth who are no longer in secondary school, had IEPs in effect at the time they left school, and were: Enrolled in higher education within one year of leaving high school."
+      }
+    },
+    {
+      "claim_id": "V32",
+      "source_id": "idea-indicator-14",
+      "claim": {
+        "code": "Y9.5",
+        "cite_as": "U.S. Department of Education, IDEA Part B SPP/APR Indicator 14: Post-school outcomes",
+        "claimed_component": "Percent of youth with IEPs no longer in secondary school who were competitively employed (or in other postsecondary education/training or employment) within one year of leaving high school",
+        "url": "https://sites.ed.gov/idea/part-b-spp-apr-indicator-14/",
+        "code_construct": "Y9.5 Employment & Earnings: getting or keeping a job; wages; being in education or employment after exit"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://sites.ed.gov/idea/part-b-spp-apr-indicator-14/",
+        "source_kind": "primary",
+        "excerpt": "Enrolled in higher education or in some other postsecondary education or training program; or competitively employed or in some other employment within one year of leaving high school.",
+        "corrected_cite_as": "",
+        "notes": "No Indicator 14 measure covers 'competitively employed' alone. Measure B is 'higher education or competitively employed'; Measure C (quoted) adds other education/training and other employment. The claim mixes B and C; fit is sound if restated as Measure C (or B)."
+      }
+    },
+    {
+      "claim_id": "V33",
+      "source_id": "ncss-c3-2013",
+      "claim": {
+        "code": "Y5.2",
+        "cite_as": "National Council for the Social Studies (2013). The College, Career, and Civic Life (C3) Framework for Social Studies State Standards",
+        "claimed_component": "Dimension 2: Civics",
+        "url": "https://www.socialstudies.org/standards/c3",
+        "code_construct": "Y5.2 Civic Knowledge: understanding how government, civic systems, and rights work"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.socialstudies.org/sites/default/files/c3/c3-framework-for-social-studies-rev0617.pdf",
+        "source_kind": "primary",
+        "excerpt": "IN A CONSTITUTIONAL DEMOCRACY, productive civic engagement requires knowledge of the history, principles, and foundations of our American democracy, and the ability to participate in civic and democratic processes.",
+        "corrected_cite_as": "",
+        "notes": "Opens the Dimension 2 Civics section. NCSS landing page gives 2013 (NCSS Bulletin 113). Dimension 2's full title is 'Applying Disciplinary Tools and Concepts'. PDF is a later revision (rev0617) of the 2013 framework."
+      }
+    },
+    {
+      "claim_id": "V34",
+      "source_id": "ncss-c3-2013",
+      "claim": {
+        "code": "Y5.3",
+        "cite_as": "National Council for the Social Studies (2013). The C3 Framework for Social Studies State Standards",
+        "claimed_component": "Dimension 4: Communicating Conclusions and Taking Informed Action",
+        "url": "https://www.socialstudies.org/standards/c3",
+        "code_construct": "Y5.3 Civic Voice, Leadership & Participation: influencing collective decisions (youth councils, testimony, advocacy, voting); civic efficacy"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://www.socialstudies.org/sites/default/files/c3/c3-framework-for-social-studies-rev0617.pdf",
+        "source_kind": "primary",
+        "excerpt": "active and responsible citizens identify and analyze public problems; deliberate with other people about how to define and address issues; take constructive, collaborative action; reflect on their actions; create and sustain groups; and influence institutions both large and small.",
+        "corrected_cite_as": "",
+        "notes": "Dimension 4 exists with this title (NCSS 2013). Only its 'Taking Informed Action' sub-strand fits Y5.3; 'Communicating and Critiquing Conclusions' is academic communication. The verbatim D4.6-D4.8 indicators could not be reached, and the excerpt's exact location in the document was not pinned down."
+      }
+    },
+    {
+      "claim_id": "V35",
+      "source_id": "ncss-c3-2013",
+      "claim": {
+        "code": "Y7.5",
+        "cite_as": "National Council for the Social Studies (2013). The C3 Framework for Social Studies State Standards",
+        "claimed_component": "Dimension 2: Economics, Geography, History",
+        "url": "https://www.socialstudies.org/standards/c3",
+        "code_construct": "Y7.5 Social Studies & History: history, geography, and economics content"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.socialstudies.org/standards/c3",
+        "source_kind": "primary",
+        "excerpt": "Dimension 2: Applying Disciplinary Tools and Concepts ... Civics, Economics, Geography, History",
+        "corrected_cite_as": "",
+        "notes": "NCSS page lists Economics, Geography and History as Dimension 2 disciplines alongside Civics. Excerpt joins the dimension title and discipline list; the C3 PDF confirms each discipline."
+      }
+    },
+    {
+      "claim_id": "V36",
+      "source_id": "ngss-three-dimensions",
+      "claim": {
+        "code": "Y7.4",
+        "cite_as": "Next Generation Science Standards: three dimensions",
+        "claimed_component": "Three dimensions: science and engineering practices, crosscutting concepts, disciplinary core ideas",
+        "url": "https://www.nextgenscience.org/glossary/three-dimensions",
+        "code_construct": "Y7.4 Science, Technology & Engineering: science knowledge, engineering design, computing and coding"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.nextgenscience.org/glossary/three-dimensions",
+        "source_kind": "primary",
+        "excerpt": "The three dimensions are the Disciplinary Core Ideas (DCIs), Crosscutting Concepts (CCCs), and Science and Engineering Practices.",
+        "corrected_cite_as": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+        "notes": "Component matches. NGSS copyright page requires citing 'NGSS Lead States, 2013'. Fits the science and engineering-design part of Y7.4, not computing or coding.",
+        "excerpt_as_returned": "These are the three strands of knowledge and skills that students should explicitly be able to use to explain phenomena and design solutions to problems. The three dimensions are the Disciplinary Core Ideas (DCIs), Crosscutting Concepts (CCCs), and Science and Engineering Practices."
+      }
+    },
+    {
+      "claim_id": "V37",
+      "source_id": "ccss-writing-anchors",
+      "claim": {
+        "code": "Y7.2",
+        "cite_as": "NGA Center & CCSSO (2010). Common Core State Standards: College and Career Readiness Anchor Standards for Writing",
+        "claimed_component": "Anchor standards for writing (text types and purposes; production and distribution of writing; research; range of writing)",
+        "url": "https://www.thecorestandards.org/ELA-Literacy/CCRA/W/",
+        "code_construct": "Y7.2 Writing & Composition: writing skill in any genre"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.thecorestandards.org/ELA-Literacy/CCRA/W/",
+        "source_kind": "primary",
+        "excerpt": "Text Types and Purposes ... Production and Distribution of Writing ... Research to Build and Present Knowledge ... Range of Writing",
+        "corrected_cite_as": "",
+        "notes": "Page is (c) NGA Center and CCSSO 2010; attribution correct. Four section headings match the claim; excerpt joins the headings with CCRA.W.1.",
+        "excerpt_as_returned": "Text Types and Purposes ... Write arguments to support claims in an analysis of substantive topics or texts using valid reasoning and relevant and sufficient evidence. ... Production and Distribution of Writing ... Research to Build and Present Knowledge ... Range of Writing"
+      }
+    },
+    {
+      "claim_id": "V38",
+      "source_id": "e2w-framework",
+      "claim": {
+        "code": "Y2.5",
+        "cite_as": "Education-to-Workforce Indicator Framework (Mathematica; funded by Bill & Melinda Gates Foundation), Social capital indicator",
+        "claimed_component": "Individuals have access to and are able to mobilize relationships that help them further their goals",
+        "url": "https://educationtoworkforce.org/indicators/social-capital",
+        "code_construct": "Y2.5 Social Capital & Networks: access to and ability to use relationships that open opportunities, beyond one supportive adult"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://educationtoworkforce.org/indicators/social-capital",
+        "source_kind": "primary",
+        "excerpt": "Individuals have access to and are able to mobilize relationships that help them further their goals.",
+        "corrected_cite_as": "",
+        "notes": "Definition matches verbatim. Footer: '(c) 2026 Mathematica' and 'funded in part by the Bill & Melinda Gates Foundation', so the author/funder split is correct. Framework report dated August 2022."
+      }
+    },
+    {
+      "claim_id": "V39",
+      "source_id": "ypqa-pyramid",
+      "claim": {
+        "code": "A2.1",
+        "cite_as": "David P. Weikart Center for Youth Program Quality, Youth Program Quality Assessment (YPQA) pyramid",
+        "claimed_component": "Pyramid levels: safe environment, supportive environment, interaction, engagement",
+        "url": "https://forumfyi.org/weikartcenter/",
+        "code_construct": "A2.1 Program Quality: observed or assessed program quality (safe, supportive, interactive, engaging); accreditation"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://forumfyi.org/weikartcenter/",
+        "source_kind": "primary",
+        "excerpt": "the Weikart Center's pyramid of program quality takes the abstract idea of quality and breaks it down into manageable targets ... the Weikart Center helps youth-serving systems build the safe, supportive, interactive, and engaging environments",
+        "corrected_cite_as": "",
+        "notes": "Page describes the pyramid with the four adjectives. The named domains (Safe Environment, Supportive Environment, Interaction, Engagement) are in the YPQA Handbook (https://forumfyi.org/wp-content/uploads/2019/05/YPQA-Handbook.pdf, pilot version). Does not cover the 'accreditation' part of A2.1."
+      }
+    },
+    {
+      "claim_id": "U01",
+      "source_id": "crdc-2021-22-discipline",
+      "claim": {
+        "code": "Y8.4",
+        "cite_as": "U.S. Department of Education, Office for Civil Rights. Civil Rights Data Collection (CRDC): List of Data Elements for School Year 2021-22",
+        "claimed_component": "CRDC discipline data elements: in-school suspension; one / more than one out-of-school suspension; expulsion; referral to law enforcement; school-related arrest",
+        "url": "https://www.ed.gov/sites/ed/files/about/offices/list/ocr/docs/2021-22-crdc-data-elements.pdf",
+        "code_construct": "Y8.4 School Discipline & Exclusion: suspensions, expulsions, office referrals"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.ed.gov/sites/ed/files/about/offices/list/ocr/docs/2021-22-crdc-data-elements.pdf",
+        "source_kind": "primary",
+        "excerpt": "Number of K-12 students without disabilities who received more than one out-of-school suspension",
+        "corrected_cite_as": "U.S. Department of Education, Office for Civil Rights. 2021-22 Civil Rights Data Collection: List of CRDC Data Elements for School Year 2021-22 (v.1, 05/04/2023)",
+        "notes": "All five elements present (in-school suspension, OSS, expulsion, referral to law enforcement, school-related arrest). CRDC has no office-referral element; the claim does not say it does."
+      }
+    },
+    {
+      "claim_id": "U02",
+      "source_id": "irvin-2004-odr",
+      "claim": {
+        "code": "Y8.4",
+        "cite_as": "Irvin, L. K., Tobin, T. J., Sprague, J. R., Sugai, G., & Vincent, C. G. (2004). Validity of office discipline referral measures as indices of school-wide behavioral status and effects of school-wide behavioral interventions. Journal of Positive Behavior Interventions, 6(3), 131-147.",
+        "claimed_component": "Office discipline referrals (ODRs) as a measure of student behavior and school behavioral climate",
+        "url": "https://journals.sagepub.com/doi/abs/10.1177/10983007040060030201",
+        "code_construct": "Y8.4 School Discipline & Exclusion: suspensions, expulsions, office referrals"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://journals.sagepub.com/doi/abs/10.1177/10983007040060030201",
+        "source_kind": "primary",
+        "excerpt": "Office discipline referrals (ODRs) are widely used by school personnel to evaluate student behavior and the behavioral climate of schools.",
+        "corrected_cite_as": "",
+        "notes": "Authors, year, journal, 6(3), 131-147 match the publisher page. A review of ODR validity as school-wide indices, not an instrument."
+      }
+    },
+    {
+      "claim_id": "U03",
+      "source_id": "miechv-performance-measures",
+      "claim": {
+        "code": "F1.7",
+        "cite_as": "Health Resources and Services Administration, Maternal and Child Health Bureau. Maternal, Infant, and Early Childhood Home Visiting (MIECHV) Program: Performance Indicators and Systems Outcomes Summary",
+        "claimed_component": "MIECHV performance measures: breastfeeding at 6 months; well-child visit per AAP schedule; safe sleep (infants always placed to sleep on their backs, without bed-sharing or soft bedding)",
+        "url": "https://mchb.hrsa.gov/sites/default/files/mchb/programs-impact/performance-indicators-sys-outcomes-summary.pdf",
+        "code_construct": "F1.7 Family Health Practices: caregiver or household health behaviors (breastfeeding, family eating habits, well-child visits kept by the parent, safe sleep)"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://mchb.hrsa.gov/sites/default/files/mchb/programs-impact/performance-indicators-sys-outcomes-summary.pdf",
+        "source_kind": "primary",
+        "excerpt": "Percent of infants enrolled in home visiting that are always placed to sleep on their backs, without bed-sharing and without soft bedding",
+        "corrected_cite_as": "Health Resources and Services Administration, Maternal and Child Health Bureau. Maternal, Infant, and Early Childhood Home Visiting Program [MIECHV performance measures summary; undated, reflects October 2021 revision]",
+        "notes": "The proposed subtitle is from the filename, not the document. Breastfeeding measure is 'breastfed any amount at 6 months' (prenatal enrollees only); well-child measure is 'received the last recommended visit based on the... AAP schedule'."
+      }
+    },
+    {
+      "claim_id": "U04",
+      "source_id": "hp2030-mich14",
+      "claim": {
+        "code": "F1.7",
+        "cite_as": "U.S. HHS ODPHP, Healthy People 2030, objective MICH-14",
+        "claimed_component": "Increase the proportion of infants who are put to sleep on their backs",
+        "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/infants/increase-proportion-infants-who-are-put-sleep-their-backs-mich-14",
+        "code_construct": "F1.7 Family Health Practices: caregiver or household health behaviors (breastfeeding, family eating habits, well-child visits kept by the parent, safe sleep)"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/infants/increase-proportion-infants-who-are-put-sleep-their-backs-mich-14",
+        "source_kind": "primary",
+        "excerpt": "Increase the proportion of infants who are put to sleep on their backs — MICH‑14",
+        "corrected_cite_as": "",
+        "notes": "ID and wording match exactly."
+      }
+    },
+    {
+      "claim_id": "U05",
+      "source_id": "hp2030-mich15",
+      "claim": {
+        "code": "F1.7",
+        "cite_as": "U.S. HHS ODPHP, Healthy People 2030, objective MICH-15",
+        "claimed_component": "Increase the proportion of infants who are breastfed exclusively through age 6 months",
+        "url": null,
+        "code_construct": "F1.7 Family Health Practices: caregiver or household health behaviors (breastfeeding, family eating habits, well-child visits kept by the parent, safe sleep)"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/infants/increase-proportion-infants-who-are-breastfed-exclusively-through-age-6-months-mich-15",
+        "source_kind": "primary",
+        "excerpt": "Increase the proportion of infants who are breastfed exclusively through age 6 months — MICH‑15",
+        "corrected_cite_as": "",
+        "notes": "Found by search; ID and wording match exactly."
+      }
+    },
+    {
+      "claim_id": "U06",
+      "source_id": "head-start-pir-staff-turnover",
+      "claim": {
+        "code": "A1.3",
+        "cite_as": "Administration for Children and Families, Office of Head Start. Head Start Program Information Report (PIR), 2025-2026 (OMB 0970-0427)",
+        "claimed_component": "Staff items: all staff turnover (staff who left during the program year); education and child development staff turnover; reasons for staff departure; long-unfilled vacancies",
+        "url": "https://omb.report/icr/202501-0970-008/doc/151613901.pdf",
+        "code_construct": "A1.3 Workforce Stability & Well-Being: staff retention and turnover; staff well-being (staff of youth- and family-serving programs)"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://omb.report/icr/202501-0970-008/doc/151613901.pdf",
+        "source_kind": "secondary",
+        "excerpt": "Total number of staff who left during the program year (including turnover that occurred while the program was not in session, e.g., summer months)",
+        "corrected_cite_as": "",
+        "notes": "Component matches B.17-B.20; title and OMB 0970-0427 match. PARTIAL only because the text is from a third-party mirror of the OMB submission; the official headstart.gov PDF is blocked by robots.txt."
+      }
+    },
+    {
+      "claim_id": "U07",
+      "source_id": "head-start-1302-93-staff-wellness",
+      "claim": {
+        "code": "A1.3",
+        "cite_as": "Head Start Program Performance Standards, 45 CFR 1302.93, Staff health and wellness",
+        "claimed_component": "Programs must provide staff mental health and wellness information and opportunities; programs should cultivate a program-wide culture of wellness for staff",
+        "url": "https://headstart.gov/policy/45-cfr-chap-xiii/1302-93-staff-health-wellness",
+        "code_construct": "A1.3 Workforce Stability & Well-Being: staff retention and turnover; staff well-being (staff of youth- and family-serving programs)"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://headstart.gov/policy/45-cfr-chap-xiii/1302-93-staff-health-wellness",
+        "source_kind": "primary",
+        "excerpt": "A program should cultivate a program-wide culture of wellness that empowers staff as professionals and supports staff to effectively accomplish their job responsibilities in a high-quality manner.",
+        "corrected_cite_as": "",
+        "notes": "Mandatory part also present ('must make mental health and wellness information available to staff'). Must/should wording matches the claim."
+      }
+    },
+    {
+      "claim_id": "U08",
+      "source_id": "shape-pe-2024",
+      "claim": {
+        "code": "Y10.1",
+        "cite_as": "SHAPE America (2024). National Physical Education Standards",
+        "claimed_component": "Standard 4 (engaging in physical activity)",
+        "url": "https://shapeamerica.org/standards/pe/new-pe-standards/",
+        "code_construct": "Y10.1 Physical Activity & Fitness: exercise, fitness, less sedentary time"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://shapeamerica.org/standards/pe/new-pe-standards/",
+        "source_kind": "primary",
+        "excerpt": "Develops personal skills, identifies personal benefits of movement, and chooses to engage in physical activity.",
+        "corrected_cite_as": "",
+        "notes": "Standard 4 is broader than 'engaging in physical activity' and says nothing about fitness or sedentary time."
+      }
+    },
+    {
+      "claim_id": "U09",
+      "source_id": "lerner-2005-five-cs",
+      "claim": {
+        "code": "Y2, Y4, Y5 (domains)",
+        "cite_as": "Lerner, R. M., Lerner, J. V., Almerigi, J. B., et al. (2005). Positive youth development, participation in community youth development programs, and community contributions of fifth-grade adolescents: Findings from the first wave of the 4-H Study of Positive Youth Development. Journal of Early Adolescence, 25(1), 17-71.",
+        "claimed_component": "Definitions of the Five Cs: Competence, Confidence, Connection, Character, Caring (with Contribution as a sixth C)",
+        "url": null,
+        "code_construct": "Y2 Belonging & Relationships (Connection); Y4 Identity, Confidence & Agency (Confidence); Y5 Character, Values & Civic Life (Character, Caring, Contribution)"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://journals.sagepub.com/doi/10.1177/0272431604272461",
+        "source_kind": "secondary",
+        "excerpt": "five first-order latent factors representing the 'Five Cs' of PYD (competence, confidence, connection, character, and caring)",
+        "corrected_cite_as": "",
+        "notes": "Citation confirmed on SAGE and ERIC (EJ727016). Publisher page only names the Five Cs; the Table 1 definitions and 'a sixth C, contribution' were found only in an academia.edu copy (https://www.academia.edu/18630241/)."
+      }
+    }
+  ]
+}

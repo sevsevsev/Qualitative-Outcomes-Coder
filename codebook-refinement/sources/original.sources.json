@@ -184,7 +184,7 @@
           "component": "Phase 1: triggered situational interest"
         },
         {
-          "code": "1.3",
+          "code": "2.3",
           "component": "Cited in the codebook as 'Hidi & Renninger (Phase 3/4)' for utility value. The cycle-01 verifier found phases 3-4 describe individual interest, not utility value.",
           "unsupported": true,
           "open_cp": "CP-01-04"
@@ -635,8 +635,8 @@
           "component": "Six key principles of a trauma-informed approach"
         },
         {
-          "code": "7.3",
-          "component": "Named as 'SAMHSA (Trauma)' in the Domain 7 Framework Basis line. This source is about trauma-informed practice by staff and organizations (10.2); 7.3 cites NCTSN.",
+          "code": "8.3",
+          "component": "Named as 'SAMHSA (Trauma)' in the Domain 8 Framework Basis line. This source is about trauma-informed practice by staff and organizations (11.2); 8.3 cites NCTSN.",
           "unsupported": true,
           "open_cp": "CP-05-01"
         }

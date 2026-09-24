@@ -8,6 +8,9 @@ import {
   searchText,
 } from '../services/codebookExplorer.js';
 import { getSourceRegistry, SourceStatus } from '../services/codebookSources.js';
+import { FeedbackTargetType, GENERAL_TARGET_LABEL, PublicFeedback } from '../services/feedback.js';
+import { fetchApprovedFeedback } from '../services/feedbackClient.js';
+import FeedbackPanel from './FeedbackPanel.js';
 
 // Route shape (after "#/codebook/"): "<codebookId>[/<target>]", where target
 // is a domain ("d/3"), a code ("3.2.2" or "01"), or "sources".
@@ -27,6 +30,8 @@ export const explorerHref = (codebookId: string, target?: string) =>
 
 interface Props {
   route: ExplorerRoute;
+  /** Show visitor comments and feedback forms (the public explorer site). */
+  withFeedback?: boolean;
 }
 
 // ---------------------------------------------------------------------------
@@ -100,12 +105,39 @@ const highlight = (text: string, tokens: string[]): React.ReactNode => {
 // Component
 // ---------------------------------------------------------------------------
 
-const CodebookExplorer: React.FC<Props> = ({ route }) => {
+const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false }) => {
   const codebook = CODEBOOK_REGISTRY[route.codebookId];
   const data = useMemo(() => buildExplorerCodebook(codebook), [codebook]);
   const legend = getSourceRegistry(codebook.id)?.status_legend;
 
   const [query, setQuery] = useState('');
+  const [feedback, setFeedback] = useState<{ public: boolean; items: PublicFeedback[] }>({ public: true, items: [] });
+
+  useEffect(() => {
+    if (!withFeedback) return;
+    let live = true;
+    fetchApprovedFeedback(data.id)
+      .then(r => { if (live) setFeedback(r); })
+      .catch(() => { if (live) setFeedback({ public: true, items: [] }); });
+    return () => { live = false; };
+  }, [withFeedback, data.id]);
+
+  // Approved feedback is shown only while its code still has the wording it
+  // was written about, so a renumbering or rename never attaches an old
+  // comment to a different code. Older entries stay in the admin export.
+  const feedbackFor = (targetType: FeedbackTargetType, number: string, label: string) =>
+    feedback.items.filter(i => i.targetType === targetType && i.targetCode === number && i.targetLabel === label);
+
+  const renderFeedback = (targetType: FeedbackTargetType, number: string, label: string) => (
+    <FeedbackPanel
+      key={`${data.id}-${targetType}-${number}`}
+      codebookId={data.id}
+      targetType={targetType}
+      targetCode={number}
+      items={feedbackFor(targetType, number, label)}
+      showsApproved={feedback.public}
+    />
+  );
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const searchRef = useRef<HTMLInputElement>(null);
 
@@ -265,6 +297,7 @@ const CodebookExplorer: React.FC<Props> = ({ route }) => {
 
   const renderCode = (code: ExplorerCode, index: number) => {
     const open = expanded.has(code.number);
+    const commentCount = withFeedback ? feedbackFor('code', code.number, code.code).length : 0;
     const isTarget = targetCode?.code.number === code.number;
     const telling = [code.hint, ...code.notes].filter(Boolean) as string[];
     return (
@@ -302,6 +335,14 @@ const CodebookExplorer: React.FC<Props> = ({ route }) => {
             )}
           </span>
           <span className="flex items-center gap-3 shrink-0 mt-1.5">
+            {commentCount > 0 && (
+              <span className="flex items-center gap-1 text-xs text-slate-500 tabular-nums" title={`${commentCount} comment${commentCount === 1 ? '' : 's'}`}>
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h8M8 14h5M21 12a8 8 0 01-11.6 7.1L4 20l1-4.4A8 8 0 1121 12z" />
+                </svg>
+                {commentCount}
+              </span>
+            )}
             {renderDots(code.sources)}
             <Chevron open={open} />
           </span>
@@ -368,6 +409,13 @@ const CodebookExplorer: React.FC<Props> = ({ route }) => {
                 </p>
               )}
             </div>
+
+            {withFeedback && (
+              <div>
+                <SectionLabel>Feedback</SectionLabel>
+                {renderFeedback('code', code.number, code.code)}
+              </div>
+            )}
 
             <div className="flex items-center gap-4 pt-1">
               <button
@@ -500,6 +548,16 @@ const CodebookExplorer: React.FC<Props> = ({ route }) => {
             <ul className="rounded-xl border border-slate-200 bg-white px-5 py-4 divide-y divide-slate-100">
               {domain.sources.map(s => renderSource(s, false))}
             </ul>
+          </section>
+        )}
+
+        {withFeedback && (
+          <section className="mt-12">
+            <h3 className="text-base font-semibold text-slate-900 mb-1">Feedback on this domain</h3>
+            <p className="text-sm text-slate-500 mb-4">
+              Is something unclear, or is an outcome your program tracks missing from this domain?
+            </p>
+            {renderFeedback('domain', domain.number, domain.code)}
           </section>
         )}
 
@@ -711,6 +769,16 @@ const CodebookExplorer: React.FC<Props> = ({ route }) => {
           {tokens.length ? renderResults() : showSources ? renderSources() : domain ? renderDomain() : null}
         </main>
       </div>
+
+      {withFeedback && (
+        <section className="mt-16 pt-8 border-t border-slate-200 max-w-3xl">
+          <h2 className="text-base font-semibold text-slate-900 mb-1">Feedback on the whole codebook</h2>
+          <p className="text-sm text-slate-500 mb-4">
+            Missing a whole area of outcomes, or have a thought that doesn’t fit one domain? Tell us here.
+          </p>
+          {renderFeedback('general', '', GENERAL_TARGET_LABEL)}
+        </section>
+      )}
     </div>
   );
 };

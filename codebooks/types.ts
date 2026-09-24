@@ -33,6 +33,18 @@ export interface DomainDefinition {
   hint?: string;
 }
 
+/**
+ * An old subcategory label that re-imported exports may still carry, and
+ * the current code it maps to. `bySubjectArea` routes the old label to a
+ * different current code depending on the row's Subject Area (used when one
+ * old code was split into several new ones).
+ */
+export interface LegacySubcategoryMapping {
+  from: string;
+  to: string;
+  bySubjectArea?: Record<string, string>;
+}
+
 export interface CodebookCapabilities {
   hasSubcategories: boolean;
   hasSubjectArea: boolean;
@@ -67,6 +79,8 @@ export interface Codebook {
   capabilities: CodebookCapabilities;
   subjectAreaOptions?: string[];
   targetPopulationOptions?: string[];
+  /** Renamed or split subcategory labels, for re-importing older exports. */
+  legacySubcategories?: LegacySubcategoryMapping[];
 }
 
 export const buildSystemInstruction = (codebook: Codebook): string =>

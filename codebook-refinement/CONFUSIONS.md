@@ -108,7 +108,7 @@ education body. See CP-01-05 for the options.
 - Belief about succeeding in schoolwork → 4.4.
 - Broad purpose or self-worth not framed as confidence → 5.4.
 
-**Gold:** G-011, G-012, G-013
+**Gold:** G-011, G-012, G-013, G-069
 
 ### CF-005: Growth mindset · proposed amendment (CP-01-06)
 
@@ -149,7 +149,7 @@ source for Domain 4.
 - A demonstrated gain, or an attainment status → Domain 11.
 - Split the statement if both are present.
 
-**Gold:** G-018, G-019
+**Gold:** G-018, G-019, G-068
 
 ### CF-008: Family codes · active (+ citation fix CP-01-03)
 
@@ -333,21 +333,25 @@ cited source (the on-track indicator) covers credits and course failures only.
 - (a) Keep it in 11.6 and add a verified source for discipline as an
   education-status indicator.
 - (b) Route it to 7.7 when violence-driven and to 3.2.1 when behavior-driven.
-- (c) Create a new 11.8.
+- (c) Create a new Domain 11 code (11.8 is now taken by CP-04-01; this would be 11.10).
 
 **Gold:** G-048, G-060
 
 ### CF-021: Technical or physical skill in arts and sports · arts resolved (CP-04-01); sports open (backlog B-04)
 
-**Codes:** 11.9 · 1.4 · 7.1
+**Codes:** 11.9 · 11.3 · 1.4 · 7.1
 
 **Resolved for the arts:** a technique or knowledge gain in an art form ("technical
 proficiency on their chosen instrument") → 11.9, anchored in the National Core Arts
 Standards. See CF-026 for 11.9 vs. 1.4/1.5.
 
-**Still open for sports:** sport technique has no code. 11.3 now excludes it, so it
-goes to 7.1 at low confidence until option (b) lands.
+**Still open for sports (B-04):** sport technique has no dedicated code.
 
+**Options:**
+
+- (a) Code it to 11.3 with Subject Area "Health & Physical Education". ESSA's
+  well-rounded-education definition (20 U.S.C. 7801(52)), now 11.3's anchor, lists
+  physical education.
 - (b) Widen 7.1 to include motor skill. This needs a verified SHAPE America source,
   which is not yet in the registry.
 
@@ -375,7 +379,7 @@ it uncoded.
 
 ### CF-024: Digital · proposed clarification (CP-01-06)
 
-**Codes:** 6.5 · 9.1 · 11.3 · 8.6
+**Codes:** 6.5 · 9.1 · 11.8 · 8.6
 
 **Rule:**
 
@@ -423,5 +427,5 @@ and assessments are defined per subject (20 U.S.C. 6311(b)(1)(C)).
 content standard for learning in the discipline. 1.4 and 1.5 use the Creating and
 Presenting/Responding processes as engagement and expression (Domain 1).
 
-**Gold:** G-049, G-066, G-067
+**Gold:** G-049, G-066, G-067, G-071
 

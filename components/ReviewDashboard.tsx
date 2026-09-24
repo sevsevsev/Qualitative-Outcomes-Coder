@@ -470,7 +470,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                            ))}
                         </select>
                         {expectedSubjects && (
-                           <p className="mt-1 text-[11px] leading-snug text-amber-700">Doesn't match {item.primary_subcategory.split(' ')[0]}. Expected: {expectedSubjects.join(' or ')}</p>
+                           <p className="mt-1 text-[11px] leading-snug text-amber-700">Doesn't match {item.primary_subcategory.split(' ')[0]}, which expects {expectedSubjects.join(' or ')}. Fix the Subject Area, or pick the code for this subject.</p>
                         )}
                       </td>
                     )}

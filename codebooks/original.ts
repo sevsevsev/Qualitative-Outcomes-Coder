@@ -22,7 +22,7 @@
 // few others) were deliberately deferred rather than added here -- see the
 // "Deferred for a future revision" note at the bottom of this file.
 //
-// v1.2.0 (CP-04-01 to CP-04-04) splits Domain 11's learning codes by subject:
+// v1.2.0 (CP-04-01 to CP-04-04, CP-04-07) splits Domain 11's learning codes by subject:
 // 11.1 now covers writing as well as reading, 11.3 is re-anchored on ESSA's
 // "well-rounded education" definition for the remaining academic subjects,
 // and new 11.8 (science, technology & engineering) and 11.9 (arts learning)
@@ -65,7 +65,7 @@ export const TARGET_POPULATION_OPTIONS = [
 
 const definitionsText = `
 Domain 11. Academic Learning & Achievement
-Framework Basis: ESSA (2015) State academic standards, 20 U.S.C. 6311(b)(1)(C) (reading or language arts, mathematics, science) and "well-rounded education", 20 U.S.C. 7801(52); National Reading Panel & Common Core writing anchors (Literacy); NGSS & CSTA (Science, Technology & Engineering); National Core Arts Standards (Arts); UChicago Consortium On-Track Indicator (Allensworth & Easton); Attendance Works; WIDA English Language Development Standards; Head Start Early Learning Outcomes Framework (11.7)
+Framework Basis: ESSA (2015) State academic standards, 20 U.S.C. 6311(b)(1)(C) (reading or language arts, mathematics, science) and "well-rounded education", 20 U.S.C. 7801(52); National Reading Panel & Common Core writing anchors (Literacy); NGSS & CSTA (Science, Technology & Engineering); National Core Arts Standards (Arts); UChicago Consortium On-Track Indicator (Allensworth & Easton); ESSA graduation-rate indicator, 20 U.S.C. 6311(c)(4)(B); Attendance Works; WIDA English Language Development Standards; Head Start Early Learning Outcomes Framework (11.7)
 (Note: This domain covers DEMONSTRATED learning gains and enrollment/completion status. It is distinct from Domain 4, which covers behaviors and beliefs ABOUT learning, and from 8.1, which is scoped specifically to college/career-readiness content mastery.)
 (Note: Learning codes are split by SUBJECT: 11.1 literacy, 11.2 math, 11.8 science/technology/engineering, 11.9 the arts, and 11.3 every other academic subject. Grades, GPA, credits and "academic performance" with no subject named are a status, not a subject -- use 11.6.)
 (Note: This domain is listed first because academic outcomes are the top priority for many school and district users. The order of domains in this codebook carries no weight when choosing a code.)
@@ -81,7 +81,7 @@ Framework Basis: ESSA (2015) State academic standards, 20 U.S.C. 6311(b)(1)(C) (
 11.3 Knowledge & Skill in Other Academic Subjects
    - Definition: Demonstrated learning of content, concepts or skills in an academic subject other than literacy, math, science/technology/engineering and the arts -- for example history, geography, civics and government, economics, world languages, or health education -- NOT explicitly framed around college/career readiness.
    - Source Framework: ESSA "well-rounded education", 20 U.S.C. 7801(52) (subjects such as civics and government, economics, history, geography, foreign languages, health); NAEP authorization, 20 U.S.C. 9622(b)(2)(D) (additional subject matter).
-   - Note: Sport or physical-skill proficiency goes to 7.1. A practical skill with no academic content (cooking technique, bicycle repair) is not a subject: code it to the closest fit at low confidence. Use 8.1 only when the outcome is explicitly framed around college/career readiness.
+   - Note: A practical skill with no academic content (cooking technique, bicycle repair) is not a subject: code it to the closest fit at low confidence. Use 8.1 only when the outcome is explicitly framed around college/career readiness.
    - Example: "Students will explain the causes of a major historical event."
 11.4 English Language Proficiency & Multilingual Development
    - Definition: Growth in English language proficiency for multilingual learners/English learners (listening, speaking, reading, writing).
@@ -130,6 +130,7 @@ Framework Basis: Gholdy Muhammad (Joy) & Hidi/Renninger (Interest); National Cor
 1.4 Creative Expression & Making
    - Definition: Outcomes involving self-expression and the application of interest in novel ways -- the act of creating or making something (art, music, writing, design, performance pieces).
    - Source Framework: National Core Arts Standards (Artistic Process: Creating).
+   - Note: Use 1.4 for self-expression through making something. A stated skill or knowledge gain in an art form goes to 11.9, and a stated gain in writing skill goes to 11.1.
    - Example: "Students will design their own projects based on their interests."
 1.5 Performance, Presentation & Artistic Response
    - Definition: Outcomes involving performing or presenting creative work publicly (exhibitions, recitals, portfolios), or responding to/analyzing art (critique, aesthetic analysis, connecting art to personal or cultural meaning).
@@ -484,7 +485,7 @@ RULES:
      - "Early Childhood / Pre-K": Use for outcomes about children below kindergarten age, alongside Domain 11.7.
      - "Social & Emotional Learning (SEL Only)": Use ONLY if the outcome is specifically about SEL skills (Domain 3) AND no other academic subject is mentioned.
      - "N/A / General": Use for outcomes about belonging, fun, safety, or operations that are not tied to a curricular subject.
-   - Subject Area must agree with a Domain 11 learning code: 11.1 -> "English Language Arts (ELA) & Literacy"; 11.2 -> "Mathematics"; 11.8 -> "Science (Natural/Physical)", "Computer Science & Technology", "Engineering & Robotics" or "STEM (Integrated/Cross-disciplinary)"; 11.9 -> "Visual & Performing Arts"; 11.3 -> the specific subject named (never "N/A / General").
+   - Subject Area must agree with a Domain 11 learning code: 11.1 -> "English Language Arts (ELA) & Literacy"; 11.2 -> "Mathematics"; 11.8 -> "Science (Natural/Physical)", "Computer Science & Technology", "Engineering & Robotics" or "STEM (Integrated/Cross-disciplinary)"; 11.9 -> "Visual & Performing Arts"; 11.3 -> "Social Studies, History & Civics", "World Languages" or "Health & Physical Education" (never "N/A / General").
 
 4. OUTPUT FORMAT:
    - Return a strictly valid JSON object.
@@ -529,7 +530,8 @@ SPECIFIC CODING RULES & TIE-BREAKERS:
    - A learning gain, test score or proficiency level in a NAMED subject goes to that subject's code: reading or writing -> 11.1; math -> 11.2; science, engineering or computer science -> 11.8; an art form -> 11.9; any other academic subject (history, civics, geography, economics, world languages, health education) -> 11.3.
    - Grades, GPA, course passing/failure and credits -> 11.6, even when a subject is named (record the subject in Subject Area).
    - "Academic performance/achievement", grade-level proficiency or test scores with NO subject named -> 11.6.
-   - Arts: a technique or knowledge gain in the art form -> 11.9; self-expression through making -> 1.4; presenting finished work or responding to art as an experience -> 1.5.
+   - Arts: a technique or knowledge gain in the art form -> 11.9; self-expression through making -> 1.4; presenting finished work or responding to art as an experience -> 1.5. If a statement names both a skill gain and a performance or creation, split it.
+   - Writing: a stated gain in writing skill -> 11.1; creative writing as self-expression, with no stated skill gain -> 1.4.
    - A statement naming several subjects: code the most specific subject as primary and the others as secondary codes (or split if they are separate outcomes).
 
 6. FAMILY-PROGRAM RELATIONSHIP (2.5) vs. FAMILY ENGAGEMENT CAPACITY (10.4) vs. FAMILY STRENGTHENING (Domain 12):
@@ -561,10 +563,28 @@ export const originalCodebook: Codebook = {
   },
   subjectAreaOptions: SUBJECT_AREA_OPTIONS,
   targetPopulationOptions: TARGET_POPULATION_OPTIONS,
+  // v1.1.1 labels renamed or split in v1.2.0 (CP-04-01, CP-04-02). An old
+  // 11.3 row goes to the new code for its subject; any other subject keeps
+  // 11.3 and the review table flags a subject it doesn't cover.
+  legacySubcategories: [
+    { from: "11.1 Literacy & Reading Skill", to: "11.1 Literacy: Reading & Writing" },
+    { from: "11.6 Credit Accumulation, On-Track Status & Graduation", to: "11.6 Grades, Credits, On-Track Status & Graduation" },
+    {
+      from: "11.3 General Content Knowledge & Conceptual Understanding",
+      to: "11.3 Knowledge & Skill in Other Academic Subjects",
+      bySubjectArea: {
+        "Science (Natural/Physical)": "11.8 Science, Technology & Engineering",
+        "Computer Science & Technology": "11.8 Science, Technology & Engineering",
+        "Engineering & Robotics": "11.8 Science, Technology & Engineering",
+        "STEM (Integrated/Cross-disciplinary)": "11.8 Science, Technology & Engineering",
+        "Visual & Performing Arts": "11.9 Arts Learning & Performance",
+      },
+    },
+  ],
   domains: [
     {
       code: "Domain 11. Academic Learning & Achievement",
-      hint: "DEMONSTRATED learning gains and enrollment/completion status. Learning codes are split by subject (11.1 literacy, 11.2 math, 11.8 science/tech/engineering, 11.9 arts, 11.3 other subjects); grades, GPA and unspecified academic performance go to 11.6.",
+      hint: "DEMONSTRATED learning gains and enrollment/completion status -- distinct from Domain 4 (behaviors/beliefs about learning) and 8.1 (content mastery explicitly framed around college/career readiness). Learning codes are split by subject (11.1 literacy, 11.2 math, 11.8 science/tech/engineering, 11.9 arts, 11.3 other subjects); grades, GPA and unspecified academic performance go to 11.6.",
       subcategories: [
         {
           code: "11.1 Literacy: Reading & Writing",
@@ -603,7 +623,7 @@ export const originalCodebook: Codebook = {
         },
         {
           code: "11.9 Arts Learning & Performance",
-          hint: "A technique or knowledge gain in an art form. Self-expression through making -> 1.4; presenting or responding to art as an experience -> 1.5.",
+          hint: "A technique or knowledge gain in an art form. Self-expression through making -> 1.4; presenting or responding to art as an experience -> 1.5. Split a statement that names both a skill gain and a performance.",
           subjectAreas: ["Visual & Performing Arts"],
         },
       ],
@@ -617,11 +637,11 @@ export const originalCodebook: Codebook = {
         { code: "1.3 Value & Meaning (Utility Value)" },
         {
           code: "1.4 Creative Expression & Making",
-          hint: "The act of creating/making. For presenting, performing, or responding to finished work, use 1.5 instead.",
+          hint: "The act of creating/making as self-expression. For presenting, performing, or responding to finished work, use 1.5 instead. A stated skill gain in an art form -> 11.9; in writing -> 11.1.",
         },
         {
           code: "1.5 Performance, Presentation & Artistic Response",
-          hint: "vs 1.4: use 1.5 for performing/presenting/exhibiting finished work or responding to art, not the act of creating it.",
+          hint: "vs 1.4: use 1.5 for performing/presenting/exhibiting finished work or responding to art, not the act of creating it. A stated skill or knowledge gain in the art form -> 11.9.",
         },
       ],
     },

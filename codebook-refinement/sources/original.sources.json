@@ -924,7 +924,8 @@
       ],
       "cite_as_in_codebook": "National Reading Panel (2000). Teaching Children to Read (five components: phonemic awareness, phonics, fluency, vocabulary, comprehension).",
       "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)"
+      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
+      "notes": "Pending: status located (PARTIAL); fetch the NICHD report itself to verify."
     },
     {
       "id": "essa-indicators",
@@ -1324,7 +1325,8 @@
           "verifier_note": "V04-07. Three dimensions confirmed; the fetched pages do not place engineering design inside the core ideas (it is an appendix).",
           "url_checked": "https://www.nextgenscience.org/"
         }
-      ]
+      ],
+      "notes": "Pending: V04-07 PARTIAL. Re-verify that engineering design is part of the NGSS three dimensions (the fetched pages show it only as an appendix)."
     },
     {
       "id": "csta-k12-2017",

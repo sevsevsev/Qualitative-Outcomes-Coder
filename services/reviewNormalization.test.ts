@@ -136,6 +136,31 @@ describe('normalizeImportedCoding (original codebook)', () => {
   });
 });
 
+describe('normalizeImportedCoding (v1.1.1 labels renamed or split in v1.2.0)', () => {
+  const D11 = 'Domain 11. Academic Learning & Achievement';
+  const legacy = (sub: string, subject: string) =>
+    normalizeImportedCoding(
+      { primary_domain: D11, primary_subcategory: sub, primary_confidence: 'high', primary_subject_area: subject, uncoded: false },
+      original,
+      'original'
+    ).primary_subcategory;
+
+  it('maps the old 11.1 and 11.6 labels to their renamed codes', () => {
+    expect(legacy('11.1 Literacy & Reading Skill', 'English Language Arts (ELA) & Literacy')).toBe('11.1 Literacy: Reading & Writing');
+    expect(legacy('11.6 Credit Accumulation, On-Track Status & Graduation', 'N/A / General')).toBe('11.6 Grades, Credits, On-Track Status & Graduation');
+  });
+
+  it('routes an old 11.3 row to the new code for its subject', () => {
+    const old113 = '11.3 General Content Knowledge & Conceptual Understanding';
+    expect(legacy(old113, 'Science (Natural/Physical)')).toBe('11.8 Science, Technology & Engineering');
+    expect(legacy(old113, 'STEM (Integrated/Cross-disciplinary)')).toBe('11.8 Science, Technology & Engineering');
+    expect(legacy(old113, 'Visual & Performing Arts')).toBe('11.9 Arts Learning & Performance');
+    expect(legacy(old113, 'Social Studies, History & Civics')).toBe('11.3 Knowledge & Skill in Other Academic Subjects');
+    // No subject: stays 11.3, where the review table flags the missing subject.
+    expect(legacy(old113, 'N/A / General')).toBe('11.3 Knowledge & Skill in Other Academic Subjects');
+  });
+});
+
 describe('normalizeImportedCoding (accelerate_philly codebook)', () => {
   it('fuzzy-matches a bare numeric code to its canonical "Code NN:" form', () => {
     const result = normalizeImportedCoding(

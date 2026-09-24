@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | Type | DEFINITION_SCOPE |
-| Codes touched | 11.1 (renamed "Literacy: Reading & Writing"), 11.2 (source line added), 11.6 (renamed "Grades, Credits, On-Track Status & Graduation"); CF-025 |
-| Version bump | MINOR |
+| Codes touched | 11.1 (scope widened; label becomes "Literacy: Reading & Writing"), 11.6 (scope widened; label becomes "Grades, Credits, On-Track Status & Graduation"), with their hints and examples; CF-025 |
+| Version bump | MINOR for the scope; the two label changes are MAJOR under S4.6 as written (see CP-04-01's version question). Both new scopes are supersets, so the re-import mapping is one-to-one |
 | Requirement served | R1 frameworks · R2 breadth · R3 tie-breakers |
 | Status | ready-to-test (applied on branch `claude/project-thread-mpnj0j`) |
 | Enum cost | +0 |
@@ -17,7 +17,6 @@
   no subject named were scattered across 11.3, 11.6, 8.2, 3.4.1 and others. That is
   about 50 keyword hits across 24 programs. The 2026-09-23 gold draft had to code
   G017, G056, G069, G093 and G150 as "any 11.x".
-- **11.2 has no source line** in `definitionsText`.
 
 ## Why this is the smallest fit (STANDARDS S2.2)
 
@@ -46,7 +45,6 @@ treats grades and course failures as status measures.
    - Definition: Demonstrated growth in reading skill (...) or in writing and composition (planning, drafting and revising written work in any genre).
    - Source Framework: Report of the National Reading Panel (NICHD, 2000): alphabetics, fluency, comprehension; Common Core ... Anchor Standards for Writing; ESSA ... 6311(b)(1)(C).
    - Note: Writing habits, effort or confidence -> Domain 4. Oral communication and public speaking -> 3.4.1 (or 8.5 at work).
-11.2 ... Source Framework: ESSA State academic standards for mathematics, 20 U.S.C. 6311(b)(1)(C).
 11.6 Grades, Credits, On-Track Status & Graduation
    - Definition: ... course grades, GPA, course passing or failure, credit accumulation, grade promotion, ... Also general "academic performance/achievement" or test scores when no subject is named.
    - Source Framework: UChicago On-Track Indicator (Allensworth & Easton, 2005; grades and GPA: Allensworth & Easton, 2007); ESSA graduation rate.
@@ -56,7 +54,13 @@ treats grades and course failures as status measures.
 The 11.1 source wording matches CP-01-13 item 4. CF-020 (discipline in 11.6) is
 unchanged and still open.
 
-- **rulesText:** rule 5b gives grades, GPA and generic performance → 11.6.
+- **rulesText:**
+  - Rule 5b sends grades, GPA and generic performance → 11.6.
+  - A writing tie-break: a stated gain in writing skill → 11.1; creative writing as
+    self-expression → 1.4. The 1.4 definition and hint say the same.
+- **Re-import:** `legacySubcategories` maps the old 11.1 and 11.6 labels one-to-one,
+  with tests.
+- The 11.2 source line moved to CP-04-07.
 - **CONFUSIONS.md:** new CF-025.
 
 ## Sources
@@ -65,7 +69,7 @@ Checked by an independent `codebook-citation-verifier` run on 2026-09-24.
 
 | Registry ID | Status | Component relied on |
 |---|---|---|
-| essa-6311-b1c-standards | verified (SUPPORTED, V04-01, V04-02) | 11.1, 11.2: State academic standards for reading or language arts, and for mathematics |
+| essa-6311-b1c-standards | verified (SUPPORTED, V04-01) | 11.1: State academic standards for reading or language arts |
 | ccss-writing-anchors | verified (SUPPORTED, V04-09) | 11.1: College and Career Readiness Anchor Standards for Writing |
 | allensworth-easton-2007 | verified (SUPPORTED, V04-10) | 11.6: GPA and course failures as on-track indicators |
 | national-reading-panel-2000 | located (unchanged) | 11.1: alphabetics, fluency, comprehension |

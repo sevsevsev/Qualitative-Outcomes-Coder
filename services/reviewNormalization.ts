@@ -17,6 +17,7 @@ export interface NormalizableCoding {
   primary_domain?: string;
   primary_subcategory?: string;
   primary_confidence?: string;
+  primary_subject_area?: string;
   uncoded?: boolean | string;
 }
 
@@ -106,6 +107,12 @@ export const normalizeImportedCoding = (
     // Invalid Domain: Clear it to force selection
     cleanDomain = "";
     cleanConf = "none";
+  }
+
+  // --- Legacy subcategory labels (renamed or split codes) ---
+  const legacy = codebook.legacySubcategories?.find(m => m.from.toLowerCase() === cleanSub.toLowerCase());
+  if (legacy) {
+    cleanSub = legacy.bySubjectArea?.[(item.primary_subject_area || '').trim()] ?? legacy.to;
   }
 
   // --- Subcategory Normalization ---

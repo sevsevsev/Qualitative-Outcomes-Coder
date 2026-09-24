@@ -4,7 +4,7 @@
 |---|---|
 | Type | SPLIT |
 | Codes touched | 11.3 (renamed, narrowed, re-anchored), 11.8 (new), 11.9 (new); hints on 8.1, 1.4/1.5 notes; CF-010, CF-021, CF-024, CF-026 |
-| Version bump | MINOR (see the version question under "Judge result") |
+| Version bump | MAJOR under S4.6 as written (11.3 is renamed). Branch ships as 1.2.0 pending Severin's ruling; see "Version question" |
 | Requirement served | R1 frameworks · R2 breadth |
 | Status | ready-to-test (applied on branch `claude/project-thread-mpnj0j`) |
 | Enum cost | +2 (footprint 142 → 144, measured with `buildBatchResponseSchema`) |
@@ -82,20 +82,49 @@ The exact text is in `codebooks/original.ts`.
 
 - **rulesText:** new rule 5b, "Which Domain 11 code". Subject decides the learning
   code, and there are tie-breaks for the arts and for multi-subject statements.
-- **Hints:** 8.1 ("use the subject's Domain 11 code"). There is a new 1.4/1.5 note
-  pointing to 11.9. The 11.3, 11.8 and 11.9 structured entries carry hints.
+- **Hints:**
+  - 8.1: "use the subject's Domain 11 code".
+  - The 1.4 definition gets a new note. The 1.4 and 1.5 hints now point to 11.9 (and
+    1.4 points to 11.1 for writing).
+  - The 11.3, 11.8 and 11.9 structured entries carry hints. 11.9's hint includes
+    CF-026's split rule.
+- **Domain 11 header:**
+  - The Framework Basis line adds ESSA 6311(b)(1)(C), 7801(52), CCSS writing, NGSS,
+    CSTA and NCAS, and keeps the ESSA graduation-rate indicator.
+  - The structured hint keeps the Domain 4 and 8.1 distinctions and adds the subject
+    split.
+- **rulesText rule 5b:** includes CF-026's rule to split a statement that names both a
+  skill gain and a performance.
 - **CONFUSIONS.md:**
   - CF-010 amended to cover all subject codes.
-  - CF-021 resolved for the arts; sport stays open.
+  - CF-021 resolved for the arts. Sport stays open, and option (a) is now anchored by
+    7801(52)'s "physical education".
   - CF-024: coding now goes to 11.8.
   - CF-026 is new (11.9 vs. 1.4/1.5).
 - **Registry:** new sources for 11.3, 11.8 and 11.9 (see Sources). 11.3 leaves
   `codebook_extensions`.
 
-**Re-import.** Codes are matched by their leading number in
-`services/reviewNormalization.ts`, so exports that carry the old 11.3 label still
-load. Old exports are not re-coded. An old 11.3 row tagged Science/CS/Engineering/STEM
-corresponds to 11.8, and one tagged Arts corresponds to 11.9.
+**Re-import mapping (S4.6):**
+- `legacySubcategories` in `codebooks/original.ts` maps the old
+  "11.3 General Content Knowledge & Conceptual Understanding" label by Subject Area:
+  - Science/CS/Engineering/STEM → 11.8
+  - Arts → 11.9
+  - anything else → 11.3
+- `normalizeImportedCoding` applies it (`services/reviewNormalization.ts`), and
+  `services/reviewNormalization.test.ts` covers each route.
+- An old 11.3 row with no subject stays 11.3. The review table then flags the missing
+  subject.
+- Secondary codes carry no Subject Area of their own, so an old 11.3 secondary code
+  maps to 11.3.
+
+## Version question (for Severin)
+
+STANDARDS S4.6 makes any rename MAJOR. That would make this release 2.0.0 and collide
+with the planned v2 codebook's name. Options:
+
+- (a) Ship as 1.2.0 and amend S4.6 in a separate commit: "a rename that keeps the
+  code number and comes with a tested re-import mapping is MINOR". Recommended.
+- (b) Ship as 2.0.0 as S4.6 stands.
 
 ## Sources
 
@@ -122,8 +151,9 @@ V04-03 (ESSA science), V04-04 (7801(52)), V04-05 (NAEP 9622), V04-06 (NCAS for
 - **Rows expected to change code (all still `proposed`):**
   - G-027, watershed ecology: 11.3 → 11.8.
   - G-049, instrument technique: 11.3 → 11.9.
-  - G-050, dribbling: 11.3 → 7.1, low. Sport is excluded from 11.3.
-- **New proposed rows:** G-061, G-064, G-066, G-067, G-070.
+  - G-050, dribbling: unchanged (11.3, with 7.1 as an alternate). The sports half of
+    CF-021 stays open under B-04 (S4.7).
+- **New proposed rows:** G-061, G-064, G-066, G-067, G-070, G-071.
 - `/mnt/project-files/eval/gold_set_v1.csv` uses v1.1.1 codes, so its 11.3 items
   (for example G006, G077 and G108) need re-mapping before the next score.
 

@@ -21,11 +21,23 @@ export type SourceStatus =
 export interface SourceSupport {
   code: string;
   component?: string;
+  /** The code this would support doesn't exist yet (waits on a CP). */
+  proposed?: boolean;
+  /** A verifier found this source does not support the code. */
+  unsupported?: boolean;
+  /** The CP that will fix a flagged support. */
+  open_cp?: string;
 }
 
 export interface SourceEntry {
   id: string;
   cite_as: string;
+  /**
+   * The names this source goes by in the codebook's "Source Framework:" and
+   * "Framework Basis:" lines. codebook-refinement/sync.test.ts uses them to
+   * check that every framework the prompt names is in the registry.
+   */
+  codebook_names?: string[];
   tier?: string;
   publisher?: string | null;
   year?: number | string | null;

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { CODEBOOK_LIST, getCodebook } from '../codebooks/index.js';
 import { buildExplorerCodebook, splitCode } from './codebookExplorer.js';
+import { getSourceRegistry } from './codebookSources.js';
 
 describe('codebook explorer data', () => {
   it('splits code strings into number and title', () => {
@@ -50,6 +51,22 @@ describe('codebook explorer data', () => {
       const ranks = d.sources.map(s => (s.status === 'verified' ? 0 : 1));
       expect([...ranks].sort()).toEqual(ranks);
     }
+
+    // A support a verifier rejected, or one for a code that isn't live yet,
+    // is never shown as a source for that code.
+    const registry = getSourceRegistry('original')!;
+    const codesByNumber = new Map(
+      original.domains.flatMap(d => d.subcategories).map(c => [c.number, c] as const),
+    );
+    let flagged = 0;
+    for (const s of registry.sources) {
+      for (const sup of s.supports.filter(x => x.proposed || x.unsupported)) {
+        const valid = s.supports.some(x => x.code === sup.code && !x.proposed && !x.unsupported);
+        const shown = codesByNumber.get(sup.code)?.sources.some(x => x.id === s.id) ?? false;
+        if (!valid) { flagged++; expect(shown, `${s.id} -> ${sup.code}`).toBe(false); }
+      }
+    }
+    expect(flagged).toBeGreaterThan(0);
 
     const philly = buildExplorerCodebook(getCodebook('accelerate_philly'));
     expect(philly.hasRegistry).toBe(false);

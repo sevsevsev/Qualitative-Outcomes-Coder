@@ -58,8 +58,12 @@ Read these before touching any codebook:
 
 ## Checks
 
-- `npm test`: includes `codebook-refinement/registry.test.ts` and the eval-scoring
-  tests.
+- `npm test`: includes `codebook-refinement/registry.test.ts`,
+  `codebook-refinement/sync.test.ts` and the eval-scoring tests. CI runs it, both
+  typechecks and lint on every PR.
+- When a codebook citation line names a framework, add that name to the source's
+  `codebook_names` in the registry. Never add a pair to `PAIRS_WITHOUT_CF` in
+  `sync.test.ts`; write the CF entry instead.
 - `npm run typecheck` and `npm run typecheck:server`: run both after touching `api/`
   or `codebooks/`.
 - Live eval (needs `GEMINI_API_KEY`):

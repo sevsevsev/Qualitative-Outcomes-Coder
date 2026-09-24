@@ -16,6 +16,7 @@ both honest.**
 | `cycles/` | One report per cycle: what was checked, verified, proposed, measured, and deferred | Orchestrator |
 | `eval/` | JSON outputs from `scripts/codebook-eval.ts` | Judge |
 | `registry.test.ts` | Mechanical guards (below) | Via CPs |
+| `sync.test.ts` | Keeps the prompt's citation lines and hints in step with the registry and CONFUSIONS.md | Via CPs |
 | `PLAN.md` | Phased plan from v1.1.1 to v2.0, with a human gate for each phase | Human approves |
 | `v2/` | v2 draft codebook, structure rationale, crosswalk, candidate sources | Via CPs |
 | `gold/gold-cycle02.csv` | 345-row double-blind gold set, coded under v1.1.1 and v2 | Agents propose; human adjudicates |
@@ -51,12 +52,14 @@ For a one-off review with no agents, use `prompts/single-pass-refinement.md`.
 | The model is inconsistent from run to run | Every eval runs twice and reports Cohen's kappa. Disagreements become confusion candidates. |
 | The taxonomy sprawls | Smallest-fit ordering, at most 5 new codes per cycle, and the enum-budget ceiling (a real Gemini schema limit). |
 | Settled questions get reopened | The Deferred block and the cycle backlog are binding. Reopening one needs new evidence. |
-| Tie-breakers disagree with each other across prompt, hints, and docs | CONFUSIONS.md is authoritative, and the judge checks all three agree. Every CF needs at least 2 gold rows (tested). |
+| Tie-breakers disagree with each other across prompt, hints, and docs | CONFUSIONS.md is authoritative, and the judge checks all three agree. Every CF needs at least 2 gold rows (tested). A hint that tells two codes apart needs a CF entry naming both, and may only refer to live codes (`sync.test.ts`). The pairs that predate this check are listed there and may only shrink. |
+| The prompt names a framework the registry doesn't have, or cites a source for a code it doesn't support | Each registry entry lists its `codebook_names`, the names it goes by in "Source Framework:" and "Framework Basis:" lines. `sync.test.ts` fails if a line names a source with no support entry for that code, or names something that looks like a framework but matches no registry entry. A mismatch already known to a verifier is recorded as an `unsupported` support with an `open_cp`. |
+| Nobody runs the checks | CI (`.github/workflows/ci.yml`) runs `npm test`, both typechecks, and lint on every push and pull request. |
 
 ## Running the checks
 
 ```bash
-npm test                                   # includes registry.test.ts and scripts/codebookEvalScoring.test.ts
+npm test                                   # includes registry.test.ts, sync.test.ts and scripts/codebookEvalScoring.test.ts
 GEMINI_API_KEY=... npx tsx scripts/codebook-eval.ts --out codebook-refinement/eval/baseline.json
 GEMINI_API_KEY=... npx tsx scripts/codebook-eval.ts --include-proposed --out codebook-refinement/eval/preview.json   # non-gating preview
 ```

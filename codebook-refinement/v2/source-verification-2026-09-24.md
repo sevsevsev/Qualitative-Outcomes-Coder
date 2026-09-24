@@ -22,11 +22,14 @@ F1.7).
   - the Digital Equity Act's definition of digital literacy → A2.3.
 - **Three of the four unsourced codes now have verified sources:** Y8.4, F1.7 and
   A1.3. No framework was found for Y7.10, so it stays an extension.
+- **A1.3 uses general workforce sources, not Head Start.** Severin ruled out
+  early-childhood-specific sources for it, because the codebook covers every
+  youth-serving program.
 
-| Verdict (48 claims) | Count |
+| Verdict (52 claims) | Count |
 |---|---|
-| SUPPORTED | 28 |
-| PARTIAL | 14 |
+| SUPPORTED | 31 |
+| PARTIAL | 15 |
 | MISATTRIBUTED | 3 (all the Lerner handout) |
 | UNSUPPORTED | 3 |
 | UNREACHABLE | 0 |
@@ -83,8 +86,11 @@ reason given in its notes:
 | F1.7 | MIECHV performance measures | SUPPORTED | New. Covers breastfeeding, well-child visits and safe sleep. |
 | F1.7 | Healthy People 2030 MICH-14, MICH-15 | SUPPORTED | New. Covers safe sleep and breastfeeding. |
 | F3.3 | ED/DOJ (2015) LEP letter | SUPPORTED | |
-| A1.3 | Head Start 45 CFR 1302.93, staff wellness | SUPPORTED | New. It comes from early childhood, not out-of-school time. |
-| A1.3 | Head Start PIR, staff turnover | PARTIAL | New. Secondary: an omb.report mirror, because headstart.gov blocks fetching. |
+| A1.3 | Surgeon General (2022), Framework for Workplace Mental Health & Well-Being | SUPPORTED | New. Covers staff well-being, not turnover. |
+| A1.3 | NIOSH WellBQ (2021) | SUPPORTED | New. Covers staff well-being, not turnover. |
+| A1.3 | BLS JOLTS definitions (separations, quits) | SUPPORTED | New. Covers turnover, as general payroll definitions. |
+| A1.3 | ISO/TS 30421:2021, turnover and retention metrics | PARTIAL | New. Scope matches. The full text is paywalled and the standard is under review. |
+| A1.3 | Head Start 45 CFR 1302.93; Head Start PIR | SUPPORTED; PARTIAL | Rejected by Severin (early childhood). Kept only as a record. |
 | A2.1 | Weikart Center YPQA pyramid | SUPPORTED | Accreditation is not covered. |
 | A2.3 | Digital Equity Act, 47 U.S.C. 1721(12) | UNSUPPORTED | It defines users' skills, not the provision of resources. |
 | A2.5 | Urban Institute mentoring indicators | PARTIAL | Scope: youth satisfaction only, not family satisfaction. |
@@ -110,8 +116,12 @@ These items stand in the way:
 3. **Decision D4 in cycle 02** can now be answered with evidence:
    - **Y8.4:** cite CRDC and Irvin (2004).
    - **F1.7:** cite MIECHV and Healthy People 2030 MICH-14/15.
-   - **A1.3:** cite Head Start 45 CFR 1302.93 and the PIR, or keep it an extension.
-     These sources come from early childhood, not out-of-school time.
+   - **A1.3:** cite the Surgeon General framework or NIOSH WellBQ for well-being, and
+     BLS JOLTS for turnover. Severin ruled out the Head Start sources on 2026-09-24.
+   - **F1.7:** MIECHV is a home-visiting (early childhood) measure set. It is kept for
+     now because breastfeeding and safe sleep are infant outcomes. If it is dropped,
+     the Healthy People 2030 objectives still cover those two, but well-child visits
+     lose their source.
    - **Y7.10:** extension.
 
 ## Corrections the v2 draft needs (through a CP, not applied here)
@@ -128,7 +138,7 @@ These items stand in the way:
   - Nagaoka: use the primary URL;
   - IDEA Indicator 14: restate the claim for Y9.5 as Measure C.
 - **Add these sources:**
-  - Y8.4, F1.7 and A1.3, as listed above, if Severin accepts them;
+  - Y8.4, F1.7 and A1.3, as listed above;
   - SHAPE Standard 4 as a source for Y10.1.
 - **Change the extension status line:** mark Y7.10 as an extension in the draft's
   status line.
@@ -143,6 +153,9 @@ These items stand in the way:
 3. **Unsourced codes.** A separate general-purpose proposer searched for sources for
    the four unsourced codes. A fifth, fresh verifier checked what it found (U01–U07),
    plus two replacement leads raised in verifier notes (U08, U09).
-4. **Recording.** Verdicts are recorded exactly as returned. Three excerpts were over
+4. **A1.3 re-check.** After Severin ruled out the Head Start sources, two more fresh
+   verifiers checked general worker well-being frameworks (U10, U11) and general
+   turnover definitions (U12, U13).
+5. **Recording.** Verdicts are recorded exactly as returned. Three excerpts were over
    40 words (V31, V36, V37), so I trimmed them to a verbatim sub-span. The full
    original is kept in `excerpt_as_returned`.

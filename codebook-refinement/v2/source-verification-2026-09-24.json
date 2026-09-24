@@ -1,7 +1,7 @@
 {
   "date": "2026-09-24",
   "cycle": "03 (PLAN.md phase 1, step 2)",
-  "method": "Claims V01-V39 were built from v2-candidate-sources.json (one claim per source-code pair) by the orchestrating session and split across four independent codebook-citation-verifier agents. Claims U01-U09 are candidates found by a separate proposer agent (U01-U07: sources for the unsourced codes Y8.4, F1.7, A1.3) or replacement leads (U08, U09) raised in verifier notes, and were checked by a fifth, fresh verifier. Verifiers saw only the claim fields and the code's construct, never the proposer's reasoning. Verdicts are recorded as returned; three over-length excerpts (V31, V36, V37) were trimmed by the orchestrator to a verbatim sub-span of 40 words or fewer, with the verifier's original text kept in excerpt_as_returned.",
+  "method": "Claims V01-V39 were built from v2-candidate-sources.json (one claim per source-code pair) by the orchestrating session and split across four independent codebook-citation-verifier agents. Claims U01-U09 are candidates found by a separate proposer agent (U01-U07: sources for the unsourced codes Y8.4, F1.7, A1.3) or replacement leads (U08, U09) raised in verifier notes, and were checked by a fifth, fresh verifier. Verifiers saw only the claim fields and the code's construct, never the proposer's reasoning. Verdicts are recorded as returned; three over-length excerpts (V31, V36, V37) were trimmed by the orchestrator to a verbatim sub-span of 40 words or fewer, with the verifier's original text kept in excerpt_as_returned. After Severin ruled out early-childhood-specific sources for A1.3 (2026-09-24), U10-U11 (general worker well-being frameworks, first named by the proposer) and U12-U13 (general turnover definitions, from a second proposer search) were checked by two more fresh verifiers.",
   "claims": [
     {
       "claim_id": "V01",
@@ -916,6 +916,82 @@
         "excerpt": "five first-order latent factors representing the 'Five Cs' of PYD (competence, confidence, connection, character, and caring)",
         "corrected_cite_as": "",
         "notes": "Citation confirmed on SAGE and ERIC (EJ727016). Publisher page only names the Five Cs; the Table 1 definitions and 'a sixth C, contribution' were found only in an academia.edu copy (https://www.academia.edu/18630241/)."
+      }
+    },
+    {
+      "claim_id": "U10",
+      "source_id": "surgeon-general-2022-workplace-wellbeing",
+      "claim": {
+        "code": "A1.3",
+        "cite_as": "Office of the U.S. Surgeon General (2022). The U.S. Surgeon General's Framework for Workplace Mental Health & Well-Being. U.S. Department of Health and Human Services.",
+        "claimed_component": "Five Essentials for workplace mental health and well-being (e.g., Protection from Harm, Connection & Community, Work-Life Harmony, Mattering at Work, Opportunity for Growth), with worker well-being as the outcome",
+        "url": null,
+        "code_construct": "A1.3 Workforce Stability & Well-Being: staff retention and turnover; staff well-being (staff and volunteers of any youth-serving program)"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.hhs.gov/sites/default/files/workplace-mental-health-well-being.pdf",
+        "source_kind": "primary",
+        "excerpt": "Centered around the foundational principles of equity and the voices of all workers, it includes five Essentials and necessary components for addressing workplace mental health and well-being based on human needs.",
+        "corrected_cite_as": "",
+        "notes": "HHS PDF names the five Essentials exactly as claimed (Protection from Harm, Connection and Community, Work-Life Harmony, Mattering at Work, Opportunity for Growth), centered on worker voice and equity. General workplace framework: fits staff well-being; does not address retention or turnover."
+      }
+    },
+    {
+      "claim_id": "U11",
+      "source_id": "niosh-wellbq-2021",
+      "claim": {
+        "code": "A1.3",
+        "cite_as": "National Institute for Occupational Safety and Health (2021). NIOSH Worker Well-Being Questionnaire (WellBQ). DHHS (NIOSH) Publication No. 2021-110.",
+        "claimed_component": "WellBQ measures worker well-being across five domains (e.g., work evaluation and experience, workplace policies and culture, workplace physical environment and safety climate, health status, home/community/society)",
+        "url": null,
+        "code_construct": "A1.3 Workforce Stability & Well-Being: staff retention and turnover; staff well-being (staff and volunteers of any youth-serving program)"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://stacks.cdc.gov/view/cdc/105035",
+        "source_kind": "primary",
+        "excerpt": "The questionnaire comprises the five domains of worker well-being ... (1) work evaluation and experience; (2) workplace policies and culture; (3) workplace physical environment and safety climate; (4) health status; and (5) home, community, and society.",
+        "corrected_cite_as": "",
+        "notes": "CDC Stacks and the NIOSH TWH page confirm DHHS (NIOSH) Pub. No. 2021-110 (April 2021; revised June 2026) and the five domains. Fits staff well-being as a general worker measure."
+      }
+    },
+    {
+      "claim_id": "U12",
+      "source_id": "bls-jolts-definitions",
+      "claim": {
+        "code": "A1.3",
+        "cite_as": "U.S. Bureau of Labor Statistics. Job Openings and Labor Turnover Survey (JOLTS): Definitions.",
+        "claimed_component": "Definitions of separations and their components: quits (voluntary), layoffs and discharges, other separations",
+        "url": "https://www.bls.gov/jlt/jltdef.htm",
+        "code_construct": "A1.3 Workforce Stability & Well-Being: staff retention and turnover; staff well-being (staff and volunteers of any youth-serving program)"
+      },
+      "result": {
+        "verdict": "SUPPORTED",
+        "url_checked": "https://www.bls.gov/jlt/jltdef.htm",
+        "source_kind": "primary",
+        "excerpt": "JOLTS defines Separations as all employees separated from the payroll during the month.",
+        "corrected_cite_as": "",
+        "notes": "BLS 'Data Definitions' page defines total separations and components: Quits ('Employees who left voluntarily'), Layoffs and Discharges ('Involuntary separations initiated by the employer'), Other Separations. Fits only the retention/turnover part of A1.3; general payroll definitions, nothing on well-being or volunteers."
+      }
+    },
+    {
+      "claim_id": "U13",
+      "source_id": "iso-ts-30421-2021",
+      "claim": {
+        "code": "A1.3",
+        "cite_as": "International Organization for Standardization (2021). ISO/TS 30421:2021, Human resource management: Turnover and retention metrics.",
+        "claimed_component": "Scope: elements of workforce turnover and retention, with comparable turnover-rate and retention-rate measures",
+        "url": "https://www.iso.org/standard/75372.html",
+        "code_construct": "A1.3 Workforce Stability & Well-Being: staff retention and turnover; staff well-being (staff and volunteers of any youth-serving program)"
+      },
+      "result": {
+        "verdict": "PARTIAL",
+        "url_checked": "https://www.iso.org/standard/75372.html",
+        "source_kind": "primary",
+        "excerpt": "This document describes the elements of workforce turnover and retention and provides comparable measures for internal and external reporting.",
+        "corrected_cite_as": "",
+        "notes": "Exists; ISO/TC 260, May 2021; scope matches. The public abstract does not name turnover-rate or retention-rate measures and the full text is paywalled. Under review (stage 90.60, 2024-09-03). Fits only the retention/turnover part of A1.3."
       }
     }
   ]

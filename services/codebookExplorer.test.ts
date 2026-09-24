@@ -27,12 +27,13 @@ describe('codebook explorer data', () => {
 
   it('parses framework basis, SEL groups, examples and notes from the original codebook', () => {
     const data = buildExplorerCodebook(getCodebook('original'));
-    const d1 = data.domains[0];
+    const byNumber = (n: string) => data.domains.find(d => d.number === n)!;
+    const d1 = byNumber('1');
     expect(d1.frameworkBasis).toMatch(/Hidi/);
-    const sel = data.domains[2].subcategories;
+    const sel = byNumber('3').subcategories;
     expect(sel.find(c => c.number === '3.1.1')?.group).toBe('Self-Awareness');
     expect(sel.find(c => c.number === '3.5.1')?.group).toBe('Responsible Decision-Making');
-    const c115 = data.domains[10].subcategories.find(c => c.number === '11.5')!;
+    const c115 = byNumber('11').subcategories.find(c => c.number === '11.5')!;
     expect(c115.examples).toHaveLength(2);
     expect(c115.notes.join(' ')).toMatch(/10\.5/);
     expect(d1.subcategories.find(c => c.number === '1.5')?.frameworks[0]).toMatch(/National Core Arts/);
@@ -41,7 +42,7 @@ describe('codebook explorer data', () => {
   it('links registry sources to codes and keeps unregistered codebooks source-free', () => {
     const original = buildExplorerCodebook(getCodebook('original'));
     expect(original.hasRegistry).toBe(true);
-    const c321 = original.domains[2].subcategories.find(c => c.number === '3.2.1')!;
+    const c321 = original.domains.find(d => d.number === '3')!.subcategories.find(c => c.number === '3.2.1')!;
     expect(c321.sources.map(s => s.id)).toContain('casel-2020');
     expect(c321.sources.find(s => s.id === 'casel-2020')?.component).toMatch(/Managing one's emotions/);
     // Verified sources sort first.

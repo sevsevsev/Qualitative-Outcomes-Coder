@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CODEBOOK_LIST, allDomainCodes, allSubcategoryCodes } from './index.js';
+import { CODEBOOK_LIST, allDomainCodes, allSubcategoryCodes, subjectAreaMismatch } from './index.js';
 
 // Guards against the exact kind of drift that's easy to introduce by hand:
 // codebooks/*.ts carries two representations of the same content --
@@ -33,6 +33,14 @@ describe('codebook definitionsText / structured domains consistency', () => {
         expect(new Set(codes).size).toBe(codes.length);
       });
 
+      it('pins subcategories only to Subject Area values the codebook offers', () => {
+        const options = new Set(codebook.subjectAreaOptions ?? []);
+        const unknown = codebook.domains
+          .flatMap(d => d.subcategories)
+          .flatMap(s => (s.subjectAreas ?? []).filter(v => !options.has(v)).map(v => `${s.code}: ${v}`));
+        expect(unknown).toEqual([]);
+      });
+
       it('has a non-empty version string', () => {
         expect(codebook.version).toMatch(/^\d+\.\d+\.\d+$/);
       });
@@ -47,13 +55,15 @@ describe('original codebook v1.1.0 additions', () => {
     const domain = original.domains.find(d => d.code === 'Domain 11. Academic Learning & Achievement');
     expect(domain).toBeDefined();
     expect(domain!.subcategories.map(s => s.code)).toEqual([
-      '11.1 Literacy & Reading Skill',
+      '11.1 Literacy: Reading & Writing',
       '11.2 Numeracy & Mathematical Skill',
-      '11.3 General Content Knowledge & Conceptual Understanding',
+      '11.3 Knowledge & Skill in Other Academic Subjects',
       '11.4 English Language Proficiency & Multilingual Development',
       '11.5 Attendance, Chronic Absence & School Stability',
-      '11.6 Credit Accumulation, On-Track Status & Graduation',
+      '11.6 Grades, Credits, On-Track Status & Graduation',
       '11.7 School Readiness & Early Learning',
+      '11.8 Science, Technology & Engineering',
+      '11.9 Arts Learning & Performance',
     ]);
   });
 
@@ -82,7 +92,28 @@ describe('original codebook v1.1.0 additions', () => {
     expect(codes).toContain('10.5 Program Participation, Retention & Reach (Output Metric)');
   });
 
-  it('bumped the codebook version for the v1.1.1 prompt rules', () => {
-    expect(original.version).toBe('1.1.1');
+  it('bumped the codebook version for the v1.2.0 academic subject codes', () => {
+    expect(original.version).toBe('1.2.0');
+  });
+});
+
+describe('original codebook v1.2.0 academic subjects', () => {
+  const original = CODEBOOK_LIST.find(c => c.id === 'original')!;
+
+  it('lists Domain 11 first without renumbering it', () => {
+    expect(original.domains[0].code).toBe('Domain 11. Academic Learning & Achievement');
+    expect(original.definitionsText.trimStart().startsWith('Domain 11. Academic Learning & Achievement')).toBe(true);
+  });
+
+  it('flags a Subject Area that disagrees with a subject-pinned learning code', () => {
+    expect(subjectAreaMismatch(original, '11.2 Numeracy & Mathematical Skill', 'Mathematics')).toBeNull();
+    expect(subjectAreaMismatch(original, '11.2 Numeracy & Mathematical Skill', 'N/A / General')).toEqual(['Mathematics']);
+    expect(subjectAreaMismatch(original, '11.8 Science, Technology & Engineering', 'Engineering & Robotics')).toBeNull();
+    expect(subjectAreaMismatch(original, '11.9 Arts Learning & Performance', '')).toEqual(['Visual & Performing Arts']);
+  });
+
+  it('does not pin a subject on codes that apply to any subject', () => {
+    expect(subjectAreaMismatch(original, '11.6 Grades, Credits, On-Track Status & Graduation', 'Mathematics')).toBeNull();
+    expect(subjectAreaMismatch(original, '1.1 Joy & Emotional Wellness', 'N/A / General')).toBeNull();
   });
 });

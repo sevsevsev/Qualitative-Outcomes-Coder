@@ -108,7 +108,7 @@ education body. See CP-01-05 for the options.
 - Belief about succeeding in schoolwork → 4.4.
 - Broad purpose or self-worth not framed as confidence → 5.4.
 
-**Gold:** G-011, G-012, G-013
+**Gold:** G-011, G-012, G-013, G-069
 
 ### CF-005: Growth mindset · proposed amendment (CP-01-06)
 
@@ -149,7 +149,7 @@ source for Domain 4.
 - A demonstrated gain, or an attainment status → Domain 11.
 - Split the statement if both are present.
 
-**Gold:** G-018, G-019
+**Gold:** G-018, G-019, G-068
 
 ### CF-008: Family codes · active (+ citation fix CP-01-03)
 
@@ -178,16 +178,17 @@ source for Domain 4.
 
 **Gold:** G-023, G-024, G-025
 
-### CF-010: Content knowledge · active
+### CF-010: Content knowledge · proposed amendment (CP-04-01)
 
-**Codes:** 8.1 · 11.3
+**Codes:** 8.1 · 11.1 · 11.2 · 11.3 · 11.8 · 11.9
 
 **Rule:**
 
 - Content mastery explicitly framed around college/career readiness → 8.1.
-- Anything else → 11.3.
+- Anything else → the subject's Domain 11 code: literacy 11.1, math 11.2, science,
+  technology & engineering 11.8, the arts 11.9, any other academic subject 11.3.
 
-**Gold:** G-026, G-027
+**Gold:** G-026, G-027, G-061
 
 ### CF-011: Values vs. choices · active
 
@@ -332,22 +333,25 @@ cited source (the on-track indicator) covers credits and course failures only.
 - (a) Keep it in 11.6 and add a verified source for discipline as an
   education-status indicator.
 - (b) Route it to 7.7 when violence-driven and to 3.2.1 when behavior-driven.
-- (c) Create a new 11.8.
+- (c) Create a new Domain 11 code (11.8 is now taken by CP-04-01; this would be 11.10).
 
 **Gold:** G-048, G-060
 
-### CF-021: Technical or physical skill in arts and sports · open (backlog B-04)
+### CF-021: Technical or physical skill in arts and sports · arts resolved (CP-04-01); sports open (backlog B-04)
 
-**Codes:** 11.3 · 1.4 · 7.1
+**Codes:** 11.9 · 11.3 · 1.4 · 7.1
 
-**Problem:** The live run coded "technical proficiency on their chosen instrument" to
-11.3 at high confidence. Sport technique has no code; it gets forced into 7.1, which
-is about activity and nutrition.
+**Resolved for the arts:** a technique or knowledge gain in an art form ("technical
+proficiency on their chosen instrument") → 11.9, anchored in the National Core Arts
+Standards. See CF-026 for 11.9 vs. 1.4/1.5.
+
+**Still open for sports (B-04):** sport technique has no dedicated code.
 
 **Options:**
 
-- (a) State in 11.3's definition that artistic and athletic technique counts as
-  content/skill learning.
+- (a) Code it to 11.3 with Subject Area "Health & Physical Education". ESSA's
+  well-rounded-education definition (20 U.S.C. 7801(52)), now 11.3's anchor, lists
+  physical education.
 - (b) Widen 7.1 to include motor skill. This needs a verified SHAPE America source,
   which is not yet in the registry.
 
@@ -375,14 +379,53 @@ it uncoded.
 
 ### CF-024: Digital · proposed clarification (CP-01-06)
 
-**Codes:** 6.5 · 9.1 · 11.3 · 8.6
+**Codes:** 6.5 · 9.1 · 11.8 · 8.6
 
 **Rule:**
 
 - Safe, ethical online behavior → 6.5.
 - Having a device or connectivity → 9.1.
-- Coding or digital skills learned in general enrichment → 11.3 (subject: Computer
-  Science).
+- Coding or digital skills learned in general enrichment → 11.8 (subject: Computer
+  Science & Technology). Amended by CP-04-01; was 11.3.
 - An industry certification → 8.6.
 
-**Gold:** G-054, G-055
+**Gold:** G-054, G-055, G-070
+
+### CF-025: Subject learning vs. grades and general performance · proposed (CP-04-02)
+
+**Codes:** 11.1 · 11.2 · 11.3 · 11.8 · 11.9 · 11.6
+
+**Rule:**
+
+- A learning gain, test score, or proficiency level in a **named subject** → that
+  subject's code.
+- Grades, GPA, course passing or failure, and credits → 11.6, even when a subject is
+  named. Record the subject in Subject Area.
+- "Academic performance/achievement", grade-level proficiency, or test scores with
+  **no subject named** → 11.6.
+
+**Rationale:** Grades and GPA are the on-track indicator's status measures
+(Allensworth & Easton), not evidence of learning in one subject. ESSA's standards
+and assessments are defined per subject (20 U.S.C. 6311(b)(1)(C)).
+
+**Gold:** G-019, G-062, G-063, G-064, G-065
+
+### CF-026: Arts learning vs. creative expression and performance · proposed (CP-04-01)
+
+**Codes:** 11.9 · 1.4 · 1.5
+
+**Rule:**
+
+- A stated **skill or knowledge gain** in an art form (technique, vocabulary, notation,
+  the discipline's history or concepts) → 11.9.
+- Self-expression through making something, with no stated skill gain → 1.4.
+- Presenting finished work to an audience, or responding to art as an experience →
+  1.5.
+- If a statement names both a skill gain and a performance, split it.
+
+**Rationale:** The National Core Arts Standards anchor all three. 11.9 uses them as a
+content standard for learning in the discipline. 1.4 and 1.5 use the Creating and
+Presenting/Responding processes as engagement and expression (Domain 1).
+
+**Gold:** G-049, G-066, G-067, G-071
+

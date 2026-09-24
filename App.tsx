@@ -5,6 +5,11 @@ import { CODEBOOK_LIST, DEFAULT_CODEBOOK_ID } from './codebooks/index.js';
 import { loadReviewState, clearReviewState, SavedReviewState } from './services/reviewStorage.js';
 import ReviewDashboard from './components/ReviewDashboard.js';
 import ProcessingStatus from './components/ProcessingStatus.js';
+import CodebookExplorer, { parseExplorerRoute } from './components/CodebookExplorer.js';
+
+// Screens are addressed by URL hash so the explorer can be linked to
+// directly: "#/codebook/<codebookId>/<code>". Anything else is the coder.
+const readHash = () => window.location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
 
 const App: React.FC = () => {
   const [inputText, setInputText] = useState<string>('');
@@ -21,6 +26,14 @@ const App: React.FC = () => {
   const [logs, setLogs] = useState<string[]>([]);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const [hashPath, setHashPath] = useState<string[]>(readHash);
+  useEffect(() => {
+    const onHash = () => setHashPath(readHash());
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
+  const view: 'coder' | 'codebook' = hashPath[0] === 'codebook' ? 'codebook' : 'coder';
 
   // Offer to resume an autosaved review session (see services/reviewStorage)
   // if one exists from before a refresh, crash, or closed tab.
@@ -128,17 +141,39 @@ const App: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <span className="font-bold text-xl text-slate-800 tracking-tight">QualCoder AI</span>
+              <span className="hidden sm:inline font-bold text-xl text-slate-800 tracking-tight">QualCoder AI</span>
             </div>
-            <div className="flex items-center space-x-4">
-              {/* Optional: Add user profile or settings here later */}
+            <div className="flex items-center gap-1 text-sm">
+              {([
+                ['coder', 'Code outcomes', '#/'],
+                ['codebook', 'Codebook', `#/codebook/${codebook}`],
+              ] as const).map(([id, label, href]) => (
+                <a
+                  key={id}
+                  href={href}
+                  aria-current={view === id ? 'page' : undefined}
+                  className={`whitespace-nowrap px-3 py-2 rounded-lg font-medium transition-colors ${
+                    view === id ? 'bg-slate-100 text-slate-900' : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50'
+                  }`}
+                >
+                  {label}
+                </a>
+              ))}
             </div>
           </div>
         </div>
       </nav>
 
       {/* Main Content: Changed max-w-7xl to w-full to utilize full screen width */}
-      <main className="w-full px-4 sm:px-6 lg:px-8 py-10 flex flex-col">
+      {view === 'codebook' && (
+        <div className="w-full px-4 sm:px-6 lg:px-8 py-10">
+          <CodebookExplorer route={parseExplorerRoute(hashPath.slice(1))} />
+        </div>
+      )}
+
+      {/* The coder stays mounted while the explorer is open so an in-progress
+          review isn't lost by switching screens. */}
+      <main className={`w-full px-4 sm:px-6 lg:px-8 py-10 flex-col ${view === 'coder' ? 'flex' : 'hidden'}`}>
 
         {/* Restorable Session Banner */}
         {restorableSession && !batchResult && status !== 'analyzing' && (

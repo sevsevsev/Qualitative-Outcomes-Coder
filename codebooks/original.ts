@@ -30,8 +30,17 @@
 // unspecified "academic performance" move to 11.6. Domain 11 is listed
 // first, keeping its number, because academic outcomes are the top policy
 // priority for school and district users.
+//
+// v2.0.0 (CP-04-08) renumbers every domain to match its place in the list:
+// Academic Learning & Achievement becomes Domain 1, old Domains 1-10 each
+// move up one (old 1 -> 2, ..., old 10 -> 11), and Domain 12 is unchanged.
+// Labels are otherwise identical. The paragraphs above use the old numbers.
+// The full map is codebook-refinement/renumbering/v1.2.0-to-v2.0.0.csv;
+// exports coded under v1.2.0 or earlier re-import through it (see
+// originalV1Numbering.ts).
 
 import { Codebook } from './types.js';
+import { RENUMBERED_IN_VERSION, V1_2_0_CODE_NUMBERS, V1_2_0_DOMAIN_LABELS, V1_2_0_SUBCATEGORY_LABELS } from './originalV1Numbering.js';
 
 export const SUBJECT_AREA_OPTIONS = [
   "N/A / General",
@@ -68,7 +77,7 @@ Domain 1. Academic Learning & Achievement
 Framework Basis: ESSA (2015) State academic standards, 20 U.S.C. 6311(b)(1)(C) (reading or language arts, mathematics, science) and "well-rounded education", 20 U.S.C. 7801(52); National Reading Panel & Common Core writing anchors (Literacy); NGSS & CSTA (Science, Technology & Engineering); National Core Arts Standards (Arts); UChicago Consortium On-Track Indicator (Allensworth & Easton); ESSA graduation-rate indicator, 20 U.S.C. 6311(c)(4)(B); Attendance Works; WIDA English Language Development Standards; Head Start Early Learning Outcomes Framework (1.7)
 (Note: This domain covers DEMONSTRATED learning gains and enrollment/completion status. It is distinct from Domain 5, which covers behaviors and beliefs ABOUT learning, and from 9.1, which is scoped specifically to college/career-readiness content mastery.)
 (Note: Learning codes are split by SUBJECT: 1.1 literacy, 1.2 math, 1.8 science/technology/engineering, 1.9 the arts, and 1.3 every other academic subject. Grades, GPA, credits and "academic performance" with no subject named are a status, not a subject -- use 1.6.)
-(Note: This domain is listed first because academic outcomes are the top priority for many school and district users. The order of domains in this codebook carries no weight when choosing a code.)
+(Note: This domain is numbered first because academic outcomes are the top priority for many school and district users. The numbering and order of domains in this codebook carry no weight when choosing a code.)
 1.1 Literacy: Reading & Writing
    - Definition: Demonstrated growth in reading skill (phonemic awareness, phonics, fluency, vocabulary, comprehension, reading level) or in writing and composition (planning, drafting and revising written work in any genre).
    - Source Framework: Report of the National Reading Panel (NICHD, 2000): alphabetics, fluency, comprehension; Common Core State Standards, College and Career Readiness Anchor Standards for Writing; ESSA State standards for reading or language arts, 20 U.S.C. 6311(b)(1)(C).
@@ -244,7 +253,7 @@ Framework Basis: CASEL (Collaborative for Academic, Social, and Emotional Learni
    - Example: "Students will avoid situations that put their physical or emotional safety at risk."
 4.5.5 Contributions to class/program/community wellbeing
    - Definition: Students take small, daily actions to maintain or improve their immediate environment (classroom, program space).
-   - Note: For larger community service projects or volunteering, use 7.2 (formerly 9.3).
+   - Note: For larger community service projects or volunteering, use 7.2.
    - Example: "Students will help clean up the classroom and assist teachers with tasks."
 
 Domain 5. Academic Engagement & Habits
@@ -547,12 +556,12 @@ CRITICAL for Formatting:
 - Ensure the 'primary_domain' string exactly matches the codebook headers (e.g. "Domain 2. Joy, Interest & Motivation in Learning").
 - Ensure the 'primary_subcategory' string exactly matches the codebook items (e.g. "2.1 Joy & Emotional Wellness").
 - This codebook has 12 domains (not 10) -- Domain 1 (Academic Learning & Achievement) and Domain 12 (Family Strengthening & Basic Needs) are full domains, not subcategories of Domain 5 or Domain 3. Do not skip them.
-- Domain 1 is listed first for readability. The order of domains carries no weight when choosing a code.
+- Domain numbers and their order carry no weight when choosing a code.
 `;
 
 export const originalCodebook: Codebook = {
   id: 'original',
-  version: '1.2.0',
+  version: '2.0.0',
   label: 'Original (Youth Development)',
   rulesText,
   definitionsText,
@@ -563,12 +572,17 @@ export const originalCodebook: Codebook = {
   },
   subjectAreaOptions: SUBJECT_AREA_OPTIONS,
   targetPopulationOptions: TARGET_POPULATION_OPTIONS,
-  // v1.1.1 labels renamed or split in v1.2.0 (CP-04-01, CP-04-02). An old
-  // 11.3 row goes to the new code for its subject; any other subject keeps
-  // 11.3 and the review table flags a subject it doesn't cover.
+  // Labels from older exports. v1.2.0 and earlier used the old domain
+  // numbers (CP-04-08); those map one-to-one by label. The three v1.1.1
+  // labels below were renamed or split in v1.2.0 (CP-04-01, CP-04-02): an
+  // old 11.3 row goes to the new code for its subject, and any other subject
+  // lands in 1.3, where the review table flags a subject it doesn't cover.
+  legacyDomains: V1_2_0_DOMAIN_LABELS.map(([from, to]) => ({ from, to })),
+  legacyCodeNumbers: { before: RENUMBERED_IN_VERSION, codes: V1_2_0_CODE_NUMBERS },
   legacySubcategories: [
-    { from: "11.1 Literacy & Reading Skill", to: "11.1 Literacy: Reading & Writing" },
-    { from: "11.6 Credit Accumulation, On-Track Status & Graduation", to: "11.6 Grades, Credits, On-Track Status & Graduation" },
+    ...V1_2_0_SUBCATEGORY_LABELS.map(([from, to]) => ({ from, to })),
+    { from: "11.1 Literacy & Reading Skill", to: "1.1 Literacy: Reading & Writing" },
+    { from: "11.6 Credit Accumulation, On-Track Status & Graduation", to: "1.6 Grades, Credits, On-Track Status & Graduation" },
     {
       from: "11.3 General Content Knowledge & Conceptual Understanding",
       to: "1.3 Knowledge & Skill in Other Academic Subjects",

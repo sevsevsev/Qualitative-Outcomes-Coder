@@ -1,5 +1,7 @@
 # CP-01-05: Add 9.9 Financial Capability
 
+> Code numbers in this proposal were updated to the v2.0.0 numbering by CP-04-08 (mechanical; see `renumbering/v1.2.0-to-v2.0.0.csv`).
+
 | Field | Value |
 |---|---|
 | Type | ADD_CODE |

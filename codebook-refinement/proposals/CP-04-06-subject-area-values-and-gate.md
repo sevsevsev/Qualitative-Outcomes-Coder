@@ -1,5 +1,7 @@
 # CP-04-06: Clean up Subject Area values, and add the Subject Area gold column that could reopen a subject-neutral design
 
+> Code numbers in this proposal were updated to the v2.0.0 numbering by CP-04-08 (mechanical; see `renumbering/v1.2.0-to-v2.0.0.csv`).
+
 | Field | Value |
 |---|---|
 | Type | RENAME |

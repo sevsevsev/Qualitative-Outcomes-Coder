@@ -1,5 +1,7 @@
 # CP-01-09: Exclusionary discipline sits in 1.6 without a supporting source
 
+> Code numbers in this proposal were updated to the v2.0.0 numbering by CP-04-08 (mechanical; see `renumbering/v1.2.0-to-v2.0.0.csv`).
+
 | Field | Value |
 |---|---|
 | Type | DEFINITION_SCOPE (needs a human decision) |
@@ -29,7 +31,7 @@ restorative justice, and mentoring programs, so they need a sourced home.
   referrals *for disruptive behavior* → 4.2.1. This drops "exclusionary discipline"
   from 1.6. Downside: suspension is an administrative *status*, often reported
   without a stated cause.
-- **(c) Add a new 1.8 "School Discipline & Exclusion"**, sourced to CRDC if it
+- **(c) Add a new 1.10 "School Discipline & Exclusion"** (1.8 is now taken by CP-04-01), sourced to CRDC if it
   verifies. Cost: +1 enum.
 
 **Recommendation: (a)**, if CRDC verifies. Discipline data is usually reported as a

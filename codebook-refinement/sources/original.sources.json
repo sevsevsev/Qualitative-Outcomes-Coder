@@ -2,6 +2,7 @@
   "codebook_id": "original",
   "codebook_version_reviewed": "1.2.0",
   "last_reviewed": "2026-09-23 (cycle-01b verification)",
+  "codes_renumbered": "2026-09-24: code numbers moved to the v2.0.0 numbering by CP-04-08 (mechanical; see renumbering/v1.2.0-to-v2.0.0.csv). Excerpts and components are unchanged.",
   "status_legend": {
     "verified": "Fetched from `url` during a recorded run. `excerpt` is verbatim and supports the listed codes/components.",
     "located": "The source is confirmed to exist at `url` (title/publisher confirmed), but no supporting excerpt has been recorded yet. Counts as grounded for coverage, but is queued for verification.",

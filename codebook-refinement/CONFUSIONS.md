@@ -6,12 +6,16 @@ entries. If they disagree, this file wins.
 
 **Status**
 
-- **active** — already in codebook v1.1.1.
+- **active** — already in the live codebook.
 - **proposed** — waiting on the named CP.
 - **open** — needs a human decision; options are listed.
 
 **Gold** IDs point to rows in `gold/original.gold.csv`. Rows are `proposed` until a
 human adjudicates them.
+
+**Code numbers** follow v2.0.0, where Academic Learning & Achievement is Domain 1
+(CP-04-08). Entries written earlier were renumbered by script; the old-to-new map is
+`renumbering/v1.2.0-to-v2.0.0.csv`.
 
 ---
 

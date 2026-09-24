@@ -137,7 +137,7 @@ describe('normalizeImportedCoding (original codebook)', () => {
 });
 
 describe('normalizeImportedCoding (v1.1.1 labels renamed or split in v1.2.0)', () => {
-  const D11 = 'Domain 1. Academic Learning & Achievement';
+  const D11 = 'Domain 11. Academic Learning & Achievement';
   const legacy = (sub: string, subject: string) =>
     normalizeImportedCoding(
       { primary_domain: D11, primary_subcategory: sub, primary_confidence: 'high', primary_subject_area: subject, uncoded: false },
@@ -145,13 +145,13 @@ describe('normalizeImportedCoding (v1.1.1 labels renamed or split in v1.2.0)', (
       'original'
     ).primary_subcategory;
 
-  it('maps the old 1.1 and 1.6 labels to their renamed codes', () => {
-    expect(legacy('1.1 Literacy & Reading Skill', 'English Language Arts (ELA) & Literacy')).toBe('1.1 Literacy: Reading & Writing');
-    expect(legacy('1.6 Credit Accumulation, On-Track Status & Graduation', 'N/A / General')).toBe('1.6 Grades, Credits, On-Track Status & Graduation');
+  it('maps the old 11.1 and 11.6 labels to their renamed codes', () => {
+    expect(legacy('11.1 Literacy & Reading Skill', 'English Language Arts (ELA) & Literacy')).toBe('1.1 Literacy: Reading & Writing');
+    expect(legacy('11.6 Credit Accumulation, On-Track Status & Graduation', 'N/A / General')).toBe('1.6 Grades, Credits, On-Track Status & Graduation');
   });
 
-  it('routes an old 1.3 row to the new code for its subject', () => {
-    const old113 = '1.3 General Content Knowledge & Conceptual Understanding';
+  it('routes an old 11.3 row to the new code for its subject', () => {
+    const old113 = '11.3 General Content Knowledge & Conceptual Understanding';
     expect(legacy(old113, 'Science (Natural/Physical)')).toBe('1.8 Science, Technology & Engineering');
     expect(legacy(old113, 'STEM (Integrated/Cross-disciplinary)')).toBe('1.8 Science, Technology & Engineering');
     expect(legacy(old113, 'Visual & Performing Arts')).toBe('1.9 Arts Learning & Performance');
@@ -183,30 +183,30 @@ describe('normalizeImportedCoding (accelerate_philly codebook)', () => {
 
 // Real malformed values from a 2,081-row gemini-3.8-flash export (2026-09-23).
 describe('normalizeSecondarySubcategory', () => {
-  const domain5 = 'Domain 6. Positive Youth Development (PYD) & Assets';
-  const domain6 = 'Domain 7. Civic Engagement & Community';
+  const pyd = 'Domain 6. Positive Youth Development (PYD) & Assets';
+  const civic = 'Domain 7. Civic Engagement & Community';
 
   it('keeps a canonical subcategory unchanged', () => {
-    expect(normalizeSecondarySubcategory('6.4 Positive Identity', domain5, original)).toBe('6.4 Positive Identity');
+    expect(normalizeSecondarySubcategory('6.4 Positive Identity', pyd, original)).toBe('6.4 Positive Identity');
   });
 
   it('strips a confidence level glued onto the label', () => {
-    expect(normalizeSecondarySubcategory('6.4 Positive Identity-medium', domain5, original)).toBe('6.4 Positive Identity');
+    expect(normalizeSecondarySubcategory('6.4 Positive Identity-medium', pyd, original)).toBe('6.4 Positive Identity');
   });
 
   it('recovers the code from a runaway generation', () => {
     const runaway = '7.3 Youth Voice & Leadership Juror Alternative if Youth-Led Club ' + 'context mapping '.repeat(20000);
-    expect(normalizeSecondarySubcategory(runaway, domain6, original)).toBe('7.3 Youth Voice & Leadership');
+    expect(normalizeSecondarySubcategory(runaway, civic, original)).toBe('7.3 Youth Voice & Leadership');
   });
 
   it('matches the whole code, not a prefix of a longer one', () => {
-    const domain3 = 'Domain 4. Social & Emotional Learning (CASEL-aligned)';
-    expect(normalizeSecondarySubcategory('4.1 Self-Awareness', domain3, original)).toBe('');
+    const sel = 'Domain 4. Social & Emotional Learning (CASEL-aligned)';
+    expect(normalizeSecondarySubcategory('4.1 Self-Awareness', sel, original)).toBe('');
   });
 
   it('returns empty when the code belongs to a different domain or is missing', () => {
-    expect(normalizeSecondarySubcategory('7.3 Youth Voice & Leadership', domain5, original)).toBe('');
-    expect(normalizeSecondarySubcategory('', domain5, original)).toBe('');
+    expect(normalizeSecondarySubcategory('7.3 Youth Voice & Leadership', pyd, original)).toBe('');
+    expect(normalizeSecondarySubcategory('', pyd, original)).toBe('');
     expect(normalizeSecondarySubcategory('6.4 Positive Identity', '', original)).toBe('');
   });
 });

@@ -92,15 +92,15 @@ describe('original codebook v1.1.0 additions', () => {
     expect(codes).toContain('11.5 Program Participation, Retention & Reach (Output Metric)');
   });
 
-  it('bumped the codebook version for the v1.2.0 academic subject codes', () => {
-    expect(original.version).toBe('1.2.0');
+  it('bumped the codebook version to 2.0.0 for the domain renumbering', () => {
+    expect(original.version).toBe('2.0.0');
   });
 });
 
 describe('original codebook v1.2.0 academic subjects', () => {
   const original = CODEBOOK_LIST.find(c => c.id === 'original')!;
 
-  it('lists Domain 1 first without renumbering it', () => {
+  it('numbers Academic Learning & Achievement as Domain 1 and lists it first', () => {
     expect(original.domains[0].code).toBe('Domain 1. Academic Learning & Achievement');
     expect(original.definitionsText.trimStart().startsWith('Domain 1. Academic Learning & Achievement')).toBe(true);
   });

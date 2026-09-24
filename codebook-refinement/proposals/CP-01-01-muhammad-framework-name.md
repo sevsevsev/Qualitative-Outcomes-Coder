@@ -1,5 +1,7 @@
 # CP-01-01: Correct the name of Gholdy Muhammad's framework
 
+> Code numbers in this proposal were updated to the v2.0.0 numbering by CP-04-08 (mechanical; see `renumbering/v1.2.0-to-v2.0.0.csv`).
+
 | Field | Value |
 |---|---|
 | Type | CITATION_FIX |

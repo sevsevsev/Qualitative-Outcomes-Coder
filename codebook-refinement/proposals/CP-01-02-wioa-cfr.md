@@ -1,5 +1,7 @@
 # CP-01-02: Fix the WIOA regulation citation on 9.8
 
+> Code numbers in this proposal were updated to the v2.0.0 numbering by CP-04-08 (mechanical; see `renumbering/v1.2.0-to-v2.0.0.csv`).
+
 | Field | Value |
 |---|---|
 | Type | CITATION_FIX |

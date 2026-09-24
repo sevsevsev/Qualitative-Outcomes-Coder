@@ -1,5 +1,7 @@
 # CP-01-07: Fix the 6.1 definition, add a safety tie-breaker, and add a citation for 3.2
 
+> Code numbers in this proposal were updated to the v2.0.0 numbering by CP-04-08 (mechanical; see `renumbering/v1.2.0-to-v2.0.0.csv`).
+
 | Field | Value |
 |---|---|
 | Type | DEFINITION_SCOPE (6.1 definition text), plus a tie-breaker and a citation added to 3.2 |

@@ -1,5 +1,7 @@
 # CP-01-04: Re-cite 2.3 and add 2.6 Sustained & Individual Interest
 
+> Code numbers in this proposal were updated to the v2.0.0 numbering by CP-04-08 (mechanical; see `renumbering/v1.2.0-to-v2.0.0.csv`).
+
 | Field | Value |
 |---|---|
 | Type | ADD_CODE (with the 2.3 citation fix it depends on) |

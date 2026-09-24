@@ -109,7 +109,7 @@ describe('gold set (STANDARDS S4.3)', () => {
   });
 });
 
-describe('cycle-02 gold set (v1.1.1 + v2 draft codes)', () => {
+describe('cycle-02 gold set (v1 codes in current numbering + v2 draft codes)', () => {
   const rows = parseCsvRecords(fs.readFileSync(path.join(here, 'gold/gold-cycle02.csv'), 'utf-8'));
   const v2Codes = new Set(
     [...fs.readFileSync(path.join(here, 'v2/codebook-v2-draft.md'), 'utf-8').matchAll(/^\| ((?:Y|F|A)\d+\.\d+) /gm)].map(m => m[1])
@@ -120,7 +120,7 @@ describe('cycle-02 gold set (v1.1.1 + v2 draft codes)', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
-  it('uses only real v1.1.1 codes and v2-draft codes', () => {
+  it('uses only live v1 codes and v2-draft codes', () => {
     for (const r of rows) {
       if (r.v1_gold !== 'none') expect(liveCodes.has(r.v1_gold), `${r.gold_id} v1 ${r.v1_gold}`).toBe(true);
       if (r.v2_gold !== 'none') expect(v2Codes.has(r.v2_gold), `${r.gold_id} v2 ${r.v2_gold}`).toBe(true);

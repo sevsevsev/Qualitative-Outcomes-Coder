@@ -6,7 +6,7 @@
 | Codes touched | Domain 11 (position only; no code renumbered) |
 | Version bump | PATCH |
 | Requirement served | usability (Severin's request, 2026-09-24) |
-| Status | ready-to-test (applied on branch `claude/project-thread-mpnj0j`) |
+| Status | applied in v1.2.0 (PR #9, merged 2026-09-24). Codes here use the pre-2.0.0 numbering; see CP-04-08 |
 | Enum cost | +0 |
 
 ## Problem

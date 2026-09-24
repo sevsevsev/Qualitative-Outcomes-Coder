@@ -118,10 +118,10 @@ These items stand in the way:
    - **F1.7:** cite MIECHV and Healthy People 2030 MICH-14/15.
    - **A1.3:** cite the Surgeon General framework or NIOSH WellBQ for well-being, and
      BLS JOLTS for turnover. Severin ruled out the Head Start sources on 2026-09-24.
-   - **F1.7:** MIECHV is a home-visiting (early childhood) measure set. It is kept for
-     now because breastfeeding and safe sleep are infant outcomes. If it is dropped,
-     the Healthy People 2030 objectives still cover those two, but well-child visits
-     lose their source.
+   - **F1.7:** keep MIECHV. It is a home-visiting (early childhood) measure set, but
+     Severin decided on 2026-09-24 to keep it, because some parenting programs state
+     these outcomes. He also noted that F1.7 is far from what most programs name as
+     outcomes, so phase 2 should check whether it is used often enough to keep.
    - **Y7.10:** extension.
 
 ## Corrections the v2 draft needs (through a CP, not applied here)

@@ -359,7 +359,7 @@ Framework Basis: CDC WSCC (Physical), Dual Continua Model (Mental Health), SAMHS
    - Example: "Youth will reduce recidivism and avoid re-arrest within 12 months of program completion." OR "Youth will successfully complete probation requirements."
 
 Domain 9. College & Career Readiness
-Framework Basis: David Conley’s "Four Keys" & Perkins V (CTE Framework); National Student Clearinghouse Research Center & WIOA (9.7-9.8)
+Framework Basis: David Conley’s "Four Keys" & Perkins V (CTE Framework); National Student Clearinghouse Research Center & WIOA (9.7-9.8); CFPB Youth Financial Capability Building Blocks & National Standards for Personal Financial Education (9.9)
 (Note: Conley's fourth key, "Key Learning Skills and Techniques," is deliberately routed to Domain 5 (5.2, 5.3) and Domain 4 (4.2.3, 4.2.4) rather than duplicated here.)
 9.1 Key Content Knowledge
    - Definition: Mastery of core subjects EXPLICITLY FRAMED around post-secondary/college readiness.
@@ -391,6 +391,11 @@ Framework Basis: David Conley’s "Four Keys" & Perkins V (CTE Framework); Natio
    - Definition: Outcomes related to obtaining employment, retaining a job, or wage/earnings gains.
    - Source Framework: WIOA Title I Youth Primary Indicators of Performance (34 CFR 463.155).
    - Example: "Youth will obtain and retain employment for at least 6 months after program completion."
+9.9 Financial Capability
+   - Definition: Youth financial knowledge, habits, and decision-making -- budgeting, saving, banking, understanding pay and taxes, using credit responsibly, and managing financial risk.
+   - Source Framework: Consumer Financial Protection Bureau, "Building Blocks to Help Youth Achieve Financial Capability" (2016) -- Financial Habits and Norms; Financial Knowledge and Decision-making Skills. Jump$tart Coalition & Council for Economic Education, National Standards for Personal Financial Education (2021) -- Earning Income, Spending, Saving, Investing, Managing Credit, Managing Risk.
+   - Note: This is the YOUTH's own financial capability. For household income/benefits or caregiver financial coaching, use 12.5. For a youth's employment or earnings, use 9.8. For arithmetic proficiency that merely uses money as context, use 1.2.
+   - Example: "Youth will create and follow a monthly budget." OR "Participants will open a savings account and make regular deposits."
 
 Domain 10. Access & Equity
 Framework Basis: Opportunity-to-Learn (OTL) Standards
@@ -566,6 +571,11 @@ SPECIFIC CODING RULES & TIE-BREAKERS:
    - If the statement names ONLY economic mobility for the young person, with no concrete lever, use 9.8. If it is about the family's or household's economic standing, use 12.5.
    - "Social mobility" framed as wider connections, networks or access to people who open doors -> 3.6.
 
+9. FINANCIAL CAPABILITY (9.9) vs. HOUSEHOLD ECONOMIC STABILITY (12.5) vs. EMPLOYMENT (9.8):
+   - 9.9: the youth's own financial knowledge, habits, or decisions.
+   - 12.5: household/caregiver income, benefits, or financial coaching for adults.
+   - 9.8: the youth has a job or earns wages.
+
 CRITICAL for Formatting:
 - Ensure the 'primary_domain' string exactly matches the codebook headers (e.g. "Domain 2. Joy, Interest & Motivation in Learning").
 - Ensure the 'primary_subcategory' string exactly matches the codebook items (e.g. "2.1 Joy & Emotional Wellness").
@@ -575,7 +585,7 @@ CRITICAL for Formatting:
 
 export const originalCodebook: Codebook = {
   id: 'original',
-  version: '2.1.0',
+  version: '2.2.0',
   label: 'Youth Outcomes Codebook',
   // The prompt keeps the old name so renaming the codebook (2026-09-24)
   // did not change what the model is sent.
@@ -846,8 +856,8 @@ export const originalCodebook: Codebook = {
     },
     {
       code: "Domain 9. College & Career Readiness",
-      hint: "Readiness for and results after high school, EXPLICITLY framed around college or career. General learning gains not framed that way -> Domain 1; general SEL skills outside a work context -> Domain 4.",
-      description: "Outcomes about readiness for life after high school and what follows: college- and career-framed knowledge and thinking skills, navigating applications and financial aid, career exploration, employability and technical skills, and postsecondary enrollment, completion and employment.",
+      hint: "Readiness for and results after high school, EXPLICITLY framed around college or career, plus the youth's own financial capability (9.9). General learning gains not framed that way -> Domain 1; general SEL skills outside a work context -> Domain 4.",
+      description: "Outcomes about readiness for life after high school and what follows: college- and career-framed knowledge and thinking skills, navigating applications and financial aid, career exploration, employability and technical skills, managing their own money, and postsecondary enrollment, completion and employment.",
       subcategories: [
         {
           code: "9.1 Key Content Knowledge",
@@ -874,6 +884,10 @@ export const originalCodebook: Codebook = {
         {
           code: "9.8 Employment Placement, Retention & Earnings",
           hint: "vs 9.6: use 9.8 for actual employment status/earnings, not training/certification completion.",
+        },
+        {
+          code: "9.9 Financial Capability",
+          hint: "The YOUTH's own money knowledge/habits (budgeting, saving, banking, credit). Household income/benefits -> 12.5. A youth's job/earnings -> 9.8. Math proficiency with money as context -> 1.2.",
         },
       ],
     },
@@ -942,8 +956,6 @@ export const originalCodebook: Codebook = {
 //     (IDEA Part B Indicators 5/13/14; Wehmeyer self-determination model).
 //   - Language ACCESS for families (interpretation/translation) as a
 //     Domain 10 subcategory, distinct from 1.4's youth ELP growth.
-//   - Financial capability & asset building for youth (CFPB Building
-//     Blocks) -- likely a Domain 9 subcategory.
 //   - Mentoring match quality/duration (MENTOR Elements of Effective
 //     Practice) under Domain 11. (Social capital / expanded networks was
 //     picked up as 3.6 by CP-07-02.)

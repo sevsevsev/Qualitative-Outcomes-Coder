@@ -45,9 +45,9 @@ order. Stop at the first one that decides it.
 
 ---
 
-### CF-001: Financial literacy and financial capability · proposed (CP-01-05)
+### CF-001: Financial literacy and financial capability · active
 
-**Codes:** proposed **9.9 Financial Capability** · 12.5 · 9.8 · 1.2 · 4.2.x
+**Codes:** **9.9 Financial Capability** · 12.5 · 9.8 · 1.2 · 4.2.x
 
 **Rule:**
 

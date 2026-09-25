@@ -291,10 +291,6 @@ Routing table. Adding a new code for any of these would need its own CP.
 - Actual *incidence* of fights, bullying, or victimization goes down → 8.7.
 - Psychological safety in a trauma-recovery context → 8.3.
 
-**Note:** The 6.1 definition today talks about mattering, voice, and control but not
-safety, even though its label and example are about safety. CP-01-07 fixes the
-definition.
-
 **Gold:** G-042, G-043, G-044
 
 ### CF-018: Whose stability? · proposed (CP-01-11)

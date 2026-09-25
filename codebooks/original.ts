@@ -290,7 +290,7 @@ Framework Basis: UChicago Consortium "Academic Mindsets and Behaviors"
 Domain 6. Positive Youth Development (PYD) & Assets
 Framework Basis: Search Institute’s 40 Developmental Assets
 6.1 Empowerment & Safety
-   - Definition: Youth feel a sense of mattering, voice, and control over their own environment (a felt, individual state).
+   - Definition: Youth feel safe (at home, at school, in the neighborhood) and feel valued and useful in their community -- a felt, individual state.
    - Note: For a student's sense of belonging specifically to the school/program, use 3.1 instead. For empowerment expressed through civic voice/influence, use 7.3.
    - Example: "Youth will feel safe in their neighborhood."
 6.2 Positive Values
@@ -590,7 +590,7 @@ CRITICAL for Formatting:
 
 export const originalCodebook: Codebook = {
   id: 'original',
-  version: '2.4.0',
+  version: '2.5.0',
   label: 'Youth Outcomes Codebook',
   // The prompt keeps the old name so renaming the codebook (2026-09-24)
   // did not change what the model is sent.

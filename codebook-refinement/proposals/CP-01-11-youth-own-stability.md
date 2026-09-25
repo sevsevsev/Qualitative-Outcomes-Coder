@@ -211,4 +211,16 @@ First version (codebook 2.3.0, two preview runs, scored against baseline-2.2.0 w
 - Regressed in both runs: S017 (gold 7.1, alt 12.1 -> 1.5 / 10.2). Fails S4.4.
 - One-run noise: S082, S110, S131, S193.
 
-Narrowed version: not run yet.
+Narrowed version (12.7 only, codebook 2.3.0, two preview runs, same scoring):
+
+| | Run 1 | Run 2 |
+|---|---|---|
+| 2.2.0 baseline, lenient | 92.2% | 92.9% |
+| Narrowed version, lenient | 93.3% | 93.3% |
+
+- No regressions against the baseline (S017 right in both runs).
+- Improved: S191 12.5 in both runs (was one).
+- S082, S110 and S131 were right in one baseline run and are right in both now; they
+  are baseline noise, not effects of this change.
+- Run-to-run kappa 0.972 (7 unstable rows, all still lenient-correct except S224,
+  which was wrong in both baseline runs too).

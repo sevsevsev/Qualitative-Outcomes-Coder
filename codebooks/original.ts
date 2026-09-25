@@ -455,9 +455,9 @@ Framework Basis: CSSP Strengthening Families Protective Factors Framework; Ascen
    - Source Framework: USDA ERS Household Food Security Survey Module.
    - Example: "Families will report reduced food insecurity and increased access to healthy food."
 12.7 Housing Stability
-   - Definition: Outcomes related to a family securing or maintaining safe, stable housing.
+   - Definition: Outcomes related to a family, or a young person living independently, securing or maintaining safe, stable housing.
    - Source Framework: McKinney-Vento Act (housing instability definition).
-   - Example: "Families will secure stable, safe housing within 90 days of program enrollment."
+   - Example: "Families will secure stable, safe housing within 90 days of program enrollment." OR "Youth aging out of foster care will secure stable housing by age 21."
 `;
 
 const rulesText = `
@@ -585,7 +585,7 @@ CRITICAL for Formatting:
 
 export const originalCodebook: Codebook = {
   id: 'original',
-  version: '2.2.0',
+  version: '2.3.0',
   label: 'Youth Outcomes Codebook',
   // The prompt keeps the old name so renaming the codebook (2026-09-24)
   // did not change what the model is sent.

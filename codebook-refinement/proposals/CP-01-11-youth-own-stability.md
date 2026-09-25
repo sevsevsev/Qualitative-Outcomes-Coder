@@ -31,7 +31,7 @@
 | Codes touched | 12.7 definition and example only (narrowed; the first version also changed the Domain 12 scope note, hint and description) |
 | Version bump | MINOR (scope change) |
 | Requirement served | R2 (foster care / transition-age youth, runaway & homeless youth) |
-| Status | ready-to-test (narrowed version): applied on a draft PR for a preview run (not approved) |
+| Status | approved (narrowed version; Severin, 2026-09-25) |
 | Enum cost | +0 |
 
 ## Problem

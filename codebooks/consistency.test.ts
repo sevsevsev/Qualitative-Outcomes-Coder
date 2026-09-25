@@ -84,6 +84,7 @@ describe('original codebook v1.1.0 additions', () => {
     const codes = domain!.subcategories.map(s => s.code);
     expect(codes).toContain('9.7 Postsecondary Enrollment, Persistence & Completion');
     expect(codes).toContain('9.8 Employment Placement, Retention & Earnings');
+    expect(codes).toContain('9.9 Financial Capability');
   });
 
   it('includes the output-metric subcategory under Domain 11', () => {
@@ -92,8 +93,8 @@ describe('original codebook v1.1.0 additions', () => {
     expect(codes).toContain('11.5 Program Participation, Retention & Reach (Output Metric)');
   });
 
-  it('bumped the codebook version to 2.1.0 for 3.6 Social Capital & Networks (CP-07-02)', () => {
-    expect(original.version).toBe('2.1.0');
+  it('bumped the codebook version to 2.2.0 for 9.9 Financial Capability (CP-01-05)', () => {
+    expect(original.version).toBe('2.2.0');
   });
 
   it('adds 3.6 Social Capital & Networks to Domain 3', () => {

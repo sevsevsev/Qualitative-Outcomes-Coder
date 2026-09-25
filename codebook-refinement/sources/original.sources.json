@@ -876,8 +876,7 @@
         },
         {
           "code": "9.9",
-          "component": "Workplace Skills > Resource Management: 'Manages money' (proposed code)",
-          "proposed": true
+          "component": "Workplace Skills > Resource Management: 'Manages money'"
         }
       ],
       "notes": "Proposed as the primary citation for 9.5 (CP-01-08), replacing the looser 'Perkins V / Soft Skills'."
@@ -1349,9 +1348,12 @@
       "supports": [
         {
           "code": "9.9",
-          "component": "Financial Habits and Norms; Financial Knowledge and Decision-making Skills (proposed code)",
-          "proposed": true
+          "component": "Financial Habits and Norms; Financial Knowledge and Decision-making Skills"
         }
+      ],
+      "codebook_names": [
+        "Building Blocks to Help Youth Achieve Financial Capability",
+        "CFPB Youth Financial Capability Building Blocks"
       ]
     },
     {
@@ -1368,9 +1370,11 @@
       "supports": [
         {
           "code": "9.9",
-          "component": "All six topic areas (proposed code)",
-          "proposed": true
+          "component": "All six topic areas"
         }
+      ],
+      "codebook_names": [
+        "National Standards for Personal Financial Education"
       ]
     },
     {

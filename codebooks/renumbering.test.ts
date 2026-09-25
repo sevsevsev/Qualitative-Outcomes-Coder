@@ -21,7 +21,7 @@ const rows = (kind: string) => map.filter(r => r.kind === kind);
 const number = (label: string) => label.replace(/^Domain /, '').split(/\.? /)[0];
 const text = (label: string) => label.replace(/^(Domain )?\d+(\.\d+)*\.? /, '');
 // Codes added after 2.0.0 have no v1.2.0 code, so the map never lands on them.
-const ADDED_SINCE_2_0_0 = new Set(['3.6 Social Capital & Networks']);
+const ADDED_SINCE_2_0_0 = new Set(['3.6 Social Capital & Networks', '9.9 Financial Capability']);
 const codesAt2_0_0 = allSubcategoryCodes(original).filter(c => !ADDED_SINCE_2_0_0.has(c));
 
 describe('v1.2.0 -> v2.0.0 code map', () => {

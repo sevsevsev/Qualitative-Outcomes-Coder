@@ -135,6 +135,12 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
   const feedbackFor = (targetType: FeedbackTargetType, number: string, label: string) =>
     feedback.items.filter(i => i.targetType === targetType && i.targetCode === number && i.targetLabel === label);
 
+  const codeOptions = useMemo(
+    () => data.domains.flatMap(d => d.subcategories.map(c => ({ number: c.number, title: c.title }))),
+    [data],
+  );
+  const noteInputId = (targetType: FeedbackTargetType, number: string) => `note-${targetType}-${number || 'all'}`;
+
   const renderFeedback = (targetType: FeedbackTargetType, number: string, label: string) => (
     <FeedbackPanel
       key={`${data.id}-${targetType}-${number}`}
@@ -143,6 +149,8 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
       targetCode={number}
       items={feedbackFor(targetType, number, label)}
       showsApproved={feedback.public}
+      codeOptions={codeOptions}
+      inputId={noteInputId(targetType, number)}
     />
   );
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
@@ -214,6 +222,16 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
 
   const totalCodes = data.domains.reduce((n, d) => n + d.subcategories.length, 0);
   const verifiedCount = data.sources.filter(s => s.status === 'verified').length;
+
+  // "Add a note" on a code card: open the card and put the cursor in its note box.
+  const addNote = (number: string) => {
+    setExpanded(prev => new Set(prev).add(number));
+    window.setTimeout(() => {
+      const box = document.getElementById(noteInputId('code', number));
+      box?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      box?.focus({ preventScroll: true });
+    }, 60);
+  };
 
   const toggle = (number: string) =>
     setExpanded(prev => {
@@ -316,44 +334,58 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
           open ? 'border-slate-300 shadow-[0_1px_2px_rgba(15,23,42,.04),0_8px_24px_-12px_rgba(15,23,42,.18)]' : 'border-slate-200 hover:border-slate-300'
         } ${isTarget ? 'ring-2 ring-blue-500/20' : ''}`}
       >
-        <button
-          type="button"
-          onClick={() => toggle(code.number)}
-          aria-expanded={open}
-          className="w-full text-left px-5 py-4 flex items-start gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-xl"
-        >
-          <span
-            className="mt-0.5 shrink-0 font-mono text-xs font-semibold tabular-nums rounded-md px-2 py-1 min-w-[3.25rem] text-center"
-            style={tileStyle(index)}
+        <div className="flex items-start">
+          <button
+            type="button"
+            onClick={() => toggle(code.number)}
+            aria-expanded={open}
+            className="min-w-0 flex-1 text-left pl-4 sm:pl-5 pr-2 sm:pr-3 py-4 flex items-start gap-3 sm:gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-xl"
           >
-            {code.number}
-          </span>
-          <span className="min-w-0 flex-1">
-            <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <span className="font-semibold text-slate-900 leading-snug">{code.title}</span>
-              {code.tag && (
-                <span className="text-[11px] text-slate-500 bg-slate-100 rounded px-1.5 py-0.5">{code.tag}</span>
+            <span
+              className="mt-0.5 shrink-0 font-mono text-xs font-semibold tabular-nums rounded-md px-2 py-1 min-w-[3.25rem] text-center"
+              style={tileStyle(index)}
+            >
+              {code.number}
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                <span className="font-semibold text-slate-900 leading-snug">{code.title}</span>
+                {code.tag && (
+                  <span className="text-[11px] text-slate-500 bg-slate-100 rounded px-1.5 py-0.5">{code.tag}</span>
+                )}
+              </span>
+              {code.definition && (
+                <span className={`block text-sm text-slate-600 mt-1 leading-relaxed ${open ? '' : 'line-clamp-2'}`}>
+                  {code.definition}
+                </span>
               )}
             </span>
-            {code.definition && (
-              <span className={`block text-sm text-slate-600 mt-1 leading-relaxed ${open ? '' : 'line-clamp-2'}`}>
-                {code.definition}
-              </span>
-            )}
-          </span>
-          <span className="flex items-center gap-3 shrink-0 mt-1.5">
-            {commentCount > 0 && (
-              <span className="flex items-center gap-1 text-xs text-slate-500 tabular-nums" title={`${commentCount} comment${commentCount === 1 ? '' : 's'}`}>
+          </button>
+          <span className="flex items-center gap-1 sm:gap-2 shrink-0 pr-3 sm:pr-5 pt-[1.125rem]">
+            {withFeedback && (
+              <button
+                type="button"
+                onClick={() => addNote(code.number)}
+                aria-label={commentCount ? `${commentCount} note${commentCount === 1 ? '' : 's'} from the field. Add a note on ${code.number}` : `Add a note on ${code.number}`}
+                className="flex items-center gap-1 rounded-md px-1.5 py-1 text-xs font-medium text-slate-500 hover:text-blue-700 hover:bg-blue-50 tabular-nums transition-colors"
+              >
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h8M8 14h5M21 12a8 8 0 01-11.6 7.1L4 20l1-4.4A8 8 0 1121 12z" />
                 </svg>
-                {commentCount}
-              </span>
+                {commentCount > 0 ? (
+                  <span>{commentCount}<span className="hidden sm:inline"> note{commentCount === 1 ? '' : 's'}</span></span>
+                ) : (
+                  <span className="hidden sm:inline">Add a note</span>
+                )}
+              </button>
             )}
-            {renderDots(code.sources)}
-            <Chevron open={open} />
+            {/* The same toggle as the header, for the dots and chevron; the header button is the one keyboards reach. */}
+            <button type="button" tabIndex={-1} aria-hidden onClick={() => toggle(code.number)} className="flex items-center gap-3 py-1">
+              <span className="hidden sm:flex">{renderDots(code.sources)}</span>
+              <Chevron open={open} />
+            </button>
           </span>
-        </button>
+        </div>
 
         {open && (
           <div className="px-5 pb-5 pl-[5.25rem] space-y-5 max-sm:pl-5">
@@ -391,6 +423,13 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
               </div>
             )}
 
+            {withFeedback && (
+              <div>
+                <SectionLabel>Notes from the field</SectionLabel>
+                {renderFeedback('code', code.number, code.code)}
+              </div>
+            )}
+
             <div>
               <SectionLabel>Research &amp; frameworks</SectionLabel>
               {code.sources.length > 0 ? (
@@ -416,13 +455,6 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
                 </p>
               )}
             </div>
-
-            {withFeedback && (
-              <div>
-                <SectionLabel>Feedback</SectionLabel>
-                {renderFeedback('code', code.number, code.code)}
-              </div>
-            )}
 
             <div className="flex items-center gap-4 pt-1">
               <button
@@ -560,9 +592,9 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
 
         {withFeedback && (
           <section className="mt-12">
-            <h3 className="text-base font-semibold text-slate-900 mb-1">Feedback on this domain</h3>
+            <h3 className="text-base font-semibold text-slate-900 mb-1">Notes from the field on this domain</h3>
             <p className="text-sm text-slate-500 mb-4">
-              Is something unclear, or is an outcome your program tracks missing from this domain?
+              You know how these outcomes look in real programs. Tell us where this domain fits your work and where it doesn’t.
             </p>
             {renderFeedback('domain', domain.number, domain.code)}
           </section>
@@ -779,7 +811,7 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
 
       {withFeedback && (
         <section className="mt-16 pt-8 border-t border-slate-200 max-w-3xl">
-          <h2 className="text-base font-semibold text-slate-900 mb-1">Feedback on the whole codebook</h2>
+          <h2 className="text-base font-semibold text-slate-900 mb-1">Notes on the whole codebook</h2>
           <p className="text-sm text-slate-500 mb-4">
             Missing a whole area of outcomes, or have a thought that doesn’t fit one domain? Tell us here.
           </p>

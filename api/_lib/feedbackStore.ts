@@ -37,8 +37,10 @@ CREATE TABLE IF NOT EXISTS codebook_feedback (
   target_type      TEXT NOT NULL CHECK (target_type IN ('domain', 'code', 'general')),
   target_code      TEXT NOT NULL,
   target_label     TEXT NOT NULL,
-  kind             TEXT NOT NULL CHECK (kind IN ('comment', 'missing')),
+  kind             TEXT NOT NULL,
   body             TEXT NOT NULL,
+  example_statement TEXT,
+  related_code     TEXT,
   author_name      TEXT,
   author_email     TEXT,
   author_org       TEXT,
@@ -46,6 +48,11 @@ CREATE TABLE IF NOT EXISTS codebook_feedback (
   reviewed_at      TIMESTAMPTZ,
   ip_hash          TEXT
 );
+-- Upgrades a table created before note kinds and the two optional fields
+-- existed. Kinds are checked in services/feedback.ts, not by the database.
+ALTER TABLE codebook_feedback DROP CONSTRAINT IF EXISTS codebook_feedback_kind_check;
+ALTER TABLE codebook_feedback ADD COLUMN IF NOT EXISTS example_statement TEXT;
+ALTER TABLE codebook_feedback ADD COLUMN IF NOT EXISTS related_code TEXT;
 CREATE INDEX IF NOT EXISTS codebook_feedback_status_idx ON codebook_feedback (codebook_id, status);
 CREATE INDEX IF NOT EXISTS codebook_feedback_ip_idx ON codebook_feedback (ip_hash, created_at);
 CREATE TABLE IF NOT EXISTS codebook_try_usage (
@@ -69,6 +76,8 @@ const toPublic = (r: Record<string, any>): PublicFeedback => ({
   targetLabel: r.target_label,
   kind: r.kind,
   body: r.body,
+  exampleStatement: r.example_statement ?? null,
+  relatedCode: r.related_code ?? null,
   name: r.author_name ?? null,
   organization: r.author_org ?? null,
 });
@@ -106,10 +115,10 @@ export const neonFeedbackStore = (url: string): FeedbackStore => {
       const rows = await sql`
         INSERT INTO codebook_feedback
           (codebook_id, codebook_version, target_type, target_code, target_label, kind, body,
-           author_name, author_email, author_org, ip_hash)
+           example_statement, related_code, author_name, author_email, author_org, ip_hash)
         VALUES
           (${e.codebookId}, ${e.codebookVersion}, ${e.targetType}, ${e.targetCode}, ${e.targetLabel}, ${e.kind}, ${e.body},
-           ${e.name}, ${e.email}, ${e.organization}, ${ipHash})
+           ${e.exampleStatement}, ${e.relatedCode}, ${e.name}, ${e.email}, ${e.organization}, ${ipHash})
         RETURNING id`;
       return Number(rows[0].id);
     },

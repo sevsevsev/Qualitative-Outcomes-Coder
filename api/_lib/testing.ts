@@ -32,8 +32,8 @@ export const memoryStore = () => {
   const rows: (AdminFeedback & { ipHash: string | null; createdMs: number })[] = [];
   const tries: { ipHash: string | null; createdMs: number }[] = [];
   let now = Date.parse('2026-09-24T12:00:00Z');
-  const toPublic = ({ id, createdAt, codebookVersion, targetType, targetCode, targetLabel, kind, body, name, organization }: AdminFeedback): PublicFeedback =>
-    ({ id, createdAt, codebookVersion, targetType, targetCode, targetLabel, kind, body, name, organization });
+  const toPublic = ({ id, createdAt, codebookVersion, targetType, targetCode, targetLabel, kind, body, exampleStatement, relatedCode, name, organization }: AdminFeedback): PublicFeedback =>
+    ({ id, createdAt, codebookVersion, targetType, targetCode, targetLabel, kind, body, exampleStatement, relatedCode, name, organization });
 
   const store: FeedbackStore = {
     async insert(e: ValidFeedback, ipHash) {
@@ -42,7 +42,7 @@ export const memoryStore = () => {
         id, createdAt: new Date(now).toISOString(), createdMs: now, ipHash,
         codebookId: e.codebookId, codebookVersion: e.codebookVersion, targetType: e.targetType,
         targetCode: e.targetCode, targetLabel: e.targetLabel, kind: e.kind, body: e.body,
-        name: e.name, organization: e.organization, email: e.email, status: 'pending', reviewedAt: null,
+        exampleStatement: e.exampleStatement, relatedCode: e.relatedCode, name: e.name, organization: e.organization, email: e.email, status: 'pending', reviewedAt: null,
       });
       return id;
     },

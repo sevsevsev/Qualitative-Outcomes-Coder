@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { AdminFeedback, FeedbackStatus } from '../services/feedback.js';
+import { AdminFeedback, FEEDBACK_KIND_LABEL, FeedbackStatus } from '../services/feedback.js';
 import { downloadFeedbackCsv, fetchAdminFeedback, moderateFeedback } from '../services/feedbackClient.js';
 import { explorerHref } from './CodebookExplorer.js';
 
@@ -149,7 +149,7 @@ const FeedbackAdmin: React.FC = () => {
             <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500 mb-2">
               <span className={`rounded-full px-2 py-0.5 font-medium ring-1 ring-inset ${STATUS_STYLE[item.status]}`}>{item.status}</span>
               <span className={`rounded px-1.5 py-px font-medium ${item.kind === 'missing' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-700'}`}>
-                {item.kind === 'missing' ? 'Something missing' : 'Comment'}
+                {FEEDBACK_KIND_LABEL[item.kind] ?? item.kind}
               </span>
               {item.targetType === 'general' ? (
                 <span className="font-medium text-slate-700">{item.targetLabel}</span>
@@ -162,6 +162,10 @@ const FeedbackAdmin: React.FC = () => {
               <span>· {new Date(item.createdAt).toLocaleString()}</span>
             </div>
             <p className="text-sm text-slate-800 leading-relaxed whitespace-pre-line">{item.body}</p>
+            {item.relatedCode && <p className="mt-1 text-xs text-slate-500">Overlaps with {item.relatedCode}</p>}
+            {item.exampleStatement && (
+              <p className="mt-2 text-sm text-slate-700 border-l-2 border-slate-300 pl-3 italic">“{item.exampleStatement}”</p>
+            )}
             <div className="mt-2 text-xs text-slate-500">
               {[item.name || 'Anonymous', item.organization, item.email].filter(Boolean).join(' · ')}
             </div>

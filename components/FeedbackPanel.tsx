@@ -1,28 +1,72 @@
 import React, { useState } from 'react';
-import { FEEDBACK_LIMITS, FeedbackKind, FeedbackTargetType, PublicFeedback } from '../services/feedback.js';
+import {
+  FEEDBACK_KIND_LABEL, FEEDBACK_LIMITS, FeedbackKind, FeedbackTargetType, PublicFeedback,
+} from '../services/feedback.js';
 import { submitFeedback } from '../services/feedbackClient.js';
 
-// Comments and "something's missing" notes on one domain or code of the
-// public codebook explorer. New entries go to a moderation queue; only
-// approved ones are listed here.
+// "Notes from the field" on one domain or code of the public codebook
+// explorer, or on the codebook as a whole. The form is always open: one text
+// box, optional one-tap prompts that say what kinds of notes help most, and
+// optional extras. New notes go to a moderation queue; only approved ones are
+// listed here, and none of them changes the codebook directly.
+
+export interface CodeOption {
+  number: string;
+  title: string;
+}
 
 interface Props {
   codebookId: string;
   targetType: FeedbackTargetType;
   targetCode: string;
-  /** Approved entries for this target. */
+  /** Approved notes for this target. */
   items: PublicFeedback[];
-  /** False when the site keeps approved feedback private (FEEDBACK_PUBLIC=false). */
+  /** False when the site keeps approved notes private (FEEDBACK_PUBLIC=false). */
   showsApproved: boolean;
-  /** Open the form straight away with this kind and text (used by "Was this right?"). */
+  /** Start with this kind and text (used by Try it's "Not quite"). */
   initialKind?: FeedbackKind;
   initialBody?: string;
+  /** Codes offered in the "overlaps with" picker. */
+  codeOptions?: CodeOption[];
+  /** Id for the text box, so an "Add a note" link elsewhere can focus it. */
+  inputId?: string;
+  /** Replaces the opening line (Try it uses its own). */
+  intro?: string;
+  /** False when the form is not on the page where approved notes are listed (Try it). */
+  listedHere?: boolean;
 }
 
-const KIND_LABEL: Record<FeedbackKind, string> = {
-  comment: 'Comment',
-  missing: 'Something missing',
+interface Prompt {
+  kind: FeedbackKind;
+  label: string;
+  /** Sentence start dropped into an empty text box. */
+  stem: string;
+}
+
+// The one-tap prompts double as the answer to "what kind of notes do you want?".
+const PROMPTS: Record<FeedbackTargetType, Prompt[]> = {
+  code: [
+    { kind: 'unclear', label: 'The definition is unclear', stem: 'The part I found unclear: ' },
+    { kind: 'overlap', label: 'It overlaps another code', stem: 'This is hard to tell apart from another code because ' },
+    { kind: 'missing', label: 'Something’s missing here', stem: 'An outcome we track that doesn’t fit here yet: ' },
+    { kind: 'wording', label: 'We’d word it differently', stem: 'In our program we’d say: ' },
+    { kind: 'source', label: 'Suggest a source', stem: 'A source worth checking (a link helps): ' },
+  ],
+  domain: [
+    { kind: 'missing', label: 'An outcome we track isn’t here', stem: 'An outcome we track that I can’t find: ' },
+    { kind: 'overlap', label: 'Two codes blur together', stem: 'These two codes are hard to tell apart: ' },
+    { kind: 'unclear', label: 'Something’s unclear', stem: 'The part I found unclear: ' },
+    { kind: 'wording', label: 'We’d word it differently', stem: 'In our program we’d say: ' },
+    { kind: 'source', label: 'Suggest a source', stem: 'A source worth checking (a link helps): ' },
+  ],
+  general: [
+    { kind: 'missing', label: 'A whole area is missing', stem: 'Outcomes we work on that have no home in the codebook: ' },
+    { kind: 'unclear', label: 'Something’s hard to use', stem: 'What made it hard to use: ' },
+    { kind: 'source', label: 'Suggest a source', stem: 'A framework or source worth checking (a link helps): ' },
+  ],
 };
+
+const STEMS = new Set(Object.values(PROMPTS).flat().map(p => p.stem));
 
 const formatDate = (iso: string) =>
   new Date(iso).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
@@ -30,11 +74,17 @@ const formatDate = (iso: string) =>
 const inputClass =
   'w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400';
 
+const linkButton = 'text-left text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors';
+
 const FeedbackPanel: React.FC<Props> = ({
-  codebookId, targetType, targetCode, items, showsApproved, initialKind, initialBody,
+  codebookId, targetType, targetCode, items, showsApproved, initialKind, initialBody, codeOptions = [], inputId, intro, listedHere = true,
 }) => {
-  const [formKind, setFormKind] = useState<FeedbackKind | null>(initialKind ?? null);
+  const [kind, setKind] = useState<FeedbackKind | null>(initialKind && initialKind !== 'comment' ? initialKind : null);
   const [body, setBody] = useState(initialBody ?? '');
+  const [example, setExample] = useState('');
+  const [showExample, setShowExample] = useState(false);
+  const [related, setRelated] = useState('');
+  const [showContact, setShowContact] = useState(false);
   const [name, setName] = useState('');
   const [organization, setOrganization] = useState('');
   const [email, setEmail] = useState('');
@@ -43,33 +93,50 @@ const FeedbackPanel: React.FC<Props> = ({
   const [error, setError] = useState<string | null>(null);
 
   const noun = targetType === 'general' ? 'codebook' : targetType;
+  const prompts = PROMPTS[targetType];
+  const pickerId = inputId ? `${inputId}-codes` : undefined;
 
-  const open = (kind: FeedbackKind) => {
-    setFormKind(kind);
+  const pick = (p: Prompt) => {
+    const off = kind === p.kind;
+    setKind(off ? null : p.kind);
+    // Swap the sentence start only while the visitor hasn't written their own words.
+    if (!body.trim() || STEMS.has(body)) setBody(off ? '' : p.stem);
+    if (!off && p.kind === 'missing') setShowExample(true);
     setState('idle');
-    setError(null);
   };
 
   const send = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formKind) return;
     setState('sending');
     setError(null);
     try {
-      await submitFeedback({ codebookId, targetType, targetCode, kind: formKind, body, name, organization, email, website });
+      // Send only a code the picker knows; a free-text guess stays in the note itself.
+      const typed = related.trim().toLowerCase();
+      const match = kind === 'overlap' && typed
+        ? codeOptions.find(c => c.number === typed.split(/\s+/)[0] || c.title.toLowerCase() === typed || `${c.number} ${c.title}`.toLowerCase() === typed)
+        : undefined;
+      const relatedNumber = match?.number ?? '';
+      await submitFeedback({
+        codebookId, targetType, targetCode, kind: kind ?? 'comment', body,
+        exampleStatement: example, relatedCode: relatedNumber, name, organization, email, website,
+      });
       setState('sent');
       setBody('');
-      setFormKind(null);
+      setExample('');
+      setRelated('');
+      setKind(null);
     } catch (err: any) {
       setState('idle');
       setError(err.message);
     }
   };
 
+  const hasText = body.trim().length >= 3 && !STEMS.has(body);
+
   return (
     <div>
       {items.length > 0 && (
-        <ul className="space-y-2 mb-3">
+        <ul className="space-y-2 mb-4">
           {items.map(item => (
             <li key={item.id} className="rounded-lg bg-slate-50 px-3 py-2.5">
               <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs text-slate-500 mb-1">
@@ -78,112 +145,155 @@ const FeedbackPanel: React.FC<Props> = ({
                     item.kind === 'missing' ? 'bg-amber-100 text-amber-800' : 'bg-slate-200/70 text-slate-700'
                   }`}
                 >
-                  {KIND_LABEL[item.kind]}
+                  {FEEDBACK_KIND_LABEL[item.kind] ?? 'Note'}
                 </span>
-                <span>{[item.name || 'Anonymous', item.organization].filter(Boolean).join(', ')}</span>
+                <span>{[item.organization, item.name].filter(Boolean).join(' · ') || 'Anonymous'}</span>
                 <span className="text-slate-400">· {formatDate(item.createdAt)}</span>
               </div>
               <p className="text-sm text-slate-700 leading-relaxed whitespace-pre-line">{item.body}</p>
+              {item.relatedCode && (
+                <p className="mt-1 text-xs text-slate-500">Overlaps with {item.relatedCode}</p>
+              )}
+              {item.exampleStatement && (
+                <p className="mt-2 text-sm text-slate-700 border-l-2 border-slate-300 pl-3 italic">“{item.exampleStatement}”</p>
+              )}
             </li>
           ))}
         </ul>
       )}
 
-      {state === 'sent' && (
-        <p className="mb-3 text-sm text-emerald-800 bg-emerald-50 rounded-lg px-3 py-2">
-          Thank you. Your feedback was sent for review.
-          {showsApproved ? ' It will appear in the codebook once it is approved.' : ''}
+      <form onSubmit={send} className="rounded-xl border border-slate-200 bg-white p-4 space-y-3">
+        <p className="text-sm text-slate-700">
+          {intro ??
+            (items.length === 0 && showsApproved
+              ? 'No notes from the field yet. If you run or evaluate a program like this, yours would be the first.'
+              : `Does this ${noun} match how your program talks about its outcomes?`)}
         </p>
-      )}
 
-      {!formKind ? (
-        <div className="flex flex-wrap gap-2">
-          <button
-            type="button"
-            onClick={() => open('comment')}
-            className="text-sm font-medium text-slate-700 bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 rounded-lg px-3 py-1.5 transition-colors"
-          >
-            Comment on this {noun}
-          </button>
-          <button
-            type="button"
-            onClick={() => open('missing')}
-            className="text-sm font-medium text-slate-700 bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 rounded-lg px-3 py-1.5 transition-colors"
-          >
-            Suggest something missing
-          </button>
+        <div className="flex flex-wrap gap-1.5" role="group" aria-label="What kind of note (optional)">
+          {prompts.map(p => (
+            <button
+              key={p.kind}
+              type="button"
+              aria-pressed={kind === p.kind}
+              onClick={() => pick(p)}
+              className={`text-xs sm:text-[13px] rounded-full border px-3 py-1 transition-colors ${
+                kind === p.kind
+                  ? 'bg-blue-600 border-blue-600 text-white'
+                  : 'bg-white border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50'
+              }`}
+            >
+              {p.label}
+            </button>
+          ))}
         </div>
-      ) : (
-        <form onSubmit={send} className="rounded-xl border border-slate-200 bg-white p-4 space-y-3">
-          <div role="radiogroup" aria-label="Type of feedback" className="inline-flex rounded-lg bg-slate-100 p-1 text-sm">
-            {(Object.keys(KIND_LABEL) as FeedbackKind[]).map(k => (
-              <button
-                key={k}
-                type="button"
-                role="radio"
-                aria-checked={formKind === k}
-                onClick={() => setFormKind(k)}
-                className={`px-3 py-1 rounded-md transition-all ${
-                  formKind === k ? 'bg-white shadow-sm font-medium text-slate-900' : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                {KIND_LABEL[k]}
-              </button>
-            ))}
-          </div>
+
+        <label className="block">
+          <span className="sr-only">Your note</span>
+          <textarea
+            id={inputId}
+            value={body}
+            onChange={e => { setBody(e.target.value); if (state === 'sent') setState('idle'); }}
+            required
+            minLength={3}
+            maxLength={FEEDBACK_LIMITS.body}
+            rows={initialBody ? 5 : 3}
+            placeholder={`What would you change about this ${noun}? Half-formed thoughts are welcome.`}
+            className={inputClass}
+          />
+        </label>
+
+        {kind === 'overlap' && targetType !== 'general' && codeOptions.length > 0 && (
           <label className="block">
-            <span className="sr-only">Your feedback</span>
+            <span className="block text-xs text-slate-500 mb-1">Which code does it get confused with? (optional)</span>
+            <input
+              list={pickerId}
+              value={related}
+              onChange={e => setRelated(e.target.value)}
+              placeholder="Type a number or name, e.g. 3.2"
+              className={inputClass}
+            />
+            <datalist id={pickerId}>
+              {codeOptions.filter(c => c.number !== targetCode).map(c => (
+                <option key={c.number} value={`${c.number} ${c.title}`} />
+              ))}
+            </datalist>
+          </label>
+        )}
+
+        {showExample ? (
+          <label className="block">
+            <span className="block text-xs text-slate-500 mb-1">
+              An outcome statement from your program (optional). Please leave out names.
+            </span>
             <textarea
-              value={body}
-              onChange={e => setBody(e.target.value)}
-              required
-              minLength={3}
-              maxLength={FEEDBACK_LIMITS.body}
-              rows={4}
-              placeholder={
-                formKind === 'missing'
-                  ? `What outcome, example or source is missing from this ${noun}? Where would you expect it?`
-                  : `What works, what is unclear, or what would you change about this ${noun}?`
-              }
+              value={example}
+              onChange={e => setExample(e.target.value)}
+              maxLength={FEEDBACK_LIMITS.exampleStatement}
+              rows={2}
+              placeholder="e.g. “Participants will demonstrate improved conflict resolution skills.”"
               className={inputClass}
             />
           </label>
+        ) : null}
+
+        {showContact && (
           <div className="grid gap-2 sm:grid-cols-3">
-            <input value={name} onChange={e => setName(e.target.value)} maxLength={FEEDBACK_LIMITS.name} placeholder="Name (optional)" aria-label="Name (optional)" className={inputClass} />
-            <input value={organization} onChange={e => setOrganization(e.target.value)} maxLength={FEEDBACK_LIMITS.organization} placeholder="Organization or role (optional)" aria-label="Organization or role (optional)" className={inputClass} />
-            <input type="email" value={email} onChange={e => setEmail(e.target.value)} maxLength={FEEDBACK_LIMITS.email} placeholder="Email (optional, never shown)" aria-label="Email (optional, never shown)" className={inputClass} />
+            <input value={name} onChange={e => setName(e.target.value)} maxLength={FEEDBACK_LIMITS.name} placeholder="Name" aria-label="Name (optional)" className={inputClass} />
+            <input value={organization} onChange={e => setOrganization(e.target.value)} maxLength={FEEDBACK_LIMITS.organization} placeholder="Organization or role" aria-label="Organization or role (optional)" className={inputClass} />
+            <input type="email" value={email} onChange={e => setEmail(e.target.value)} maxLength={FEEDBACK_LIMITS.email} placeholder="Email (never shown)" aria-label="Email (optional, never shown)" className={inputClass} />
           </div>
-          {/* Honeypot: hidden from people, filled in by bots. */}
-          <input
-            type="text"
-            value={website}
-            onChange={e => setWebsite(e.target.value)}
-            tabIndex={-1}
-            autoComplete="off"
-            aria-hidden
-            style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
-            name="website"
-          />
-          {error && <p className="text-sm text-rose-700 bg-rose-50 rounded-lg px-3 py-2">{error}</p>}
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <p className="text-xs text-slate-500">
-              Feedback is reviewed before it appears{showsApproved ? '' : ' and is kept private'}. It never changes the codebook directly.
-            </p>
-            <div className="flex gap-2">
-              <button type="button" onClick={() => setFormKind(null)} className="text-sm text-slate-600 hover:text-slate-900 px-3 py-1.5">
-                Cancel
+        )}
+
+        {(!showExample || !showContact) && (
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            {!showExample && (
+              <button type="button" onClick={() => setShowExample(true)} className={linkButton}>
+                + Add an outcome statement from your program
               </button>
-              <button
-                type="submit"
-                disabled={state === 'sending' || body.trim().length < 3}
-                className="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 disabled:bg-blue-300 rounded-lg px-4 py-1.5 transition-colors"
-              >
-                {state === 'sending' ? 'Sending…' : 'Send feedback'}
+            )}
+            {!showContact && (
+              <button type="button" onClick={() => setShowContact(true)} className={linkButton}>
+                + Add your name (optional)
               </button>
-            </div>
+            )}
           </div>
-        </form>
-      )}
+        )}
+
+        {/* Honeypot: hidden from people, filled in by bots. */}
+        <input
+          type="text"
+          value={website}
+          onChange={e => setWebsite(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden
+          style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+          name="website"
+        />
+
+        {error && <p className="text-sm text-rose-700 bg-rose-50 rounded-lg px-3 py-2">{error}</p>}
+        {state === 'sent' && (
+          <p className="text-sm text-emerald-800 bg-emerald-50 rounded-lg px-3 py-2" role="status">
+            Thank you. A person will read your note{showsApproved && listedHere ? ' before it appears here' : ''}.
+          </p>
+        )}
+
+        <div className="flex flex-wrap items-end justify-between gap-3 pt-1">
+          <p className="text-xs text-slate-500 leading-relaxed max-w-md">
+            A person reads every note.
+            {showsApproved ? (listedHere ? ' Approved notes appear here for others.' : ' Approved notes appear on the code’s page.') : ''} Notes feed the next
+            revision, where any change is written up and reviewed.
+          </p>
+          <button
+            type="submit"
+            disabled={state === 'sending' || !hasText}
+            className="shrink-0 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 disabled:bg-blue-300 rounded-lg px-4 py-2 transition-colors"
+          >
+            {state === 'sending' ? 'Sending…' : 'Send note'}
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

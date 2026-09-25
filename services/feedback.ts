@@ -12,16 +12,32 @@
 import { Codebook, CODEBOOK_REGISTRY, CodebookType } from '../codebooks/index.js';
 import { codebookAllowedOnThisSite } from './explorerCodebooks.js';
 
-export type FeedbackKind = 'comment' | 'missing';
+/**
+ * What kind of note it is. "comment" is a general note (and the default);
+ * the others are the one-tap prompts on the form, stored so notes can be
+ * grouped by kind in a refinement cycle.
+ */
+export type FeedbackKind = 'comment' | 'missing' | 'unclear' | 'overlap' | 'wording' | 'source';
 /** "general" is feedback on the codebook as a whole (targetCode is ""). */
 export type FeedbackTargetType = 'domain' | 'code' | 'general';
 export type FeedbackStatus = 'pending' | 'approved' | 'rejected';
 
-export const FEEDBACK_KINDS: readonly FeedbackKind[] = ['comment', 'missing'];
+export const FEEDBACK_KINDS: readonly FeedbackKind[] = ['comment', 'missing', 'unclear', 'overlap', 'wording', 'source'];
+
+/** Short labels for a note's kind, as shown on approved notes and in the admin page. */
+export const FEEDBACK_KIND_LABEL: Record<FeedbackKind, string> = {
+  comment: 'Note',
+  missing: 'Missing outcome',
+  unclear: 'Unclear',
+  overlap: 'Overlap',
+  wording: 'Wording',
+  source: 'Source',
+};
 export const FEEDBACK_STATUSES: readonly FeedbackStatus[] = ['pending', 'approved', 'rejected'];
 
 export const FEEDBACK_LIMITS = {
   body: 2000,
+  exampleStatement: 500,
   name: 80,
   email: 200,
   organization: 120,
@@ -35,6 +51,10 @@ export interface FeedbackSubmission {
   targetCode: string;
   kind: FeedbackKind;
   body: string;
+  /** An outcome statement from the visitor's own program (optional). */
+  exampleStatement?: string;
+  /** For an overlap: the number of the code it gets confused with (optional). */
+  relatedCode?: string;
   name?: string;
   email?: string;
   organization?: string;
@@ -56,6 +76,9 @@ export interface ValidFeedback {
   targetLabel: string;
   kind: FeedbackKind;
   body: string;
+  exampleStatement: string | null;
+  /** Full code string of the related code, read from the codebook. */
+  relatedCode: string | null;
   name: string | null;
   email: string | null;
   organization: string | null;
@@ -71,6 +94,8 @@ export interface PublicFeedback {
   targetLabel: string;
   kind: FeedbackKind;
   body: string;
+  exampleStatement: string | null;
+  relatedCode: string | null;
   name: string | null;
   organization: string | null;
 }
@@ -146,7 +171,7 @@ export const validateSubmission = (input: unknown): ValidationResult => {
   if (!targetLabel) return { ok: false, error: `No ${s.targetType} "${targetCode}" in this codebook.` };
 
   if (!FEEDBACK_KINDS.includes(s.kind as FeedbackKind)) {
-    return { ok: false, error: 'kind must be "comment" or "missing".' };
+    return { ok: false, error: `kind must be one of: ${FEEDBACK_KINDS.join(', ')}.` };
   }
 
   if (typeof s.body === 'string' && s.body.trim().length > FEEDBACK_LIMITS.body) {
@@ -154,6 +179,15 @@ export const validateSubmission = (input: unknown): ValidationResult => {
   }
   const body = clean(s.body, FEEDBACK_LIMITS.body);
   if (!body || body.length < 3) return { ok: false, error: 'Please write a few words of feedback.' };
+
+  if (typeof s.exampleStatement === 'string' && s.exampleStatement.trim().length > FEEDBACK_LIMITS.exampleStatement) {
+    return { ok: false, error: `Please keep the outcome statement under ${FEEDBACK_LIMITS.exampleStatement} characters.` };
+  }
+  const exampleStatement = clean(s.exampleStatement, FEEDBACK_LIMITS.exampleStatement);
+
+  const relatedNumber = typeof s.relatedCode === 'string' ? s.relatedCode.trim() : '';
+  const relatedCode = relatedNumber ? resolveTarget(codebook, 'code', relatedNumber) : null;
+  if (relatedNumber && !relatedCode) return { ok: false, error: `No code "${relatedNumber}" in this codebook.` };
 
   const email = clean(s.email, FEEDBACK_LIMITS.email);
   if (email && !EMAIL_RE.test(email)) return { ok: false, error: 'That email address does not look right.' };
@@ -168,6 +202,8 @@ export const validateSubmission = (input: unknown): ValidationResult => {
       targetLabel,
       kind: s.kind as FeedbackKind,
       body,
+      exampleStatement,
+      relatedCode,
       name: clean(s.name, FEEDBACK_LIMITS.name),
       email,
       organization: clean(s.organization, FEEDBACK_LIMITS.organization),
@@ -177,7 +213,7 @@ export const validateSubmission = (input: unknown): ValidationResult => {
 
 const CSV_COLUMNS: (keyof AdminFeedback)[] = [
   'id', 'createdAt', 'status', 'reviewedAt', 'codebookId', 'codebookVersion',
-  'targetType', 'targetCode', 'targetLabel', 'kind', 'body', 'name', 'organization', 'email',
+  'targetType', 'targetCode', 'targetLabel', 'kind', 'body', 'exampleStatement', 'relatedCode', 'name', 'organization', 'email',
 ];
 
 const csvCell = (value: unknown): string => {

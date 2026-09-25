@@ -433,3 +433,42 @@ Presenting/Responding processes as engagement and expression (Domain 2).
 
 **Gold:** G-049, G-066, G-067, G-071
 
+### CF-027: Social and economic mobility · proposed (CP-07-01)
+
+**Codes:** 9.8 · 12.5 · 3.6 · 9.5 · 9.7
+
+**Rule:**
+
+- "Economic mobility", "upward mobility" or "breaking the cycle of poverty" is a
+  long-term aim, not a code. Code the concrete change the statement names: skills →
+  the skill's code (e.g. 9.5); credential or college completion → 9.6 or 9.7; a job
+  or earnings → 9.8; household income or benefits → 12.5.
+- Only economic mobility named, for the young person → 9.8.
+- Only economic mobility named, for the family or household → 12.5.
+- "Social mobility" framed as wider connections or access to people who open doors
+  → 3.6.
+
+**Rationale:** Programs almost always state mobility as the "leading to…" tail of a
+statement whose measurable part already has a code (project-files gold G064). A
+mobility code would pull those statements away from the code that fits. Severin
+chose a tie-breaker over a new domain or code on 2026-09-25.
+
+**Gold:** G-072, G-073, G-074, G-075
+
+### CF-028: One relationship vs. a wider network · proposed (CP-07-02)
+
+**Codes:** 3.2 · 3.3 · 3.6
+
+**Rule:**
+
+- One trusted or caring adult → 3.2.
+- Making friends or feeling accepted by peers → 3.3.
+- The breadth of a network, or using contacts to pursue an opportunity
+  (introductions, references, professionals in a field) → 3.6.
+
+**Rationale:** The Developmental Relationships Framework separates caring and
+support from "Expand Possibilities" (connecting a young person with people and
+places that broaden their world). The Education-to-Workforce framework's social
+capital indicator is about mobilizing relationships to further one's goals.
+
+**Gold:** G-075, G-076, G-077

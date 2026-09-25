@@ -310,6 +310,9 @@
     {
       "id": "search-developmental-relationships",
       "cite_as": "Search Institute — Developmental Relationships Framework (Express Care, Challenge Growth, Provide Support, Share Power, Expand Possibilities)",
+      "codebook_names": [
+        "Developmental Relationships Framework"
+      ],
       "tier": "D",
       "publisher": "Search Institute",
       "year": null,
@@ -322,9 +325,45 @@
         {
           "code": "3.2",
           "component": "Express Care; Provide Support"
+        },
+        {
+          "code": "3.6",
+          "component": "Expand Possibilities (Connect: introduce the young person to people who can help them grow)",
+          "verdict": "PARTIAL",
+          "source_kind": "primary",
+          "excerpt": "Expand Possibilities: Connect me with people and places to broaden my world.",
+          "verifier_note": "Attribution correct. The element describes what an adult does and is broader than 3.6 (Inspire, Broaden horizons, Connect); only 'Connect' is directly about social capital. Secondary citation; the E2W indicator is the primary fit.",
+          "url_checked": "https://searchinstitute.org/developmental-relationships"
         }
       ],
-      "notes": "Not yet cited in the codebook. Proposed as an added citation for 3.2 in CP-01-07. 'Expand Possibilities' is the construct for the deferred social-capital gap."
+      "notes": "Cited for 3.6 (Expand Possibilities) by CP-07-02, verified PARTIAL 2026-09-25 (claim V07-2). The 3.2 citation proposed in CP-01-07 is still unapplied."
+    },
+    {
+      "id": "e2w-social-capital",
+      "cite_as": "Mathematica, Education-to-Workforce Indicator Framework (2022), social capital indicator",
+      "codebook_names": [
+        "Education-to-Workforce Indicator Framework"
+      ],
+      "tier": "D",
+      "publisher": "Mathematica (funded in part by the Bill & Melinda Gates Foundation)",
+      "year": 2022,
+      "url": "https://educationtoworkforce.org/indicators/social-capital",
+      "status": "verified",
+      "verified_on": "2026-09-25",
+      "verified_by": "codebook-citation-verifier (blind to proposer reasoning; WebFetch), claim V07-1; same excerpt as the 2026-09-24 v2 verification (V38)",
+      "excerpt": "Individuals have access to and are able to mobilize relationships that help them further their goals.",
+      "supports": [
+        {
+          "code": "3.6",
+          "component": "Social capital indicator",
+          "verdict": "SUPPORTED",
+          "source_kind": "primary",
+          "excerpt": "Individuals have access to and are able to mobilize relationships that help them further their goals.",
+          "verifier_note": "Component matches word for word. The proposed cite_as named Gates as co-author; the site credits Mathematica as author and Gates as a funder, so cite_as was corrected (verifier first returned MISATTRIBUTED for the attribution only).",
+          "url_checked": "https://educationtoworkforce.org/indicators/social-capital"
+        }
+      ],
+      "notes": "Added by CP-07-02. Also backs v2 Y2.5 (v2-candidate-sources.json id e2w-framework)."
     },
     {
       "id": "learning-for-justice-sjs",

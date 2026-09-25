@@ -171,6 +171,11 @@ Framework Basis: CDC School Connectedness, Learning for Justice, Epstein's Frame
    - Definition: Outcomes focused on trust, communication, and relationship building BETWEEN families and the program (i.e., the family's relationship with the program itself).
    - Note: This is about the family-program relationship. For the caregiver's own knowledge/practices/well-being, use Domain 12. For the program's own systems for engaging families, use 11.4.
    - Example: "Parents will report feeling more connected to their child's learning process."
+3.6 Social Capital & Networks
+   - Definition: A young person's access to, and ability to use, a wider network of relationships (adults, peers, professionals, alumni, employers) that can open educational, career, or other opportunities -- beyond one supportive relationship.
+   - Source Framework: Education-to-Workforce Indicator Framework (Social Capital); Search Institute Developmental Relationships Framework (Expand Possibilities).
+   - Note: One trusted or caring adult is 3.2; making friends is 3.3. Use 3.6 when the outcome is about the breadth of the network or using it to pursue an opportunity (introductions, references, mentors in a field, contacts who can help).
+   - Example: "Participants will identify two new adults outside their family who can help them pursue a career goal."
 
 Domain 4. Social & Emotional Learning (CASEL-aligned)
 Framework Basis: CASEL (Collaborative for Academic, Social, and Emotional Learning)
@@ -556,6 +561,11 @@ SPECIFIC CODING RULES & TIE-BREAKERS:
    - A dosage/reach/attendance-rate statement about the PROGRAM (not a specific student) is an output, not a youth outcome. Code these to 11.5, not to an unrelated domain and not to "uncoded."
    - A specific STUDENT's attendance/chronic-absence outcome goes to 1.5 instead.
 
+8. SOCIAL / ECONOMIC MOBILITY:
+   - "Economic mobility", "upward mobility", "breaking the cycle of poverty" and similar phrases are a long-term aim, not a code of their own. Code the concrete change the statement names (e.g. skills -> the skill's code; credential or college completion -> 9.6/9.7; job or earnings -> 9.8; household income or benefits -> 12.5).
+   - If the statement names ONLY economic mobility for the young person, with no concrete lever, use 9.8. If it is about the family's or household's economic standing, use 12.5.
+   - "Social mobility" framed as wider connections, networks or access to people who open doors -> 3.6.
+
 CRITICAL for Formatting:
 - Ensure the 'primary_domain' string exactly matches the codebook headers (e.g. "Domain 2. Joy, Interest & Motivation in Learning").
 - Ensure the 'primary_subcategory' string exactly matches the codebook items (e.g. "2.1 Joy & Emotional Wellness").
@@ -565,7 +575,7 @@ CRITICAL for Formatting:
 
 export const originalCodebook: Codebook = {
   id: 'original',
-  version: '2.0.1',
+  version: '2.1.0',
   label: 'Youth Outcomes Codebook',
   // The prompt keeps the old name so renaming the codebook (2026-09-24)
   // did not change what the model is sent.
@@ -671,7 +681,7 @@ export const originalCodebook: Codebook = {
     {
       code: "Domain 3. Belonging, Relationships & School Connectedness",
       hint: "EXPERIENCES/STATES (e.g. \"feels safe\", \"feels connected\"), not skills -- see Domain 4 for SEL skills.",
-      description: "Outcomes about the relationships around a young person: feeling part of the school or program, supportive adults, friendships with peers, pride in their own identity and culture, and the family's connection with the program.",
+      description: "Outcomes about the relationships around a young person: feeling part of the school or program, supportive adults, friendships with peers, pride in their own identity and culture, the family's connection with the program, and wider networks of people who can open opportunities.",
       subcategories: [
         { code: "3.1 School/Program Connectedness (Belonging)" },
         { code: "3.2 Adult Support & Care" },
@@ -686,6 +696,10 @@ export const originalCodebook: Codebook = {
         {
           code: "3.5 Family Partnership & Connection",
           hint: "The family's relationship WITH the program. For the caregiver's own knowledge/well-being, use Domain 12. For the org's own family-engagement systems, use 11.4.",
+        },
+        {
+          code: "3.6 Social Capital & Networks",
+          hint: "A wider network of relationships that opens opportunities. One trusted adult is 3.2; making friends is 3.3.",
         },
       ],
     },
@@ -930,9 +944,9 @@ export const originalCodebook: Codebook = {
 //     Domain 10 subcategory, distinct from 1.4's youth ELP growth.
 //   - Financial capability & asset building for youth (CFPB Building
 //     Blocks) -- likely a Domain 9 subcategory.
-//   - Social capital / expanded networks (Search Institute Developmental
-//     Relationships Framework) and mentoring match quality/duration
-//     (MENTOR Elements of Effective Practice) under Domain 3 / Domain 11.
+//   - Mentoring match quality/duration (MENTOR Elements of Effective
+//     Practice) under Domain 11. (Social capital / expanded networks was
+//     picked up as 3.6 by CP-07-02.)
 //   - Broader physical health & health-care access (sleep, oral/vision
 //     health, chronic-condition management, insurance) under Domain 8.
 //   - Environmental stewardship & nature connection (NAAEE Guidelines for

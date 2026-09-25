@@ -21,10 +21,18 @@ site" in the root README) is exported here as CSV files, one per export:
 ## Columns
 
 `id, created_at, status, reviewed_at, codebook_id, codebook_version, target_type,
-target_code, target_label, kind, body, name, organization`
+target_code, target_label, kind, body, example_statement, related_code, name, organization`
 
 - `target_type`: `code`, `domain`, or `general` (the whole codebook; `target_code` is blank).
-- `kind`: `comment`, or `missing` (the visitor thinks something is missing).
+- `kind`: the prompt the visitor tapped, or `comment` when they tapped none:
+  `unclear` (definition unclear), `overlap` (hard to tell apart from another code),
+  `missing` (an outcome with no home), `wording` (how their program would word it),
+  `source` (a source to check; still needs a verifier before it can be cited).
+  Rows exported before 2026-09-25 only use `comment` and `missing`.
+- `example_statement`: an outcome statement from the visitor's own program, when given.
+  It is a candidate edge case, not a gold row: it needs human coding first.
+- `related_code`: for `overlap`, the code the visitor says it gets confused with, when
+  picked. Treat the pair as a lead for `../CONFUSIONS.md`, not as a tie-breaker.
 - Feedback sent from "Try it" starts with `Statement:` and `Coded as:` lines, so it
   can also be read as a candidate edge case for `../eval/`, after human coding.
 

@@ -118,10 +118,10 @@ const ExplorerLanding: React.FC<Props> = ({ siteName, codebookId, tryHref }) => 
           />
           <Step
             n={3}
-            title="Tell us what’s missing or unclear"
-            body="Comment on any code or domain, or note an outcome you can’t find. A person reviews feedback before it appears, and it guides the next revision rather than changing the codebook directly."
+            title="Tell us how your program sees it"
+            body="Which outcomes you track aren’t here? Where would you word a code differently? Which two codes blur together? Every code has a place for notes. A person reads each one, and notes guide the next revision rather than changing the codebook directly."
             href={codebookHref}
-            cta="Leave feedback"
+            cta="Add a note"
           />
         </ol>
       </section>

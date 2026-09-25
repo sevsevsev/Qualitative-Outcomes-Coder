@@ -76,16 +76,48 @@ describe('validateSubmission', () => {
   });
 });
 
+describe('note kinds and optional fields', () => {
+  const secondSub = firstDomain.subcategories[1];
+
+  it('accepts every prompt kind', () => {
+    for (const kind of ['comment', 'missing', 'unclear', 'overlap', 'wording', 'source']) {
+      expect(validateSubmission({ ...base, kind }).ok).toBe(true);
+    }
+  });
+
+  it('keeps an example statement and resolves a related code from the codebook', () => {
+    const r = validateSubmission({
+      ...base, kind: 'overlap', exampleStatement: '  Students read on grade level.  ', relatedCode: codeNumber(secondSub.code),
+    });
+    expect(r.ok).toBe(true);
+    if (r.ok) {
+      expect(r.value.exampleStatement).toBe('Students read on grade level.');
+      expect(r.value.relatedCode).toBe(secondSub.code);
+    }
+  });
+
+  it('leaves the optional fields empty when not given', () => {
+    const r = validateSubmission(base);
+    expect(r.ok && r.value.exampleStatement).toBeNull();
+    expect(r.ok && r.value.relatedCode).toBeNull();
+  });
+
+  it('rejects an unknown related code and an overlong statement', () => {
+    expect(validateSubmission({ ...base, relatedCode: '99.9' }).ok).toBe(false);
+    expect(validateSubmission({ ...base, exampleStatement: 'x'.repeat(FEEDBACK_LIMITS.exampleStatement + 1) }).ok).toBe(false);
+  });
+});
+
 describe('feedbackToCsv', () => {
   const row: AdminFeedback = {
     id: 1, createdAt: '2026-09-24T12:00:00.000Z', codebookVersion: '2.0.1', targetType: 'code', targetCode: '1.3',
     targetLabel: '1.3 Other Academic Subjects', kind: 'missing', body: '=HYPERLINK("x")\nsecond, line',
-    name: 'Ana "A"', organization: null, codebookId: 'original', email: 'ana@example.org', status: 'approved', reviewedAt: null,
+    exampleStatement: 'Youth lead a service project', relatedCode: null, name: 'Ana "A"', organization: null, codebookId: 'original', email: 'ana@example.org', status: 'approved', reviewedAt: null,
   };
 
   it('quotes, guards formulas and leaves emails out unless asked', () => {
     const csv = feedbackToCsv([row]);
-    expect(csv.split('\n')[0]).toBe('id,created_at,status,reviewed_at,codebook_id,codebook_version,target_type,target_code,target_label,kind,body,name,organization');
+    expect(csv.split('\n')[0]).toBe('id,created_at,status,reviewed_at,codebook_id,codebook_version,target_type,target_code,target_label,kind,body,example_statement,related_code,name,organization');
     expect(csv).toContain(`"'=HYPERLINK(""x"")\nsecond, line"`);
     expect(csv).toContain('"Ana ""A"""');
     expect(csv).not.toContain('ana@example.org');

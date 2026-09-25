@@ -56,12 +56,14 @@ const TryCoder: React.FC<Props> = ({ codebookId, codebookIds, onCodebookChange }
   const [error, setError] = useState<string | null>(null);
   const [response, setResponse] = useState<(TryCodingResponse & { text: string }) | null>(null);
   const [reviewing, setReviewing] = useState(false);
+  const [confirmed, setConfirmed] = useState(false);
 
   const run = async (e: React.FormEvent) => {
     e.preventDefault();
     setState('coding');
     setError(null);
     setReviewing(false);
+    setConfirmed(false);
     try {
       const r = await tryCoding(codebookId, text);
       setResponse({ ...r, text: text.trim() });
@@ -88,7 +90,7 @@ const TryCoder: React.FC<Props> = ({ codebookId, codebookIds, onCodebookChange }
     ? coded.map(i => i.primary_subcategory || i.primary_domain).join('; ')
     : 'not coded';
   const reviewBody = response
-    ? `Statement: "${response.text}"\nCoded as: ${summary} (codebook v${response.codebookVersion})\n\nWhat I expected instead, and why: `
+    ? `Statement: "${response.text}"\nCoded as: ${summary} (codebook v${response.codebookVersion})\n\nI'd code this as ___ because ___`
     : '';
 
   return (
@@ -97,7 +99,7 @@ const TryCoder: React.FC<Props> = ({ codebookId, codebookIds, onCodebookChange }
       <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900">Code an outcome statement</h1>
       <p className="mt-3 text-slate-600 leading-relaxed">
         Write one outcome your program aims for and see which codes it gets. This uses the same instructions and AI model as
-        the coding tool. Statements are not saved unless you send them as feedback.
+        the coding tool. Statements are not saved unless you send one in a note.
       </p>
 
       <form onSubmit={run} className="mt-8 rounded-xl border border-slate-200 bg-white p-5 shadow-sm space-y-4">
@@ -219,13 +221,29 @@ const TryCoder: React.FC<Props> = ({ codebookId, codebookIds, onCodebookChange }
 
           <div className="mt-6">
             {!reviewing ? (
-              <button
-                type="button"
-                onClick={() => setReviewing(true)}
-                className="text-sm font-medium text-slate-700 bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 rounded-lg px-3 py-1.5 transition-colors"
-              >
-                Was this right? Tell us
-              </button>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-sm text-slate-700 mr-1">Did it get this right?</span>
+                {confirmed ? (
+                  <span className="text-sm text-emerald-700" role="status">Thanks for checking.</span>
+                ) : (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() => setConfirmed(true)}
+                      className="text-sm font-medium text-slate-700 bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 rounded-lg px-3 py-1.5 transition-colors"
+                    >
+                      Looks right
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setReviewing(true)}
+                      className="text-sm font-medium text-slate-700 bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 rounded-lg px-3 py-1.5 transition-colors"
+                    >
+                      Not quite
+                    </button>
+                  </>
+                )}
+              </div>
             ) : (
               <FeedbackPanel
                 key={`${response.text}-${reviewTarget.type}-${reviewTarget.code}`}
@@ -236,6 +254,8 @@ const TryCoder: React.FC<Props> = ({ codebookId, codebookIds, onCodebookChange }
                 showsApproved
                 initialKind="comment"
                 initialBody={reviewBody}
+                intro="How would you code it? Your statement and its result are filled in below."
+                listedHere={false}
               />
             )}
           </div>

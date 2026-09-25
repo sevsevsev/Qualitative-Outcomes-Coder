@@ -92,8 +92,15 @@ describe('original codebook v1.1.0 additions', () => {
     expect(codes).toContain('11.5 Program Participation, Retention & Reach (Output Metric)');
   });
 
-  it('bumped the codebook version to 2.0.0 for the domain renumbering', () => {
-    expect(original.version).toBe('2.0.1');
+  it('bumped the codebook version to 2.1.0 for 3.6 Social Capital & Networks (CP-07-02)', () => {
+    expect(original.version).toBe('2.1.0');
+  });
+
+  it('adds 3.6 Social Capital & Networks to Domain 3', () => {
+    const domain3 = original.domains.find(d => d.code.startsWith('Domain 3.'))!;
+    expect(domain3.subcategories.map(s => s.code)).toContain('3.6 Social Capital & Networks');
+    expect(original.definitionsText).toContain('3.6 Social Capital & Networks');
+    expect(original.rulesText).toContain('SOCIAL / ECONOMIC MOBILITY');
   });
 });
 

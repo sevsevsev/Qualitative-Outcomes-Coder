@@ -20,6 +20,9 @@ const original = getCodebook('original');
 const rows = (kind: string) => map.filter(r => r.kind === kind);
 const number = (label: string) => label.replace(/^Domain /, '').split(/\.? /)[0];
 const text = (label: string) => label.replace(/^(Domain )?\d+(\.\d+)*\.? /, '');
+// Codes added after 2.0.0 have no v1.2.0 code, so the map never lands on them.
+const ADDED_SINCE_2_0_0 = new Set(['3.6 Social Capital & Networks']);
+const codesAt2_0_0 = allSubcategoryCodes(original).filter(c => !ADDED_SINCE_2_0_0.has(c));
 
 describe('v1.2.0 -> v2.0.0 code map', () => {
   it('covers every v1.2.0 domain and subcategory exactly once', () => {
@@ -30,7 +33,7 @@ describe('v1.2.0 -> v2.0.0 code map', () => {
 
   it('lands on every current domain and subcategory exactly once', () => {
     expect(rows('domain').map(r => r.new_label).sort()).toEqual([...allDomainCodes(original)].sort());
-    expect(rows('subcategory').map(r => r.new_label).sort()).toEqual([...allSubcategoryCodes(original)].sort());
+    expect(rows('subcategory').map(r => r.new_label).sort()).toEqual([...codesAt2_0_0].sort());
   });
 
   it('maps no two old codes to one new code, including SEL headers and proposed codes', () => {

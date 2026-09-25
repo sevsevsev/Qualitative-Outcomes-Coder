@@ -297,7 +297,7 @@ definition.
 
 **Gold:** G-042, G-043, G-044
 
-### CF-018: Whose stability? · proposed (CP-01-11)
+### CF-018: Whose stability? · active
 
 **Codes:** 12.5 · 12.7 · 9.8
 

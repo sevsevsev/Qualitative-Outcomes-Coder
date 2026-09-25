@@ -93,8 +93,8 @@ describe('original codebook v1.1.0 additions', () => {
     expect(codes).toContain('11.5 Program Participation, Retention & Reach (Output Metric)');
   });
 
-  it('bumped the codebook version to 2.2.0 for 9.9 Financial Capability (CP-01-05)', () => {
-    expect(original.version).toBe('2.2.0');
+  it('bumped the codebook version to 2.3.0 for the widened Domain 12 scope (CP-01-11)', () => {
+    expect(original.version).toBe('2.3.0');
   });
 
   it('adds 3.6 Social Capital & Networks to Domain 3', () => {

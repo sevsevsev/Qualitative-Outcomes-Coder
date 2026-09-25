@@ -430,7 +430,7 @@ Framework Basis: Learning Forward Standards & Epstein Type 3/6; Weikart Center Y
 
 Domain 12. Family Strengthening & Basic Needs
 Framework Basis: CSSP Strengthening Families Protective Factors Framework; Ascend at the Aspen Institute Two-Generation (2Gen) Approach; Epstein Type 1 (Parenting)
-(Note: This domain covers the CAREGIVER'S OWN knowledge, well-being, and material stability. It is distinct from 3.5, which covers the family's relationship WITH the program, and from 11.4, which covers the organization's systems for engaging families.)
+(Note: This domain covers the CAREGIVER'S OWN knowledge, well-being, and material stability -- and, for 12.5-12.7, the material stability of a young person living independently (e.g., transition-age youth leaving foster care, runaway/homeless youth, teen parents; cf. ACF National Youth in Transition Database outcomes). It is distinct from 3.5, which covers the family's relationship WITH the program, and from 11.4, which covers the organization's systems for engaging families.)
 12.1 Parenting Knowledge & Practices
    - Definition: Caregivers' knowledge of child development or use of specific parenting practices (e.g., positive discipline, home literacy routines).
    - Source Framework: CSSP Strengthening Families (Knowledge of Parenting and Child Development); Epstein Type 1 (Parenting).
@@ -455,9 +455,9 @@ Framework Basis: CSSP Strengthening Families Protective Factors Framework; Ascen
    - Source Framework: USDA ERS Household Food Security Survey Module.
    - Example: "Families will report reduced food insecurity and increased access to healthy food."
 12.7 Housing Stability
-   - Definition: Outcomes related to a family securing or maintaining safe, stable housing.
+   - Definition: Outcomes related to a family, or a young person living independently, securing or maintaining safe, stable housing.
    - Source Framework: McKinney-Vento Act (housing instability definition).
-   - Example: "Families will secure stable, safe housing within 90 days of program enrollment."
+   - Example: "Families will secure stable, safe housing within 90 days of program enrollment." OR "Youth aging out of foster care will secure stable housing by age 21."
 `;
 
 const rulesText = `
@@ -585,7 +585,7 @@ CRITICAL for Formatting:
 
 export const originalCodebook: Codebook = {
   id: 'original',
-  version: '2.2.0',
+  version: '2.3.0',
   label: 'Youth Outcomes Codebook',
   // The prompt keeps the old name so renaming the codebook (2026-09-24)
   // did not change what the model is sent.
@@ -926,8 +926,8 @@ export const originalCodebook: Codebook = {
     },
     {
       code: "Domain 12. Family Strengthening & Basic Needs",
-      hint: "The CAREGIVER'S OWN knowledge/well-being/stability -- distinct from 3.5 (family-program relationship) and 11.4 (org's family-engagement systems).",
-      description: "Outcomes about caregivers and households: parenting knowledge and practices, caregiver well-being and support networks, the home learning environment, and economic, food and housing stability.",
+      hint: "The CAREGIVER'S OWN knowledge/well-being/stability -- or, for 12.5-12.7, a young person living independently. Distinct from 3.5 (family-program relationship) and 11.4 (org's family-engagement systems).",
+      description: "Outcomes about caregivers and households: parenting knowledge and practices, caregiver well-being and support networks, the home learning environment, and economic, food and housing stability -- including for young people living on their own.",
       subcategories: [
         { code: "12.1 Parenting Knowledge & Practices" },
         {

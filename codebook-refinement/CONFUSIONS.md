@@ -229,9 +229,9 @@ source for Domain 5.
 
 **Gold:** G-032, G-033
 
-### CF-014: Interest phases · proposed (CP-01-04)
+### CF-014: Interest phases · active
 
-**Codes:** 2.2 · proposed **2.6 Sustained & Individual Interest** · 2.3 · 6.3
+**Codes:** 2.2 · **2.6 Sustained & Individual Interest** · 2.3 · 6.3
 
 **Rule:**
 

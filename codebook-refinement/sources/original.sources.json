@@ -184,13 +184,17 @@
           "component": "Phase 1: triggered situational interest"
         },
         {
+          "code": "2.6",
+          "component": "Phases 2-4: maintained situational, emerging individual, and well-developed individual interest"
+        },
+        {
           "code": "2.3",
           "component": "Cited in the codebook as 'Hidi & Renninger (Phase 3/4)' for utility value. The cycle-01 verifier found phases 3-4 describe individual interest, not utility value.",
           "unsupported": true,
           "open_cp": "CP-01-04"
         }
       ],
-      "notes": "The codebook also cites 'Hidi & Renninger (Phase 3/4)' for 2.3 Utility Value. Phases 3 and 4 are about individual interest, not utility value, so that citation is misapplied (CP-01-04). Phases 2–4 currently have no subcategory."
+      "notes": "The codebook also cites 'Hidi & Renninger (Phase 3/4)' for 2.3 Utility Value. Phases 3 and 4 are about individual interest, not utility value, so that citation is misapplied (CP-01-04)."
     },
     {
       "id": "eccles-expectancy-value",

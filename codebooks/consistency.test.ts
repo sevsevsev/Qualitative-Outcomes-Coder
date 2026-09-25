@@ -93,8 +93,14 @@ describe('original codebook v1.1.0 additions', () => {
     expect(codes).toContain('11.5 Program Participation, Retention & Reach (Output Metric)');
   });
 
-  it('bumped the codebook version to 2.3.0 for 12.7 covering independent young people (CP-01-11)', () => {
-    expect(original.version).toBe('2.3.0');
+  it('bumped the codebook version to 2.4.0 for 2.6 Sustained & Individual Interest (CP-01-04)', () => {
+    expect(original.version).toBe('2.4.0');
+  });
+
+  it('adds 2.6 Sustained & Individual Interest to Domain 2', () => {
+    const domain2 = original.domains.find(d => d.code.startsWith('Domain 2.'))!;
+    expect(domain2.subcategories.map(s => s.code)).toContain('2.6 Sustained & Individual Interest');
+    expect(original.definitionsText).toContain('2.6 Sustained & Individual Interest');
   });
 
   it('adds 3.6 Social Capital & Networks to Domain 3', () => {

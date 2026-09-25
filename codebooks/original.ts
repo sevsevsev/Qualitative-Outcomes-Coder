@@ -150,6 +150,11 @@ Framework Basis: Gholdy Muhammad (Joy) & Hidi/Renninger (Interest); National Cor
    - Source Framework: National Core Arts Standards (Artistic Processes: Performing/Presenting/Producing, Responding, Connecting).
    - Note: Use 2.4 for the act of creating; use 2.5 for presenting/performing finished work or responding to art. A demonstrated skill or knowledge gain in the art form (technique, vocabulary) goes to 1.9.
    - Example: "Youth will present their artwork in a public exhibition."
+2.6 Sustained & Individual Interest
+   - Definition: Interest that persists, deepens, or becomes the youth's own -- returning to a topic or activity over time, pursuing it beyond the program, or describing it as a passion.
+   - Source Framework: Hidi & Renninger (2006), Four-Phase Model of Interest Development (Phases 2-4: maintained situational, emerging individual, and well-developed individual interest).
+   - Note: Use 2.2 for momentary curiosity or trying something new. Use 2.3 when the youth sees the usefulness/relevance of learning. Use 6.3 for actual participation in outside activities.
+   - Example: "Youth will discover a new passion for dance." OR "Participants will continue pursuing robotics after the program ends."
 
 Domain 3. Belonging, Relationships & School Connectedness
 Framework Basis: CDC School Connectedness, Learning for Justice, Epstein's Framework
@@ -585,7 +590,7 @@ CRITICAL for Formatting:
 
 export const originalCodebook: Codebook = {
   id: 'original',
-  version: '2.3.0',
+  version: '2.4.0',
   label: 'Youth Outcomes Codebook',
   // The prompt keeps the old name so renaming the codebook (2026-09-24)
   // did not change what the model is sent.
@@ -673,10 +678,13 @@ export const originalCodebook: Codebook = {
     {
       code: "Domain 2. Joy, Interest & Motivation in Learning",
       hint: "EXPERIENCES/STATES (e.g. \"feels happy\"), not skills -- see Domain 4 for SEL skills.",
-      description: "Outcomes about how young people feel about learning: enjoyment, curiosity, seeing learning as meaningful, and expressing themselves by creating, performing or responding to creative work.",
+      description: "Outcomes about how young people feel about learning: enjoyment, curiosity, interest that lasts and becomes their own, seeing learning as meaningful, and expressing themselves by creating, performing or responding to creative work.",
       subcategories: [
         { code: "2.1 Joy & Emotional Wellness" },
-        { code: "2.2 Triggered Situational Interest (Curiosity)" },
+        {
+          code: "2.2 Triggered Situational Interest (Curiosity)",
+          hint: "Phase 1 only: interest sparked in the moment. For lasting/deepening interest or a 'passion', use 2.6.",
+        },
         { code: "2.3 Value & Meaning (Utility Value)" },
         {
           code: "2.4 Creative Expression & Making",
@@ -685,6 +693,10 @@ export const originalCodebook: Codebook = {
         {
           code: "2.5 Performance, Presentation & Artistic Response",
           hint: "vs 2.4: use 2.5 for performing/presenting/exhibiting finished work or responding to art, not the act of creating it. A stated skill or knowledge gain in the art form -> 1.9.",
+        },
+        {
+          code: "2.6 Sustained & Individual Interest",
+          hint: "Lasting or self-owned interest (Hidi & Renninger phases 2-4). Momentary curiosity -> 2.2.",
         },
       ],
     },

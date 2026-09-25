@@ -19,7 +19,7 @@
 | Codes touched | 2.6 (new); hint on 2.2; Domain 2 description |
 | Version bump | MINOR |
 | Requirement served | R2 breadth, R3 (CF-014) |
-| Status | ready-to-test: applied on a draft PR for a preview run (not approved) |
+| Status | approved (Severin, 2026-09-25; S213 and S214 gold moved to 2.6) |
 | Enum cost | +1 (primary_subcategory). Footprint 146 -> 147. Test ceiling < 180; S2.3 stop line 165 |
 
 ## Problem
@@ -219,4 +219,18 @@ utility value in the Wigfield & Eccles (2000) paper itself.
 
 ## Judge result
 
-Not run.
+Codebook 2.4.0, two preview runs of the 255 design rows, scored against the 2.3.0
+baseline with `scripts/scoreAppExport.ts`:
+
+| | Run 1 | Run 2 |
+|---|---|---|
+| 2.3.0 baseline, lenient | 93.3% | 93.3% |
+| This CP, lenient (gold before the S213/S214 ruling) | 92.2% | 92.2% |
+
+- 2.6 was used for exactly S213 and S214, in both runs. Run-to-run kappa 0.976.
+- S213 2.2 -> 2.6: the intended correction (Severin had marked it a codebook gap).
+- S214 6.3 -> 2.6: Severin ruled 2.6 is correct, keeping 6.3 as an alternate.
+- S017 (gold 7.1, a no-good-fit row) -> 10.2 in both runs. It also flipped under
+  the first CP-01-11 wording and seems to shift with any prompt change. Severin
+  approved with this flip on record.
+- With the two gold moves, both runs score 92.9% (S017 is the only change from 2.3.0).

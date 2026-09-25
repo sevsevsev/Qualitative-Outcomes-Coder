@@ -27,7 +27,7 @@
 | Codes touched | 9.9 (new); rulesText tie-breaker 9; Domain 9 Framework Basis, hint, and description; Deferred block |
 | Version bump | MINOR |
 | Requirement served | R2 breadth, R3 tie-breakers |
-| Status | ready-to-test: applied on a draft PR for a preview run (not approved) |
+| Status | judged PASS (preview runs 2026-09-25); **approved by Severin 2026-09-25** (decision card in the "Next phase of codebook refinement" thread); applied in 2.2.0 on PR #27 |
 | Enum cost | +1 (primary_subcategory). Footprint 145 -> 146 alone, or 146 -> 147 if CP-01-04 lands first. Test ceiling < 180; S2.3 stop line 165 |
 
 ## Problem
@@ -267,4 +267,22 @@ None.
 
 ## Judge result
 
-Not run.
+**PASS**, scored 2026-09-25 with `scripts/scoreAppExport.ts` on the 255 adjudicated design rows of
+`gold/gold-cycle02.csv`. Both runs were done in the app, not by the eval runner, because sessions can't reach Gemini.
+Held-out rows were not used.
+
+| | Baseline 2.1.0 (run 1 / run 2) | Candidate 2.2.0 (run 1 / run 2) |
+|---|---|---|
+| Lenient accuracy | 90.6% / 90.6% | 89.8% / 90.6% |
+| Fit rows (n=201) | 94.5% / 95.0% | 94.5% / 95.5% |
+| Codebook-gap rows (n=54) | 75.9% / 74.1% | 72.2% / 72.2% |
+| Run-to-run agreement | 98.8% | 96.9% |
+
+- **9.9 use.** Both runs coded exactly S044, S089, S092, S095, S105 and S168 as 9.9, and nothing else.
+- **Why the score doesn't move.** Those rows' gold predates 9.9 (12.5, 1.3, 4.2.4), so the fix counts as a miss until Severin re-checks them.
+- **Named flips (S4.4):**
+  - S089 1.3 -> 9.9 (his note names 9.9).
+  - S044, S092, S095, S105, S168 were already misses in the baseline.
+- **Other "regressions."** S082 (6.2 -> 4.4.5) and S110 (7.2 -> 7.1) changed in run 1 only and matched the baseline in run 2. These are run-to-run noise in rows the CP doesn't touch.
+
+Raw exports and scores: `/mnt/project-files/eval/cp-scoring/` (`baseline-run{1,2}.csv`, `cp-01-05-run{1,2}.csv`, `baseline.json`, `cp-01-05.json`).

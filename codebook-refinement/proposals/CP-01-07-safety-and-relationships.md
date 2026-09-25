@@ -178,6 +178,15 @@ have no verified excerpt yet (CLAUDE.md: a citation needs evidence), and the mod
 coding does not depend on it. An independent verifier was asked to check the
 Empowerment-category claim; the line goes in only if that comes back SUPPORTED.
 
+Verifier result (2026-09-25, blind to this CP): **PARTIAL**. The Search Institute
+page has all four asset names, but the fetch could not confirm from the primary
+page that they are grouped as Empowerment. The four-asset Empowerment grouping was
+confirmed only on a Search Institute-copyrighted reprint (Purdue Extension, 40
+Assets list ages 12-18), excerpt: "9. Service to others—Young person serves in the
+community one hour or more per week. 10. Safety—Young person feels safe at home,
+school, and in the neighborhood." The Source Framework line stays out until a human
+or a fetch of Search Institute's own PDF confirms the grouping (S1.5).
+
 ## Judge result
 
 Not run.

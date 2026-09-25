@@ -93,7 +93,7 @@ describe('original codebook v1.1.0 additions', () => {
     expect(codes).toContain('11.5 Program Participation, Retention & Reach (Output Metric)');
   });
 
-  it('bumped the codebook version to 2.3.0 for the widened Domain 12 scope (CP-01-11)', () => {
+  it('bumped the codebook version to 2.3.0 for 12.7 covering independent young people (CP-01-11)', () => {
     expect(original.version).toBe('2.3.0');
   });
 

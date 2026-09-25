@@ -430,7 +430,7 @@ Framework Basis: Learning Forward Standards & Epstein Type 3/6; Weikart Center Y
 
 Domain 12. Family Strengthening & Basic Needs
 Framework Basis: CSSP Strengthening Families Protective Factors Framework; Ascend at the Aspen Institute Two-Generation (2Gen) Approach; Epstein Type 1 (Parenting)
-(Note: This domain covers the CAREGIVER'S OWN knowledge, well-being, and material stability -- and, for 12.5-12.7, the material stability of a young person living independently (e.g., transition-age youth leaving foster care, runaway/homeless youth, teen parents; cf. ACF National Youth in Transition Database outcomes). It is distinct from 3.5, which covers the family's relationship WITH the program, and from 11.4, which covers the organization's systems for engaging families.)
+(Note: This domain covers the CAREGIVER'S OWN knowledge, well-being, and material stability. It is distinct from 3.5, which covers the family's relationship WITH the program, and from 11.4, which covers the organization's systems for engaging families.)
 12.1 Parenting Knowledge & Practices
    - Definition: Caregivers' knowledge of child development or use of specific parenting practices (e.g., positive discipline, home literacy routines).
    - Source Framework: CSSP Strengthening Families (Knowledge of Parenting and Child Development); Epstein Type 1 (Parenting).
@@ -926,8 +926,8 @@ export const originalCodebook: Codebook = {
     },
     {
       code: "Domain 12. Family Strengthening & Basic Needs",
-      hint: "The CAREGIVER'S OWN knowledge/well-being/stability -- or, for 12.5-12.7, a young person living independently. Distinct from 3.5 (family-program relationship) and 11.4 (org's family-engagement systems).",
-      description: "Outcomes about caregivers and households: parenting knowledge and practices, caregiver well-being and support networks, the home learning environment, and economic, food and housing stability -- including for young people living on their own.",
+      hint: "The CAREGIVER'S OWN knowledge/well-being/stability -- distinct from 3.5 (family-program relationship) and 11.4 (org's family-engagement systems).",
+      description: "Outcomes about caregivers and households: parenting knowledge and practices, caregiver well-being and support networks, the home learning environment, and economic, food and housing stability.",
       subcategories: [
         { code: "12.1 Parenting Knowledge & Practices" },
         {

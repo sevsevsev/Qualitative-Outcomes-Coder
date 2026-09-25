@@ -1,4 +1,14 @@
-# CP-01-11: Let Domain 12 cover an independent young person's own housing and economic stability
+# CP-01-11: Let 12.7 cover an independent young person's own housing
+
+> **Narrowed after the first test (2026-09-25).** The first version widened the
+> Domain 12 scope note, hint and description (12.5-12.7). In two preview runs on the
+> 255 design rows it scored 92.5% / 92.2% lenient vs 92.2% / 92.9% on 2.2.0. S191
+> became stably 12.5, but S017 (newcomer families' school-enrollment rights, gold 7.1,
+> alt 12.1) went from right in both baseline runs to wrong in both (1.5, 10.2), which
+> fails the S4.4 regression gate. Severin chose to rework it: only the 12.7
+> definition and example change now. The Domain 12 note, hint and description stay
+> as in 2.2.0, and the 12.5 registry support is dropped. The first version's text is
+> kept below as history.
 
 > **Re-based onto codebook 2.1.0 (2026-09-25).**
 >
@@ -18,10 +28,10 @@
 | Field | Value |
 |---|---|
 | Type | DEFINITION_SCOPE |
-| Codes touched | Domain 12 scope note, hint, and description; 12.7 definition and example (12.5 and 12.6 are covered by the scope note) |
+| Codes touched | 12.7 definition and example only (narrowed; the first version also changed the Domain 12 scope note, hint and description) |
 | Version bump | MINOR (scope change) |
 | Requirement served | R2 (foster care / transition-age youth, runaway & homeless youth) |
-| Status | ready-to-test: applied on a draft PR for a preview run (not approved) |
+| Status | ready-to-test (narrowed version): applied on a draft PR for a preview run (not approved) |
 | Enum cost | +0 |
 
 ## Problem
@@ -60,6 +70,10 @@ The codes are right. The definition is what's wrong.
   (footprint 145 -> 147+) and duplicate 12.5 and 12.7.
 
 ## Change
+
+**Narrowed version (under test):** only the 12.7 block below. The Domain 12
+note, hint and description changes further down were in the first version and
+are no longer applied.
 
 **Domain 12 note (definitionsText).**
 
@@ -132,10 +146,12 @@ well-being, home practices, or material/economic stability") contrasts Domain 12
 with 3.5 and 11.4 and doesn't forbid a youth subject. It is left alone to keep this
 CP to a scope change. See Open issues.
 
-**CONFUSIONS.md**: CF-018 already states the rule. When this is applied, change its
+**CONFUSIONS.md** (first version): CF-018 already states the rule. The narrowed
+version leaves CF-018 proposed, because its 12.5 half is no longer in the codebook. When this is applied, change its
 heading `· proposed (CP-01-11)` to `· active`.
 
-**Registry** (`acf-nytd`, verified).
+**Registry** (`acf-nytd`, verified). The narrowed version only removes
+`"proposed": true` from the 12.7 support.
 
 - Remove `"proposed": true` from its 12.7 support.
 - Add `{ "code": "12.5", "component": "Financial self-sufficiency (youth's own economic stability)" }`.
@@ -183,4 +199,16 @@ None.
 
 ## Judge result
 
-Not run.
+First version (codebook 2.3.0, two preview runs, scored against baseline-2.2.0 with
+`scripts/scoreAppExport.ts`, design set only):
+
+| | Run 1 | Run 2 |
+|---|---|---|
+| 2.2.0 baseline, lenient | 92.2% | 92.9% |
+| First version, lenient | 92.5% | 92.2% |
+
+- Improved: S191 12.5 in both runs (was one).
+- Regressed in both runs: S017 (gold 7.1, alt 12.1 -> 1.5 / 10.2). Fails S4.4.
+- One-run noise: S082, S110, S131, S193.
+
+Narrowed version: not run yet.

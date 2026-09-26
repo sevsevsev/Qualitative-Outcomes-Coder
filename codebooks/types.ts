@@ -78,6 +78,18 @@ export interface Codebook {
    * `label`. Lets the display name change without changing the prompt.
    */
   promptLabel?: string;
+  /**
+   * Set when a codebook is retired. A deprecated codebook stays in the
+   * registry so saved sessions, old exports, eval scripts and the Codebook
+   * tab's direct links still resolve its codes, but it is no longer offered
+   * in any codebook picker (see SELECTABLE_CODEBOOK_LIST).
+   */
+  deprecated?: {
+    /** Date the codebook was retired (YYYY-MM-DD). */
+    since: string;
+    /** Id of the codebook that replaces it. */
+    replacedBy: string;
+  };
   domains: DomainDefinition[];
   /**
    * Process/output-format instructions for the model: how to split

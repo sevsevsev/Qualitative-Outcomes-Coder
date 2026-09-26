@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { processBatch, atomicJsonToCSV } from './services/geminiService.js';
 import { BatchAnalysisResult, LoadingState, CodebookType } from './types.js';
-import { CODEBOOK_LIST, DEFAULT_CODEBOOK_ID } from './codebooks/index.js';
+import { CODEBOOK_REGISTRY, DEFAULT_CODEBOOK_ID, isSelectableCodebook, SELECTABLE_CODEBOOK_LIST } from './codebooks/index.js';
 import { loadReviewState, clearReviewState, SavedReviewState } from './services/reviewStorage.js';
 import ReviewDashboard from './components/ReviewDashboard.js';
 import ProcessingStatus from './components/ProcessingStatus.js';
@@ -64,6 +64,8 @@ const App: React.FC = () => {
     setLogs([]);
     setProcessedCount(0);
     setTotalCount(0);
+    // A resumed session may use a retired codebook; new runs go back to one the picker offers.
+    setCodebook(current => (isSelectableCodebook(current) ? current : DEFAULT_CODEBOOK_ID));
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -180,7 +182,7 @@ const App: React.FC = () => {
           <div className="max-w-4xl mx-auto w-full mb-6 p-4 bg-blue-50 border border-blue-200 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="text-sm text-blue-900">
               <span className="font-semibold">Unsaved review session found</span> from{' '}
-              {new Date(restorableSession.savedAt).toLocaleString()} ({restorableSession.items.length} items, codebook: {restorableSession.codebookType}).
+              {new Date(restorableSession.savedAt).toLocaleString()} ({restorableSession.items.length} items, codebook: {CODEBOOK_REGISTRY[restorableSession.codebookType].label}{CODEBOOK_REGISTRY[restorableSession.codebookType].deprecated ? ', retired: you can review and export it, and new runs use the current codebook' : ''}).
             </div>
             <div className="flex gap-2 flex-shrink-0">
               <button
@@ -229,7 +231,7 @@ const App: React.FC = () => {
                   onChange={(e) => setCodebook(e.target.value as CodebookType)}
                   className="w-full sm:w-1/2 p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-slate-900"
                 >
-                  {CODEBOOK_LIST.map(cb => (
+                  {SELECTABLE_CODEBOOK_LIST.map(cb => (
                     <option key={cb.id} value={cb.id}>{cb.label}</option>
                   ))}
                 </select>

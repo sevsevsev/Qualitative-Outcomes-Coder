@@ -1,7 +1,10 @@
 # Proposed Youth Outcomes Codebook (3.0 draft)
 
-**Status: draft for Severin's review. Not applied.** Nothing here changes
-`codebooks/original.ts`, the prompt or the gold. Phase 4 starts only after approval.
+**Status: approved by Severin on 2026-09-26 and built as codebook 3.0 (CP-08-01).**
+This file is the approved proposal as reviewed. The live 3.x source of truth is now
+`codebooks/youthOutcomesV3.data.ts`. The build re-reviewed the Y3 and Y5 anchors, which
+changed the sources of Y3.3, Y3.4 and Y5.1 to Y5.6, and the fidelity of Y3.4, Y5.1 and Y5.4
+(`codebook-refinement/DEVIATIONS.md`).
 
 - **Baseline:** Youth Outcomes Codebook 2.4.0 on `main` (12 domains, 87 codes).
 - **Proposed:** 3 parts, **13 domains, 39 categories, 98 codes**.

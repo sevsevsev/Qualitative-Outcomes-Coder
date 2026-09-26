@@ -29,7 +29,7 @@
 | Codes touched | none directly (rulesText only) |
 | Version bump | PATCH |
 | Requirement served | R3 |
-| Status | testing (codebook 2.5.2, preview runs pending). Tested last and alone: it changes how *every* statement gets reasoned about. |
+| Status | approved by Severin 2026-09-26 (codebook 2.5.2). Tested last and alone. |
 | Enum cost | +0 |
 | Framework deviation | none (rulesText procedure only; no code departs from its domain framework) |
 
@@ -121,4 +121,20 @@ Could affect all rows. Watch the regression list. No new proposed rows.
 
 ## Judge result
 
-Not run.
+Scored on adjudicated gold: 255 design rows, two preview runs each. The held-out 90 were not
+used (reserved for phase 2). The 94-row validation set was not run, because it is not
+adjudicated.
+
+| | Run 1 | Run 2 | Unstable rows | Kappa |
+|---|---|---|---|---|
+| 2.5.1 baseline (lenient) | 93.3% | 92.5% | 6 | 0.976 |
+| 2.5.2 with this CP (lenient) | 93.3% | 92.5% | 3 | 0.988 |
+
+- Accuracy is unchanged and run-to-run consistency improves.
+- Only row that regressed in both runs: S254 ("explain how a bill becomes a law", gold 7.1).
+  It was already split on 2.5.1 (7.1 / 1.3) and is now 1.3 in both runs. The 1.3 definition
+  names "civics and government", and rule 5b sends civics learning to 1.3, so this is a
+  1.3/7.1 overlap in the codebook, not a model error. Severin approved on 2026-09-26 and
+  added 1.3 as an accepted alternate on S254 (gold stays 7.1). The 1.3/7.1 overlap goes to
+  the backlog.
+- S099 (professional network, watched above) did not change.

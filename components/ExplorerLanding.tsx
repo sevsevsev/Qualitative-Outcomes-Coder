@@ -3,7 +3,7 @@ import { CODEBOOK_REGISTRY, CodebookType } from '../codebooks/index.js';
 import { buildExplorerCodebook } from '../services/codebookExplorer.js';
 import { explorerHref } from './CodebookExplorer.js';
 import CodebookSunburst from './CodebookSunburst.js';
-import { DISTRICT, DashboardLink, OFFICE, WHO_IT_HELPS } from './workflow/BiggerPicture.js';
+import { DISTRICT, DashboardLink, OFFICE } from './workflow/BiggerPicture.js';
 
 // First screen of the public explorer site: what the codebook is, why it
 // exists, and what visitors can do here. The numbers are read from the live
@@ -81,30 +81,19 @@ const ExplorerLanding: React.FC<Props> = ({ siteName, codebookId, tryHref, bigPi
         <CodebookSunburst data={data} />
       </section>
 
-      {/* Vision: where the codebook fits */}
-      <section className="mt-16 rounded-2xl bg-white p-6 sm:p-8 shadow-sm ring-1 ring-slate-200/70">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
-          <div>
-            <h2 className="text-2xl font-semibold tracking-tight text-slate-900">From who’s doing what, to what programs aim for</h2>
-            <p className="mt-3 text-slate-600 leading-relaxed">
-              Many organizations serve Philadelphia’s young people, often without knowing who else works in the same school or
-              toward the same goals. Our public <DashboardLink /> already shows who is doing what, and where. We plan to add what
-              each program is trying to achieve, coded with this codebook, so it’s clear where many programs share a goal and
-              where few or none do.
-            </p>
-            <a href={bigPictureHref} className="mt-5 inline-flex items-center gap-1 font-semibold text-blue-700 hover:text-blue-800">
-              See how it fits together <span aria-hidden>→</span>
-            </a>
-          </div>
-          <ul className="flex flex-col gap-3">
-            {WHO_IT_HELPS.map(([who, what]) => (
-              <li key={who} className="border-t border-slate-100 pt-3 first:border-0 first:pt-0">
-                <div className="text-sm font-semibold text-slate-900">{who}</div>
-                <p className="text-sm text-slate-600 leading-relaxed">{what}</p>
-              </li>
-            ))}
-          </ul>
+      {/* Vision: a short pointer to the bigger picture page, not a copy of it */}
+      <section className="mt-16 rounded-2xl bg-white p-6 sm:p-8 shadow-sm ring-1 ring-slate-200/70 flex flex-col md:flex-row md:items-end gap-6">
+        <div className="flex-1 max-w-3xl">
+          <h2 className="text-xl font-semibold tracking-tight text-slate-900">Part of a bigger picture</h2>
+          <p className="mt-2 text-slate-600 leading-relaxed">
+            Our public <DashboardLink /> shows which programs work in which schools. Adding what each program aims for, coded
+            with this codebook, will help partners, funders and policymakers see shared goals and the gaps no program is
+            covering yet.
+          </p>
         </div>
+        <a href={bigPictureHref} className="shrink-0 inline-flex items-center gap-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold px-4 py-2 text-sm transition-colors">
+          See how it fits together <span aria-hidden>→</span>
+        </a>
       </section>
 
       {/* Why */}

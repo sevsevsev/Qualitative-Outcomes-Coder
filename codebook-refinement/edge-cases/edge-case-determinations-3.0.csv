@@ -1,0 +1,74 @@
+row_id,outcome_text,old_expectation_in_3_0_codes,coder_a_3_0,coder_b_3_0,determination,pattern,note
+E001,Students will strengthen their social-emotional skills.,UNCODED or Domain 4 umbrella (none exists),Y4.2 (low),none (none),uncoded (CP-09-07) or new Y4.13 (option B),P5 generic SEL,No skill named. Coders split (Y4.2 low / none).
+E002,Soft Skills — Social-emotional skills,same as above,none (none),none (none),uncoded,P5 generic SEL,Label form; both coders uncoded.
+E003,Youth will demonstrate growth in all five CASEL competencies.,"one split per competency, or umbrella",Y4.2 (low),none (none),uncoded (CP-09-07) or Y4.13,P5 generic SEL,"""All five"" names no skill; do not invent five splits."
+E004,Students will use a breathing strategy to calm down when angry.,Y4.2 (merge),Y4.2 (high),Y4.2 (high),Y4.2,control,Both coders agree.
+E005,Participants will build life skills.,"no home; Y4.10 (merge) / Y7.3 / Y5.5 (split; also Y5.4 Confidence, Self-Efficacy & Self-Worth) all used in live run",Y7.7 (low),Y7.7 (medium),Y7.7,closed by 3.0,Matches held-out N055 gold (life skills -> Y7.7).
+E006,Youth will report improved overall well-being.,no home; Y2.1 vs Y8.6 vs Y8.1 (split; also Y8.2 Motor & Sport Skills | Y8.3 Health Knowledge & Safety Skills | Y8.5 Health Care Access & Condition Management) all used,Y8.7 (high),Y8.7 (high),Y8.7,closed by 3.0,
+E007,Improved academic performance,11.* (no general code),Y1.15 (high),Y1.15 (high),Y1.15,closed by 3.0,Rule 9: no subject named.
+E008,Students' grades will improve in core subjects.,11.* (no GPA/grades code),Y1.15 (high),Y1.15 (high),Y1.15,closed by 3.0,Grades go to Y1.15 even with subjects named.
+E009,Increase in healthy behaviors,7.* (no general health-behavior code),Y8.1 (medium),Y8.1 (medium),Y8.1,closed by 3.0,
+E010,Fund 20% of operations through government and foundation grants.,UNCODED (decided 2026-09-23: org-level outcomes are out of scope),A3.1 (low),A3.1 (low),uncoded (CP-09-05),P6 organization,Both coders forced A3.1 low; 2026-09-23 decision says out of scope.
+E011,Short-Term Fiscal Stability,UNCODED (decided 2026-09-23: org-level outcomes are out of scope),none (none),none (none),uncoded,P6 organization,
+E012,Improved organizational visibility and brand recognition in Philadelphia.,UNCODED (decided 2026-09-23: org-level outcomes are out of scope),A2.5 (low),A2.1 (low),uncoded (CP-09-05),P6 organization,Coders forced A2.5 / A2.1 low.
+E013,Evaluation results show clear evidence linking the program to academic outcomes.,UNCODED (decided 2026-09-23: org-level outcomes are out of scope),none (none),none (none),uncoded,P6 organization,A statement about the evaluation.
+E014,Improved data-sharing and reporting with school partners.,A3.1 (split; also A3.2 Cross-Sector Partnerships),A3.2 (high),A3.2 (high),A3.2,closed by 3.0,A3.1 excludes data sharing.
+E015,"Neighbors will feel healthier physically, mentally, and emotionally.",Y8.1 (split; also Y8.2 Motor & Sport Skills | Y8.3 Health Knowledge & Safety Skills | Y8.5 Health Care Access & Condition Management) / Y8.6 with target_population community_neighborhood,F1.4 (low),Y8.1 (low) ; Y8.7 (low),"A3.3 low; gap, leave alone",P9 community,Neighbors are not participants; rare.
+E016,Our communities become more accepting of cultural differences.,Y4.5 is a youth skill; no community-level code,A3.3 (medium),Y4.5 (low),A3.3 medium,P9 community,Community norms are community conditions; Y4.5 is a youth skill.
+E017,"Healthier, greener, safer neighborhoods.","no home; Y6.5 / Y8.10 (split; also Y3.1 Belonging & Mattering | Y5.6 Agency, Self-Determination & Self-Advocacy) / Y8.12 used",A3.3 (low) ; A3.3 (low) ; A3.3 (medium),Y8.1 (low) ; Y6.6 (low) ; A3.3 (low),"A3.3 low; gap, leave alone",P9 community,
+E018,Increased audience attendance at community concerts.,A2.5 (reach) vs Y2.5 (merge),A2.5 (high),A2.5 (medium),A2.5,P3 arts appreciation,Audience counts of non-participants are reach.
+E019,Teachers report increased job satisfaction.,no home; A3.1 (split; also A3.2 Cross-Sector Partnerships) used in live run,A1.3 (medium),A1.3 (medium),A1.3,closed by 3.0,Staff well-being.
+E020,"Volunteer coaches have a joyful, meaningful experience.",no home; A1.1 used,A1.3 (medium),A1.3 (medium),A1.3 medium,closed by 3.0,Volunteers sit in A1.
+E021,Teaching artists earn a sustainable income from program work.,no home; A3.1 (split; also A3.2 Cross-Sector Partnerships) / Y7.5 candidates,A1.3 (medium),A1.3 (low),A1.3 low,leave alone,Staff pay has no code; rare.
+E022,Teachers will learn three new arts-integration strategies.,A1.1,A1.1 (high),A1.1 (high),A1.1,control,
+E023,Teachers will use arts-integration strategies in at least two lessons per month.,A1.2,A1.2 (high),A1.2 (high),A1.2,control,
+E024,Students will increase their appreciation of classical music.,Y2.5 (merge) (responding) or Y2.4,Y2.5 (medium),Y2.1 (medium),Y2.5 (CP-09-04),P3 arts appreciation,Coders split Y2.5 / Y2.1; held-out N005 gold is Y2.5.
+E025,"Students will improve their technical dance skills (turns, extensions, alignment).",no home; Y2.5 (merge) / Y1.5 (split; also Y6.2 Civic Knowledge | Y8.3 Health Knowledge & Safety Skills) / Y7.4 / Y8.1 (split; also Y8.2 Motor & Sport Skills | Y8.3 Health Knowledge & Safety Skills | Y8.5 Health Care Access & Condition Management) candidates,Y1.6 (high),Y1.6 (high),Y1.6,closed by 3.0,
+E026,Students will feel comfortable visiting museums and cultural institutions.,Y3.1 / Y2.6 / A2.4 used,Y3.1 (low),Y2.1 (low),Y3.1 (CP-09-04),P3 arts appreciation,Held-out N027 gold: feeling welcome in arts spaces -> Y3.1.
+E027,Preserve and celebrate Afro-Brazilian cultural traditions for future generations.,Y5.2 (the youth's own identity) is a stretch,Y5.2 (low),Y5.2 (low),"Y5.2 low; gap, leave alone",leave alone,"A community mission, not a participant result."
+E028,Students will choreograph an original dance piece.,Y2.5 (merge),Y2.5 (high),Y2.5 (high),Y2.5,control,
+E029,Students will perform their original dance piece at a spring showcase.,Y2.5 (merge),Y2.5 (high),Y2.5 (high),Y2.5,control,
+E030,Youth will create and follow a personal budget.,no home (deferred); Y1.3 / Y7.3 / F2.1 used,Y7.6 (high),Y7.6 (high),Y7.6,closed by 3.0,
+E031,Graduates will complete college with manageable student-loan debt.,no home; Y7.2 / Y1.18 candidates,Y1.18 (high) ; Y7.6 (medium),Y1.18 (high) ; Y7.6 (low),Y1.18 ; Y7.6,closed by 3.0,Split; debt is the graduate's own finances.
+E032,Families will enroll in SNAP and WIC benefits.,F2.1,F2.1 (high),F2.1 (high),F2.1,control,
+E033,Students will take at least one action to protect local wildlife.,no home (deferred); Y6.5 / Y6.1 / Y4.10 (merge) used,Y6.6 (high),Y6.6 (high),Y6.6,closed by 3.0,
+E034,Reduction in food waste from school meals.,no home; A3.1 (split; also A3.2 Cross-Sector Partnerships) used,Y6.6 (medium),Y6.6 (low),Y6.6 medium,closed by 3.0,
+E035,Students will explain how photosynthesis works in the school garden.,Y1.5 (split; also Y6.2 Civic Knowledge | Y8.3 Health Knowledge & Safety Skills),Y1.4 (high),Y1.4 (high),Y1.4,control,Photosynthesis is science (2.x expected 1.3).
+E036,Students will expand their professional network through mentor introductions.,no home (deferred); Y7.3 / Y3.2 used,Y3.5 (high),Y3.5 (high),Y3.5,closed by 3.0,
+E037,Alumni leverage program relationships to access internships and jobs.,Y7.4 / Y7.5 via network; no network code,Y3.5 (high),Y3.5 (medium),Y3.5,closed by 3.0,
+E038,Students will report higher educational aspirations.,"no home; Y7.2 / Y5.5 (split; also Y5.4 Confidence, Self-Efficacy & Self-Worth) / Y1.18 used",Y5.5 (medium),Y5.5 (high),Y5.5,closed by 3.0,
+E039,Youth will develop an increased sense of possibility for their future.,"Y5.5 (split; also Y5.4 Confidence, Self-Efficacy & Self-Worth) (the example 'feel good about their future' is closest)",Y5.5 (high),Y5.5 (high),Y5.5,closed by 3.0,
+E040,Students will be exposed to four art disciplines.,no home; A2.3 / Y2.6 / Y1.5 (split; also Y6.2 Civic Knowledge | Y8.3 Health Knowledge & Safety Skills) / A2.5 used,A2.5 (medium),A2.5 (low),A2.5 (CP-09-05 activity rule) or Y2.2,P7 activity text,Both coders chose A2.5; exposure is dosage unless a result is named.
+E041,Students will be exposed to careers in environmental science.,Y7.1,Y7.1 (high),Y7.1 (medium),Y7.1,control,
+E042,Students will improve spatial awareness and motor coordination through dance.,no home; Y8.1 (split; also Y8.2 Motor & Sport Skills | Y8.3 Health Knowledge & Safety Skills | Y8.5 Health Care Access & Condition Management) used,Y8.2 (high),Y8.2 (high),Y8.2,closed by 3.0,
+E043,Improved body image,"no home; Y5.5 (split; also Y5.4 Confidence, Self-Efficacy & Self-Worth) / Y8.6 used",Y5.4 (medium),Y5.4 (low),Y5.4 medium,closed by 3.0,Self-worth; no body-image code needed.
+E044,Youth will get at least 8 hours of sleep on school nights.,no home (deferred: broader physical health),Y8.1 (high),Y8.1 (high),Y8.1,closed by 3.0,
+E045,Students with IEPs will lead their own IEP meetings.,no home (deferred: self-advocacy); Y6.4 / Y4.9 (merge) candidates,Y5.6 (high),Y5.6 (high),Y5.6,closed by 3.0,
+E046,Students with disabilities will be placed in inclusive general-education classrooms.,A2.4,A2.4 (medium),A2.4 (high),A2.4,P2 inclusion,
+E047,Families will receive school communications in their home language.,A2.6 / A2.4 (deferred: language access),A2.4 (high),A2.4 (high),A2.4,closed by 3.0,
+E048,English learners will advance one WIDA proficiency level.,Y1.2,Y1.2 (high),Y1.2 (high),Y1.2,control,
+E049,Students demonstrate improvements in:,UNCODED,none (none),none (none),uncoded,control,
+E050,After School and summer programs,UNCODED,none (none),none (none),uncoded,control,
+E051,We are still in the process of receiving report cards from our tutoring partner due to privacy rules.,UNCODED,none (none),none (none),uncoded,control,
+E052,Awareness,UNCODED,none (none),none (none),uncoded,control,
+E053,Weekly 90-minute sessions led by teaching artists,UNCODED or A2.5,A2.5 (medium),none (none),A2.5 (CP-09-05),P7 activity text,Coders split A2.5 / none. Names only a format and schedule.
+E054,Increase skill sets,UNCODED,none (none),none (none),uncoded,control,
+E055,Students will report feeling less anxious before tests.,Y8.6,Y8.6 (high),Y8.6 (medium),Y8.6,control,
+E056,Students will use a coping strategy before tests.,Y4.2 (merge),Y4.2 (high),Y4.2 (high),Y4.2,control,
+E057,Program will maintain 85% average daily attendance.,A2.5,A2.5 (high),A2.5 (high),A2.5,control,
+E058,Participating students will reduce chronic absenteeism at school.,Y1.13,Y1.13 (high),Y1.13 (high),Y1.13,control,
+E059,Students will self-report that the program improved their grades.,11.* (self-reported gain),Y1.15 (high),Y1.15 (medium),Y1.15,control,
+E060,Students will feel more confident in math class.,Y1.12,Y1.12 (high),Y1.12 (high),Y1.12,control,
+E061,Youth will feel positive about their own sexuality and manage their reproductive health.,Y8.4,Y5.2 (medium) ; Y8.4 (high),Y5.2 (medium) ; Y8.4 (high),Y5.2 ; Y8.4,control,Both coders split.
+E062,Students will improve their math scores and make new friends.,Y1.3 ; Y3.3,Y1.3 (high) ; Y3.3 (high),Y1.3 (high) ; Y3.3 (high),Y1.3 ; Y3.3,split,
+E063,"Youth will demonstrate improved frustration tolerance during homework time, leading to more assignments completed on time.",Y4.2 (merge)|Y4.2 (merge) ; Y1.9,Y4.2 (high) ; Y1.9 (high),Y1.10 (medium) ; Y1.9 (high),Y4.2 ; Y1.9,split,Coder B read frustration tolerance as Y1.10; rule 6 and Y4.2 name frustration.
+E064,Students will complete their homework and improve their reading level.,Y1.9 ; Y1.1,Y1.9 (high) ; Y1.1 (high),Y1.9 (high) ; Y1.1 (high),Y1.9 ; Y1.1,split,
+E065,"Teachers gain arts-integration skills, leading to higher student engagement.",A1.1 ; Y1.9,A1.1 (high) ; Y1.9 (medium),A1.1 (high) ; Y1.9 (low),A1.1 ; Y1.9,split,
+E066,Parents will attend family workshops and read to their children at home.,F1.8|A2.5 ; F1.2,F1.9 (high) ; F1.2 (high),F1.9 (high) ; F1.2 (high),A2.5 ; F1.2 (after CP-09-01; F1.9 today),P1 attendance,"Both coders chose F1.9, as the current text says."
+E067,Developed Strong Social-Emotional Competencies (grit/resilience; self-efficacy; sense of belonging),Y4.3 (merge)|Y1.10 ; Y5.4 (merge) ; Y3.1,Y4.3 (medium) ; Y5.4 (high) ; Y3.1 (high),Y4.3 (medium) ; Y5.4 (high) ; Y3.1 (high),Y4.3 ; Y5.4 ; Y3.1,split,
+E068,Students will write and perform original poems.,Y2.5 (merge) ; Y2.5 (merge),Y2.5 (high),Y2.5 (high),Y2.5,split,Both parts share one code in 3.0.
+E069,Improved academic and social success,1.* ; Y4.8 (merge)|Y3.3,Y1.15 (medium) ; Y3.3 (low),none (none),Y1.15 ; Y3.3 low,split,"Coder B left it uncoded; ""academic success"" -> Y1.15 by rule 9."
+E070,Increased college enrollment and graduation,Y1.18,Y1.18 (high) ; Y1.18 (high),Y1.18 (high),Y1.18,control,
+E071,"Youth increase their confidence when speaking, debating, and solving problems.",Y5.4 (merge),Y5.4 (medium),Y5.4 (medium),Y5.4,control,
+E072,"Through weekly one-on-one mentoring, youth will identify at least one trusted adult.",Y3.2,Y3.2 (high),Y3.2 (high),Y3.2,control,
+E073,"By using theatre to create and present stories, students find the courage to live their own story with purpose.","Y5.5 (split; also Y5.4 Confidence, Self-Efficacy & Self-Worth)|Y5.4 (merge)",Y5.5 (medium),Y5.5 (medium),Y5.5,control,

@@ -119,6 +119,29 @@ None new. Open leads stay [VERIFY]:
    footprint.
 4. A fresh held-out set for any generalization claim.
 
+## Results: first live runs (2026-09-26)
+
+Severin ran the 255 design statements twice in the live app with 3.0 selected. The
+exports are `codebook-refinement/eval/codebook-3.0.0.json`, and the raw files are in
+/mnt/project-files/eval/codebook-3.0/. Gemini accepted the 160-value schema.
+
+| Rows | 3.0 on its gold (lenient / strict) | 2.5.2 on its gold (lenient / strict) |
+|---|---|---|
+| All 255 design rows | 98.0 / 96.5 (both runs) | 93.7 / 87.8 and 92.9 / 87.8 |
+| 153 rows quoted in neither prompt | 96.7 / 94.1 | 92.8 / 88.2 and 92.2 / 88.2 |
+
+- **Stability:** the two runs agree on every row (kappa 1.000; 2.5.2 had 0.988). 2.4% of
+  rows had low or no confidence.
+- **The 3.0 prompt quotes 87 design statements as examples** (2.5.x quotes 22), so the
+  all-rows number is inflated. The 153-row line is the fair comparison.
+- **Misses (same 5 in both runs):** S001, S098, S127, S188, S197. Three of them (S001,
+  S127, S188) are rows where Severin overrode the suggested code, and the model picked the
+  suggested one.
+- **Caveats:** each codebook is scored on its own gold, so these are side-by-side numbers,
+  not a same-gold regression test. They are design-set numbers only. The held-out 90 were
+  seen during design and are not evidence here. A fresh held-out set is still needed before
+  3.0 replaces 2.5.x.
+
 ## Judge result
 
 Pending. The judge's G1 to G4 compare a candidate with a baseline on the same codebook.

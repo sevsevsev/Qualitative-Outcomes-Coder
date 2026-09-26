@@ -1,0 +1,4736 @@
+{
+  "gold_path": "codebook-refinement/gold/youth_outcomes_v3.gold.csv",
+  "set": "design",
+  "n_rows": 255,
+  "exports": [
+    "/mnt/project-files/eval/codebook-3.0/run1.csv",
+    "/mnt/project-files/eval/codebook-3.0/run2.csv"
+  ],
+  "codebook_versions": [
+    [
+      "youth_outcomes_v3@3.0.0"
+    ],
+    [
+      "youth_outcomes_v3@3.0.0"
+    ]
+  ],
+  "missing_rows": [
+    [],
+    []
+  ],
+  "runs": [
+    {
+      "n": 255,
+      "strict_accuracy": 0.9647058823529412,
+      "lenient_accuracy": 0.9803921568627451,
+      "low_or_none_confidence_rate": 0.023529411764705882,
+      "by_confusion": {},
+      "error_pairs": [
+        {
+          "expected": "A2.4",
+          "got": "Y2.6",
+          "count": 1,
+          "gold_ids": [
+            "S001"
+          ]
+        },
+        {
+          "expected": "A2.4",
+          "got": "F1.7",
+          "count": 1,
+          "gold_ids": [
+            "S098"
+          ]
+        },
+        {
+          "expected": "A2.5",
+          "got": "F1.9",
+          "count": 1,
+          "gold_ids": [
+            "S127"
+          ]
+        },
+        {
+          "expected": "Y7.2",
+          "got": "Y7.1",
+          "count": 1,
+          "gold_ids": [
+            "S188"
+          ]
+        },
+        {
+          "expected": "Y2.5",
+          "got": "Y1.6",
+          "count": 1,
+          "gold_ids": [
+            "S197"
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "gold_id": "S001",
+          "expected": "A2.4",
+          "got": "Y2.6",
+          "strict": false,
+          "lenient": false,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S002",
+          "expected": "Y8.4",
+          "got": "Y8.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S003",
+          "expected": "Y2.6",
+          "got": "Y2.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S004",
+          "expected": "Y4.7",
+          "got": "Y4.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S005",
+          "expected": "Y6.5",
+          "got": "Y6.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S006",
+          "expected": "F2.1",
+          "got": "F1.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S007",
+          "expected": "Y4.9",
+          "got": "Y4.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S008",
+          "expected": "Y2.1",
+          "got": "Y2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S009",
+          "expected": "Y5.2",
+          "got": "Y5.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S010",
+          "expected": "none",
+          "got": "none",
+          "strict": true,
+          "lenient": true,
+          "confidence": "none",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S011",
+          "expected": "none",
+          "got": "A2.1",
+          "strict": false,
+          "lenient": true,
+          "confidence": "medium",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S012",
+          "expected": "Y6.1",
+          "got": "Y6.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S013",
+          "expected": "Y6.6",
+          "got": "Y6.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S014",
+          "expected": "Y1.16",
+          "got": "Y1.16",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S015",
+          "expected": "Y8.11",
+          "got": "Y8.11",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S016",
+          "expected": "Y5.5",
+          "got": "Y5.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S017",
+          "expected": "F1.7",
+          "got": "F1.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S018",
+          "expected": "Y8.13",
+          "got": "Y8.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S019",
+          "expected": "A3.1",
+          "got": "A3.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S020",
+          "expected": "Y7.4",
+          "got": "Y7.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S021",
+          "expected": "Y3.3",
+          "got": "Y3.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S022",
+          "expected": "F1.2",
+          "got": "F1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S023",
+          "expected": "A2.5",
+          "got": "A2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S024",
+          "expected": "Y3.4",
+          "got": "Y3.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S025",
+          "expected": "Y1.8",
+          "got": "Y1.8",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S026",
+          "expected": "Y3.2",
+          "got": "Y3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S027",
+          "expected": "Y4.11",
+          "got": "Y4.11",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S028",
+          "expected": "Y1.2",
+          "got": "Y1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S029",
+          "expected": "F2.3",
+          "got": "F2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S030",
+          "expected": "Y1.14",
+          "got": "Y1.14",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S031",
+          "expected": "Y8.2",
+          "got": "Y8.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S032",
+          "expected": "Y5.6",
+          "got": "Y5.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S033",
+          "expected": "Y7.5",
+          "got": "Y7.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S034",
+          "expected": "Y1.12",
+          "got": "Y1.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S035",
+          "expected": "F2.3",
+          "got": "F2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S036",
+          "expected": "Y5.3",
+          "got": "Y5.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S037",
+          "expected": "F2.3",
+          "got": "F2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S038",
+          "expected": "Y8.10",
+          "got": "Y8.10",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S039",
+          "expected": "Y6.4",
+          "got": "Y6.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S040",
+          "expected": "F1.3",
+          "got": "F1.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S041",
+          "expected": "A2.4",
+          "got": "A2.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S042",
+          "expected": "Y1.9",
+          "got": "Y1.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S043",
+          "expected": "A1.1",
+          "got": "A1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S044",
+          "expected": "Y7.6",
+          "got": "Y7.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S045",
+          "expected": "Y6.6",
+          "got": "Y6.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S046",
+          "expected": "Y8.6",
+          "got": "Y8.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S047",
+          "expected": "A2.5",
+          "got": "A2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S048",
+          "expected": "Y1.1",
+          "got": "Y1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S049",
+          "expected": "Y2.2",
+          "got": "Y5.4",
+          "strict": false,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S050",
+          "expected": "Y1.3",
+          "got": "Y1.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S051",
+          "expected": "Y1.13",
+          "got": "Y1.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S052",
+          "expected": "Y4.12",
+          "got": "Y4.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S053",
+          "expected": "F1.1",
+          "got": "F1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S054",
+          "expected": "Y4.7",
+          "got": "Y4.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S055",
+          "expected": "Y1.14",
+          "got": "Y1.14",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S056",
+          "expected": "Y1.15",
+          "got": "Y1.15",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S057",
+          "expected": "none",
+          "got": "none",
+          "strict": true,
+          "lenient": true,
+          "confidence": "none",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S058",
+          "expected": "Y2.5",
+          "got": "Y2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S059",
+          "expected": "Y4.7",
+          "got": "Y4.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S060",
+          "expected": "Y7.5",
+          "got": "Y7.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S061",
+          "expected": "Y8.5",
+          "got": "Y8.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S062",
+          "expected": "F2.2",
+          "got": "F2.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S063",
+          "expected": "Y7.2",
+          "got": "Y7.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S064",
+          "expected": "Y8.5",
+          "got": "Y8.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S065",
+          "expected": "Y8.11",
+          "got": "Y8.11",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S066",
+          "expected": "Y1.1",
+          "got": "Y1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S067",
+          "expected": "Y8.6",
+          "got": "Y8.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S068",
+          "expected": "Y8.2",
+          "got": "Y8.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S069",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S070",
+          "expected": "Y3.4",
+          "got": "Y3.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S071",
+          "expected": "Y8.7",
+          "got": "Y8.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S072",
+          "expected": "Y1.12",
+          "got": "Y1.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S073",
+          "expected": "Y8.12",
+          "got": "A1.2",
+          "strict": false,
+          "lenient": true,
+          "confidence": "medium",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S074",
+          "expected": "Y8.2",
+          "got": "Y8.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S075",
+          "expected": "A2.1",
+          "got": "A2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S076",
+          "expected": "Y6.5",
+          "got": "Y6.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S077",
+          "expected": "Y2.5",
+          "got": "Y2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S078",
+          "expected": "Y8.8",
+          "got": "Y8.8",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S079",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S080",
+          "expected": "Y2.2",
+          "got": "Y2.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S081",
+          "expected": "Y7.2",
+          "got": "Y7.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S082",
+          "expected": "Y4.4",
+          "got": "Y4.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S083",
+          "expected": "A1.1",
+          "got": "A1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S084",
+          "expected": "Y1.18",
+          "got": "Y1.18",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S085",
+          "expected": "Y1.14",
+          "got": "Y1.14",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S086",
+          "expected": "Y4.3",
+          "got": "Y4.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S087",
+          "expected": "A1.1",
+          "got": "A1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S088",
+          "expected": "Y8.13",
+          "got": "Y8.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S089",
+          "expected": "Y7.6",
+          "got": "Y7.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S090",
+          "expected": "Y2.5",
+          "got": "Y2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S091",
+          "expected": "none",
+          "got": "none",
+          "strict": true,
+          "lenient": true,
+          "confidence": "none",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S092",
+          "expected": "Y7.6",
+          "got": "Y7.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S093",
+          "expected": "Y8.1",
+          "got": "Y8.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S094",
+          "expected": "Y8.5",
+          "got": "Y8.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S095",
+          "expected": "Y7.6",
+          "got": "Y7.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S096",
+          "expected": "Y1.13",
+          "got": "Y1.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S097",
+          "expected": "Y7.1",
+          "got": "Y7.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S098",
+          "expected": "A2.4",
+          "got": "F1.7",
+          "strict": false,
+          "lenient": false,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S099",
+          "expected": "Y3.5",
+          "got": "Y3.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S100",
+          "expected": "Y1.1",
+          "got": "Y1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S101",
+          "expected": "A3.1",
+          "got": "A3.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S102",
+          "expected": "Y3.2",
+          "got": "Y3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S103",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S104",
+          "expected": "Y1.4",
+          "got": "Y1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S105",
+          "expected": "Y7.6",
+          "got": "Y7.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S106",
+          "expected": "F2.1",
+          "got": "F2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S107",
+          "expected": "Y6.7",
+          "got": "Y6.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S108",
+          "expected": "Y8.3",
+          "got": "Y8.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S109",
+          "expected": "Y1.15",
+          "got": "Y1.15",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S110",
+          "expected": "Y6.5",
+          "got": "Y6.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S111",
+          "expected": "Y1.9",
+          "got": "Y1.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S112",
+          "expected": "Y3.3",
+          "got": "Y3.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S113",
+          "expected": "A2.4",
+          "got": "A2.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S114",
+          "expected": "Y8.9",
+          "got": "Y8.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S115",
+          "expected": "Y2.4",
+          "got": "Y2.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S116",
+          "expected": "Y3.2",
+          "got": "Y3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S117",
+          "expected": "Y7.2",
+          "got": "Y7.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S118",
+          "expected": "F1.6",
+          "got": "F1.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S119",
+          "expected": "F1.2",
+          "got": "F1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S120",
+          "expected": "Y7.7",
+          "got": "Y7.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S121",
+          "expected": "Y8.1",
+          "got": "Y8.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S122",
+          "expected": "Y4.9",
+          "got": "Y4.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S123",
+          "expected": "Y6.3",
+          "got": "Y6.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S124",
+          "expected": "Y5.5",
+          "got": "Y5.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S125",
+          "expected": "Y6.1",
+          "got": "Y5.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S126",
+          "expected": "F1.5",
+          "got": "F1.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S127",
+          "expected": "A2.5",
+          "got": "F1.9",
+          "strict": false,
+          "lenient": false,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S128",
+          "expected": "Y2.2",
+          "got": "Y2.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S129",
+          "expected": "Y5.2",
+          "got": "Y5.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S130",
+          "expected": "none",
+          "got": "none",
+          "strict": true,
+          "lenient": true,
+          "confidence": "none",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S131",
+          "expected": "Y3.1",
+          "got": "Y3.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S132",
+          "expected": "Y4.6",
+          "got": "Y4.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S133",
+          "expected": "Y4.10",
+          "got": "Y4.10",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S134",
+          "expected": "Y8.12",
+          "got": "Y8.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S135",
+          "expected": "F1.1",
+          "got": "F1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S136",
+          "expected": "Y6.4",
+          "got": "Y6.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S137",
+          "expected": "Y2.1",
+          "got": "Y2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S138",
+          "expected": "Y7.3",
+          "got": "Y7.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S139",
+          "expected": "F2.1",
+          "got": "F2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S140",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S141",
+          "expected": "Y8.12",
+          "got": "Y8.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S142",
+          "expected": "A1.1",
+          "got": "A1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S143",
+          "expected": "Y1.2",
+          "got": "Y1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S144",
+          "expected": "Y8.7",
+          "got": "Y8.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S145",
+          "expected": "Y6.1",
+          "got": "Y6.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S146",
+          "expected": "A1.1",
+          "got": "A1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S147",
+          "expected": "Y1.4",
+          "got": "Y1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S148",
+          "expected": "A1.2",
+          "got": "A1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S149",
+          "expected": "A1.3",
+          "got": "A1.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S150",
+          "expected": "Y1.1",
+          "got": "Y1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S151",
+          "expected": "Y7.5",
+          "got": "Y7.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S152",
+          "expected": "Y7.1",
+          "got": "Y7.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S153",
+          "expected": "F1.1",
+          "got": "F1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S154",
+          "expected": "A3.3",
+          "got": "A3.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S155",
+          "expected": "Y1.7",
+          "got": "Y1.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S156",
+          "expected": "Y1.14",
+          "got": "Y1.14",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S157",
+          "expected": "F1.8",
+          "got": "F1.8",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S158",
+          "expected": "Y5.4",
+          "got": "Y5.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S159",
+          "expected": "Y1.16",
+          "got": "Y1.16",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S160",
+          "expected": "Y8.13",
+          "got": "Y8.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S161",
+          "expected": "Y7.4",
+          "got": "Y7.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S162",
+          "expected": "Y7.7",
+          "got": "Y7.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S163",
+          "expected": "Y3.1",
+          "got": "Y3.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S164",
+          "expected": "F1.9",
+          "got": "F1.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S165",
+          "expected": "F1.2",
+          "got": "F1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S166",
+          "expected": "Y7.4",
+          "got": "Y7.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S167",
+          "expected": "Y6.1",
+          "got": "Y6.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S168",
+          "expected": "Y7.6",
+          "got": "Y7.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S169",
+          "expected": "Y4.7",
+          "got": "Y4.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S170",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S171",
+          "expected": "Y7.3",
+          "got": "Y7.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S172",
+          "expected": "Y4.12",
+          "got": "Y4.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S173",
+          "expected": "F1.1",
+          "got": "F1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S174",
+          "expected": "A2.1",
+          "got": "A2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S175",
+          "expected": "Y3.2",
+          "got": "Y3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S176",
+          "expected": "F1.9",
+          "got": "A2.6",
+          "strict": false,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S177",
+          "expected": "Y3.3",
+          "got": "Y3.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S178",
+          "expected": "Y1.18",
+          "got": "Y1.18",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S179",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S180",
+          "expected": "Y6.1",
+          "got": "Y6.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S181",
+          "expected": "F1.8",
+          "got": "F1.8",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S182",
+          "expected": "Y6.4",
+          "got": "Y6.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S183",
+          "expected": "A2.5",
+          "got": "A2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S184",
+          "expected": "Y6.5",
+          "got": "Y6.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S185",
+          "expected": "Y1.4",
+          "got": "Y1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S186",
+          "expected": "Y3.3",
+          "got": "Y3.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S187",
+          "expected": "Y8.1",
+          "got": "Y8.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S188",
+          "expected": "Y7.2",
+          "got": "Y7.1",
+          "strict": false,
+          "lenient": false,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S189",
+          "expected": "Y8.13",
+          "got": "Y8.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S190",
+          "expected": "Y1.18",
+          "got": "Y1.18",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S191",
+          "expected": "Y8.5",
+          "got": "Y8.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S192",
+          "expected": "Y8.2",
+          "got": "Y8.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S193",
+          "expected": "F1.7",
+          "got": "F1.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S194",
+          "expected": "Y3.3",
+          "got": "Y3.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S195",
+          "expected": "A3.2",
+          "got": "A3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S196",
+          "expected": "A2.3",
+          "got": "A2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S197",
+          "expected": "Y2.5",
+          "got": "Y1.6",
+          "strict": false,
+          "lenient": false,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S198",
+          "expected": "F2.3",
+          "got": "F2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S199",
+          "expected": "Y1.6",
+          "got": "Y1.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S200",
+          "expected": "F2.3",
+          "got": "F2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S201",
+          "expected": "Y7.3",
+          "got": "Y7.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S202",
+          "expected": "Y1.12",
+          "got": "Y1.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S203",
+          "expected": "Y1.4",
+          "got": "Y1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S204",
+          "expected": "A1.2",
+          "got": "A1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S205",
+          "expected": "Y8.1",
+          "got": "Y8.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S206",
+          "expected": "F1.6",
+          "got": "F1.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S207",
+          "expected": "Y8.1",
+          "got": "Y8.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S208",
+          "expected": "Y1.3",
+          "got": "Y1.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S209",
+          "expected": "Y4.8",
+          "got": "Y4.8",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S210",
+          "expected": "F2.2",
+          "got": "F2.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S211",
+          "expected": "Y6.4",
+          "got": "Y6.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S212",
+          "expected": "Y8.8",
+          "got": "Y8.8",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S213",
+          "expected": "Y2.3",
+          "got": "Y2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S214",
+          "expected": "Y2.3",
+          "got": "Y2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S215",
+          "expected": "Y6.7",
+          "got": "Y6.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S216",
+          "expected": "Y1.12",
+          "got": "Y1.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S217",
+          "expected": "none",
+          "got": "none",
+          "strict": true,
+          "lenient": true,
+          "confidence": "none",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S218",
+          "expected": "Y7.5",
+          "got": "Y7.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S219",
+          "expected": "Y1.16",
+          "got": "Y1.16",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S220",
+          "expected": "Y1.10",
+          "got": "Y1.10",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S221",
+          "expected": "Y1.11",
+          "got": "Y1.11",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S222",
+          "expected": "Y3.2",
+          "got": "Y3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S223",
+          "expected": "Y4.11",
+          "got": "Y4.11",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S224",
+          "expected": "Y7.7",
+          "got": "Y7.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S225",
+          "expected": "F2.3",
+          "got": "F2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S226",
+          "expected": "Y6.5",
+          "got": "Y6.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S227",
+          "expected": "Y4.11",
+          "got": "Y4.11",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S228",
+          "expected": "A2.3",
+          "got": "A2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S229",
+          "expected": "Y8.12",
+          "got": "Y8.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S230",
+          "expected": "Y4.7",
+          "got": "Y4.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S231",
+          "expected": "F1.4",
+          "got": "F1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S232",
+          "expected": "Y1.4",
+          "got": "Y1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S233",
+          "expected": "Y1.13",
+          "got": "Y1.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S234",
+          "expected": "Y2.1",
+          "got": "Y2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S235",
+          "expected": "Y1.9",
+          "got": "Y1.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S236",
+          "expected": "Y5.6",
+          "got": "Y5.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S237",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S238",
+          "expected": "A2.5",
+          "got": "A2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S239",
+          "expected": "F1.4",
+          "got": "F1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S240",
+          "expected": "A2.3",
+          "got": "A2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S241",
+          "expected": "Y1.17",
+          "got": "Y1.17",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S242",
+          "expected": "Y4.4",
+          "got": "Y4.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S243",
+          "expected": "Y5.4",
+          "got": "Y5.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S244",
+          "expected": "A1.1",
+          "got": "A1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S245",
+          "expected": "F1.1",
+          "got": "F1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S246",
+          "expected": "Y3.2",
+          "got": "Y3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S247",
+          "expected": "Y6.6",
+          "got": "Y6.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "low",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S248",
+          "expected": "Y8.12",
+          "got": "Y8.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S249",
+          "expected": "Y1.1",
+          "got": "Y1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S250",
+          "expected": "Y5.5",
+          "got": "Y5.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S251",
+          "expected": "Y8.4",
+          "got": "Y8.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S252",
+          "expected": "F1.7",
+          "got": "F1.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S253",
+          "expected": "Y7.3",
+          "got": "Y7.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S254",
+          "expected": "Y6.2",
+          "got": "Y6.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S255",
+          "expected": "Y8.2",
+          "got": "Y8.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        }
+      ],
+      "fit_rows": {
+        "n": 255,
+        "lenient_accuracy": 0.9803921568627451
+      },
+      "gap_rows": {
+        "n": 0,
+        "lenient_accuracy": 0
+      }
+    },
+    {
+      "n": 255,
+      "strict_accuracy": 0.9647058823529412,
+      "lenient_accuracy": 0.9803921568627451,
+      "low_or_none_confidence_rate": 0.023529411764705882,
+      "by_confusion": {},
+      "error_pairs": [
+        {
+          "expected": "A2.4",
+          "got": "Y2.6",
+          "count": 1,
+          "gold_ids": [
+            "S001"
+          ]
+        },
+        {
+          "expected": "A2.4",
+          "got": "F1.7",
+          "count": 1,
+          "gold_ids": [
+            "S098"
+          ]
+        },
+        {
+          "expected": "A2.5",
+          "got": "F1.9",
+          "count": 1,
+          "gold_ids": [
+            "S127"
+          ]
+        },
+        {
+          "expected": "Y7.2",
+          "got": "Y7.1",
+          "count": 1,
+          "gold_ids": [
+            "S188"
+          ]
+        },
+        {
+          "expected": "Y2.5",
+          "got": "Y1.6",
+          "count": 1,
+          "gold_ids": [
+            "S197"
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "gold_id": "S001",
+          "expected": "A2.4",
+          "got": "Y2.6",
+          "strict": false,
+          "lenient": false,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S002",
+          "expected": "Y8.4",
+          "got": "Y8.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S003",
+          "expected": "Y2.6",
+          "got": "Y2.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S004",
+          "expected": "Y4.7",
+          "got": "Y4.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S005",
+          "expected": "Y6.5",
+          "got": "Y6.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S006",
+          "expected": "F2.1",
+          "got": "F1.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "medium",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S007",
+          "expected": "Y4.9",
+          "got": "Y4.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S008",
+          "expected": "Y2.1",
+          "got": "Y2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S009",
+          "expected": "Y5.2",
+          "got": "Y5.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S010",
+          "expected": "none",
+          "got": "none",
+          "strict": true,
+          "lenient": true,
+          "confidence": "none",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S011",
+          "expected": "none",
+          "got": "A2.1",
+          "strict": false,
+          "lenient": true,
+          "confidence": "medium",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S012",
+          "expected": "Y6.1",
+          "got": "Y6.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S013",
+          "expected": "Y6.6",
+          "got": "Y6.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S014",
+          "expected": "Y1.16",
+          "got": "Y1.16",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S015",
+          "expected": "Y8.11",
+          "got": "Y8.11",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S016",
+          "expected": "Y5.5",
+          "got": "Y5.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S017",
+          "expected": "F1.7",
+          "got": "F1.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S018",
+          "expected": "Y8.13",
+          "got": "Y8.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S019",
+          "expected": "A3.1",
+          "got": "A3.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S020",
+          "expected": "Y7.4",
+          "got": "Y7.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S021",
+          "expected": "Y3.3",
+          "got": "Y3.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S022",
+          "expected": "F1.2",
+          "got": "F1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S023",
+          "expected": "A2.5",
+          "got": "A2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S024",
+          "expected": "Y3.4",
+          "got": "Y3.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S025",
+          "expected": "Y1.8",
+          "got": "Y1.8",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S026",
+          "expected": "Y3.2",
+          "got": "Y3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S027",
+          "expected": "Y4.11",
+          "got": "Y4.11",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S028",
+          "expected": "Y1.2",
+          "got": "Y1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S029",
+          "expected": "F2.3",
+          "got": "F2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S030",
+          "expected": "Y1.14",
+          "got": "Y1.14",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S031",
+          "expected": "Y8.2",
+          "got": "Y8.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S032",
+          "expected": "Y5.6",
+          "got": "Y5.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S033",
+          "expected": "Y7.5",
+          "got": "Y7.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S034",
+          "expected": "Y1.12",
+          "got": "Y1.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S035",
+          "expected": "F2.3",
+          "got": "F2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S036",
+          "expected": "Y5.3",
+          "got": "Y5.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S037",
+          "expected": "F2.3",
+          "got": "F2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S038",
+          "expected": "Y8.10",
+          "got": "Y8.10",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S039",
+          "expected": "Y6.4",
+          "got": "Y6.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S040",
+          "expected": "F1.3",
+          "got": "F1.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S041",
+          "expected": "A2.4",
+          "got": "A2.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S042",
+          "expected": "Y1.9",
+          "got": "Y1.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S043",
+          "expected": "A1.1",
+          "got": "A1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S044",
+          "expected": "Y7.6",
+          "got": "Y7.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S045",
+          "expected": "Y6.6",
+          "got": "Y6.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S046",
+          "expected": "Y8.6",
+          "got": "Y8.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S047",
+          "expected": "A2.5",
+          "got": "A2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S048",
+          "expected": "Y1.1",
+          "got": "Y1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S049",
+          "expected": "Y2.2",
+          "got": "Y5.4",
+          "strict": false,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S050",
+          "expected": "Y1.3",
+          "got": "Y1.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S051",
+          "expected": "Y1.13",
+          "got": "Y1.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S052",
+          "expected": "Y4.12",
+          "got": "Y4.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S053",
+          "expected": "F1.1",
+          "got": "F1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S054",
+          "expected": "Y4.7",
+          "got": "Y4.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S055",
+          "expected": "Y1.14",
+          "got": "Y1.14",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S056",
+          "expected": "Y1.15",
+          "got": "Y1.15",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S057",
+          "expected": "none",
+          "got": "none",
+          "strict": true,
+          "lenient": true,
+          "confidence": "none",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S058",
+          "expected": "Y2.5",
+          "got": "Y2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S059",
+          "expected": "Y4.7",
+          "got": "Y4.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S060",
+          "expected": "Y7.5",
+          "got": "Y7.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S061",
+          "expected": "Y8.5",
+          "got": "Y8.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S062",
+          "expected": "F2.2",
+          "got": "F2.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S063",
+          "expected": "Y7.2",
+          "got": "Y7.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S064",
+          "expected": "Y8.5",
+          "got": "Y8.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S065",
+          "expected": "Y8.11",
+          "got": "Y8.11",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S066",
+          "expected": "Y1.1",
+          "got": "Y1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S067",
+          "expected": "Y8.6",
+          "got": "Y8.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S068",
+          "expected": "Y8.2",
+          "got": "Y8.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S069",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S070",
+          "expected": "Y3.4",
+          "got": "Y3.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S071",
+          "expected": "Y8.7",
+          "got": "Y8.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S072",
+          "expected": "Y1.12",
+          "got": "Y1.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S073",
+          "expected": "Y8.12",
+          "got": "A1.2",
+          "strict": false,
+          "lenient": true,
+          "confidence": "medium",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S074",
+          "expected": "Y8.2",
+          "got": "Y8.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S075",
+          "expected": "A2.1",
+          "got": "A2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S076",
+          "expected": "Y6.5",
+          "got": "Y6.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S077",
+          "expected": "Y2.5",
+          "got": "Y2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S078",
+          "expected": "Y8.8",
+          "got": "Y8.8",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S079",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S080",
+          "expected": "Y2.2",
+          "got": "Y2.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S081",
+          "expected": "Y7.2",
+          "got": "Y7.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S082",
+          "expected": "Y4.4",
+          "got": "Y4.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S083",
+          "expected": "A1.1",
+          "got": "A1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S084",
+          "expected": "Y1.18",
+          "got": "Y1.18",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S085",
+          "expected": "Y1.14",
+          "got": "Y1.14",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S086",
+          "expected": "Y4.3",
+          "got": "Y4.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S087",
+          "expected": "A1.1",
+          "got": "A1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S088",
+          "expected": "Y8.13",
+          "got": "Y8.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S089",
+          "expected": "Y7.6",
+          "got": "Y7.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S090",
+          "expected": "Y2.5",
+          "got": "Y2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "medium",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S091",
+          "expected": "none",
+          "got": "none",
+          "strict": true,
+          "lenient": true,
+          "confidence": "none",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S092",
+          "expected": "Y7.6",
+          "got": "Y7.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S093",
+          "expected": "Y8.1",
+          "got": "Y8.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S094",
+          "expected": "Y8.5",
+          "got": "Y8.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S095",
+          "expected": "Y7.6",
+          "got": "Y7.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S096",
+          "expected": "Y1.13",
+          "got": "Y1.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S097",
+          "expected": "Y7.1",
+          "got": "Y7.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S098",
+          "expected": "A2.4",
+          "got": "F1.7",
+          "strict": false,
+          "lenient": false,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S099",
+          "expected": "Y3.5",
+          "got": "Y3.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S100",
+          "expected": "Y1.1",
+          "got": "Y1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S101",
+          "expected": "A3.1",
+          "got": "A3.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S102",
+          "expected": "Y3.2",
+          "got": "Y3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S103",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S104",
+          "expected": "Y1.4",
+          "got": "Y1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S105",
+          "expected": "Y7.6",
+          "got": "Y7.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S106",
+          "expected": "F2.1",
+          "got": "F2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S107",
+          "expected": "Y6.7",
+          "got": "Y6.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S108",
+          "expected": "Y8.3",
+          "got": "Y8.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S109",
+          "expected": "Y1.15",
+          "got": "Y1.15",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S110",
+          "expected": "Y6.5",
+          "got": "Y6.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S111",
+          "expected": "Y1.9",
+          "got": "Y1.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S112",
+          "expected": "Y3.3",
+          "got": "Y3.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S113",
+          "expected": "A2.4",
+          "got": "A2.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S114",
+          "expected": "Y8.9",
+          "got": "Y8.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S115",
+          "expected": "Y2.4",
+          "got": "Y2.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S116",
+          "expected": "Y3.2",
+          "got": "Y3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S117",
+          "expected": "Y7.2",
+          "got": "Y7.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S118",
+          "expected": "F1.6",
+          "got": "F1.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S119",
+          "expected": "F1.2",
+          "got": "F1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S120",
+          "expected": "Y7.7",
+          "got": "Y7.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S121",
+          "expected": "Y8.1",
+          "got": "Y8.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S122",
+          "expected": "Y4.9",
+          "got": "Y4.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S123",
+          "expected": "Y6.3",
+          "got": "Y6.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S124",
+          "expected": "Y5.5",
+          "got": "Y5.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S125",
+          "expected": "Y6.1",
+          "got": "Y5.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S126",
+          "expected": "F1.5",
+          "got": "F1.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S127",
+          "expected": "A2.5",
+          "got": "F1.9",
+          "strict": false,
+          "lenient": false,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S128",
+          "expected": "Y2.2",
+          "got": "Y2.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S129",
+          "expected": "Y5.2",
+          "got": "Y5.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S130",
+          "expected": "none",
+          "got": "none",
+          "strict": true,
+          "lenient": true,
+          "confidence": "none",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S131",
+          "expected": "Y3.1",
+          "got": "Y3.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S132",
+          "expected": "Y4.6",
+          "got": "Y4.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S133",
+          "expected": "Y4.10",
+          "got": "Y4.10",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S134",
+          "expected": "Y8.12",
+          "got": "Y8.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S135",
+          "expected": "F1.1",
+          "got": "F1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S136",
+          "expected": "Y6.4",
+          "got": "Y6.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S137",
+          "expected": "Y2.1",
+          "got": "Y2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S138",
+          "expected": "Y7.3",
+          "got": "Y7.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S139",
+          "expected": "F2.1",
+          "got": "F2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S140",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S141",
+          "expected": "Y8.12",
+          "got": "Y8.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S142",
+          "expected": "A1.1",
+          "got": "A1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S143",
+          "expected": "Y1.2",
+          "got": "Y1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S144",
+          "expected": "Y8.7",
+          "got": "Y8.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S145",
+          "expected": "Y6.1",
+          "got": "Y6.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S146",
+          "expected": "A1.1",
+          "got": "A1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S147",
+          "expected": "Y1.4",
+          "got": "Y1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S148",
+          "expected": "A1.2",
+          "got": "A1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S149",
+          "expected": "A1.3",
+          "got": "A1.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S150",
+          "expected": "Y1.1",
+          "got": "Y1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S151",
+          "expected": "Y7.5",
+          "got": "Y7.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S152",
+          "expected": "Y7.1",
+          "got": "Y7.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S153",
+          "expected": "F1.1",
+          "got": "F1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S154",
+          "expected": "A3.3",
+          "got": "A3.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S155",
+          "expected": "Y1.7",
+          "got": "Y1.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S156",
+          "expected": "Y1.14",
+          "got": "Y1.14",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S157",
+          "expected": "F1.8",
+          "got": "F1.8",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S158",
+          "expected": "Y5.4",
+          "got": "Y5.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S159",
+          "expected": "Y1.16",
+          "got": "Y1.16",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S160",
+          "expected": "Y8.13",
+          "got": "Y8.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S161",
+          "expected": "Y7.4",
+          "got": "Y7.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S162",
+          "expected": "Y7.7",
+          "got": "Y7.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S163",
+          "expected": "Y3.1",
+          "got": "Y3.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S164",
+          "expected": "F1.9",
+          "got": "F1.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S165",
+          "expected": "F1.2",
+          "got": "F1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S166",
+          "expected": "Y7.4",
+          "got": "Y7.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S167",
+          "expected": "Y6.1",
+          "got": "Y6.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S168",
+          "expected": "Y7.6",
+          "got": "Y7.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S169",
+          "expected": "Y4.7",
+          "got": "Y4.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S170",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S171",
+          "expected": "Y7.3",
+          "got": "Y7.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S172",
+          "expected": "Y4.12",
+          "got": "Y4.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S173",
+          "expected": "F1.1",
+          "got": "F1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S174",
+          "expected": "A2.1",
+          "got": "A2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S175",
+          "expected": "Y3.2",
+          "got": "Y3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S176",
+          "expected": "F1.9",
+          "got": "A2.6",
+          "strict": false,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S177",
+          "expected": "Y3.3",
+          "got": "Y3.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S178",
+          "expected": "Y1.18",
+          "got": "Y1.18",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S179",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S180",
+          "expected": "Y6.1",
+          "got": "Y6.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S181",
+          "expected": "F1.8",
+          "got": "F1.8",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S182",
+          "expected": "Y6.4",
+          "got": "Y6.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S183",
+          "expected": "A2.5",
+          "got": "A2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S184",
+          "expected": "Y6.5",
+          "got": "Y6.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S185",
+          "expected": "Y1.4",
+          "got": "Y1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S186",
+          "expected": "Y3.3",
+          "got": "Y3.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S187",
+          "expected": "Y8.1",
+          "got": "Y8.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S188",
+          "expected": "Y7.2",
+          "got": "Y7.1",
+          "strict": false,
+          "lenient": false,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S189",
+          "expected": "Y8.13",
+          "got": "Y8.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S190",
+          "expected": "Y1.18",
+          "got": "Y1.18",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S191",
+          "expected": "Y8.5",
+          "got": "Y8.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S192",
+          "expected": "Y8.2",
+          "got": "Y8.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S193",
+          "expected": "F1.7",
+          "got": "F1.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S194",
+          "expected": "Y3.3",
+          "got": "Y3.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S195",
+          "expected": "A3.2",
+          "got": "A3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S196",
+          "expected": "A2.3",
+          "got": "A2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S197",
+          "expected": "Y2.5",
+          "got": "Y1.6",
+          "strict": false,
+          "lenient": false,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S198",
+          "expected": "F2.3",
+          "got": "F2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S199",
+          "expected": "Y1.6",
+          "got": "Y1.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S200",
+          "expected": "F2.3",
+          "got": "F2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S201",
+          "expected": "Y7.3",
+          "got": "Y7.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S202",
+          "expected": "Y1.12",
+          "got": "Y1.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S203",
+          "expected": "Y1.4",
+          "got": "Y1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S204",
+          "expected": "A1.2",
+          "got": "A1.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S205",
+          "expected": "Y8.1",
+          "got": "Y8.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S206",
+          "expected": "F1.6",
+          "got": "F1.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S207",
+          "expected": "Y8.1",
+          "got": "Y8.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S208",
+          "expected": "Y1.3",
+          "got": "Y1.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S209",
+          "expected": "Y4.8",
+          "got": "Y4.8",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S210",
+          "expected": "F2.2",
+          "got": "F2.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S211",
+          "expected": "Y6.4",
+          "got": "Y6.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S212",
+          "expected": "Y8.8",
+          "got": "Y8.8",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S213",
+          "expected": "Y2.3",
+          "got": "Y2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S214",
+          "expected": "Y2.3",
+          "got": "Y2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S215",
+          "expected": "Y6.7",
+          "got": "Y6.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S216",
+          "expected": "Y1.12",
+          "got": "Y1.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S217",
+          "expected": "none",
+          "got": "none",
+          "strict": true,
+          "lenient": true,
+          "confidence": "none",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S218",
+          "expected": "Y7.5",
+          "got": "Y7.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S219",
+          "expected": "Y1.16",
+          "got": "Y1.16",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S220",
+          "expected": "Y1.10",
+          "got": "Y1.10",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S221",
+          "expected": "Y1.11",
+          "got": "Y1.11",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S222",
+          "expected": "Y3.2",
+          "got": "Y3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S223",
+          "expected": "Y4.11",
+          "got": "Y4.11",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S224",
+          "expected": "Y7.7",
+          "got": "Y7.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S225",
+          "expected": "F2.3",
+          "got": "F2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S226",
+          "expected": "Y6.5",
+          "got": "Y6.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S227",
+          "expected": "Y4.11",
+          "got": "Y4.11",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S228",
+          "expected": "A2.3",
+          "got": "A2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S229",
+          "expected": "Y8.12",
+          "got": "Y8.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S230",
+          "expected": "Y4.7",
+          "got": "Y4.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S231",
+          "expected": "F1.4",
+          "got": "F1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S232",
+          "expected": "Y1.4",
+          "got": "Y1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S233",
+          "expected": "Y1.13",
+          "got": "Y1.13",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S234",
+          "expected": "Y2.1",
+          "got": "Y2.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S235",
+          "expected": "Y1.9",
+          "got": "Y1.9",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S236",
+          "expected": "Y5.6",
+          "got": "Y5.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S237",
+          "expected": "Y4.2",
+          "got": "Y4.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S238",
+          "expected": "A2.5",
+          "got": "A2.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S239",
+          "expected": "F1.4",
+          "got": "F1.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S240",
+          "expected": "A2.3",
+          "got": "A2.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S241",
+          "expected": "Y1.17",
+          "got": "Y1.17",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S242",
+          "expected": "Y4.4",
+          "got": "Y4.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S243",
+          "expected": "Y5.4",
+          "got": "Y5.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S244",
+          "expected": "A1.1",
+          "got": "A1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S245",
+          "expected": "F1.1",
+          "got": "F1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S246",
+          "expected": "Y3.2",
+          "got": "Y3.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S247",
+          "expected": "Y6.6",
+          "got": "Y6.6",
+          "strict": true,
+          "lenient": true,
+          "confidence": "low",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S248",
+          "expected": "Y8.12",
+          "got": "Y8.12",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S249",
+          "expected": "Y1.1",
+          "got": "Y1.1",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S250",
+          "expected": "Y5.5",
+          "got": "Y5.5",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S251",
+          "expected": "Y8.4",
+          "got": "Y8.4",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S252",
+          "expected": "F1.7",
+          "got": "F1.7",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S253",
+          "expected": "Y7.3",
+          "got": "Y7.3",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S254",
+          "expected": "Y6.2",
+          "got": "Y6.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        },
+        {
+          "gold_id": "S255",
+          "expected": "Y8.2",
+          "got": "Y8.2",
+          "strict": true,
+          "lenient": true,
+          "confidence": "high",
+          "confusion_ids": []
+        }
+      ],
+      "fit_rows": {
+        "n": 255,
+        "lenient_accuracy": 0.9803921568627451
+      },
+      "gap_rows": {
+        "n": 0,
+        "lenient_accuracy": 0
+      }
+    }
+  ],
+  "stability": {
+    "agreement": 1,
+    "kappa": 1,
+    "disagreements": []
+  }
+}

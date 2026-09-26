@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { CODEBOOK_LIST, CODEBOOK_REGISTRY, CodebookType, DEFAULT_CODEBOOK_ID } from '../codebooks/index.js';
+import { CODEBOOK_REGISTRY, CodebookType, DEFAULT_CODEBOOK_ID, SELECTABLE_CODEBOOK_LIST } from '../codebooks/index.js';
 import {
   buildExplorerCodebook,
   ExplorerCode,
@@ -36,7 +36,7 @@ interface Props {
   route: ExplorerRoute;
   /** Show visitor comments and feedback forms (the public explorer site). */
   withFeedback?: boolean;
-  /** Codebooks offered in the switcher. Defaults to all of them. */
+  /** Codebooks offered in the switcher. Defaults to every codebook that isn't deprecated. */
   codebookIds?: readonly CodebookType[];
 }
 
@@ -112,8 +112,10 @@ const highlight = (text: string, tokens: string[]): React.ReactNode => {
 // ---------------------------------------------------------------------------
 
 const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebookIds }) => {
-  const codebookList = codebookIds ? CODEBOOK_LIST.filter(cb => codebookIds.includes(cb.id as CodebookType)) : CODEBOOK_LIST;
+  const codebookList = SELECTABLE_CODEBOOK_LIST.filter(cb => !codebookIds || codebookIds.includes(cb.id as CodebookType));
   const codebook = CODEBOOK_REGISTRY[route.codebookId];
+  // A deprecated codebook still opens from a direct link or a resumed session, with a notice.
+  const replacement = codebook.deprecated ? CODEBOOK_REGISTRY[codebook.deprecated.replacedBy as CodebookType] : undefined;
   const data = useMemo(() => buildExplorerCodebook(codebook), [codebook]);
   const legend = getSourceRegistry(codebook.id)?.status_legend;
 
@@ -718,6 +720,14 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
               </span>
             )}
           </div>
+          {codebook.deprecated && (
+            <p role="note" className="mt-4 max-w-2xl text-sm text-amber-900 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
+              This codebook was retired on {codebook.deprecated.since} and is kept for reading older results only.
+              {replacement && (
+                <> New coding uses <a href={explorerHref(replacement.id)} className="font-medium underline">{replacement.label}</a>.</>
+              )}
+            </p>
+          )}
         </div>
         {codebookList.length > 1 && (
           <div role="tablist" aria-label="Codebook" className="inline-flex self-start lg:self-auto rounded-lg bg-slate-200/60 p-1">

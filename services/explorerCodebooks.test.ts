@@ -5,15 +5,15 @@ import { validateSubmission } from './feedback.js';
 afterEach(() => vi.unstubAllEnvs());
 
 describe('parseExplorerCodebooks', () => {
-  it('defaults to the original codebook only', () => {
-    expect(DEFAULT_EXPLORER_CODEBOOKS).toEqual(['original']);
-    expect(parseExplorerCodebooks(undefined)).toEqual(['original']);
-    expect(parseExplorerCodebooks('  ')).toEqual(['original']);
+  it('defaults to codebook 3.0 only', () => {
+    expect(DEFAULT_EXPLORER_CODEBOOKS).toEqual(['youth_outcomes_v3']);
+    expect(parseExplorerCodebooks(undefined)).toEqual(['youth_outcomes_v3']);
+    expect(parseExplorerCodebooks('  ')).toEqual(['youth_outcomes_v3']);
   });
 
   it('reads a comma list, ignoring unknown ids and duplicates', () => {
     expect(parseExplorerCodebooks('original, accelerate_philly,original,nope')).toEqual(['original', 'accelerate_philly']);
-    expect(parseExplorerCodebooks('nope')).toEqual(['original']);
+    expect(parseExplorerCodebooks('nope')).toEqual(['youth_outcomes_v3']);
   });
 });
 
@@ -22,9 +22,10 @@ describe('codebookAllowedOnThisSite', () => {
     expect(codebookAllowedOnThisSite('accelerate_philly')).toBe(true);
   });
 
-  it('hides Accelerate Philly on the explorer site unless listed', () => {
+  it('shows only codebook 3.0 on the explorer site unless others are listed', () => {
     vi.stubEnv('VITE_SITE', 'explorer');
-    expect(codebookAllowedOnThisSite('original')).toBe(true);
+    expect(codebookAllowedOnThisSite('youth_outcomes_v3')).toBe(true);
+    expect(codebookAllowedOnThisSite('original')).toBe(false);
     expect(codebookAllowedOnThisSite('accelerate_philly')).toBe(false);
     vi.stubEnv('VITE_EXPLORER_CODEBOOKS', 'original,accelerate_philly');
     expect(codebookAllowedOnThisSite('accelerate_philly')).toBe(true);

@@ -26,7 +26,8 @@ export type CodebookType = keyof typeof CODEBOOK_REGISTRY;
 
 export const CODEBOOK_LIST: Codebook[] = Object.values(CODEBOOK_REGISTRY);
 
-export const DEFAULT_CODEBOOK_ID: CodebookType = 'original';
+// Codebook 3.0 became the default on 2026-09-26 (CP-08-02, Severin). 2.5.x stays selectable.
+export const DEFAULT_CODEBOOK_ID: CodebookType = 'youth_outcomes_v3';
 
 export const getCodebook = (id: CodebookType): Codebook => CODEBOOK_REGISTRY[id];
 

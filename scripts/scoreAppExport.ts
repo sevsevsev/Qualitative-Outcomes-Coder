@@ -3,7 +3,7 @@
 // Scores the app's own CSV export against the cycle-02 gold set
 // (codebook-refinement/gold/gold-cycle02.csv, v1_* columns = live codebook),
 // or against codebook 3.x's gold (--gold codebook-refinement/gold/youth_outcomes_v3.gold.csv,
-// v3_gold column) for runs made with "Youth Outcomes Codebook 3.0 (testing)".
+// v3_gold column) for runs made with "Youth Outcomes Codebook 3.0".
 // This is the route for live runs when a session can't reach Gemini: a human
 // uploads the statements file in a Vercel preview, exports the result, and this
 // script scores it. Same scoring rules as scripts/codebook-eval.ts.

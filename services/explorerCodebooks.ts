@@ -10,8 +10,11 @@
 
 import { CODEBOOK_REGISTRY, CodebookType } from '../codebooks/index.js';
 
-/** Shown when VITE_EXPLORER_CODEBOOKS is unset. Accelerate Philly is left off for now (Severin, 2026-09-24). */
-export const DEFAULT_EXPLORER_CODEBOOKS: readonly CodebookType[] = ['original'];
+/**
+ * Shown when VITE_EXPLORER_CODEBOOKS is unset: codebook 3.0 only, so the site has no codebook
+ * switcher and the landing sunburst shows 3.0's domains (Severin, 2026-09-26, CP-08-02).
+ */
+export const DEFAULT_EXPLORER_CODEBOOKS: readonly CodebookType[] = ['youth_outcomes_v3'];
 
 /** Parses a comma-separated id list; unknown ids are ignored, and an empty result falls back to the default. */
 export const parseExplorerCodebooks = (raw: string | undefined): CodebookType[] => {

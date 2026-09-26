@@ -25,12 +25,13 @@ Read these before touching any codebook:
 
 - Phase 1 adjudication is done (345 gold rows). The CP-scoring thread tests the last 2.x
   coding CPs.
-- `codebooks/original.ts` is 2.5.x, the default codebook. Older files may use pre-2.0.0
-  numbers; see `codebook-refinement/renumbering/`.
-- Codebook 3.0 (`youth_outcomes_v3`, CP-08-01) is built beside it for testing: 3 parts,
-  13 domains, 39 categories, 98 codes. It is not the default and is hidden on the
-  public explorer. Its proposed gold (`gold/youth_outcomes_v3.gold.csv`) waits on
-  Severin's adjudication. The v2 draft stays an input only.
+- Codebook 3.0 (`youth_outcomes_v3`, `codebooks/youthOutcomesV3.data.ts`) is the default
+  codebook since CP-08-02 (2026-09-26), and the only one on the public explorer. It has 3
+  parts, 13 domains, 39 categories and 98 codes. Gold: `gold/youth_outcomes_v3.gold.csv`
+  (345 design/old held-out rows) and `gold/youth_outcomes_v3.heldout.gold.csv` (100 fresh
+  rows, now used once), all adjudicated by Severin. The v2 draft stays an input only.
+- `codebooks/original.ts` (2.5.x) stays selectable in the coder app. Older files may use
+  pre-2.0.0 numbers; see `codebook-refinement/renumbering/`.
 - A public explorer-only site is built from this repo with `VITE_SITE=explorer` (README,
   "Public codebook explorer site"). Its visitor feedback lands in
   `codebook-refinement/feedback/` as leads for a cycle, never as evidence or edits.

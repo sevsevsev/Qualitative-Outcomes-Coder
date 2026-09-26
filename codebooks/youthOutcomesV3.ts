@@ -163,7 +163,7 @@ const domains: DomainDefinition[] = V3_DOMAINS.map(d => ({
 export const youthOutcomesV3Codebook: Codebook = {
   id: 'youth_outcomes_v3',
   version: V3_VERSION,
-  label: 'Youth Outcomes Codebook 3.0 (testing)',
+  label: 'Youth Outcomes Codebook 3.0',
   rulesText,
   definitionsText,
   capabilities: {

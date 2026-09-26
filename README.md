@@ -100,7 +100,7 @@ The same repo also builds a public site that shows only the codebook explorer, w
 5. Optional, for "Try it": set `GEMINI_API_KEY` to a key made just for this site (set a budget alert on it in Google Cloud).
 6. Redeploy.
 
-**Optional settings:** `VITE_SITE_NAME` (header name, default "Youth Outcomes Codebook"), `VITE_EXPLORER_CODEBOOKS` (comma-separated codebook ids the site shows, default `original`; add `accelerate_philly` to bring that codebook back), `FEEDBACK_PUBLIC=false` (approved feedback visible only to the admin), `TRY_CODING_PER_HOUR` (default 10 per visitor), `TRY_CODING_DAILY_CAP` (default 300 for the whole site), `TRY_CODING=off`.
+**Optional settings:** `VITE_SITE_NAME` (header name, default "Youth Outcomes Codebook"), `VITE_EXPLORER_CODEBOOKS` (comma-separated codebook ids the site shows, default `youth_outcomes_v3`; list more ids, such as `original` or `accelerate_philly`, to bring back the codebook switcher), `FEEDBACK_PUBLIC=false` (approved feedback visible only to the admin), `TRY_CODING_PER_HOUR` (default 10 per visitor), `TRY_CODING_DAILY_CAP` (default 300 for the whole site), `TRY_CODING=off`.
 
 **Moderating:** open `#/admin` on the site and sign in with the admin password. New feedback stays hidden until approved. Approved feedback appears under its code or domain as long as that code keeps the same wording. Feedback never changes the codebook: download the approved CSV into `codebook-refinement/feedback/` (see the README there) and it feeds the next refinement cycle.
 

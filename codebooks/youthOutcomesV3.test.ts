@@ -139,3 +139,29 @@ describe('crosswalk 2.5.1 -> 3.0.0 (renumbering rule: generated map, tested)', (
     expect(orphans.map(c => c.id)).toEqual([]);
   });
 });
+
+describe('codebook 3.x gold (youth_outcomes_v3.gold.csv)', () => {
+  const rows = parseCsv(read('codebook-refinement/gold/youth_outcomes_v3.gold.csv'));
+  const labels = new Set([...codes.map(v3Code), 'none']);
+
+  it('covers every cycle-02 statement once', () => {
+    expect(rows.length).toBe(345);
+    expect(new Set(rows.map(r => r.gold_id)).size).toBe(345);
+  });
+
+  it('only lets Severin adjudicate rows, each with a live 3.0 code and a date', () => {
+    for (const r of rows.filter(r => r.status === 'adjudicated')) {
+      expect(r.adjudicated_by, r.gold_id).toBe('Severin');
+      expect(r.adjudicated_on, r.gold_id).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(labels.has(r.v3_gold), `${r.gold_id} ${r.v3_gold}`).toBe(true);
+    }
+  });
+
+  it('leaves undecided rows proposed, with no gold code', () => {
+    for (const r of rows.filter(r => r.status !== 'adjudicated')) {
+      expect(r.status, r.gold_id).toBe('proposed');
+      expect(r.v3_gold, r.gold_id).toBe('');
+      expect(r.adjudicated_by, r.gold_id).toBe('');
+    }
+  });
+});

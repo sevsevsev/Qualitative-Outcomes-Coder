@@ -1,0 +1,702 @@
+{
+ "adjudicated_by": "Severin",
+ "source": "Codebook 3.0 gold review page (claude.ai artifact S9Y8rPBpnoYvFLEy7nD5S7), db collection verdicts; read 2026-09-26",
+ "verdicts": {
+  "H002": {
+   "code": "A2.2",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H005": {
+   "code": "A2.5",
+   "gap": false,
+   "note": "this is an output that speaks to preparation for the tutors (staff) of the program.  I am not sure if A2.5 totally covers that or not.",
+   "on": "2026-09-26"
+  },
+  "H008": {
+   "code": "Y1.4",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H009": {
+   "code": "Y1.16",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H010": {
+   "code": "Y1.6",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H012": {
+   "code": "Y2.5",
+   "gap": false,
+   "note": "This is really two separate outcomes in a single statement. The outcomes coder should split them and code them individually.",
+   "on": "2026-09-26"
+  },
+  "H013": {
+   "code": "Y8.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H031": {
+   "code": "Y1.4",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H032": {
+   "code": "Y4.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H042": {
+   "code": "Y8.10",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H046": {
+   "code": "Y7.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H048": {
+   "code": "Y7.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H050": {
+   "code": "F2.3",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H051": {
+   "code": "Y3.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H052": {
+   "code": "Y1.13",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H055": {
+   "code": "Y3.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H057": {
+   "code": "A2.1",
+   "gap": false,
+   "note": "I feel like this is an edge case where I am torn between A2.1 and Y3.1.",
+   "on": "2026-09-26"
+  },
+  "H059": {
+   "code": "F1.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H060": {
+   "code": "Y5.6",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H061": {
+   "code": "F1.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H062": {
+   "code": "F1.6",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H066": {
+   "code": "F1.3",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H069": {
+   "code": "F1.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H072": {
+   "code": "F1.3",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H075": {
+   "code": "F2.3",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H077": {
+   "code": "Y1.4",
+   "gap": true,
+   "note": "This feels like it is about skills that are not purely academic. Perhaps they could be coded as being digital skills related to career readiness or workforce skills?",
+   "on": "2026-09-26"
+  },
+  "H078": {
+   "code": "F1.6",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H079": {
+   "code": "Y5.5",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H080": {
+   "code": "A2.5",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H082": {
+   "code": "Y8.2",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H085": {
+   "code": "Y8.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H086": {
+   "code": "Y8.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H089": {
+   "code": "A3.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "H090": {
+   "code": "A3.2",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S001": {
+   "code": "A2.4",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S003": {
+   "code": "Y2.6",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S008": {
+   "code": "Y2.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S013": {
+   "code": "Y6.6",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S014": {
+   "code": "Y1.16",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S016": {
+   "code": "Y5.5",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S017": {
+   "code": "F1.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S019": {
+   "code": "A3.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S024": {
+   "code": "Y3.4",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S030": {
+   "code": "Y1.14",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S031": {
+   "code": "Y8.2",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S032": {
+   "code": "Y5.6",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S034": {
+   "code": "Y1.12",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S036": {
+   "code": "Y5.3",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S038": {
+   "code": "Y8.10",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S040": {
+   "code": "F1.3",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S041": {
+   "code": "A2.4",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S045": {
+   "code": "Y6.6",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S049": {
+   "code": "Y2.2",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S055": {
+   "code": "Y1.14",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S056": {
+   "code": "Y1.15",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S059": {
+   "code": "Y4.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S061": {
+   "code": "Y8.5",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S064": {
+   "code": "Y8.5",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S068": {
+   "code": "Y8.2",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S070": {
+   "code": "Y3.4",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S071": {
+   "code": "Y8.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S074": {
+   "code": "Y8.2",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S075": {
+   "code": "A2.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S083": {
+   "code": "A1.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S085": {
+   "code": "Y1.14",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S093": {
+   "code": "Y8.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S094": {
+   "code": "Y8.5",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S098": {
+   "code": "A2.4",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S099": {
+   "code": "Y3.5",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S101": {
+   "code": "A3.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S104": {
+   "code": "Y1.4",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S108": {
+   "code": "Y8.3",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S109": {
+   "code": "Y1.15",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S118": {
+   "code": "F1.6",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S120": {
+   "code": "Y7.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S121": {
+   "code": "Y8.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S124": {
+   "code": "Y5.5",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S127": {
+   "code": "A2.5",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S143": {
+   "code": "Y1.2",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S144": {
+   "code": "Y8.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S147": {
+   "code": "Y1.4",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S149": {
+   "code": "A1.3",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S150": {
+   "code": "Y1.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S154": {
+   "code": "A3.3",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S155": {
+   "code": "Y1.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S156": {
+   "code": "Y1.14",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S159": {
+   "code": "Y1.16",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S162": {
+   "code": "Y7.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S164": {
+   "code": "F1.9",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S167": {
+   "code": "Y6.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S174": {
+   "code": "A2.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S176": {
+   "code": "F1.9",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S183": {
+   "code": "A2.5",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S185": {
+   "code": "Y1.4",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S187": {
+   "code": "Y8.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S188": {
+   "code": "Y7.2",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S191": {
+   "code": "Y8.5",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S192": {
+   "code": "Y8.2",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S193": {
+   "code": "F1.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S195": {
+   "code": "A3.2",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S199": {
+   "code": "Y1.6",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S201": {
+   "code": "Y7.3",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S203": {
+   "code": "Y1.4",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S205": {
+   "code": "Y8.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S206": {
+   "code": "F1.6",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S207": {
+   "code": "Y8.1",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S212": {
+   "code": "Y8.8",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S219": {
+   "code": "Y1.16",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S224": {
+   "code": "Y7.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S232": {
+   "code": "Y1.4",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S236": {
+   "code": "Y5.6",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S241": {
+   "code": "Y1.17",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S247": {
+   "code": "Y6.6",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S250": {
+   "code": "Y5.5",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S252": {
+   "code": "F1.7",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  },
+  "S255": {
+   "code": "Y8.2",
+   "gap": false,
+   "note": "",
+   "on": "2026-09-26"
+  }
+ }
+}

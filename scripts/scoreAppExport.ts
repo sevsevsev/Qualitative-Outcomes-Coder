@@ -1,7 +1,9 @@
 // scripts/scoreAppExport.ts
 //
 // Scores the app's own CSV export against the cycle-02 gold set
-// (codebook-refinement/gold/gold-cycle02.csv, v1_* columns = live codebook).
+// (codebook-refinement/gold/gold-cycle02.csv, v1_* columns = live codebook),
+// or against codebook 3.x's gold (--gold codebook-refinement/gold/youth_outcomes_v3.gold.csv,
+// v3_gold column) for runs made with "Youth Outcomes Codebook 3.0 (testing)".
 // This is the route for live runs when a session can't reach Gemini: a human
 // uploads the statements file in a Vercel preview, exports the result, and this
 // script scores it. Same scoring rules as scripts/codebook-eval.ts.
@@ -22,9 +24,31 @@ import {
 
 const splitList = (s: string): string[] => s.split(';').map(x => x.trim()).filter(Boolean);
 
-/** gold-cycle02.csv rows -> GoldRow, using the live-codebook (v1_*) columns. Codebook-gap rows keep their closest code. */
-export const parseCycle02Gold = (csvText: string, set: string): (GoldRow & { gap: boolean })[] =>
-  parseCsvRecords(csvText)
+/** youth_outcomes_v3.gold.csv rows -> GoldRow ("Y1.4 Name" labels, " | "-separated alternates). */
+const parseV3Gold = (records: Record<string, string>[], set: string): (GoldRow & { gap: boolean })[] =>
+  records
+    .filter(r => r.set === set)
+    .map(r => ({
+      gold_id: r.gold_id,
+      outcome_text: r.outcome_text,
+      program_type: '',
+      expected_code: codePrefix(r.v3_gold),
+      acceptable_alternates: (r.v3_alternates ?? '').split(' | ').map(codePrefix).filter(c => c !== 'none'),
+      expected_uncoded: (r.expected_uncoded ?? '').toLowerCase() === 'true' || r.v3_gold === 'none',
+      confusion_ids: [],
+      requires_cp: '',
+      status: (r.status as GoldRow['status']) || 'proposed',
+      adjudicated_by: r.adjudicated_by ?? '',
+      adjudicated_on: r.adjudicated_on ?? '',
+      gap: r.codebook_gap === '1',
+    }));
+
+/** gold-cycle02.csv rows -> GoldRow, using the live-codebook (v1_*) columns. Codebook-gap rows keep their closest code.
+ *  A codebook 3.x gold file (it has a v3_gold column) is read from its own columns instead. */
+export const parseCycle02Gold = (csvText: string, set: string): (GoldRow & { gap: boolean })[] => {
+  const records = parseCsvRecords(csvText);
+  if (records.length && 'v3_gold' in records[0]) return parseV3Gold(records, set);
+  return records
     .filter(r => r.set === set)
     .map(r => ({
       gold_id: r.gold_id,
@@ -40,6 +64,7 @@ export const parseCycle02Gold = (csvText: string, set: string): (GoldRow & { gap
       adjudicated_on: r.adjudicated_on ?? '',
       gap: r.v1_forced_fit === '1',
     }));
+};
 
 /** The app's export (one line per atomic outcome) -> one CodedRow per row_id, split items in order. */
 export const parseAppExport = (csvText: string): { rows: CodedRow[]; codebookVersions: string[] } => {

@@ -93,8 +93,8 @@ describe('original codebook v1.1.0 additions', () => {
     expect(codes).toContain('11.5 Program Participation, Retention & Reach (Output Metric)');
   });
 
-  it('bumped the codebook version to 2.5.0 for the 6.1 safety definition (CP-01-07)', () => {
-    expect(original.version).toBe('2.5.0');
+  it('bumped the codebook version to 2.5.1 for the CASEL tie-breakers (CP-01-06)', () => {
+    expect(original.version).toBe('2.5.1');
   });
 
   it('adds 2.6 Sustained & Individual Interest to Domain 2', () => {

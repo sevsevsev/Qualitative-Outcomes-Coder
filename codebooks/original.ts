@@ -198,7 +198,7 @@ Framework Basis: CASEL (Collaborative for Academic, Social, and Emotional Learni
    - Example: "Students will be able to name at least two personal strengths."
 4.1.4 Confidence, self-efficacy & growth mindset
    - Definition: Students believe they can succeed, improve with effort, and handle challenges.
-   - Note: Use 4.1.4 for general self-confidence/growth mindset and for identity-adjacent "sense of purpose/self-esteem" language that is really about self-belief. Use 5.4 only when tied specifically to schoolwork/grades. Use 6.4 only for broader identity/purpose that is not primarily about confidence or self-belief.
+   - Note: Use 4.1.4 for general self-confidence, a growth mindset about challenges in general, and identity-adjacent "sense of purpose/self-esteem" language that is really about self-belief. Use 5.4 when the confidence or growth mindset is tied specifically to learning, intelligence, schoolwork or grades. Use 6.4 only for broader identity/purpose that is not primarily about confidence or self-belief.
    - Example: "Students will show increased confidence in their ability to tackle difficult tasks."
 
 4.2 Self-Management (Category Header - Do Not Use)
@@ -541,9 +541,9 @@ SPECIFIC CODING RULES & TIE-BREAKERS:
    - Use 4.2.2 (Stress Management) when a student *learns/uses a tool* to cope.
    - Use 8.2 (Mental Health Status) when the outcome is a *reduction in symptoms* (e.g., "decreased anxiety") in the YOUTH themselves. For a caregiver's own stress/burnout, use 12.2.
 
-3. GENERAL vs. ACADEMIC CONFIDENCE:
-   - Use 4.1.4 for general self-confidence or growth mindset.
-   - Use 5.4 (Academic Confidence) ONLY for confidence specifically related to schoolwork/grades.
+3. GENERAL vs. ACADEMIC CONFIDENCE & MINDSET:
+   - Use 4.1.4 for general self-confidence, or a growth mindset about challenges in general.
+   - Use 5.4 for confidence OR growth mindset specifically about learning, intelligence, schoolwork, or grades (Farrington et al. 2012 academic mindsets: "I can succeed at this"; "My ability and competence grow with my effort").
 
 4. 4.4.2 (Cooperation) vs. 3.3 (Peer Connection):
    - Use 4.4.2 for the *skill* of working together (teamwork).
@@ -583,6 +583,12 @@ SPECIFIC CODING RULES & TIE-BREAKERS:
 
 10. SAFETY: feeling safe in general or in the neighborhood -> 6.1; feeling safe AND accepted in this program/school -> 3.1; making safe choices -> 4.5.4; reduced incidence of fights/bullying/victimization -> 8.7; psychological safety while recovering from trauma -> 8.3.
 
+11. LEADERSHIP: 7.3 when youth influence decisions of a program, school, or community (councils, advisory boards, presenting to decision-makers). 4.4.2 when leading peers within a group task. 9.5 when framed as workplace readiness. Do not split "leadership while leading X" into two outcomes -- X is the activity.
+
+12. CASEL SKILLS WITHOUT A DEDICATED CODE: resisting negative peer pressure -> 4.5.4; curiosity/open-mindedness -> 2.2; gratitude and recognizing strengths in others -> 4.3.1; standing up for others' rights -> 7.4 if framed around injustice/systems, else 4.5.2; initiative/personal agency -> 6.4 (Search Institute 'Personal power' is a Positive Identity asset; 7.3 if civic).
+
+13. DIGITAL: safe/ethical online behavior -> 7.5; having a device or connectivity -> 10.1; coding or digital skills learned in general enrichment -> 1.8; industry certification -> 9.6.
+
 CRITICAL for Formatting:
 - Ensure the 'primary_domain' string exactly matches the codebook headers (e.g. "Domain 2. Joy, Interest & Motivation in Learning").
 - Ensure the 'primary_subcategory' string exactly matches the codebook items (e.g. "2.1 Joy & Emotional Wellness").
@@ -592,7 +598,7 @@ CRITICAL for Formatting:
 
 export const originalCodebook: Codebook = {
   id: 'original',
-  version: '2.5.0',
+  version: '2.5.1',
   label: 'Youth Outcomes Codebook',
   // The prompt keeps the old name so renaming the codebook (2026-09-24)
   // did not change what the model is sent.
@@ -740,7 +746,7 @@ export const originalCodebook: Codebook = {
         { code: "4.1.3 Recognizing strengths" },
         {
           code: "4.1.4 Confidence, self-efficacy & growth mindset",
-          hint: "vs 5.4 (Academic Confidence): use 4.1.4 for general self-confidence/growth mindset; use 5.4 only when tied specifically to schoolwork/grades. vs 6.4: use 6.4 for broader identity/purpose not primarily about confidence.",
+          hint: "vs 5.4 (Academic Confidence): use 4.1.4 for general self-confidence or a growth mindset about challenges in general; use 5.4 for confidence or growth mindset specifically about learning, intelligence, schoolwork or grades. vs 6.4: use 6.4 for broader identity/purpose not primarily about confidence.",
         },
         {
           code: "4.2.1 Emotion regulation & impulse control",
@@ -771,7 +777,7 @@ export const originalCodebook: Codebook = {
         },
         {
           code: "4.4.2 Cooperation, teamwork & collaboration",
-          hint: "Focus is on the skill of working together. For friendship/bonding, use 3.3 (Peer Connection) instead.",
+          hint: "Focus is on the skill of working together. For friendship/bonding, use 3.3 (Peer Connection) instead. Includes leading peers within a group task (CASEL: 'Showing leadership in groups'); civic leadership -> 7.3.",
         },
         {
           code: "4.4.3 Conflict management & problem-solving in relationships",
@@ -788,7 +794,10 @@ export const originalCodebook: Codebook = {
           hint: "vs 6.2 (Positive Values): use 4.5.2 when a decision is made in a specific situation; use 6.2 for general character traits/values.",
         },
         { code: "4.5.3 Personal and social problem-solving" },
-        { code: "4.5.4 Safety-oriented decisions & risk avoidance" },
+        {
+          code: "4.5.4 Safety-oriented decisions & risk avoidance",
+          hint: "Includes resisting negative peer pressure (refusal skills).",
+        },
         {
           code: "4.5.5 Contributions to class/program/community wellbeing",
           hint: "For small, daily classroom/program contributions. For larger community service projects or volunteering, use 7.2 instead.",
@@ -808,7 +817,7 @@ export const originalCodebook: Codebook = {
         { code: "5.3 Learning Strategies (Study Skills)" },
         {
           code: "5.4 Academic Confidence (Self-Efficacy)",
-          hint: "vs 4.1.4 (general Confidence): use 5.4 ONLY for confidence specifically about schoolwork/grades.",
+          hint: "vs 4.1.4 (general Confidence): use 5.4 ONLY for confidence or growth mindset specifically about learning, intelligence, schoolwork or grades.",
         },
       ],
     },

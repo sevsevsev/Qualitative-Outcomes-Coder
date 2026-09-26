@@ -114,7 +114,7 @@ education body. See CP-01-05 for the options.
 
 **Gold:** G-011, G-012, G-013, G-069
 
-### CF-005: Growth mindset · proposed amendment (CP-01-06)
+### CF-005: Growth mindset · active
 
 **Codes:** 5.4 · 4.1.4
 
@@ -247,7 +247,7 @@ model that is emerging individual interest, not triggered situational interest.
 
 **Gold:** G-034, G-035, G-036
 
-### CF-015: Leadership · proposed (CP-01-06)
+### CF-015: Leadership · active
 
 **Codes:** 7.3 · 4.4.2 · 9.5
 
@@ -261,7 +261,7 @@ model that is emerging individual interest, not triggered situational interest.
 
 **Gold:** G-037, G-038, G-039
 
-### CF-016: CASEL 2020 skills with no dedicated subcode · proposed (CP-01-06)
+### CF-016: CASEL 2020 skills with no dedicated subcode · active
 
 Routing table. Adding a new code for any of these would need its own CP.
 
@@ -377,7 +377,7 @@ it uncoded.
 
 **Gold:** G-052, G-053
 
-### CF-024: Digital · proposed clarification (CP-01-06)
+### CF-024: Digital · active
 
 **Codes:** 7.5 · 10.1 · 1.8 · 9.6
 

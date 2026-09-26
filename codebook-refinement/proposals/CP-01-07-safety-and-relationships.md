@@ -29,7 +29,7 @@
 | Codes touched | 6.1 (definition; new Source Framework line) |
 | Version bump | MINOR (the draft said PATCH; see note) |
 | Requirement served | R1, R3 (CF-017) |
-| Status | ready-to-test: definition applied on a draft PR for a preview run (not approved). The new Source Framework line is held back until the verifier confirms it |
+| Status | approved (Severin, 2026-09-26): 6.1 definition + safety tie-breaker (rule 10). Source Framework line held back (verifier PARTIAL) |
 | Enum cost | +0 |
 
 ## Problem

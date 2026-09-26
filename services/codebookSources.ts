@@ -10,6 +10,7 @@
 // JSON here and add it to SOURCE_REGISTRIES under that codebook's id.
 
 import originalSources from '../codebook-refinement/sources/original.sources.json';
+import youthOutcomesV3Sources from '../codebook-refinement/sources/youth_outcomes_v3.sources.json';
 
 export type SourceStatus =
   | 'verified'
@@ -66,6 +67,7 @@ export interface SourceRegistry {
 
 export const SOURCE_REGISTRIES: Record<string, SourceRegistry | undefined> = {
   original: originalSources as SourceRegistry,
+  youth_outcomes_v3: youthOutcomesV3Sources as SourceRegistry,
 };
 
 export const getSourceRegistry = (codebookId: string): SourceRegistry | undefined =>

@@ -18,4 +18,6 @@ adjudicated.
   - H057 is an edge case between A2.1 and Y3.1.
   - H005: staff preparation as an output, where A2.5 may not fully cover it.
 
+On 2026-09-26 he said yes to accepting the second code each note names as an alternate (`alternates-2026-09-26.json`). H005 (A1.1) and H057 (Y3.1) already listed it. H012 gains Y5.4.
+
 The 229 unflagged rows are still proposed.

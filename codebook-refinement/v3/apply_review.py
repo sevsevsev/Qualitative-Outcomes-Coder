@@ -7,6 +7,7 @@ codebook-refinement/gold/youth_outcomes_v3.gold.csv with:
   codebook_gap     1 when he switched on "No good fit"
   adjudication_note  his note, prefixed "Severin: "
   status / adjudicated_by / adjudicated_on  set only for rows he decided.
+alternates-*.json adds accepted alternates he named in the thread.
 Rows he has not decided stay status=proposed with v3_gold empty. The script
 never decides a row itself. Run from the repo root:
   python3 codebook-refinement/v3/apply_review.py
@@ -26,6 +27,13 @@ for f in sorted(glob.glob(os.path.join(ROOT, 'codebook-refinement/v3/review/verd
     assert doc['adjudicated_by'] == 'Severin'
     verdicts.update(doc['verdicts'])
 
+extra_alts = {}
+for f in sorted(glob.glob(os.path.join(ROOT, 'codebook-refinement/v3/review/alternates-*.json'))):
+    doc = json.load(open(f))
+    assert doc['adjudicated_by'] == 'Severin'
+    for gid, codes in doc['alternates'].items():
+        extra_alts.setdefault(gid, []).extend(codes)
+
 rows = list(csv.DictReader(open(GOLD)))
 base = [c for c in rows[0].keys() if c not in ('v3_gold', 'codebook_gap', 'adjudication_note')]
 i = base.index('v3_suggested')
@@ -44,6 +52,10 @@ for r in rows:
     code = v['code']
     assert code == 'none' or code in names, (r['gold_id'], code)
     alts = [a for a in r['v3_alternates'].split(' | ') if a and a.split(' ')[0] != code]
+    for extra in extra_alts.get(r['gold_id'], []):
+        assert extra in names and extra != code, (r['gold_id'], extra)
+        if extra not in [a.split(' ')[0] for a in alts]:
+            alts.insert(0, label(extra))
     r.update(v3_gold=label(code), v3_alternates=' | '.join(alts), codebook_gap='1' if v.get('gap') else '0',
              expected_uncoded='true' if code == 'none' else 'false',
              adjudication_note=('Severin: ' + v['note'].strip()) if v.get('note', '').strip() else '',

@@ -531,6 +531,14 @@ CRITICAL for Domain 4 (SEL):
    - 4.5.2 (Ethical Choices) vs 6.2 (Positive Values): Use 4.5.2 when a *decision* is made in a specific situation. Use 6.2 for general character traits/values.
    - 4.5.1 (Evaluating Options) vs 4.5.3 (Problem-Solving) vs 4.4.3 (Relationship Conflict) vs 9.2 (Cognitive Strategies): Use 4.5.1 for weighing options before one decision. Use 4.5.3 for the fuller identify->solve->act cycle. Use 4.4.3 specifically when the problem is interpersonal conflict. Use 9.2 for academic/professional analytical reasoning.
 
+GENERAL DECISION PROCEDURE (apply in order; stop at the first step that decides):
+1. WHO changes? Caregiver's own outcome -> Domain 12. Adult/staff/organization -> Domain 11. Otherwise continue.
+2. OUTPUT or OUTCOME? Program-level counts/dosage/reach -> 11.5.
+3. WHAT KIND of result? State/experience -> Domains 2, 3, 6, or 8.2. Skill/competency -> Domains 4, 5, 9.2, 9.5. Knowledge/learning gain -> Domain 1, 9.1, 9.9, 7.1. Change in risk-behavior incidence -> 8.5-8.8. Status/attainment -> 1.5, 1.6, 9.7, 9.8, 12.5-12.7.
+4. WHAT CONTEXT? The same skill routes by framing: schoolwork -> Domain 5; work/career -> Domain 9; civic/decision-making -> Domain 7; otherwise Domain 4.
+5. MOST SPECIFIC wins: pick the subcategory whose DEFINITION (not just its label) names the construct.
+The specific tie-breakers below override this procedure where they apply.
+
 SPECIFIC CODING RULES & TIE-BREAKERS:
 1. SKILL vs. STATE:
    - Domain 4 (SEL) is for SKILLS/COMPETENCIES (e.g., "Student uses coping strategies").
@@ -598,7 +606,7 @@ CRITICAL for Formatting:
 
 export const originalCodebook: Codebook = {
   id: 'original',
-  version: '2.5.1',
+  version: '2.5.2',
   label: 'Youth Outcomes Codebook',
   // The prompt keeps the old name so renaming the codebook (2026-09-24)
   // did not change what the model is sent.

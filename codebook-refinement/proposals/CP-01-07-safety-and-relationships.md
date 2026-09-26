@@ -200,4 +200,7 @@ to add the safety tie-breaker to this test. Applied as rule **10** (rules 10-12 
 been reserved for CP-01-06, which is not applied yet; CP-01-06 now takes the next
 free numbers). Also applied: the 3.1 hint, rule 1's example and the Domain 3 hint
 changed from "feels safe" to "feels safe at the program", and CF-017 set active.
-Result: not run yet.
+Result: 92.9% / 92.5% lenient vs 92.9% / 92.9% on 2.4.0. No row regressed in
+both runs (passes S4.4). S212 is back to 8.3 in both runs. S017 went from wrong in
+both to right in both (a no-good-fit row that shifts with prompt changes). S108,
+S110 and S159 changed in one run only (noise). Run-to-run kappa 0.976.

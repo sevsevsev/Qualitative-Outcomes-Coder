@@ -3,7 +3,7 @@
 Every code that departs from its domain's anchor framework has an entry here
 (STANDARDS S1.6). Every CP states whether it adds or changes one (S4.1), and each
 cycle report counts them per domain (S4.9). `deviations.test.ts` checks that this log,
-the codebook, the source registry and the 3.0 proposal agree.
+the codebooks and the source registries agree.
 
 **Fidelity** of a code is one of:
 
@@ -104,13 +104,15 @@ never deleted: a closed entry stays, with `Status: closed` and the reason.
 
 ---
 
-## Proposed for 3.0 (not live)
+## Codebook 3.x (`codebooks/youthOutcomesV3.data.ts`, built, not yet the default)
 
-These entries belong to `docs/codebook/proposed-codebook.md`. They become live entries,
-renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
+These entries belong to codebook 3.x, approved by Severin on 2026-09-26 and built in
+CP-08-01. They keep their FD-P numbers so the proposal documents still point at them.
+Each code's `fidelity` and `deviation` fields in the data file must match its entry.
 
 ### FD-P01 · Y3.1
 
+- **Status:** open
 - **Fidelity:** adapted
 - **Case:** sector-widening
 - **Anchor:** CDC (2009) School Connectedness (verified).
@@ -122,6 +124,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P02 · Y4.2
 
+- **Status:** open
 - **Fidelity:** adapted
 - **Case:** merged-components
 - **Anchor:** CASEL (2020), Self-Management.
@@ -135,6 +138,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P03 · Y4.3
 
+- **Status:** open
 - **Fidelity:** adapted
 - **Case:** merged-components
 - **Anchor:** CASEL (2020), Self-Management.
@@ -146,6 +150,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P04 · Y4.4
 
+- **Status:** open
 - **Fidelity:** adapted
 - **Case:** merged-components
 - **Anchor:** CASEL (2020), Social Awareness.
@@ -157,6 +162,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P05 · Y4.8
 
+- **Status:** open
 - **Fidelity:** adapted
 - **Case:** merged-components
 - **Anchor:** CASEL (2020), Relationship Skills.
@@ -168,6 +174,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P06 · Y4.9
 
+- **Status:** open
 - **Fidelity:** adapted
 - **Case:** merged-components
 - **Anchor:** CASEL (2020), Relationship Skills, "Seeking or offering support and help
@@ -180,6 +187,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P07 · Y4.10
 
+- **Status:** open
 - **Fidelity:** adapted
 - **Case:** merged-components
 - **Anchor:** CASEL (2020), Responsible Decision-Making.
@@ -191,6 +199,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P08 · Y4.11
 
+- **Status:** open
 - **Fidelity:** adapted
 - **Case:** merged-components
 - **Anchor:** CASEL (2020), Responsible Decision-Making.
@@ -202,6 +211,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P09 · Y4.12
 
+- **Status:** open
 - **Fidelity:** codebook-defined
 - **Case:** codebook-defined
 - **Anchor:** CASEL (2020), Relationship Skills, "Resisting negative social pressure",
@@ -214,6 +224,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P10 · Y5.1
 
+- **Status:** closed (2026-09-26 re-review: Y5 re-anchored on Nagaoka et al. (2015), whose key outcome 'integrated identity' Y5.1 now matches; the move out of CASEL stays visible in Y4.1's Use instead line)
 - **Fidelity:** adapted
 - **Case:** observability
 - **Anchor:** CASEL (2020), Self-Awareness, "Integrating personal and social identities".
@@ -227,6 +238,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P11 · Y5.4
 
+- **Status:** closed (2026-09-26 re-review: Y5.4 now matches Nagaoka et al. (2015) 'mindsets' and the Search Institute self-esteem asset, both verified)
 - **Fidelity:** adapted
 - **Case:** observability
 - **Anchor:** CASEL (2020), Self-Awareness, "Experiencing self-efficacy", "Having a
@@ -239,6 +251,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P12 · Y5.5
 
+- **Status:** open
 - **Fidelity:** adapted
 - **Case:** codebook-defined
 - **Anchor:** Search Institute Positive Identity, Sense of purpose (located).
@@ -250,6 +263,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P13 · Y6.4
 
+- **Status:** open
 - **Fidelity:** adapted
 - **Case:** sector-widening
 - **Anchor:** NCSS (2013) C3 Framework, Dimension 4 Taking Informed Action (partial).
@@ -262,6 +276,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P14 · Y6.5
 
+- **Status:** open
 - **Fidelity:** adapted
 - **Case:** sector-widening
 - **Anchor:** NCSS C3 Dimension 4 (partial); Lerner et al. (2005), Contribution
@@ -274,6 +289,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P15 · Y7.7
 
+- **Status:** open
 - **Fidelity:** adapted
 - **Case:** sector-widening
 - **Anchor:** Chafee, 42 U.S.C. 677(a)(1), daily living skills (verified).
@@ -285,6 +301,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P16 · Y2.5
 
+- **Status:** open
 - **Fidelity:** adapted
 - **Case:** merged-components
 - **Anchor:** National Core Arts Standards (2014), Creating and Performing/Presenting/
@@ -298,6 +315,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P17 · Y3.4
 
+- **Status:** closed (2026-09-26 re-review: Search Institute Developmental Assets 1-2 (family support, positive family communication) and Developmental Relationships with parents, both verified, now anchor Y3.4)
 - **Fidelity:** codebook-defined
 - **Case:** codebook-defined
 - **Anchor:** none names family relationships as a youth outcome on its own. Chafee/NYTD
@@ -310,6 +328,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P18 · A2.2
 
+- **Status:** open
 - **Fidelity:** codebook-defined
 - **Case:** codebook-defined
 - **Anchor:** Urban Institute Candidate Outcome Indicators, mentoring (partial: youth
@@ -322,6 +341,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P19 · A2.4
 
+- **Status:** open
 - **Fidelity:** codebook-defined
 - **Case:** codebook-defined
 - **Anchor:** none verified. Leads: ADA Title II / Section 504 program access [VERIFY];
@@ -334,6 +354,7 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ### FD-P20 · A3.1
 
+- **Status:** open
 - **Fidelity:** codebook-defined
 - **Case:** codebook-defined
 - **Anchor:** no policy-change framework in the records; Learning Forward (2022)
@@ -346,18 +367,18 @@ renumbered FD-###, only if the proposal is approved and built (PLAN phase 4).
 
 ---
 
-## Drift count for the 3.0 proposal (S4.9)
+## Drift count for codebook 3.x (S4.9)
 
-Counted in the domain where the code sits; merged-components entries are logged but not
-counted. "Anchored" means the domain's basis names a framework.
+Counted in the domain where the code sits, open entries only; merged-components entries
+are logged but not counted. Updated after the 2026-09-26 re-review below.
 
 | Domain | Codes | Counted deviations | Share | Over a third? |
 |---|---|---|---|---|
 | Y1 Academic | 18 | 0 | 0% | no |
 | Y2 Engagement | 6 | 0 | 0% | no |
-| Y3 Belonging | 5 | 2 (Y3.1, Y3.4) | 40% | **yes** |
+| Y3 Belonging | 5 | 1 (Y3.1) | 20% | no |
 | Y4 SEL (CASEL) | 12 | 1 (Y4.12) | 8% | no |
-| Y5 Identity | 6 | 3 (Y5.1, Y5.4, Y5.5) | 50% | **yes** |
+| Y5 Identity | 6 | 1 (Y5.5) | 17% | no |
 | Y6 Character & Civic | 7 | 2 (Y6.4, Y6.5) | 29% | no |
 | Y7 Career | 7 | 1 (Y7.7) | 14% | no |
 | Y8 Health | 13 | 0 | 0% | no |
@@ -367,6 +388,24 @@ counted. "Anchored" means the domain's basis names a framework.
 | A2 Quality & access | 6 | 2 (A2.2, A2.4) | 33% | no (at the line) |
 | A3 Systems | 3 | 1 (A3.1) | 33% | no (at the line) |
 
-Y3 and Y5 need their anchors re-reviewed before 3.0 is built. Y5 is expected: its codes
-come from CASEL self-awareness, Search Institute and Nagaoka et al., and no single
-framework anchors it (its strongest leads, Shogren and Carlone & Johnson, are partial).
+## Anchor re-review, 2026-09-26 (S4.9)
+
+In the approved proposal, Y3 (2 of 5) and Y5 (3 of 6) were over a third. Before building,
+their anchors were re-reviewed. A citation verifier that did not see the proposer's
+reasoning checked nine claims against the primary sources (excerpts are in
+`sources/youth_outcomes_v3.sources.json`).
+
+- **Y3 Belonging & Relationships: anchor kept and widened.** Search Institute's
+  Developmental Relationships Framework covers relationships with parents and with peers
+  (verified), and the Developmental Assets Support category names family support and
+  positive family communication (content verified; publication year unconfirmed, so cited
+  without one). Y3.4 now has a framework (FD-P17 closed). Y3.1 stays adapted (FD-P01).
+- **Y5 Identity, Confidence & Agency: anchor replaced.** Nagaoka et al. (2015),
+  *Foundations for Young Adult Success* (UChicago Consortium), names agency and integrated
+  identity as key outcomes and mindsets as a foundational component (verified). With the
+  Search Institute Positive Identity assets (content verified), Y5.1, Y5.2, Y5.3, Y5.4
+  and Y5.6 now match the anchor (FD-P10, FD-P11 closed). Nagaoka does not support
+  purpose (unsupported), so Y5.5 rests on the Search Institute purpose assets and keeps its
+  faith-routing entry (FD-P12).
+- **Not supported, and not used:** Nagaoka's report never says "growth mindset" (Y5.4
+  keeps growth mindset through CASEL self-awareness) or "sense of purpose".

@@ -5,12 +5,13 @@ import CodebookExplorer, { explorerHref, parseExplorerRoute } from './CodebookEx
 import ExplorerLanding from './ExplorerLanding.js';
 import FeedbackAdmin from './FeedbackAdmin.js';
 import TryCoder from './TryCoder.js';
+import BiggerPicture from './workflow/BiggerPicture.js';
 
 // The public codebook explorer site: the same explorer as the app's Codebook
 // tab, plus visitor feedback and a "try it" box, and none of the coder.
 // Built from this repo with VITE_SITE=explorer (see index.tsx and README).
 //
-// Routes: #/ (landing), #/codebook/<id>/<target>, #/try/<id>, #/admin.
+// Routes: #/ (landing), #/bigger-picture, #/codebook/<id>/<target>, #/try/<id>, #/admin.
 
 const readHash = () => window.location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
 
@@ -56,16 +57,18 @@ const ExplorerSite: React.FC = () => {
   }, []);
   useEffect(() => { document.title = SITE_NAME; }, []);
 
-  const view: 'home' | 'codebook' | 'try' | 'admin' =
+  const view: 'home' | 'bigger-picture' | 'codebook' | 'try' | 'admin' =
     hashPath[0] === 'try' ? 'try'
       : hashPath[0] === 'admin' ? 'admin'
       : hashPath[0] === 'codebook' ? 'codebook'
+      : hashPath[0] === 'bigger-picture' ? 'bigger-picture'
       : 'home';
   const route = parseExplorerRoute(view === 'codebook' ? hashPath.slice(1) : [], SITE_CODEBOOKS);
   const tryCodebook: CodebookType =
     view === 'try' && SITE_CODEBOOKS.includes(hashPath[1] as CodebookType) ? (hashPath[1] as CodebookType) : route.codebookId;
 
   const tryHref = `#/try/${tryCodebook}`;
+  const bigPictureHref = '#/bigger-picture';
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pb-20">
@@ -75,6 +78,15 @@ const ExplorerSite: React.FC = () => {
             {SITE_NAME}
           </a>
           <div className="flex items-center gap-1.5 sm:gap-2 text-sm shrink-0">
+            <a
+              href={bigPictureHref}
+              aria-current={view === 'bigger-picture' ? 'page' : undefined}
+              className={`hidden md:inline-block whitespace-nowrap px-3 py-2 rounded-lg font-medium transition-colors ${
+                view === 'bigger-picture' ? 'bg-slate-100 text-slate-900' : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50'
+              }`}
+            >
+              The bigger picture
+            </a>
             <a
               href={explorerHref(route.codebookId)}
               aria-current={view === 'codebook' ? 'page' : undefined}
@@ -100,7 +112,8 @@ const ExplorerSite: React.FC = () => {
       </nav>
 
       <div className="w-full px-4 sm:px-6 lg:px-8 py-10">
-        {view === 'home' && <ExplorerLanding siteName={SITE_NAME} codebookId={route.codebookId} tryHref={tryHref} />}
+        {view === 'home' && <ExplorerLanding siteName={SITE_NAME} codebookId={route.codebookId} tryHref={tryHref} bigPictureHref={bigPictureHref} />}
+        {view === 'bigger-picture' && <BiggerPicture codebookHref={explorerHref(route.codebookId)} tryHref={tryHref} />}
         {view === 'admin' && <FeedbackAdmin />}
         {view === 'try' && (
           <TryCoder codebookId={tryCodebook} codebookIds={SITE_CODEBOOKS} onCodebookChange={id => { window.location.hash = `#/try/${id}`; }} />

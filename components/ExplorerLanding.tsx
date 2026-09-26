@@ -3,6 +3,7 @@ import { CODEBOOK_REGISTRY, CodebookType } from '../codebooks/index.js';
 import { buildExplorerCodebook } from '../services/codebookExplorer.js';
 import { explorerHref } from './CodebookExplorer.js';
 import CodebookSunburst from './CodebookSunburst.js';
+import { DISTRICT, DashboardLink, OFFICE } from './workflow/BiggerPicture.js';
 
 // First screen of the public explorer site: what the codebook is, why it
 // exists, and what visitors can do here. The numbers are read from the live
@@ -12,6 +13,7 @@ interface Props {
   siteName: string;
   codebookId: CodebookType;
   tryHref: string;
+  bigPictureHref: string;
 }
 
 const Step: React.FC<{ n: number; title: string; body: React.ReactNode; href: string; cta: string; primary?: boolean }> = ({
@@ -34,7 +36,7 @@ const Step: React.FC<{ n: number; title: string; body: React.ReactNode; href: st
   </li>
 );
 
-const ExplorerLanding: React.FC<Props> = ({ siteName, codebookId, tryHref }) => {
+const ExplorerLanding: React.FC<Props> = ({ siteName, codebookId, tryHref, bigPictureHref }) => {
   const data = useMemo(() => buildExplorerCodebook(CODEBOOK_REGISTRY[codebookId]), [codebookId]);
   const codeCount = data.domains.reduce((n, d) => n + d.subcategories.length, 0);
   const verified = data.sources.filter(s => s.status === 'verified').length;
@@ -45,7 +47,10 @@ const ExplorerLanding: React.FC<Props> = ({ siteName, codebookId, tryHref }) => 
       {/* Intro */}
       <section className="pt-4 sm:pt-10 grid gap-10 lg:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] lg:items-center">
         <div>
-          <div className="text-xs font-semibold uppercase tracking-[0.1em] text-blue-600 mb-3">Draft for public feedback</div>
+          <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2">
+            <span className="text-xs font-semibold uppercase tracking-[0.1em] text-blue-600">{OFFICE} · {DISTRICT}</span>
+            <span className="text-[11px] font-semibold rounded-full bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-200 px-2 py-0.5">Draft for public feedback</span>
+          </div>
           <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 leading-[1.1]">{siteName}</h1>
           <p className="mt-5 text-lg sm:text-xl text-slate-700 leading-relaxed max-w-3xl">
             A shared set of categories for the outcomes youth-serving programs work toward, from reading growth to a sense of
@@ -76,22 +81,39 @@ const ExplorerLanding: React.FC<Props> = ({ siteName, codebookId, tryHref }) => 
         <CodebookSunburst data={data} />
       </section>
 
+      {/* Vision: a short pointer to the bigger picture page, not a copy of it */}
+      <section className="mt-16 rounded-2xl bg-white p-6 sm:p-8 shadow-sm ring-1 ring-slate-200/70 flex flex-col md:flex-row md:items-end gap-6">
+        <div className="flex-1 max-w-3xl">
+          <h2 className="text-xl font-semibold tracking-tight text-slate-900">Part of a bigger picture</h2>
+          <p className="mt-2 text-slate-600 leading-relaxed">
+            Our public <DashboardLink /> shows which programs work in which schools. Adding what each program aims for, coded
+            with this codebook, will help partners, funders and policymakers see shared goals and the gaps no program is
+            covering yet.
+          </p>
+        </div>
+        <a href={bigPictureHref} className="shrink-0 inline-flex items-center gap-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold px-4 py-2 text-sm transition-colors">
+          See how it fits together <span aria-hidden>→</span>
+        </a>
+      </section>
+
       {/* Why */}
       <section className="mt-16 grid gap-8 sm:grid-cols-2">
         <div>
           <h2 className="text-lg font-semibold text-slate-900">Why a codebook</h2>
           <p className="mt-2 text-slate-600 leading-relaxed">
             Programs describe their goals in their own words. Coding those statements against one codebook makes it possible to
-            see which outcomes programs are working toward and to compare them. It is meant for any program that serves young
+            see which outcomes programs are working toward and to see patterns across them. It is meant for any program that serves young
             people, not one kind of program.
           </p>
         </div>
         <div>
-          <h2 className="text-lg font-semibold text-slate-900">How it’s kept honest</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Built on existing research</h2>
           <p className="mt-2 text-slate-600 leading-relaxed">
-            Every code points to the frameworks it draws on, and {verified} of {data.sources.length} linked sources have been
-            checked against the source itself. Changes to the codebook go through a written proposal and testing, and a person
-            approves each one. The codebook is still being refined, and that’s where you come in.
+            Rather than invent new categories, we anchor codes in established frameworks and research wherever they exist. That
+            gives programs, funders and researchers a shared language that already means something beyond this project, and
+            makes it easier to connect a program’s goals to how others define and measure the same outcome. Every code names its
+            sources, and {verified} of {data.sources.length} have been checked against the source itself. The codebook is still
+            being refined, and that’s where you come in.
           </p>
         </div>
       </section>

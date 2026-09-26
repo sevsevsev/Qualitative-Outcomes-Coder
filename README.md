@@ -91,6 +91,8 @@ The one exception: `services/reviewNormalization.ts`'s fuzzy-matching for re-imp
 
 The same repo also builds a public site that shows only the codebook explorer, with a landing page, visitor feedback and a "Try it" box. It reads the live codebook and source registries, so it can never drift from the coder: every merged codebook change shows up on both.
 
+**The bigger picture** (`#/bigger-picture`, `components/workflow/`) explains where the codebook fits in the Office of Strategic Partnerships' partnerships database and Partnerships Dashboard, with a six-stage stepper from partner logic models to the planned school view. Its code names come from the live codebook by ID; `workflowStages.test.ts` fails if an ID stops resolving.
+
 **Set it up (once):**
 
 1. In Vercel, import this repo a second time as a new project (for example `outcomes-codebook`).

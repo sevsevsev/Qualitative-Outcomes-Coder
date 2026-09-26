@@ -1,7 +1,10 @@
 # Change log: Youth Outcomes Codebook 2.4.0 → proposed 3.0
 
 **Status: proposal for Severin's review. Not applied.** Every change below is measured
-against codebook 2.4.0 on `main` (`codebooks/original.ts`). The machine-readable map is
+against codebook 2.4.0 on `main` (`codebooks/original.ts`). Since this was written, `main`
+moved to 2.5.1 (PR #31, 6.1 safety wording and tie-breaker; PR #32, CASEL
+tie-breakers). Those changed wording and tie-breakers but no codes, so the code-by-code
+map below still holds; the references get refreshed after PR #34 (CP-01-12). The machine-readable map is
 [`crosswalk-2.4.0-to-proposed.csv`](crosswalk-2.4.0-to-proposed.csv); the full entries
 are in [`proposed-codebook.md`](proposed-codebook.md); the grounding is in
 [`research-basis.md`](research-basis.md).
@@ -215,6 +218,15 @@ does not re-propose their wording; it says where each boundary lands.
 | Health split into three domains (Y10, Y11, Y12) | One health domain, Y8, with three categories, keeping v2's new motor, health-knowledge and health-care-access codes | Fewer domain boundaries; the new codes close nine forced or gap rows. |
 | F3 Family–Program Partnership as its own domain | Category D of F1 | The subject is still the family; one family domain is easier to apply (CF-008). |
 | Residual applied-skills extension (Y7.10) | Dropped | See Removals. |
+
+## Framework fidelity (STANDARDS S1.6, added 2026-09-26)
+
+Every proposed code now carries a Fidelity value. 78 are Framework, 15 Adapted and 5
+Codebook-defined; each of the 20 non-Framework codes has an FD-P entry in
+`codebook-refinement/DEVIATIONS.md`. Under the S4.9 drift budget, **Y3 Belonging (2 of
+5) and Y5 Identity (3 of 6) pass a third** and need their anchors re-reviewed before
+3.0 is built. A2 and A3 sit exactly at the line. The CASEL merges are logged but not
+counted, since each merged code stays inside CASEL.
 
 ## STANDARDS conflicts Severin needs to rule on
 

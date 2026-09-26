@@ -37,7 +37,13 @@ first.
    - **G3:** stability kappa does not drop by more than 0.05.
    - **G4:** for CPs aimed at a CF entry, that CF's `by_confusion` accuracy does not
      go down.
-5. **Scope creep.** Diff the branch against `main`. Anything changed that the CP
+5. **Framework fidelity (S1.6, S4.1).** FAIL a CP that changes the scope of a
+   framework-anchored code, or moves a construct across a framework's boundary
+   (tie-breakers and hints included), without a "Framework deviation" line naming a
+   new or changed `FD-###` in `codebook-refinement/DEVIATIONS.md`. Report the
+   domain's drift count after the CP (S4.9); if it passes a third, the verdict is
+   `NEEDS-HUMAN (re-review the domain's anchor)`.
+6. **Scope creep.** Diff the branch against `main`. Anything changed that the CP
    does not describe is an automatic FAIL.
 
 ## Output

@@ -15,6 +15,12 @@
 - **Examples** are adjudicated gold statements (`gold/gold-cycle02.csv`, cited by id)
   wherever the gold has one. A borderline example says which code the gold chose and
   why. A few examples are marked "illustrative" where the gold has none.
+- **Fidelity** (STANDARDS S1.6) says how closely each code follows its domain's anchor:
+  Framework, Adapted, or Codebook-defined. Every Adapted or Codebook-defined code has an
+  entry in [`codebook-refinement/DEVIATIONS.md`](../../codebook-refinement/DEVIATIONS.md)
+  (FD-P##), which also gives the per-domain drift count. The Flag (deductive, hybrid,
+  inductive) says how the code was derived; Fidelity says whether it stayed inside its
+  framework.
 - **Citation status** follows [`research-basis.md`](research-basis.md): verified,
   located, partial, or [VERIFY].
 
@@ -223,7 +229,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.1 Literacy: Reading & Writing
 
-*Short label:* Literacy · *Flag:* **Deductive** · *2.4.0 source:* 1.1; part of 9.1
+*Short label:* Literacy · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 1.1; part of 9.1
 
 - **Definition:** A demonstrated gain in reading (phonics, fluency, vocabulary, comprehension, reading level) or in writing and composition in any genre.
 - **Include:** Reading level, fluency, comprehension scores; reading or ELA test proficiency; writing quality, essays, published writing presented as a writing skill.
@@ -236,7 +242,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.2 English Language Development & Multilingualism
 
-*Short label:* English language development · *Flag:* **Deductive** · *2.4.0 source:* 1.4
+*Short label:* English language development · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 1.4
 
 - **Definition:** Growth in English proficiency for English learners (listening, speaking, reading, writing), or maintenance and development of a home language alongside English.
 - **Include:** ELP level gains, reclassification, WIDA/ELPAC-type scores; bilingual or home-language maintenance for youth.
@@ -249,7 +255,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.3 Mathematics
 
-*Short label:* Mathematics · *Flag:* **Deductive** · *2.4.0 source:* 1.2
+*Short label:* Mathematics · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 1.2
 
 - **Definition:** A demonstrated gain in math skill, problem-solving or grade-level math proficiency.
 - **Include:** Math test scores and proficiency; specific math skills; math used in money contexts when the outcome is the math.
@@ -262,7 +268,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.4 Science, Technology & Engineering
 
-*Short label:* Science, technology & engineering · *Flag:* **Deductive** · *2.4.0 source:* 1.8
+*Short label:* Science, technology & engineering · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 1.8
 
 - **Definition:** A demonstrated gain in science (life, physical, earth, environmental), engineering design, or computing and coding, including digital-literacy skills.
 - **Include:** Science test proficiency; ecosystem or ecology knowledge; engineering design process; coding, computational thinking, digital skills.
@@ -275,7 +281,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.5 Other Academic Subjects
 
-*Short label:* Other academic subjects · *Flag:* **Deductive** · *2.4.0 source:* 1.3
+*Short label:* Other academic subjects · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 1.3
 
 - **Definition:** A demonstrated gain in history, geography, economics, world languages or another academic subject not covered by Y1.1-Y1.4 or Y1.6.
 - **Include:** History and geography content; economics concepts; a world language learned by a native English speaker; other ESSA well-rounded subjects.
@@ -288,7 +294,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.6 Arts Learning
 
-*Short label:* Arts learning · *Flag:* **Deductive** · *2.4.0 source:* 1.9
+*Short label:* Arts learning · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 1.9
 
 - **Definition:** A demonstrated gain in technique, vocabulary or knowledge of an art form (dance, media arts, music, theatre, visual arts).
 - **Include:** Instrument proficiency; dance or art vocabulary; juried or assessed artistic skill.
@@ -301,7 +307,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.7 Critical Thinking, Inquiry & Media Literacy
 
-*Short label:* Critical thinking & media literacy · *Flag:* **Deductive** · *2.4.0 source:* 9.2
+*Short label:* Critical thinking & media literacy · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 9.2
 
 - **Definition:** Analyzing and evaluating information and sources, research and inquiry skills, and media literacy, in any subject.
 - **Include:** Evaluating source credibility; identifying misinformation; research projects framed as inquiry skill; analyzing conflicting sources.
@@ -314,7 +320,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.8 Early Learning & School Readiness
 
-*Short label:* Early learning & school readiness · *Flag:* **Deductive** · *2.4.0 source:* 1.7
+*Short label:* Early learning & school readiness · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 1.7
 
 - **Definition:** Early language, literacy, math and cognitive development, and kindergarten readiness, for children below kindergarten age.
 - **Include:** Pre-literacy (letter recognition, phonemic awareness); early numeracy; readiness assessments; broad developmental milestones on screeners such as the ASQ.
@@ -330,7 +336,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.9 Academic Engagement Behaviors
 
-*Short label:* Academic engagement behaviors · *Flag:* **Deductive** · *2.4.0 source:* 5.1
+*Short label:* Academic engagement behaviors · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 5.1
 
 - **Definition:** Observable participation in schoolwork: homework completion, being prepared, class participation.
 - **Include:** Homework completion rates; asking questions and taking part in class discussions; coming prepared.
@@ -343,7 +349,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.10 Academic Perseverance
 
-*Short label:* Academic perseverance · *Flag:* **Deductive** · *2.4.0 source:* 5.2
+*Short label:* Academic perseverance · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 5.2
 
 - **Definition:** Sticking with difficult schoolwork or learning tasks despite setbacks, including task persistence in young children.
 - **Include:** Persisting on hard problems; not giving up on assignments; early-childhood task persistence.
@@ -356,7 +362,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.11 Learning Strategies & Study Skills
 
-*Short label:* Learning strategies · *Flag:* **Deductive** · *2.4.0 source:* 5.3
+*Short label:* Learning strategies · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 5.3
 
 - **Definition:** Using specific methods to learn: note-taking, planners, test preparation, self-quizzing, metacognition.
 - **Include:** Named study techniques; planning schoolwork with a tool.
@@ -369,7 +375,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.12 Academic Mindsets & Self-Efficacy
 
-*Short label:* Academic mindsets · *Flag:* **Deductive** · *2.4.0 source:* 5.4
+*Short label:* Academic mindsets · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 5.4
 
 - **Definition:** Beliefs about oneself as a learner: academic self-efficacy, belonging in academic work, and growth mindset about intelligence or ability to learn.
 - **Include:** 'I can succeed in this class'; believing intelligence or math ability grows with effort; confidence in academic abilities.
@@ -385,7 +391,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.13 Attendance & School Stability
 
-*Short label:* Attendance & school stability · *Flag:* **Deductive** · *2.4.0 source:* 1.5
+*Short label:* Attendance & school stability · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 1.5
 
 - **Definition:** A student's school attendance, chronic absence, or staying enrolled in school through disruption (homelessness, foster placement changes, pregnancy).
 - **Include:** Attendance rates for participating students; chronic absenteeism; remaining enrolled or in the school of origin.
@@ -398,7 +404,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.14 Exclusionary Discipline
 
-*Short label:* Exclusionary discipline · *Flag:* **Deductive** · *2.4.0 source:* new (part of 1.6)
+*Short label:* Exclusionary discipline · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new (part of 1.6)
 
 - **Definition:** Suspensions, expulsions, office discipline referrals, and alternatives that replace them.
 - **Include:** Fewer suspensions or referrals; restorative alternatives to suspension; school-level suspension rates.
@@ -411,7 +417,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.15 Grades, Credits & On-Track Status
 
-*Short label:* Grades, credits & on-track · *Flag:* **Deductive** · *2.4.0 source:* 1.6
+*Short label:* Grades, credits & on-track · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 1.6
 
 - **Definition:** Course grades, GPA, course passing, credit accumulation, promotion, 9th-grade on-track status, and 'academic performance' or test scores with no subject named.
 - **Include:** GPA; passing core classes; credits for promotion; unspecified academic achievement.
@@ -424,7 +430,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.16 Advanced Coursework & Dual Credit
 
-*Short label:* Advanced coursework · *Flag:* **Deductive** · *2.4.0 source:* new
+*Short label:* Advanced coursework · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new
 
 - **Definition:** Enrolling in or completing advanced courses: AP, IB, honors, advanced STEM electives, dual enrollment and college credit earned in high school.
 - **Include:** AP/IB/honors enrollment; dual enrollment; college credit before graduation.
@@ -437,7 +443,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.17 High School Completion & Re-engagement
 
-*Short label:* High school completion · *Flag:* **Deductive** · *2.4.0 source:* new (part of 1.6)
+*Short label:* High school completion · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new (part of 1.6)
 
 - **Definition:** Graduating from high school, earning a GED or equivalency, or re-enrolling after leaving school.
 - **Include:** On-time graduation; GED; re-engagement after dropout or release.
@@ -450,7 +456,7 @@ What young people learn and how they progress through school: demonstrated learn
 
 ##### Y1.18 Postsecondary Enrollment, Persistence & Completion
 
-*Short label:* Postsecondary enrollment & completion · *Flag:* **Deductive** · *2.4.0 source:* 9.7
+*Short label:* Postsecondary enrollment & completion · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 9.7
 
 - **Definition:** Enrolling in, persisting in, or completing college or other postsecondary education or training after high school.
 - **Include:** College enrollment the fall after graduation; first-to-second-year persistence; degree or certificate completion.
@@ -473,7 +479,7 @@ How young people experience learning and activities: enjoyment, curiosity, lasti
 
 ##### Y2.1 Enjoyment & Joy
 
-*Short label:* Enjoyment · *Flag:* **Deductive** · *2.4.0 source:* 2.1
+*Short label:* Enjoyment · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 2.1
 
 - **Definition:** A positive emotional experience of the program or of learning: fun, happiness, excitement, pride in being part of it.
 - **Include:** Reports of enjoying activities; excitement to attend; pride in the program.
@@ -486,7 +492,7 @@ How young people experience learning and activities: enjoyment, curiosity, lasti
 
 ##### Y2.2 Curiosity & Triggered Interest
 
-*Short label:* Curiosity · *Flag:* **Deductive** · *2.4.0 source:* 2.2
+*Short label:* Curiosity · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 2.2
 
 - **Definition:** Interest sparked in the moment: curiosity, asking questions about something new, willingness to try a new activity.
 - **Include:** Asking questions during a demonstration; trying new activities; showing curiosity.
@@ -499,7 +505,7 @@ How young people experience learning and activities: enjoyment, curiosity, lasti
 
 ##### Y2.3 Sustained & Individual Interest
 
-*Short label:* Sustained interest · *Flag:* **Deductive** · *2.4.0 source:* 2.6
+*Short label:* Sustained interest · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 2.6
 
 - **Definition:** Interest that persists, deepens or becomes the young person's own: a passion, returning to a topic, pursuing it beyond the program.
 - **Include:** Discovering a passion; continuing an activity after the program; self-directed pursuit of a topic.
@@ -512,7 +518,7 @@ How young people experience learning and activities: enjoyment, curiosity, lasti
 
 ##### Y2.4 Relevance & Utility Value
 
-*Short label:* Relevance & utility value · *Flag:* **Deductive** · *2.4.0 source:* 2.3
+*Short label:* Relevance & utility value · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 2.3
 
 - **Definition:** Seeing learning as useful for one's goals, future plans or community.
 - **Include:** Explaining how a subject connects to careers or daily life; valuing what is learned.
@@ -528,7 +534,7 @@ How young people experience learning and activities: enjoyment, curiosity, lasti
 
 ##### Y2.5 Creative Expression & Performance
 
-*Short label:* Creative expression & performance · *Flag:* **Hybrid** · *2.4.0 source:* 2.4, 2.5
+*Short label:* Creative expression & performance · *Flag:* **Hybrid** · *Fidelity:* Adapted (FD-P16) · *2.4.0 source:* 2.4, 2.5
 
 - **Definition:** Self-expression through making something (art, music, writing, design), presenting or performing finished work, or responding to art, as an experience rather than a stated skill gain.
 - **Include:** Composing, creating, exhibiting, performing, critiquing or connecting art to personal meaning.
@@ -541,7 +547,7 @@ How young people experience learning and activities: enjoyment, curiosity, lasti
 
 ##### Y2.6 Participation in Enriching Activities
 
-*Short label:* Participation in activities · *Flag:* **Deductive** · *2.4.0 source:* 6.3
+*Short label:* Participation in activities · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 6.3
 
 - **Definition:** An individual young person's choice to take part in constructive activities, inside the program (returning, joining) or outside it (sports, arts, clubs, faith groups).
 - **Include:** Returning for another year; joining a team or club; participating fully alongside peers; per-person participation thresholds.
@@ -564,7 +570,7 @@ The relationships around a young person: belonging, supportive adults, friends, 
 
 ##### Y3.1 Belonging & Mattering
 
-*Short label:* Belonging · *Flag:* **Deductive** · *2.4.0 source:* 3.1; part of 6.1
+*Short label:* Belonging · *Flag:* **Deductive** · *Fidelity:* Adapted (FD-P01) · *2.4.0 source:* 3.1; part of 6.1
 
 - **Definition:** Feeling accepted, valued, included and safe in the program, school or a community; mattering; less isolation.
 - **Include:** Sense of belonging; feeling safe and accepted in program spaces; feeling connected to a new community; reduced loneliness.
@@ -580,7 +586,7 @@ The relationships around a young person: belonging, supportive adults, friends, 
 
 ##### Y3.2 Supportive Adult Relationships
 
-*Short label:* Supportive adults · *Flag:* **Deductive** · *2.4.0 source:* 3.2
+*Short label:* Supportive adults · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 3.2
 
 - **Definition:** A caring, trusting relationship with at least one adult outside the family (mentor, staff, teacher, coach), including its quality (care, challenge, support).
 - **Include:** Naming a trusted adult; a mentor who cares or challenges; permanent adult connections for youth in care.
@@ -593,7 +599,7 @@ The relationships around a young person: belonging, supportive adults, friends, 
 
 ##### Y3.3 Peer Relationships & Friendship
 
-*Short label:* Peer relationships · *Flag:* **Deductive** · *2.4.0 source:* 3.3
+*Short label:* Peer relationships · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 3.3
 
 - **Definition:** Friendships, peer acceptance and a positive peer group.
 - **Include:** Making friends; a supportive peer community; friendships across groups.
@@ -606,7 +612,7 @@ The relationships around a young person: belonging, supportive adults, friends, 
 
 ##### Y3.4 Family Relationships
 
-*Short label:* Family relationships · *Flag:* **Hybrid** · *2.4.0 source:* new
+*Short label:* Family relationships · *Flag:* **Hybrid** · *Fidelity:* Codebook-defined (FD-P17) · *2.4.0 source:* new
 
 - **Definition:** The young person's own relationship with their family: communication, connection, repair, reunification.
 - **Include:** Reunification; rebuilding trust with family; better communication with parents as described from the youth side.
@@ -622,7 +628,7 @@ The relationships around a young person: belonging, supportive adults, friends, 
 
 ##### Y3.5 Social Capital & Networks
 
-*Short label:* Social capital & networks · *Flag:* **Deductive** · *2.4.0 source:* 3.6
+*Short label:* Social capital & networks · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 3.6
 
 - **Definition:** Access to, and use of, a wider network of relationships (adults, peers, professionals, employers) that can open educational or career opportunities.
 - **Include:** Expanding a professional network; introductions and references; contacts who can help with a goal.
@@ -645,12 +651,12 @@ Social and emotional skills: what young people can do, organized by CASEL's five
 
 ##### Y4.1 Emotion Awareness
 
-*Short label:* Emotion awareness · *Flag:* **Deductive** · *2.4.0 source:* 4.1.1
+*Short label:* Emotion awareness · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 4.1.1
 
 - **Definition:** Recognizing and naming one's own emotions.
 - **Include:** Identifying feelings; using a feelings chart; naming emotions in hard moments.
 - **Exclude:** Managing emotions; understanding others' feelings.
-- **Use instead:** Y4.2 regulation; Y4.4 empathy.
+- **Use instead:** Y4.2 regulation; Y4.4 empathy; Y5.1 identity and Y5.4 self-efficacy or growth mindset (CASEL self-awareness items that sit in Y5, FD-P10, FD-P11).
 - **Typical example:** "Students will be able to identify and name their feelings in challenging situations." (2.4.0 codebook example)
 - **Borderline example:** "Children will name their feelings and use a calm-down corner." (illustrative, not from the gold). Split: Y4.1 and Y4.2. If only one outcome is meant, Y4.2 (acting on the emotion is the later skill).
 - **Theoretical basis:** CASEL (2020) SEL Framework (verified), Self-Awareness: 'Identifying one's emotions'.
@@ -661,7 +667,7 @@ Social and emotional skills: what young people can do, organized by CASEL's five
 
 ##### Y4.2 Emotion Regulation & Coping
 
-*Short label:* Emotion regulation & coping · *Flag:* **Deductive** · *2.4.0 source:* 4.2.1, 4.2.2
+*Short label:* Emotion regulation & coping · *Flag:* **Deductive** · *Fidelity:* Adapted (FD-P02) · *2.4.0 source:* 4.2.1, 4.2.2
 
 - **Definition:** Managing strong emotions and impulses, and using coping strategies for stress, worry or frustration.
 - **Include:** Calming down; frustration tolerance; self-regulation; deep breathing or journaling to manage stress.
@@ -674,7 +680,7 @@ Social and emotional skills: what young people can do, organized by CASEL's five
 
 ##### Y4.3 Goal-Setting, Organization & Self-Discipline
 
-*Short label:* Goals & self-discipline · *Flag:* **Deductive** · *2.4.0 source:* 4.2.3, 4.2.4
+*Short label:* Goals & self-discipline · *Flag:* **Deductive** · *Fidelity:* Adapted (FD-P03) · *2.4.0 source:* 4.2.3, 4.2.4
 
 - **Definition:** Setting personal goals and working toward them, and general organization, self-discipline and persistence outside schoolwork.
 - **Include:** Setting and pursuing goals; completing projects; keeping materials organized; follow-through.
@@ -690,7 +696,7 @@ Social and emotional skills: what young people can do, organized by CASEL's five
 
 ##### Y4.4 Empathy, Perspective-Taking & Social Awareness
 
-*Short label:* Empathy & social awareness · *Flag:* **Deductive** · *2.4.0 source:* 4.3.1, 4.3.3
+*Short label:* Empathy & social awareness · *Flag:* **Deductive** · *Fidelity:* Adapted (FD-P04) · *2.4.0 source:* 4.3.1, 4.3.3
 
 - **Definition:** Understanding and caring about others' feelings and perspectives, expressing gratitude, and reading social norms and expectations in different settings.
 - **Include:** Perspective-taking; compassion; gratitude; understanding expectations in class, online and community settings.
@@ -703,7 +709,7 @@ Social and emotional skills: what young people can do, organized by CASEL's five
 
 ##### Y4.5 Respect for Diversity & Cultural Competence
 
-*Short label:* Respect for diversity · *Flag:* **Deductive** · *2.4.0 source:* 4.3.2
+*Short label:* Respect for diversity · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 4.3.2
 
 - **Definition:** Respecting and including people of different backgrounds and identities, and examining one's own biases.
 - **Include:** Respect for peers of other cultures, religions, abilities; inclusive behavior; bias awareness.
@@ -719,7 +725,7 @@ Social and emotional skills: what young people can do, organized by CASEL's five
 
 ##### Y4.6 Communication & Public Speaking
 
-*Short label:* Communication & public speaking · *Flag:* **Deductive** · *2.4.0 source:* 4.4.1
+*Short label:* Communication & public speaking · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 4.4.1
 
 - **Definition:** Expressing oneself clearly, listening actively, and speaking to an audience.
 - **Include:** Active listening; clear communication; presentations and public speaking.
@@ -732,7 +738,7 @@ Social and emotional skills: what young people can do, organized by CASEL's five
 
 ##### Y4.7 Teamwork, Collaboration & Group Leadership
 
-*Short label:* Teamwork & group leadership · *Flag:* **Deductive** · *2.4.0 source:* 4.4.2
+*Short label:* Teamwork & group leadership · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 4.4.2
 
 - **Definition:** Working with others toward shared goals, including leading peers within a group task.
 - **Include:** Collaboration on projects; teamwork; taking turns leading a small group; leadership within a team activity.
@@ -745,7 +751,7 @@ Social and emotional skills: what young people can do, organized by CASEL's five
 
 ##### Y4.8 Relationship-Building & Conflict Resolution
 
-*Short label:* Relationships & conflict resolution · *Flag:* **Deductive** · *2.4.0 source:* 4.4.3, 4.4.5
+*Short label:* Relationships & conflict resolution · *Flag:* **Deductive** · *Fidelity:* Adapted (FD-P05) · *2.4.0 source:* 4.4.3, 4.4.5
 
 - **Definition:** Building, maintaining and repairing relationships, and resolving interpersonal conflict constructively.
 - **Include:** Resolving disagreements without fighting; de-escalation; repairing a friendship.
@@ -758,7 +764,7 @@ Social and emotional skills: what young people can do, organized by CASEL's five
 
 ##### Y4.9 Help-Seeking & Offering Support
 
-*Short label:* Help-seeking · *Flag:* **Deductive** · *2.4.0 source:* 4.4.4, 4.3.4
+*Short label:* Help-seeking · *Flag:* **Deductive** · *Fidelity:* Adapted (FD-P06) · *2.4.0 source:* 4.4.4, 4.3.4
 
 - **Definition:** Knowing where to find support, asking for help, and offering help to others.
 - **Include:** Willingness to seek help; naming resources to contact in a crisis; helping peers.
@@ -774,7 +780,7 @@ Social and emotional skills: what young people can do, organized by CASEL's five
 
 ##### Y4.10 Decision-Making & Problem-Solving
 
-*Short label:* Decision-making & problem-solving · *Flag:* **Deductive** · *2.4.0 source:* 4.5.1, 4.5.3
+*Short label:* Decision-making & problem-solving · *Flag:* **Deductive** · *Fidelity:* Adapted (FD-P07) · *2.4.0 source:* 4.5.1, 4.5.3
 
 - **Definition:** Weighing options and consequences and working a personal or social problem through from identifying it to acting.
 - **Include:** Pros and cons before a decision; structured problem-solving; anticipating consequences.
@@ -787,7 +793,7 @@ Social and emotional skills: what young people can do, organized by CASEL's five
 
 ##### Y4.11 Ethical & Prosocial Choices
 
-*Short label:* Ethical & prosocial choices · *Flag:* **Deductive** · *2.4.0 source:* 4.5.2, 4.5.5
+*Short label:* Ethical & prosocial choices · *Flag:* **Deductive** · *Fidelity:* Adapted (FD-P08) · *2.4.0 source:* 4.5.2, 4.5.5
 
 - **Definition:** Making an ethical or prosocial choice in a specific situation, including small daily contributions to the class or program.
 - **Include:** Reporting bullying instead of joining in; standing up for a classmate; helping clean up the space.
@@ -800,7 +806,7 @@ Social and emotional skills: what young people can do, organized by CASEL's five
 
 ##### Y4.12 Risk Avoidance & Refusal Skills
 
-*Short label:* Risk avoidance & refusal · *Flag:* **Deductive** · *2.4.0 source:* 4.5.4
+*Short label:* Risk avoidance & refusal · *Flag:* **Deductive** · *Fidelity:* Codebook-defined (FD-P09) · *2.4.0 source:* 4.5.4
 
 - **Definition:** Avoiding unsafe situations and resisting negative peer pressure.
 - **Include:** Refusal skills; leaving unsafe situations; resisting pressure to use substances.
@@ -823,7 +829,7 @@ Who young people believe they are and what they believe they can do: identity, c
 
 ##### Y5.1 Self-Understanding & Identity Exploration
 
-*Short label:* Self-understanding · *Flag:* **Deductive** · *2.4.0 source:* 4.1.2
+*Short label:* Self-understanding · *Flag:* **Deductive** · *Fidelity:* Adapted (FD-P10) · *2.4.0 source:* 4.1.2
 
 - **Definition:** Understanding who one is, what matters to one, and how one is changing.
 - **Include:** Identity exploration; articulating one's values and experiences.
@@ -836,7 +842,7 @@ Who young people believe they are and what they believe they can do: identity, c
 
 ##### Y5.2 Cultural & Social Identity
 
-*Short label:* Cultural & social identity · *Flag:* **Deductive** · *2.4.0 source:* 3.4
+*Short label:* Cultural & social identity · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 3.4
 
 - **Definition:** Pride in, and acceptance of, one's own cultural, ethnic, linguistic, gender, sexual or other social identity.
 - **Include:** Pride in heritage; self-acceptance of sexual orientation or gender identity; bicultural identity.
@@ -849,7 +855,7 @@ Who young people believe they are and what they believe they can do: identity, c
 
 ##### Y5.3 Domain Identity
 
-*Short label:* Domain identity · *Flag:* **Deductive** · *2.4.0 source:* new
+*Short label:* Domain identity · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new
 
 - **Definition:** Seeing oneself as a certain kind of person in a field: 'a STEM person', an artist, an athlete, a reader, a writer.
 - **Include:** 'See themselves as' statements tied to a field.
@@ -865,7 +871,7 @@ Who young people believe they are and what they believe they can do: identity, c
 
 ##### Y5.4 Confidence, Self-Efficacy & Self-Worth
 
-*Short label:* Confidence & self-worth · *Flag:* **Deductive** · *2.4.0 source:* 4.1.4, 4.1.3; part of 6.4
+*Short label:* Confidence & self-worth · *Flag:* **Deductive** · *Fidelity:* Adapted (FD-P11) · *2.4.0 source:* 4.1.4, 4.1.3; part of 6.4
 
 - **Definition:** A general belief that one can succeed and handle challenges, including general growth mindset and self-esteem.
 - **Include:** Self-confidence; self-efficacy; self-esteem; naming one's strengths; growth mindset about setbacks.
@@ -881,7 +887,7 @@ Who young people believe they are and what they believe they can do: identity, c
 
 ##### Y5.5 Purpose & Future Orientation
 
-*Short label:* Purpose & future orientation · *Flag:* **Deductive** · *2.4.0 source:* 6.4
+*Short label:* Purpose & future orientation · *Flag:* **Deductive** · *Fidelity:* Adapted (FD-P12) · *2.4.0 source:* 6.4
 
 - **Definition:** A sense of purpose and meaning, optimism about the future, and aspirations, including spiritual purpose and growth in faith.
 - **Include:** Sense of purpose; hopes and goals for life; growth in faith or spiritual life.
@@ -894,7 +900,7 @@ Who young people believe they are and what they believe they can do: identity, c
 
 ##### Y5.6 Agency, Self-Determination & Self-Advocacy
 
-*Short label:* Agency & self-advocacy · *Flag:* **Deductive** · *2.4.0 source:* new (part of 6.1)
+*Short label:* Agency & self-advocacy · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new (part of 6.1)
 
 - **Definition:** Acting as the causal agent in one's own life: making choices, advocating for one's own needs, directing one's own supports.
 - **Include:** Self-advocacy in IEP meetings; leading one's own IEP; requesting accommodations; making and explaining one's own choices.
@@ -917,7 +923,7 @@ How young people relate to their community and its systems: values, civic knowle
 
 ##### Y6.1 Positive Values & Character
 
-*Short label:* Values & character · *Flag:* **Deductive** · *2.4.0 source:* 6.2
+*Short label:* Values & character · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 6.2
 
 - **Definition:** General character traits and guiding values: integrity, honesty, responsibility, sportsmanship, forgiveness, faith-grounded values.
 - **Include:** Honesty; responsibility; sportsmanship; living out values, including faith-based values.
@@ -933,7 +939,7 @@ How young people relate to their community and its systems: values, civic knowle
 
 ##### Y6.2 Civic Knowledge
 
-*Short label:* Civic knowledge · *Flag:* **Deductive** · *2.4.0 source:* 7.1; part of 1.3
+*Short label:* Civic knowledge · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 7.1; part of 1.3
 
 - **Definition:** Understanding how government, civic institutions, elections and rights work.
 - **Include:** How a bill becomes law; branches of government; how the school board decides; voter registration process.
@@ -946,7 +952,7 @@ How young people relate to their community and its systems: values, civic knowle
 
 ##### Y6.3 Critical Consciousness & Social Justice
 
-*Short label:* Critical consciousness · *Flag:* **Deductive** · *2.4.0 source:* 7.4
+*Short label:* Critical consciousness · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 7.4
 
 - **Definition:** Analyzing power, inequity and systems of oppression, and acting against injustice.
 - **Include:** Analyzing why food deserts or zoning inequality exist; articulating how systemic racism affects a community.
@@ -962,7 +968,7 @@ How young people relate to their community and its systems: values, civic knowle
 
 ##### Y6.4 Civic Voice, Leadership & Participation
 
-*Short label:* Civic voice & participation · *Flag:* **Deductive** · *2.4.0 source:* 7.3
+*Short label:* Civic voice & participation · *Flag:* **Deductive** · *Fidelity:* Adapted (FD-P13) · *2.4.0 source:* 7.3
 
 - **Definition:** Influencing collective decisions and taking part in civic life: youth councils, testimony, advocacy, co-design, organizing, voting, and civic efficacy.
 - **Include:** Presenting to a city council; youth advisory boards; organizing campaigns; registering and voting; believing one can influence community decisions.
@@ -975,7 +981,7 @@ How young people relate to their community and its systems: values, civic knowle
 
 ##### Y6.5 Community Service & Action
 
-*Short label:* Community service & action · *Flag:* **Deductive** · *2.4.0 source:* 7.2
+*Short label:* Community service & action · *Flag:* **Deductive** · *Fidelity:* Adapted (FD-P14) · *2.4.0 source:* 7.2
 
 - **Definition:** Organized service or projects to improve the community, including identifying a community issue and planning action on it.
 - **Include:** Service hours; service trips; food drives; community action plans.
@@ -988,7 +994,7 @@ How young people relate to their community and its systems: values, civic knowle
 
 ##### Y6.6 Environmental Stewardship
 
-*Short label:* Environmental stewardship · *Flag:* **Deductive** · *2.4.0 source:* new
+*Short label:* Environmental stewardship · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new
 
 - **Definition:** Caring for the environment and acting on it: pro-environmental behavior and connection to nature.
 - **Include:** Recycling and composting; reducing waste; stewardship; connection to nature.
@@ -1004,7 +1010,7 @@ How young people relate to their community and its systems: values, civic knowle
 
 ##### Y6.7 Digital Citizenship & Online Safety
 
-*Short label:* Digital citizenship · *Flag:* **Deductive** · *2.4.0 source:* 7.5
+*Short label:* Digital citizenship · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 7.5
 
 - **Definition:** Safe, legal and ethical behavior online: privacy, security, recognizing scams, respectful conduct.
 - **Include:** Protecting personal information; strong passwords; recognizing phishing.
@@ -1027,7 +1033,7 @@ Readiness for and results in work and independent adult life: career exploration
 
 ##### Y7.1 Career Awareness & Exploration
 
-*Short label:* Career exploration · *Flag:* **Deductive** · *2.4.0 source:* 9.4
+*Short label:* Career exploration · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 9.4
 
 - **Definition:** Learning about careers and pathways, interest inventories, workplace and campus visits, and interest in or aspiration toward a career field.
 - **Include:** Researching careers; exploring pathways; interest in a STEM career; college visits.
@@ -1040,7 +1046,7 @@ Readiness for and results in work and independent adult life: career exploration
 
 ##### Y7.2 College & Career Transition Knowledge
 
-*Short label:* Transition knowledge · *Flag:* **Deductive** · *2.4.0 source:* 9.3
+*Short label:* Transition knowledge · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 9.3
 
 - **Definition:** Knowing and completing the process of moving to college or work: applications, FAFSA, financial aid, resumes, interviews.
 - **Include:** FAFSA completion; college applications; comparing aid letters; resume writing.
@@ -1056,7 +1062,7 @@ Readiness for and results in work and independent adult life: career exploration
 
 ##### Y7.3 Employability & Workplace Skills
 
-*Short label:* Employability skills · *Flag:* **Deductive** · *2.4.0 source:* 9.5
+*Short label:* Employability skills · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 9.5
 
 - **Definition:** Professionalism and workplace skills: punctuality, workplace communication, initiative, job performance.
 - **Include:** Professional conduct; supervisor evaluations; workplace communication.
@@ -1069,7 +1075,7 @@ Readiness for and results in work and independent adult life: career exploration
 
 ##### Y7.4 Technical Skills, Credentials & Work-Based Learning
 
-*Short label:* Technical skills & credentials · *Flag:* **Deductive** · *2.4.0 source:* 9.6
+*Short label:* Technical skills & credentials · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 9.6
 
 - **Definition:** Industry-specific skills, recognized credentials and certifications, and completing internships or apprenticeships.
 - **Include:** Industry certifications; apprenticeship completion; trade skills.
@@ -1085,7 +1091,7 @@ Readiness for and results in work and independent adult life: career exploration
 
 ##### Y7.5 Employment & Earnings
 
-*Short label:* Employment & earnings · *Flag:* **Deductive** · *2.4.0 source:* 9.8
+*Short label:* Employment & earnings · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 9.8
 
 - **Definition:** Getting or keeping a job, wages and earnings, and combined 'employed or in education' indicators.
 - **Include:** Job placement; paid work hours; wages; competitive integrated employment; WIOA-style combined indicators.
@@ -1098,7 +1104,7 @@ Readiness for and results in work and independent adult life: career exploration
 
 ##### Y7.6 Financial Capability
 
-*Short label:* Financial capability · *Flag:* **Deductive** · *2.4.0 source:* 9.9
+*Short label:* Financial capability · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 9.9
 
 - **Definition:** The young person's own financial knowledge, habits and decisions: budgeting, saving, banking, credit, understanding pay and taxes.
 - **Include:** Budgets; savings accounts; reading a pay stub; understanding credit and interest.
@@ -1111,7 +1117,7 @@ Readiness for and results in work and independent adult life: career exploration
 
 ##### Y7.7 Independent Living Skills
 
-*Short label:* Independent living skills · *Flag:* **Hybrid** · *2.4.0 source:* new
+*Short label:* Independent living skills · *Flag:* **Hybrid** · *Fidelity:* Adapted (FD-P15) · *2.4.0 source:* new
 
 - **Definition:** Daily living skills for self-sufficiency: cooking, scheduling, transportation, self-care away from home, and obtaining vital documents.
 - **Include:** Independent-living skill bundles; getting an ID, Social Security card and birth certificate; self-care at camp.
@@ -1134,7 +1140,7 @@ A young person's own health and safety: daily health habits, motor skills, healt
 
 ##### Y8.1 Healthy Daily Habits
 
-*Short label:* Healthy daily habits · *Flag:* **Deductive** · *2.4.0 source:* 8.1
+*Short label:* Healthy daily habits · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 8.1
 
 - **Definition:** Everyday health behaviors: physical activity and fitness, nutrition and healthy eating, sleep, hygiene, and recreational screen time.
 - **Include:** Minutes of activity; fitness; fruit and vegetable intake; healthy cooking framed as nutrition; hours of sleep; handwashing; less screen time.
@@ -1147,7 +1153,7 @@ A young person's own health and safety: daily health habits, motor skills, healt
 
 ##### Y8.2 Motor & Sport Skills
 
-*Short label:* Motor & sport skills · *Flag:* **Deductive** · *2.4.0 source:* new (part of 8.1)
+*Short label:* Motor & sport skills · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new (part of 8.1)
 
 - **Definition:** Fundamental movement, fine and gross motor, and sport-specific or outdoor physical skills.
 - **Include:** Dribbling and passing; swimming levels; running, jumping, throwing; fine motor skills; hiking or climbing technique.
@@ -1160,7 +1166,7 @@ A young person's own health and safety: daily health habits, motor skills, healt
 
 ##### Y8.3 Health Knowledge & Safety Skills
 
-*Short label:* Health knowledge & safety skills · *Flag:* **Deductive** · *2.4.0 source:* new (part of 1.3, 8.1)
+*Short label:* Health knowledge & safety skills · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new (part of 1.3, 8.1)
 
 - **Definition:** Health information and safety skills not covered by another health code: first aid, injury prevention, finding reliable health information, and health education content.
 - **Include:** First aid; outdoor safety; health class content; how to respond to an allergic reaction.
@@ -1173,7 +1179,7 @@ A young person's own health and safety: daily health habits, motor skills, healt
 
 ##### Y8.4 Sexual & Reproductive Health
 
-*Short label:* Sexual & reproductive health · *Flag:* **Deductive** · *2.4.0 source:* 8.6
+*Short label:* Sexual & reproductive health · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 8.6
 
 - **Definition:** Knowledge and behavior related to sexual health, STI and pregnancy prevention, and healthy relationships in that context.
 - **Include:** STI prevention knowledge; delaying pregnancy; accessing confidential services.
@@ -1186,7 +1192,7 @@ A young person's own health and safety: daily health habits, motor skills, healt
 
 ##### Y8.5 Health Care Access & Condition Management
 
-*Short label:* Health care access · *Flag:* **Deductive** · *2.4.0 source:* new (part of 8.1)
+*Short label:* Health care access · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new (part of 8.1)
 
 - **Definition:** Getting and using health care: insurance, preventive and dental or vision visits, screenings, immunizations, and managing chronic conditions.
 - **Include:** Enrolling in insurance; annual screenings; developmental screenings received; asthma self-management.
@@ -1202,7 +1208,7 @@ A young person's own health and safety: daily health habits, motor skills, healt
 
 ##### Y8.6 Mental Health Symptoms & Distress
 
-*Short label:* Mental health symptoms · *Flag:* **Deductive** · *2.4.0 source:* 8.2
+*Short label:* Mental health symptoms · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 8.2
 
 - **Definition:** Fewer symptoms of anxiety, depression, distress or behavioral problems in the young person.
 - **Include:** Lower anxiety or depression scores; fewer outbursts; less self-reported stress.
@@ -1215,7 +1221,7 @@ A young person's own health and safety: daily health habits, motor skills, healt
 
 ##### Y8.7 Flourishing & Life Satisfaction
 
-*Short label:* Flourishing · *Flag:* **Deductive** · *2.4.0 source:* new
+*Short label:* Flourishing · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new
 
 - **Definition:** Positive mental health: life satisfaction, flourishing, feeling restored or well.
 - **Include:** Life satisfaction; flourishing; general well-being.
@@ -1228,7 +1234,7 @@ A young person's own health and safety: daily health habits, motor skills, healt
 
 ##### Y8.8 Healing & Trauma Recovery
 
-*Short label:* Trauma recovery · *Flag:* **Deductive** · *2.4.0 source:* 8.3
+*Short label:* Trauma recovery · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 8.3
 
 - **Definition:** A young person processing trauma, feeling psychologically safe during recovery, and moving toward healing.
 - **Include:** Processing traumatic events; psychological safety for trauma-exposed youth.
@@ -1241,7 +1247,7 @@ A young person's own health and safety: daily health habits, motor skills, healt
 
 ##### Y8.9 Mental Health Service Access & Use
 
-*Short label:* Mental health service use · *Flag:* **Deductive** · *2.4.0 source:* 8.4
+*Short label:* Mental health service use · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 8.4
 
 - **Definition:** Being connected to and using counseling, therapy or crisis services.
 - **Include:** Referrals completed; sessions attended; connection to community providers.
@@ -1257,7 +1263,7 @@ A young person's own health and safety: daily health habits, motor skills, healt
 
 ##### Y8.10 Felt Safety
 
-*Short label:* Felt safety · *Flag:* **Deductive** · *2.4.0 source:* new
+*Short label:* Felt safety · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new
 
 - **Definition:** Feeling safe at home, at school or in the neighborhood, not specific to the program.
 - **Include:** Feeling safe walking to school or in the neighborhood.
@@ -1270,7 +1276,7 @@ A young person's own health and safety: daily health habits, motor skills, healt
 
 ##### Y8.11 Substance Use
 
-*Short label:* Substance use · *Flag:* **Deductive** · *2.4.0 source:* 8.5
+*Short label:* Substance use · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 8.5
 
 - **Definition:** Use, intentions or perceived risk of tobacco, vaping, alcohol or other drugs.
 - **Include:** Reduced use; delayed first use; lower intentions; higher perceived risk; knowledge of risks.
@@ -1283,7 +1289,7 @@ A young person's own health and safety: daily health habits, motor skills, healt
 
 ##### Y8.12 Violence, Bullying & Victimization
 
-*Short label:* Violence & victimization · *Flag:* **Deductive** · *2.4.0 source:* 8.7
+*Short label:* Violence & victimization · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 8.7
 
 - **Definition:** Fighting, weapon carrying, bullying, harassment, dating violence and community violence, as perpetrator or victim.
 - **Include:** Fewer fights; less weapon carrying; less harassment; dating-violence warning signs.
@@ -1296,7 +1302,7 @@ A young person's own health and safety: daily health habits, motor skills, healt
 
 ##### Y8.13 Justice Involvement, Diversion & Reentry
 
-*Short label:* Justice involvement · *Flag:* **Deductive** · *2.4.0 source:* 8.8
+*Short label:* Justice involvement · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 8.8
 
 - **Definition:** Avoiding justice-system involvement, completing diversion or probation, and reduced recidivism.
 - **Include:** No new adjudication; completing a restorative agreement; avoiding re-arrest.
@@ -1324,7 +1330,7 @@ Caregivers and other adult participants: parenting and home learning, caregiver 
 
 ##### F1.1 Parenting Knowledge & Practices
 
-*Short label:* Parenting · *Flag:* **Deductive** · *2.4.0 source:* 12.1
+*Short label:* Parenting · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 12.1
 
 - **Definition:** Caregivers' child-development knowledge, parenting practices, parent-child interaction and parenting confidence, including teen parents.
 - **Include:** Knowledge of milestones; positive discipline; positive interactions; parenting confidence.
@@ -1337,7 +1343,7 @@ Caregivers and other adult participants: parenting and home learning, caregiver 
 
 ##### F1.2 Home Learning Environment & Routines
 
-*Short label:* Home learning · *Flag:* **Deductive** · *2.4.0 source:* 12.4
+*Short label:* Home learning · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 12.4
 
 - **Definition:** Family practices that support a child's learning and development at home: reading together, routines, homework time.
 - **Include:** Reading at home; bedtime and daily routines; homework space.
@@ -1350,7 +1356,7 @@ Caregivers and other adult participants: parenting and home learning, caregiver 
 
 ##### F1.3 Family Health Practices
 
-*Short label:* Family health practices · *Flag:* **Deductive** · *2.4.0 source:* new
+*Short label:* Family health practices · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new
 
 - **Definition:** Caregiver or household health practices for children: breastfeeding, safe sleep, well-child visits kept by the parent, family eating habits.
 - **Include:** Breastfeeding; safe sleep; well-child visits; family fruit and vegetable intake.
@@ -1366,7 +1372,7 @@ Caregivers and other adult participants: parenting and home learning, caregiver 
 
 ##### F1.4 Caregiver Well-Being & Resilience
 
-*Short label:* Caregiver well-being · *Flag:* **Deductive** · *2.4.0 source:* 12.2
+*Short label:* Caregiver well-being · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 12.2
 
 - **Definition:** The caregiver's own stress, mental health and resilience.
 - **Include:** Reduced parenting stress; lower caregiver depression; resilience.
@@ -1379,7 +1385,7 @@ Caregivers and other adult participants: parenting and home learning, caregiver 
 
 ##### F1.5 Caregiver Social Connections
 
-*Short label:* Caregiver connections · *Flag:* **Deductive** · *2.4.0 source:* 12.3
+*Short label:* Caregiver connections · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 12.3
 
 - **Definition:** Caregivers building supportive relationships with other parents or their community.
 - **Include:** Parent friendships; peer support groups.
@@ -1395,7 +1401,7 @@ Caregivers and other adult participants: parenting and home learning, caregiver 
 
 ##### F1.6 Adult Education, Skills & Employment
 
-*Short label:* Adult education & employment · *Flag:* **Deductive** · *2.4.0 source:* new
+*Short label:* Adult education & employment · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new
 
 - **Definition:** The education, training, English proficiency, digital or financial skills, and employment of a caregiver or other adult participant.
 - **Include:** GED or job training for parents; adult ESL; digital literacy for family members or older adults.
@@ -1408,7 +1414,7 @@ Caregivers and other adult participants: parenting and home learning, caregiver 
 
 ##### F1.7 System Navigation & Rights Knowledge
 
-*Short label:* Navigation & rights · *Flag:* **Deductive** · *2.4.0 source:* new
+*Short label:* Navigation & rights · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new
 
 - **Definition:** Families knowing their rights, knowing where to turn for help, navigating school or service systems, and getting connected to resources.
 - **Include:** IDEA rights knowledge; understanding enrollment and health systems; connecting to resources; knowing where to turn in a crisis.
@@ -1424,7 +1430,7 @@ Caregivers and other adult participants: parenting and home learning, caregiver 
 
 ##### F1.8 Family Connection & Trust with the Program
 
-*Short label:* Family-program trust · *Flag:* **Deductive** · *2.4.0 source:* 3.5
+*Short label:* Family-program trust · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 3.5
 
 - **Definition:** The family's relationship with and trust in the program or school, and communication between them.
 - **Include:** Families feeling welcome; trust in staff; feeling connected to the school community.
@@ -1437,7 +1443,7 @@ Caregivers and other adult participants: parenting and home learning, caregiver 
 
 ##### F1.9 Family Participation & Leadership
 
-*Short label:* Family participation & leadership · *Flag:* **Deductive** · *2.4.0 source:* new
+*Short label:* Family participation & leadership · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new
 
 - **Definition:** Families attending, volunteering or taking part in program or school decisions.
 - **Include:** Serving on advisory councils; attending workshops (per-family thresholds); volunteering.
@@ -1460,7 +1466,7 @@ The material stability of a household or of a young person living independently:
 
 ##### F2.1 Income, Benefits & Financial Stability
 
-*Short label:* Income & benefits · *Flag:* **Deductive** · *2.4.0 source:* 12.5
+*Short label:* Income & benefits · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 12.5
 
 - **Definition:** Household or independent-youth income, public benefits, and financial stability.
 - **Include:** Household income; SNAP/TANF/Medicaid enrollment; household savings.
@@ -1476,7 +1482,7 @@ The material stability of a household or of a young person living independently:
 
 ##### F2.2 Food Security
 
-*Short label:* Food security · *Flag:* **Deductive** · *2.4.0 source:* 12.6
+*Short label:* Food security · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 12.6
 
 - **Definition:** Having enough food and access to healthy food.
 - **Include:** Reduced food insecurity; fewer skipped meals; less reliance on emergency food.
@@ -1489,7 +1495,7 @@ The material stability of a household or of a young person living independently:
 
 ##### F2.3 Housing Stability & Safe Living Situation
 
-*Short label:* Housing stability · *Flag:* **Deductive** · *2.4.0 source:* 12.7
+*Short label:* Housing stability · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 12.7
 
 - **Definition:** Securing or keeping safe, stable housing, for a household or a young person living independently.
 - **Include:** Exits to stable housing; avoiding eviction; keeping a lease; reduced rent burden.
@@ -1517,7 +1523,7 @@ The adults who serve young people: what they learn, what they change in practice
 
 ##### A1.1 Staff & Volunteer Knowledge & Skills
 
-*Short label:* Staff learning · *Flag:* **Deductive** · *2.4.0 source:* 11.1
+*Short label:* Staff learning · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 11.1
 
 - **Definition:** Staff, volunteers, mentors, coaches or case managers gaining knowledge or skills.
 - **Include:** Training outcomes; staff confidence; volunteers' understanding.
@@ -1530,7 +1536,7 @@ The adults who serve young people: what they learn, what they change in practice
 
 ##### A1.2 Practice Change
 
-*Short label:* Practice change · *Flag:* **Deductive** · *2.4.0 source:* 11.2
+*Short label:* Practice change · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 11.2
 
 - **Definition:** Adults applying new practices, including trauma-informed care.
 - **Include:** Implementing a curriculum or screener; adopting restorative or trauma-informed practice.
@@ -1546,7 +1552,7 @@ The adults who serve young people: what they learn, what they change in practice
 
 ##### A1.3 Workforce Stability & Well-Being
 
-*Short label:* Workforce stability · *Flag:* **Deductive** · *2.4.0 source:* new
+*Short label:* Workforce stability · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new
 
 - **Definition:** Staff retention and turnover, and staff well-being.
 - **Include:** Turnover rates; retention; burnout.
@@ -1569,7 +1575,7 @@ The program itself: quality, satisfaction, access and inclusion, reach and dosag
 
 ##### A2.1 Program Quality
 
-*Short label:* Program quality · *Flag:* **Deductive** · *2.4.0 source:* new
+*Short label:* Program quality · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new
 
 - **Definition:** Observed or assessed program quality (safe, supportive, interactive, engaging environment) and accreditation.
 - **Include:** YPQA or similar scores; accreditation; a more welcoming or affirming environment.
@@ -1582,7 +1588,7 @@ The program itself: quality, satisfaction, access and inclusion, reach and dosag
 
 ##### A2.2 Participant & Family Satisfaction
 
-*Short label:* Satisfaction · *Flag:* **Hybrid** · *2.4.0 source:* new
+*Short label:* Satisfaction · *Flag:* **Hybrid** · *Fidelity:* Codebook-defined (FD-P18) · *2.4.0 source:* new
 
 - **Definition:** Participants' or families' satisfaction with the program and their perceptions of its quality and safety.
 - **Include:** Satisfaction ratings; parents' confidence in program safety.
@@ -1598,7 +1604,7 @@ The program itself: quality, satisfaction, access and inclusion, reach and dosag
 
 ##### A2.3 Access to Resources
 
-*Short label:* Access to resources · *Flag:* **Deductive** · *2.4.0 source:* 10.1
+*Short label:* Access to resources · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 10.1
 
 - **Definition:** Providing materials, devices, connectivity or facilities, including counts of resources distributed.
 - **Include:** Laptops and hotspots; home internet; facilities access.
@@ -1611,7 +1617,7 @@ The program itself: quality, satisfaction, access and inclusion, reach and dosag
 
 ##### A2.4 Inclusion, Accommodations & Language Access
 
-*Short label:* Inclusion & language access · *Flag:* **Hybrid** · *2.4.0 source:* 10.2
+*Short label:* Inclusion & language access · *Flag:* **Hybrid** · *Fidelity:* Codebook-defined (FD-P19) · *2.4.0 source:* 10.2
 
 - **Definition:** Removing barriers so that all participants can take part: accommodations, accessible formats, interpretation and translation.
 - **Include:** Sensory kits and visual schedules; accessible materials; interpreters; home-language communications.
@@ -1627,7 +1633,7 @@ The program itself: quality, satisfaction, access and inclusion, reach and dosag
 
 ##### A2.5 Participation, Dosage & Reach (Output)
 
-*Short label:* Participation & reach (output) · *Flag:* **Deductive** · *2.4.0 source:* 11.5
+*Short label:* Participation & reach (output) · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 11.5
 
 - **Definition:** Program-level counts, rates and dosage: youth served, attendance rates, sessions, match length, training hours, and services staff delivered.
 - **Include:** Number served; average daily attendance; match duration; sessions delivered; applications submitted by staff.
@@ -1640,7 +1646,7 @@ The program itself: quality, satisfaction, access and inclusion, reach and dosag
 
 ##### A2.6 Family Engagement Systems
 
-*Short label:* Family engagement systems · *Flag:* **Deductive** · *2.4.0 source:* 11.4
+*Short label:* Family engagement systems · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* 11.4
 
 - **Definition:** The organization's systems, events or policies for engaging families.
 - **Include:** Creating a parent advisory council; family engagement policies; family events offered.
@@ -1663,7 +1669,7 @@ Change beyond one program: policy and institutions, cross-sector partnerships, a
 
 ##### A3.1 Policy & Institutional Change
 
-*Short label:* Policy & institutional change · *Flag:* **Hybrid** · *2.4.0 source:* 11.3
+*Short label:* Policy & institutional change · *Flag:* **Hybrid** · *Fidelity:* Codebook-defined (FD-P20) · *2.4.0 source:* 11.3
 
 - **Definition:** Changes to policy, funding or institutional practice in schools, districts, cities or states.
 - **Include:** New ordinances; district policies; dedicated budget funding.
@@ -1679,7 +1685,7 @@ Change beyond one program: policy and institutions, cross-sector partnerships, a
 
 ##### A3.2 Cross-Sector Partnerships
 
-*Short label:* Partnerships · *Flag:* **Deductive** · *2.4.0 source:* new (part of 11.3)
+*Short label:* Partnerships · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new (part of 11.3)
 
 - **Definition:** Shared agendas, shared measurement and coordinated partnerships across organizations and sectors.
 - **Include:** Data-sharing agreements; shared data systems; coalition collaboration.
@@ -1692,7 +1698,7 @@ Change beyond one program: policy and institutions, cross-sector partnerships, a
 
 ##### A3.3 Community Conditions & Collective Efficacy
 
-*Short label:* Collective efficacy · *Flag:* **Deductive** · *2.4.0 source:* new
+*Short label:* Collective efficacy · *Flag:* **Deductive** · *Fidelity:* Framework · *2.4.0 source:* new
 
 - **Definition:** Neighborhood cohesion, trust and willingness to act for the common good.
 - **Include:** Residents' trust; willingness to intervene for youth safety.

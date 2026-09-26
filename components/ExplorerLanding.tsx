@@ -107,11 +107,13 @@ const ExplorerLanding: React.FC<Props> = ({ siteName, codebookId, tryHref, bigPi
           </p>
         </div>
         <div>
-          <h2 className="text-lg font-semibold text-slate-900">How it’s kept honest</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Built on existing research</h2>
           <p className="mt-2 text-slate-600 leading-relaxed">
-            Every code points to the frameworks it draws on, and {verified} of {data.sources.length} linked sources have been
-            checked against the source itself. Changes to the codebook go through a written proposal and testing, and a person
-            approves each one. The codebook is still being refined, and that’s where you come in.
+            Rather than invent new categories, we anchor codes in established frameworks and research wherever they exist. That
+            gives programs, funders and researchers a shared language that already means something beyond this project, and
+            makes it easier to connect a program’s goals to how others define and measure the same outcome. Every code names its
+            sources, and {verified} of {data.sources.length} have been checked against the source itself. The codebook is still
+            being refined, and that’s where you come in.
           </p>
         </div>
       </section>

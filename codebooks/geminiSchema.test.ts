@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { buildBatchResponseSchema } from './geminiSchema.js';
-import { getCodebook, allDomainCodes, allSubcategoryCodes } from './index.js';
+import { getCodebook, allDomainCodes, allSubcategoryCodes, CODEBOOK_LIST } from './index.js';
 
 // Recursively sums every enum array's length reachable from a schema node.
 // Exists because a live run against the real Gemini API found it rejects a
@@ -24,8 +24,7 @@ const sumEnumSizes = (node: any): number => {
 };
 
 describe('buildBatchResponseSchema', () => {
-  it('keeps the total enum footprint within the empirically-safe range', () => {
-    const codebook = getCodebook('original'); // the larger of the two codebooks
+  it.each(CODEBOOK_LIST.map(c => [c.id, c] as const))('keeps the total enum footprint of %s within the empirically-safe range', (_id, codebook) => {
     const schema = buildBatchResponseSchema(codebook);
     const total = sumEnumSizes(schema);
     // 139 is known to work live, 222 is known to fail live (see the note on

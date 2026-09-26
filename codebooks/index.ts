@@ -9,6 +9,7 @@
 import { Codebook } from './types.js';
 import { originalCodebook } from './original.js';
 import { acceleratePhillyCodebook } from './acceleratePhilly.js';
+import { youthOutcomesV3Codebook } from './youthOutcomesV3.js';
 
 // Each value is already typed as Codebook at its own definition site
 // (codebooks/original.ts, codebooks/acceleratePhilly.ts), so a `satisfies`
@@ -18,6 +19,7 @@ import { acceleratePhillyCodebook } from './acceleratePhilly.js';
 export const CODEBOOK_REGISTRY = {
   original: originalCodebook,
   accelerate_philly: acceleratePhillyCodebook,
+  youth_outcomes_v3: youthOutcomesV3Codebook,
 } as const;
 
 export type CodebookType = keyof typeof CODEBOOK_REGISTRY;

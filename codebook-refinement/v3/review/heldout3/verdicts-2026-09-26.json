@@ -1,0 +1,265 @@
+{
+ "N002": {
+  "alts": [],
+  "code": "A1.2",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N003": {
+  "alts": [
+   "A1.2"
+  ],
+  "code": "A3.1",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N004": {
+  "alts": [],
+  "code": "Y4.10",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N007": {
+  "alts": [],
+  "code": "A2.5",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N009": {
+  "alts": [],
+  "code": "A3.2",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N013": {
+  "alts": [],
+  "code": "Y2.6",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N017": {
+  "alts": [],
+  "code": "Y6.4",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N020": {
+  "alts": [],
+  "code": "A2.2",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N021": {
+  "alts": [],
+  "code": "Y4.12",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N026": {
+  "alts": [],
+  "code": "Y8.1",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N027": {
+  "alts": [],
+  "code": "Y3.1",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N028": {
+  "alts": [],
+  "code": "none",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N032": {
+  "alts": [],
+  "code": "none",
+  "gap": true,
+  "note": "This is more of a longitudinal change that the program is likely not actually measuring as an outcome.",
+  "on": "2026-09-26"
+ },
+ "N033": {
+  "alts": [],
+  "code": "none",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N034": {
+  "alts": [],
+  "code": "A2.5",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N036": {
+  "alts": [],
+  "code": "A1.2",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N040": {
+  "alts": [],
+  "code": "none",
+  "gap": false,
+  "note": "Not specific enough of an outcome to code.",
+  "on": "2026-09-26"
+ },
+ "N043": {
+  "alts": [],
+  "code": "Y6.6",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N059": {
+  "alts": [],
+  "code": "Y4.9",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N062": {
+  "alts": [
+   "Y7.2"
+  ],
+  "code": "Y7.1",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N063": {
+  "alts": [],
+  "code": "Y7.2",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N064": {
+  "alts": [],
+  "code": "none",
+  "gap": false,
+  "note": "Outcome is not specific enough to code",
+  "on": "2026-09-26"
+ },
+ "N073": {
+  "alts": [],
+  "code": "A2.5",
+  "gap": true,
+  "note": "Difficult to code correctly.",
+  "on": "2026-09-26"
+ },
+ "N074": {
+  "alts": [],
+  "code": "Y1.6",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N076": {
+  "alts": [],
+  "code": "Y2.6",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N078": {
+  "alts": [],
+  "code": "Y4.2",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N079": {
+  "alts": [],
+  "code": "A1.3",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N082": {
+  "alts": [],
+  "code": "A3.3",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N087": {
+  "alts": [],
+  "code": "Y6.4",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N088": {
+  "alts": [],
+  "code": "Y3.3",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N090": {
+  "alts": [],
+  "code": "Y1.1",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N091": {
+  "alts": [],
+  "code": "Y6.6",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N093": {
+  "alts": [
+   "Y4.3"
+  ],
+  "code": "Y5.4",
+  "gap": false,
+  "note": "The outcome is a bit too vague, but Y5.4 seems like the most appropriate code",
+  "on": "2026-09-26"
+ },
+ "N095": {
+  "alts": [
+   "Y1.1",
+   "Y1.5",
+   "Y5.2",
+   "Y2.1"
+  ],
+  "code": "Y4.7",
+  "gap": false,
+  "note": "The coder should split this out into several discrete outcomes and then code those separately.",
+  "on": "2026-09-26"
+ },
+ "N099": {
+  "alts": [],
+  "code": "Y4.7",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ },
+ "N100": {
+  "alts": [],
+  "code": "Y2.6",
+  "gap": false,
+  "note": "",
+  "on": "2026-09-26"
+ }
+}

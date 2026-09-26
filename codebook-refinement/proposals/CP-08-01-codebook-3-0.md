@@ -142,6 +142,35 @@ exports are `codebook-refinement/eval/codebook-3.0.0.json`, and the raw files ar
   seen during design and are not evidence here. A fresh held-out set is still needed before
   3.0 replaces 2.5.x.
 
+## Results: fresh held-out set (2026-09-26)
+
+100 real statements from 60 organizations, sampled (seed 20260926, at most 3 per
+organization) from the 2026-09-23 live export. Every gold, eval and edge-case text, and
+any text quoted in either prompt, was excluded. Two blind coders (A and B) coded them with
+3.0. Severin adjudicated on a review page that did not show the app's answers: the 36
+rows where the coders disagreed, one left the row uncoded, or one had low confidence, one
+by one, and the other 64 in bulk. Gold: `gold/youth_outcomes_v3.heldout.gold.csv`.
+Review exports, coder outputs and the rebuild script: `v3/review/heldout3/`. Scores:
+`eval/codebook-3.0.0-heldout3.json`.
+
+| Rows | App run 1 (lenient) | App run 2 (lenient) | Coder A | Coder B |
+|---|---|---|---|---|
+| All 100 | 86.0% (strict 85.0) | 86.0% (strict 85.0) | | |
+| 64 rows both coders agreed on | 61 | 62 | 64* | 64* |
+| 36 flagged rows | 25 | 24 | 22 | 24 |
+
+\* By construction: the gold on these rows is the coders' shared code.
+
+- **Stability:** 97% run-to-run agreement, kappa 0.969; unstable rows N004, N035, N100.
+- **Misses in both runs (13):** N005, N027, N028, N032, N033, N034, N036, N078, N088,
+  N090, N091, N094, N099 (plus N035 in run 1 and N100 in run 2). Three are rows Severin
+  left uncoded that the app coded (N028, N032, N033). N090 is the reverse.
+- **Reading:** on the hard rows the app does about as well as either blind coder. The gap
+  from the design-set number (96.7% on clean rows) is mostly the flagged rows, which
+  are harder than the design set's typical row.
+- **This set is now used.** Any fix made from these misses makes it design data, so a
+  later generalization claim needs another fresh sample.
+
 ## Judge result
 
 Pending. The judge's G1 to G4 compare a candidate with a baseline on the same codebook.

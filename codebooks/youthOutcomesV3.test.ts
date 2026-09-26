@@ -74,6 +74,13 @@ describe('codebook 3.x prompt', () => {
     expect(leaked.map(r => r.gold_id)).toEqual([]);
   });
 
+  it('never contains a statement from the fresh 3.0 held-out set', () => {
+    const heldOut = parseCsv(read('codebook-refinement/gold/youth_outcomes_v3.heldout.gold.csv'));
+    const prompts = [prompt, getCodebook('original').rulesText + getCodebook('original').definitionsText];
+    const leaked = heldOut.filter(r => prompts.some(p => p.includes(r.outcome_text.trim())));
+    expect(leaked.map(r => r.gold_id)).toEqual([]);
+  });
+
   it('cites only verified or located sources', () => {
     for (const c of codes) {
       expect(c.source, c.id).not.toMatch(/partial|VERIFY|\(located\)|\(verified\)/i);
@@ -162,6 +169,29 @@ describe('codebook 3.x gold (youth_outcomes_v3.gold.csv)', () => {
       expect(r.status, r.gold_id).toBe('proposed');
       expect(r.v3_gold, r.gold_id).toBe('');
       expect(r.adjudicated_by, r.gold_id).toBe('');
+    }
+  });
+});
+
+describe('codebook 3.x fresh held-out gold (youth_outcomes_v3.heldout.gold.csv)', () => {
+  const rows = parseCsv(read('codebook-refinement/gold/youth_outcomes_v3.heldout.gold.csv'));
+  const labels = new Set([...codes.map(v3Code), 'none']);
+
+  it('has 100 unique statements, none of them in the cycle-02 gold', () => {
+    expect(rows.length).toBe(100);
+    expect(new Set(rows.map(r => r.gold_id)).size).toBe(100);
+    const cycle02 = new Set(parseCsv(read('codebook-refinement/gold/gold-cycle02.csv')).map(r => r.outcome_text.trim()));
+    expect(rows.filter(r => cycle02.has(r.outcome_text.trim())).map(r => r.gold_id)).toEqual([]);
+  });
+
+  it('is adjudicated by Severin only, with live 3.0 codes and alternates', () => {
+    for (const r of rows) {
+      expect(r.status, r.gold_id).toBe('adjudicated');
+      expect(r.adjudicated_by, r.gold_id).toBe('Severin');
+      expect(r.adjudicated_on, r.gold_id).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(labels.has(r.v3_gold), `${r.gold_id} ${r.v3_gold}`).toBe(true);
+      for (const alt of r.v3_alternates.split(' | ').filter(Boolean)) expect(labels.has(alt), `${r.gold_id} ${alt}`).toBe(true);
+      expect(r.expected_uncoded, r.gold_id).toBe(String(r.v3_gold === 'none'));
     }
   });
 });

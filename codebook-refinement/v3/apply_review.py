@@ -7,6 +7,7 @@ codebook-refinement/gold/youth_outcomes_v3.gold.csv with:
   codebook_gap     1 when he switched on "No good fit"
   adjudication_note  his note, prefixed "Severin: "
   status / adjudicated_by / adjudicated_on  set only for rows he decided.
+bulk-*.json lists rows where he confirmed the suggested code in one step;
 alternates-*.json adds accepted alternates he named in the thread.
 Rows he has not decided stay status=proposed with v3_gold empty. The script
 never decides a row itself. Run from the repo root:
@@ -26,6 +27,13 @@ for f in sorted(glob.glob(os.path.join(ROOT, 'codebook-refinement/v3/review/verd
     doc = json.load(open(f))
     assert doc['adjudicated_by'] == 'Severin'
     verdicts.update(doc['verdicts'])
+
+# Bulk confirmation: he kept the suggested code on each listed (unflagged) row.
+for f in sorted(glob.glob(os.path.join(ROOT, 'codebook-refinement/v3/review/bulk-*.json'))):
+    doc = json.load(open(f))
+    assert doc['adjudicated_by'] == 'Severin'
+    for gid in doc['ids']:
+        verdicts.setdefault(gid, {'code': None, 'gap': False, 'note': '', 'on': doc['on']})
 
 extra_alts = {}
 for f in sorted(glob.glob(os.path.join(ROOT, 'codebook-refinement/v3/review/alternates-*.json'))):
@@ -49,7 +57,7 @@ for r in rows:
     if not v:
         r.update(v3_gold='', codebook_gap='0', adjudication_note='', status='proposed', adjudicated_by='', adjudicated_on='')
         continue
-    code = v['code']
+    code = v['code'] or r['v3_suggested'].split(' ')[0]
     assert code == 'none' or code in names, (r['gold_id'], code)
     alts = [a for a in r['v3_alternates'].split(' | ') if a and a.split(' ')[0] != code]
     for extra in extra_alts.get(r['gold_id'], []):

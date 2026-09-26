@@ -20,4 +20,7 @@ adjudicated.
 
 On 2026-09-26 he said yes to accepting the second code each note names as an alternate (`alternates-2026-09-26.json`). H005 (A1.1) and H057 (Y3.1) already listed it. H012 gains Y5.4.
 
-The 229 unflagged rows are still proposed.
+He then confirmed the suggested code on all 229 unflagged rows in one step
+(`bulk-2026-09-26.json`). All 345 rows are now adjudicated. That includes
+the 90 held-out rows, which were seen while 3.0 was designed, so they aren't
+held-out evidence for 3.0 (CP-08-01).

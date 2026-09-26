@@ -99,6 +99,9 @@ None new. Open leads stay [VERIFY]:
   - 69 where the two routes disagree;
   - the rest because their 2.x code was split, or because the v2 code has no 3.0 home.
 - Severin adjudicates. No row is set to adjudicated here.
+- **2026-09-26:** Severin adjudicated all 345 rows on the review page. He decided the 116
+  flagged rows one by one (8 changed, 1 codebook gap) and confirmed the 229 others in one
+  step. See `v3/review/README.md`.
 - **Held-out caveat:** the 3.0 structure was designed while looking at all 345 adjudicated
   rows, including the 90 held-out rows (for example, H046 and H048 justify Y7.7). So
   scores on those 90 rows are **not** held-out evidence for 3.0 (CLAUDE.md: "A held-out

@@ -31,6 +31,7 @@
 | Requirement served | R3 |
 | Status | testing (codebook 2.5.2, preview runs pending). Tested last and alone: it changes how *every* statement gets reasoned about. |
 | Enum cost | +0 |
+| Framework deviation | none (rulesText procedure only; no code departs from its domain framework) |
 
 ## Problem
 

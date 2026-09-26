@@ -41,3 +41,33 @@ describe('scoring app exports against gold-cycle02', () => {
     ]);
   });
 });
+
+const V3_GOLD = `gold_id,set,outcome_text,v3_gold,v3_suggested,v3_alternates,via_v2,via_2x,needs_review,review_reason,codebook_gap,expected_uncoded,adjudication_note,status,adjudicated_by,adjudicated_on
+S001,design,Youth read better.,Y1.1 Literacy: Reading & Writing,Y1.1 Literacy: Reading & Writing,Y1.12 Academic Mindsets & Self-Efficacy | Y4.6 Communication & Public Speaking,Y1.1,Y1.1,no,,0,false,,adjudicated,Severin,2026-09-26
+S002,design,Program ran.,none,none,,none,none,no,,0,true,,adjudicated,Severin,2026-09-26
+S003,design,Gap row.,A2.1 Program Quality,A2.1 Program Quality,,A2.1,A2.4,yes,x,1,false,,adjudicated,Severin,2026-09-26
+`;
+
+const V3_EXPORT = `row_id,is_corrected,outcome_text_original,outcome_text_atomic,atomic_outcome_index,atomic_outcome_id,primary_domain,primary_subcategory,primary_confidence,uncoded,codebook_version
+S001,false,x,x,1,S001_1,d,Y4.6 Communication & Public Speaking,high,false,youth_outcomes_v3@3.0.0
+S002,false,x,x,1,S002_1,,,none,true,youth_outcomes_v3@3.0.0
+S003,false,x,x,1,S003_1,d,A2.1 Program Quality,high,false,youth_outcomes_v3@3.0.0
+`;
+
+describe('scoring app exports against codebook 3.x gold', () => {
+  it('reads the v3 columns and letter-prefixed codes', () => {
+    const gold = parseCycle02Gold(V3_GOLD, 'design');
+    expect(gold[0]).toMatchObject({ expected_code: 'Y1.1', acceptable_alternates: ['Y1.12', 'Y4.6'], gap: false });
+    expect(gold[1].expected_uncoded).toBe(true);
+    expect(gold[2].gap).toBe(true);
+  });
+
+  it('scores a 3.0 export', () => {
+    const s = scoreRows(selectScoreable(parseCycle02Gold(V3_GOLD, 'design')), parseAppExport(V3_EXPORT).rows);
+    expect(s.rows.map(r => [r.gold_id, r.strict, r.lenient])).toEqual([
+      ['S001', false, true],
+      ['S002', true, true],
+      ['S003', true, true],
+    ]);
+  });
+});

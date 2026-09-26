@@ -95,7 +95,7 @@ export const parseGold = (csvText: string): GoldRow[] =>
 
 /** "3.2.2 Stress management & coping skills" -> "3.2.2"; anything unparseable -> "none". */
 export const codePrefix = (subcategory: string | undefined | null): string => {
-  const m = String(subcategory ?? '').trim().match(/^(\d+(?:\.\d+)+)/);
+  const m = String(subcategory ?? '').trim().match(/^([A-Z]?\d+(?:\.\d+)+)/);
   return m ? m[1] : 'none';
 };
 

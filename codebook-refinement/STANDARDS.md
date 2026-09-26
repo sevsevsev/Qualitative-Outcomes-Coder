@@ -41,6 +41,25 @@ getting its own `sources/<id>.sources.json` and `gold/<id>.gold.csv`.
    agent fetched it from a URL in the same run and recorded a short verbatim
    excerpt (40 words or fewer) that supports the specific claim. What a model
    remembers can *suggest* a source. It can never *confirm* one.
+6. **Framework fidelity.** A code sits inside a domain whose Framework Basis names an
+   anchor framework, and it should match a component of that framework. A code may
+   depart from its anchor only in one of these four cases, and each departure has an
+   `FD-###` entry in `DEVIATIONS.md`:
+   - **Observability:** the framework's construct is a belief or state that outcome
+     statements don't express as the framework defines it, so the construct moves to
+     another domain and the anchored domain keeps a pointer to it.
+   - **Sector widening:** a framework written for one sector or population is applied
+     to all youth-serving programs (S2), with its construct and wording unchanged.
+   - **Merged components:** coders can't tell two framework components apart in
+     statements, so one code covers both and its definition names both.
+   - **Codebook-defined:** adjudicated gold rows have no home and no framework covers
+     them. The code is marked codebook-defined and is never presented as part of a
+     framework that doesn't list it.
+
+   Not allowed: redefining a construct while still citing the framework; adding a
+   code to an anchored domain that the framework doesn't list, without an FD entry;
+   and departing from a framework only because accuracy improves. Every code in the
+   registry's `codebook_extensions` has an FD entry.
 
 ## S2. The codebook covers the full range of youth-serving programs
 
@@ -82,6 +101,10 @@ getting its own `sources/<id>.sources.json` and `gold/<id>.gold.csv`.
 1. **Nothing changes without a change proposal (CP)** in
    `codebook-refinement/proposals/`, using `TEMPLATE.md`. One CP makes one kind of
    change.
+   Every CP states its framework deviation: none, a new `FD-###`, or a changed
+   `FD-###` (S1.6). A tie-breaker or hint that moves a construct across a framework's
+   boundary counts, even as a PATCH. The regression judge fails a CP that changes
+   the scope of a framework-anchored code without that statement.
 2. **Separate roles, in separate contexts.** The agent that proposes a citation
    never verifies it. The verifier sees only `{claim, cite_as, url}`, not the
    proposer's reasoning.
@@ -108,3 +131,9 @@ getting its own `sources/<id>.sources.json` and `gold/<id>.gold.csv`.
 8. **Every cycle leaves a paper trail.** `cycles/cycle-NN-YYYY-MM-DD.md` records what
    was examined, what was verified (and how), what was proposed, what was rejected,
    and the before/after gold scores.
+9. **Drift budget.** Each cycle report counts, per domain, the codes that are adapted
+   or codebook-defined (`DEVIATIONS.md`), in the domain where the code sits. A
+   merged-components entry is logged but not counted, because the merged code stays
+   wholly inside the framework. When more than a third of an anchored domain's codes
+   deviate, the domain's anchor is re-reviewed (keep it, replace it,
+   or split the domain) before any further change to that domain.

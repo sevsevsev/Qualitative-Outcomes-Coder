@@ -33,7 +33,7 @@ export interface ExplorerField {
 export interface ExplorerCode {
   /** Full code string as used in prompts, schema enums and exports. */
   code: string;
-  /** Leading number, e.g. "3.2.2" or "01". */
+  /** Leading number, e.g. "3.2.2", "01" or "Y1.4". */
   number: string;
   title: string;
   /** Parenthetical after the title in definitionsText, e.g. "Gap Fill: Epstein". */
@@ -71,9 +71,9 @@ export interface ExplorerCodebook {
   sources: ExplorerSource[];
 }
 
-const CODE_RE = /^(?:(?:Domain|Code)\s+)?(\d+(?:\.\d+)*)[.:]?\s+(.+)$/;
+const CODE_RE = /^(?:(?:Domain|Code)\s+)?([A-Z]?\d+(?:\.\d+)*)[.:]?\s+(.+)$/;
 const FIELD_RE = /^-?\s*([A-Z][A-Za-z /&-]{1,40}?):\s+(.*)$/;
-const GROUP_RE = /^(\d+(?:\.\d+)+)\s+(.+?)\s*\(Category Header[^)]*\)\s*$/;
+const GROUP_RE = /^([A-Z]?\d+(?:\.[\dA-Z]+)+)\s+(.+?)\s*\(Category Header[^)]*\)\s*$/;
 
 export const splitCode = (code: string): { number: string; title: string } => {
   const m = code.trim().match(CODE_RE);

@@ -4,16 +4,16 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { getCodebook } from '../codebooks/index.js';
 import { splitCode } from '../services/codebookExplorer.js';
+import { allV3Codes } from '../codebooks/youthOutcomesV3.js';
 
 // DEVIATIONS.md logs every code that departs from its domain's anchor framework
 // (STANDARDS S1.6). These checks keep the log, the live codebook, the source
-// registry and the 3.0 proposal in step, so a deviation can't be added in one
+// registries and codebook 3.x in step, so a deviation can't be added in one
 // place and forgotten in another.
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const log = fs.readFileSync(path.join(here, 'DEVIATIONS.md'), 'utf-8');
 const registry = JSON.parse(fs.readFileSync(path.join(here, 'sources/original.sources.json'), 'utf-8'));
-const proposed = fs.readFileSync(path.join(here, '../docs/codebook/proposed-codebook.md'), 'utf-8');
 const codebook = getCodebook('original');
 const liveCodes = new Set(codebook.domains.flatMap(d => d.subcategories.map(s => splitCode(s.code).number)));
 
@@ -58,38 +58,43 @@ describe('framework deviations log (STANDARDS S1.6)', () => {
   });
 });
 
-describe('the 3.0 proposal agrees with the log', () => {
-  // "##### Y4.12 ..." heading, then "*Short label:* ... *Fidelity:* Adapted (FD-P09)".
-  const fidelityOf = new Map<string, string>();
-  let current = '';
-  for (const line of proposed.split('\n')) {
-    const h = line.match(/^##### (\S+) /);
-    if (h) current = h[1];
-    const f = line.match(/\*Fidelity:\* (.+?)(?: · \*|$)/);
-    if (f && current) {
-      fidelityOf.set(current, f[1]);
-      current = '';
-    }
-  }
+describe('codebook 3.x agrees with the log', () => {
+  const codes = allV3Codes();
+  const byCode = new Map(codes.map(c => [c.id, c]));
+  const open = planned.filter(e => e.fields.get('Status') === 'open');
 
-  it('every proposed code has a fidelity', () => {
-    const headings = [...proposed.matchAll(/^##### (\S+) /gm)].map(m => m[1]);
-    expect(headings.filter(c => !fidelityOf.has(c))).toEqual([]);
-  });
-
-  it('each planned entry is cited by its code, with the same fidelity', () => {
+  it('every planned entry has a status and names a 3.x code', () => {
     for (const e of planned) {
-      const label = e.fields.get('Fidelity') === 'adapted' ? 'Adapted' : 'Codebook-defined';
-      expect(fidelityOf.get(e.code), e.id).toBe(`${label} (${e.id})`);
+      expect(e.fields.get('Status'), e.id).toMatch(/^(open|closed \(.+\))$/);
+      expect(byCode.has(e.code), `${e.id} -> ${e.code}`).toBe(true);
     }
   });
 
-  it('a proposed code that is not Framework cites an entry that exists', () => {
-    const ids = new Set(planned.map(e => e.id));
-    for (const [code, value] of fidelityOf) {
-      if (value === 'Framework') continue;
-      const id = value.match(/\((FD-P\d+)\)$/)?.[1];
-      expect(id && ids.has(id), `${code}: ${value}`).toBe(true);
+  it('each open entry is cited by its code, with the same fidelity', () => {
+    for (const e of open) {
+      const c = byCode.get(e.code)!;
+      expect(c.deviation, e.id).toBe(e.id);
+      expect(c.fidelity, e.id).toBe(e.fields.get('Fidelity'));
+    }
+  });
+
+  it('a code that is not Framework cites an open entry, and a Framework code cites none', () => {
+    const ids = new Set(open.map(e => e.id));
+    for (const c of codes) {
+      if (c.fidelity === 'framework') expect(c.deviation, c.id).toBeUndefined();
+      else expect(c.deviation && ids.has(c.deviation), `${c.id}: ${c.deviation}`).toBe(true);
+    }
+  });
+
+  it('each code is backed by a registry source or listed as an extension, and Framework codes are backed', () => {
+    // Codebook-defined codes, and adapted codes whose anchor is only partial, are
+    // exactly the 3.x registry's codebook_extensions.
+    const reg = JSON.parse(fs.readFileSync(path.join(here, 'sources/youth_outcomes_v3.sources.json'), 'utf-8'));
+    const supported = new Set(reg.sources.flatMap((s: any) => s.supports.map((x: any) => x.code)));
+    const extensions = new Set(reg.codebook_extensions.map((x: any) => x.code));
+    for (const c of codes) {
+      expect(supported.has(c.id) !== extensions.has(c.id), c.id).toBe(true);
+      if (c.fidelity === 'framework') expect(supported.has(c.id), c.id).toBe(true);
     }
   });
 });

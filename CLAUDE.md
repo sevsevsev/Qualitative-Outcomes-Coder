@@ -18,18 +18,42 @@ Read these before touching any codebook:
    (STANDARDS S1.6). A CP that adds or changes a deviation logs it there.
 5. `codebook-refinement/v2/`: the v2 draft (`codebook-v2-draft.md`), its rationale
    (`STRUCTURE.md`), the v1→v2 crosswalk, and candidate sources.
+6. `docs/codebook/`: the research basis and the approved 3.0 proposal;
+   `codebook-refinement/v3/`: the scripts that built 3.0 from it.
 
-**Current state (as of 2026-09-24):**
+**Current state (as of 2026-09-26):**
 
-- Cycle 04 (academic subjects) is done. PLAN.md **phase 1** (human adjudication +
-  source verification) is still open.
-- `codebooks/original.ts` is v2.0.0: v1.2.0's subject split, renumbered so Academic
-  Learning & Achievement is Domain 1 (CP-04-08). Older files may use the old numbers;
-  see `codebook-refinement/renumbering/`.
-- The v2 draft is not in code yet (phase 4).
+- Phase 1 adjudication is done (345 gold rows). The CP-scoring thread tests the last 2.x
+  coding CPs.
+- `codebooks/original.ts` is 2.5.x, the default codebook. Older files may use pre-2.0.0
+  numbers; see `codebook-refinement/renumbering/`.
+- Codebook 3.0 (`youth_outcomes_v3`, CP-08-01) is built beside it for testing: 3 parts,
+  13 domains, 39 categories, 98 codes. It is not the default and is hidden on the
+  public explorer. Its proposed gold (`gold/youth_outcomes_v3.gold.csv`) waits on
+  Severin's adjudication. The v2 draft stays an input only.
 - A public explorer-only site is built from this repo with `VITE_SITE=explorer` (README,
   "Public codebook explorer site"). Its visitor feedback lands in
   `codebook-refinement/feedback/` as leads for a cycle, never as evidence or edits.
+
+## Codebook conventions
+
+- **Hierarchy.** Part (who changes: Y young people, F families and adult participants,
+  A staff, organizations and systems) → domain (a broad construct) → category (a
+  dimension of the construct, taken from the domain's anchor framework) → code (an
+  observable indicator). Only codes are assigned. The domain is the code's prefix.
+- **IDs.** 3.x codes are `Y1.4`-style and are never reused for a different construct.
+  2.x codes stay numeric. Any renumbering is a generated map applied by script, with a
+  test (`codebook-refinement/v3/crosswalk-2.5.1-to-3.0.0.csv`).
+- **One source of truth.** 3.x lives in `codebooks/youthOutcomesV3.data.ts`. The prompt,
+  enums, review hints and explorer are all generated from it, so edit the data through a
+  CP and never edit generated text.
+- **Every code** has a definition, include, exclude, "use instead", a Source Framework
+  line (verified or located sources only), and a fidelity value: framework, adapted or
+  codebook-defined (STANDARDS S1.6). Adapted and codebook-defined codes need an open
+  `DEVIATIONS.md` entry.
+- **Held-out gold never appears in a prompt**, as an example or anywhere else.
+- **Prefer fewer, well-defined codes.** Close a gap with the smallest fit (S2.2), and
+  check the enum footprint (3.0.0: 160; test cap 180; redesign line 165).
 
 ## Hard rules
 

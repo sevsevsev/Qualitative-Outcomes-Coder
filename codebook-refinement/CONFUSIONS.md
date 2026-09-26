@@ -19,7 +19,7 @@ human adjudicates them.
 
 ---
 
-## General decision procedure (proposed, CP-01-12)
+## General decision procedure
 
 When a statement could fit more than one code, work through these questions in
 order. Stop at the first one that decides it.

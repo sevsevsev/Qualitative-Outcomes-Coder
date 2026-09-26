@@ -33,7 +33,7 @@
 | Codes touched | rulesText tie-breaker 3 and new 10–12; hints on 4.1.4, 5.4, 4.4.2, 4.5.4; definitionsText note on 4.1.4 |
 | Version bump | PATCH |
 | Requirement served | R3 (CF-005, CF-015, CF-016, CF-024) |
-| Status | testing (codebook 2.5.1, preview runs pending) |
+| Status | approved by Severin 2026-09-26 (codebook 2.5.1) |
 | Enum cost | +0 |
 
 **Atomicity note.** This CP bundles four tie-breakers because they share one root
@@ -228,4 +228,18 @@ not new sources.
 
 ## Judge result
 
-Not run.
+Scored on adjudicated gold (255 design rows, two preview runs each; held-out not used).
+
+| | Run 1 | Run 2 |
+|---|---|---|
+| 2.5.0 baseline (lenient) | 92.9% | 92.5% |
+| 2.5.1 with this CP (lenient, gold before the moves below) | 92.2% | 91.4% |
+
+- Rows that flipped in both runs, all predicted above: S004 7.3 -> 4.4.2 (rule 11), S082 and
+  S242 6.2 -> 4.3.1 (rule 12). No other row regressed in both runs. S017 changed in one run
+  only (known drift on a gap row).
+- Now right in both runs: S052 (resist peer pressure) 8.5 -> 4.5.4, matching gold exactly;
+  S034 (intelligence can grow) 4.1.4 -> 5.4, an accepted alternate. S059 stayed 7.3.
+- Severin approved on 2026-09-26 and chose to move S004 to 4.4.2 and S082/S242 to 4.3.1
+  (the gratitude rows keep their codebook-gap tag). With those moves, about 93.3% / 92.5%.
+- Validation row 25 and H032 were not re-run (outside the design set).

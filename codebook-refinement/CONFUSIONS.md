@@ -278,7 +278,7 @@ Routing table. Adding a new code for any of these would need its own CP.
 
 **Gold:** G-040, G-041
 
-### CF-017: Safety · proposed (CP-01-07)
+### CF-017: Safety · active
 
 **Codes:** 6.1 · 3.1 · 4.5.4 · 8.7 · 8.3
 
@@ -290,10 +290,6 @@ Routing table. Adding a new code for any of these would need its own CP.
 - *Make* safe choices → 4.5.4.
 - Actual *incidence* of fights, bullying, or victimization goes down → 8.7.
 - Psychological safety in a trauma-recovery context → 8.3.
-
-**Note:** The 6.1 definition today talks about mattering, voice, and control but not
-safety, even though its label and example are about safety. CP-01-07 fixes the
-definition.
 
 **Gold:** G-042, G-043, G-044
 

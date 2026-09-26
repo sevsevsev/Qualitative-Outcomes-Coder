@@ -189,4 +189,15 @@ or a fetch of Search Institute's own PDF confirms the grouping (S1.5).
 
 ## Judge result
 
-Not run.
+**First test (definition only, codebook 2.5.0).** Two preview runs, scored against
+the 2.4.0 baseline: 92.5% / 92.9% lenient vs 92.9% / 92.9%. No design row
+improved. S212 ("students who experienced trauma will report feeling safe at
+school", gold 8.3 alt 3.1) went to 6.1 in both runs, failing S4.4. S017 and S154
+changed in one run only (noise).
+
+**Second test (definition + split-out A, still 2.5.0).** Severin chose (2026-09-25)
+to add the safety tie-breaker to this test. Applied as rule **10** (rules 10-12 had
+been reserved for CP-01-06, which is not applied yet; CP-01-06 now takes the next
+free numbers). Also applied: the 3.1 hint, rule 1's example and the Domain 3 hint
+changed from "feels safe" to "feels safe at the program", and CF-017 set active.
+Result: not run yet.

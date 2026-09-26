@@ -534,7 +534,7 @@ CRITICAL for Domain 4 (SEL):
 SPECIFIC CODING RULES & TIE-BREAKERS:
 1. SKILL vs. STATE:
    - Domain 4 (SEL) is for SKILLS/COMPETENCIES (e.g., "Student uses coping strategies").
-   - Domain 2 (Joy) & Domain 3 (Belonging) are for EXPERIENCES/STATES (e.g., "Student feels happy", "Student feels safe").
+   - Domain 2 (Joy) & Domain 3 (Belonging) are for EXPERIENCES/STATES (e.g., "Student feels happy", "Student feels safe at the program").
    - Do NOT code a feeling ("I feel confident") as a skill unless the text implies a growth in capacity.
 
 2. SEL vs. MENTAL HEALTH:
@@ -580,6 +580,8 @@ SPECIFIC CODING RULES & TIE-BREAKERS:
    - 9.9: the youth's own financial knowledge, habits, or decisions.
    - 12.5: household/caregiver income, benefits, or financial coaching for adults.
    - 9.8: the youth has a job or earns wages.
+
+10. SAFETY: feeling safe in general or in the neighborhood -> 6.1; feeling safe AND accepted in this program/school -> 3.1; making safe choices -> 4.5.4; reduced incidence of fights/bullying/victimization -> 8.7; psychological safety while recovering from trauma -> 8.3.
 
 CRITICAL for Formatting:
 - Ensure the 'primary_domain' string exactly matches the codebook headers (e.g. "Domain 2. Joy, Interest & Motivation in Learning").
@@ -702,10 +704,13 @@ export const originalCodebook: Codebook = {
     },
     {
       code: "Domain 3. Belonging, Relationships & School Connectedness",
-      hint: "EXPERIENCES/STATES (e.g. \"feels safe\", \"feels connected\"), not skills -- see Domain 4 for SEL skills.",
+      hint: "EXPERIENCES/STATES (e.g. \"feels safe at the program\", \"feels connected\"), not skills -- see Domain 4 for SEL skills.",
       description: "Outcomes about the relationships around a young person: feeling part of the school or program, supportive adults, friendships with peers, pride in their own identity and culture, the family's connection with the program, and wider networks of people who can open opportunities.",
       subcategories: [
-        { code: "3.1 School/Program Connectedness (Belonging)" },
+        {
+          code: "3.1 School/Program Connectedness (Belonging)",
+          hint: "Feeling safe AND accepted in this program/school. Feeling safe in general or in the neighborhood -> 6.1.",
+        },
         { code: "3.2 Adult Support & Care" },
         {
           code: "3.3 Peer Connection & Social Integration",

@@ -278,7 +278,7 @@ Routing table. Adding a new code for any of these would need its own CP.
 
 **Gold:** G-040, G-041
 
-### CF-017: Safety · proposed (CP-01-07)
+### CF-017: Safety · active
 
 **Codes:** 6.1 · 3.1 · 4.5.4 · 8.7 · 8.3
 

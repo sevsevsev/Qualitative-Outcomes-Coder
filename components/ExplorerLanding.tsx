@@ -3,7 +3,7 @@ import { CODEBOOK_REGISTRY, CodebookType } from '../codebooks/index.js';
 import { buildExplorerCodebook } from '../services/codebookExplorer.js';
 import { explorerHref } from './CodebookExplorer.js';
 import CodebookSunburst from './CodebookSunburst.js';
-import { DISTRICT, DashboardLink, OFFICE } from './workflow/BiggerPicture.js';
+import { DashboardLink, OfficeLogo } from './workflow/BiggerPicture.js';
 
 // First screen of the public explorer site: what the codebook is, why it
 // exists, and what visitors can do here. The numbers are read from the live
@@ -47,8 +47,8 @@ const ExplorerLanding: React.FC<Props> = ({ siteName, codebookId, tryHref, bigPi
       {/* Intro */}
       <section className="pt-4 sm:pt-10 grid gap-10 lg:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] lg:items-center">
         <div>
-          <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2">
-            <span className="text-xs font-semibold uppercase tracking-[0.1em] text-blue-600">{OFFICE} · {DISTRICT}</span>
+          <div className="mb-6 flex flex-col items-start gap-4">
+            <OfficeLogo className="h-14 sm:h-[4.5rem]" />
             <span className="text-[11px] font-semibold rounded-full bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-200 px-2 py-0.5">Draft for public feedback</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 leading-[1.1]">{siteName}</h1>

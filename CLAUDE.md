@@ -14,6 +14,8 @@ Read these before touching any codebook:
 3. The newest `codebook-refinement/cycles/cycle-*.md`: latest results, open
    decisions, backlog.
 4. `codebook-refinement/CONFUSIONS.md`: tie-breakers for v1.1.1.
+   `codebook-refinement/DEVIATIONS.md`: every code that departs from its framework
+   (STANDARDS S1.6). A CP that adds or changes a deviation logs it there.
 5. `codebook-refinement/v2/`: the v2 draft (`codebook-v2-draft.md`), its rationale
    (`STRUCTURE.md`), the v1→v2 crosswalk, and candidate sources.
 

@@ -8,6 +8,7 @@
 | Requirement served | R1 frameworks · R2 breadth · R3 tie-breakers · R4 drift |
 | Status | draft → ready-to-test → judged (PASS/FAIL/NEEDS-HUMAN) → approved / rejected |
 | Enum cost | +0 (or +N; footprint before → after) |
+| Framework deviation | none · new FD-### · changed FD-### (STANDARDS S1.6; a tie-breaker that moves a construct across a framework's boundary counts) |
 
 ## Problem
 

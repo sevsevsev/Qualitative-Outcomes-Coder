@@ -40,3 +40,10 @@ the coders' shared main code and any second code they both gave as alternates.
 - N095: his note says the coder should split it into several outcomes (a backlog lead,
   like H012).
 
+
+## 2026-09-27: domain-only rows (`domain-only/`)
+
+The ten district statements proposed with CP-09-09 (G-D01 to G-D10). Severin decided them on a
+third review page (claude.ai artifact Vw1Cs1ZYLGkM9bZhPPVzy4); his codes are in
+`gold/youth_outcomes_v3.domain-only.gold.csv`. A bare domain id (`Y4`) means domain-only. He kept
+eight as proposed and moved G-D09 (Y2) and G-D10 (Y5) from uncoded to domain-only.

@@ -128,7 +128,7 @@ None.
   (growth mindset) and stays Y5.4. The regression judge should confirm this on both gold files.
 - **Held-out spend:** N040 and N064 are cited as evidence here, as in CP-09-07, so adopting this
   CP spends them.
-- **New proposed rows** (status=proposed; Severin adjudicates; in `gold/youth_outcomes_v3.domain-only.proposed.csv`, with the expected code in `v3_suggested`; once adjudicated they score with `--gold` on that file). These are the too-vague outcomes
+- **New rows**, now in `gold/youth_outcomes_v3.domain-only.gold.csv` (adjudicated by Severin 2026-09-27; score with `--gold` on that file). Expected codes below are what the CP proposed; Severin changed two (see after the table). These are the too-vague outcomes
   from the 2026-09-27 district review, with the code this rule would give:
 
 | Proposed row | Statement | Expected under this CP |
@@ -143,6 +143,13 @@ None.
 | G-D08 | In the medium-term, improve their proficiency in their chosen activity | uncoded |
 | G-D09 | discover students' talents, expand opportunities, and enrich their lives | uncoded |
 | G-D10 | to support overall youth development | uncoded |
+
+Severin's adjudication (2026-09-27, `v3/review/domain-only/verdicts-2026-09-27.json`) kept eight
+rows as proposed and changed two from uncoded to domain-only: G-D09 "discover students' talents,
+expand opportunities, and enrich their lives" -> Y2, and G-D10 "to support overall youth
+development" -> Y5. The 3.1.0 prompt still lists "support overall youth development" as a
+statement that stays uncoded, so the prompt and the gold now disagree on G-D10. Fixing that is a
+follow-up rules change (a new CP), not part of this one.
 
 ## Decisions (Severin, 2026-09-27)
 

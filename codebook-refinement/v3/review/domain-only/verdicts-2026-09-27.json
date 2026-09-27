@@ -1,0 +1,56 @@
+{
+  "adjudicated_by": "Severin",
+  "source": "Domain-only gold review page (claude.ai artifact Vw1Cs1ZYLGkM9bZhPPVzy4), db collection verdicts; read 2026-09-27",
+  "verdicts": {
+    "G-D01": {
+      "code": "Y4",
+      "note": "",
+      "on": "2026-09-27"
+    },
+    "G-D02": {
+      "code": "Y4",
+      "note": "",
+      "on": "2026-09-27"
+    },
+    "G-D03": {
+      "code": "Y4",
+      "note": "",
+      "on": "2026-09-27"
+    },
+    "G-D04": {
+      "code": "Y8",
+      "note": "",
+      "on": "2026-09-27"
+    },
+    "G-D05": {
+      "code": "Y8",
+      "note": "",
+      "on": "2026-09-27"
+    },
+    "G-D06": {
+      "code": "Y1",
+      "note": "",
+      "on": "2026-09-27"
+    },
+    "G-D07": {
+      "code": "Y3",
+      "note": "",
+      "on": "2026-09-27"
+    },
+    "G-D08": {
+      "code": "none",
+      "note": "",
+      "on": "2026-09-27"
+    },
+    "G-D09": {
+      "code": "Y2",
+      "note": "",
+      "on": "2026-09-27"
+    },
+    "G-D10": {
+      "code": "Y5",
+      "note": "",
+      "on": "2026-09-27"
+    }
+  }
+}

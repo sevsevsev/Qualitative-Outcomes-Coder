@@ -1,6 +1,7 @@
 import React from 'react';
 import { PARTNERSHIPS_DASHBOARD_URL } from './workflowStages.js';
 import WorkflowStepper from './WorkflowStepper.js';
+import ospLogo from '../../assets/osp-logo.png';
 
 // "The bigger picture" page of the explorer site (#/bigger-picture): why the
 // codebook exists, how it fits the Office of Strategic Partnerships' work on
@@ -11,6 +12,11 @@ import WorkflowStepper from './WorkflowStepper.js';
 
 export const OFFICE = 'Office of Strategic Partnerships';
 export const DISTRICT = 'School District of Philadelphia';
+
+/** The office's logo (district seal and name, office name below). Tall enough for the office line to be readable. */
+export const OfficeLogo: React.FC<{ className?: string }> = ({ className = 'h-14' }) => (
+  <img src={ospLogo} alt={`The ${DISTRICT}, ${OFFICE}`} className={`w-auto max-w-full ${className}`} />
+);
 
 export const ExternalIcon: React.FC = () => (
   <svg viewBox="0 0 20 20" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>

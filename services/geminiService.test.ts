@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { parseCSV, atomicJsonToCSV } from './geminiService.js';
+import { parseCSV, atomicJsonToCSV, codingSpecificity } from './geminiService.js';
+import { parseCsvRecords } from '../scripts/codebookEvalScoring.js';
 import { AtomicBatchItem } from '../types.js';
 
 describe('parseCSV', () => {
@@ -106,5 +107,21 @@ describe('atomicJsonToCSV', () => {
     const headers = lines[0].split(',');
     expect(headers.slice(-2)).toEqual(['codebook_version', 'model_used']);
     expect(lines[1].endsWith(',original@1.0.0,gemini-3.8-flash')).toBe(true);
+  });
+
+  it('derives specificity (code, domain, uncoded) for codebooks with domain-only codes (CP-09-09)', () => {
+    expect(codingSpecificity({ uncoded: false, primary_domain: 'Domain Y4. SEL', primary_subcategory: 'Y4.2 Emotion Regulation' })).toBe('code');
+    expect(codingSpecificity({ uncoded: false, primary_domain: 'Domain Y4. SEL', primary_subcategory: 'none' })).toBe('domain');
+    expect(codingSpecificity({ uncoded: false, primary_domain: 'Domain Y4. SEL', primary_subcategory: '' })).toBe('domain');
+    expect(codingSpecificity({ uncoded: true, primary_domain: 'Domain Y4. SEL', primary_subcategory: 'none' })).toBe('uncoded');
+
+    const v3 = { ...baseItem, primary_domain: 'Domain Y4. SEL', primary_subcategory: 'none', codebook_version: 'youth_outcomes_v3@3.1.0' };
+    const [header, row] = atomicJsonToCSV([v3]).split('\n');
+    const col = header.split(',').indexOf('specificity');
+    expect(col).toBeGreaterThan(header.split(',').indexOf('uncoded'));
+    expect(parseCsvRecords(`${header}\n${row}`)[0].specificity).toBe('domain');
+
+    // Codebooks without domain-only codes leave the column blank.
+    expect(parseCsvRecords(atomicJsonToCSV([baseItem]))[0].specificity).toBe('');
   });
 });

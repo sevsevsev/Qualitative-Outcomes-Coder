@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { codePrefix, cohensKappa, parseCsvRecords, parseGold, regressions, scoreRows, selectScoreable, type CodedRow } from './codebookEvalScoring.js';
+import { codePrefix, cohensKappa, domainPrefix, itemCode, parseCsvRecords, parseGold, regressions, scoreRows, selectScoreable, type CodedRow } from './codebookEvalScoring.js';
 
 const GOLD = `gold_id,outcome_text,program_type,expected_code,acceptable_alternates,expected_uncoded,confusion_ids,requires_cp,rationale,origin,status,adjudicated_by,adjudicated_on
 G-1,"Youth will budget, save, and bank.",fin,8.9,,false,CF-001,CP-01-05,r,o,adjudicated,Severin,2026-09-24
@@ -20,6 +20,15 @@ describe('codebook eval scoring', () => {
     expect(codePrefix('10.5 Program Participation')).toBe('10.5');
     expect(codePrefix('none')).toBe('none');
     expect(codePrefix(undefined)).toBe('none');
+  });
+
+  it('scores a domain-only item as its bare domain id (CP-09-09)', () => {
+    expect(domainPrefix('Domain Y4. Social & Emotional Skills')).toBe('Y4');
+    expect(domainPrefix('Domain A2. Program Quality')).toBe('A2');
+    expect(domainPrefix('Y1.4 Math')).toBe('none');
+    expect(itemCode({ uncoded: false, primary_domain: 'Domain Y4. SEL', primary_subcategory: 'Y4.2 Emotion regulation' })).toBe('Y4.2');
+    expect(itemCode({ uncoded: false, primary_domain: 'Domain Y4. SEL', primary_subcategory: 'none' })).toBe('Y4');
+    expect(itemCode({ uncoded: true, primary_domain: 'Domain Y4. SEL', primary_subcategory: 'none' })).toBe('none');
   });
 
   it('only scores adjudicated rows whose CP is applied (anti-drift rule)', () => {

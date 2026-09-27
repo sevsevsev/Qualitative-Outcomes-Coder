@@ -19,10 +19,16 @@
 
 import fs from 'fs';
 import {
-  type CodedRow, type EvalSummary, type GoldRow, codePrefix, cohensKappa, parseCsvRecords, regressions, scoreRows, selectScoreable,
+  type CodedRow, type EvalSummary, type GoldRow, codePrefix, cohensKappa, domainPrefix, itemCode, parseCsvRecords, regressions, scoreRows, selectScoreable,
 } from './codebookEvalScoring.js';
 
 const splitList = (s: string): string[] => s.split(';').map(x => x.trim()).filter(Boolean);
+
+/** A 3.x gold label: "Y1.4 Name" -> "Y1.4", a bare domain "Y4" (domain-only, CP-09-09) -> "Y4", else "none". */
+const v3GoldCode = (label: string | undefined): string => {
+  const code = codePrefix(label);
+  return code !== 'none' ? code : domainPrefix(label);
+};
 
 /** youth_outcomes_v3.gold.csv rows -> GoldRow ("Y1.4 Name" labels, " | "-separated alternates). */
 const parseV3Gold = (records: Record<string, string>[], set: string): (GoldRow & { gap: boolean })[] =>
@@ -32,8 +38,8 @@ const parseV3Gold = (records: Record<string, string>[], set: string): (GoldRow &
       gold_id: r.gold_id,
       outcome_text: r.outcome_text,
       program_type: '',
-      expected_code: codePrefix(r.v3_gold),
-      acceptable_alternates: (r.v3_alternates ?? '').split(' | ').map(codePrefix).filter(c => c !== 'none'),
+      expected_code: v3GoldCode(r.v3_gold),
+      acceptable_alternates: (r.v3_alternates ?? '').split(' | ').map(v3GoldCode).filter(c => c !== 'none'),
       expected_uncoded: (r.expected_uncoded ?? '').toLowerCase() === 'true' || r.v3_gold === 'none',
       confusion_ids: [],
       requires_cp: '',
@@ -73,7 +79,7 @@ export const parseAppExport = (csvText: string): { rows: CodedRow[]; codebookVer
   for (const r of parseCsvRecords(csvText)) {
     const list = byId.get(r.row_id) ?? [];
     const uncoded = (r.uncoded ?? '').toLowerCase() === 'true';
-    list.push({ idx: Number(r.atomic_outcome_index) || list.length + 1, code: uncoded ? 'none' : codePrefix(r.primary_subcategory), conf: r.primary_confidence || 'missing', uncoded });
+    list.push({ idx: Number(r.atomic_outcome_index) || list.length + 1, code: itemCode({ uncoded, primary_subcategory: r.primary_subcategory, primary_domain: r.primary_domain }), conf: r.primary_confidence || 'missing', uncoded });
     byId.set(r.row_id, list);
     if (r.codebook_version) versions.add(r.codebook_version);
   }

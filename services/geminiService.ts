@@ -2,6 +2,7 @@
 import { BatchAnalysisResult, BatchItemResult, AtomicBatchItem, CodebookType } from "../types.js";
 import { getCodebook } from "../codebooks/index.js";
 import { normalizeSecondarySubcategory } from "./reviewNormalization.js";
+import { applySourceType } from "./sourceType.js";
 
 // Trim/normalize a codebook string coming back from the model. Domain and
 // subcategory values are now constrained via enum in the response schema
@@ -213,10 +214,22 @@ const flattenToAtomic = (results: BatchItemResult[], codebookType: CodebookType)
   return atomicItems;
 };
 
+/**
+ * How specific a coding is, derived from the code itself (never asked of the
+ * model, so it cannot drift from it): "code" for a subcategory, "domain" for a
+ * domain-only coding (CP-09-09), "uncoded" when nothing fits.
+ */
+export const codingSpecificity = (item: { uncoded?: boolean; primary_domain?: string; primary_subcategory?: string }): 'code' | 'domain' | 'uncoded' => {
+  if (item.uncoded) return 'uncoded';
+  const sub = (item.primary_subcategory ?? '').trim();
+  if (sub && sub.toLowerCase() !== 'none') return 'code';
+  return (item.primary_domain ?? '').trim() ? 'domain' : 'uncoded';
+};
+
 export const atomicJsonToCSV = (items: AtomicBatchItem[]): string => {
   if (items.length === 0) return "";
   const fixedStart = ["row_id", "is_corrected", "outcome_text_original", "outcome_text_atomic", "atomic_outcome_index", "atomic_outcome_id"];
-  const fixedEnd = ["primary_domain", "primary_subcategory", "primary_confidence", "primary_subject_area", "primary_target_population", "secondary_domain_1", "secondary_subcategory_1", "secondary_confidence_1", "secondary_domain_2", "secondary_subcategory_2", "secondary_confidence_2", "uncoded", "notes", "codebook_version", "model_used"];
+  const fixedEnd = ["primary_domain", "primary_subcategory", "primary_confidence", "primary_subject_area", "primary_target_population", "secondary_domain_1", "secondary_subcategory_1", "secondary_confidence_1", "secondary_domain_2", "secondary_subcategory_2", "secondary_confidence_2", "uncoded", "specificity", "notes", "codebook_version", "model_used"];
   const allKeys = new Set<string>();
   items.forEach(item => Object.keys(item).forEach(k => allKeys.add(k)));
   const dynamicKeys = Array.from(allKeys).filter(k => !fixedStart.includes(k) && !fixedEnd.includes(k) && k !== 'is_corrected').sort();
@@ -230,7 +243,13 @@ export const atomicJsonToCSV = (items: AtomicBatchItem[]): string => {
     return str;
   };
   const headerRow = allHeaders.map(escapeCsv).join(",");
-  const rows = items.map(item => allHeaders.map(header => escapeCsv(item[header])).join(","));
+  // Only codebooks whose rules allow domain-only codes get a specificity value;
+  // in the others an empty subcategory just means "not reviewed yet".
+  const specificityOf = (item: AtomicBatchItem): string => {
+    const id = String(item.codebook_version ?? '').split('@')[0] as CodebookType;
+    return getCodebook(id)?.capabilities.domainOnly ? codingSpecificity(item) : '';
+  };
+  const rows = items.map(item => allHeaders.map(header => escapeCsv(header === 'specificity' ? specificityOf(item) : item[header])).join(","));
   return [headerRow, ...rows].join("\n");
 };
 
@@ -305,12 +324,13 @@ const analyzeBatchChunk = async (items: any[], codebookType: CodebookType): Prom
   });
 };
 
-export const processBatch = async (fileContent: string, codebookType: CodebookType, onProgress: (processed: number, total: number, log: string) => void): Promise<BatchAnalysisResult> => {
+export const processBatch = async (fileContent: string, codebookType: CodebookType, onProgress: (processed: number, total: number, log: string) => void, sourceType?: string): Promise<BatchAnalysisResult> => {
   let itemsToProcess: any[] = [];
   try {
     onProgress(0, 0, "Parsing input file...");
     itemsToProcess = parseCSV(fileContent);
     itemsToProcess = itemsToProcess.map((item, index) => ({ ...item, row_id: String(item.row_id || item.id || `gen_row_${index + 1}`) }));
+    itemsToProcess = applySourceType(itemsToProcess, sourceType);
   } catch (e: any) { throw new Error(`Failed to parse file: ${e.message}`); }
 
   const total = itemsToProcess.length;

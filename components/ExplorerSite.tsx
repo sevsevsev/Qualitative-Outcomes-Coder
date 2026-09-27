@@ -5,7 +5,7 @@ import CodebookExplorer, { explorerHref, parseExplorerRoute } from './CodebookEx
 import ExplorerLanding from './ExplorerLanding.js';
 import FeedbackAdmin from './FeedbackAdmin.js';
 import TryCoder from './TryCoder.js';
-import BiggerPicture from './workflow/BiggerPicture.js';
+import BiggerPicture, { DISTRICT, OFFICE, OfficeLogo } from './workflow/BiggerPicture.js';
 
 // The public codebook explorer site: the same explorer as the app's Codebook
 // tab, plus visitor feedback and a "try it" box, and none of the coder.
@@ -125,6 +125,15 @@ const ExplorerSite: React.FC = () => {
           </>
         )}
       </div>
+
+      <footer className="mt-10 border-t border-slate-200">
+        <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
+          <OfficeLogo className="h-12" />
+          <p className="text-sm text-slate-500 leading-relaxed max-w-2xl">
+            Developed by the {OFFICE} at the {DISTRICT}.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

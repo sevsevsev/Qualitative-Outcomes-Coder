@@ -211,7 +211,7 @@ Each code's `fidelity` and `deviation` fields in the data file must match its en
 
 ### FD-P09 · Y4.12
 
-- **Status:** open
+- **Status:** closed (2026-09-27, CP-10-02: CASEL 'Resisting negative social pressure' verified word for word, with National Health Education Standard 4 refusal skills; Y4.12 is now Framework)
 - **Fidelity:** codebook-defined
 - **Case:** codebook-defined
 - **Anchor:** CASEL (2020), Relationship Skills, "Resisting negative social pressure",
@@ -263,7 +263,7 @@ Each code's `fidelity` and `deviation` fields in the data file must match its en
 
 ### FD-P13 · Y6.4
 
-- **Status:** open
+- **Status:** closed (2026-09-27, CP-10-02: CIRCLE's 2002 core civic engagement indicators, verified, added to Y6's framework basis; Y6.4 matches its political voice and electoral indicators)
 - **Fidelity:** adapted
 - **Case:** sector-widening
 - **Anchor:** NCSS (2013) C3 Framework, Dimension 4 Taking Informed Action (partial).
@@ -276,7 +276,7 @@ Each code's `fidelity` and `deviation` fields in the data file must match its en
 
 ### FD-P14 · Y6.5
 
-- **Status:** open
+- **Status:** closed (2026-09-27, CP-10-02: Y6.5 matches CIRCLE's 2002 civic indicators, community problem solving and regular volunteering, verified)
 - **Fidelity:** adapted
 - **Case:** sector-widening
 - **Anchor:** NCSS C3 Dimension 4 (partial); Lerner et al. (2005), Contribution
@@ -354,7 +354,7 @@ Each code's `fidelity` and `deviation` fields in the data file must match its en
 
 ### FD-P20 · A3.1
 
-- **Status:** open
+- **Status:** closed (2026-09-27, CP-10-02: Coffman (2009) and Reisman, Gienapp & Stachowiak (2007) policy-change outcomes, verified, added to A3's framework basis)
 - **Fidelity:** codebook-defined
 - **Case:** codebook-defined
 - **Anchor:** no policy-change framework in the records; Learning Forward (2022)
@@ -370,23 +370,23 @@ Each code's `fidelity` and `deviation` fields in the data file must match its en
 ## Drift count for codebook 3.x (S4.9)
 
 Counted in the domain where the code sits, open entries only; merged-components entries
-are logged but not counted. Updated after the 2026-09-26 re-review below.
+are logged but not counted. Updated after the 2026-09-26 re-review below, and again for CP-10-02 (2026-09-27), which closed FD-P09, FD-P13, FD-P14 and FD-P20.
 
 | Domain | Codes | Counted deviations | Share | Over a third? |
 |---|---|---|---|---|
 | Y1 Academic | 18 | 0 | 0% | no |
 | Y2 Engagement | 6 | 0 | 0% | no |
 | Y3 Belonging | 5 | 1 (Y3.1) | 20% | no |
-| Y4 SEL (CASEL) | 12 | 1 (Y4.12) | 8% | no |
+| Y4 SEL (CASEL) | 12 | 0 | 0% | no |
 | Y5 Identity | 6 | 1 (Y5.5) | 17% | no |
-| Y6 Character & Civic | 7 | 2 (Y6.4, Y6.5) | 29% | no |
+| Y6 Character & Civic | 7 | 0 | 0% | no |
 | Y7 Career | 7 | 1 (Y7.7) | 14% | no |
 | Y8 Health | 13 | 0 | 0% | no |
 | F1 Family | 9 | 0 | 0% | no |
 | F2 Basic needs | 3 | 0 | 0% | no |
 | A1 Staff | 3 | 0 | 0% | no |
 | A2 Quality & access | 6 | 2 (A2.2, A2.4) | 33% | no (at the line) |
-| A3 Systems | 3 | 1 (A3.1) | 33% | no (at the line) |
+| A3 Systems | 3 | 0 | 0% | no |
 
 ## Anchor re-review, 2026-09-26 (S4.9)
 

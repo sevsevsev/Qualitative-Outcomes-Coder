@@ -30,6 +30,14 @@ Read these before touching any codebook:
   parts, 13 domains, 39 categories and 98 codes. Gold: `gold/youth_outcomes_v3.gold.csv`
   (345 design/old held-out rows) and `gold/youth_outcomes_v3.heldout.gold.csv` (100 fresh
   rows, now used once), all adjudicated by Severin. The v2 draft stays an input only.
+- 3.1.0 (CP-09-09, approved 2026-09-27) adds domain-only coding: a statement that names one
+  domain but no specific result gets the domain with subcategory "none" and `uncoded` false;
+  exports carry a derived `specificity` column (code, domain, uncoded).
+- 3.1.1 (CP-10-01) re-verified every 3.x source with independent verifiers. The registry
+  records each link's `fit` (direct or partial), and the explorer shows partial fits. The
+  registry is built by `v3/build_registry.py` plus `v3/verification_2026_09_27.py`; change
+  registry results there, not in the JSON. 3.1.2 (CP-10-02) cites verified frameworks for
+  Y4.12, Y6.4, Y6.5 and A3.1; only A2.2 and A2.4 remain codebook-defined.
 - `codebooks/original.ts` (2.5.x) was retired on 2026-09-26: no picker offers it, but it stays registered (marked `deprecated`) so saved sessions, old exports, eval scripts and direct Codebook-tab links still resolve its codes. Older files may use
   pre-2.0.0 numbers; see `codebook-refinement/renumbering/`.
 - A public explorer-only site is built from this repo with `VITE_SITE=explorer` (README,

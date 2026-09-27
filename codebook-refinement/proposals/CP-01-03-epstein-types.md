@@ -8,7 +8,7 @@
 | Codes touched | 3.5, Domain 11 header, 11.4, 12.4 (citation text only) |
 | Version bump | PATCH |
 | Requirement served | R1, R3 (CF-008) |
-| Status | draft |
+| Status | closed by Severin 2026-09-27: already carried by codebook 3.x (3.0 maps Type 4 to F1.2 and Types 3 and 5 to F1.9; CP-10-01 fixed the link). See v3/source-verification-2026-09-27.md. |
 | Enum cost | +0 |
 
 ## Problem

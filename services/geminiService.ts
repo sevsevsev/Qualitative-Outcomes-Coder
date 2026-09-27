@@ -2,6 +2,7 @@
 import { BatchAnalysisResult, BatchItemResult, AtomicBatchItem, CodebookType } from "../types.js";
 import { getCodebook } from "../codebooks/index.js";
 import { normalizeSecondarySubcategory } from "./reviewNormalization.js";
+import { applySourceType } from "./sourceType.js";
 
 // Trim/normalize a codebook string coming back from the model. Domain and
 // subcategory values are now constrained via enum in the response schema
@@ -323,12 +324,13 @@ const analyzeBatchChunk = async (items: any[], codebookType: CodebookType): Prom
   });
 };
 
-export const processBatch = async (fileContent: string, codebookType: CodebookType, onProgress: (processed: number, total: number, log: string) => void): Promise<BatchAnalysisResult> => {
+export const processBatch = async (fileContent: string, codebookType: CodebookType, onProgress: (processed: number, total: number, log: string) => void, sourceType?: string): Promise<BatchAnalysisResult> => {
   let itemsToProcess: any[] = [];
   try {
     onProgress(0, 0, "Parsing input file...");
     itemsToProcess = parseCSV(fileContent);
     itemsToProcess = itemsToProcess.map((item, index) => ({ ...item, row_id: String(item.row_id || item.id || `gen_row_${index + 1}`) }));
+    itemsToProcess = applySourceType(itemsToProcess, sourceType);
   } catch (e: any) { throw new Error(`Failed to parse file: ${e.message}`); }
 
   const total = itemsToProcess.length;

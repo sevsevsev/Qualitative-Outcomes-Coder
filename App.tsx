@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { processBatch, atomicJsonToCSV } from './services/geminiService.js';
+import { SOURCE_TYPES, csvHasSourceType } from './services/sourceType.js';
 import { BatchAnalysisResult, LoadingState, CodebookType } from './types.js';
 import { CODEBOOK_LIST, DEFAULT_CODEBOOK_ID } from './codebooks/index.js';
 import { loadReviewState, clearReviewState, SavedReviewState } from './services/reviewStorage.js';
@@ -18,6 +19,9 @@ const App: React.FC = () => {
   const [status, setStatus] = useState<LoadingState>('idle');
   const [error, setError] = useState<string | null>(null);
   const [codebook, setCodebook] = useState<CodebookType>(DEFAULT_CODEBOOK_ID);
+  const [sourceType, setSourceType] = useState<string>('');
+  const fileHasSource = csvHasSourceType(inputText);
+  const needsSource = !!inputText.trim() && !fileHasSource && !sourceType;
   const [restorableSession, setRestorableSession] = useState<SavedReviewState | null>(null);
 
   // Progress State
@@ -60,6 +64,7 @@ const App: React.FC = () => {
     setStatus('idle');
     setInputText('');
     setFileName(null);
+    setSourceType('');
     setError(null);
     setLogs([]);
     setProcessedCount(0);
@@ -94,7 +99,7 @@ const App: React.FC = () => {
 
   const handleAnalyze = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!inputText.trim()) return;
+    if (!inputText.trim() || needsSource) return;
 
     setStatus('analyzing');
     setError(null);
@@ -111,7 +116,8 @@ const App: React.FC = () => {
           setProcessedCount(processed);
           setTotalCount(total);
           setLogs(prev => [...prev, log]);
-        }
+        },
+        fileHasSource ? undefined : sourceType
       );
       
       setBatchResult(data);
@@ -288,6 +294,31 @@ const App: React.FC = () => {
                 </div>
               </div>
 
+              {fileName && (
+                <div className="mb-6">
+                  <label htmlFor="source-type" className="block text-sm font-medium text-slate-700 mb-2">
+                    Where did these outcomes come from?
+                  </label>
+                  <select
+                    id="source-type"
+                    value={fileHasSource ? '' : sourceType}
+                    onChange={(e) => setSourceType(e.target.value)}
+                    disabled={fileHasSource}
+                    className="w-full sm:w-1/2 p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-slate-900 disabled:bg-slate-50 disabled:text-slate-500"
+                  >
+                    <option value="">{fileHasSource ? 'From the file (source_type column)' : 'Choose a source'}</option>
+                    {SOURCE_TYPES.map(s => (
+                      <option key={s.value} value={s.value}>{s.label}</option>
+                    ))}
+                  </select>
+                  <p className="text-xs text-slate-500 mt-1">
+                    {fileHasSource
+                      ? 'This file already says where each outcome came from.'
+                      : 'Saved with every outcome in the export, so results from different sources can be told apart.'}
+                  </p>
+                </div>
+              )}
+
               {error && (
                  <div className="mb-4 p-3 bg-red-50 text-red-700 text-sm rounded border border-red-200">
                     Error: {error}
@@ -297,11 +328,11 @@ const App: React.FC = () => {
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  disabled={!inputText.trim()}
+                  disabled={!inputText.trim() || needsSource}
                   className={`
                     inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white 
                     transition-all duration-200
-                    ${!inputText.trim() 
+                    ${!inputText.trim() || needsSource
                       ? 'bg-blue-300 cursor-not-allowed' 
                       : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transform hover:-translate-y-0.5'
                     }

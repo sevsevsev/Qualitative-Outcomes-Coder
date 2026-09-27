@@ -635,6 +635,34 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
           Every source the codebook draws on, with the codes it supports. Status comes from the source registry
           {data.registryReviewed ? `, last reviewed ${data.registryReviewed.split(' ')[0]}` : ''}.
         </p>
+        <section className="mt-5 max-w-2xl rounded-xl border border-slate-200 bg-white px-5 py-4">
+          <h3 className="text-sm font-semibold text-slate-900">Why every code cites a source</h3>
+          <ul className="mt-2 space-y-1.5 text-sm text-slate-600 leading-relaxed list-disc pl-5">
+            <li>
+              <span className="font-medium text-slate-800">A meaning others already share.</span> A code that follows a
+              published framework means what that framework means, so a funder or evaluator reads it the way they already
+              understand it.
+            </li>
+            <li>
+              <span className="font-medium text-slate-800">Goals that line up.</span> Programs coded to the same framework
+              can be compared with each other and with the measures and data others collect on the same outcome.
+            </li>
+            <li>
+              <span className="font-medium text-slate-800">A boundary that holds.</span> The framework sets what a code
+              covers, so revisions can’t quietly stretch it. A code may depart from its framework only for a few set reasons,
+              and each departure is written down.
+            </li>
+            <li>
+              <span className="font-medium text-slate-800">Research you can check.</span> A source counts only after someone
+              other than the person who proposed it opened it and recorded a short quote that supports the code. You can
+              read that quote under each source.
+            </li>
+          </ul>
+          <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+            A few codes have no framework that fits. Their cards say “Codebook-defined” rather than borrow a framework’s
+            name. When a source covers only part of a code, it is marked “Partial fit.”
+          </p>
+        </section>
         <div className="mt-5 flex flex-wrap gap-2">
           {(Object.keys(STATUS_META) as SourceStatus[])
             .filter(s => counts[s])

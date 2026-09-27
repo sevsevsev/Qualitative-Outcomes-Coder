@@ -8,7 +8,7 @@
 | Codes touched | 8.2, 8.3, 8.5, 8.6, 1.1, 1.3, 1.4, 1.6, 12.7 (citation text only; no definitions change) |
 | Version bump | PATCH |
 | Requirement served | R1 |
-| Status | draft, ready to test (except item 2, which needs a new source) |
+| Status | closed by Severin 2026-09-27: already carried by codebook 3.x (items 1, 3, 4 and 6 are in 3.0's wording, item 2 is moot (Y1.5 has its own sources), item 5 (drop SAMHSA SPF) is done by CP-10-01). See v3/source-verification-2026-09-27.md. |
 | Enum cost | +0 |
 
 ## Problem

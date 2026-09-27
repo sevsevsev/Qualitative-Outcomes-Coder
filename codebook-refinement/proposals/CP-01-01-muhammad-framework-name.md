@@ -8,7 +8,7 @@
 | Codes touched | Domain 2 header, 2.1, 3.4, 7.4 (citation text only) |
 | Version bump | PATCH |
 | Requirement served | R1 |
-| Status | draft |
+| Status | closed by Severin 2026-09-27: already carried by codebook 3.x (3.0 cites "Muhammad, Five Pursuits" on Y2.1, Y5.2 and Y6.3). See v3/source-verification-2026-09-27.md. |
 | Enum cost | +0 |
 
 ## Problem

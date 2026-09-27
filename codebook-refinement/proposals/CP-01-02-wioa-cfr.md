@@ -8,7 +8,7 @@
 | Codes touched | 9.8 |
 | Version bump | PATCH |
 | Requirement served | R1 |
-| Status | draft |
+| Status | closed by Severin 2026-09-27: already carried by codebook 3.x (3.0 cites 20 CFR 677.155 on Y7.4 and Y7.5). See v3/source-verification-2026-09-27.md. |
 | Enum cost | +0 |
 
 ## Problem

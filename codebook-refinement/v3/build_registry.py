@@ -199,18 +199,33 @@ for code, sups in SUPPORTS.items():
             out[sid] = rec
         out[sid]['supports'].append({'code': code, 'component': comp})
 
+# CP-10-01: the 2026-09-27 re-verification of every source (verdicts, fit per
+# code, corrected links and citations, SAMHSA SPF dropped, new sources added).
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from verification_2026_09_27 import apply as apply_2026_09_27
+apply_2026_09_27(out, CODES)
+SUPPORTED_CODES = {sup['code'] for s in out.values() for sup in s['supports']}
+
 dev = (ROOT / 'codebook-refinement/DEVIATIONS.md').read_text()
 extensions = []
 for cid, c in CODES.items():
-    if cid not in SUPPORTS:
+    if cid not in SUPPORTED_CODES:
         assert c['fidelity'] == 'codebook-defined' or c.get('deviation'), cid
         extensions.append({'code': cid, 'reason': f"Codebook-defined: no verified or located framework names this construct. See {c.get('deviation', 'DEVIATIONS.md')}."})
 
 registry = {
     'codebook_id': 'youth_outcomes_v3',
-    'codebook_version_reviewed': '3.0.0',
-    'last_reviewed': '2026-09-26',
-    'status_legend': ORIG['status_legend'],
+    'codebook_version_reviewed': '3.1.2',
+    'last_reviewed': '2026-09-27',
+    'status_legend': {
+        **ORIG['status_legend'],
+        'verified': 'A verifier who did not propose the source fetched the document itself and recorded a verbatim excerpt (`excerpt`). Whether it covers each code is recorded per support in `fit`.',
+    },
+    'fit_legend': {
+        'direct': 'The verifier found the code\'s construct in the source (verdict SUPPORTED).',
+        'partial': 'The source is real and was read, but it covers only part of the code, or words it more loosely (verdict PARTIAL). `verifier_note` says what is missing.',
+    },
     'sources': sorted(out.values(), key=lambda s: s['id']),
     'codebook_extensions': extensions,
 }

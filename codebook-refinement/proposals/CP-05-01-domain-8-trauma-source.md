@@ -6,7 +6,7 @@
 | Codes touched | Domain 8 header (citation text only) |
 | Version bump | PATCH |
 | Requirement served | R1 frameworks |
-| Status | draft |
+| Status | closed by Severin 2026-09-27: already carried by codebook 3.x (3.0's Y8 framework basis names NCTSN, not SAMHSA). See v3/source-verification-2026-09-27.md. |
 | Enum cost | +0 |
 
 ## Problem

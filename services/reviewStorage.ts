@@ -8,6 +8,7 @@
 // so App.tsx can offer to resume it.
 
 import { AtomicBatchItem, CodebookType } from '../types.js';
+import { CODEBOOK_REGISTRY } from '../codebooks/index.js';
 
 const STORAGE_KEY = 'qoc_review_session_v1';
 
@@ -32,6 +33,8 @@ export const loadReviewState = (): SavedReviewState | null => {
     if (!raw) return null;
     const parsed = JSON.parse(raw);
     if (!parsed || !Array.isArray(parsed.items) || parsed.items.length === 0) return null;
+    // A deprecated codebook still resumes (it stays registered); an unknown id can't be reviewed.
+    if (!Object.prototype.hasOwnProperty.call(CODEBOOK_REGISTRY, parsed.codebookType)) return null;
     return parsed as SavedReviewState;
   } catch {
     return null;

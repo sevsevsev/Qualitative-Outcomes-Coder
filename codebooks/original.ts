@@ -611,6 +611,9 @@ export const originalCodebook: Codebook = {
   // The prompt keeps the old name so renaming the codebook (2026-09-24)
   // did not change what the model is sent.
   promptLabel: 'Original (Youth Development)',
+  // Retired by Severin on 2026-09-26: codebook 3.0 replaced it. Kept so old
+  // exports, saved sessions and eval scripts still resolve 2.5.x codes.
+  deprecated: { since: '2026-09-26', replacedBy: 'youth_outcomes_v3' },
   rulesText,
   definitionsText,
   capabilities: {

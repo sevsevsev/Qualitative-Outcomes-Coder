@@ -26,7 +26,18 @@ export type CodebookType = keyof typeof CODEBOOK_REGISTRY;
 
 export const CODEBOOK_LIST: Codebook[] = Object.values(CODEBOOK_REGISTRY);
 
-// Codebook 3.0 became the default on 2026-09-26 (CP-08-02, Severin). 2.5.x stays selectable.
+/**
+ * Codebooks offered in pickers: every codebook that isn't deprecated. A
+ * deprecated one stays in CODEBOOK_REGISTRY so saved sessions, old exports
+ * and eval scripts still resolve it.
+ */
+export const SELECTABLE_CODEBOOK_LIST: Codebook[] = CODEBOOK_LIST.filter(cb => !cb.deprecated);
+
+export const isSelectableCodebook = (id: string): id is CodebookType =>
+  SELECTABLE_CODEBOOK_LIST.some(cb => cb.id === id);
+
+// Codebook 3.0 became the default on 2026-09-26 (CP-08-02, Severin). The same
+// day Severin retired 2.5.x ('original'): it is no longer offered in pickers.
 export const DEFAULT_CODEBOOK_ID: CodebookType = 'youth_outcomes_v3';
 
 export const getCodebook = (id: CodebookType): Codebook => CODEBOOK_REGISTRY[id];

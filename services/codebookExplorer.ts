@@ -8,7 +8,7 @@
 // here is hand-copied, so the explorer stays in step with the codebook.
 
 import { Codebook } from '../codebooks/types.js';
-import { SourceEntry, SourceStatus, getSourceRegistry } from './codebookSources.js';
+import { SourceEntry, SourceStatus, SourceSupport, getSourceRegistry } from './codebookSources.js';
 
 export interface ExplorerSource {
   id: string;
@@ -23,6 +23,10 @@ export interface ExplorerSource {
   openCp?: string;
   /** Which part of the source supports this particular code. */
   component?: string;
+  /** "partial" when the source covers only part of this code (verifier's call). */
+  fit?: 'direct' | 'partial';
+  /** What the verifier said about this code's fit. */
+  fitNote?: string;
 }
 
 export interface ExplorerField {
@@ -153,7 +157,7 @@ export const parseDefinitions = (codebook: Codebook): Map<string, ParsedBlock> =
   return blocks;
 };
 
-const toExplorerSource = (s: SourceEntry, component?: string): ExplorerSource => ({
+const toExplorerSource = (s: SourceEntry, sup?: SourceSupport): ExplorerSource => ({
   id: s.id,
   citeAs: s.cite_as,
   publisher: s.publisher ?? undefined,
@@ -161,10 +165,12 @@ const toExplorerSource = (s: SourceEntry, component?: string): ExplorerSource =>
   url: s.url ?? undefined,
   status: s.status,
   tier: s.tier,
-  excerpt: s.excerpt,
+  excerpt: sup?.excerpt ?? s.excerpt,
   verifiedOn: s.verified_on,
   openCp: s.open_cp,
-  component,
+  component: sup?.component,
+  fit: sup?.fit,
+  fitNote: sup?.fit === 'partial' ? sup.verifier_note : undefined,
 });
 
 const STATUS_RANK: Record<SourceStatus, number> = {
@@ -211,7 +217,7 @@ export const buildExplorerCodebook = (codebook: Codebook): ExplorerCodebook => {
           // Flagged supports (a code not yet live, or one a verifier rejected)
           // aren't evidence for the code, so they aren't shown as its sources.
           .filter(sup => sup.code === number && !sup.proposed && !sup.unsupported)
-          .map(sup => toExplorerSource(s, sup.component)),
+          .map(sup => toExplorerSource(s, sup)),
       )
       .sort(byStatus);
   };

@@ -28,6 +28,15 @@ export interface SourceSupport {
   unsupported?: boolean;
   /** The CP that will fix a flagged support. */
   open_cp?: string;
+  /**
+   * How much of the code the source covers, as the verifier judged it:
+   * "direct" (SUPPORTED) or "partial" (the source covers part of the code).
+   */
+  fit?: 'direct' | 'partial';
+  /** Verbatim excerpt for this code, when it differs from the source's. */
+  excerpt?: string;
+  /** What the verifier said about this code, e.g. what a partial fit misses. */
+  verifier_note?: string;
 }
 
 export interface SourceEntry {

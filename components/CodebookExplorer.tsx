@@ -295,6 +295,12 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
               {source.component}
             </div>
           )}
+          {showComponent && source.fit === 'partial' && (
+            <div className="text-xs text-amber-800 mt-1.5">
+              <span className="font-semibold">Partial fit.</span>{' '}
+              {source.fitNote ?? 'The source covers only part of this code.'}
+            </div>
+          )}
           {source.excerpt && source.status === 'verified' && (
             <figure className="mt-2 border-l-2 border-emerald-200 pl-3">
               <blockquote className="text-xs leading-relaxed text-slate-600 italic">“{source.excerpt}”</blockquote>

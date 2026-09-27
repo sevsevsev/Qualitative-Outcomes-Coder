@@ -1,13 +1,17 @@
 {
   "codebook_id": "youth_outcomes_v3",
-  "codebook_version_reviewed": "3.0.0",
-  "last_reviewed": "2026-09-26",
+  "codebook_version_reviewed": "3.1.1",
+  "last_reviewed": "2026-09-27",
   "status_legend": {
-    "verified": "Fetched from `url` during a recorded run. `excerpt` is verbatim and supports the listed codes/components.",
+    "verified": "A verifier who did not propose the source fetched the document itself and recorded a verbatim excerpt (`excerpt`). Whether it covers each code is recorded per support in `fit`.",
     "located": "The source is confirmed to exist at `url` (title/publisher confirmed), but no supporting excerpt has been recorded yet. Counts as grounded for coverage, but is queued for verification.",
     "unverified": "Cited in the codebook but not checked in any recorded run. The verifier's queue.",
     "misattributed": "The codebook's current attribution is wrong (wrong author, wrong regulation, wrong component). Must carry an `open_cp` until fixed.",
     "needs_replacement": "The citation is too vague to verify (no named document). Must carry an `open_cp` until replaced."
+  },
+  "fit_legend": {
+    "direct": "The verifier found the code's construct in the source (verdict SUPPORTED).",
+    "partial": "The source is real and was read, but it covers only part of the code, or words it more loosely (verdict PARTIAL). `verifier_note` says what is missing."
   },
   "sources": [
     {
@@ -18,18 +22,24 @@
       "year": null,
       "url": "https://acf.gov/cb/fact-sheet/about-nytd",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebFetch)",
-      "excerpt": "financial self-sufficiency, experience with homelessness, educational attainment, positive connections with adults, high-risk behavior, and access to health insurance",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "financial self-sufficiency, experience with homelessness, educational attainment, positive connections with adults, high-risk behavior, and access to health insurance.",
       "notes": "Used as the coverage benchmark for foster-care and transition-age youth programs (cycle-01 coverage matrix).",
       "supports": [
         {
           "code": "Y8.5",
-          "component": "health insurance"
+          "component": "health insurance",
+          "fit": "direct",
+          "excerpt": "financial self-sufficiency, experience with homelessness, educational attainment, positive connections with adults, high-risk behavior, and access to health insurance.",
+          "verifier_note": "ACF fact sheet lists access to health insurance as one of six NYTD outcomes measured by the outcomes survey at ages 17, 19 and 21. It fits the insurance part of Y8.5. The page is an ACF fact sheet about NYTD, not the survey instrument itself."
         },
         {
           "code": "F2.3",
-          "component": "housing"
+          "component": "experience with homelessness",
+          "fit": "partial",
+          "excerpt": "financial self-sufficiency, experience with homelessness, educational attainment, positive connections with adults, high-risk behavior, and access to health insurance.",
+          "verifier_note": "The NYTD outcome is worded 'experience with homelessness', not 'housing'. That is narrower than, and framed differently from, housing stability and safe living situation. The only use of 'housing' on the page is 'housing education and home management training', which is a service, not an outcome."
         }
       ]
     },
@@ -44,16 +54,20 @@
       "publisher": "UChicago Consortium on School Research",
       "year": 2005,
       "url": "https://consortium.uchicago.edu/sites/default/files/2023-06/The%20On-Track%20Indicator-Jun2005-Consortium.pdf",
-      "status": "located",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebSearch)",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "notes": "The on-track indicator covers credits and course failures. It does NOT cover exclusionary discipline, which 1.6's definition includes (CP-01-09).",
       "supports": [
         {
           "code": "Y1.15",
-          "component": "On-Track Indicator"
+          "component": "On-Track Indicator",
+          "fit": "direct",
+          "excerpt": "A student is counted as on-track at the end of freshman year if both of the following criteria are met: The student has accumulated five full course credits, the number needed to be promoted to tenth grade",
+          "verifier_note": "Title, authors, year (June 2005) and publisher (Consortium on Chicago School Research at the University of Chicago) all match. The on-track definition based on credits and failing grades fits Y1.15."
         }
-      ]
+      ],
+      "excerpt": "A student is counted as on-track at the end of freshman year if both of the following criteria are met: The student has accumulated five full course credits, the number needed to be promoted to tenth grade"
     },
     {
       "id": "allensworth-easton-2007",
@@ -66,13 +80,16 @@
       "year": 2007,
       "url": "https://consortium.uchicago.edu/sites/default/files/2018-10/07%20What%20Matters%20Final.pdf",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "cycle-04 (independent codebook-citation-verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "Whether a student is on-track, GPA, and the number of semester course failures all correctly identify graduates and nongraduates 80 percent of the time.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "students with a 2.5 GPA (C+ average) in their freshman year have a very high likelihood of graduating within four years—86 percent did so.",
       "supports": [
         {
           "code": "Y1.15",
-          "component": "course grades and GPA"
+          "component": "course grades and GPA",
+          "fit": "direct",
+          "excerpt": "students with a 2.5 GPA (C+ average) in their freshman year have a very high likelihood of graduating within four years—86 percent did so.",
+          "verifier_note": "Title, authors, date (July 2007) and publisher match. The report's title names course grades, and the text treats freshman GPA as a predictor, which fits Y1.15."
         }
       ]
     },
@@ -87,17 +104,23 @@
       "year": null,
       "url": "https://ascend.aspeninstitute.org/2gen-approach/",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebFetch)",
-      "excerpt": "Economic Assets - encompassing housing, transportation, financial education, and nutrition assistance",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Within the 2Gen Approach, Postsecondary work includes a focus on higher education, including colleges and universities, as well as workforce development programs.",
       "supports": [
         {
           "code": "F1.6",
-          "component": "Postsecondary & Employment Pathways"
+          "component": "Postsecondary & Employment Pathways",
+          "fit": "direct",
+          "excerpt": "Within the 2Gen Approach, Postsecondary work includes a focus on higher education, including colleges and universities, as well as workforce development programs.",
+          "verifier_note": "'Postsecondary & Employment Pathways' is one of the six building blocks named on Ascend's own page. It is framed around parents' educational attainment and workforce development, which fits F1.6."
         },
         {
           "code": "F2.1",
-          "component": "Economic Assets"
+          "component": "Economic Assets",
+          "fit": "direct",
+          "excerpt": "Financial stability is critical to a family's economic and social mobility. Within the 2Gen approach we refer to Economic Assets as including housing, transportation, financial education and asset building, tax credits, student financial aid, nutrition assistance, and more.",
+          "verifier_note": "The building block's name matches exactly, and its wording about financial stability, tax credits and nutrition assistance fits F2.1. Economic Assets also covers housing and transportation, so it is broader than this code."
         }
       ]
     },
@@ -112,13 +135,16 @@
       "year": null,
       "url": "https://www.attendanceworks.org/chronic-absence/the-problem/",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "missing 10 percent or more of school days due to absence for any reason—excused, unexcused absences and suspensions",
       "supports": [
         {
           "code": "Y1.13",
-          "component": "chronic absence"
+          "component": "chronic absence",
+          "fit": "direct",
+          "excerpt": "missing 10 percent or more of school days due to absence for any reason—excused, unexcused absences and suspensions",
+          "verifier_note": "Attendance Works' own page defines chronic absence as claimed. This fits Y1.13."
         }
       ]
     },
@@ -131,14 +157,17 @@
       "year": null,
       "url": "https://www.bls.gov/jlt/jltdef.htm",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "JOLTS defines Separations as all employees separated from the payroll during the month.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Quits: Employees who left voluntarily. Exception: retirements or transfers to other locations are reported with Other Separations.",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "A1.3",
-          "component": "separations and quits"
+          "component": "separations and quits",
+          "fit": "direct",
+          "excerpt": "Quits: Employees who left voluntarily. Exception: retirements or transfers to other locations are reported with Other Separations.",
+          "verifier_note": "The BLS JOLTS definitions page defines both separations ('all employees separated from the payroll during the month') and quits. Both fit the retention and turnover part of A1.3. The excerpt joins the 'Quits' label to its definition text."
         }
       ]
     },
@@ -153,62 +182,101 @@
       "year": 2020,
       "url": "https://casel.s3.us-east-2.amazonaws.com/sites/5/CASEL-Framework-and-Skills.pdf",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebFetch)",
-      "excerpt": "SELF-MANAGEMENT: Managing one's emotions; Identifying and using stress-management strategies; Exhibiting self-discipline and self-motivation; Setting personal and collective goals; Using planning and organizational skills",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Identifying one's emotions",
       "notes": "Codes 4.3.4 and 4.5.4 do NOT map to a 2020 CASEL example skill, so they are listed under codebook_extensions. CASEL skills that have no subcategory yet, and the routing decided for each, are in CONFUSIONS.md CF-016.",
       "supports": [
         {
           "code": "Y4.1",
-          "component": "Self-Awareness: 'Identifying one's emotions'"
+          "component": "Self-Awareness: 'Identifying one's emotions'",
+          "fit": "direct",
+          "excerpt": "Identifying one's emotions",
+          "verifier_note": "The bullet appears word for word under Self-Awareness. The same skills list also appears in https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf, which is the document behind the cited title (casel.org page dated Oct 1, 2020). The given URL shows no title or date."
         },
         {
           "code": "Y4.2",
-          "component": "Self-Management: 'Managing one's emotions'; 'Identifying and using stress-management strategies'"
+          "component": "Self-Management: 'Managing one's emotions'; 'Identifying and using stress-management strategies'",
+          "fit": "direct",
+          "excerpt": "Managing one's emotions; Identifying and using stress-management strategies",
+          "verifier_note": "Both bullets appear word for word under Self-Management."
         },
         {
           "code": "Y4.3",
-          "component": "Self-Management: 'Setting personal and collective goals'; 'Exhibiting self-discipline and self-motivation'; 'Using planning and organizational skills'"
+          "component": "Self-Management: 'Setting personal and collective goals'; 'Exhibiting self-discipline and self-motivation'; 'Using planning and organizational skills'",
+          "fit": "direct",
+          "excerpt": "Exhibiting self-discipline and self-motivation; Setting personal and collective goals; Using planning and organizational skills",
+          "verifier_note": "All three bullets appear word for word under Self-Management. The code's limit to 'outside schoolwork' is the codebook's own scope rule, not the framework's."
         },
         {
           "code": "Y4.4",
-          "component": "Social Awareness: 'Taking others' perspectives'; 'Demonstrating empathy and compassion'; 'Identifying diverse social norms, including unjust ones'"
+          "component": "Social Awareness: 'Taking others' perspectives'; 'Demonstrating empathy and compassion'; 'Identifying diverse social norms, including unjust ones'",
+          "fit": "direct",
+          "excerpt": "Taking others' perspectives; ... Demonstrating empathy and compassion; ... Identifying diverse social norms, including unjust ones",
+          "verifier_note": "All three bullets appear word for word under Social Awareness. The gratitude part of the code definition is also in the source ('Understanding and expressing gratitude')."
         },
         {
           "code": "Y4.5",
-          "component": "Relationship Skills: 'Demonstrating cultural competency'; Self-Awareness: 'Examining prejudices and biases'"
+          "component": "Relationship Skills: 'Demonstrating cultural competency'; Self-Awareness: 'Examining prejudices and biases'",
+          "fit": "direct",
+          "excerpt": "Demonstrating cultural competency (Relationship Skills); Examining prejudices and biases (Self-Awareness)",
+          "verifier_note": "Both bullets appear word for word, under two different competencies as the claim says. The code combines two CASEL competencies, so if it is recorded as 'framework' fidelity, check whether it should be 'adapted'."
         },
         {
           "code": "Y4.6",
-          "component": "Relationship Skills: 'Communicating effectively'"
+          "component": "Relationship Skills: 'Communicating effectively'",
+          "fit": "partial",
+          "excerpt": "This includes the capacities to communicate clearly, listen actively, cooperate ... Such as: Communicating effectively",
+          "verifier_note": "'Communicating effectively' appears word for word under Relationship Skills, and the competency text covers listening actively. CASEL says nothing about public speaking or speaking to an audience, so the source is looser than the code's name and definition."
         },
         {
           "code": "Y4.7",
-          "component": "Relationship Skills: 'Practicing teamwork and collaborative problem-solving'"
+          "component": "Relationship Skills: 'Practicing teamwork and collaborative problem-solving'; 'Showing leadership in groups'",
+          "fit": "direct",
+          "excerpt": "Practicing teamwork and collaborative problem-solving",
+          "verifier_note": "Appears word for word under Relationship Skills. The 'group leadership' part of the code matches a separate bullet ('Showing leadership in groups') that the claim does not cite."
         },
         {
           "code": "Y4.8",
-          "component": "Relationship Skills: 'Developing positive relationships'; 'Resolving conflicts constructively'"
+          "component": "Relationship Skills: 'Developing positive relationships'; 'Resolving conflicts constructively'",
+          "fit": "direct",
+          "excerpt": "Developing positive relationships; ... Resolving conflicts constructively",
+          "verifier_note": "Both bullets appear word for word under Relationship Skills."
         },
         {
           "code": "Y4.9",
-          "component": "Relationship Skills: 'Seeking or offering support and help when needed'"
+          "component": "Relationship Skills: 'Seeking or offering support and help when needed'",
+          "fit": "direct",
+          "excerpt": "Seeking or offering support and help when needed",
+          "verifier_note": "Appears word for word under Relationship Skills."
         },
         {
           "code": "Y4.10",
-          "component": "Responsible Decision-Making: 'Identifying solutions for personal and social problems'; 'Anticipating and evaluating the consequences of one's actions'"
+          "component": "Responsible Decision-Making: 'Identifying solutions for personal and social problems'; 'Anticipating and evaluating the consequences of one's actions'",
+          "fit": "direct",
+          "excerpt": "Identifying solutions for personal and social problems; ... Anticipating and evaluating the consequences of one's actions",
+          "verifier_note": "Both bullets appear word for word under Responsible Decision-Making."
         },
         {
           "code": "Y4.11",
-          "component": "Responsible Decision-Making: 'Evaluating personal, interpersonal, community, and institutional impacts'; 'Reflecting on one's role to promote personal, family, and community well-being'"
+          "component": "Responsible Decision-Making: 'Evaluating personal, interpersonal, community, and institutional impacts'; 'Reflecting on one's role to promote personal, family, and community well-being'",
+          "fit": "partial",
+          "excerpt": "Reflecting on one's role to promote personal, family, and community well-being; Evaluating personal, interpersonal, community, and institutional impacts",
+          "verifier_note": "Both bullets appear word for word. But they describe reflecting and evaluating, not making an ethical or prosocial choice in a specific situation. The competency definition ('make caring and constructive choices about personal behavior and social interactions') fits the code better."
         },
         {
           "code": "Y5.1",
-          "component": "Self-Awareness: 'Integrating personal and social identities'"
+          "component": "Self-Awareness: 'Integrating personal and social identities'",
+          "fit": "partial",
+          "excerpt": "Integrating personal and social identities",
+          "verifier_note": "Appears word for word under Self-Awareness. 'Integrating' identities is narrower than understanding who one is, what matters to one and how one is changing. Other bullets ('Linking feelings, values, and thoughts', 'Developing interests and a sense of purpose') cover more of the code but are not claimed."
         },
         {
           "code": "Y5.4",
-          "component": "Self-Awareness: 'Experiencing self-efficacy'; 'Having a growth mindset'"
+          "component": "Self-Awareness: 'Experiencing self-efficacy'; 'Having a growth mindset'",
+          "fit": "direct",
+          "excerpt": "Experiencing self-efficacy; Having a growth mindset",
+          "verifier_note": "Both bullets appear word for word under Self-Awareness. The self-worth and self-esteem parts of the code are not named in CASEL."
         }
       ]
     },
@@ -223,13 +291,16 @@
       "year": 2010,
       "url": "https://www.thecorestandards.org/ELA-Literacy/CCRA/W/",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "cycle-04 (independent codebook-citation-verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "Text Types and Purposes ... Production and Distribution of Writing ... Research to Build and Present Knowledge ... Range of Writing",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Produce clear and coherent writing in which the development, organization, and style are appropriate to task, purpose, and audience.",
       "supports": [
         {
           "code": "Y1.1",
-          "component": "CCR Anchor Standards for Writing"
+          "component": "CCR Anchor Standards for Writing",
+          "fit": "partial",
+          "excerpt": "Produce clear and coherent writing in which the development, organization, and style are appropriate to task, purpose, and audience.",
+          "verifier_note": "The page exists and is attributed correctly ('© Copyright 2010. National Governors Association Center for Best Practices and Council of Chief State School Officers'). But the writing anchors cover only the writing half of Y1.1; nothing here supports the reading part (phonics, fluency, comprehension)."
         }
       ]
     },
@@ -242,15 +313,20 @@
       "tier": "A",
       "publisher": "CDC; U.S. Department of Education",
       "year": 2014,
-      "url": null,
-      "status": "located",
-      "verified_by": "commit 9536bfe (prior session, WebSearch; no excerpt recorded)",
+      "url": "https://stacks.cdc.gov/view/cdc/21596",
+      "status": "verified",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "supports": [
         {
           "code": "Y8.12",
-          "component": "Uniform definition of bullying"
+          "component": "Uniform definition of bullying",
+          "fit": "partial",
+          "excerpt": "Bullying is any unwanted aggressive behavior(s) by another youth or group of youths who are not siblings or current dating partners that involves an observed or perceived power imbalance and is repeated multiple times",
+          "verifier_note": "The document exists and is published by CDC and the U.S. Department of Education (Version 1.0, 2014; authors Gladden, Vivolo-Kantor, Hamburger, Lumpkin). The definition covers only bullying and excludes dating partners, so it does not cover fighting, weapon carrying, dating violence or community violence in Y8.12."
         }
-      ]
+      ],
+      "verified_on": "2026-09-27",
+      "excerpt": "Bullying is any unwanted aggressive behavior(s) by another youth or group of youths who are not siblings or current dating partners that involves an observed or perceived power imbalance and is repeated multiple times"
     },
     {
       "id": "cdc-school-connectedness-2009",
@@ -263,21 +339,30 @@
       "year": 2009,
       "url": "https://www.cdc.gov/healthyyouth/protective/pdf/connectedness.pdf",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "The belief by students that adults and peers in the school care about their learning as well as about them as individuals.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Adult Support: School staff can dedicate their time, interest, attention, and emotional support to students.",
       "supports": [
         {
           "code": "Y3.1",
-          "component": "School connectedness"
+          "component": "School connectedness",
+          "fit": "partial",
+          "excerpt": "The belief by students that adults and peers in the school care about their learning as well as about them as individuals.",
+          "verifier_note": "The document exists and is CDC's (Division of Adolescent and School Health, 2009). 'School connectedness' fits belonging and mattering, but it is limited to school, while the code also covers programs and communities."
         },
         {
           "code": "Y3.2",
-          "component": "Adult support"
+          "component": "Adult support",
+          "fit": "direct",
+          "excerpt": "Adult Support: School staff can dedicate their time, interest, attention, and emotional support to students.",
+          "verifier_note": "'Adult support' is one of the document's four named factors. It is framed around school staff only, while the code also covers mentors and coaches."
         },
         {
           "code": "Y3.3",
-          "component": "Belonging to a positive peer group"
+          "component": "Belonging to a positive peer group",
+          "fit": "direct",
+          "excerpt": "Belonging to a Positive Peer Group: A stable network of peers can improve student perceptions of school.",
+          "verifier_note": "This is one of the four named factors, worded the same as claimed."
         }
       ]
     },
@@ -292,17 +377,23 @@
       "year": 2014,
       "url": "https://www.cdc.gov/whole-school-community-child/about/index.html",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "Physical education and physical activity. Nutrition environment and services.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Physical Education and Physical Activity; Nutrition Environment and Services",
       "supports": [
         {
           "code": "Y8.1",
-          "component": "Physical Education & Physical Activity; Nutrition Environment & Services"
+          "component": "Physical Education & Physical Activity; Nutrition Environment & Services",
+          "fit": "partial",
+          "excerpt": "Physical Education and Physical Activity; Nutrition Environment and Services",
+          "verifier_note": "Both component names exist, and the page says 'CDC and ASCD ... developed the WSCC framework', so the attribution is correct. But these are school environment and service components, not youth behaviors. They do not cover sleep, hygiene or screen time, and the page has no descriptive text for them."
         },
         {
           "code": "Y8.9",
-          "component": "Counseling, Psychological, and Social Services"
+          "component": "Counseling, Psychological, and Social Services",
+          "fit": "partial",
+          "excerpt": "Counseling, Psychological, and Social Services",
+          "verifier_note": "The component name exists word for word and the CDC/ASCD attribution is correct. The fetched page gives only the name with no description, and it describes a school service component rather than a young person's access to or use of services. That is a plausible but loose fit."
         }
       ]
     },
@@ -318,21 +409,30 @@
       "year": null,
       "url": "https://www.cdc.gov/yrbs/about/index.html",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "Substance use behaviors: electronic vapor product and tobacco product use, alcohol use, and other drug use.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Youth health behaviors and conditions: sexual, injury and violence, bullying, diet and physical activity, obesity, and mental health including suicide.",
       "supports": [
         {
           "code": "Y8.4",
-          "component": "Sexual behaviors"
+          "component": "Sexual behaviors",
+          "fit": "direct",
+          "excerpt": "Youth health behaviors and conditions: sexual, injury and violence, bullying, diet and physical activity, obesity, and mental health including suicide.",
+          "verifier_note": "The CDC page lists 'sexual' as a behavior category, which is close to the claimed wording 'Sexual behaviors'. Checking Fit: the category matches Y8.4, but the page only names the category and does not break it down further."
         },
         {
           "code": "Y8.11",
-          "component": "Tobacco, alcohol, and other drug use"
+          "component": "Tobacco, alcohol, and other drug use",
+          "fit": "direct",
+          "excerpt": "Substance use behaviors: electronic vapor product and tobacco product use, alcohol use, and other drug use.",
+          "verifier_note": "The current page wording also names vaping, which matches Y8.11 even more closely than the claimed wording does."
         },
         {
           "code": "Y8.12",
-          "component": "Behaviors that contribute to unintentional injuries and violence"
+          "component": "injury and violence; bullying",
+          "fit": "partial",
+          "excerpt": "Youth health behaviors and conditions: sexual, injury and violence, bullying, diet and physical activity, obesity, and mental health including suicide.",
+          "verifier_note": "The exact phrase 'Behaviors that contribute to unintentional injuries and violence' does not appear on the current CDC page, which says 'injury and violence, bullying' instead. The claimed phrase appears to be older YRBSS wording. The component should be reworded to match the current page."
         }
       ]
     },
@@ -344,9 +444,9 @@
       "year": 2016,
       "url": "https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/learn/",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebFetch)",
-      "excerpt": "Financial Knowledge and Decision-making Skills: The knowledge and skills needed to understand the financial world and make informed financial decisions.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Financial Habits and Norms: The values, standards, routine practices, and rules to live by used to navigate day-to-day financial life.",
       "codebook_names": [
         "Building Blocks to Help Youth Achieve Financial Capability",
         "CFPB Youth Financial Capability Building Blocks"
@@ -354,7 +454,10 @@
       "supports": [
         {
           "code": "Y7.6",
-          "component": "building blocks"
+          "component": "building blocks",
+          "fit": "direct",
+          "excerpt": "Financial Habits and Norms: The values, standards, routine practices, and rules to live by used to navigate day-to-day financial life.",
+          "verifier_note": "The CFPB page names all three building blocks and the report 'Building blocks to help youth achieve financial capability: A new model and recommendations'. The 2016 date comes from the title of the CFPB report PDF ('September 2016'), which I saw in search results but did not fetch."
         }
       ]
     },
@@ -367,14 +470,17 @@
       "year": null,
       "url": "https://www.law.cornell.edu/uscode/text/42/677",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "training and opportunities to practice daily living skills (such as financial literacy training and driving instruction), substance abuse prevention, and preventive health activities",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "training and opportunities to practice daily living skills (such as financial literacy training and driving instruction)",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "Y7.7",
-          "component": "daily living skills"
+          "component": "daily living skills",
+          "fit": "direct",
+          "excerpt": "training and opportunities to practice daily living skills (such as financial literacy training and driving instruction)",
+          "verifier_note": "The phrase is in 677(a)(1), and the section title matches. The statute's examples (financial literacy, driving) are narrower than the code's list, but the component itself matches."
         }
       ]
     },
@@ -389,40 +495,73 @@
       "year": 2009,
       "url": "https://www.doc.ks.gov/juvenile-services/committee/documentation/6-2017/CJCA/view",
       "status": "verified",
-      "verified_by": "cycle-03 independent codebook-citation-verifier (claim W01 in v2/source-verification-2026-09-24.json)",
-      "verified_on": "2026-09-24",
-      "excerpt": "Multiple measures of recidivism – such as re-arrest for a new offense, adjudication and reincarceration for a new offense – make comparisons more meaningful",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "verified_on": "2026-09-27",
+      "excerpt": "Juvenile justice agencies are judged successful or not based on recidivism rates that denote the extent to which youths commit crimes after receiving juvenile justice services.",
       "notes": "Publisher copy at cjja.net is blocked by robots.txt; full text checked on a Kansas Department of Corrections page. OJP/NCJRS record confirms CJCA as corporate author and OJJDP as sponsor only.",
       "supports": [
         {
           "code": "Y8.13",
-          "component": "juvenile justice performance measures"
+          "component": "defining and measuring recidivism",
+          "fit": "partial",
+          "excerpt": "Juvenile justice agencies are judged successful or not based on recidivism rates that denote the extent to which youths commit crimes after receiving juvenile justice services.",
+          "verifier_note": "The title, authors, date and CJCA as publisher all check out. The paper says it was prepared by CJCA 'with support from' OJJDP, so the attribution is correct. The paper is about defining and measuring recidivism, but I could not confirm the phrase 'juvenile justice performance measures' in it. The component would be better worded as recidivism definition and measurement. The copy is the full paper, but it is hosted by the Kansas Department of Corrections, not by CJCA."
+        }
+      ]
+    },
+    {
+      "id": "conley-2007-college-readiness",
+      "cite_as": "Conley, D. T. (2007). Redefining College Readiness. Educational Policy Improvement Center.",
+      "codebook_names": [],
+      "tier": "C",
+      "publisher": "Educational Policy Improvement Center",
+      "year": 2007,
+      "url": "https://files.eric.ed.gov/fulltext/ED539251.pdf",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "information, formal and informal, stated and unstated, necessary for both gaining admission to and navigating within the postsecondary system",
+      "notes": "Added by CP-10-01.",
+      "supports": [
+        {
+          "code": "Y7.2",
+          "component": "contextual skills and awareness: admission and navigating the postsecondary system",
+          "fit": "direct",
+          "excerpt": "information, formal and informal, stated and unstated, necessary for both gaining admission to and navigating within the postsecondary system",
+          "verifier_note": "The document also lists 'curricular, testing, and application requirements' and 'tuition costs and the financial aid system'. Author, EPIC publisher and 2007 are confirmed; it was prepared for the Gates Foundation, which is a funder, not the author."
         }
       ]
     },
     {
       "id": "conley-four-keys",
-      "cite_as": "Conley, D. T. — Four Keys to College and Career Readiness (Key Cognitive Strategies, Key Content Knowledge, Key Learning Skills & Techniques, Key Transition Knowledge & Skills)",
+      "cite_as": "Conley, D. T. (2016). Four Keys to College and Career Readiness. AASA, The School Superintendents Association. (Key Cognitive Strategies, Key Content Knowledge, Key Learning Skills & Techniques, Key Transition Knowledge & Skills)",
       "codebook_names": [
         "Conley"
       ],
       "tier": "C",
       "publisher": "David T. Conley / EPIC",
       "year": null,
-      "url": "https://sbe.wa.gov/sites/default/files/2024-08/ConleyDefiningCollegeCareerReadiness.pdf",
-      "status": "located",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebSearch)",
+      "url": "https://www.aasa.org/resources/resource/four-keys-college-career-readiness",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "supports": [
         {
           "code": "Y1.7",
-          "component": "Key Cognitive Strategies"
+          "component": "Key Cognitive Strategies",
+          "fit": "direct",
+          "excerpt": "Problem formulation, research, interpretation, communication, and precision and accuracy. These are the skills students need as thinkers in college and the workplace.",
+          "verifier_note": "The given URL is a 2011 Educational Policy Improvement Center (EPIC) slide deck hosted by the Washington State Board of Education, and I could not extract the Key Cognitive Strategies text from it. I used Conley's own 2016 article in AASA instead. The year is missing from cite_as; consider adding a year and the specific document."
         },
         {
           "code": "Y7.2",
-          "component": "Key Transition Knowledge & Skills"
+          "component": "Key Transition Knowledge & Skills",
+          "fit": "direct",
+          "excerpt": "The 'college knowledge' students need to select the right college and program of study, apply, obtain financial aid, understand the culture of college, and advocate for themselves and seek help when necessary.",
+          "verifier_note": "The WA Board of Education slide deck also lists 'Postsecondary program selection + Admissions and financial aid requirements + Career pathways'. The component covers the college side of Y7.2 well, but covers the work side (resumes, interviews) only loosely, through 'Career pathways'."
         }
-      ]
+      ],
+      "excerpt": "Problem formulation, research, interpretation, communication, and precision and accuracy. These are the skills students need as thinkers in college and the workplace."
     },
     {
       "id": "crdc-2020-21-student-access",
@@ -435,14 +574,17 @@
       "year": 2024,
       "url": "https://www.ed.gov/sites/ed/files/about/offices/list/ocr/docs/crdc-student-access-enrollment.pdf",
       "status": "verified",
-      "verified_on": "2026-09-26",
-      "verified_by": "codebook research basis review (appendix A, R04)",
-      "excerpt": "Nearly 15,900 public high schools enrolled approximately 1.6 million students in dual enrollment or dual credit programs.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "dual enrollment or dual credit programs, Advanced Placement courses, and the International Baccalaureate Diploma Programme",
       "notes": "Verified in docs/codebook/research-basis.md appendix A (R04).",
       "supports": [
         {
           "code": "Y1.16",
-          "component": "AP and dual enrollment"
+          "component": "AP and dual enrollment",
+          "fit": "partial",
+          "excerpt": "dual enrollment or dual credit programs, Advanced Placement courses, and the International Baccalaureate Diploma Programme",
+          "verifier_note": "The given PDF returned 403 on two tries, so I could not check its contents. The ed.gov landing page confirms that the report exists, that OCR published it, and that it covers AP and dual enrollment. I could not verify the 2024 year, and the full title ends 'in U.S. Public Schools'."
         }
       ]
     },
@@ -455,14 +597,17 @@
       "year": null,
       "url": "https://www.ed.gov/sites/ed/files/about/offices/list/ocr/docs/2021-22-crdc-data-elements.pdf",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "Number of K-12 students without disabilities who received more than one out-of-school suspension",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Students (K-12) who were expelled (with educational services; without educational services; because of zero-tolerance policies)",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "Y1.14",
-          "component": "discipline data elements"
+          "component": "discipline data elements",
+          "fit": "direct",
+          "excerpt": "Students (K-12) who were expelled (with educational services; without educational services; because of zero-tolerance policies)",
+          "verifier_note": "The title, v.1 and the 05/04/2023 date all match. The document contains in-school and out-of-school suspension, expulsion and law-enforcement referral elements, which fit Y1.14. It does not cover 'alternatives that replace them'."
         }
       ]
     },
@@ -475,18 +620,47 @@
       "year": null,
       "url": "https://cssp.org/wp-content/uploads/2025/03/SF_Concrete-Support-in-Times-of-Need.pdf",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "Parents need experiences that enable them to understand their rights in accessing services, gain knowledge of relevant services and learn how to navigate through service systems.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Parents need experiences that enable them to understand their rights in accessing services, gain knowledge of relevant services and learn how to navigate through service systems",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "F1.7",
-          "component": "Concrete Support in Times of Need"
+          "component": "Concrete Support in Times of Need",
+          "fit": "direct",
+          "excerpt": "Parents need experiences that enable them to understand their rights in accessing services, gain knowledge of relevant services and learn how to navigate through service systems",
+          "verifier_note": "This is CSSP's own document. The navigation and rights language fits F1.7 closely."
         },
         {
           "code": "F2.1",
-          "component": "Concrete Support in Times of Need"
+          "component": "Concrete Support in Times of Need",
+          "fit": "partial",
+          "excerpt": "When parents are faced with very trying conditions such as losing a job, home foreclosure, substance abuse, not being able to feed their family or trauma, they need access to concrete support and services that address their needs",
+          "verifier_note": "The factor is about getting concrete support and services in a crisis, not about household income, benefits or financial stability as outcomes. I found no text in the document about income or benefits. The Fit with F2.1 is loose."
+        }
+      ]
+    },
+    {
+      "id": "cssp-sf-yt-research-foundation-2024",
+      "cite_as": "Harper Browne, C. (2024). Expanding the Perspectives and Research Foundation for the Strengthening Families and Youth Thrive Frameworks. Center for the Study of Social Policy.",
+      "codebook_names": [],
+      "tier": "D",
+      "publisher": "Center for the Study of Social Policy",
+      "year": 2024,
+      "url": "https://cssp.org/wp-content/uploads/2025/03/Expanding-Perspectives-and-Research-Foundation-for-the-Strengthening-Families-and-Youth-Thrive-Frameworks.pdf",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Managing stress and functioning well—facilitated by individual, relational, community, or societal factors—when faced with stressors, adversity, or trauma.",
+      "notes": "Added by CP-10-01.",
+      "supports": [
+        {
+          "code": "F1.4",
+          "component": "Parental resilience: managing stress and functioning well",
+          "fit": "partial",
+          "excerpt": "Managing stress and functioning well—facilitated by individual, relational, community, or societal factors—when faced with stressors, adversity, or trauma.",
+          "verifier_note": "The component and CSSP authorship are confirmed, but I could not find a CSSP document titled as a 'Parental Resilience' protective factor brief. The wording also appears in CSSP's 'Core Meanings of the SF Protective Factors' (2015; secondary host: cantasd.acf.hhs.gov): 'Managing stress and functioning well when faced with challenges, adversity and trauma.'"
         }
       ]
     },
@@ -501,21 +675,30 @@
       "year": null,
       "url": "https://cssp.org/project/strengthening-families/",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebFetch)",
-      "excerpt": "Parental resilience; Social connections; Knowledge of parenting and child development; Concrete support in times of need; Social and emotional competence of children",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Strengthening Families is based on engaging families, programs, and communities in building five key Protective Factors. ... Knowledge of parenting and child development",
       "supports": [
         {
           "code": "F1.1",
-          "component": "Knowledge of Parenting and Child Development"
+          "component": "Knowledge of Parenting and Child Development",
+          "fit": "direct",
+          "excerpt": "Strengthening Families is based on engaging families, programs, and communities in building five key Protective Factors. ... Knowledge of parenting and child development",
+          "verifier_note": "The factor name matches exactly. The project page only lists the factors and does not define them."
         },
         {
           "code": "F1.4",
-          "component": "Parental Resilience"
+          "component": "Parental Resilience",
+          "fit": "partial",
+          "excerpt": "Strengthening Families is based on engaging families, programs, and communities in building five key Protective Factors. ... Parental resilience",
+          "verifier_note": "The factor name matches, but the page does not define it, so I could only judge Fit from the two-word name. It likely fits F1.4, but CSSP's definition for this factor should be fetched to confirm it."
         },
         {
           "code": "F1.5",
-          "component": "Social Connections"
+          "component": "Social Connections",
+          "fit": "direct",
+          "excerpt": "Strengthening Families is based on engaging families, programs, and communities in building five key Protective Factors. ... Social connections",
+          "verifier_note": "The factor name matches exactly, and in a parent-focused framework it fits F1.5. The page lists the factor but does not define it."
         }
       ]
     },
@@ -528,15 +711,18 @@
       "tier": "B",
       "publisher": "Computer Science Teachers Association",
       "year": 2017,
-      "url": "https://csteachers.org/k12standards/",
+      "url": "https://csteachers.org/wp-content/uploads/2025/03/csta-k-12-computer-science-standards-revised.pdf",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "cycle-04 (independent codebook-citation-verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "delineate a core set of learning objectives designed to provide the foundation for a complete computer science curriculum and its implementation at the K–12 level.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "delineate a core set of learning objectives designed to provide the foundation for a complete computer science curriculum and its implementation at the K–12 level",
       "supports": [
         {
           "code": "Y1.4",
-          "component": "K-12 Computer Science Standards"
+          "component": "K-12 Computer Science Standards",
+          "fit": "direct",
+          "excerpt": "delineate a core set of learning objectives designed to provide the foundation for a complete computer science curriculum and its implementation at the K–12 level",
+          "verifier_note": "The given URL now shows the newer 2026 CSTA PK–12 standards, so I used the 2017 PDF, which is also on the CSTA site. The standards cover computing systems and algorithms and programming, which fits the computing part of Y1.4."
         }
       ]
     },
@@ -547,16 +733,19 @@
       "tier": null,
       "publisher": null,
       "year": null,
-      "url": "https://uscode.house.gov/view.xhtml?path=%2Fprelim%40title47%2Fchapter16%2Fsubchapter2&edition=prelim",
+      "url": "https://www.law.cornell.edu/uscode/text/47/1721",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "The term 'digital literacy' means the skills associated with using technology to enable users to find, evaluate, organize, create, and communicate information.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "The skills associated with using technology to enable users to find, evaluate, organize, create, and communicate information.",
       "notes": "From v2/v2-candidate-sources.json (v2 status: failed_for_some_codes). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "F1.6",
-          "component": "digital literacy definition, 47 U.S.C. 1721(12)"
+          "component": "digital literacy definition, 47 U.S.C. 1721(12)",
+          "fit": "direct",
+          "excerpt": "The skills associated with using technology to enable users to find, evaluate, organize, create, and communicate information.",
+          "verifier_note": "The given uscode.house.gov URL returned different content (20 USC 7801), so I used the Cornell copy. The definition is at paragraph (12). I did not check the Pub. L. 117-58 div. F title III part of the citation. The definition is not specific to adults; it supports only the digital-skills part of F1.6."
         }
       ]
     },
@@ -569,14 +758,17 @@
       "year": null,
       "url": "https://www.law.cornell.edu/uscode/text/47/1723",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "the availability of, and affordability of access to, fixed and wireless broadband technology ... the availability and affordability of consumer devices and technical support for those devices",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "the availability and affordability of consumer devices and technical support for those devices",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "A2.3",
-          "component": "47 U.S.C. 1723(c)(1)(B)"
+          "component": "47 U.S.C. 1723(c)(1)(B)",
+          "fit": "direct",
+          "excerpt": "the availability and affordability of consumer devices and technical support for those devices",
+          "verifier_note": "This is one of the measurable objectives in 1723(c)(1)(B), next to broadband availability and affordability, and it fits A2.3. I also confirmed that 1721(11) defines 'digital inclusion' (at https://www.law.cornell.edu/uscode/text/47/1721)."
         }
       ]
     },
@@ -591,14 +783,17 @@
       "year": 2022,
       "url": "https://educationtoworkforce.org/indicators/social-capital",
       "status": "verified",
-      "verified_on": "2026-09-25",
-      "verified_by": "codebook-citation-verifier (blind to proposer reasoning; WebFetch), claim V07-1; same excerpt as the 2026-09-24 v2 verification (V38)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "Individuals have access to and are able to mobilize relationships that help them further their goals.",
       "notes": "Added by CP-07-02. Also backs v2 Y2.5 (v2-candidate-sources.json id e2w-framework).",
       "supports": [
         {
           "code": "Y3.5",
-          "component": "social capital"
+          "component": "social capital",
+          "fit": "direct",
+          "excerpt": "Individuals have access to and are able to mobilize relationships that help them further their goals.",
+          "verifier_note": "Mathematica publishes the framework, and the Gates Foundation funded it. The 2022 date is confirmed by the ERIC record ED628916, which I saw in search results but did not open."
         }
       ]
     },
@@ -611,54 +806,73 @@
       "tier": "C",
       "publisher": null,
       "year": null,
-      "url": "https://edpsych.pressbooks.sunycreate.cloud/chapter/expectancy-value-theory/",
-      "status": "located",
+      "url": "https://acmd615.pbworks.com/f/ExpectancyValueTheory.pdf",
+      "status": "verified",
       "notes": "The verifier should pin this to a specific paper, e.g. Wigfield & Eccles (2000), Contemporary Educational Psychology.",
       "cite_as_in_codebook": "Eccles, J. S., & Wigfield, A. — Expectancy-Value Theory (utility value)",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "supports": [
         {
           "code": "Y2.4",
-          "component": "utility value"
+          "component": "utility value",
+          "fit": "partial",
+          "excerpt": "Utility value or usefulness refers to how a task fits into an individual's future plans, for instance, taking a math class to fulfill a requirement for a science degree.",
+          "verifier_note": "The given pressbooks URL is a textbook chapter that cites Wigfield & Eccles 1992/2002, not the 2000 article. The DOI page and ScienceDirect could not be fetched (empty page, then 429). This copy of the 2000 article (CEP 25, 68–81) is on a third-party wiki, not the publisher's site. The definition matches Y2.4."
         }
-      ]
+      ],
+      "excerpt": "Utility value or usefulness refers to how a task fits into an individual's future plans, for instance, taking a math class to fulfill a requirement for a science degree."
     },
     {
       "id": "epstein-six-types",
-      "cite_as": "Epstein, J. L. et al. — Framework of Six Types of Involvement (1 Parenting, 2 Communicating, 3 Volunteering, 4 Learning at Home, 5 Decision Making, 6 Collaborating with the Community)",
+      "cite_as": "Epstein, J. L. et al. Framework of Six Types of Involvement (1 Parenting, 2 Communicating, 3 Volunteering, 4 Learning at Home, 5 Decision Making, 6 Collaborating with the Community), as presented in National Network of Partnership Schools (2019), Promising Partnership Practices, Johns Hopkins University.",
       "codebook_names": [
         "Epstein"
       ],
       "tier": "C",
       "publisher": "Johns Hopkins University / National Network of Partnership Schools",
       "year": null,
-      "url": "https://organizingengagement.org/models/framework-of-six-types-of-involvement/",
-      "status": "located",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebFetch, secondary source)",
-      "excerpt": "Type 4 (Learning at Home): help students at home with homework and other curriculum-related activities, decisions, and planning. Type 5 (Decision Making): include parents in school decisions ... develop parent leaders and representatives.",
+      "url": "https://nnps.jhucsos.com/wp-content/uploads/2019/10/PPP-2019-Final-Book-web.pdf",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Assist families in understanding child and adolescent development and in setting home conditions that support children as students at each grade level.",
       "notes": "Verified from a secondary summary only, so the status stays 'located' until the primary source (Epstein et al., School, Family, and Community Partnerships: Your Handbook for Action) is checked. Current codebook mapping errors: 3.5 cites Type 4 (Learning at Home belongs to 12.4); the Domain 11 header cites Types 3/6, but 11.4's own example (Parent Advisory Council) is Type 5. See CP-01-03.",
       "supports": [
         {
           "code": "F1.1",
-          "component": "Type 1 Parenting"
+          "component": "Type 1 Parenting",
+          "fit": "direct",
+          "excerpt": "Assist families in understanding child and adolescent development and in setting home conditions that support children as students at each grade level.",
+          "verifier_note": "The given URL (organizingengagement.org) now serves unrelated online-casino content, so it must not be used. Type 1 was verified in the 2019 NNPS/Johns Hopkins compilation that Epstein co-edited. The type is worded as a school practice (assisting families), but it clearly fits caregiver child-development knowledge."
         },
         {
           "code": "F1.2",
-          "component": "Type 4 Learning at Home"
+          "component": "Type 4 Learning at Home",
+          "fit": "direct",
+          "excerpt": "Involve families with their children in learning at home, including homework, other curriculum-related activities, and individual course and program decisions.",
+          "verifier_note": "The given URL is compromised (casino spam), so replace it. Type 4 fits home learning practices. Routines are not named explicitly, but homework and learning at home are."
         },
         {
           "code": "F1.8",
-          "component": "Type 2 Communicating"
+          "component": "Type 2 Communicating",
+          "fit": "partial",
+          "excerpt": "Communicate with families about school programs and student progress through effective school-to-home and home-to-school communications.",
+          "verifier_note": "The given URL is compromised. Type 2 covers two-way communication only. The code's 'relationship with and trust in the program' goes beyond anything Type 2 says."
         },
         {
           "code": "F1.9",
-          "component": "Types 3 Volunteering and 5 Decision Making"
+          "component": "Types 3 Volunteering and 5 Decision Making",
+          "fit": "direct",
+          "excerpt": "Improve recruitment, training, and schedules to involve families as volunteers and audiences at the school and in other locations. ... Include families as participants in school decisions, governance, and advocacy through PTA/PTO, school councils, committees, action teams.",
+          "verifier_note": "The given URL is compromised. Types 3 and 5 match attending, volunteering and taking part in decisions."
         },
         {
           "code": "A2.6",
-          "component": "Types 3 and 6"
+          "component": "Types 3 and 6",
+          "fit": "partial",
+          "excerpt": "Improve recruitment, training, and schedules to involve families as volunteers and audiences at the school and in other locations.",
+          "verifier_note": "The given URL is compromised. Type 3 fits organizational systems for engaging families. Type 6 ('Coordinate community resources and services for students, families, and the school with businesses, agencies, and other groups') is about community collaboration, not family-engagement systems. The whole framework describes school practices, so choosing only Types 3 and 6 fits loosely."
         }
       ]
     },
@@ -671,14 +885,17 @@
       "year": null,
       "url": "https://www.law.cornell.edu/uscode/text/20/7119",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "(2) building technological capacity and infrastructure, which may include—(A) procuring content and ensuring content quality; and (B) purchasing devices, equipment, and software applications in order to address readiness shortfalls",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "(2) building technological capacity and infrastructure, which may include— (A) procuring content and ensuring content quality; and (B) purchasing devices, equipment, and software applications in order to address readiness shortfalls;",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "A2.3",
-          "component": "20 U.S.C. 7119(a)(2)"
+          "component": "20 U.S.C. 7119(a)(2)",
+          "fit": "partial",
+          "excerpt": "(2) building technological capacity and infrastructure, which may include— (A) procuring content and ensuring content quality; and (B) purchasing devices, equipment, and software applications in order to address readiness shortfalls;",
+          "verifier_note": "The text matches the claim and fits A2.3 (devices, equipment). It was verified only on Cornell LII, a non-government reproduction. Two tries on uscode.house.gov returned the wrong section (7801), so re-check on a government copy before upgrading to SUPPORTED."
         }
       ]
     },
@@ -693,21 +910,53 @@
       "year": 2015,
       "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section6311&num=0&edition=prelim",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "cycle-04 (independent codebook-citation-verifier agent, blind to proposer reasoning; WebFetch)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "The State shall have such academic standards for mathematics, reading or language arts, and science, and may have such standards for any other subject determined by the State.",
       "supports": [
         {
           "code": "Y1.1",
-          "component": "reading or language arts"
+          "component": "reading or language arts",
+          "fit": "direct",
+          "excerpt": "The State shall have such academic standards for mathematics, reading or language arts, and science, and may have such standards for any other subject determined by the State.",
+          "verifier_note": "The standards requirement names reading or language arts, which fits literacy (reading and writing)."
         },
         {
           "code": "Y1.3",
-          "component": "mathematics"
+          "component": "mathematics",
+          "fit": "direct",
+          "excerpt": "The State shall have such academic standards for mathematics, reading or language arts, and science, and may have such standards for any other subject determined by the State.",
+          "verifier_note": "Mathematics is named explicitly and fits the code."
         },
         {
           "code": "Y1.4",
-          "component": "science"
+          "component": "science",
+          "fit": "partial",
+          "excerpt": "The State shall have such academic standards for mathematics, reading or language arts, and science, and may have such standards for any other subject determined by the State.",
+          "verifier_note": "The statute names only 'science' (and science assessments in (b)(2)(B)(v)(II)). It does not cover the code's engineering, computing and coding, or digital-literacy scope."
+        }
+      ]
+    },
+    {
+      "id": "essa-6311-c4-elp",
+      "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 6311(c)(4)(B)(iv): progress in achieving English language proficiency.",
+      "codebook_names": [],
+      "tier": "A",
+      "publisher": "U.S. Congress",
+      "year": 2015,
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section6311&num=0&edition=prelim",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "For public schools in the State, progress in achieving English language proficiency, as defined by the State and measured by the assessments described in subsection (b)(2)(G), within a State-determined timeline for all English learners",
+      "notes": "Added by CP-10-01.",
+      "supports": [
+        {
+          "code": "Y1.2",
+          "component": "progress in achieving English language proficiency",
+          "fit": "direct",
+          "excerpt": "For public schools in the State, progress in achieving English language proficiency, as defined by the State and measured by the assessments described in subsection (b)(2)(G), within a State-determined timeline for all English learners",
+          "verifier_note": "Clause designation (c)(4)(B)(iv) confirmed. The indicator covers only English proficiency growth, not the home-language maintenance half of the Y1.2 definition."
         }
       ]
     },
@@ -722,13 +971,16 @@
       "year": 2015,
       "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section7801&num=0&edition=prelim",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "cycle-04 (independent codebook-citation-verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "courses, activities, and programming in subjects such as ... foreign languages, civics and government, economics, arts, history, geography, ... career and technical education, health, physical education, and any other subject, as determined by the State or local educational agency",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "courses, activities, and programming in subjects such as English, reading or language arts, writing, science, technology, engineering, mathematics, foreign languages, civics and government, economics, arts, history, geography",
       "supports": [
         {
           "code": "Y1.5",
-          "component": "well-rounded education subjects"
+          "component": "well-rounded education subjects",
+          "fit": "direct",
+          "excerpt": "courses, activities, and programming in subjects such as English, reading or language arts, writing, science, technology, engineering, mathematics, foreign languages, civics and government, economics, arts, history, geography",
+          "verifier_note": "The definition names history, geography, economics, foreign languages and civics, which matches the code's 'other academic subjects'. The list is broad and also includes arts, CTE and health, which other codes cover."
         }
       ]
     },
@@ -743,22 +995,25 @@
       "publisher": "U.S. Congress",
       "year": 2015,
       "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section6311&num=0&edition=prelim",
-      "status": "located",
+      "status": "verified",
       "notes": "1.2 and 1.3 currently have no per-subcategory citation line in definitionsText, only the Domain 1 header. Mapped here so coverage is visible. 2026-09-24 (CP-04-01/02): 1.2 and 1.3 now cite 6311(b)(1)(C) and 7801(52) respectively; the 1.3 UNSUPPORTED row is kept as the record of cycle-01b's finding.",
       "cite_as_in_codebook": "Every Student Succeeds Act (2015) — statewide accountability indicators (academic achievement; graduation rate; English learner progress)",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "as measured by proficiency on the annual assessments required under subsection (b)(2)(B)(v)(I) ... in the case of mathematics and reading or language arts",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "the four-year adjusted cohort graduation rate; and at the State's discretion, the extended-year adjusted cohort graduation rate.",
       "supports": [
         {
           "code": "Y1.17",
-          "component": "four-year adjusted cohort graduation rate"
+          "component": "four-year adjusted cohort graduation rate",
+          "fit": "partial",
+          "excerpt": "the four-year adjusted cohort graduation rate; and at the State's discretion, the extended-year adjusted cohort graduation rate.",
+          "verifier_note": "The graduation-rate indicator in (c)(4)(B)(iii) exists and fits graduating. It does not cover the code's GED/equivalency or re-enrollment elements, so fit is narrower than the code."
         }
       ]
     },
     {
       "id": "farrington-2012",
-      "cite_as": "Farrington, C. A., et al. (2012). Teaching Adolescents to Become Learners: The Role of Noncognitive Factors in Shaping School Performance. UChicago Consortium on Chicago School Research.",
+      "cite_as": "Farrington, C. A., Roderick, M., Allensworth, E., Nagaoka, J., Keyes, T. S., Johnson, D. W., & Beechum, N. O. (2012). Teaching Adolescents to Become Learners: The Role of Noncognitive Factors in Shaping School Performance: A Critical Literature Review. UChicago Consortium on Chicago School Research.",
       "codebook_names": [
         "Academic Mindsets and Behaviors"
       ],
@@ -767,26 +1022,38 @@
       "year": 2012,
       "url": "https://files.eric.ed.gov/fulltext/ED542543.pdf",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebFetch of consortium summary; PDF located)",
-      "excerpt": "Academic behaviors; Academic perseverance; Academic mindsets; Learning strategies; Social skills ... I belong in this academic community. My ability and competence grow with my effort. I can succeed at this. This work has value for me.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Academic Behaviors are those behaviors commonly associated with being a 'good student.' These include regularly attending class, arriving ready to work (with necessary supplies and materials), paying attention, participating in instructional activities and class discussions",
       "notes": "The codebook calls this UChicago 'Academic Mindsets and Behaviors'. The precise title is above. Its 'My ability and competence grow with my effort' mindset means academic growth mindset belongs in 5.4, not 4.1.4. See CF-005.",
       "supports": [
         {
           "code": "Y1.9",
-          "component": "Academic Behaviors"
+          "component": "Academic Behaviors",
+          "fit": "direct",
+          "excerpt": "Academic Behaviors are those behaviors commonly associated with being a 'good student.' These include regularly attending class, arriving ready to work (with necessary supplies and materials), paying attention, participating in instructional activities and class discussions",
+          "verifier_note": "Verified on p. 8. The title is missing the subtitle 'A Critical Literature Review'."
         },
         {
           "code": "Y1.10",
-          "component": "Academic Perseverance"
+          "component": "Academic Perseverance",
+          "fit": "direct",
+          "excerpt": "Academic perseverance refers to a student's tendency to complete school assignments in a timely and thorough manner, to the best of one's ability, despite distractions, obstacles, or level of challenge.",
+          "verifier_note": "Verified on p. 9. The source is about adolescents, so the code's 'task persistence in young children' goes beyond it."
         },
         {
           "code": "Y1.11",
-          "component": "Learning Strategies"
+          "component": "Learning Strategies",
+          "fit": "direct",
+          "excerpt": "Learning Strategies are processes and tactics one employs to aid in the cognitive work of thinking, remembering, or learning.",
+          "verifier_note": "Verified on p. 10. The component fits the code."
         },
         {
           "code": "Y1.12",
-          "component": "Academic Mindsets"
+          "component": "Academic Mindsets",
+          "fit": "direct",
+          "excerpt": "Academic Mindsets are the psycho-social attitudes or beliefs one has about oneself in relation to academic work.",
+          "verifier_note": "Verified on p. 9. The report's mindsets include belonging, growth beliefs and self-efficacy, which fits the code."
         }
       ]
     },
@@ -799,14 +1066,47 @@
       "year": null,
       "url": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-54/subpart-Q",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "Wi-Fi hotspots; Modems; Routers; Devices that combine a modem and a router; and Connected devices. ... The full name of the person to whom the device or other piece of equipment was provided",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "The device or equipment type (i.e. laptop, tablet, mobile hotspot, modem, router); The device or equipment make/model; The device or equipment serial number",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "A2.3",
-          "component": "Emergency Connectivity Fund equipment"
+          "component": "Emergency Connectivity Fund equipment",
+          "fit": "direct",
+          "excerpt": "The device or equipment type (i.e. laptop, tablet, mobile hotspot, modem, router); The device or equipment make/model; The device or equipment serial number",
+          "verifier_note": "54.1715 is titled 'Records retention', not an inventory section, but it requires asset and service inventories of devices provided. 54.1702 and 54.1706 are verified. Fits the code's providing devices and connectivity."
+        }
+      ]
+    },
+    {
+      "id": "guskey-2002-pd-evaluation",
+      "cite_as": "Guskey, T. R. (2002). Does it make a difference? Evaluating professional development. Educational Leadership, 59(6), 45-51.",
+      "codebook_names": [],
+      "tier": "C",
+      "publisher": "ASCD",
+      "year": 2002,
+      "url": "https://www.ascd.org/el/articles/does-it-make-a-difference-evaluating-professional-development",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Level 2: Participants' Learning ... In addition to liking their professional development experience, we also hope that participants learn something from it.",
+      "notes": "Added by CP-10-01.",
+      "supports": [
+        {
+          "code": "A1.1",
+          "component": "Level 2: participants' learning",
+          "fit": "direct",
+          "excerpt": "Level 2: Participants' Learning ... In addition to liking their professional development experience, we also hope that participants learn something from it.",
+          "verifier_note": "The ERIC record EJ640979 confirms the title, author, journal, volume, issue, pages and year. The ASCD full text gives Level 2 as measuring 'New knowledge and skills of participants'. The participants are educators, which fits A1.1 (staff knowledge and skills)."
+        },
+        {
+          "code": "A1.2",
+          "component": "Level 4: participants' use of new knowledge and skills",
+          "fit": "direct",
+          "excerpt": "At Level 4 we ask, Did the new knowledge and skills that participants learned make a difference in their professional practice?",
+          "verifier_note": "The heading reads 'Level 4: Participants' Use of New Knowledge and Skills', and it measures the 'Degree and quality of implementation'. That is practice change, which fits A1.2. Guskey's level says nothing specific about trauma-informed care; it is general practice change."
         }
       ]
     },
@@ -819,16 +1119,20 @@
       "tier": "A",
       "publisher": "U.S. DHHS, Administration for Children and Families, Office of Head Start",
       "year": 2015,
-      "url": "https://headstart.gov/school-readiness/article/head-start-early-learning-outcomes-framework",
-      "status": "located",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (official page confirms 'five broad areas ... central domains'; names confirmed only via secondary uw.pressbooks.pub)",
+      "url": "https://headstart.gov/interactive-head-start-early-learning-outcomes-framework-ages-birth-five",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "supports": [
         {
           "code": "Y1.8",
-          "component": "Language & Literacy and Cognition"
+          "component": "Language & Literacy and Cognition",
+          "fit": "direct",
+          "excerpt": "Approaches to Learning, Social and Emotional Development, Language and Literacy, Cognition, Perceptual, Motor, and Physical Development",
+          "verifier_note": "The domains were verified on the headstart.gov interactive ELOF (the given article URL does not list them). Neither headstart.gov page states the 2015 year; only secondary titles confirm it."
         }
-      ]
+      ],
+      "excerpt": "Approaches to Learning, Social and Emotional Development, Language and Literacy, Cognition, Perceptual, Motor, and Physical Development"
     },
     {
       "id": "hidi-renninger-2006",
@@ -840,20 +1144,26 @@
       "tier": "C",
       "publisher": "Educational Psychologist",
       "year": 2006,
-      "url": "https://eric.ed.gov/?id=EJ736298",
+      "url": "https://works.swarthmore.edu/fac-education/12/",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebFetch)",
-      "excerpt": "triggered situational interest, maintained situational interest, emerging (less-developed) individual interest, and well-developed individual interest",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "The model describes 4 phases in the development and deepening of learner interest: triggered situational interest, maintained situational interest, emerging (less-developed) individual interest, and well-developed individual interest.",
       "notes": "The codebook also cites 'Hidi & Renninger (Phase 3/4)' for 2.3 Utility Value. Phases 3 and 4 are about individual interest, not utility value, so that citation is misapplied (CP-01-04).",
       "supports": [
         {
           "code": "Y2.2",
-          "component": "Phase 1: triggered situational interest"
+          "component": "Phase 1: triggered situational interest",
+          "fit": "partial",
+          "excerpt": "The model describes 4 phases in the development and deepening of learner interest: triggered situational interest, maintained situational interest, emerging (less-developed) individual interest, and well-developed individual interest.",
+          "verifier_note": "The citation details and component match and fit the code. However, ERIC EJ736298 returned an unrelated record (ED578886) when fetched, and the T&F DOI page returned 403. So only the Swarthmore institutional repository copy was checked."
         },
         {
           "code": "Y2.3",
-          "component": "Phases 2-4: maintained situational, emerging and well-developed individual interest"
+          "component": "Phases 2-4: maintained situational, emerging and well-developed individual interest",
+          "fit": "partial",
+          "excerpt": "The model describes 4 phases in the development and deepening of learner interest: triggered situational interest, maintained situational interest, emerging (less-developed) individual interest, and well-developed individual interest.",
+          "verifier_note": "Phases 2-4 are verified and fit sustained or individual interest. This rests only on a secondary (institutional repository) copy, because the ERIC and DOI fetches failed."
         }
       ]
     },
@@ -866,14 +1176,17 @@
       "year": null,
       "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/adolescents/increase-proportion-adolescents-who-had-preventive-health-care-visit-past-year-ah-01",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "Increase the proportion of adolescents who had a preventive health care visit in the past year — AH‑01",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Increase the proportion of adolescents who had a preventive health care visit in the past year — AH‑01 | Increase the proportion of people with health insurance",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "Y8.5",
-          "component": "AH-01 preventive visit; AHS-01 health insurance"
+          "component": "AH-01 preventive visit; AHS-01 health insurance",
+          "fit": "direct",
+          "excerpt": "Increase the proportion of adolescents who had a preventive health care visit in the past year — AH‑01 | Increase the proportion of people with health insurance",
+          "verifier_note": "Both objectives were verified on odphp.health.gov. AHS-01 is at https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/health-care-access-and-quality/increase-proportion-people-health-insurance-ahs-01 and applies to all people, not just adolescents."
         }
       ]
     },
@@ -886,14 +1199,17 @@
       "year": null,
       "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/infants/increase-proportion-infants-who-are-put-sleep-their-backs-mich-14",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "Increase the proportion of infants who are put to sleep on their backs — MICH‑14",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "F1.3",
-          "component": "MICH-14"
+          "component": "MICH-14",
+          "fit": "direct",
+          "excerpt": "Increase the proportion of infants who are put to sleep on their backs — MICH‑14",
+          "verifier_note": "The ODPHP page matches the ID and title. Safe sleep position is a caregiver practice, so it fits F1.3."
         }
       ]
     },
@@ -906,14 +1222,17 @@
       "year": null,
       "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/infants/increase-proportion-infants-who-are-breastfed-exclusively-through-age-6-months-mich-15",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "Increase the proportion of infants who are breastfed exclusively through age 6 months — MICH‑15",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "F1.3",
-          "component": "MICH-15"
+          "component": "MICH-15",
+          "fit": "direct",
+          "excerpt": "Increase the proportion of infants who are breastfed exclusively through age 6 months — MICH‑15",
+          "verifier_note": "The ID and title match. Breastfeeding is named directly in the F1.3 definition."
         }
       ]
     },
@@ -926,14 +1245,63 @@
       "year": null,
       "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/sleep/increase-proportion-high-school-students-who-get-enough-sleep-sh-04",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "Increase the proportion of high school students who get enough sleep — SH‑04",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "Y8.1",
-          "component": "SH-04 sleep"
+          "component": "SH-04 sleep",
+          "fit": "direct",
+          "excerpt": "Increase the proportion of high school students who get enough sleep — SH‑04",
+          "verifier_note": "The ID and title match. Sleep is named in the Y8.1 definition."
+        }
+      ]
+    },
+    {
+      "id": "hp2030-su05",
+      "cite_as": "Healthy People 2030, objective SU-05: Reduce the proportion of adolescents who used drugs in the past month. U.S. DHHS, ODPHP.",
+      "codebook_names": [],
+      "tier": "A",
+      "publisher": "U.S. DHHS, Office of Disease Prevention and Health Promotion",
+      "year": null,
+      "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/drug-and-alcohol-use/reduce-proportion-adolescents-who-used-drugs-past-month-su-05",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Reduce the proportion of adolescents reporting use of any illicit drugs during the past 30 days",
+      "notes": "Added by CP-10-01.",
+      "supports": [
+        {
+          "code": "Y8.11",
+          "component": "adolescent past-month illicit drug use",
+          "fit": "direct",
+          "excerpt": "Reduce the proportion of adolescents reporting use of any illicit drugs during the past 30 days",
+          "verifier_note": "The objective ID, title and ODPHP/HHS authorship all match. The population is ages 12-17 and the data come from SAMHSA's NSDUH. It covers illicit drugs only, not alcohol or tobacco, which fits the drug part of Y8.11."
+        }
+      ]
+    },
+    {
+      "id": "hulleman-2010-utility-value",
+      "cite_as": "Hulleman, C. S., Godes, O., Hendricks, B. L., & Harackiewicz, J. M. (2010). Enhancing interest and performance with a utility value intervention. Journal of Educational Psychology, 102(4), 880-895.",
+      "codebook_names": [],
+      "tier": "C",
+      "publisher": "American Psychological Association",
+      "year": 2010,
+      "url": "https://eric.ed.gov/?id=EJ910428",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "participants were asked to explain how the material they were learning (math or psychology) was relevant to their lives (or not). ... The intervention increased perceptions of utility value and interest",
+      "notes": "Added by CP-10-01.",
+      "supports": [
+        {
+          "code": "Y2.4",
+          "component": "perceived utility value of what is learned",
+          "fit": "direct",
+          "excerpt": "participants were asked to explain how the material they were learning (math or psychology) was relevant to their lives (or not). ... The intervention increased perceptions of utility value and interest",
+          "verifier_note": "Authors, journal, year, volume and pages match the ERIC record. Excerpt taken from the ERIC abstract."
         }
       ]
     },
@@ -946,14 +1314,17 @@
       "year": null,
       "url": "https://www.law.cornell.edu/uscode/text/20/1471",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "assist parents and students with disabilities to understand their rights and responsibilities under this chapter ... assist parents to understand the availability of, and how to effectively use, procedural safeguards",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "assist parents and students with disabilities to understand their rights and responsibilities under this chapter",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "F1.7",
-          "component": "Parent Training and Information Centers"
+          "component": "Parent Training and Information Centers",
+          "fit": "direct",
+          "excerpt": "assist parents and students with disabilities to understand their rights and responsibilities under this chapter",
+          "verifier_note": "20 U.S.C. 1471 is headed Parent training and information centers, and subsection (b) lists the required activities, including rights knowledge and procedural safeguards. That fits F1.7. The Cornell LII copy is a secondary host of the U.S. Code, but it reproduces the statute's own text."
         }
       ]
     },
@@ -964,16 +1335,19 @@
       "tier": "C",
       "publisher": null,
       "year": null,
-      "url": "https://journals.sagepub.com/doi/abs/10.1177/10983007040060030201",
+      "url": "https://journals.sagepub.com/doi/10.1177/10983007040060030201",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "Office discipline referrals (ODRs) are widely used by school personnel to evaluate student behavior and the behavioral climate of schools.",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "Y1.14",
-          "component": "office discipline referrals"
+          "component": "office discipline referrals",
+          "fit": "direct",
+          "excerpt": "Office discipline referrals (ODRs) are widely used by school personnel to evaluate student behavior and the behavioral climate of schools.",
+          "verifier_note": "Authors, journal, 6(3), 131-147 and the 2004 date all match. The article is a validity review of ODRs as a measure, and it names ODRs directly, which is one of the Y1.14 indicators."
         }
       ]
     },
@@ -986,15 +1360,18 @@
       "tier": "B",
       "publisher": "International Society for Technology in Education",
       "year": 2016,
-      "url": "https://cdn.iste.org/www-root/PDF/advocacy-pages/Making%20the%20Case%20for%20the%20ISTE%20Standards.pdf",
+      "url": "https://cdn.iste.org/www-root/Libraries/Images/Standards/Download/ISTE%20Standards%20for%20Students%20(Permitted%20Educational%20Use).pdf",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "Students recognize the rights, responsibilities and opportunities of living, learning and working in an interconnected digital world, and they act and model in ways that are safe, legal and ethical.",
       "supports": [
         {
           "code": "Y6.7",
-          "component": "Standard 2: Digital Citizen"
+          "component": "Standard 2: Digital Citizen",
+          "fit": "direct",
+          "excerpt": "Students recognize the rights, responsibilities and opportunities of living, learning and working in an interconnected digital world, and they act and model in ways that are safe, legal and ethical.",
+          "verifier_note": "The given URL is ISTE's 'Making the Case' advocacy PDF. It quotes the standard, but it is not the standards document, so I checked ISTE's own 2016 standards PDF (copyright 2016). The caller should replace the URL with this one."
         }
       ]
     },
@@ -1006,16 +1383,19 @@
       "year": 2021,
       "url": "https://www.councilforeconed.org/wp-content/uploads/2021/10/2021-National-Standards-for-Personal-Financial-Education.pdf",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebFetch)",
-      "excerpt": "Earning Income; Spending; Saving; Investing; Managing Credit; Managing Risk",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "National Standards for Personal Financial Education",
       "codebook_names": [
         "National Standards for Personal Financial Education"
       ],
       "supports": [
         {
           "code": "Y7.6",
-          "component": "National Standards for Personal Financial Education"
+          "component": "National Standards for Personal Financial Education",
+          "fit": "direct",
+          "excerpt": "National Standards for Personal Financial Education",
+          "verifier_note": "The 2021 document is jointly by the Council for Economic Education and the Jump$tart Coalition, and it lists the six topic standards named in the cite. They fit Y7.6. The excerpt is only the title; the topic list was confirmed only through the fetch tool's summary."
         }
       ]
     },
@@ -1028,14 +1408,17 @@
       "year": null,
       "url": "https://ssir.org/articles/entry/collective_impact",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "Our research shows that successful collective impact initiatives typically have five conditions that together produce true alignment and lead to powerful results:",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Agreement on a common agenda is illusory without agreement on the ways success will be measured and reported.",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "A3.2",
-          "component": "Collective Impact"
+          "component": "Collective Impact",
+          "fit": "direct",
+          "excerpt": "Agreement on a common agenda is illusory without agreement on the ways success will be measured and reported.",
+          "verifier_note": "SSIR, Winter 2011, by Kania and Kramer. It names common agenda, shared measurement and mutually reinforcing activities, which match the A3.2 definition."
         }
       ]
     },
@@ -1052,17 +1435,23 @@
       "status": "verified",
       "notes": "Only the illness continuum is used. The positive-mental-health (flourishing) continuum has no dedicated code; see the backlog in cycle-01.",
       "cite_as_in_codebook": "Keyes, C. L. M. — Dual Continua Model of Mental Health and Mental Illness",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "The two continua model of mental illness and health holds that both are related, but distinct dimensions",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "one continuum indicates the presence or absence of mental health, the other the presence or absence of mental illness.",
       "supports": [
         {
           "code": "Y8.6",
-          "component": "mental illness continuum"
+          "component": "mental illness continuum",
+          "fit": "direct",
+          "excerpt": "one continuum indicates the presence or absence of mental health, the other the presence or absence of mental illness.",
+          "verifier_note": "The mental illness continuum is measured as psychopathological symptoms such as depression and anxiety, which fits Y8.6. PMC shows 2009, the online-first date; the print citation is 17(2), 110-119, 2010, so the cite is fine. The sample is adults, but the construct still fits."
         },
         {
           "code": "Y8.7",
-          "component": "mental health continuum (flourishing)"
+          "component": "mental health continuum (flourishing)",
+          "fit": "direct",
+          "excerpt": "three core components of positive mental health: feelings of happiness and satisfaction with life (emotional well-being), positive individual functioning in terms of self-realization (psychological well-being)",
+          "verifier_note": "The article defines positive mental health, including life satisfaction, and gives a flourishing diagnosis rule. That fits Y8.7."
         }
       ]
     },
@@ -1077,13 +1466,16 @@
       "year": null,
       "url": "https://www.splcenter.org/learning-for-justice/frameworks/social-justice-standards/",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "Students will express pride, confidence and healthy self-esteem without denying the value and dignity of other people.",
       "supports": [
         {
           "code": "Y5.2",
-          "component": "Identity standards"
+          "component": "Identity standards",
+          "fit": "direct",
+          "excerpt": "Students will express pride, confidence and healthy self-esteem without denying the value and dignity of other people.",
+          "verifier_note": "Identity anchor standards ID.1-ID.5 are present. ID.1 reads 'develop positive social identities based on their membership in multiple groups', which fits Y5.2. Learning for Justice is an SPLC project and the page is now hosted on splcenter.org."
         }
       ]
     },
@@ -1097,19 +1489,26 @@
       "publisher": "Learning Forward",
       "year": 2022,
       "url": "https://standards.learningforward.org/standards-for-professional-learning/",
-      "status": "located",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebSearch)",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "supports": [
         {
           "code": "A1.1",
-          "component": "Standards for Professional Learning"
+          "component": "Standards for Professional Learning",
+          "fit": "partial",
+          "excerpt": "significant changes in their knowledge, skills, practices, and mindsets",
+          "verifier_note": "The source exists and is Learning Forward's. But the Standards set quality criteria for how professional learning is designed. They do not describe staff knowledge and skill as an outcome, so the fit to A1.1 is indirect. I could not confirm the 2022 release year on the pages I fetched: page metadata shows 2021-09-02 and 2022-03-07. The excerpt came through the fetch tool's summary."
         },
         {
           "code": "A1.2",
-          "component": "Standards for Professional Learning (implementation)"
+          "component": "Standards for Professional Learning (implementation)",
+          "fit": "partial",
+          "excerpt": "understand and apply research on change management, engage in feedback processes, and implement and sustain professional learning",
+          "verifier_note": "The Implementation standard exists, but it is about implementing and sustaining professional learning, not about adults applying new practices. That is looser than A1.2. The year is unconfirmed, as in #0."
         }
-      ]
+      ],
+      "excerpt": "significant changes in their knowledge, skills, practices, and mindsets"
     },
     {
       "id": "mapp-kuttner-2013",
@@ -1120,22 +1519,31 @@
       "year": null,
       "url": "https://files.eric.ed.gov/fulltext/ED593896.pdf",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "Families have enhanced knowledge and understanding of educational policies and programs, such as those associated with special needs and Title I.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "No meaningful family engagement can be established until relationships of trust and respect are established between home and school.",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "F1.7",
-          "component": "family capacities"
+          "component": "family capacities",
+          "fit": "partial",
+          "excerpt": "Staff and families need access to social capital through strong, cross-cultural networks built on trust and respect.",
+          "verifier_note": "The source and attribution are correct. The 4 C's are shared by staff and families (capabilities, connections, cognition, confidence) and are broader than rights knowledge and system navigation. Only 'connections' relates loosely to F1.7."
         },
         {
           "code": "F1.8",
-          "component": "family-school partnership"
+          "component": "family-school partnership",
+          "fit": "direct",
+          "excerpt": "No meaningful family engagement can be established until relationships of trust and respect are established between home and school.",
+          "verifier_note": "Home-school trust and relationship are central to the framework and fit F1.8. The excerpt came through the fetch tool's summary of the PDF, so check the exact wording before it goes in."
         },
         {
           "code": "A2.6",
-          "component": "organizational capacity"
+          "component": "organizational capacity",
+          "fit": "direct",
+          "excerpt": "Capacity-building efforts are embedded into structures and processes such as training and professional development",
+          "verifier_note": "The organizational conditions (systemic, integrated, sustained) describe the organization's systems for family engagement, which fits A2.6. The excerpt came through the fetch tool's summary, so check the exact wording."
         }
       ]
     },
@@ -1149,18 +1557,24 @@
       "publisher": "U.S. Congress",
       "year": null,
       "url": "https://www.law.cornell.edu/uscode/text/42/11432",
-      "status": "located",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "presume that keeping the child or youth in the school of origin is in the child's or youth's best interest",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "continue the child's or youth's education in the school of origin for the duration of homelessness",
       "supports": [
         {
           "code": "Y1.13",
-          "component": "school stability"
+          "component": "school stability",
+          "fit": "direct",
+          "excerpt": "continue the child's or youth's education in the school of origin for the duration of homelessness",
+          "verifier_note": "42 U.S.C. 11432 is in Subtitle VII-B. It requires school-of-origin stability and immediate enrollment, which fits Y1.13. The phrase 'school stability' itself was not quoted."
         },
         {
           "code": "F2.3",
-          "component": "homelessness definitions"
+          "component": "definition of homeless children and youths, 42 U.S.C. 11434a",
+          "fit": "partial",
+          "excerpt": "means individuals who lack a fixed, regular, and adequate nighttime residence",
+          "verifier_note": "The definition is in 11434a, not in the given URL (11432), which only cross-references it. The subtitle defines homelessness for education eligibility and does not frame housing stability as an outcome, so the fit to F2.3 is loose. The section 725 number in corrected_cite_as is from memory and was not in the fetched text; confirm it before use."
         }
       ]
     },
@@ -1173,14 +1587,17 @@
       "year": null,
       "url": "https://mchb.hrsa.gov/sites/default/files/mchb/programs-impact/performance-indicators-sys-outcomes-summary.pdf",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "Percent of infants enrolled in home visiting that are always placed to sleep on their backs, without bed-sharing and without soft bedding",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "F1.3",
-          "component": "performance measures"
+          "component": "performance measures",
+          "fit": "direct",
+          "excerpt": "Percent of infants enrolled in home visiting that are always placed to sleep on their backs, without bed-sharing and without soft bedding",
+          "verifier_note": "This is an HRSA/MCHB document that reflects the October 2021 revision. It includes safe sleep, breastfeeding and well-child visit measures, which match F1.3."
         }
       ]
     },
@@ -1195,22 +1612,31 @@
       "year": 2023,
       "url": "https://www.hillpedagogies.com/",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebFetch)",
-      "excerpt": "Identity – teaching and learning the multiple and diverse identities of students ... Criticality – teaching students how to name, understand, question, and disrupt injustice ... Joy – teaching, uplifting, and recognition of beauty, aesthetics, truth",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "This involves teaching and learning the multiple and diverse identities of students and others, such as culture, race, gender, and more.",
       "notes": "The codebook currently calls this 'Gholdy Muhammad's Hill Model'. 'HILL' is the acronym of her organization (Histories, Identities, Literacies and Liberation). The framework is the HRL / Five Pursuits framework. See the linked misattribution entry and CP-01-01.",
       "supports": [
         {
           "code": "Y2.1",
-          "component": "Pursuit 5: Joy"
+          "component": "Pursuit 5: Joy",
+          "fit": "partial",
+          "excerpt": "This involves the teaching, uplifting, and recognition of beauty, aesthetics, truth, benefits, and personal fulfillment within humanity and the world.",
+          "verifier_note": "The Joy pursuit exists and is Muhammad's. It is a pedagogical aim (beauty, aesthetics, truth, fulfillment; elsewhere 'wellness, beauty, healing, and justice'), not the same as enjoying a program, so Fit is loose. The site does not name the 'Culturally and Historically Responsive Literacy' framework or give the book years (2020/2023), so those were not verified."
         },
         {
           "code": "Y5.2",
-          "component": "Pursuit 1: Identity"
+          "component": "Pursuit 1: Identity",
+          "fit": "direct",
+          "excerpt": "This involves teaching and learning the multiple and diverse identities of students and others, such as culture, race, gender, and more.",
+          "verifier_note": "The Identity pursuit covers cultural, racial and gender identities, which fits Y5.2. The page says 'Historically Responsive Literacy' and 'culturally and historically responsive practices'. It never uses the exact label in cite_as, and the book years were not verified on the page."
         },
         {
           "code": "Y6.3",
-          "component": "Pursuit 4: Criticality"
+          "component": "Pursuit 4: Criticality",
+          "fit": "direct",
+          "excerpt": "advance students' consciousness and social awareness by teaching students how to name, understand, question, and disrupt injustice, hurt, harm or pain within humanity and the world.",
+          "verifier_note": "The Criticality pursuit fits critical consciousness and acting against injustice closely. The same caveat on the framework label and book years applies."
         }
       ]
     },
@@ -1223,14 +1649,17 @@
       "year": null,
       "url": "https://eepro.naaee.org/sites/default/files/eepro-post-files/k-12_ee.executive_summary_2019_0.pdf",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "Environmentally literate community members are willing and able to act on their own conclusions about what should be done to ensure environmental quality, social equity, and economic prosperity.",
       "notes": "From v2/v2-candidate-sources.json (v2 status: partial). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "Y6.6",
-          "component": "Personal and Civic Responsibility"
+          "component": "Personal and Civic Responsibility",
+          "fit": "direct",
+          "excerpt": "Environmentally literate community members are willing and able to act on their own conclusions about what should be done to ensure environmental quality, social equity, and economic prosperity.",
+          "verifier_note": "This is Strand 4 of NAAEE's 2019 guidelines. The source checked was the executive summary, not the full guidelines."
         }
       ]
     },
@@ -1245,13 +1674,16 @@
       "year": 2002,
       "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap76-subchapIII-sec9622.htm",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "cycle-04 (independent codebook-citation-verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "conduct additional national assessments ... in additional subject matter, including writing, science, history, geography, civics, economics, foreign languages, and arts, and the trend assessment",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "in additional subject matter, including writing, science, history, geography, civics, economics, foreign languages, and arts",
       "supports": [
         {
           "code": "Y1.5",
-          "component": "additional subject matter"
+          "component": "additional subject matter",
+          "fit": "direct",
+          "excerpt": "in additional subject matter, including writing, science, history, geography, civics, economics, foreign languages, and arts",
+          "verifier_note": "The statute lists subjects beyond reading and math, which matches Y1.5. Some listed subjects (writing, science, arts) belong to other codes."
         }
       ]
     },
@@ -1266,30 +1698,45 @@
       "year": 2015,
       "url": "https://consortium.uchicago.edu/sites/default/files/2023-06/FYAS%20Executive%20Summary-Jun2015-Consortium.pdf",
       "status": "verified",
-      "verified_on": "2026-09-26",
-      "verified_by": "Y3/Y5 re-review (codebook-citation-verifier)",
-      "excerpt": "the ability to make choices about and take an active role in one's life path, rather than solely being the product of one's circumstances",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "a sense of internal consistency of who one is across time and across multiple social identities (e.g., race/ethnicity, profession, culture, gender, religion)",
       "notes": "Integrated identity: 'a sense of internal consistency of who one is across time and across multiple social identities (e.g., race/ethnicity, profession, culture, gender, religion)'. Mindsets: 'beliefs and attitudes about oneself, the external world, and the interaction between the two.' The report does not name growth mindset and does not support sense of purpose (N04 unsupported).",
       "supports": [
         {
           "code": "Y5.1",
-          "component": "Key outcome: integrated identity"
+          "component": "Key outcome: integrated identity",
+          "fit": "direct",
+          "excerpt": "a sense of internal consistency of who one is across time and across multiple social identities (e.g., race/ethnicity, profession, culture, gender, religion)",
+          "verifier_note": "Integrated identity is a key outcome and fits understanding who one is and how one changes. The source checked was the executive summary."
         },
         {
           "code": "Y5.2",
-          "component": "Integrated identity across social identities (race/ethnicity, culture)"
+          "component": "Integrated identity across social identities (race/ethnicity, culture)",
+          "fit": "partial",
+          "excerpt": "a sense of internal consistency of who one is across time and across multiple social identities (e.g., race/ethnicity, profession, culture, gender, religion)",
+          "verifier_note": "Social identities appear only as examples inside integrated identity, which is about consistency across identities. The component is broader than, and not the same as, the pride and acceptance in Y5.2."
         },
         {
           "code": "Y5.3",
-          "component": "Integrated identity across social identities, including profession"
+          "component": "Integrated identity across social identities, including profession",
+          "fit": "partial",
+          "excerpt": "a sense of internal consistency of who one is across time and across multiple social identities (e.g., race/ethnicity, profession, culture, gender, religion)",
+          "verifier_note": "'Profession' appears only as a parenthetical example, so the support for domain identity (STEM person, artist, reader) is thin and indirect."
         },
         {
           "code": "Y5.4",
-          "component": "Foundational component: mindsets"
+          "component": "Foundational component: mindsets",
+          "fit": "partial",
+          "excerpt": "beliefs and attitudes about oneself, the external world, and the interaction between the two",
+          "verifier_note": "Mindsets is a foundational component, but its definition is much broader than self-efficacy, growth mindset and self-esteem. The summary definition does not name those constructs."
         },
         {
           "code": "Y5.6",
-          "component": "Key outcome: agency"
+          "component": "Key outcome: agency",
+          "fit": "direct",
+          "excerpt": "the ability to make choices about and take an active role in one's life path, rather than solely being the product of one's circumstances",
+          "verifier_note": "Agency is a key outcome and matches Y5.6's causal-agent definition. Self-advocacy is not named explicitly."
         }
       ]
     },
@@ -1302,14 +1749,17 @@
       "year": null,
       "url": "https://namle.org/resources/core-principles/",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "NAMLE views media literacy—the ability to access, analyze, evaluate, create, and act using all forms of communication—as an essential 21st-century literacy.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "the ability to access, analyze, evaluate, create, and act using all forms of communication",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "Y1.7",
-          "component": "definition of media literacy"
+          "component": "definition of media literacy",
+          "fit": "direct",
+          "excerpt": "the ability to access, analyze, evaluate, create, and act using all forms of communication",
+          "verifier_note": "NAMLE's definition supports the media-literacy and analysis/evaluation part of Y1.7. It does not cover general research or inquiry skills."
         }
       ]
     },
@@ -1324,17 +1774,23 @@
       "year": 2014,
       "url": "https://www.nationalartsstandards.org/",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "Creating: Conceiving and developing new artistic ideas and work.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Dance • Media Arts • Music • Theatre and Visual Arts",
       "supports": [
         {
           "code": "Y1.6",
-          "component": "standards for dance, media arts, music, theatre and visual arts"
+          "component": "standards for dance, media arts, music, theatre and visual arts",
+          "fit": "direct",
+          "excerpt": "Dance • Media Arts • Music • Theatre and Visual Arts",
+          "verifier_note": "The disciplines match Y1.6 exactly. The 2014 date was confirmed only by a secondary source (Maine DOE, 18 June 2014: 'NCCAS has released the final version of its voluntary national standards'). The publisher is the National Coalition for Core Arts Standards (NCCAS)."
         },
         {
           "code": "Y2.5",
-          "component": "artistic processes: Creating; Performing/Presenting/Producing; Responding"
+          "component": "artistic processes: Creating; Performing/Presenting/Producing; Responding",
+          "fit": "direct",
+          "excerpt": "Creating – Conceiving and developing new artistic ideas and work ... Responding – Understanding and evaluating how the arts convey meaning",
+          "verifier_note": "The artistic processes Creating, Performing/Presenting/Producing and Responding are all on the site and fit Y2.5. The excerpt joins two process definitions with an ellipsis. The 2014 date was confirmed only by a secondary source."
         }
       ]
     },
@@ -1348,17 +1804,21 @@
       "publisher": "NICHD",
       "year": 2000,
       "url": "https://www.nichd.nih.gov/publications/pubs/nrp/findings",
-      "status": "located",
+      "status": "verified",
       "cite_as_in_codebook": "National Reading Panel (2000). Teaching Children to Read (five components: phonemic awareness, phonics, fluency, vocabulary, comprehension).",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "notes": "Pending: status located (PARTIAL); fetch the NICHD report itself to verify.",
       "supports": [
         {
           "code": "Y1.1",
-          "component": "alphabetics, fluency, comprehension"
+          "component": "alphabetics, fluency, comprehension",
+          "fit": "partial",
+          "excerpt": "Phonemic Awareness Instruction ... Phonics Instruction ... Guided Oral Reading ... Vocabulary Instruction ... Text Comprehension Instruction",
+          "verifier_note": "Alphabetics, fluency and comprehension are the NRP topic areas, and the year 2000 is confirmed on the NICHD product page. The excerpt is a set of headings joined by ellipses, not a sentence. The NRP does not cover writing, which is half of Y1.1."
         }
-      ]
+      ],
+      "excerpt": "Phonemic Awareness Instruction ... Phonics Instruction ... Guided Oral Reading ... Vocabulary Instruction ... Text Comprehension Instruction"
     },
     {
       "id": "ncss-c3-2013",
@@ -1369,14 +1829,17 @@
       "year": null,
       "url": "https://www.socialstudies.org/sites/default/files/c3/c3-framework-for-social-studies-rev0617.pdf",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "IN A CONSTITUTIONAL DEMOCRACY, productive civic engagement requires knowledge of the history, principles, and foundations of our American democracy, and the ability to participate in civic and democratic processes.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "In order to act responsibly and effectively, citizens must understand the important institutions of their society and the principles that these institutions are intended to reflect.",
       "notes": "From v2/v2-candidate-sources.json (v2 status: partial). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "Y6.2",
-          "component": "Dimension 2: Civics"
+          "component": "Dimension 2: Civics",
+          "fit": "direct",
+          "excerpt": "In order to act responsibly and effectively, citizens must understand the important institutions of their society and the principles that these institutions are intended to reflect.",
+          "verifier_note": "Dimension 2 is titled 'Applying Disciplinary Concepts and Tools', and Civics is one of its disciplines, so 'Dimension 2: Civics' is acceptable shorthand. The 2013 date comes from the NCSS C3 page (Bulletin 113, 2013); the fetched PDF is a 2017 revision."
         }
       ]
     },
@@ -1390,16 +1853,20 @@
       "publisher": "NCTSN",
       "year": null,
       "url": "https://www.nctsn.org/sites/default/files/resources/fact-sheet/12CoreConcepts-bulletedlist%20(2).pdf",
-      "status": "located",
+      "status": "verified",
       "cite_as_in_codebook": "National Child Traumatic Stress Network — Core Curriculum on Childhood Trauma",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "supports": [
         {
           "code": "Y8.8",
-          "component": "12 Core Concepts"
+          "component": "12 Core Concepts",
+          "fit": "partial",
+          "excerpt": "can enhance children's ability to resist, or to quickly recover from (by resiliently 'bouncing back'), the harmful effects of trauma, loss, and other adversities.",
+          "verifier_note": "The source and its authors and year check out. The 12 Core Concepts are a framework for understanding traumatic stress responses, not an outcome framework. Only some concepts (safety, protective factors, recovery) touch on healing, so the component is broader than Y8.8."
         }
-      ]
+      ],
+      "excerpt": "can enhance children's ability to resist, or to quickly recover from (by resiliently 'bouncing back'), the harmful effects of trauma, loss, and other adversities."
     },
     {
       "id": "ngss-three-dimensions",
@@ -1410,14 +1877,17 @@
       "year": null,
       "url": "https://www.nextgenscience.org/glossary/three-dimensions",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "The three dimensions are the Disciplinary Core Ideas (DCIs), Crosscutting Concepts (CCCs), and Science and Engineering Practices.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "The three dimensions are the Disciplinary Core Ideas (DCIs), Crosscutting Concepts (CCCs), and Science and Engineering Practices (\"the Practices\" or SEPs).",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "Y1.4",
-          "component": "three dimensions"
+          "component": "three dimensions",
+          "fit": "direct",
+          "excerpt": "The three dimensions are the Disciplinary Core Ideas (DCIs), Crosscutting Concepts (CCCs), and Science and Engineering Practices (\"the Practices\" or SEPs).",
+          "verifier_note": "The authors, publisher and year (NGSS Lead States, National Academies Press, 2013) were confirmed on the nationalacademies.org/publications/18290 page. NGSS covers science and engineering but not computing, coding or digital literacy."
         }
       ]
     },
@@ -1430,14 +1900,17 @@
       "year": null,
       "url": "https://stacks.cdc.gov/view/cdc/105035",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "The questionnaire comprises the five domains of worker well-being ... (1) work evaluation and experience; (2) workplace policies and culture; (3) workplace physical environment and safety climate; (4) health status; and (5) home, community, and society.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "(1) work evaluation and experience; (2) workplace policies and culture; (3) workplace physical environment and safety climate; (4) health status; and (5) home, community, and society.",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "A1.3",
-          "component": "WellBQ"
+          "component": "WellBQ",
+          "fit": "partial",
+          "excerpt": "(1) work evaluation and experience; (2) workplace policies and culture; (3) workplace physical environment and safety climate; (4) health status; and (5) home, community, and society.",
+          "verifier_note": "The publication, year and number (DHHS (NIOSH) Publication No. 2021-110) are confirmed. The listed authors are Chang, C. et al. at NIOSH. WellBQ supports only the staff well-being half of A1.3 and does not cover retention or turnover."
         }
       ]
     },
@@ -1452,33 +1925,39 @@
       "year": null,
       "url": "https://nscresearchcenter.org/high-school-benchmarks/",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "enrollment, first-year persistence, and eventual completion of a postsecondary credential",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "postsecondary enrollment, persistence, and completion outcomes",
       "supports": [
         {
           "code": "Y1.18",
-          "component": "postsecondary enrollment, persistence and completion"
+          "component": "postsecondary enrollment, persistence and completion",
+          "fit": "direct",
+          "excerpt": "postsecondary enrollment, persistence, and completion outcomes",
+          "verifier_note": "The wording matches Y1.18 directly. No problems found."
         }
       ]
     },
     {
       "id": "nses-2020",
-      "cite_as": "Future of Sex Education Initiative / Advocates for Youth (2020). National Sex Education Standards, 2nd ed.",
+      "cite_as": "Future of Sex Education Initiative (2020). National Sex Education Standards: Core Content and Skills, K-12 (2nd ed.).",
       "codebook_names": [],
       "tier": null,
       "publisher": null,
       "year": null,
       "url": "https://www.advocatesforyouth.org/wp-content/uploads/2020/03/NSES-2020-web.pdf",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "Sexual Health (SH). Outlines the functional knowledge and essentials skills students need to understand STDs and HIV, including how they are prevented and transmitted",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "provide clear, consistent, and straightforward guidance on the essential, minimum, core content and skills needed for sex education that is age-appropriate for students in grades K–12.",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "Y8.4",
-          "component": "National Sex Education Standards"
+          "component": "National Sex Education Standards",
+          "fit": "direct",
+          "excerpt": "provide clear, consistent, and straightforward guidance on the essential, minimum, core content and skills needed for sex education that is age-appropriate for students in grades K–12.",
+          "verifier_note": "The document names the Future of Sex Education Initiative as author. Advocates for Youth hosts the file and is an FoSE partner, not the sole publisher. The topics include Sexual Health and Consent and Healthy Relationships, which fit Y8.4."
         }
       ]
     },
@@ -1490,14 +1969,17 @@
       "year": null,
       "url": "https://octae.ed.gov/cte/initiatives/employability-skills-framework",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebFetch; resource-management sub-skills from lincs.ed.gov overview PDF)",
-      "excerpt": "Applied Knowledge ... Effective Relationships ... Workplace Skills ... Resource management skills ... 'Manages time' 'Manages money' 'Manages materials' 'Manages personnel'",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Workplace skills are the abilities employees need to successfully accomplish work tasks.",
       "notes": "Proposed as the primary citation for 9.5 (CP-01-08), replacing the looser 'Perkins V / Soft Skills'.",
       "supports": [
         {
           "code": "Y7.3",
-          "component": "Employability Skills Framework"
+          "component": "Employability Skills Framework",
+          "fit": "direct",
+          "excerpt": "Workplace skills are the abilities employees need to successfully accomplish work tasks.",
+          "verifier_note": "The OCTAE page says the U.S. Department of Education compiled the framework. It names all three categories: Applied Knowledge, Effective Relationships and Workplace Skills. It fits Y7.3."
         }
       ]
     },
@@ -1512,38 +1994,23 @@
       "year": 2018,
       "url": "https://www.law.cornell.edu/uscode/text/20/2302",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
-      "excerpt": "provides access for students (and, as appropriate, parents and out-of-school youth) to information regarding career awareness exploration opportunities and planning",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "may include career exploration at the high school level or as early as the middle grades",
       "supports": [
         {
           "code": "Y7.1",
-          "component": "career exploration"
+          "component": "career exploration",
+          "fit": "partial",
+          "excerpt": "may include career exploration at the high school level or as early as the middle grades",
+          "verifier_note": "The component is present in the definition of career and technical education, and it fits Y7.1. The verdict is PARTIAL only because Cornell LII is not a government host; the uscode.house.gov lookup kept resolving to 20 USC 7801. The codified text is the Perkins CTE Act of 2006 as amended by Pub. L. 115-224 (Perkins V, 2018)."
         },
         {
           "code": "Y7.4",
-          "component": "technical skills and work-based learning"
-        }
-      ]
-    },
-    {
-      "id": "samhsa-spf",
-      "cite_as": "SAMHSA (2019). A Guide to SAMHSA's Strategic Prevention Framework (PEP19-01).",
-      "codebook_names": [
-        "SAMHSA Strategic Prevention Framework"
-      ],
-      "tier": "A",
-      "publisher": "SAMHSA",
-      "year": null,
-      "url": "https://www.iowacebh.org/wp-content/uploads/2025/07/strategic-prevention-framework-pep19-01.pdf",
-      "status": "located",
-      "cite_as_in_codebook": "SAMHSA Strategic Prevention Framework",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
-      "supports": [
-        {
-          "code": "Y8.11",
-          "component": "Strategic Prevention Framework"
+          "component": "technical skills and work-based learning",
+          "fit": "partial",
+          "excerpt": "include competency-based, work-based, or other applied learning that supports the development of academic knowledge, higher-order reasoning and problem-solving skills, work attitudes, employability skills, technical skills, and occupation-specific skills",
+          "verifier_note": "The component is present, and the statute also names a recognized postsecondary credential and defines work-based learning. It fits Y7.4. The verdict is PARTIAL only because Cornell LII is not a government host."
         }
       ]
     },
@@ -1556,16 +2023,20 @@
       "tier": "A",
       "publisher": "Substance Abuse and Mental Health Services Administration",
       "year": 2014,
-      "url": "https://library.samhsa.gov/product/samhsas-concept-trauma-and-guidance-trauma-informed-approach/sma14-4884",
-      "status": "located",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebSearch)",
+      "url": "https://www.nctsn.org/sites/default/files/resources/resource-guide/samhsa_trauma.pdf",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "supports": [
         {
           "code": "A1.2",
-          "component": "trauma-informed approach"
+          "component": "trauma-informed approach",
+          "fit": "partial",
+          "excerpt": "responds by fully integrating knowledge about trauma into policies, procedures, and practices, and seeks to actively resist re-traumatization",
+          "verifier_note": "The SAMHSA Library page returned 403. I read the full SAMHSA document (SMA 14-4884, 2014) from the NCTSN copy. Title, attribution and the component are correct and fit A1.2. The verdict is PARTIAL only because of the host."
         }
-      ]
+      ],
+      "excerpt": "responds by fully integrating knowledge about trauma into policies, procedures, and practices, and seeks to actively resist re-traumatization"
     },
     {
       "id": "sampson-1997",
@@ -1576,14 +2047,17 @@
       "year": null,
       "url": "https://faculty.washington.edu/matsueda/courses/517/Readings/Sampson%201997%20Science.pdf",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "collective efficacy, defined as social cohesion among neighbors combined with their willingness to intervene on behalf of the common good",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "social cohesion among neighbors combined with their willingness to intervene on behalf of the common good",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "A3.3",
-          "component": "collective efficacy"
+          "component": "collective efficacy",
+          "fit": "partial",
+          "excerpt": "social cohesion among neighbors combined with their willingness to intervene on behalf of the common good",
+          "verifier_note": "The citation details are correct: Science 277, 918-924. The component matches A3.3 closely. The DOI landing page (science.org) returned 403, so I read the article from a university course-reading copy. The verdict is PARTIAL only because of that host."
         }
       ]
     },
@@ -1599,38 +2073,59 @@
       "year": null,
       "url": "https://searchinstitute.org/resources-hub/developmental-assets-framework",
       "status": "verified",
-      "verified_on": "2026-09-26",
-      "verified_by": "Y3/Y5 re-review (codebook-citation-verifier)",
-      "excerpt": "37. Personal power ... Young person feels he or she has control over 'things that happen to me.' ... 39. Sense of purpose ... Young person reports that 'my life has purpose.'",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Young person spends three or more hours per week in sports, clubs, or organizations at school and/or in the community.",
       "notes": "Content verified for Support (1 Family support, 2 Positive family communication) and Positive Identity (37-40). The 2006 date could not be confirmed, so it is cited without a year. Other asset categories (Empowerment/Safety, Positive Values, Constructive Use of Time) carry the live registry's 'located' status and were not re-checked; see those supports' components.",
       "supports": [
         {
           "code": "Y2.6",
-          "component": "Constructive Use of Time (live registry status: located)"
+          "component": "Constructive Use of Time (live registry status: located)",
+          "fit": "direct",
+          "excerpt": "Young person spends three or more hours per week in sports, clubs, or organizations at school and/or in the community.",
+          "verifier_note": "Constructive Use of Time is an external asset category, and its assets fit Y2.6. The page heading is 'Developmental Assets Framework', but the page does mention ages 12-18 and adolescents."
         },
         {
           "code": "Y3.4",
-          "component": "Support: 1 Family support; 2 Positive family communication"
+          "component": "Support: 1 Family support; 2 Positive family communication",
+          "fit": "direct",
+          "excerpt": "Young person and her or his parent(s) communicate positively, and young person is willing to seek advice and counsel from parent(s).",
+          "verifier_note": "Family support and Positive family communication are listed under Support, and they fit Y3.4."
         },
         {
           "code": "Y5.4",
-          "component": "Positive Identity: 38 Self-esteem"
+          "component": "Positive Identity: 38 Self-esteem",
+          "fit": "direct",
+          "excerpt": "Young person reports having a high self-esteem.",
+          "verifier_note": "Self-esteem is listed under Positive Identity and fits Y5.4."
         },
         {
           "code": "Y5.5",
-          "component": "Positive Identity: 39 Sense of purpose; 40 Positive view of personal future"
+          "component": "Positive Identity: 39 Sense of purpose; 40 Positive view of personal future",
+          "fit": "direct",
+          "excerpt": "Young person is optimistic about her or his personal future.",
+          "verifier_note": "Sense of purpose ('my life has purpose') and Positive view of personal future are both under Positive Identity. They fit Y5.5."
         },
         {
           "code": "Y5.6",
-          "component": "Positive Identity: 37 Personal power"
+          "component": "Positive Identity: 37 Personal power",
+          "fit": "partial",
+          "excerpt": "Young person feels he or she has control over 'things that happen to me.'",
+          "verifier_note": "Personal power exists under Positive Identity. It is a perceived-control belief. It does not cover the making of choices, self-advocacy or directing one's own supports that Y5.6 defines, so the fit is looser than claimed."
         },
         {
           "code": "Y6.1",
-          "component": "Positive Values (live registry status: located)"
+          "component": "Positive Values (live registry status: located)",
+          "fit": "direct",
+          "excerpt": "Young person accepts and takes personal responsibility.",
+          "verifier_note": "The Positive Values category holds Caring, Equality and social justice, Integrity, Honesty, Responsibility and Restraint. It fits Y6.1."
         },
         {
           "code": "Y8.10",
-          "component": "Empowerment: Safety (live registry status: located)"
+          "component": "Empowerment: Safety (live registry status: located)",
+          "fit": "direct",
+          "excerpt": "Young person feels safe at home, at school, and in the neighborhood.",
+          "verifier_note": "A page-order listing puts Safety under Empowerment, with Community values youth, Youth as resources and Service to others. An earlier extraction placed it under Boundaries and Expectations, but the page-order listing is more reliable. It fits Y8.10."
         }
       ]
     },
@@ -1645,22 +2140,31 @@
       "year": null,
       "url": "https://searchinstitute.org/resources-hub/developmental-relationships-framework",
       "status": "verified",
-      "verified_on": "2026-09-26",
-      "verified_by": "Y3/Y5 re-review (codebook-citation-verifier)",
-      "excerpt": "When they have high-quality, positive relationships with parents, teachers, mentors, coaches, and peers, they are more likely to develop resilience",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Express Care: Show me that I matter to you. Be dependable—Be someone I can trust.",
       "notes": "Covers relationships with parents and family (S02) and with peers (S03: 'a close connection between a young person and an adult or between a young person and a peer', Search Institute research update, 2014).",
       "supports": [
         {
           "code": "Y3.2",
-          "component": "Express Care; Challenge Growth; Provide Support"
+          "component": "Express Care; Challenge Growth; Provide Support",
+          "fit": "direct",
+          "excerpt": "Express Care: Show me that I matter to you. Be dependable—Be someone I can trust.",
+          "verifier_note": "The page has all five elements, including Challenge Growth and Provide Support. It names teachers, mentors and coaches, and it fits Y3.2."
         },
         {
           "code": "Y3.3",
-          "component": "relationships between young people and peers"
+          "component": "relationships between young people and peers",
+          "fit": "partial",
+          "excerpt": "When they have high-quality, positive relationships with parents, teachers, mentors, coaches, and peers, they are more likely to develop resilience in the face of obstacles, grow, learn, and develop social-emotional skills.",
+          "verifier_note": "The page mentions peers only once, in a list of relationship partners. The framework's elements are written mostly about adults and youth, so the support for friendship and peer acceptance is loose."
         },
         {
           "code": "Y3.4",
-          "component": "relationships with parents and family"
+          "component": "relationships with parents and family",
+          "fit": "partial",
+          "excerpt": "When young people experience these relationships in their families, schools, programs, and communities, they are more likely to be resilient in the face of challenges and grow up thriving.",
+          "verifier_note": "This page names families and parents only as settings where these relationships happen. It has no family-specific component. A separate Search Institute family publication might support this better, but I did not check one."
         }
       ]
     },
@@ -1673,14 +2177,17 @@
       "year": null,
       "url": "https://shapeamerica.org/standards/health/new-he-standards/",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "Use functional health information to support health and well-being of self and others.",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "Y8.3",
-          "component": "Standard 1"
+          "component": "Standard 1",
+          "fit": "direct",
+          "excerpt": "Use functional health information to support health and well-being of self and others.",
+          "verifier_note": "This is Standard 1 of the 8 new National Health Education Standards on SHAPE America's page. It fits the health-information core of Y8.3. First aid and safety skills are not named in Standard 1 itself. The page metadata shows a 2026 date, but the 2024 release year looks right."
         }
       ]
     },
@@ -1693,14 +2200,17 @@
       "year": null,
       "url": "https://shapeamerica.org/standards/pe/new-pe-standards/",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "Develops a variety of motor skills.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Standard 1 – Develops a variety of motor skills.",
       "notes": "From v2/v2-candidate-sources.json (v2 status: failed_for_some_codes). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "Y8.2",
-          "component": "Standard 1: motor skills"
+          "component": "Standard 1: motor skills",
+          "fit": "direct",
+          "excerpt": "Standard 1 – Develops a variety of motor skills.",
+          "verifier_note": "The wording matches the claim exactly, and it fits Y8.2."
         }
       ]
     },
@@ -1713,14 +2223,17 @@
       "year": null,
       "url": "https://www.hhs.gov/sites/default/files/workplace-mental-health-well-being.pdf",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "Centered around the foundational principles of equity and the voices of all workers, it includes five Essentials and necessary components for addressing workplace mental health and well-being based on human needs.",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "when the mental health of workers suffers, so does workplace productivity, creativity, and retention",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "A1.3",
-          "component": "workplace well-being framework"
+          "component": "workplace well-being framework",
+          "fit": "direct",
+          "excerpt": "when the mental health of workers suffers, so does workplace productivity, creativity, and retention",
+          "verifier_note": "HHS hosts the 2022 Office of the Surgeon General framework, which has five essentials. It covers both worker well-being and retention, so it fits A1.3."
         }
       ]
     },
@@ -1733,15 +2246,18 @@
       "tier": "A",
       "publisher": "USDA ERS",
       "year": null,
-      "url": "https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-us/measurement",
+      "url": "https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-us/survey-tools",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "Food security for a household means access by all members at all times to enough food for an active, healthy life.",
       "supports": [
         {
           "code": "F2.2",
-          "component": "Household Food Security Survey Module"
+          "component": "Household Food Security Survey Module",
+          "fit": "direct",
+          "excerpt": "Food security for a household means access by all members at all times to enough food for an active, healthy life.",
+          "verifier_note": "The excerpt comes from the ERS measurement page (the given URL), which only calls it the 'household food security survey module'. The survey-tools page gives the exact name 'U.S. Household Food Security Survey Module' and says 'The 18-item module is a three-stage design with screeners.' The module measures having enough food, not access to healthy food specifically."
         }
       ]
     },
@@ -1754,35 +2270,41 @@
       "year": null,
       "url": "https://fyi.extension.wisc.edu/programdevelopment/files/2020/05/LogicModel2020-graphic-2.pdf",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "Awareness, Knowledge, Attitudes, Skills, Opinions, Aspirations, Motivations ... Behavior, Practice, Decisionmaking, Policies, Social action ... Social, Economic, Civic, Environmental",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Outputs ... Activities ... Conduct workshops, meetings / Deliver services ... Participation ... Who we reach / Participants / Clients / Agencies / Decisionmakers / Customers",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "A2.5",
-          "component": "Outputs"
+          "component": "Outputs",
+          "fit": "direct",
+          "excerpt": "Outputs ... Activities ... Conduct workshops, meetings / Deliver services ... Participation ... Who we reach / Participants / Clients / Agencies / Decisionmakers / Customers",
+          "verifier_note": "The PDF from UW-Madison Division of Extension has an Outputs column covering activities and participation, which fits A2.5. The excerpt is headings and list items from a graphic; the '...' marks omitted items. The year 2020 comes only from the file name and URL path, not from the document text."
         }
       ]
     },
     {
       "id": "weiss-little-bouffard-2005",
-      "cite_as": "Weiss, H. B., Little, P. M. D., & Bouffard, S. M. (2005). More than just being there: Balancing the participation equation. New Directions for Youth Development, 105. (Harvard Family Research Project)",
+      "cite_as": "Weiss, H. B., Little, P. M. D., & Bouffard, S. M. (2005). More than just being there: Balancing the participation equation. New Directions for Youth Development, 105, 15-31.",
       "codebook_names": [
         "Harvard Family Research Project"
       ],
       "tier": "C",
       "publisher": "Wiley / Harvard Family Research Project",
       "year": 2005,
-      "url": "https://onlinelibrary.wiley.com/doi/10.1002/yd.105",
+      "url": "https://eric.ed.gov/?id=EJ790687",
       "status": "located",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebSearch)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "notes": "A specific, citable version of the codebook's 'Harvard Family Research Project OST participation dimensions'.",
       "supports": [
         {
           "code": "A2.5",
-          "component": "participation measures"
+          "component": "participation measures",
+          "fit": "partial",
+          "excerpt": "participation is conceived as a three-part construct of enrollment, attendance, and engagement. The participation equation (participation = enrollment + attendance + engagement)",
+          "verifier_note": "The Wiley DOI page returned 403, so this was checked against the ERIC record's abstract only (not the full text). The phrase 'participation measures' does not appear. The source frames participation as enrollment, attendance and engagement, and engagement is not a program-level count or dosage. Harvard Family Research Project developed the model, but it is not the publisher."
         }
       ]
     },
@@ -1796,16 +2318,20 @@
       "publisher": "WIDA, University of Wisconsin–Madison",
       "year": 2020,
       "url": "https://wida.wisc.edu/sites/default/files/Website/Teach/ELDstandards/AppendixE-Standards-Edition-Comparision.pdf",
-      "status": "located",
+      "status": "verified",
       "cite_as_in_codebook": "WIDA English Language Development Standards Framework (2020 Edition)",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01b (independent verifier agent, blind to proposer reasoning; WebFetch)",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "supports": [
         {
           "code": "Y1.2",
-          "component": "English Language Development Standards Framework"
+          "component": "English Language Development Standards Framework",
+          "fit": "direct",
+          "excerpt": "Interpretive (Listening, Reading, Viewing) and Expressive (Speaking, Writing, Representing) Modes of Communication",
+          "verifier_note": "The URL is WIDA's Appendix E ('High-Level Comparison of WIDA Standards Editions From 2004 to 2020'), not the main framework text. It names the 2020 Edition and its modes as cited, which fits the English-proficiency part of Y1.2. Nothing checked here supports the home-language part of the code."
         }
-      ]
+      ],
+      "excerpt": "Interpretive (Listening, Reading, Viewing) and Expressive (Speaking, Writing, Representing) Modes of Communication"
     },
     {
       "id": "wioa-20cfr677155",
@@ -1818,17 +2344,46 @@
       "year": null,
       "url": "https://www.ecfr.gov/current/title-20/chapter-V/part-677/subpart-A/section-677.155",
       "status": "verified",
-      "verified_on": "2026-09-23",
-      "verified_by": "cycle-01 (WebFetch)",
-      "excerpt": "Percentage of participants who are in education or training activities, or in unsubsidized employment, during the second quarter after exit from the program ... Median earnings of participants who are in unsubsidized employment",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "The percentage of those participants enrolled in an education or training program (excluding those in OJT and customized training) who obtained a recognized postsecondary credential or a secondary school diploma, or its recognized equivalent",
       "supports": [
         {
           "code": "Y7.4",
-          "component": "credential attainment"
+          "component": "credential attainment",
+          "fit": "direct",
+          "excerpt": "The percentage of those participants enrolled in an education or training program (excluding those in OJT and customized training) who obtained a recognized postsecondary credential or a secondary school diploma, or its recognized equivalent",
+          "verifier_note": "The eCFR text contains the credential attainment indicator. It fits Y7.4's recognized credentials, but the indicator also counts secondary school diplomas, which this code does not cover."
         },
         {
           "code": "Y7.5",
-          "component": "employment and median earnings indicators"
+          "component": "employment and median earnings indicators",
+          "fit": "direct",
+          "excerpt": "Median earnings of participants who are in unsubsidized employment during the second quarter after exit from the program",
+          "verifier_note": "The eCFR text contains the median earnings indicator. For youth, the second- and fourth-quarter indicators are 'in education or training activities, or in unsubsidized employment', which matches Y7.5's combined 'employed or in education' indicators."
+        }
+      ]
+    },
+    {
+      "id": "wioa-20cfr681460",
+      "cite_as": "WIOA youth program elements, 20 CFR 681.460(a)(1)-(2): dropout prevention and recovery leading to a secondary school diploma or its recognized equivalent.",
+      "codebook_names": [],
+      "tier": "A",
+      "publisher": "U.S. Department of Labor",
+      "year": null,
+      "url": "https://www.ecfr.gov/current/title-20/chapter-V/part-681/subpart-C/section-681.460",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "evidence-based dropout prevention and recovery strategies that lead to completion of the requirements for a secondary school diploma or its recognized equivalent ... (2) Alternative secondary school services, or dropout recovery services, as appropriate",
+      "notes": "Added by CP-10-01.",
+      "supports": [
+        {
+          "code": "Y1.17",
+          "component": "dropout recovery toward a diploma or recognized equivalent",
+          "fit": "direct",
+          "excerpt": "evidence-based dropout prevention and recovery strategies that lead to completion of the requirements for a secondary school diploma or its recognized equivalent ... (2) Alternative secondary school services, or dropout recovery services, as appropriate",
+          "verifier_note": "(a)(1) and (a)(2) match the claim (the ellipsis joins two paragraphs). These are program elements (services), not outcomes, but their wording targets diploma or equivalency completion and re-engagement."
         }
       ]
     },
@@ -1841,14 +2396,17 @@
       "year": null,
       "url": "https://forumfyi.org/weikartcenter/",
       "status": "verified",
-      "verified_on": "2026-09-24",
-      "verified_by": "v2 candidate verification (02)",
-      "excerpt": "the Weikart Center's pyramid of program quality takes the abstract idea of quality and breaks it down into manageable targets ... the Weikart Center helps youth-serving systems build the safe, supportive, interactive, and engaging environments",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Building a safe environment is the first step ... Ensuring that an environment also feels supportive is the second prerequisite ... making it as interactive and engaging as possible rounds out the kind of environment",
       "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
       "supports": [
         {
           "code": "A2.1",
-          "component": "program quality pyramid"
+          "component": "program quality pyramid",
+          "fit": "direct",
+          "excerpt": "Building a safe environment is the first step ... Ensuring that an environment also feels supportive is the second prerequisite ... making it as interactive and engaging as possible rounds out the kind of environment",
+          "verifier_note": "The Weikart Center's page, hosted by its parent organization the Forum for Youth Investment, describes the 'pyramid of program quality' as safe, supportive, interactive and engaging. This fits A2.1. The excerpt is shortened with ellipses to stay within 40 words."
         }
       ]
     }

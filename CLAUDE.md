@@ -33,6 +33,10 @@ Read these before touching any codebook:
 - 3.1.0 (CP-09-09, approved 2026-09-27) adds domain-only coding: a statement that names one
   domain but no specific result gets the domain with subcategory "none" and `uncoded` false;
   exports carry a derived `specificity` column (code, domain, uncoded).
+- 3.1.1 (CP-10-01) re-verified every 3.x source with independent verifiers. The registry
+  records each link's `fit` (direct or partial), and the explorer shows partial fits. The
+  registry is built by `v3/build_registry.py` plus `v3/verification_2026_09_27.py`; change
+  registry results there, not in the JSON.
 - `codebooks/original.ts` (2.5.x) stays selectable in the coder app. Older files may use
   pre-2.0.0 numbers; see `codebook-refinement/renumbering/`.
 - A public explorer-only site is built from this repo with `VITE_SITE=explorer` (README,

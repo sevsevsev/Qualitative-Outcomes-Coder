@@ -92,6 +92,28 @@ describe('codebook 3.x prompt', () => {
   });
 });
 
+describe('codebook 3.x source registry (CP-10-01)', () => {
+  const reg = JSON.parse(read('codebook-refinement/sources/youth_outcomes_v3.sources.json'));
+  const supports = reg.sources.flatMap((s: any) => s.supports.map((x: any) => ({ source: s.id, ...x })));
+
+  it('records the verifier\'s fit for every source-to-code link', () => {
+    const missing = supports.filter((x: any) => !['direct', 'partial'].includes(x.fit)).map((x: any) => `${x.source} -> ${x.code}`);
+    expect(missing).toEqual([]);
+  });
+
+  it('explains every partial fit', () => {
+    const bare = supports.filter((x: any) => x.fit === 'partial' && !x.verifier_note?.trim()).map((x: any) => `${x.source} -> ${x.code}`);
+    expect(bare).toEqual([]);
+  });
+
+  it('keeps a verbatim excerpt of 40 words or fewer on every verified source', () => {
+    for (const s of reg.sources.filter((x: any) => x.status === 'verified')) {
+      expect(s.excerpt?.trim(), s.id).toBeTruthy();
+      expect(s.excerpt.split(/\s+/).length, s.id).toBeLessThanOrEqual(40);
+    }
+  });
+});
+
 describe('codebook 3.x in the explorer', () => {
   const view = buildExplorerCodebook(codebook);
 

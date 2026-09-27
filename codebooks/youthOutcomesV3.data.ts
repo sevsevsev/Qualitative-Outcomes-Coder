@@ -59,8 +59,8 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will improve their English language proficiency.",
               "goldId": "S028"
             },
-            "source": "WIDA English Language Development Standards Framework (2020 edition).",
-            "basis": "WIDA English Language Development Standards Framework, 2020 ed. (located)."
+            "source": "WIDA English Language Development Standards Framework (2020 edition); ESSA English language proficiency indicator, 20 U.S.C. 6311(c)(4)(B)(iv).",
+            "basis": "Re-verified 2026-09-27 (CP-10-01): WIDA 2020 (verified, direct for English proficiency; nothing checked covers home-language maintenance); ESSA 6311(c)(4)(B)(iv) (verified, direct)."
           },
           {
             "id": "Y1.3",
@@ -209,7 +209,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "goldId": "S220"
             },
             "source": "Farrington et al. (2012), UChicago Consortium, Academic Perseverance.",
-            "basis": "Farrington et al. (2012), Academic Perseverance (verified); Head Start ELOF Approaches to Learning (located) for young children."
+            "basis": "Farrington et al. (2012), Academic Perseverance (verified). Re-verified 2026-09-27 (CP-10-01): Head Start ELOF dropped from this code: the codebook does not source codes from early-childhood frameworks except where the construct is about young children (Y1.8)."
           },
           {
             "id": "Y1.11",
@@ -340,8 +340,8 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will re-enroll in school or obtain a GED following release.",
               "goldId": "S241"
             },
-            "source": "ESSA four-year adjusted cohort graduation rate, 20 U.S.C. 6311(c)(4)(B).",
-            "basis": "ESSA four-year adjusted cohort graduation rate, 20 U.S.C. 6311(c)(4)(B) (located)."
+            "source": "ESSA four-year adjusted cohort graduation rate, 20 U.S.C. 6311(c)(4)(B); WIOA youth program elements, 20 CFR 681.460(a)(1)-(2) (dropout recovery toward a diploma or recognized equivalent).",
+            "basis": "Re-verified 2026-09-27 (CP-10-01): ESSA graduation rate (verified, partial: graduation only); WIOA 20 CFR 681.460 (verified, direct for re-engagement and equivalency)."
           },
           {
             "id": "Y1.18",
@@ -446,8 +446,8 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Students will explain how algebra relates to careers they are interested in.",
               "goldId": "S115"
             },
-            "source": "Eccles and colleagues, expectancy-value theory (utility value).",
-            "basis": "Wigfield & Eccles (2000), utility value: 'how a task fits into an individual's future plans' (partial; appendix A R05)."
+            "source": "Eccles and colleagues, expectancy-value theory (utility value); Hulleman et al. (2010), utility value intervention.",
+            "basis": "Re-verified 2026-09-27 (CP-10-01): Wigfield & Eccles (2000), utility value: 'how a task fits into an individual's future plans' (verified from a full-text copy, not the publisher's); Hulleman, Godes, Hendricks & Harackiewicz (2010) (verified, direct)."
           }
         ]
       },
@@ -1220,8 +1220,8 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Seniors submitted the FAFSA and at least one college application by January 1.",
               "goldId": "H019"
             },
-            "source": "Conley, Four Keys: Key Transition Knowledge & Skills.",
-            "basis": "Conley, Key Transition Knowledge & Skills (located)."
+            "source": "Conley, Four Keys: Key Transition Knowledge & Skills; Conley (2007), Redefining College Readiness (contextual skills and awareness).",
+            "basis": "Re-verified 2026-09-27 (CP-10-01): Conley (2016), Four Keys, Key Transition Knowledge & Skills (verified, direct for college knowledge; loose for the work side); Conley (2007) (verified, direct)."
           }
         ]
       },
@@ -1549,8 +1549,8 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will report lower intentions to vape in the next year.",
               "goldId": "S065"
             },
-            "source": "CDC Youth Risk Behavior Survey (tobacco, alcohol and other drug use); SAMHSA Strategic Prevention Framework.",
-            "basis": "CDC YRBS (verified); SAMHSA Strategic Prevention Framework (located)."
+            "source": "CDC Youth Risk Behavior Survey (tobacco, alcohol and other drug use); Healthy People 2030, SU-05 adolescent drug use.",
+            "basis": "Re-verified 2026-09-27 (CP-10-01): CDC YRBS (verified, direct); Healthy People 2030 SU-05 (verified, direct for drug use). SAMHSA Strategic Prevention Framework dropped: it is a planning process, not an outcome framework (CP-01-13 item 5)."
           },
           {
             "id": "Y8.12",
@@ -1680,7 +1680,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "goldId": "S239"
             },
             "source": "CSSP Strengthening Families, Parental Resilience.",
-            "basis": "CSSP Strengthening Families, Parental Resilience (verified)."
+            "basis": "CSSP Strengthening Families, Parental Resilience (verified). Re-verified 2026-09-27 (CP-10-01): the definition is recorded from Harper Browne (2024), CSSP's research foundation for the framework (verified, partial)."
           },
           {
             "id": "F1.5",
@@ -1891,8 +1891,8 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Coaches will report improved ability to de-escalate conflicts between players during games.",
               "goldId": "S142"
             },
-            "source": "Learning Forward (2022), Standards for Professional Learning.",
-            "basis": "Learning Forward (2022) (located)."
+            "source": "Learning Forward (2022), Standards for Professional Learning; Guskey (2002), Level 2 participants' learning.",
+            "basis": "Re-verified 2026-09-27 (CP-10-01): Learning Forward (2022) (verified, partial: standards for designing professional learning, not an outcome list); Guskey (2002) Level 2 (verified, direct)."
           },
           {
             "id": "A1.2",
@@ -1909,8 +1909,8 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Staff will adopt trauma-informed practices in their classrooms.",
               "goldId": "S204"
             },
-            "source": "Learning Forward (2022), Standards for Professional Learning; SAMHSA (2014), trauma-informed approach.",
-            "basis": "Learning Forward (2022) (located); SAMHSA (2014) (located)."
+            "source": "Learning Forward (2022), Standards for Professional Learning; Guskey (2002), Level 4 participants' use of new knowledge and skills; SAMHSA (2014), trauma-informed approach.",
+            "basis": "Re-verified 2026-09-27 (CP-10-01): Learning Forward (2022) (verified, partial); Guskey (2002) Level 4 (verified, direct); SAMHSA (2014) (verified from the full document on an NCTSN copy, direct)."
           }
         ]
       },
@@ -2030,7 +2030,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "goldId": "S113"
             },
             "source": "Codebook-defined; no verified source yet.",
-            "basis": "No verified source for accommodations in general [VERIFY: ADA Title II / Section 504 program access]; ED & DOJ (2015) LEP letter (partial; possible 2025 rescission [VERIFY])."
+            "basis": "Re-verified 2026-09-27 (CP-10-01): ED & DOJ (2015) English learner letter dropped: ED rescinded it in August 2025. ADA Title II, 28 CFR 35.130(b)(7) reasonable modifications and 35.150(a) program access, verified as a legal duty, not an outcome framework; whether to cite it (and move A2.4 from codebook-defined to adapted) is left to Severin. Section 504 at 34 CFR 104.4 does not cover program access (104.21-22 unchecked)."
           }
         ]
       },

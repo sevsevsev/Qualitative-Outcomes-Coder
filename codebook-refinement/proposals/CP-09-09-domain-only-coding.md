@@ -6,7 +6,7 @@
 | Codes touched | rulesText step 3 ("Uncoded" bullets); no code definitions change |
 | Version bump | MINOR (3.1.0): `primary_subcategory: "none"` gains a second meaning, and the export gains a `specificity` column |
 | Requirement served | R2 breadth, R3 tie-breakers |
-| Status | draft; supersedes CP-09-07 (both its options) if approved |
+| Status | ready-to-test (open questions answered by Severin, 2026-09-27); supersedes CP-09-07 (both its options) if approved |
 | Enum cost | +0 (160 → 160). Reuses the existing `"none"` subcategory value; no new schema field |
 | Framework deviation | none. No code's scope changes; a domain-only row claims only its domain's anchor framework, not a component of it |
 
@@ -140,18 +140,16 @@ None.
 | G-D09 | discover students' talents, expand opportunities, and enrich their lives | uncoded |
 | G-D10 | to support overall youth development | uncoded |
 
-## Open questions for Severin
+## Decisions (Severin, 2026-09-27)
 
-1. **G-D07, "perceived social support".** Is this Y3 domain-only, or should it stay uncoded as
-   your note ("too unclear to code reliably") suggests?
-2. **Y1.15's catch-all.** Y1.15 already takes "academic performance" with no subject. This CP
-   keeps that and sends only non-performance generics ("academic enrichment", "academic
-   growth") to Y1 domain-only. The alternative is to move all unspecified academics to Y1
-   domain-only, which narrows Y1.15 and would need a DEFINITION_SCOPE CP of its own.
-3. **Category level.** 3.0 has categories between domains and codes, and some statements name
-   a category but no code ("relationship skills"). This CP stops at the domain. Recording a
-   category would add a field of up to 39 values (160 → 199, past the cap), so it waits for the
-   two-stage schema redesign.
+1. **G-D07, "Students improve perceived social support"**: Y3 domain-only.
+2. **Y1.15's catch-all stays.** "Academic performance" or test scores with no subject stay
+   Y1.15; only non-performance generics ("academic enrichment", "academic growth") go to Y1
+   domain-only.
+3. **Category level waits.** 3.0 has categories between domains and codes, and some statements
+   name a category but no code ("relationship skills"). Recording a category would add a field
+   of up to 39 values (160 → 199, past the 180 cap), so it waits for the two-stage schema
+   redesign. Severin deferred to this recommendation.
 
 ## Judge result
 

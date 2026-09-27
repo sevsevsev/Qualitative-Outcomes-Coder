@@ -636,31 +636,31 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
           {data.registryReviewed ? `, last reviewed ${data.registryReviewed.split(' ')[0]}` : ''}.
         </p>
         <section className="mt-5 max-w-2xl rounded-xl border border-slate-200 bg-white px-5 py-4">
-          <h3 className="text-sm font-semibold text-slate-900">Why every code cites a source</h3>
+          <h3 className="text-sm font-semibold text-slate-900">Why codes are tied to published research</h3>
           <ul className="mt-2 space-y-1.5 text-sm text-slate-600 leading-relaxed list-disc pl-5">
             <li>
-              <span className="font-medium text-slate-800">A meaning others already share.</span> A code that follows a
-              published framework means what that framework means, so a funder or evaluator reads it the way they already
-              understand it.
+              <span className="font-medium text-slate-800">A shared language.</span> Most codes use a published
+              framework’s definition as written. Program staff, funders and district partners who know that framework will
+              read the code the same way.
             </li>
             <li>
-              <span className="font-medium text-slate-800">Goals that line up.</span> Programs coded to the same framework
-              can be compared with each other and with the measures and data others collect on the same outcome.
+              <span className="font-medium text-slate-800">Easier to compare.</span> Outcome statements given the same code
+              can be lined up across programs and connected to how others define and measure that outcome.
             </li>
             <li>
-              <span className="font-medium text-slate-800">A boundary that holds.</span> The framework sets what a code
-              covers, so revisions can’t quietly stretch it. A code may depart from its framework only for a few set reasons,
-              and each departure is written down.
+              <span className="font-medium text-slate-800">Meanings that stay put.</span> The framework sets what a code
+              covers, so its meaning doesn’t drift as the codebook is revised. A code may depart from its framework only in
+              four set cases, and each one is recorded.
             </li>
             <li>
-              <span className="font-medium text-slate-800">Research you can check.</span> A source counts only after someone
-              other than the person who proposed it opened it and recorded a short quote that supports the code. You can
-              read that quote under each source.
+              <span className="font-medium text-slate-800">Sources you can check.</span> A source is marked Verified only
+              after a separate AI checker, not the one that suggested it, retrieved the source and saved a short
+              word-for-word excerpt that supports the code. That excerpt appears under each verified source.
             </li>
           </ul>
           <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-            A few codes have no framework that fits. Their cards say “Codebook-defined” rather than borrow a framework’s
-            name. When a source covers only part of a code, it is marked “Partial fit.”
+            A few codes have no framework that fits, so their entries say “Codebook-defined.” A source marked “Partial fit”
+            supports only part of its code.
           </p>
         </section>
         <div className="mt-5 flex flex-wrap gap-2">

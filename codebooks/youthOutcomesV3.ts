@@ -19,7 +19,7 @@ import { SUBJECT_AREA_OPTIONS, TARGET_POPULATION_OPTIONS } from './original.js';
 import { V3_DOMAINS } from './youthOutcomesV3.data.js';
 import type { V3Code, V3Domain } from './youthOutcomesV3.types.js';
 
-export const V3_VERSION = '3.0.0';
+export const V3_VERSION = '3.1.0';
 
 const PART_NAMES: Record<V3Domain['part'], string> = {
   Y: 'Part Y, young people: the change is in a young person.',
@@ -91,7 +91,12 @@ RULES:
      - none: only for uncoded items (see below).
    - "Uncoded": set to true for text that states no result at all: a header or sentence fragment ("Participants will show growth in the following areas:"), a bare program name or label, a data-collection or process note, a statement about the evaluation itself, or text too vague to code ("N/A", "See above", "Improve outcomes for students").
    - Do NOT mark something uncoded because it is a program-level output (attendance rate, number served, sessions completed): those go to A2.5. Do NOT mark something uncoded because it uses faith-specific or spiritual language: route it to the nearest construct (Y5.5 purpose and faith growth, Y6.1 values, Y3.1 belonging, Y6.5 service).
-   - Whenever "Uncoded" is true, set primary_confidence to "none" and primary_subcategory to "none". Whenever you assign a real code, set "Uncoded" to false and use high, medium, or low -- never "none". (The schema makes you name a primary_domain even for uncoded items; it is discarded.)
+   - DOMAIN ONLY: when a statement names one domain's outcome area but no specific result inside it, code the domain and set primary_subcategory to "none", with "Uncoded" false. Examples: "social-emotional growth" or "growth in all five CASEL competencies" -> Domain Y4, subcategory none; "increase wellness and health" -> Domain Y8; "improvement in academic enrichment" -> Domain Y1. Confidence says how clearly the text names that domain.
+     - Use it only when the text points to exactly one domain. A statement that names no area ("improve outcomes for students", "support overall youth development", "reach their full potential", "improve proficiency in their chosen activity") stays uncoded.
+     - A broad label that spans more than one domain ("21st-century skills", "non-cognitive skills", "positive youth development", "well-rounded students") also stays uncoded: domain-only needs the text itself to name one domain's area.
+     - A list of named skills is split and each skill coded, never coded domain-only.
+     - A code whose definition already covers the general case keeps it: "academic performance" or test scores with no subject -> Y1.15; leadership with no setting -> Y4.7.
+   - Whenever "Uncoded" is true, set primary_confidence to "none" and primary_subcategory to "none". Whenever you assign a real code or a domain-only code, set "Uncoded" to false and use high, medium, or low -- never "none". (The schema makes you name a primary_domain even for uncoded items; it is discarded.)
 
    - "Target Population":
      - Default to "students_youth" for outcomes about participants, children, or students.
@@ -170,6 +175,7 @@ export const youthOutcomesV3Codebook: Codebook = {
     hasSubcategories: true,
     hasSubjectArea: true,
     hasTargetPopulation: true,
+    domainOnly: true,
   },
   subjectAreaOptions: SUBJECT_AREA_OPTIONS,
   targetPopulationOptions: TARGET_POPULATION_OPTIONS,

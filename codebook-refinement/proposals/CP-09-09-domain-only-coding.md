@@ -6,7 +6,7 @@
 | Codes touched | rulesText step 3 ("Uncoded" bullets); no code definitions change |
 | Version bump | MINOR (3.1.0): `primary_subcategory: "none"` gains a second meaning, and the export gains a `specificity` column |
 | Requirement served | R2 breadth, R3 tie-breakers |
-| Status | NEEDS-HUMAN (2026-09-27): rule tightened per Severin; held-out sets are spent, so only the design set can gate; supersedes CP-09-07 (both its options) if approved |
+| Status | approved by Severin 2026-09-27 on a design-set gate (held-out sets spent for this CP); applied as 3.1.0; supersedes CP-09-07 |
 | Enum cost | +0 (160 → 160). Reuses the existing `"none"` subcategory value; no new schema field |
 | Framework deviation | none. No code's scope changes; a domain-only row claims only its domain's anchor framework, not a component of it |
 
@@ -128,7 +128,7 @@ None.
   (growth mindset) and stays Y5.4. The regression judge should confirm this on both gold files.
 - **Held-out spend:** N040 and N064 are cited as evidence here, as in CP-09-07, so adopting this
   CP spends them.
-- **New proposed rows** (status=proposed; Severin adjudicates). These are the too-vague outcomes
+- **New proposed rows** (status=proposed; Severin adjudicates; in `gold/youth_outcomes_v3.domain-only.proposed.csv`, with the expected code in `v3_suggested`; once adjudicated they score with `--gold` on that file). These are the too-vague outcomes
   from the 2026-09-27 district review, with the code this rule would give:
 
 | Proposed row | Statement | Expected under this CP |

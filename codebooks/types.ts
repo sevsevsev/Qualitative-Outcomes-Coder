@@ -61,6 +61,11 @@ export interface CodebookCapabilities {
   hasSubcategories: boolean;
   hasSubjectArea: boolean;
   hasTargetPopulation: boolean;
+  /**
+   * The rules allow a domain-only code: a domain with no subcategory, for a
+   * statement that names one domain but no specific result in it (CP-09-09).
+   */
+  domainOnly?: boolean;
 }
 
 export interface Codebook {

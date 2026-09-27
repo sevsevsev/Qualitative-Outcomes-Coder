@@ -99,6 +99,23 @@ export const codePrefix = (subcategory: string | undefined | null): string => {
   return m ? m[1] : 'none';
 };
 
+/** "Domain Y4. Social & Emotional Skills" -> "Y4"; anything unparseable -> "none". */
+export const domainPrefix = (domain: string | undefined | null): string => {
+  const m = String(domain ?? '').trim().match(/^(?:Domain\s+)?([A-Z]\d+)(?!\d|\.\d)/);
+  return m ? m[1] : 'none';
+};
+
+/**
+ * The code one split item scores as: "none" when uncoded, the code prefix when a
+ * code was given, and the bare domain id ("Y4") for a domain-only item (coded, but
+ * subcategory "none"; CP-09-09). A gold row may name a bare domain as its expected code.
+ */
+export const itemCode = (item: { uncoded?: boolean; primary_subcategory?: string; primary_domain?: string }): string => {
+  if (item.uncoded) return 'none';
+  const code = codePrefix(item.primary_subcategory);
+  return code !== 'none' ? code : domainPrefix(item.primary_domain);
+};
+
 /**
  * Which gold rows are scoreable. By default, only adjudicated rows whose expected
  * code doesn't depend on an unapplied CP. This is the core anti-drift rule:

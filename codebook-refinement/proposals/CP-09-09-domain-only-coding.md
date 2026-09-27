@@ -6,7 +6,7 @@
 | Codes touched | rulesText step 3 ("Uncoded" bullets); no code definitions change |
 | Version bump | MINOR (3.1.0): `primary_subcategory: "none"` gains a second meaning, and the export gains a `specificity` column |
 | Requirement served | R2 breadth, R3 tie-breakers |
-| Status | ready-to-test (open questions answered by Severin, 2026-09-27); supersedes CP-09-07 (both its options) if approved |
+| Status | tested 2026-09-27: judge FAIL on G2 (one unnamed regression, N040) pending Severin's decision below; supersedes CP-09-07 (both its options) if approved |
 | Enum cost | +0 (160 → 160). Reuses the existing `"none"` subcategory value; no new schema field |
 | Framework deviation | none. No code's scope changes; a domain-only row claims only its domain's anchor framework, not a component of it |
 
@@ -151,6 +151,31 @@ None.
    of up to 39 values (160 → 199, past the 180 cap), so it waits for the two-stage schema
    redesign. Severin deferred to this recommendation.
 
-## Judge result
+## Judge result (2026-09-27)
 
-Pending.
+Tested with the rulesText change and version bump only (branch `cp-09-09-candidate`); the
+`specificity` column and the app changes in section 3 come after approval. The candidate prompt
+kept the Y4.7 clause without its CP-09-08 tag; CP-09-08 is still a draft, so that clause waits for it.
+Scorer: a domain-only item now scores as its bare domain id (`itemCode` in
+`scripts/codebookEvalScoring.ts`), and `scripts/codebook-eval.ts` reads 3.x gold files by `--set`.
+gemini-3.8-flash, 2 runs per set. Results: `codebook-refinement/eval/cp-09-09/`.
+
+| Set | n | Lenient, 3.0.0 (run 1 / 2) | Lenient, 3.1.0 candidate | Kappa, 3.0.0 → 3.1.0 |
+|---|---|---|---|---|
+| design | 255 | 97.6% / 98.0% | 98.4% / 98.4% | .996 → .992 |
+| old held-out (`heldout`) | 90 | 95.6% / 96.7% | 95.6% / 95.6% | .977 → 1.000 |
+| fresh held-out (`heldout3`, now spent) | 100 | 85.0% / 87.0% | 89.0% / 87.0% | .918 → .949 |
+| district rows G-D01 to G-D10 (proposed, preview only) | 10 | 10% / 10% | 90% / 90% | .872 → 1.000 |
+
+In the district preview, G-D07 went to Y3.1 instead of Y3 (domain only); the other nine matched.
+
+Verdict: **FAIL on G2**, because the regressions below were not named in advance. G1 and G3 pass.
+
+- **N040** "Soft Skills — Positive behaviors" (gold uncoded: "Not specific enough of an outcome
+  to code"): Y4 domain-only in both runs. The rule causes this, so it is not run noise. The Gold impact section predicted it would stay uncoded; that
+  prediction was wrong. Needs Severin's decision.
+- **N078** "Behavioral Competency Improvement" (gold Y4.2): Y4 domain-only in both runs. The baseline
+  already missed it (Y4.3), so it is not a regression, but the rule moves it.
+- **N036** (A1.2 → A2.1) and **N067** (Y4.3 → Y5.4) missed in run 2 only. The coders had split
+  on N036 too. Both are run noise.
+- On H027 the old held-out set lost one row in run 2; it was unstable in the baseline.

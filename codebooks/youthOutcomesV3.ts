@@ -19,7 +19,7 @@ import { SUBJECT_AREA_OPTIONS, TARGET_POPULATION_OPTIONS } from './original.js';
 import { V3_DOMAINS } from './youthOutcomesV3.data.js';
 import type { V3Code, V3Domain } from './youthOutcomesV3.types.js';
 
-export const V3_VERSION = '3.1.1';
+export const V3_VERSION = '3.1.2';
 
 const PART_NAMES: Record<V3Domain['part'], string> = {
   Y: 'Part Y, young people: the change is in a young person.',

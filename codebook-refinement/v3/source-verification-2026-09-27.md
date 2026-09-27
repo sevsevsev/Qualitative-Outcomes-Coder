@@ -26,7 +26,7 @@ notes are in `source-verification-2026-09-27.json` next to this file.
 | Registry links | 133 | 91 | 42 | 0 |
 | Basis-only sources | 12 | 5 | 7 | 0 |
 | New candidates | 15 | 13 | 2 | 0 |
-| Open [VERIFY] items (CP-09-06, Y4.7) | 2 | 2 | 0 | 0 |
+| Open [VERIFY] items (CP-09-06, Y4.7, Y4.12) | 3 | 2 | 1 | 0 |
 
 No citation was fabricated or pointed at the wrong document. The problems fall into four groups.
 
@@ -158,12 +158,15 @@ asterisk marks a code the source covers only in part.
 | A1.1, A1.2 | Guskey (2002), Levels 2 and 4 of professional development evaluation | direct |
 | F1.4 | Harper Browne (2024), CSSP research foundation: parental resilience definition | partial (the document is a research foundation, not the protective-factor brief) |
 
-## Verified leads left for Severin: codebook-defined codes
+## Codes with no framework (applied by CP-10-02, Severin 2026-09-27)
 
 These six codes have no framework (DEVIATIONS.md). Verified sources now exist for four of them,
 but citing one changes the code's fidelity from codebook-defined to framework or adapted, and
-closes or changes its deviation entry. Under S1.6 that is Severin's call, so CP-10-01 does not
-make the change.
+closes or changes its deviation entry. Under S1.6 that is Severin's call. He approved it on
+2026-09-27, and CP-10-02 applies it for Y4.12, Y6.4, Y6.5 and A3.1. For Y4.12 the anchor is
+CASEL's own "Resisting negative social pressure", verified word for word (partial: it does not
+cover avoiding unsafe situations), with NHES Standard 4 alongside. A2.2 and A2.4 stay as they
+are, and Severin chose not to name the ADA on A2.4.
 
 | Code | Verified source | Verdict | What it would take |
 |---|---|---|---|

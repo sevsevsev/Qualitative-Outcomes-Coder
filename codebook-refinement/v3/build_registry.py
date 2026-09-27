@@ -216,7 +216,7 @@ for cid, c in CODES.items():
 
 registry = {
     'codebook_id': 'youth_outcomes_v3',
-    'codebook_version_reviewed': '3.1.1',
+    'codebook_version_reviewed': '3.1.2',
     'last_reviewed': '2026-09-27',
     'status_legend': {
         **ORIG['status_legend'],

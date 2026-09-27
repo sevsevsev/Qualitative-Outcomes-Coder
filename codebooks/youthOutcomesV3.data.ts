@@ -859,8 +859,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "name": "Risk Avoidance & Refusal Skills",
             "short": "Risk avoidance & refusal",
             "flag": "deductive",
-            "fidelity": "codebook-defined",
-            "deviation": "FD-P09",
+            "fidelity": "framework",
             "from2x": "4.5.4",
             "definition": "Avoiding unsafe situations and resisting negative peer pressure.",
             "include": "Refusal skills; leaving unsafe situations; resisting pressure to use substances.",
@@ -870,8 +869,8 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will develop skills to resist peer pressure and avoid risky behaviors.",
               "goldId": "S172"
             },
-            "source": "Codebook-defined; no verified source yet.",
-            "basis": "CASEL (2020) SEL Framework (verified), Relationship Skills: 'Resisting negative social pressure' (cited in CP-01-06's source table, in flight; not yet a registry support entry). Would end 4.5.4's extension status."
+            "source": "CASEL (2020) SEL Framework, Relationship Skills: \"Resisting negative social pressure\"; National Health Education Standards (2024), Standard 4: refusal skills.",
+            "basis": "Re-verified 2026-09-27 (CP-10-02): CASEL (2020), Relationship Skills: 'Resisting negative social pressure' (verified, partial: covers resisting peer pressure, not avoiding unsafe situations); National Health Education Standards (2024) Standard 4, 'Demonstrate refusal skills to avoid or reduce health risks' (verified, direct). Now Framework; FD-P09 closed."
           }
         ]
       }
@@ -1018,7 +1017,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Character, Values & Civic Life",
     "description": "How young people relate to their community and its systems: values, civic knowledge, critical consciousness, civic action, environmental stewardship and digital citizenship.",
-    "frameworkBasis": "Search Institute Developmental Assets (Positive Values); NCSS (2013) C3 Framework (Civics); Muhammad, Five Pursuits (Criticality); NAAEE (2019) Guidelines for Excellence; ISTE Standards for Students (Digital Citizen).",
+    "frameworkBasis": "Search Institute Developmental Assets (Positive Values); NCSS (2013) C3 Framework (Civics); Muhammad, Five Pursuits (Criticality); NAAEE (2019) Guidelines for Excellence; ISTE Standards for Students (Digital Citizen); CIRCLE (2002) civic engagement indicators (civic voice and community action).",
     "categoryLine": "A. Character (Y6.1) · B. Civic understanding (Y6.2–Y6.3) · C. Civic action (Y6.4–Y6.6) · D. Digital citizenship (Y6.7)",
     "categories": [
       {
@@ -1096,8 +1095,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "name": "Civic Voice, Leadership & Participation",
             "short": "Civic voice & participation",
             "flag": "deductive",
-            "fidelity": "adapted",
-            "deviation": "FD-P13",
+            "fidelity": "framework",
             "from2x": "7.3",
             "definition": "Influencing collective decisions and taking part in civic life: youth councils, testimony, advocacy, co-design, organizing, voting, and civic efficacy.",
             "include": "Presenting to a city council; youth advisory boards; organizing campaigns; registering and voting; believing one can influence community decisions.",
@@ -1107,16 +1105,15 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth organizers will present testimony to the city council on a policy issue affecting their neighborhood.",
               "goldId": "S136"
             },
-            "source": "Codebook-defined; no verified source yet.",
-            "basis": "NCSS (2013) C3, Dimension 4 Taking Informed Action (partial: scope)."
+            "source": "Keeter, Zukin, Andolina & Jenkins (2002), CIRCLE, The Civic and Political Health of the Nation: political voice and electoral indicators.",
+            "basis": "Re-verified 2026-09-27 (CP-10-02): CIRCLE (2002) core civic engagement indicators, political voice (contacting officials, petitions, protest, boycotts) and electoral participation (verified, direct). Now Framework; FD-P13 closed. NCSS C3 Dimension 4 (partial) no longer cited."
           },
           {
             "id": "Y6.5",
             "name": "Community Service & Action",
             "short": "Community service & action",
             "flag": "deductive",
-            "fidelity": "adapted",
-            "deviation": "FD-P14",
+            "fidelity": "framework",
             "from2x": "7.2",
             "definition": "Organized service or projects to improve the community, including identifying a community issue and planning action on it.",
             "include": "Service hours; service trips; food drives; community action plans.",
@@ -1126,8 +1123,8 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will complete 20 hours of community service at local nonprofits.",
               "goldId": "S005"
             },
-            "source": "Codebook-defined; no verified source yet.",
-            "basis": "Lerner et al. (2005), Contribution (partial); NCSS C3 Dimension 4 (partial)."
+            "source": "Keeter, Zukin, Andolina & Jenkins (2002), CIRCLE, The Civic and Political Health of the Nation: civic indicators (community problem solving, regular volunteering).",
+            "basis": "Re-verified 2026-09-27 (CP-10-02): CIRCLE (2002) civic indicators, community problem solving and regular volunteering for a non-electoral organization (verified, direct). Now Framework; FD-P14 closed. Lerner et al. (2005) Contribution and NCSS C3 Dimension 4 (both partial) no longer cited."
           },
           {
             "id": "Y6.6",
@@ -2082,7 +2079,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "A",
     "name": "Systems, Policy & Community Conditions",
     "description": "Change beyond one program: policy and institutions, cross-sector partnerships, and community conditions.",
-    "frameworkBasis": "Kania & Kramer (2011), Collective Impact; Sampson, Raudenbush & Earls (1997), collective efficacy.",
+    "frameworkBasis": "Coffman (2009) and Reisman, Gienapp & Stachowiak (2007), policy change outcomes; Kania & Kramer (2011), Collective Impact; Sampson, Raudenbush & Earls (1997), collective efficacy.",
     "categoryLine": "A. Policy & institutions (A3.1) · B. Partnerships & community (A3.2–A3.3)",
     "categories": [
       {
@@ -2094,8 +2091,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "name": "Policy & Institutional Change",
             "short": "Policy & institutional change",
             "flag": "hybrid",
-            "fidelity": "codebook-defined",
-            "deviation": "FD-P20",
+            "fidelity": "framework",
             "from2x": "11.3",
             "definition": "Changes to policy, funding or institutional practice in schools, districts, cities or states.",
             "include": "New ordinances; district policies; dedicated budget funding.",
@@ -2105,8 +2101,8 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "The school district will adopt a policy guaranteeing afterschool transportation for all students.",
               "goldId": "S101"
             },
-            "source": "Codebook-defined; no verified source yet.",
-            "basis": "No policy-change framework in the records [VERIFY before citing one]; Learning Forward (2022) systems (located). Hybrid."
+            "source": "Coffman (2009), A User's Guide to Advocacy Evaluation Planning (policy goals); Reisman, Gienapp & Stachowiak (2007), A Guide to Measuring Advocacy and Policy (improved policies).",
+            "basis": "Re-verified 2026-09-27 (CP-10-02): Coffman (2009), HFRP, policy goals: development, adoption, implementation, maintenance (verified, direct, from a full copy hosted by County Health Rankings); Reisman, Gienapp & Stachowiak (2007), AECF, improved policies (verified, direct). Now Framework; FD-P20 closed."
           }
         ]
       },

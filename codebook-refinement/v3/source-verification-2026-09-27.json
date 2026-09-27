@@ -2428,5 +2428,20 @@
   "excerpt": "RELATIONSHIP SKILLS ... Practicing teamwork and collaborative problem-solving ... Showing leadership in groups",
   "corrected_cite_as": "",
   "notes": "The title matches: 'CASEL'S SEL FRAMEWORK: What Are the Core Competence Areas and Where Are They Promoted?' 'Showing leadership in groups' is listed word for word under Relationship Skills and fits Y4.7. One caveat: the document has no year or copyright line, so '2020' comes only from the file name (11.2020)."
+ },
+ {
+  "claim_id": "y412-casel-resisting",
+  "kind": "open-verify",
+  "source_id": null,
+  "code": "Y4.12",
+  "cite_as": "CASEL (2020) SEL Framework",
+  "claimed_component": "Relationship Skills: 'Resisting negative social pressure'",
+  "url_given": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "verdict": "PARTIAL",
+  "url_checked": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "source_kind": "primary",
+  "excerpt": "Resolving conflicts constructively; Resisting negative social pressure; Showing leadership in groups",
+  "corrected_cite_as": "",
+  "notes": "Checks passed: the CASEL PDF on CASEL's own S3 host loads, CASEL is the publisher, and 'Resisting negative social pressure' is a bullet under RELATIONSHIP SKILLS, word for word. The excerpt joins three bullets from that list with semicolons, so only the bullet text is verbatim, not the punctuation. It is PARTIAL for two reasons. First, the component covers only the peer-pressure half of Y4.12; 'avoiding unsafe situations' is not in it. Second, the extracted text had no visible title or date line, so the exact title and the 2020 year could not be confirmed and rest only on the filename (11.2020)."
  }
 ]

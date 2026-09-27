@@ -125,6 +125,39 @@ NEW = [
 ]
 
 
+# CP-10-02 (Severin, 2026-09-27): verified sources for four codes that had no
+# framework. Each closes a deviation entry (FD-P09, FD-P13, FD-P14, FD-P20).
+NEW += [
+    {
+        'id': 'circle-2002-civic-indicators', 'claim': ['new-circle-2002-voice', 'new-circle-2002-civic'],
+        'cite_as': 'Keeter, S., Zukin, C., Andolina, M., & Jenkins, K. (2002). The Civic and Political Health of the Nation: A Generational Portrait. CIRCLE (Center for Information and Research on Civic Learning and Engagement).',
+        'tier': 'C', 'publisher': 'CIRCLE', 'year': 2002,
+        'supports': [('Y6.4', 'core civic engagement indicators: political voice and electoral indicators'),
+                     ('Y6.5', 'core civic engagement indicators: community problem solving; regular volunteering')],
+    },
+    {
+        'id': 'coffman-2009-advocacy-evaluation', 'claim': 'new-coffman-2009',
+        'cite_as': "Coffman, J. (2009). A User's Guide to Advocacy Evaluation Planning. Harvard Family Research Project.",
+        'tier': 'C', 'publisher': 'Harvard Family Research Project', 'year': 2009,
+        'supports': [('A3.1', 'policy goals: development, adoption, implementation, maintenance')],
+    },
+    {
+        'id': 'reisman-2007-advocacy-policy', 'claim': 'new-reisman-2007',
+        'cite_as': 'Reisman, J., Gienapp, A., & Stachowiak, S. (2007). A Guide to Measuring Advocacy and Policy. Organizational Research Services, for the Annie E. Casey Foundation.',
+        'tier': 'C', 'publisher': 'Annie E. Casey Foundation', 'year': 2007,
+        'supports': [('A3.1', 'outcome category: improved policies (development, adoption, funding, implementation)')],
+    },
+]
+
+CP_10_02_IDS = {'circle-2002-civic-indicators', 'coffman-2009-advocacy-evaluation', 'reisman-2007-advocacy-policy'}
+
+# Supports added to sources already in the registry: (source id, code, component, claim).
+EXTRA_SUPPORTS = [
+    ('casel-2020', 'Y4.12', "Relationship Skills: 'Resisting negative social pressure'", 'y412-casel-resisting'),
+    ('shape-nhes-2024', 'Y4.12', "Standard 4: 'Demonstrate refusal skills to avoid or reduce health risks'", 'new-nhes-std4'),
+]
+
+
 def _record():
     return {r['claim_id']: r for r in RECORD}
 
@@ -164,6 +197,14 @@ def apply(out, codes):
         if not kept:
             del out[sid]
 
+    for sid, code, comp, claim in EXTRA_SUPPORTS:
+        r = rec[claim]
+        assert code in codes and r['verdict'] in ('SUPPORTED', 'PARTIAL'), claim
+        out[sid]['supports'].append({
+            'code': code, 'component': comp, 'fit': 'direct' if r['verdict'] == 'SUPPORTED' else 'partial',
+            'excerpt': r['excerpt'], 'verifier_note': r['notes'],
+        })
+
     for n in NEW:
         claims = n['claim'] if isinstance(n['claim'], list) else [n['claim']] * len(n['supports'])
         rows = [rec[c] for c in claims]
@@ -176,7 +217,7 @@ def apply(out, codes):
             'id': n['id'], 'cite_as': n['cite_as'], 'codebook_names': [], 'tier': n['tier'],
             'publisher': n['publisher'], 'year': n['year'], 'url': first['url_checked'],
             'status': 'verified', 'verified_on': DATE, 'verified_by': BY, 'excerpt': first['excerpt'],
-            'notes': 'Added by CP-10-01.',
+            'notes': 'Added by CP-10-02.' if n['id'] in CP_10_02_IDS else 'Added by CP-10-01.',
             'supports': [
                 {'code': code, 'component': comp, 'fit': 'direct' if r['verdict'] == 'SUPPORTED' else 'partial',
                  'excerpt': r['excerpt'], 'verifier_note': r['notes']}

@@ -1,6 +1,6 @@
 {
   "codebook_id": "youth_outcomes_v3",
-  "codebook_version_reviewed": "3.1.1",
+  "codebook_version_reviewed": "3.1.2",
   "last_reviewed": "2026-09-27",
   "status_legend": {
     "verified": "A verifier who did not propose the source fetched the document itself and recorded a verbatim excerpt (`excerpt`). Whether it covers each code is recorded per support in `fit`.",
@@ -277,6 +277,13 @@
           "fit": "direct",
           "excerpt": "Experiencing self-efficacy; Having a growth mindset",
           "verifier_note": "Both bullets appear word for word under Self-Awareness. The self-worth and self-esteem parts of the code are not named in CASEL."
+        },
+        {
+          "code": "Y4.12",
+          "component": "Relationship Skills: 'Resisting negative social pressure'",
+          "fit": "partial",
+          "excerpt": "Resolving conflicts constructively; Resisting negative social pressure; Showing leadership in groups",
+          "verifier_note": "Checks passed: the CASEL PDF on CASEL's own S3 host loads, CASEL is the publisher, and 'Resisting negative social pressure' is a bullet under RELATIONSHIP SKILLS, word for word. The excerpt joins three bullets from that list with semicolons, so only the bullet text is verbatim, not the punctuation. It is PARTIAL for two reasons. First, the component covers only the peer-pressure half of Y4.12; 'avoiding unsafe situations' is not in it. Second, the extracted text had no visible title or date line, so the exact title and the 2020 year could not be confirmed and rest only on the filename (11.2020)."
         }
       ]
     },
@@ -485,6 +492,36 @@
       ]
     },
     {
+      "id": "circle-2002-civic-indicators",
+      "cite_as": "Keeter, S., Zukin, C., Andolina, M., & Jenkins, K. (2002). The Civic and Political Health of the Nation: A Generational Portrait. CIRCLE (Center for Information and Research on Civic Learning and Engagement).",
+      "codebook_names": [],
+      "tier": "C",
+      "publisher": "CIRCLE",
+      "year": 2002,
+      "url": "https://files.eric.ed.gov/fulltext/ED498892.pdf",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Contacted or visited a public official - at any level of government - to ask for assistance or to express your opinion? ... Taken part in a protest, march, or demonstration?",
+      "notes": "Added by CP-10-02.",
+      "supports": [
+        {
+          "code": "Y6.4",
+          "component": "core civic engagement indicators: political voice and electoral indicators",
+          "fit": "direct",
+          "excerpt": "Contacted or visited a public official - at any level of government - to ask for assistance or to express your opinion? ... Taken part in a protest, march, or demonstration?",
+          "verifier_note": "The report groups its 19 indicators into Electoral, Civic and Political Voice clusters. Petitions, boycotting and regular voting are also listed. The ERIC copy shows CIRCLE as publisher and The Pew Charitable Trusts as funder, so the CIRCLE attribution is correct."
+        },
+        {
+          "code": "Y6.5",
+          "component": "core civic engagement indicators: community problem solving; regular volunteering",
+          "fit": "direct",
+          "excerpt": "Have you ever worked together informally with someone or some group to solve a problem in the community where you live?",
+          "verifier_note": "Both 'Community problem solving' and 'Regular volunteering for a non-electoral organization' are listed as civic indicators. The excerpt is the survey item wording for community problem solving."
+        }
+      ]
+    },
+    {
       "id": "cjca-2009",
       "cite_as": "Harris, P., Lockwood, B., & Mengers, L. (2009, November). Defining and Measuring Recidivism: A CJCA White Paper. Council of Juvenile Correctional Administrators.",
       "codebook_names": [
@@ -506,6 +543,29 @@
           "fit": "partial",
           "excerpt": "Juvenile justice agencies are judged successful or not based on recidivism rates that denote the extent to which youths commit crimes after receiving juvenile justice services.",
           "verifier_note": "The title, authors, date and CJCA as publisher all check out. The paper says it was prepared by CJCA 'with support from' OJJDP, so the attribution is correct. The paper is about defining and measuring recidivism, but I could not confirm the phrase 'juvenile justice performance measures' in it. The component would be better worded as recidivism definition and measurement. The copy is the full paper, but it is hosted by the Kansas Department of Corrections, not by CJCA."
+        }
+      ]
+    },
+    {
+      "id": "coffman-2009-advocacy-evaluation",
+      "cite_as": "Coffman, J. (2009). A User's Guide to Advocacy Evaluation Planning. Harvard Family Research Project.",
+      "codebook_names": [],
+      "tier": "C",
+      "publisher": "Harvard Family Research Project",
+      "year": 2009,
+      "url": "https://www.countyhealthrankings.org/sites/default/files/media/document/resources/UserGuideAdvocacyEvaluationPlanning%20(2).pdf",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Proper implementation of a policy, along with the funding, resources, or quality assurance to ensure it.",
+      "notes": "Added by CP-10-02.",
+      "supports": [
+        {
+          "code": "A3.1",
+          "component": "policy goals: development, adoption, implementation, maintenance",
+          "fit": "direct",
+          "excerpt": "Proper implementation of a policy, along with the funding, resources, or quality assurance to ensure it.",
+          "verifier_note": "I read a full copy of the original HFRP PDF hosted by County Health Rankings. The HFRP archive (archive.globalfrp.org) could not be fetched (robots error). The copy names Julia Coffman, Harvard Family Research Project, 2009. Its Composite Logic Model lists the policy goals Policy Development, Placement on the Policy Agenda, Policy Adoption, Policy Blocking, Policy Implementation, Policy Monitoring and Evaluation, and Policy Maintenance."
         }
       ]
     },
@@ -2015,6 +2075,29 @@
       ]
     },
     {
+      "id": "reisman-2007-advocacy-policy",
+      "cite_as": "Reisman, J., Gienapp, A., & Stachowiak, S. (2007). A Guide to Measuring Advocacy and Policy. Organizational Research Services, for the Annie E. Casey Foundation.",
+      "codebook_names": [],
+      "tier": "C",
+      "publisher": "Annie E. Casey Foundation",
+      "year": 2007,
+      "url": "https://measureresults.issuelab.org/resources/1347/1347.pdf",
+      "status": "verified",
+      "verified_on": "2026-09-27",
+      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "the stages of policy change in the public policy arena. These stages include policy development, policy proposal, demonstration of support (e.g., cosponsorship), adoption, funding and implementation.",
+      "notes": "Added by CP-10-02.",
+      "supports": [
+        {
+          "code": "A3.1",
+          "component": "outcome category: improved policies (development, adoption, funding, implementation)",
+          "fit": "direct",
+          "excerpt": "the stages of policy change in the public policy arena. These stages include policy development, policy proposal, demonstration of support (e.g., cosponsorship), adoption, funding and implementation.",
+          "verifier_note": "I read a full copy of the report on IssueLab. The copy on the AECF site (assets.aecf.org) could not be fetched, but the AECF landing page confirms the title, the 2007 date, and 'the Annie E. Casey Foundation and Organizational Research Services'. The title page names Reisman, Gienapp and Stachowiak of Organizational Research Services, prepared for AECF."
+        }
+      ]
+    },
+    {
       "id": "samhsa-tic-2014",
       "cite_as": "SAMHSA (2014). SAMHSA's Concept of Trauma and Guidance for a Trauma-Informed Approach (HHS Pub. No. SMA 14-4884).",
       "codebook_names": [
@@ -2188,6 +2271,13 @@
           "fit": "direct",
           "excerpt": "Use functional health information to support health and well-being of self and others.",
           "verifier_note": "This is Standard 1 of the 8 new National Health Education Standards on SHAPE America's page. It fits the health-information core of Y8.3. First aid and safety skills are not named in Standard 1 itself. The page metadata shows a 2026 date, but the 2024 release year looks right."
+        },
+        {
+          "code": "Y4.12",
+          "component": "Standard 4: 'Demonstrate refusal skills to avoid or reduce health risks'",
+          "fit": "direct",
+          "excerpt": "Students demonstrate effective interpersonal communication skills to enhance health. ... Demonstrate refusal skills to avoid or reduce health risks.",
+          "verifier_note": "The refusal-skills indicator appears at grades 5, 8 and 12. The grade 2 indicator mentions moving away from unsafe people and risky events. I did not check the '2022/2024' year on this page; the site is published by the National Consensus for School Health Education."
         }
       ]
     },
@@ -2413,28 +2503,12 @@
   ],
   "codebook_extensions": [
     {
-      "code": "Y4.12",
-      "reason": "Codebook-defined: no verified or located framework names this construct. See FD-P09."
-    },
-    {
-      "code": "Y6.4",
-      "reason": "Codebook-defined: no verified or located framework names this construct. See FD-P13."
-    },
-    {
-      "code": "Y6.5",
-      "reason": "Codebook-defined: no verified or located framework names this construct. See FD-P14."
-    },
-    {
       "code": "A2.2",
       "reason": "Codebook-defined: no verified or located framework names this construct. See FD-P18."
     },
     {
       "code": "A2.4",
       "reason": "Codebook-defined: no verified or located framework names this construct. See FD-P19."
-    },
-    {
-      "code": "A3.1",
-      "reason": "Codebook-defined: no verified or located framework names this construct. See FD-P20."
     }
   ]
 }

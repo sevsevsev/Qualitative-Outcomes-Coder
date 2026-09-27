@@ -6,7 +6,7 @@
 | Codes touched | rulesText step 3 ("Uncoded" bullets); no code definitions change |
 | Version bump | MINOR (3.1.0): `primary_subcategory: "none"` gains a second meaning, and the export gains a `specificity` column |
 | Requirement served | R2 breadth, R3 tie-breakers |
-| Status | ready-to-test (open questions answered by Severin, 2026-09-27); supersedes CP-09-07 (both its options) if approved |
+| Status | approved by Severin 2026-09-27 on a design-set gate (held-out sets spent for this CP); applied as 3.1.0; supersedes CP-09-07 |
 | Enum cost | +0 (160 → 160). Reuses the existing `"none"` subcategory value; no new schema field |
 | Framework deviation | none. No code's scope changes; a domain-only row claims only its domain's anchor framework, not a component of it |
 
@@ -63,6 +63,10 @@ After, add:
      - Use it only when the text points to exactly one domain. A statement that names no
        area ("improve outcomes for students", "support overall youth development", "reach
        their full potential", "improve proficiency in their chosen activity") stays uncoded.
+     - A broad label that spans more than one domain ("21st-century skills", "non-cognitive
+       skills", "positive youth development", "well-rounded students") also stays uncoded:
+       domain-only needs the text itself to name one domain's area. (Added 2026-09-27 after
+       the first test; see Judge result.)
      - A list of named skills is split and each skill coded, never coded domain-only.
      - A code whose definition already covers the general case keeps it: "academic
        performance" or test scores with no subject -> Y1.15; leadership with no setting ->
@@ -124,7 +128,7 @@ None.
   (growth mindset) and stays Y5.4. The regression judge should confirm this on both gold files.
 - **Held-out spend:** N040 and N064 are cited as evidence here, as in CP-09-07, so adopting this
   CP spends them.
-- **New proposed rows** (status=proposed; Severin adjudicates). These are the too-vague outcomes
+- **New proposed rows** (status=proposed; Severin adjudicates; in `gold/youth_outcomes_v3.domain-only.proposed.csv`, with the expected code in `v3_suggested`; once adjudicated they score with `--gold` on that file). These are the too-vague outcomes
   from the 2026-09-27 district review, with the code this rule would give:
 
 | Proposed row | Statement | Expected under this CP |
@@ -151,6 +155,73 @@ None.
    of up to 39 values (160 → 199, past the 180 cap), so it waits for the two-stage schema
    redesign. Severin deferred to this recommendation.
 
-## Judge result
+## Judge result (2026-09-27)
 
-Pending.
+Tested with the rulesText change and version bump only (branch `cp-09-09-candidate`); the
+`specificity` column and the app changes in section 3 come after approval. The candidate prompt
+kept the Y4.7 clause without its CP-09-08 tag; CP-09-08 is still a draft, so that clause waits for it.
+Scorer: a domain-only item now scores as its bare domain id (`itemCode` in
+`scripts/codebookEvalScoring.ts`), and `scripts/codebook-eval.ts` reads 3.x gold files by `--set`.
+gemini-3.8-flash, 2 runs per set. Results: `codebook-refinement/eval/cp-09-09/`.
+
+| Set | n | Lenient, 3.0.0 (run 1 / 2) | Lenient, 3.1.0 candidate | Kappa, 3.0.0 → 3.1.0 |
+|---|---|---|---|---|
+| design | 255 | 97.6% / 98.0% | 98.4% / 98.4% | .996 → .992 |
+| old held-out (`heldout`) | 90 | 95.6% / 96.7% | 95.6% / 95.6% | .977 → 1.000 |
+| fresh held-out (`heldout3`, now spent) | 100 | 85.0% / 87.0% | 89.0% / 87.0% | .918 → .949 |
+| district rows G-D01 to G-D10 (proposed, preview only) | 10 | 10% / 10% | 90% / 90% | .872 → 1.000 |
+
+In the district preview, G-D07 went to Y3.1 instead of Y3 (domain only); the other nine matched.
+
+Verdict: **FAIL on G2**, because the regressions below were not named in advance. G1 and G3 pass.
+
+- **N040** "Soft Skills — Positive behaviors" (gold uncoded: "Not specific enough of an outcome
+  to code"): Y4 domain-only in both runs. The rule causes this, so it is not run noise. The Gold impact section predicted it would stay uncoded; that
+  prediction was wrong. Needs Severin's decision.
+- **N078** "Behavioral Competency Improvement" (gold Y4.2): Y4 domain-only in both runs. The baseline
+  already missed it (Y4.3), so it is not a regression, but the rule moves it.
+- **N036** (A1.2 → A2.1) and **N067** (Y4.3 → Y5.4) missed in run 2 only. The coders had split
+  on N036 too. Both are run noise.
+- On H027 the old held-out set lost one row in run 2; it was unstable in the baseline.
+
+### Revision after Severin's decision (2026-09-27)
+
+Severin chose to keep N040 uncoded and tighten the rule, not to recode N040. The "broad label"
+sub-bullet above was added. Its wording took three tries, all scored on the same sets:
+
+| Candidate | Examples in the new sub-bullet | Effect on held-out rows |
+|---|---|---|
+| c2 | life skills, 21st-century skills, positive youth development | N040 fixed; N055 "life skills" (gold Y7.7) went uncoded |
+| c3 | c2 without "life skills" | N055 fixed; N040 back to Y4 |
+| c4 (current) | c3 plus "non-cognitive skills", "well-rounded students" | N040 and N055 both correct |
+
+Results for c4 (`candidate4-3.1.0-*.json`):
+
+| Set | Lenient, 3.0.0 | Lenient, c4 | Kappa |
+|---|---|---|---|
+| design | 97.6% / 98.0% | 97.6% / 97.6% | .996 → .996 |
+| old held-out | 95.6% / 96.7% | 95.6% / 96.7% | .977 → .989 |
+| fresh held-out | 85.0% / 87.0% | 84.0% / 86.0% | .918 → .939 |
+| district preview (not a gate) | 10% / 10% | 100% / 90% | .872 → .870 |
+
+Rows correct in both baseline runs but wrong in a c4 run (none on the design or old held-out sets):
+
+- **N067** "Increased perseverance when facing challenges" (gold Y4.3) → Y5.4 in 7 of 8 candidate
+  runs. A Y4.3/Y5.4 boundary shift that comes with the longer rule text, not a domain-only error.
+  Named here as an accepted regression; a Y4.3 vs Y5.4 tie-breaker is a separate CP if it recurs.
+- **N076** "Generates return visits to HG sites" (gold Y2.6) → A2.5 in both c4 runs, correct in
+  c1 to c3. A Y2.6/A2.5 boundary case (repeat participation vs program output); c4's wording does
+  not touch either code, so it is likely prompt sensitivity. Named as an accepted regression.
+- **N036** (gold A1.2) → A2.1 in one run; it flips in c1, c2 and c4 as well. Noise.
+
+N078 "Behavioral Competency Improvement" (gold Y4.2) is Y4 domain-only in every candidate run. The
+baseline also missed it.
+
+**Held-out status.** The wording was revised against N040 and N055, and both held-out sets were
+scored after every revision, so neither set is held out for this CP any more. No held-out text
+appears in the prompt. The honest gate is the design set, where c4 has no regressions. The next
+clean test is fresh data: the district outcomes and the logic-model recode.
+
+Judge (second pass): FAIL as written, because of the unnamed N067 and N076 and the missing sub-bullet
+in Change. Both are now fixed in this section, which makes the verdict NEEDS-HUMAN: Severin decides
+whether to approve on a design-set-only gate.

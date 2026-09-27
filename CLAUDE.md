@@ -30,6 +30,9 @@ Read these before touching any codebook:
   parts, 13 domains, 39 categories and 98 codes. Gold: `gold/youth_outcomes_v3.gold.csv`
   (345 design/old held-out rows) and `gold/youth_outcomes_v3.heldout.gold.csv` (100 fresh
   rows, now used once), all adjudicated by Severin. The v2 draft stays an input only.
+- 3.1.0 (CP-09-09, approved 2026-09-27) adds domain-only coding: a statement that names one
+  domain but no specific result gets the domain with subcategory "none" and `uncoded` false;
+  exports carry a derived `specificity` column (code, domain, uncoded).
 - `codebooks/original.ts` (2.5.x) stays selectable in the coder app. Older files may use
   pre-2.0.0 numbers; see `codebook-refinement/renumbering/`.
 - A public explorer-only site is built from this repo with `VITE_SITE=explorer` (README,

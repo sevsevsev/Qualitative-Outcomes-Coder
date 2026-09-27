@@ -434,7 +434,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                            onChange={(e) => handleUpdate(item.internal_id, 'primary_subcategory', e.target.value)}
                            disabled={!item.primary_domain || !!item.uncoded || subcategoriesForDomain(codebookDef, item.primary_domain).length === 0}
                         >
-                           <option value="">-- Select Subcategory --</option>
+                           <option value="">{codebookDef.capabilities.domainOnly && item.primary_domain && !item.uncoded ? 'No specific code (domain only)' : '-- Select Subcategory --'}</option>
                            {subcategoriesForDomain(codebookDef, item.primary_domain).map(sc => (
                               <option key={sc.code} value={sc.code}>{sc.code}</option>
                            ))}

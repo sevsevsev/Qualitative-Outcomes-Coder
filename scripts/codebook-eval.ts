@@ -13,6 +13,7 @@
 // Flags:
 //   --gold <path>          default codebook-refinement/gold/original.gold.csv
 //   --codebook <id>        default original
+//   --set <name>           for a 3.x gold file (v3_gold column): design (default), heldout or heldout3
 //   --runs <n>             default 2 (the second run measures stability, STANDARDS S4.5)
 //   --include-proposed     also score rows humans haven't adjudicated yet (NOT valid as a gate)
 //   --applied-cps <a,b>    treat gold rows whose requires_cp is in this list as scoreable
@@ -25,8 +26,9 @@ import { GoogleGenAI } from '@google/genai';
 import { getCodebook, buildSystemInstruction, CodebookType } from '../codebooks/index.js';
 import { buildBatchResponseSchema } from '../codebooks/geminiSchema.js';
 import {
-  type CodedRow, type EvalSummary, codePrefix, cohensKappa, parseGold, regressions, scoreRows, selectScoreable,
+  type CodedRow, type EvalSummary, cohensKappa, itemCode, parseGold, regressions, scoreRows, selectScoreable,
 } from './codebookEvalScoring.js';
+import { parseCycle02Gold } from './scoreAppExport.js';
 
 const arg = (name: string): string | undefined => {
   const i = process.argv.indexOf(`--${name}`);
@@ -55,7 +57,7 @@ async function codeOnce(ai: GoogleGenAI, codebookId: CodebookType, items: { row_
       const splits: any[] = item.split_items ?? [];
       out.push({
         gold_id: String(item.row_id),
-        primary_codes: splits.map(s => (s.uncoded ? 'none' : codePrefix(s.primary_subcategory))),
+        primary_codes: splits.map(s => itemCode(s)),
         confidences: splits.map(s => String(s.primary_confidence ?? 'missing')),
         uncoded: splits.length > 0 && splits.every(s => s.uncoded),
       });
@@ -73,7 +75,10 @@ async function main() {
   const appliedCps = (arg('applied-cps') ?? '').split(',').map(s => s.trim()).filter(Boolean);
   const includeProposed = flag('include-proposed');
 
-  const gold = selectScoreable(parseGold(fs.readFileSync(goldPath, 'utf-8')), { includeProposed, appliedCps });
+  // A codebook 3.x gold file (v3_gold column) is read by set, like scripts/scoreAppExport.ts does.
+  const goldText = fs.readFileSync(goldPath, 'utf-8');
+  const goldRows = /^\uFEFF?[^\n]*\bv3_gold\b/.test(goldText) ? parseCycle02Gold(goldText, arg('set') ?? 'design') : parseGold(goldText);
+  const gold = selectScoreable(goldRows, { includeProposed, appliedCps });
   if (gold.length === 0) {
     throw new Error('No scoreable gold rows. Rows only count once a human sets status=adjudicated (or pass --include-proposed for a non-gating preview).');
   }
@@ -93,6 +98,7 @@ async function main() {
     codebook_id: codebookId,
     codebook_version: codebook.version,
     gold_path: goldPath,
+    set: arg('set') ?? null,
     gating: !includeProposed,
     applied_cps: appliedCps,
     n_rows: gold.length,

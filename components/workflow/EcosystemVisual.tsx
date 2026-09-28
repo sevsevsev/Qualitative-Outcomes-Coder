@@ -25,9 +25,9 @@ const WHEN_STYLE = [
 ];
 const DWELL_MS = [3400, 3800];
 
-/** Room above and below the drawing for the callouts. */
+/** Room above the drawing for the callouts. */
 const TOP = 50;
-const BOTTOM = 46;
+const BOTTOM = 4;
 const H = 360 + TOP + BOTTOM;
 
 const SCHOOL_X = [80, 230, 380];
@@ -65,9 +65,6 @@ const coverage = SCHOOL_X.map((_, s) => new Set(PROGRAMS.filter(p => p.schools.i
 
 const domainColor = (i: number) => `hsl(${hueFor(i)} 62% 52%)`;
 
-/** First domain no program at each school lists, for the hatched callout. */
-const firstGap = coverage.map(c => V3_DOMAINS.findIndex((_, i) => !c.has(i)));
-
 interface Callout {
   step: number;
   lines: string[];
@@ -75,8 +72,6 @@ interface Callout {
   y: number;
   /** Points the dotted leaders run to, in drawing coordinates. */
   to: [number, number][];
-  /** Leaders leave from below the text (true) or above it. */
-  below: boolean;
 }
 
 const LINE_H = 15;
@@ -88,35 +83,25 @@ const CALLOUTS: Callout[] = [
     lines: ['Programs working without knowing about each', 'other’s work or their connections to schools'],
     y: 30,
     to: [0, 1, 6].map(i => [PROGRAMS[i].apart[0], PROGRAMS[i].apart[1] - 22]),
-    below: true,
   },
   {
     step: 1,
     lines: ['Each program linked to the schools it serves:', 'what the Partnerships Dashboard shows today'],
     y: 30,
     to: [1, 7].map(i => [PROGRAMS[i].placed[0], PROGRAMS[i].placed[1] - 14]),
-    below: true,
   },
   {
     step: 2,
-    lines: ['Ring colors: the codebook domains', 'each program lists outcomes in'],
+    lines: ['Ring colors show the outcome domains', 'each program works toward'],
     y: 30,
     to: [2, 6].map(i => [PROGRAMS[i].placed[0], PROGRAMS[i].placed[1] - 14]),
-    below: true,
-  },
-  {
-    step: 2,
-    lines: ['Hatched: a domain no program at that school lists yet'],
-    y: TOP + 360 + 32,
-    to: [0, 2].map(s => [SCHOOL_X[s] - CARD.w / 2 + (CARD.w - STRIP_W) / 2 + cellX[firstGap[s]] + CELL / 2, CARD.y + 58 + 20]),
-    below: false,
   },
 ];
 
 /** Text plus dotted leaders to the parts of the picture it describes. */
 const CalloutMark: React.FC<{ c: Callout; show: boolean; none?: string }> = ({ c, show, none }) => {
   const half = (Math.max(...c.lines.map(l => l.length)) * CHAR_W) / 2;
-  const from = c.below ? c.y + (c.lines.length - 1) * LINE_H + 7 : c.y - 13;
+  const from = c.y + (c.lines.length - 1) * LINE_H + 7;
   return (
     <g className="f" style={{ opacity: show ? 1 : 0, transition: none }} aria-hidden>
       {c.to.map(([x, y], k) => {
@@ -212,8 +197,8 @@ const EcosystemVisual: React.FC = () => {
         <desc id="eco-desc">
           Example, not real data. {ECO_WHEN[0]}, {ECO_STEPS[0]}: eight programs, each walled off on its own, working without knowing about each
           other’s work or their connections to schools. {ECO_WHEN[1]}, {ECO_STEPS[1]}: each program is linked to the schools it serves, which
-          is what the Partnerships Dashboard shows today. {ECO_WHEN[2]}, {ECO_STEPS[2]}: each program is ringed with the colors of the codebook
-          domains it lists outcomes in, and each school shows which domains its programs cover, with the uncovered ones hatched.
+          is what the Partnerships Dashboard shows today. {ECO_WHEN[2]}, {ECO_STEPS[2]}: each program is ringed with the colors of the outcome
+          domains it works toward, and each school shows which domains its programs cover, with the uncovered ones hatched.
         </desc>
         <defs>
           <pattern id="eco-hatch" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">

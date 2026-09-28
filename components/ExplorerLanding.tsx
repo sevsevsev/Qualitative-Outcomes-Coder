@@ -86,8 +86,8 @@ const ExplorerLanding: React.FC<Props> = ({ siteName, codebookId, tryHref, bigPi
         <div className="flex-1 max-w-3xl">
           <h2 className="text-xl font-semibold tracking-tight text-slate-900">Part of a bigger picture</h2>
           <p className="mt-2 text-slate-600 leading-relaxed">
-            Our public <DashboardLink /> shows which programs work in which schools. Adding what each program aims for, coded
-            with this codebook, will help partners, funders and policymakers see shared goals and the gaps no program is
+            Our public <DashboardLink /> shows which programs work in which schools. Adding each program’s intended outcomes,
+            coded with this codebook, will help partners, funders and policymakers see shared goals and the gaps no program is
             covering yet.
           </p>
         </div>

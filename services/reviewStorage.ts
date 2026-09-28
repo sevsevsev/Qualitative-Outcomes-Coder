@@ -18,12 +18,14 @@ export interface SavedReviewState {
   savedAt: number;
 }
 
-export const saveReviewState = (state: SavedReviewState): void => {
+/** Returns false when the browser refused the save, so the screen can say so. */
+export const saveReviewState = (state: SavedReviewState): boolean => {
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    return true;
   } catch {
-    // Storage can be unavailable (private browsing, quota exceeded, etc.);
-    // autosave is a convenience, not a guarantee, so fail silently.
+    // Storage can be unavailable (private browsing, quota exceeded, etc.).
+    return false;
   }
 };
 

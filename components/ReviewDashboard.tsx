@@ -5,6 +5,7 @@ import { getCodebook, allDomainCodes, subcategoriesForDomain, subjectAreaMismatc
 import { atomicJsonToCSV } from '../services/geminiService.js';
 import { saveReviewState, clearReviewState } from '../services/reviewStorage.js';
 import { normalizeImportedCoding, upgradeLegacyLabel } from '../services/reviewNormalization.js';
+import { toBool, needsReview, reviewProgress, editMarksChecked, exportFilename } from '../services/reviewState.js';
 
 interface ReviewDashboardProps {
   result: BatchAnalysisResult;
@@ -49,7 +50,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
             primary_subcategory: normalized.primary_subcategory,
             primary_confidence: normalized.primary_confidence as ReviewItem['primary_confidence'],
             uncoded: normalized.uncoded,
-            is_corrected: item.is_corrected || false,
+            is_corrected: toBool(item.is_corrected),
             codebook_version: item.codebook_version || `${codebookDef.id}@${codebookDef.version}`,
             // Secondary codes aren't re-validated here, but old labels (from a
             // renumbered or renamed code) are carried over to the current ones,
@@ -70,45 +71,60 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
   // 1b. AUTOSAVE -- persist review progress so a refresh/crash can't lose it
   // ---------------------------------------------------------------------------
   const autosaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const isFirstRender = useRef(true);
+  const latestItems = useRef(items);
+  latestItems.current = items;
+  const [saveStatus, setSaveStatus] = useState<{ ok: boolean; at: number } | null>(null);
 
+  const saveNow = () => {
+    const cleanItems = latestItems.current.map(({ internal_id, ...rest }) => rest);
+    const at = Date.now();
+    setSaveStatus({ ok: saveReviewState({ codebookType, items: cleanItems, savedAt: at }), at });
+  };
+
+  // Save right away on mount, so a finished coding run survives a closed tab
+  // even before the first edit; after that, save shortly after each change.
+  const hasSavedOnce = useRef(false);
   useEffect(() => {
-    // Skip the save-on-mount; the initial snapshot is already what was
-    // just loaded/restored, nothing new to persist yet.
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
+    if (!hasSavedOnce.current) {
+      hasSavedOnce.current = true;
+      saveNow();
       return;
     }
     if (autosaveTimer.current) clearTimeout(autosaveTimer.current);
     autosaveTimer.current = setTimeout(() => {
-      const cleanItems = items.map(({ internal_id, ...rest }) => rest);
-      saveReviewState({ codebookType, items: cleanItems, savedAt: Date.now() });
+      autosaveTimer.current = null;
+      saveNow();
     }, AUTOSAVE_DEBOUNCE_MS);
-
     return () => {
       if (autosaveTimer.current) clearTimeout(autosaveTimer.current);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [items, codebookType]);
 
+  // Closing or hiding the tab inside the debounce window would drop the last
+  // edit; write it immediately instead.
+  useEffect(() => {
+    const flush = () => {
+      if (!autosaveTimer.current) return;
+      clearTimeout(autosaveTimer.current);
+      autosaveTimer.current = null;
+      saveNow();
+    };
+    const onVisibility = () => { if (document.visibilityState === 'hidden') flush(); };
+    window.addEventListener('pagehide', flush);
+    document.addEventListener('visibilitychange', onVisibility);
+    return () => {
+      window.removeEventListener('pagehide', flush);
+      document.removeEventListener('visibilitychange', onVisibility);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [codebookType]);
+
   // ---------------------------------------------------------------------------
-  // 2. NEEDS REVIEW LOGIC
+  // 2. NEEDS REVIEW LOGIC (services/reviewState.ts)
   // ---------------------------------------------------------------------------
-  const checkNeedsReview = (item: ReviewItem) => {
-      // RULE 1: If verified by user, it's done.
-      if (item.is_corrected) return false;
-
-      // RULE 2: If AI marked as Uncoded, verify it.
-      if (item.uncoded) return true;
-
-      // RULE 3: If Coded, verify completeness.
-      if (!item.primary_domain) return true;
-
-      const conf = (item.primary_confidence || 'none').trim().toLowerCase();
-      // 'low', 'none', or empty string need review. 'medium' and 'high' are OK.
-      if (['low', 'none', ''].includes(conf)) return true;
-
-      return false;
-  };
+  const checkNeedsReview = (item: ReviewItem) => needsReview(item);
+  const progress = useMemo(() => reviewProgress(items), [items]);
 
   // ---------------------------------------------------------------------------
   // 3. FILTERING & STATS
@@ -166,7 +182,8 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
   const handleUpdate = (internalId: string, field: keyof AtomicBatchItem, value: any) => {
     setItems(prev => prev.map(item => {
       if (item.internal_id === internalId) {
-        const updated = { ...item, [field]: value, is_corrected: true };
+        // A note alone doesn't mean the row's code was checked.
+        const updated = { ...item, [field]: value, is_corrected: item.is_corrected || editMarksChecked(String(field)) };
 
         if (field === 'primary_domain') {
           updated.primary_subcategory = '';
@@ -209,7 +226,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
     // Strip internal_id before export
     const cleanItems = items.map(({ internal_id, ...rest }) => rest);
     const csvContent = atomicJsonToCSV(cleanItems);
-    const filename = "verified_coded_outcomes.csv";
+    const filename = exportFilename(codebookDef.id, codebookDef.version);
     const blob = new Blob([csvContent], { type: "text/csv" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -218,11 +235,12 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    // The work is safely exported -- no need to keep holding it in autosave.
-    clearReviewState();
+    // The autosave is kept: the download may have been cancelled, and the
+    // exported CSV can't be loaded back into this screen. "Start Over" clears it.
   };
 
   const handleStartOver = () => {
+    if (!window.confirm('Start over? This clears the review saved in this browser. Export the CSV first if you want to keep it.')) return;
     clearReviewState();
     onReset();
   };
@@ -247,7 +265,14 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
           <div>
             <h2 className="text-2xl font-bold text-slate-900">Review & Verify Outcomes</h2>
-            <p className="text-slate-500 text-sm mt-1">Review the AI's coding. Items disappear from "Needs Review" as you verify them. Progress is autosaved in this browser.</p>
+            <p className="text-slate-500 text-sm mt-1">Review the AI's coding. Confirm a row when its code is right, or change it. A note alone doesn't count as checking a row.</p>
+            <p className={`text-sm mt-1 ${saveStatus && !saveStatus.ok ? 'text-red-700 font-semibold' : 'text-slate-600'}`} role={saveStatus && !saveStatus.ok ? 'alert' : 'status'} aria-live="polite">
+              {!saveStatus
+                ? 'Saving…'
+                : saveStatus.ok
+                  ? `Saved in this browser at ${new Date(saveStatus.at).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}. It comes back if you reload or reopen this page in this browser, but not in another browser or on another computer.`
+                  : 'Not saved: this browser refused to store your progress (private window or storage full). Export the CSV before you leave this page.'}
+            </p>
           </div>
           <div className="flex gap-3">
              <button
@@ -270,6 +295,13 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
            <div className="px-4 py-2 bg-slate-50 rounded-lg border border-slate-200">
               <span className="block text-slate-500 text-xs font-semibold uppercase">Total Items</span>
               <span className="font-mono font-bold text-lg text-slate-800">{stats.total}</span>
+           </div>
+           <div className="px-4 py-2 bg-blue-50 rounded-lg border border-blue-100">
+              <span className="block text-blue-700 text-xs font-semibold uppercase">Checked by a person</span>
+              <span className="font-mono font-bold text-lg text-blue-800">{progress.checked} of {progress.total}</span>
+              {progress.uncheckedNotFlagged > 0 && (
+                <span className="block text-xs text-slate-600 mt-0.5">{progress.uncheckedNotFlagged} medium or high rows not flagged and not checked yet</span>
+              )}
            </div>
            <div className="px-4 py-2 bg-red-50 rounded-lg border border-red-100">
               <span className="block text-red-500 text-xs font-semibold uppercase">Total Uncoded</span>
@@ -348,6 +380,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
               ) : (
                 displayedItems.map((item) => {
                   const reason = getReviewReason(item);
+                  const rowLabel = `${item.row_id}_${item.atomic_outcome_index}`;
                   const selectedDomainHint = item.primary_domain ? domainHint(item.primary_domain) : undefined;
                   const selectedSubHint = item.primary_domain && item.primary_subcategory
                      ? subcategoryHint(item.primary_domain, item.primary_subcategory)
@@ -361,11 +394,12 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                     <td className="px-4 py-5 text-xs font-mono text-slate-500 sticky left-0 bg-white group-hover:bg-slate-50/80 border-r border-slate-100 group-hover:border-slate-200 z-10 align-top shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">
                       <div className="font-semibold text-slate-600 flex items-center justify-between gap-1">
                           {item.row_id}_{item.atomic_outcome_index}
-                          {reason && !item.is_corrected && (
+                          {!item.is_corrected && (
                               <button
                                 onClick={() => handleManualVerify(item.internal_id)}
-                                className="text-slate-400 hover:text-green-600 transition-colors p-1"
-                                title="Confirm/Verify this item (clears from Needs Review)"
+                                className="text-slate-500 hover:text-green-700 transition-colors p-1"
+                                title="Confirm this code is right (marks the row checked)"
+                                aria-label={`Confirm the code for row ${rowLabel}`}
                               >
                                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                               </button>
@@ -375,7 +409,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                       <div className="flex flex-col gap-1 mt-1.5">
                         {item.is_corrected && (
                           <span className="inline-flex items-center px-1.5 py-0.5 rounded bg-blue-100 text-blue-700 text-[10px] font-bold tracking-wide w-fit">
-                            VERIFIED
+                            CHECKED
                           </span>
                         )}
                         {reason && !item.is_corrected && (
@@ -414,6 +448,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                          className={`w-full text-xs border-slate-300 rounded focus:ring-blue-500 focus:border-blue-500 bg-white text-slate-900 py-1.5 ${!item.primary_domain && !item.uncoded ? 'ring-2 ring-red-300 border-red-300' : ''}`}
                          value={item.primary_domain || ''}
                          onChange={(e) => handleUpdate(item.internal_id, 'primary_domain', e.target.value)}
+                         aria-label={`Primary domain for row ${rowLabel}`}
                          disabled={!!item.uncoded}
                       >
                          <option value="">{item.uncoded ? '-- Uncoded --' : '-- Select Domain --'}</option>
@@ -422,7 +457,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                          ))}
                       </select>
                       {selectedDomainHint && (
-                         <p className="mt-1 text-[11px] leading-snug text-slate-400 italic">{selectedDomainHint}</p>
+                         <p className="mt-1 text-xs leading-snug text-slate-600 italic">{selectedDomainHint}</p>
                       )}
                     </td>
 
@@ -432,6 +467,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                            className="w-full text-xs border-slate-300 rounded focus:ring-blue-500 focus:border-blue-500 bg-white text-slate-900 disabled:bg-slate-50 disabled:text-slate-400 py-1.5"
                            value={item.primary_subcategory || ''}
                            onChange={(e) => handleUpdate(item.internal_id, 'primary_subcategory', e.target.value)}
+                           aria-label={`Code for row ${rowLabel}`}
                            disabled={!item.primary_domain || !!item.uncoded || subcategoriesForDomain(codebookDef, item.primary_domain).length === 0}
                         >
                            <option value="">{codebookDef.capabilities.domainOnly && item.primary_domain && !item.uncoded ? 'No specific code (domain only)' : '-- Select Subcategory --'}</option>
@@ -440,7 +476,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                            ))}
                         </select>
                         {selectedSubHint && (
-                           <p className="mt-1 text-[11px] leading-snug text-slate-400 italic">{selectedSubHint}</p>
+                           <p className="mt-1 text-xs leading-snug text-slate-600 italic">{selectedSubHint}</p>
                         )}
                       </td>
                     )}
@@ -454,6 +490,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                          }`}
                          value={item.primary_confidence || 'none'}
                          onChange={(e) => handleUpdate(item.internal_id, 'primary_confidence', e.target.value)}
+                         aria-label={`Confidence for row ${rowLabel}`}
                          disabled={!!item.uncoded}
                       >
                          <option value="high" className="text-green-700">High</option>
@@ -469,6 +506,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                            className={`w-full text-xs border-slate-300 rounded focus:ring-blue-500 focus:border-blue-500 bg-white text-slate-900 py-1.5 disabled:bg-slate-50 disabled:text-slate-400 ${expectedSubjects ? 'ring-2 ring-amber-300 border-amber-300' : ''}`}
                            value={item.primary_subject_area || ''}
                            onChange={(e) => handleUpdate(item.internal_id, 'primary_subject_area', e.target.value)}
+                           aria-label={`Subject area for row ${rowLabel}`}
                            disabled={!!item.uncoded}
                         >
                            <option value="">-- Select --</option>
@@ -488,6 +526,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                            className="w-full text-xs border-slate-300 rounded focus:ring-blue-500 focus:border-blue-500 bg-white text-slate-900 py-1.5 disabled:bg-slate-50 disabled:text-slate-400"
                            value={item.primary_target_population || ''}
                            onChange={(e) => handleUpdate(item.internal_id, 'primary_target_population', e.target.value)}
+                           aria-label={`Population for row ${rowLabel}`}
                            disabled={!!item.uncoded}
                         >
                            <option value="">-- Select --</option>
@@ -505,6 +544,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                           checked={!!item.uncoded}
                           onChange={(e) => handleUpdate(item.internal_id, 'uncoded', e.target.checked)}
                           title="Mark as Uncoded"
+                          aria-label={`Uncoded, row ${rowLabel}`}
                        />
                     </td>
 
@@ -514,6 +554,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
                           value={item.notes || ''}
                           onChange={(e) => handleUpdate(item.internal_id, 'notes', e.target.value)}
                           placeholder="Notes..."
+                          aria-label={`Notes for row ${rowLabel}`}
                           rows={3}
                        />
                     </td>

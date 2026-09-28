@@ -102,6 +102,15 @@ const App: React.FC = () => {
   const handleAnalyze = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputText.trim() || needsSource) return;
+    // There is one save slot: a new run replaces the saved review.
+    if (restorableSession) {
+      const ok = window.confirm(
+        `You have a saved review from ${new Date(restorableSession.savedAt).toLocaleString()} (${restorableSession.items.length} items). ` +
+        'Starting a new run replaces it. Resume and export it first if you want to keep it. Start the new run anyway?'
+      );
+      if (!ok) return;
+      setRestorableSession(null);
+    }
 
     setStatus('analyzing');
     setError(null);
@@ -187,7 +196,7 @@ const App: React.FC = () => {
         {restorableSession && !batchResult && status !== 'analyzing' && (
           <div className="max-w-4xl mx-auto w-full mb-6 p-4 bg-blue-50 border border-blue-200 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="text-sm text-blue-900">
-              <span className="font-semibold">Unsaved review session found</span> from{' '}
+              <span className="font-semibold">Saved review found</span> from{' '}
               {new Date(restorableSession.savedAt).toLocaleString()} ({restorableSession.items.length} items, codebook: {CODEBOOK_REGISTRY[restorableSession.codebookType].label}{CODEBOOK_REGISTRY[restorableSession.codebookType].deprecated ? ', retired: you can review and export it, and new runs use the current codebook' : ''}).
             </div>
             <div className="flex gap-2 flex-shrink-0">

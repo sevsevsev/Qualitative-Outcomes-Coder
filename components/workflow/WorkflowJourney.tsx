@@ -1,16 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { V3_DOMAINS } from '../../codebooks/youthOutcomesV3.data.js';
 import { hueFor } from '../CodebookExplorer.js';
 import {
   CHAPTERS, EXAMPLE_ROWS, EXAMPLE_SCHOOL, FOLLOWED_STATEMENT, WORKFLOW_STAGES, domainOf, findV3Code,
 } from './workflowStages.js';
 
-// The six stages of the logic model project as one vertical journey: an
-// overview (today vs planned), then every stage in full with why it matters,
-// following one example statement from a partner's logic model to the planned
-// school view. Nothing runs on a timer; each stage's picture plays a short
-// entrance once when it first scrolls into view, and not at all under reduced
-// motion.
+// The six stages of the logic model project as a carousel the visitor moves
+// through (tabs, previous/next, arrow keys, swipe), following one example
+// statement from a partner's logic model to the planned school view. Each
+// stage says what happens and why it matters. Nothing runs on a timer; each
+// picture plays a short entrance when its stage opens, and not at all under
+// reduced motion.
 
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
@@ -226,71 +226,64 @@ const ANIM_CSS = `
   @media (prefers-reduced-motion: reduce){.wf-anim *{animation:none!important}}
 `;
 
-/** True from the first time the element is at least a third on screen. */
-const useSeen = (ref: React.RefObject<HTMLElement | null>) => {
-  const [seen, setSeen] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el || seen || typeof IntersectionObserver === 'undefined') return;
-    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setSeen(true); io.disconnect(); } }, { threshold: 0.33 });
-    io.observe(el);
-    return () => io.disconnect();
-  }, [ref, seen]);
-  return seen;
-};
+const chapterOf = (i: number) => CHAPTERS.findIndex(([, from, to]) => i >= from && i <= to);
 
-const stageId = (i: number) => `wf-stage-${i + 1}`;
-const scrollToStage = (i: number) =>
-  document.getElementById(stageId(i))?.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
-
-/** The overview: stages 1–5 in use today, stage 6 planned. Each item jumps to its stage. */
-const Overview: React.FC = () => {
-  const today = WORKFLOW_STAGES.filter(s => !s.planned);
-  const planned = WORKFLOW_STAGES.filter(s => s.planned);
-  const Item: React.FC<{ i: number }> = ({ i }) => {
+/** The overview doubles as the carousel's tabs: stages 1–5 in use today, stage 6 planned. */
+const Overview: React.FC<{ cur: number; onPick: (i: number) => void }> = ({ cur, onPick }) => {
+  const Item = (i: number) => {
     const s = WORKFLOW_STAGES[i];
+    const active = i === cur;
     return (
       <button
         type="button"
-        onClick={() => scrollToStage(i)}
-        className="group w-full h-full text-left flex items-start gap-2.5 rounded-xl bg-white p-3 ring-1 ring-slate-200/80 hover:ring-blue-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition-shadow"
+        role="tab"
+        id={`wf-tab-${i}`}
+        aria-selected={active}
+        aria-controls="wf-slide"
+        tabIndex={active ? 0 : -1}
+        onClick={() => onPick(i)}
+        className={`group w-full h-full text-left flex items-start gap-2.5 rounded-xl p-3 ring-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition ${
+          active ? (s.planned ? 'bg-white ring-2 ring-amber-400 shadow-sm' : 'bg-white ring-2 ring-blue-500 shadow-sm') : 'bg-white/70 ring-slate-200/80 hover:bg-white hover:ring-blue-300'
+        }`}
       >
-        <span className={`shrink-0 w-6 h-6 rounded-full text-xs font-semibold tabular-nums flex items-center justify-center ${s.planned ? 'bg-amber-100 text-amber-800' : 'bg-blue-600 text-white'}`}>{i + 1}</span>
+        <span className={`shrink-0 w-6 h-6 rounded-full text-xs font-semibold tabular-nums flex items-center justify-center ${
+          s.planned ? 'bg-amber-100 text-amber-800' : i <= cur ? 'bg-blue-600 text-white' : 'bg-white text-slate-500 ring-1 ring-inset ring-slate-300'
+        }`}>{i + 1}</span>
         <span className="flex flex-col gap-0.5 min-w-0">
-          <span className="text-sm font-semibold text-slate-900 leading-tight group-hover:text-blue-700">{s.label}</span>
+          <span className={`text-sm font-semibold leading-tight ${active ? 'text-slate-900' : 'text-slate-700 group-hover:text-blue-700'}`}>{s.label}</span>
           <span className={`text-xs leading-snug ${s.planned ? 'text-amber-700' : 'text-slate-500'}`}>{s.who}</span>
         </span>
       </button>
     );
   };
   return (
-    <nav aria-label="The six stages" className="grid gap-3 lg:grid-cols-[minmax(0,5fr)_minmax(0,1.25fr)]">
+    <div role="tablist" aria-label="The six stages" className="hidden sm:grid gap-3 lg:grid-cols-[minmax(0,5fr)_minmax(0,1.25fr)]">
       <div className="rounded-2xl bg-slate-100/80 p-3">
         <div className="px-1 pb-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-500">In use today</div>
-        <ol className="grid gap-2 grid-cols-1 sm:grid-cols-5">
-          {today.map(s => <li key={s.key}><Item i={WORKFLOW_STAGES.indexOf(s)} /></li>)}
-        </ol>
+        <div className="grid gap-2 grid-cols-5">{[0, 1, 2, 3, 4].map(i => <div key={i}>{Item(i)}</div>)}</div>
       </div>
       <div className="rounded-2xl border-2 border-dashed border-amber-300 bg-amber-50/60 p-3">
         <div className="px-1 pb-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-amber-700">Planned</div>
-        <ol start={6}>
-          {planned.map(s => <li key={s.key}><Item i={WORKFLOW_STAGES.indexOf(s)} /></li>)}
-        </ol>
+        {Item(5)}
       </div>
-    </nav>
+    </div>
   );
 };
 
-const StageRow: React.FC<{ i: number }> = ({ i }) => {
+const StageSlide: React.FC<{ i: number; animate: boolean }> = ({ i, animate }) => {
   const s = WORKFLOW_STAGES[i];
-  const ref = useRef<HTMLLIElement>(null);
-  const seen = useSeen(ref);
-  const [animate] = useState(() => !prefersReducedMotion());
+  const [chapter] = CHAPTERS[chapterOf(i)];
   return (
-    <li ref={ref} id={stageId(i)} className="scroll-mt-24 grid gap-6 lg:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)] items-start py-9 border-t border-slate-200 first:border-t-0">
+    <div
+      id="wf-slide"
+      role="tabpanel"
+      aria-labelledby={`wf-tab-${i}`}
+      className={`grid gap-6 lg:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)] items-start ${animate ? 'wf-anim' : ''}`}
+    >
       <div className="flex flex-col gap-3 min-w-0">
         <div className={`text-xs font-semibold uppercase tracking-[0.08em] ${s.planned ? 'text-amber-700' : 'text-blue-600'}`}>
-          Stage {i + 1}{s.planned ? ' · planned' : ''}
+          Stage {i + 1} of {WORKFLOW_STAGES.length}{s.planned ? ' · planned' : ''}
+          <span className="text-slate-400"> · Part {chapterOf(i) + 1}: {chapter}</span>
         </div>
         <h4 className="text-xl sm:text-2xl font-semibold tracking-tight leading-tight text-slate-900">{s.title}</h4>
         <p className="text-slate-700 leading-relaxed">{s.lead}</p>
@@ -323,7 +316,7 @@ const StageRow: React.FC<{ i: number }> = ({ i }) => {
       <figure
         className={`relative rounded-2xl p-3 sm:p-6 min-h-[260px] flex items-center justify-center ${
           s.planned ? 'pt-12 sm:pt-12 bg-[repeating-linear-gradient(135deg,#fffbeb_0_10px,#f1f4f9_10px_20px)]' : 'bg-[#f1f4f9]'
-        } ${animate && seen ? 'wf-anim' : ''}`}
+        }`}
       >
         {s.planned && (
           <span className="absolute top-3.5 right-3.5 text-[11.5px] font-semibold rounded-full bg-amber-100 text-amber-800 px-2.5 py-1">Planned · example data</span>
@@ -331,9 +324,25 @@ const StageRow: React.FC<{ i: number }> = ({ i }) => {
         <StageVisual stage={i} />
         <figcaption className="sr-only">Example for stage {i + 1}: {s.title}</figcaption>
       </figure>
-    </li>
+    </div>
   );
 };
+
+const Arrow: React.FC<{ dir: -1 | 1; disabled: boolean; onClick: () => void }> = ({ dir, disabled, onClick }) => (
+  <button
+    type="button"
+    onClick={onClick}
+    disabled={disabled}
+    aria-label={dir < 0 ? 'Previous stage' : 'Next stage'}
+    className={`w-11 h-11 rounded-full flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition-colors ${
+      dir > 0 ? 'bg-blue-600 hover:bg-blue-700 text-white disabled:bg-slate-200 disabled:text-slate-400' : 'bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:text-slate-300 disabled:hover:bg-slate-100'
+    }`}
+  >
+    <svg viewBox="0 0 20 20" className="w-[18px] h-[18px]" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
+      <path d={dir < 0 ? 'M12.5 4.5L7 10l5.5 5.5' : 'M7.5 4.5L13 10l-5.5 5.5'} />
+    </svg>
+  </button>
+);
 
 /** Where the followed sentence ends up: its two checked codes, named from the live codebook. */
 const EndCard: React.FC = () => {
@@ -350,39 +359,90 @@ const EndCard: React.FC = () => {
   );
 };
 
-/** The six stages as one vertical journey: an overview, then every stage in full, nothing on a timer. */
-const WorkflowJourney: React.FC = () => (
-  <div className="flex flex-col gap-8">
-    <style>{ANIM_CSS}</style>
-    <Overview />
-    <div className="rounded-2xl bg-white ring-1 ring-slate-200/70 p-5 sm:p-6">
-      <h3 className="font-semibold text-slate-900">Why not just read the logic models?</h3>
-      <p className="mt-1.5 text-slate-600 leading-relaxed max-w-4xl">
-        For one program, you could. But each program describes its goals in its own words and its own layout. One says “improve
-        attendance”, another says “students show up every day”. To see what all the programs at a school aim for together,
-        their goals have to be put in the same terms. That is the job of the codebook.
-      </p>
-    </div>
-    <div className="rounded-2xl bg-white shadow-[0_1px_2px_rgba(15,23,42,.05),0_8px_24px_rgba(15,23,42,.06)] px-4 sm:px-8 py-2">
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-xl bg-blue-50 px-3.5 py-2.5 mt-5 text-sm">
-        <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-blue-700">Our example, from Program A</span>
-        <q className="font-medium text-slate-900">{FOLLOWED_STATEMENT}</q>
+/**
+ * The six stages as a carousel the visitor moves through: the overview doubles
+ * as tabs, with previous/next buttons, arrow keys and swipe. Nothing runs on a
+ * timer. The end card appears on the last stage.
+ */
+const WorkflowJourney: React.FC = () => {
+  const n = WORKFLOW_STAGES.length;
+  const [cur, setCur] = useState(0);
+  const [animate] = useState(() => !prefersReducedMotion());
+  const touchX = useRef<number | null>(null);
+  const top = useRef<HTMLDivElement>(null);
+
+  const go = (i: number, focusTab = false) => {
+    const next = Math.max(0, Math.min(n - 1, i));
+    setCur(next);
+    if (focusTab) document.getElementById(`wf-tab-${next}`)?.focus();
+    // On phones the slide is long; bring its top back into view.
+    const el = top.current;
+    if (el && el.getBoundingClientRect().top < 0) el.scrollIntoView({ behavior: animate ? 'smooth' : 'auto', block: 'start' });
+  };
+
+  const onKey = (e: React.KeyboardEvent) => {
+    if ((e.target as HTMLElement).closest('summary, details[open] *')) return;
+    if (e.key === 'ArrowRight') go(cur + 1, true);
+    else if (e.key === 'ArrowLeft') go(cur - 1, true);
+    else if (e.key === 'Home') go(0, true);
+    else if (e.key === 'End') go(n - 1, true);
+    else return;
+    e.preventDefault();
+  };
+
+  return (
+    <div className="flex flex-col gap-6" onKeyDown={onKey}>
+      <style>{ANIM_CSS}</style>
+      <div className="rounded-2xl bg-white ring-1 ring-slate-200/70 p-5 sm:p-6">
+        <h3 className="font-semibold text-slate-900">Why not just read the logic models?</h3>
+        <p className="mt-1.5 text-slate-600 leading-relaxed max-w-4xl">
+          For one program, you could. But each program describes its goals in its own words and its own layout. One says “improve
+          attendance”, another says “students show up every day”. To see what all the programs at a school aim for together,
+          their goals have to be put in the same terms. That is the job of the codebook.
+        </p>
       </div>
-      {CHAPTERS.map(([title, from, to], c) => (
-        <section key={title} aria-labelledby={`wf-ch-${c}`} className="pt-8">
-          <h3 id={`wf-ch-${c}`} className="flex items-center gap-3 text-sm font-semibold text-slate-500">
-            <span className="uppercase tracking-[0.08em]">Part {c + 1}</span>
-            <span className="text-slate-900 text-base">{title}</span>
-            <span className="flex-1 h-px bg-slate-200" aria-hidden />
-          </h3>
-          <ol className="list-none" start={from + 1}>
-            {WORKFLOW_STAGES.slice(from, to + 1).map((s, k) => <StageRow key={s.key} i={from + k} />)}
-          </ol>
-        </section>
-      ))}
+      <div ref={top} className="scroll-mt-20 flex flex-col gap-4">
+        <Overview cur={cur} onPick={i => go(i)} />
+        <div
+          className="rounded-2xl bg-white shadow-[0_1px_2px_rgba(15,23,42,.05),0_8px_24px_rgba(15,23,42,.06)] p-4 sm:p-7 flex flex-col gap-6"
+          onTouchStart={e => { touchX.current = e.touches[0].clientX; }}
+          onTouchEnd={e => {
+            const start = touchX.current;
+            touchX.current = null;
+            if (start == null) return;
+            const dx = e.changedTouches[0].clientX - start;
+            if (Math.abs(dx) > 60) go(cur + (dx < 0 ? 1 : -1));
+          }}
+        >
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-xl bg-blue-50 px-3.5 py-2.5 text-sm">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-blue-700">Our example, from Program A</span>
+            <q className="font-medium text-slate-900">{FOLLOWED_STATEMENT}</q>
+          </div>
+          <StageSlide key={cur} i={cur} animate={animate} />
+          <div className="flex items-center justify-between gap-3 pt-1">
+            <Arrow dir={-1} disabled={cur === 0} onClick={() => go(cur - 1)} />
+            <div className="flex items-center gap-1.5" aria-hidden>
+              {WORKFLOW_STAGES.map((s, i) => (
+                <span
+                  key={s.key}
+                  className={`h-2 rounded-full transition-all ${i === cur ? 'w-6' : 'w-2'} ${
+                    s.planned ? (i === cur ? 'bg-amber-500' : 'bg-amber-200') : i === cur ? 'bg-blue-600' : i < cur ? 'bg-blue-300' : 'bg-slate-200'
+                  }`}
+                />
+              ))}
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="hidden sm:inline text-sm text-slate-500">
+                {cur < n - 1 ? <>Next: <span className="font-medium text-slate-700">{WORKFLOW_STAGES[cur + 1].label}</span></> : 'Last stage'}
+              </span>
+              <Arrow dir={1} disabled={cur === n - 1} onClick={() => go(cur + 1)} />
+            </div>
+          </div>
+        </div>
+      </div>
+      {cur === n - 1 && <EndCard />}
     </div>
-    <EndCard />
-  </div>
-);
+  );
+};
 
 export default WorkflowJourney;

@@ -100,11 +100,11 @@ export const WORKFLOW_STAGES: WorkflowStage[] = [
   {
     key: 'record',
     label: 'Shared record',
-    who: 'All programs, one list',
+    who: 'One list for all programs',
     title: 'Every program’s goals, in one shared language',
     lead: 'The checked rows are saved together in one record of every program’s intended outcomes, all labeled with the same codes.',
     why: 'This is the step that makes comparison possible. Two programs that described their goals in different words now share a code, so they can sit side by side.',
-    facts: [['Who', 'All programs, one list'], ['What comes out', 'Coded intended outcomes for every program']],
+    facts: [['Where', 'One shared record'], ['What comes out', 'Coded intended outcomes for every program']],
     more: [
       'Each code belongs to a larger group called a domain, such as Academic Learning & Achievement. Each domain is about one of three groups: young people; families; or staff, organizations and systems.',
       'Each row also notes which version of the codebook it was coded with. The codebook is revised over time, so the version shows which definitions applied.',

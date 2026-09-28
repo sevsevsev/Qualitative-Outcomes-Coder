@@ -5,11 +5,12 @@ import {
   CHAPTERS, EXAMPLE_ROWS, EXAMPLE_SCHOOL, FOLLOWED_STATEMENT, WORKFLOW_STAGES, domainOf, findV3Code,
 } from './workflowStages.js';
 
-// The six stages of the logic model project as an auto-advancing stepper, with
-// one example statement followed from a partner's logic model to the planned
-// school view. Like the landing page's sunburst, it moves on its own until a
-// visitor clicks or presses a key, then stops for good; hovering the picture
-// only pauses it. Under reduced motion it starts paused and nothing animates.
+// The six stages of the logic model project as one vertical journey: an
+// overview (today vs planned), then every stage in full with why it matters,
+// following one example statement from a partner's logic model to the planned
+// school view. Nothing runs on a timer; each stage's picture plays a short
+// entrance once when it first scrolls into view, and not at all under reduced
+// motion.
 
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
@@ -95,8 +96,8 @@ const StageVisual: React.FC<{ stage: number }> = ({ stage }) => {
       return (
         <Table head={['Section', 'Content']} cols={cols}>
           <Row cols={cols} i={0}><span className="text-slate-500">Activities, outputs <b className="block text-[10.5px] font-semibold uppercase tracking-[0.06em] text-slate-400">Not coded</b></span><span className="text-slate-500">Teaching artists · weekly sessions · students served</span><span className="hidden sm:block" /></Row>
-          <Row cols={cols} i={1} followed><span>Short-term outcome</span><span>{FOLLOWED_STATEMENT}</span><span className="text-xs font-semibold text-blue-700 max-sm:col-start-2 max-sm:!pt-0">To coding →</span></Row>
-          <Row cols={cols} i={2}><span>Long-term outcome</span><span>Youth will gain confidence speaking in front of groups.</span><span className="text-xs font-semibold text-blue-700 max-sm:col-start-2 max-sm:!pt-0">To coding →</span></Row>
+          <Row cols={cols} i={1} followed><span>Short-term outcome</span><span>{FOLLOWED_STATEMENT}</span><span className="text-xs font-semibold text-blue-700 max-sm:col-start-2 max-sm:!pt-0">Gets a code →</span></Row>
+          <Row cols={cols} i={2}><span>Long-term outcome</span><span>Youth will gain confidence speaking in front of groups.</span><span className="text-xs font-semibold text-blue-700 max-sm:col-start-2 max-sm:!pt-0">Gets a code →</span></Row>
           <Row cols={cols} i={3}><span className="text-slate-500">Couldn’t place</span><span className="text-slate-500">Text the tool could not place</span><span className="max-sm:col-start-2 max-sm:!pt-0"><b className="text-[11px] font-semibold text-amber-700 bg-amber-100 rounded-full px-2 py-0.5 whitespace-nowrap">Needs review</b></span></Row>
         </Table>
       );
@@ -312,7 +313,7 @@ const StageRow: React.FC<{ i: number }> = ({ i }) => {
         <details className="group text-sm">
           <summary className="cursor-pointer select-none font-semibold text-blue-700 hover:text-blue-800 list-none inline-flex items-center gap-1">
             <svg viewBox="0 0 20 20" className="w-4 h-4 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden><path d="M7.5 4.5L13 10l-5.5 5.5" /></svg>
-            More about this step
+            More about this stage
           </summary>
           <div className="mt-2 flex flex-col gap-2 text-slate-600 leading-relaxed pl-5">
             {s.more.map(t => <p key={t}>{t}</p>)}
@@ -342,8 +343,8 @@ const EndCard: React.FC = () => {
       <h3 className="text-lg font-semibold text-slate-900">One sentence, two dots on a chart</h3>
       <p className="mt-2 text-slate-700 leading-relaxed max-w-3xl">
         “{FOLLOWED_STATEMENT}” began as one line in one program’s plan. It is now two checked intended outcomes, one under{' '}
-        {domains[0]} and one under {domains[1]}. Next to every other program’s outcomes, it helps show what a school’s partners
-        aim for together.
+        {domains[0]} and one under {domains[1]}. Once the dashboard shows outcomes (planned), it would sit next to every other
+        program’s outcomes and help show what a school’s partners aim for together.
       </p>
     </div>
   );

@@ -105,8 +105,8 @@ const EcosystemVisual: React.FC = () => {
       <svg viewBox="0 0 460 360" className="w-full h-auto" role="img" aria-labelledby="eco-desc">
         <desc id="eco-desc">
           Example, not real data. {ECO_STEPS[0]}: eight programs scattered on their own. {ECO_STEPS[1]}: each program is linked to
-          the schools it serves. {ECO_STEPS[2]}: each school shows which outcome areas its programs aim for, and outlines the
-          areas no program aims for.
+          the schools it serves. {ECO_STEPS[2]}: each school shows which domains, or outcome areas, its programs aim for, and
+          outlines the areas no program aims for.
         </desc>
 
         <text x={458} y={14} textAnchor="end" className="fill-slate-400" style={{ font: '600 10px system-ui, sans-serif', letterSpacing: '.06em' }}>

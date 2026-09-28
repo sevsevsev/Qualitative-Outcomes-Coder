@@ -60,7 +60,7 @@ export const GapFigure: React.FC<{ kind: Kind }> = ({ kind }) => {
         <span>{scope}</span>
         <span className="text-slate-400">Example</span>
       </div>
-      <svg viewBox={`0 0 ${w} ${h}`} width={w} height={h} className="mt-1.5 max-w-full h-auto" aria-hidden>
+      <svg viewBox={`0 0 ${w} ${h}`} width={Math.round(w * 1.3)} height={Math.round(h * 1.3)} className="mt-1.5 max-w-full h-auto" aria-hidden>
         {cols.map((c, j) => (
           <text key={c} x={labelW + j * cell + cell / 2} y={11} textAnchor="middle" fill="#64748b" style={{ font: '600 10px system-ui, sans-serif' }}>{c}</text>
         ))}

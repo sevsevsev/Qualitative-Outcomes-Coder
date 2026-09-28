@@ -39,15 +39,15 @@ export const DashboardLink: React.FC<{ className?: string }> = ({ className = ''
 
 /** The three audience cards: who can act on shared goals and on each kind of gap. */
 export const WHO_IT_HELPS: { who: string; gap?: string; what: string; figure: 'shared' | 'content' | 'programming' }[] = [
-  { who: 'Partners', what: 'Find programs with the same goals, and schools where your work could fill a gap.', figure: 'shared' },
-  { who: 'Funders', gap: 'Gaps in content', what: 'See which outcomes few programs aim for, at one school or across the city.', figure: 'content' },
-  { who: 'Policymakers', gap: 'Gaps in programming', what: 'See schools where no program aims at an outcome students need.', figure: 'programming' },
+  { who: 'Partners', what: 'Find programs with the same goals, and schools where your work might add something new.', figure: 'shared' },
+  { who: 'Funders', gap: 'Gaps in content', what: 'See which outcomes few programs across the city aim for.', figure: 'content' },
+  { who: 'Policymakers', gap: 'Gaps in programming', what: 'See schools where no program aims for a given outcome.', figure: 'programming' },
 ];
 
 export const WHAT_IT_IS_NOT = [
-  'It shows programs’ intended outcomes, in their own words. It does not measure results.',
-  'It is not a rating or ranking. A gap is about coverage. It is never a judgment of any partner.',
-  'An AI assistant suggests codes. A person checks every one before it is saved.',
+  'It is about programs’ intended outcomes, taken from their own plans. It does not measure results.',
+  'It is not a rating or ranking. A gap is about coverage, not quality. It is never a judgment of any partner or school.',
+  'An AI assistant suggests codes. A person checks them before they go into the shared record.',
   'The dashboard does not show outcomes yet. That part is planned.',
 ];
 
@@ -59,21 +59,25 @@ const BiggerPicture: React.FC<{ codebookHref: string; tryHref: string }> = ({ co
         <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 leading-[1.1]">The bigger picture</h1>
         <p className="mt-5 text-lg sm:text-xl text-slate-700 leading-relaxed">
           Many organizations serve Philadelphia’s young people, often without knowing who else works in the same school or
-          toward the same goals. The {OFFICE} tracks school partnerships. Its public <DashboardLink /> shows who does what,
-          and where.
+          toward the same goals. The {OFFICE} keeps the district’s record of school partnerships. Its public <DashboardLink />{' '}
+          shows who does what, and where.
         </p>
         <p className="mt-4 text-slate-600 leading-relaxed">
           Next, we plan to add each program’s <strong className="font-semibold text-slate-800">intended outcomes</strong>: the
-          changes it hopes to see. They come from the program’s logic model, its written plan. A codebook, a shared list of
-          outcome types, sorts them so programs can be compared. You will see where programs share goals and where there are
-          gaps.
+          changes it hopes to see. They come from the program’s logic model, a short written plan. We sort them with a codebook, a
+          shared list of outcome types, so programs can be read side by side. The aim is to show where programs share goals and
+          where there are gaps.
         </p>
       </section>
       <EcosystemVisual />
     </div>
 
     <section className="mt-14">
-      <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Shared goals, and two kinds of gap</h2>
+      <h2 className="text-2xl font-semibold tracking-tight text-slate-900 flex flex-wrap items-center gap-x-3 gap-y-1">
+        Shared goals, and two kinds of gap
+        <span className="text-[11.5px] font-semibold tracking-normal rounded-full bg-amber-100 text-amber-800 px-2.5 py-1">Planned</span>
+      </h2>
+      <p className="mt-2 text-slate-600 max-w-3xl">Once outcomes are on the dashboard, each group could use them in its own way.</p>
       <ul className="mt-5 grid gap-4 md:grid-cols-3">
         {WHO_IT_HELPS.map(({ who, gap, what, figure }) => (
           <li key={who} className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200/70 flex flex-col gap-3">
@@ -100,9 +104,9 @@ const BiggerPicture: React.FC<{ codebookHref: string; tryHref: string }> = ({ co
     <section className="mt-16">
       <h2 className="text-2xl font-semibold tracking-tight text-slate-900">From a program’s plan to a shared picture</h2>
       <p className="mt-2 text-slate-600 max-w-3xl leading-relaxed">
-        Every partner program writes down what it hopes will change for the young people and families it serves, in its own
-        words and its own format. Here is how those plans become one record where programs can be compared. Follow one
-        sentence from Program A through six stages. Stages 1 to 5 happen today. Stage 6 is planned.
+        Partner programs write down what they hope will change for the young people and families they serve, in their own
+        words and their own format. Here is how those plans become one shared record, read side by side. Follow one sentence
+        from Program A through six stages. Stages 1 to 5 happen today. Stage 6 is planned.
       </p>
       <div className="mt-6">
         <WorkflowJourney />
@@ -113,7 +117,7 @@ const BiggerPicture: React.FC<{ codebookHref: string; tryHref: string }> = ({ co
       <div>
         <h2 className="text-lg font-semibold text-slate-900">Explore the codebook</h2>
         <p className="mt-1 text-slate-600 leading-relaxed">
-          The codebook is still being refined. Notes from people who run and fund programs shape each new version.
+          The codebook is still being refined. If you run or fund a program, we welcome your notes: they shape each new version.
         </p>
       </div>
       <div className="flex flex-wrap gap-3 shrink-0">

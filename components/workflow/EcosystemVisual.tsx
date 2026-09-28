@@ -15,7 +15,7 @@ import { hueFor } from '../CodebookExplorer.js';
 // scrolls into view, stops on the last step, and offers Replay. Under reduced
 // motion it shows the last step and nothing moves.
 
-export const ECO_STEPS = ['Siloed', 'Who works where', 'Outcomes and gaps'] as const;
+export const ECO_STEPS = ['Siloed', 'Who works where', 'Mapping collective goals'] as const;
 /** When each step is: the office's work so far, the Dashboard today, and the planned outcomes view. */
 export const ECO_WHEN = ['Before', 'Today', 'Soon'] as const;
 const WHEN_STYLE = [

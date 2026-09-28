@@ -396,8 +396,9 @@ const WorkflowJourney: React.FC = () => {
       <div className="rounded-2xl bg-white ring-1 ring-slate-200/70 p-5 sm:p-6">
         <h3 className="font-semibold text-slate-900">Why not just read the logic models?</h3>
         <p className="mt-1.5 text-slate-600 leading-relaxed max-w-4xl">
-          For one program, you could. But each program describes its goals in its own words and its own layout. One says “improve
-          attendance”, another says “students show up every day”. To see what all the programs at a school aim for together,
+          For one program, you could. But the office’s partnerships database shows that hundreds of programs operate across
+          Philadelphia, and each describes its goals in its own words and its own layout. One says “improve attendance”, another
+          says “students show up every day”. To see what all the programs at a school, or across the city, aim for together,
           their goals have to be put in the same terms. That is the job of the codebook.
         </p>
       </div>

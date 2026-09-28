@@ -5,7 +5,7 @@ import { getCodebook, allDomainCodes, subcategoriesForDomain, subjectAreaMismatc
 import { atomicJsonToCSV } from '../services/geminiService.js';
 import { saveReviewState, clearReviewState } from '../services/reviewStorage.js';
 import { normalizeImportedCoding, upgradeLegacyLabel } from '../services/reviewNormalization.js';
-import { toBool, needsReview, reviewProgress, editMarksChecked, exportFilename } from '../services/reviewState.js';
+import { toBool, needsReview, reviewProgress, editMarksChecked, exportFilename, withAiOriginal, assignSample, sampleStats, widenSample, reviewStatus, SAMPLE_RATES, WIDEN_CHANGE_RATE } from '../services/reviewState.js';
 
 interface ReviewDashboardProps {
   result: BatchAnalysisResult;
@@ -37,7 +37,9 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
   // ---------------------------------------------------------------------------
   const [items, setItems] = useState<ReviewItem[]>(() => {
     const rawItems = result.items || [];
-    return rawItems.map((item, index) => {
+    // Keep the AI's own answer beside the reviewer's, then draw the fixed
+    // sample of medium/high rows (both kept as-is on a resumed review).
+    return assignSample(rawItems.map((item, index) => {
         // GENERATE UNIQUE ID: Critical for handling CSVs with duplicate row_ids
         const internal_id = `row_${index}_${Math.random().toString(36).substr(2, 9)}`;
 
@@ -60,7 +62,7 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
             secondary_domain_2: upgradeLegacyLabel(item.secondary_domain_2, codebookDef, 'domain', item.codebook_version),
             secondary_subcategory_2: upgradeLegacyLabel(item.secondary_subcategory_2, codebookDef, 'subcategory', item.codebook_version),
         };
-    });
+    }).map(withAiOriginal));
   });
 
   const [filterMode, setFilterMode] = useState<'all' | 'review'>('all');
@@ -125,6 +127,8 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
   // ---------------------------------------------------------------------------
   const checkNeedsReview = (item: ReviewItem) => needsReview(item);
   const progress = useMemo(() => reviewProgress(items), [items]);
+  const sample = useMemo(() => sampleStats(items), [items]);
+  const handleWiden = (level: 'medium' | 'high') => setItems(prev => widenSample(prev, level));
 
   // ---------------------------------------------------------------------------
   // 3. FILTERING & STATS
@@ -224,7 +228,10 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
 
   const handleDownload = () => {
     // Strip internal_id before export
-    const cleanItems = items.map(({ internal_id, ...rest }) => rest);
+    const cleanItems = items.map(item => {
+      const { internal_id: _id, ...rest } = item;
+      return { ...rest, review_status: reviewStatus(item) };
+    });
     const csvContent = atomicJsonToCSV(cleanItems);
     const filename = exportFilename(codebookDef.id, codebookDef.version);
     const blob = new Blob([csvContent], { type: "text/csv" });
@@ -250,6 +257,8 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
   // ---------------------------------------------------------------------------
   const getReviewReason = (item: ReviewItem) => {
       if (!checkNeedsReview(item)) return null;
+      if (item.review_sample === 'sampled') return "Sampled check";
+      if (item.review_sample === 'all_checked') return "Check all";
       if (item.uncoded) return "Verify Uncoded";
       if (!item.primary_domain) return "Missing Code";
       const conf = (item.primary_confidence || '').toLowerCase();
@@ -300,9 +309,18 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
               <span className="block text-blue-700 text-xs font-semibold uppercase">Checked by a person</span>
               <span className="font-mono font-bold text-lg text-blue-800">{progress.checked} of {progress.total}</span>
               {progress.uncheckedNotFlagged > 0 && (
-                <span className="block text-xs text-slate-600 mt-0.5">{progress.uncheckedNotFlagged} medium or high rows not flagged and not checked yet</span>
+                <span className="block text-xs text-slate-600 mt-0.5">{progress.uncheckedNotFlagged} medium or high rows accepted without a check (not in the sample)</span>
               )}
            </div>
+           {sample.filter(s => s.sampled > 0).map(s => (
+             <div key={s.level} className="px-4 py-2 bg-slate-50 rounded-lg border border-slate-200">
+                <span className="block text-slate-600 text-xs font-semibold uppercase">{s.level} sample ({Math.round(SAMPLE_RATES[s.level] * 100)}%)</span>
+                <span className="font-mono font-bold text-lg text-slate-800">{s.checked} of {s.sampled} checked</span>
+                <span className="block text-xs text-slate-600 mt-0.5">
+                  {s.checked > 0 ? `${s.changed} changed (${Math.round((s.changed / s.checked) * 100)}%)` : 'None checked yet'}
+                </span>
+             </div>
+           ))}
            <div className="px-4 py-2 bg-red-50 rounded-lg border border-red-100">
               <span className="block text-red-500 text-xs font-semibold uppercase">Total Uncoded</span>
               <span className="font-mono font-bold text-lg text-red-700">{stats.uncoded}</span>
@@ -313,6 +331,21 @@ const ReviewDashboard: React.FC<ReviewDashboardProps> = ({ result, onReset, code
            </div>
         </div>
       </div>
+
+      {sample.filter(s => s.suggestWiden).map(s => (
+        <div key={s.level} role="status" className="p-4 bg-amber-50 border border-amber-300 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-sm text-amber-900">
+          <span>
+            <span className="font-semibold">{s.changed} of {s.checked} checked {s.level}-confidence sample rows needed a change</span>{' '}
+            (over {Math.round(WIDEN_CHANGE_RATE * 100)}%). The {s.notSampled} {s.level}-confidence rows outside the sample may need a look too.
+          </span>
+          <button
+            onClick={() => handleWiden(s.level)}
+            className="px-4 py-2 font-medium text-white bg-amber-700 hover:bg-amber-800 rounded-lg flex-shrink-0"
+          >
+            Check all {s.notSampled} {s.level} rows
+          </button>
+        </div>
+      ))}
 
       {/* Filters & Controls */}
       <div className="flex flex-col sm:flex-row justify-between items-center gap-4 bg-white p-4 rounded-xl border border-slate-200 shadow-sm sticky top-16 z-20">

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { V3_DOMAINS } from '../../codebooks/youthOutcomesV3.data.js';
+import { hueFor } from '../CodebookExplorer.js';
 
 // The picture beside the "bigger picture" intro, in three steps: programs
 // working apart, the same programs placed at the schools they serve (what the
@@ -8,12 +9,12 @@ import { V3_DOMAINS } from '../../codebooks/youthOutcomesV3.data.js';
 // Programs and schools are example data; the strip has one cell per domain of
 // the live codebook, grouped by part.
 //
-// Marks match the stepper's stage 6: blue = a program aims here, amber outline
-// = none does (amber means planned across the page). It plays once when it
+// Colors are the codebook's domain colors (the same hues as the explorer and
+// the sunburst); a hatched cell is a domain no program at that school lists. It plays once when it
 // scrolls into view, stops on the last step, and offers Replay. Under reduced
 // motion it shows the last step and nothing moves.
 
-export const ECO_STEPS = ['Working apart', 'Who works where', 'Goals and gaps'] as const;
+export const ECO_STEPS = ['Working apart', 'Who works where', 'Outcomes and gaps'] as const;
 const DWELL_MS = [2200, 2600];
 
 const SCHOOL_X = [80, 230, 380];
@@ -49,8 +50,29 @@ const STRIP_W = cellX[cellX.length - 1] + CELL;
 
 const coverage = SCHOOL_X.map((_, s) => new Set(PROGRAMS.filter(p => p.schools.includes(s)).flatMap(p => p.domains)));
 
-const BLUE = '#2563eb';
-const AMBER = '#f59e0b';
+const domainColor = (i: number) => `hsl(${hueFor(i)} 62% 52%)`;
+
+/** A ring split into one arc per domain the program lists. */
+const Ring: React.FC<{ domains: number[]; r: number }> = ({ domains, r }) => {
+  const gap = domains.length > 1 ? 0.22 : 0;
+  const seg = (Math.PI * 2) / domains.length;
+  return (
+    <>
+      {domains.map((d, k) => {
+        const a0 = -Math.PI / 2 + k * seg + gap / 2;
+        const a1 = a0 + seg - gap;
+        const [x0, y0, x1, y1] = [r * Math.cos(a0), r * Math.sin(a0), r * Math.cos(a1), r * Math.sin(a1)];
+        return (
+          <path
+            key={d}
+            d={`M${x0} ${y0}A${r} ${r} 0 ${a1 - a0 > Math.PI ? 1 : 0} 1 ${x1} ${y1}`}
+            fill="none" stroke={domainColor(d)} strokeWidth={5} strokeLinecap="round"
+          />
+        );
+      })}
+    </>
+  );
+};
 
 const SchoolGlyph: React.FC = () => (
   <g fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinejoin="round">
@@ -105,9 +127,15 @@ const EcosystemVisual: React.FC = () => {
       <svg viewBox="0 0 460 360" className="w-full h-auto" role="img" aria-labelledby="eco-desc">
         <desc id="eco-desc">
           Example, not real data. {ECO_STEPS[0]}: eight programs scattered on their own. {ECO_STEPS[1]}: each program is linked to
-          the schools it serves. {ECO_STEPS[2]}: each school shows which domains, or outcome areas, its programs aim for, and
-          outlines the areas no program aims for.
+          the schools it serves. {ECO_STEPS[2]}: each program is ringed with the colors of the codebook domains its intended
+          outcomes fall in, and each school shows which domains its programs cover, with the uncovered ones hatched.
         </desc>
+        <defs>
+          <pattern id="eco-hatch" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <rect width="3" height="3" fill="#fff" />
+            <line x1="0" y1="0" x2="0" y2="3" stroke="#94a3b8" strokeWidth="1" />
+          </pattern>
+        </defs>
 
         <text x={458} y={14} textAnchor="end" className="fill-slate-400" style={{ font: '600 10px system-ui, sans-serif', letterSpacing: '.06em' }}>
           EXAMPLE DATA
@@ -143,8 +171,8 @@ const EcosystemVisual: React.FC = () => {
                   <rect
                     key={d.id}
                     x={cellX[i]} y={0} width={CELL} height={20} rx={2}
-                    fill={on ? BLUE : '#fffbeb'}
-                    stroke={on ? 'none' : AMBER}
+                    fill={on ? domainColor(i) : 'url(#eco-hatch)'}
+                    stroke={on ? 'none' : '#cbd5e1'}
                     strokeWidth={1.2}
                   />
                 );
@@ -163,15 +191,16 @@ const EcosystemVisual: React.FC = () => {
                 fill="none" stroke="#cbd5e1" strokeWidth={1.2} strokeDasharray="3 3"
                 className="f" style={{ opacity: placed ? 0 : 1, transition: none }}
               />
-              <circle r={12} fill={aims ? BLUE : '#fff'} stroke={aims ? BLUE : '#94a3b8'} strokeWidth={1.6} className="f" />
+              <circle r={12} fill="#fff" stroke="#94a3b8" strokeWidth={1.6} />
+              <g className="f" style={{ opacity: aims ? 1 : 0, transition: none }}><Ring domains={p.domains} r={12} /></g>
             </g>
           );
         })}
       </svg>
 
       <figcaption className="mt-3 flex flex-col items-center gap-2.5">
-        <div className="flex items-center gap-2">
-          <div className="inline-flex rounded-full bg-slate-100 p-1 text-xs font-medium" role="group" aria-label="Steps of the picture">
+        <div className="flex items-center justify-center gap-2 max-w-full">
+          <div className="inline-flex flex-wrap justify-center rounded-3xl bg-slate-100 p-1 text-xs font-medium" role="group" aria-label="Steps of the picture">
             {ECO_STEPS.map((label, i) => (
               <button
                 key={label}
@@ -205,12 +234,14 @@ const EcosystemVisual: React.FC = () => {
             Program
           </li>
           <li className="inline-flex items-center gap-1.5">
-            <svg viewBox="0 0 12 12" className="w-3 h-3" aria-hidden><rect x="2.5" y="1" width="7" height="10" rx="1.5" fill={BLUE} /></svg>
-            A program aims here
+            <svg viewBox="0 0 30 12" className="w-[30px] h-3" aria-hidden>
+              {[0, 3, 6].map((d, k) => <rect key={d} x={1 + k * 10} y="1" width="7" height="10" rx="1.5" fill={domainColor(d)} />)}
+            </svg>
+            A program lists an outcome in this domain
           </li>
           <li className="inline-flex items-center gap-1.5">
-            <svg viewBox="0 0 12 12" className="w-3 h-3" aria-hidden><rect x="2.5" y="1" width="7" height="10" rx="1.5" fill="#fffbeb" stroke={AMBER} strokeWidth="1.2" /></svg>
-            No program aims here
+            <svg viewBox="0 0 12 12" className="w-3 h-3" aria-hidden><rect x="2.5" y="1" width="7" height="10" rx="1.5" fill="url(#eco-hatch)" stroke="#cbd5e1" strokeWidth="1" /></svg>
+            No program lists one yet
           </li>
         </ul>
       </figcaption>

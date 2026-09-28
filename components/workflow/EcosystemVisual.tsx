@@ -92,7 +92,7 @@ const CALLOUTS: Callout[] = [
   },
   {
     step: 2,
-    lines: ['Ring colors: the codebook domains', 'each program lists outcomes in'],
+    lines: ['Ring colors show the outcome domains', 'each program works toward'],
     y: 30,
     to: [2, 6].map(i => [PROGRAMS[i].placed[0], PROGRAMS[i].placed[1] - 14]),
   },
@@ -197,8 +197,8 @@ const EcosystemVisual: React.FC = () => {
         <desc id="eco-desc">
           Example, not real data. {ECO_WHEN[0]}, {ECO_STEPS[0]}: eight programs, each walled off on its own, working without knowing about each
           other’s work or their connections to schools. {ECO_WHEN[1]}, {ECO_STEPS[1]}: each program is linked to the schools it serves, which
-          is what the Partnerships Dashboard shows today. {ECO_WHEN[2]}, {ECO_STEPS[2]}: each program is ringed with the colors of the codebook
-          domains it lists outcomes in, and each school shows which domains its programs cover, with the uncovered ones hatched.
+          is what the Partnerships Dashboard shows today. {ECO_WHEN[2]}, {ECO_STEPS[2]}: each program is ringed with the colors of the outcome
+          domains it works toward, and each school shows which domains its programs cover, with the uncovered ones hatched.
         </desc>
         <defs>
           <pattern id="eco-hatch" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">

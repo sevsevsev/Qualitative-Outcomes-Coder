@@ -5,8 +5,9 @@ import { explorerHref, hueFor } from './CodebookExplorer.js';
 
 // The landing page's picture of the codebook: domains on the inner ring,
 // their codes on the outer ring, drawn from the live codebook. Every slice
-// links into the explorer. Until a visitor points at it, taps it or tabs into
-// it, it lifts out one random code after another so real code names go by.
+// links into the explorer. It lifts out one random code after another so real
+// code names go by: hovering pauses that, and tapping or tabbing into it stops
+// it for good. Under reduced motion the highlight still moves, without the lift.
 
 const SIZE = 400;
 const C = SIZE / 2;
@@ -25,9 +26,10 @@ const CodebookSunburst: React.FC<{ data: ExplorerCodebook }> = ({ data }) => {
   const [pointer, setPointer] = useState<Active | null>(null);
   const [animate] = useState(() => !prefersReducedMotion());
   const [auto, setAuto] = useState(() => Math.floor(Math.random() * Math.max(layout.codes.length, 1)));
-  // Cycling stops for good once the visitor engages with the chart.
+  // Hover only pauses cycling: a cursor resting where the chart loads fires
+  // mouseenter with no intent behind it. Tapping or tabbing in stops it for good.
   const [touched, setTouched] = useState(false);
-  const cycling = animate && !touched;
+  const cycling = !touched && !pointer;
 
   // Jump to a random code, in a different domain from the last one so the
   // highlight moves around the ring.
@@ -62,7 +64,7 @@ const CodebookSunburst: React.FC<{ data: ExplorerCodebook }> = ({ data }) => {
   })();
 
   const on = (a: Active) => ({
-    onMouseEnter: () => { setTouched(true); setPointer(a); },
+    onMouseEnter: () => setPointer(a),
     onMouseLeave: () => setPointer(null),
     onFocus: () => { setTouched(true); setPointer(a); },
     onBlur: () => setPointer(null),
@@ -78,6 +80,7 @@ const CodebookSunburst: React.FC<{ data: ExplorerCodebook }> = ({ data }) => {
         .sb-link:focus-visible .sb-slice { stroke: #0f172a; stroke-width: 2.5; }
         @keyframes sb-fade { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: none; } }
         .sb-animate ~ div .sb-fade { animation: sb-fade .4s ease both; }
+        @media (prefers-reduced-motion: reduce) { .sb-slice { transition: none; } }
       `}</style>
       <svg
         viewBox={`0 0 ${SIZE} ${SIZE}`}

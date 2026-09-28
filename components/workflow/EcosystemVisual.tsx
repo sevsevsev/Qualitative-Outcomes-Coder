@@ -13,7 +13,9 @@ import { hueFor } from '../CodebookExplorer.js';
 // the sunburst); a hatched cell is a domain no program at that school lists. Each
 // step has a short callout with dotted leaders to what it describes. It plays once when it
 // scrolls into view, stops on the last step, and offers Replay. Under reduced
-// motion it shows the last step and nothing moves.
+// motion it still steps through, but each step swaps in place with nothing
+// sliding or fading: many school and office machines turn animations off at
+// the system level, and the sequence is the point of the picture.
 
 export const ECO_STEPS = ['Siloed', 'Who works where', 'Mapping collective goals'] as const;
 /** When each step is: the office's work so far, the Dashboard today, and the planned outcomes view. */
@@ -155,9 +157,9 @@ const reducedMotion = () =>
 
 const EcosystemVisual: React.FC = () => {
   const [still] = useState(reducedMotion);
-  const [step, setStep] = useState(still ? 2 : 0);
+  const [step, setStep] = useState(0);
   const [playing, setPlaying] = useState(false);
-  const [played, setPlayed] = useState(still);
+  const [played, setPlayed] = useState(false);
   const ref = useRef<HTMLElement>(null);
 
   // Start once, the first time at least half the picture is on screen.
@@ -292,7 +294,7 @@ const EcosystemVisual: React.FC = () => {
               </button>
             ))}
           </div>
-          {!still && played && !playing && (
+          {played && !playing && (
             <button
               type="button"
               onClick={replay}

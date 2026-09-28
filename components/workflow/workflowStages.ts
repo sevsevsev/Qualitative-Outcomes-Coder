@@ -20,15 +20,28 @@ export const FOLLOWED_STATEMENT = 'Students will attend school more regularly an
 
 export interface WorkflowStage {
   key: 'receive' | 'extract' | 'suggest' | 'check' | 'record' | 'explore';
+  /** Short name used in the overview strip. */
   label: string;
   who: string;
   title: string;
+  /** What happens at this stage. */
   lead: string;
+  /** Why the stage matters, or what it builds toward. */
+  why: string;
   facts: [string, string][];
+  /** "More about this step": definitions and detail, one paragraph per entry. */
+  more: string[];
   /** What has happened to the followed statement by this stage. */
   follow: string;
   planned?: boolean;
 }
+
+/** Three chapters over the six stages: [title, first stage index, last stage index]. */
+export const CHAPTERS: [string, number, number][] = [
+  ['Gather the plans', 0, 1],
+  ['Put them in shared terms', 2, 3],
+  ['Look across programs', 4, 5],
+];
 
 export const WORKFLOW_STAGES: WorkflowStage[] = [
   {
@@ -36,54 +49,80 @@ export const WORKFLOW_STAGES: WorkflowStage[] = [
     label: 'Partners share',
     who: 'Partner organizations',
     title: 'Partners share their logic models',
-    lead: 'Most partners upload a logic model on the form they complete during annual school partner onboarding. Others email it or send it another way.',
-    facts: [['Who', 'Partner organizations'], ['Comes out', 'A logic model for each program']],
-    follow: "In Program A's logic model",
+    lead: 'Partner programs send the Office of Strategic Partnerships their logic models. A logic model is a short plan that sets out what a program does and what it hopes will change for the people it serves.',
+    why: 'Everything that follows starts from the partner’s own words. We do not set anyone’s goals here. We start from the goals programs set for themselves.',
+    facts: [['Who', 'Partner organizations'], ['What comes out', 'A logic model for each program']],
+    more: [
+      'Most partners upload their logic model on the annual School Partner onboarding form, which they fill in while preparing their School Partner Agreement. Others email it or send it another way.',
+      'A logic model usually has columns like these: inputs (staff, space, funding), activities (what the program does), outputs (how much it does, such as sessions held) and outcomes (what it hopes will change).',
+    ],
+    follow: 'In Program A’s logic model, under outcomes',
   },
   {
     key: 'extract',
-    label: 'Content extracted',
+    label: 'Outcomes pulled out',
     who: 'Logic Model Extractor',
-    title: 'The content is pulled out of each logic model',
-    lead: 'An internal tool writes every item in a logic model to its own row, labelled by section. The outcome rows go on to be coded.',
-    facts: [['Who', 'Logic Model Extractor (internal)'], ['Comes out', 'One row per item, by section']],
-    follow: 'Extracted as a short-term outcome',
+    title: 'A tool sorts each plan into rows and pulls out the outcomes',
+    lead: 'An internal tool puts every item in a logic model on its own row, labeled with the section it came from: activity, output, outcome, and so on.',
+    why: 'Once every plan has the same shape, each program’s intended outcomes can be found, whatever the original layout looked like. Only the outcome rows move on to the next stage.',
+    facts: [['Who', 'Logic Model Extractor (internal tool)'], ['What comes out', 'One row per item; only outcomes move on']],
+    more: [
+      'Activities and outputs matter; they are just not what this codebook sorts. “Weekly tutoring sessions” describes what a program does. “Students will attend school more regularly” describes a change it hopes to see: an intended outcome. The codebook is a list of those changes.',
+    ],
+    follow: 'Pulled out as a short-term outcome',
   },
   {
     key: 'suggest',
     label: 'AI suggests codes',
-    who: 'Outcomes coder',
+    who: 'AI assistant',
     title: 'An AI assistant suggests a code for each outcome',
-    lead: 'The outcomes coder splits sentences that bundle several outcomes, then suggests one code for each from this codebook. It can only pick codes that exist here, and it can leave a statement uncoded.',
-    facts: [['Who', 'AI assistant in the outcomes coder']],
-    follow: 'Split into 2 outcomes, codes suggested',
+    lead: 'An AI assistant (Google Gemini) suggests which code from the codebook fits each outcome. A code is a short, defined label, such as “Attendance & School Stability”.',
+    why: 'Programs say the same thing in different words. A code gives all of those versions one name, so they can be counted together. A suggestion is only a first draft.',
+    facts: [['Who', 'AI assistant'], ['What comes out', 'A suggested code for each outcome']],
+    more: [
+      'A sentence that holds more than one outcome is split first, so each outcome gets its own code. Our example becomes two outcomes, one about students and one about families.',
+      'The assistant can only choose codes that exist in the codebook. If a sentence names no outcome, or is too vague to place, it is left without a code. When the fit is weak, the suggestion is marked low confidence so the reviewer looks closely. You can try the same assistant on a sentence of your own on the Code a statement page.',
+    ],
+    follow: 'Split into 2 outcomes, each with a suggested code',
   },
   {
     key: 'check',
     label: 'A person checks',
     who: 'Reviewer',
-    title: 'A person checks every row',
-    lead: 'A reviewer confirms or corrects each suggestion before anything is saved. The AI suggests; a person decides.',
-    facts: [['Who', 'A reviewer'], ['Comes out', 'Codes a person has checked']],
+    title: 'A person checks every suggestion',
+    lead: 'A reviewer reads each outcome with its suggested code, then confirms the code or picks a better one.',
+    why: 'An AI can misread a sentence. In our example, it reads “confidence speaking in front of groups” as general confidence, and the reviewer picks a better code. The AI suggests; a person decides.',
+    facts: [['Who', 'A reviewer'], ['What comes out', 'Codes a person has checked']],
+    more: ['When the reviewer changes a code, the checked code is saved in its place. Only checked codes go into the shared record.'],
     follow: 'Both codes confirmed by a reviewer',
   },
   {
     key: 'record',
-    label: 'Checked record',
-    who: 'Outcomes coder',
-    title: 'One checked, shared record',
-    lead: "Every program's intended outcomes now use the same codes, so they can sit side by side. Each row records the codebook version it was coded with.",
-    facts: [['Comes out', 'Coded intended outcomes for every program']],
-    follow: 'Two coded rows in the shared record',
+    label: 'Shared record',
+    who: 'All programs together',
+    title: 'Programs’ outcomes, in shared terms',
+    lead: 'The checked rows are saved together in one record of every program’s intended outcomes, all labeled with the same codes.',
+    why: 'This is the stage that lets programs be seen together. Two programs that described their goals in different words now share a code, so they can sit side by side.',
+    facts: [['Where', 'One shared record'], ['What comes out', 'Coded intended outcomes for every program']],
+    more: [
+      'Each code belongs to a larger topic called a domain, such as Academic Learning & Achievement. Each domain is about who changes: young people; families and other adults in a program; or staff, organizations and systems.',
+      'Each row also notes which version of the codebook it was coded with. The codebook is revised over time, so the version shows which definitions applied.',
+    ],
+    follow: 'Saved as two rows in the shared record',
   },
   {
     key: 'explore',
     label: 'Explore by school',
     who: 'Partnerships Dashboard',
-    title: "See what each school's partners aim for",
-    lead: "We plan to add the coded outcomes to the Partnerships Dashboard. Pick a school to see what its partners are working toward together, and where no program is aiming.",
-    facts: [['Where', 'Partnerships Dashboard (planned)']],
-    follow: 'Counted under Program A',
+    title: 'See what each school’s partners aim for',
+    lead: 'We plan to add the shared record to the public Partnerships Dashboard. You would pick a school and see what its partner programs aim for, together.',
+    why: 'One program at a time, you cannot see overlap or gaps. Side by side, you could see where many programs aim for the same outcome and where none do. Partners, funders and the district could then plan together.',
+    facts: [['Where', 'Partnerships Dashboard (planned)'], ['What comes out', 'A view of each school’s intended outcomes']],
+    more: [
+      'We will look for two kinds of gap. A content gap is an outcome that few programs across the city aim for. A programming gap is an outcome that no program at a school aims for.',
+      'Both describe coverage: what programs wrote down as their goals. They say nothing about how well a school or program is doing, and they are not a rating or ranking of anyone.',
+    ],
+    follow: 'Program A’s two outcomes, on the school’s chart',
     planned: true,
   },
 ];

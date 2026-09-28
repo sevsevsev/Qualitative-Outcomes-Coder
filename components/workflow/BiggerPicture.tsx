@@ -1,6 +1,7 @@
 import React from 'react';
 import { PARTNERSHIPS_DASHBOARD_URL } from './workflowStages.js';
 import WorkflowStepper from './WorkflowStepper.js';
+import EcosystemVisual from './EcosystemVisual.js';
 import ospLogo from '../../assets/osp-logo.png';
 
 // "The bigger picture" page of the explorer site (#/bigger-picture): why the
@@ -43,21 +44,24 @@ export const WHO_IT_HELPS: [string, string][] = [
 
 const BiggerPicture: React.FC<{ codebookHref: string; tryHref: string }> = ({ codebookHref, tryHref }) => (
   <div className="max-w-6xl mx-auto w-full">
-    <section className="pt-2 sm:pt-8 max-w-3xl">
-      <div className="text-xs font-semibold uppercase tracking-[0.1em] text-blue-600 mb-3">{OFFICE} · {DISTRICT}</div>
-      <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 leading-[1.1]">The bigger picture</h1>
-      <p className="mt-5 text-lg sm:text-xl text-slate-700 leading-relaxed">
-        Many organizations serve Philadelphia’s young people, often without knowing who else works in the same school or
-        toward the same goals. The {OFFICE} keeps a database of school partnerships and a public <DashboardLink /> where
-        anyone can look up programs, the schools they serve, and program details.
-      </p>
-      <p className="mt-4 text-slate-600 leading-relaxed">
-        Today the dashboard shows who is doing what, and where. We plan to add what each program is trying to achieve,
-        taken from its own logic model and coded with this codebook. That will show where many programs share a goal and
-        where few or none do, at one school or across the city, so partners, funders and policymakers can see where to
-        fill gaps in content or in programming.
-      </p>
-    </section>
+    <div className="pt-2 sm:pt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_400px] lg:items-center">
+      <section className="max-w-3xl">
+        <div className="text-xs font-semibold uppercase tracking-[0.1em] text-blue-600 mb-3">{OFFICE} · {DISTRICT}</div>
+        <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 leading-[1.1]">The bigger picture</h1>
+        <p className="mt-5 text-lg sm:text-xl text-slate-700 leading-relaxed">
+          Many organizations serve Philadelphia’s young people, often without knowing who else works in the same school or
+          toward the same goals. The {OFFICE} keeps a database of school partnerships and a public <DashboardLink /> where
+          anyone can look up programs, the schools they serve, and program details.
+        </p>
+        <p className="mt-4 text-slate-600 leading-relaxed">
+          Today the dashboard shows who is doing what, and where. We plan to add what each program is trying to achieve,
+          taken from its own logic model and coded with this codebook. That will show where many programs share a goal and
+          where few or none do, at one school or across the city, so partners, funders and policymakers can see where to
+          fill gaps in content or in programming.
+        </p>
+      </section>
+      <EcosystemVisual />
+    </div>
 
     <section className="mt-10">
       <h2 className="sr-only">Who it helps</h2>

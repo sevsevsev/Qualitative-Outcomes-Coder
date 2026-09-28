@@ -101,10 +101,10 @@ const ExplorerLanding: React.FC<Props> = ({ siteName, codebookId, tryHref, bigPi
         <div>
           <h2 className="text-lg font-semibold text-slate-900">Why a codebook</h2>
           <p className="mt-2 text-slate-600 leading-relaxed">
-            The Partnerships Dashboard shows that hundreds of programs operate across Philadelphia, and each describes its goals in
-            its own words and its own layout. One says “improve attendance”, another says “students show up every day”. To see
-            what all the programs at a school, or across the city, aim for together, their goals have to be put in the same terms.
-            That is the job of the codebook. It is meant for any program that serves young people, not one kind of program.
+            The Partnerships Dashboard shows that hundreds of programs operate across Philadelphia. Each one writes its goals
+            differently: one says “improve attendance”, another says “students show up every day”. To see what all the programs
+            at a school, or across the city, work toward together, their goals have to be put in the same terms. That is the job
+            of the codebook. It is meant for any program that serves young people, not one kind of program.
           </p>
         </div>
         <div>

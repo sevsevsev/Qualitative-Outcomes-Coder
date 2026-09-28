@@ -397,10 +397,10 @@ const WorkflowJourney: React.FC = () => {
         <h3 className="font-semibold text-slate-900">Why not just read the logic models?</h3>
         <p className="mt-1.5 text-slate-600 leading-relaxed max-w-4xl">
           For one program, you could. But the Partnerships Dashboard shows that hundreds of programs operate across
-          Philadelphia. It doesn’t yet show what those programs are working toward, or which outcomes no program is
-          covering. Each one writes its goals differently: one says “improve attendance”, another says “students show
-          up every day”. To see what all the programs at a school, or across the city, work toward together, their
-          goals have to be put in the same terms. That is the job of the codebook.
+          Philadelphia. Many also list their intended outcomes there, but that text can’t yet be added up across
+          programs to show shared goals or gaps. Each one writes its goals differently: one says “improve attendance”,
+          another says “students show up every day”. To see what all the programs at a school, or across the city,
+          work toward together, their goals have to be put in the same terms. That is the job of the codebook.
         </p>
       </div>
       <div ref={top} className="scroll-mt-20 flex flex-col gap-4">

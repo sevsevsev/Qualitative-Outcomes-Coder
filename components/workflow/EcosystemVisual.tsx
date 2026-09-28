@@ -14,7 +14,7 @@ import { hueFor } from '../CodebookExplorer.js';
 // scrolls into view, stops on the last step, and offers Replay. Under reduced
 // motion it shows the last step and nothing moves.
 
-export const ECO_STEPS = ['Working apart', 'Who works where', 'Outcomes and gaps'] as const;
+export const ECO_STEPS = ['Siloed', 'Who works where', 'Outcomes and gaps'] as const;
 const DWELL_MS = [2200, 2600];
 
 const SCHOOL_X = [80, 230, 380];
@@ -126,7 +126,7 @@ const EcosystemVisual: React.FC = () => {
       `}</style>
       <svg viewBox="0 0 460 360" className="w-full h-auto" role="img" aria-labelledby="eco-desc">
         <desc id="eco-desc">
-          Example, not real data. {ECO_STEPS[0]}: eight programs scattered on their own. {ECO_STEPS[1]}: each program is linked to
+          Example, not real data. {ECO_STEPS[0]}: eight programs, each walled off on its own. {ECO_STEPS[1]}: each program is linked to
           the schools it serves. {ECO_STEPS[2]}: each program is ringed with the colors of the codebook domains its intended
           outcomes fall in, and each school shows which domains its programs cover, with the uncovered ones hatched.
         </desc>

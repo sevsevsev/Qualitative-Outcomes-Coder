@@ -5,17 +5,30 @@ import { hueFor } from '../CodebookExplorer.js';
 // The picture beside the "bigger picture" intro, in three steps: programs
 // working apart, the same programs placed at the schools they serve (what the
 // Partnerships Dashboard shows today), then what they aim for, with each
-// school's strip of outcome areas showing where no program aims (planned).
+// school's strip of outcome areas showing where no program lists one (planned).
 // Programs and schools are example data; the strip has one cell per domain of
 // the live codebook, grouped by part.
 //
 // Colors are the codebook's domain colors (the same hues as the explorer and
-// the sunburst); a hatched cell is a domain no program at that school lists. It plays once when it
+// the sunburst); a hatched cell is a domain no program at that school lists. Each
+// step has a short callout with dotted leaders to what it describes. It plays once when it
 // scrolls into view, stops on the last step, and offers Replay. Under reduced
 // motion it shows the last step and nothing moves.
 
-export const ECO_STEPS = ['Siloed', 'Who works where', 'Outcomes and gaps'] as const;
-const DWELL_MS = [2200, 2600];
+export const ECO_STEPS = ['Siloed', 'Who works where', 'Mapping collective goals'] as const;
+/** When each step is: the office's work so far, the Dashboard today, and the planned outcomes view. */
+export const ECO_WHEN = ['Before', 'Today', 'Soon'] as const;
+const WHEN_STYLE = [
+  { bg: '#e2e8f0', fg: '#334155' },
+  { bg: '#dbeafe', fg: '#1d4ed8' },
+  { bg: '#fef3c7', fg: '#92400e' },
+];
+const DWELL_MS = [3400, 3800];
+
+/** Room above and below the drawing for the callouts. */
+const TOP = 50;
+const BOTTOM = 46;
+const H = 360 + TOP + BOTTOM;
 
 const SCHOOL_X = [80, 230, 380];
 const CARD = { y: 256, w: 136, h: 92 };
@@ -51,6 +64,77 @@ const STRIP_W = cellX[cellX.length - 1] + CELL;
 const coverage = SCHOOL_X.map((_, s) => new Set(PROGRAMS.filter(p => p.schools.includes(s)).flatMap(p => p.domains)));
 
 const domainColor = (i: number) => `hsl(${hueFor(i)} 62% 52%)`;
+
+/** First domain no program at each school lists, for the hatched callout. */
+const firstGap = coverage.map(c => V3_DOMAINS.findIndex((_, i) => !c.has(i)));
+
+interface Callout {
+  step: number;
+  lines: string[];
+  /** Baseline of the first line, in picture coordinates. */
+  y: number;
+  /** Points the dotted leaders run to, in drawing coordinates. */
+  to: [number, number][];
+  /** Leaders leave from below the text (true) or above it. */
+  below: boolean;
+}
+
+const LINE_H = 15;
+const CHAR_W = 6.1;
+
+const CALLOUTS: Callout[] = [
+  {
+    step: 0,
+    lines: ['Programs working without knowing about each', 'other’s work or their connections to schools'],
+    y: 30,
+    to: [0, 1, 6].map(i => [PROGRAMS[i].apart[0], PROGRAMS[i].apart[1] - 22]),
+    below: true,
+  },
+  {
+    step: 1,
+    lines: ['Each program linked to the schools it serves:', 'what the Partnerships Dashboard shows today'],
+    y: 30,
+    to: [1, 7].map(i => [PROGRAMS[i].placed[0], PROGRAMS[i].placed[1] - 14]),
+    below: true,
+  },
+  {
+    step: 2,
+    lines: ['Ring colors: the codebook domains', 'each program lists outcomes in'],
+    y: 30,
+    to: [2, 6].map(i => [PROGRAMS[i].placed[0], PROGRAMS[i].placed[1] - 14]),
+    below: true,
+  },
+  {
+    step: 2,
+    lines: ['Hatched: a domain no program at that school lists yet'],
+    y: TOP + 360 + 32,
+    to: [0, 2].map(s => [SCHOOL_X[s] - CARD.w / 2 + (CARD.w - STRIP_W) / 2 + cellX[firstGap[s]] + CELL / 2, CARD.y + 58 + 20]),
+    below: false,
+  },
+];
+
+/** Text plus dotted leaders to the parts of the picture it describes. */
+const CalloutMark: React.FC<{ c: Callout; show: boolean; none?: string }> = ({ c, show, none }) => {
+  const half = (Math.max(...c.lines.map(l => l.length)) * CHAR_W) / 2;
+  const from = c.below ? c.y + (c.lines.length - 1) * LINE_H + 7 : c.y - 13;
+  return (
+    <g className="f" style={{ opacity: show ? 1 : 0, transition: none }} aria-hidden>
+      {c.to.map(([x, y], k) => {
+        const ty = y + TOP;
+        const sx = Math.min(Math.max(x, 230 - half + 8), 230 + half - 8);
+        return (
+          <g key={k}>
+            <line x1={sx} y1={from} x2={x} y2={ty} stroke="#64748b" strokeWidth={1.1} strokeDasharray="2 3" />
+            <circle cx={x} cy={ty} r={2.2} fill="#64748b" />
+          </g>
+        );
+      })}
+      <text x={230} y={c.y} textAnchor="middle" fill="#334155" style={{ font: '500 12.5px system-ui, sans-serif' }}>
+        {c.lines.map((l, k) => <tspan key={k} x={230} dy={k ? LINE_H : 0}>{l}</tspan>)}
+      </text>
+    </g>
+  );
+};
 
 /** A ring split into one arc per domain the program lists. */
 const Ring: React.FC<{ domains: number[]; r: number }> = ({ domains, r }) => {
@@ -113,7 +197,7 @@ const EcosystemVisual: React.FC = () => {
   const pick = (i: number) => { setPlaying(false); setPlayed(true); setStep(i); };
   const replay = () => { setStep(0); setPlaying(true); };
   const placed = step >= 1;
-  const aims = step >= 2;
+  const lists = step >= 2;
   const none = still ? 'none' : undefined;
 
   return (
@@ -124,11 +208,12 @@ const EcosystemVisual: React.FC = () => {
         .eco .d1{transition-delay:.45s}
         @media (prefers-reduced-motion: reduce){.eco *{transition:none!important}}
       `}</style>
-      <svg viewBox="0 0 460 360" className="w-full h-auto" role="img" aria-labelledby="eco-desc">
+      <svg viewBox={`0 0 460 ${H}`} className="w-full h-auto" role="img" aria-labelledby="eco-desc">
         <desc id="eco-desc">
-          Example, not real data. {ECO_STEPS[0]}: eight programs, each walled off on its own. {ECO_STEPS[1]}: each program is linked to
-          the schools it serves. {ECO_STEPS[2]}: each program is ringed with the colors of the codebook domains its intended
-          outcomes fall in, and each school shows which domains its programs cover, with the uncovered ones hatched.
+          Example, not real data. {ECO_WHEN[0]}, {ECO_STEPS[0]}: eight programs, each walled off on its own, working without knowing about each
+          other’s work or their connections to schools. {ECO_WHEN[1]}, {ECO_STEPS[1]}: each program is linked to the schools it serves, which
+          is what the Partnerships Dashboard shows today. {ECO_WHEN[2]}, {ECO_STEPS[2]}: each program is ringed with the colors of the codebook
+          domains it lists outcomes in, and each school shows which domains its programs cover, with the uncovered ones hatched.
         </desc>
         <defs>
           <pattern id="eco-hatch" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -140,11 +225,14 @@ const EcosystemVisual: React.FC = () => {
         <text x={458} y={14} textAnchor="end" className="fill-slate-400" style={{ font: '600 10px system-ui, sans-serif', letterSpacing: '.06em' }}>
           EXAMPLE DATA
         </text>
-        <g className="f" style={{ opacity: aims ? 1 : 0, transition: none }}>
-          <rect x={0} y={2} width={62} height={18} rx={9} fill="#fef3c7" />
-          <text x={31} y={15} textAnchor="middle" fill="#92400e" style={{ font: '600 10.5px system-ui, sans-serif' }}>Planned</text>
-        </g>
+        {ECO_WHEN.map((w, i) => (
+          <g key={w} className="f" style={{ opacity: step === i ? 1 : 0, transition: none }}>
+            <rect x={0} y={2} width={56} height={18} rx={9} fill={WHEN_STYLE[i].bg} />
+            <text x={28} y={15} textAnchor="middle" fill={WHEN_STYLE[i].fg} style={{ font: '600 10.5px system-ui, sans-serif' }}>{w}</text>
+          </g>
+        ))}
 
+        <g transform={`translate(0 ${TOP})`}>
         {PROGRAMS.map((p, i) =>
           p.schools.map(s => (
             <line
@@ -164,7 +252,7 @@ const EcosystemVisual: React.FC = () => {
             <text x={CARD.w / 2} y={46} textAnchor="middle" className="fill-slate-600" style={{ font: '600 11px system-ui, sans-serif' }}>
               School {s + 1}
             </text>
-            <g transform={`translate(${(CARD.w - STRIP_W) / 2} 58)`} className="f" style={{ opacity: aims ? 1 : 0, transition: none }}>
+            <g transform={`translate(${(CARD.w - STRIP_W) / 2} 58)`} className="f" style={{ opacity: lists ? 1 : 0, transition: none }}>
               {V3_DOMAINS.map((d, i) => {
                 const on = coverage[s].has(i);
                 return (
@@ -192,25 +280,29 @@ const EcosystemVisual: React.FC = () => {
                 className="f" style={{ opacity: placed ? 0 : 1, transition: none }}
               />
               <circle r={12} fill="#fff" stroke="#94a3b8" strokeWidth={1.6} />
-              <g className="f" style={{ opacity: aims ? 1 : 0, transition: none }}><Ring domains={p.domains} r={12} /></g>
+              <g className="f" style={{ opacity: lists ? 1 : 0, transition: none }}><Ring domains={p.domains} r={12} /></g>
             </g>
           );
         })}
+        </g>
+
+        {CALLOUTS.map((c, k) => <CalloutMark key={k} c={c} show={step === c.step} none={none} />)}
       </svg>
 
       <figcaption className="mt-3 flex flex-col items-center gap-2.5">
         <div className="flex items-center justify-center gap-2 max-w-full">
-          <div className="inline-flex flex-wrap justify-center rounded-3xl bg-slate-100 p-1 text-xs font-medium" role="group" aria-label="Steps of the picture">
+          <div className="grid grid-cols-3 rounded-3xl bg-slate-100 p-1 text-xs font-medium" role="group" aria-label="Steps of the picture">
             {ECO_STEPS.map((label, i) => (
               <button
                 key={label}
                 type="button"
                 aria-pressed={step === i}
                 onClick={() => pick(i)}
-                className={`whitespace-nowrap rounded-full px-2.5 py-1.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                className={`rounded-2xl px-2 sm:px-3 py-1 leading-tight transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
                   step === i ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
+                <span className="block text-[10px] font-semibold uppercase tracking-[0.07em]" style={{ color: WHEN_STYLE[i].fg }}>{ECO_WHEN[i]}</span>
                 {label}
               </button>
             ))}

@@ -126,7 +126,14 @@ const EXTRACTION_SCHEMA = {
         type: Type.OBJECT,
         properties: {
           row_id: { type: Type.STRING },
-          results: { type: Type.ARRAY, items: { type: Type.STRING } },
+          results: {
+            type: Type.ARRAY,
+            items: {
+              type: Type.OBJECT,
+              properties: { quote: { type: Type.STRING }, who: { type: Type.STRING } },
+              required: ['quote', 'who'],
+            },
+          },
         },
         required: ['row_id', 'results'],
       },
@@ -137,7 +144,7 @@ const EXTRACTION_SCHEMA = {
 
 /**
  * Quotes the results each narrative text states (services/resultExtraction.ts
- * has the instruction). Returns { items: [{ row_id, results: string[] }] }
+ * has the instruction). Returns { items: [{ row_id, results: [{ quote, who }] }] }
  * unverified: the caller keeps only quotes found word for word in the text.
  */
 export const extractWithGemini = async (

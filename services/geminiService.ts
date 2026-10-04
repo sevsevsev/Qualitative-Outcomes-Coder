@@ -3,7 +3,7 @@ import { BatchAnalysisResult, BatchItemResult, AtomicBatchItem, CodebookType } f
 import { getCodebook } from "../codebooks/index.js";
 import { normalizeSecondarySubcategory } from "./reviewNormalization.js";
 import { applySourceType } from "./sourceType.js";
-import { expandExtractedRows, ExpandedRow, extractionKey, needsExtraction, verifyQuotes } from "./resultExtraction.js";
+import { expandExtractedRows, ExpandedRow, extractionKey, needsExtraction, StatedResult, verifyResults } from "./resultExtraction.js";
 
 // Trim/normalize a codebook string coming back from the model. Domain and
 // subcategory values are now constrained via enum in the response schema
@@ -341,7 +341,17 @@ export const processBatch = async (fileContent: string, codebookType: CodebookTy
   let expanded: ExpandedRow[] | null = null;
   if (itemsToProcess.some(item => needsExtraction(item.source_type))) {
     expanded = await extractStatedResults(itemsToProcess, onProgress);
-    itemsToProcess = expanded.filter(e => e.code).map(e => e.row);
+    // A quote shared by several programs (boilerplate text) is coded once and
+    // its codes copied, so identical text never gets different codes.
+    const seen = new Set<string>();
+    itemsToProcess = expanded.filter(e => {
+      if (!e.code) return false;
+      const key = sameQuoteKey(e.row);
+      if (!key) return true;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    }).map(e => e.row);
   }
 
   const total = itemsToProcess.length;
@@ -418,7 +428,15 @@ export const processBatch = async (fileContent: string, codebookType: CodebookTy
 
   if (expanded) {
     const byId = new Map(allResults.map(r => [String(r.row_id), r]));
-    allResults = expanded.map(e => (e.code && byId.get(String(e.row.row_id))) || {
+    const byQuote = new Map<string, BatchItemResult>();
+    allResults.forEach(r => { const key = sameQuoteKey(r); if (key && !byQuote.has(key)) byQuote.set(key, r); });
+    const codedFor = (row: Record<string, any>): BatchItemResult | undefined => {
+      const own = byId.get(String(row.row_id));
+      if (own) return own;
+      const shared = byQuote.get(sameQuoteKey(row));
+      return shared && { ...shared, ...row, original_text: shared.original_text };
+    };
+    allResults = expanded.map(e => (e.code && codedFor(e.row)) || {
       ...e.row,
       original_text: e.row.outcome_text,
       split_needed: "no",
@@ -435,7 +453,11 @@ export const processBatch = async (fileContent: string, codebookType: CodebookTy
 
 const EXTRACTION_CHUNK_SIZE = 5;
 
-const extractChunk = async (texts: { key: string; text: string }[]): Promise<Map<string, string[]>> => {
+/** Identifies an extracted quote by its text and group; '' for any other row. */
+const sameQuoteKey = (row: Record<string, any>): string =>
+  row.extraction_status === 'quoted' ? `${extractionKey(String(row.outcome_text ?? ''))}|${extractionKey(String(row.group ?? ''))}` : '';
+
+const extractChunk = async (texts: { key: string; text: string }[]): Promise<Map<string, unknown[]>> => {
   const response = await fetch('/api/extract-results', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -446,7 +468,7 @@ const extractChunk = async (texts: { key: string; text: string }[]): Promise<Map
     throw new Error(errorBody.error || `Extraction request failed (${response.status})`);
   }
   const result = await response.json();
-  const out = new Map<string, string[]>();
+  const out = new Map<string, unknown[]>();
   texts.forEach((t, i) => {
     const found = result.items?.find((it: any) => String(it.row_id) === String(i));
     if (found) out.set(t.key, Array.isArray(found.results) ? found.results : []);
@@ -472,7 +494,7 @@ const extractStatedResults = async (
   const texts = [...distinct].map(([key, text]) => ({ key, text }));
   onProgress(0, texts.length, `Finding stated results in ${texts.length} distinct texts from ${narrative.length} narrative rows...`);
 
-  const quotesByText = new Map<string, { quotes: string[]; notVerbatim: number } | { error: string }>();
+  const quotesByText = new Map<string, { quotes: StatedResult[]; notVerbatim: number } | { error: string }>();
   for (let i = 0; i < texts.length; i += EXTRACTION_CHUNK_SIZE) {
     const chunk = texts.slice(i, i + EXTRACTION_CHUNK_SIZE);
     let lastError = '';
@@ -482,7 +504,7 @@ const extractStatedResults = async (
         chunk.forEach(t => {
           const quotes = raw.get(t.key);
           if (!quotes) { quotesByText.set(t.key, { error: 'no answer for this text' }); return; }
-          const { kept, notVerbatim } = verifyQuotes(t.text, quotes);
+          const { kept, notVerbatim } = verifyResults(t.text, quotes);
           quotesByText.set(t.key, { quotes: kept, notVerbatim });
         });
         lastError = '';

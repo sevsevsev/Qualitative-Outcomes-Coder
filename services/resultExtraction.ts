@@ -26,12 +26,13 @@ Never quote:
 
 Rules:
 1. Each quote must be copied EXACTLY from the text: same words, same order, same spelling. Do not paraphrase, fix typos, join pieces from different places, or add words.
-2. Quote the shortest span that states the whole result, starting at its verb or noun ("increase self-awareness and self-regulation", not "is designed to increase self-awareness and self-regulation").
+2. Quote the shortest span that states the whole result. When the same clause names whose change it is, start the quote there so the quote says who changes: "help parents feel confident, connected, and calm", not "feel confident, connected, and calm"; "enable individuals and families in predominantly Latino neighborhoods to achieve economic self-sufficiency", not "achieve economic self-sufficiency". Otherwise start at the result's verb or noun ("increase self-awareness and self-regulation", not "is designed to increase self-awareness and self-regulation").
 3. When one span lists several results, quote the span once; the coder splits it later.
 4. A purpose clause attached to an activity counts when it names a result: from "workshops that build confidence", quote "build confidence".
 5. Vague results still count ("achieve success in school and in life"); the coder decides how specific they are.
 6. Return an empty list when the text states no result. That is a correct, common answer.
 7. Return at most 8 quotes per text, in the order they appear.
+8. For each quote also return "who": the words in the text that name whose change it is ("parents", "students", "refugees and immigrants", "urban communities"), copied exactly. Use "" when the text does not say.
 
 Return every input row_id exactly once.`;
 
@@ -44,6 +45,8 @@ const normalize = (s: string): string =>
     .trim()
     .toLowerCase();
 
+const cleanQuote = (q: unknown): string => String(q ?? '').trim().replace(/^["'“‘]+|["'”’.,;:]+$/g, '').trim();
+
 /**
  * Keeps only quotes that appear word for word in `text` (ignoring case,
  * whitespace and curly-vs-straight punctuation), drops duplicates and quotes
@@ -55,7 +58,7 @@ export const verifyQuotes = (text: string, quotes: unknown[]): { kept: string[];
   const candidates: string[] = [];
   let notVerbatim = 0;
   for (const q of quotes) {
-    const quote = String(q ?? '').trim().replace(/^["'“‘]+|["'”’.,;:]+$/g, '').trim();
+    const quote = cleanQuote(q);
     if (!quote) continue;
     if (!source.includes(normalize(quote))) { notVerbatim++; continue; }
     if (!candidates.some(c => normalize(c) === normalize(quote))) candidates.push(quote);
@@ -63,6 +66,30 @@ export const verifyQuotes = (text: string, quotes: unknown[]): { kept: string[];
   const kept = candidates.filter(q => !candidates.some(o => o !== q && normalize(o).includes(normalize(q))));
   kept.sort((a, b) => source.indexOf(normalize(a)) - source.indexOf(normalize(b)));
   return { kept, notVerbatim };
+};
+
+/** One stated result: the quote and, when the text names them, whose change it is. */
+export interface StatedResult {
+  quote: string;
+  who: string;
+}
+
+/**
+ * Checks the model's results against the text: quotes as in verifyQuotes, and
+ * a "who" that does not appear word for word is blanked.
+ */
+export const verifyResults = (text: string, results: unknown[]): { kept: StatedResult[]; notVerbatim: number } => {
+  const asResult = (r: any): StatedResult => (typeof r === 'string' ? { quote: r, who: '' } : { quote: String(r?.quote ?? ''), who: String(r?.who ?? '').trim() });
+  const all = (results ?? []).map(asResult);
+  const { kept, notVerbatim } = verifyQuotes(text, all.map(r => r.quote));
+  const source = normalize(text);
+  return {
+    kept: kept.map(quote => {
+      const who = all.find(r => normalize(cleanQuote(r.quote)) === normalize(quote))?.who ?? '';
+      return { quote, who: who && source.includes(normalize(who)) ? who : '' };
+    }),
+    notVerbatim,
+  };
 };
 
 export type ExtractionStatus = 'quoted' | 'no_stated_result' | 'error';
@@ -84,7 +111,7 @@ export interface ExpandedRow {
  */
 export const expandExtractedRows = (
   rows: Record<string, any>[],
-  quotesByText: Map<string, { quotes: string[]; notVerbatim?: number } | { error: string }>,
+  quotesByText: Map<string, { quotes: (string | StatedResult)[]; notVerbatim?: number } | { error: string }>,
 ): ExpandedRow[] => {
   const counts = new Map<string, number>();
   rows.filter(r => needsExtraction(r.source_type)).forEach(r => {
@@ -104,10 +131,14 @@ export const expandExtractedRows = (
     if (found.quotes.length === 0) {
       return [{ row: { ...base, extraction_status: 'no_stated_result' satisfies ExtractionStatus, notes: 'The text states no result, so nothing was coded.' }, code: false }];
     }
-    return found.quotes.map((quote, i) => ({
-      row: { ...base, row_id: `${r.row_id}-q${i + 1}`, outcome_text: quote, extraction_status: 'quoted' satisfies ExtractionStatus },
-      code: true,
-    }));
+    return found.quotes.map((q, i) => {
+      const { quote, who } = typeof q === 'string' ? { quote: q, who: '' } : q;
+      // The coder sees "group" next to each statement; naming whose change it
+      // is keeps a parent or community result from being read as a youth one.
+      const row: Record<string, any> = { ...base, row_id: `${r.row_id}-q${i + 1}`, outcome_text: quote, beneficiary: who, extraction_status: 'quoted' satisfies ExtractionStatus };
+      if (who) row.group = who;
+      return { row, code: true };
+    });
   });
 };
 

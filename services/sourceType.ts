@@ -7,6 +7,10 @@ export const SOURCE_TYPES = [
   { value: 'logic_model', label: 'Logic model' },
   { value: 'program_description', label: 'Program description or scope of work' },
   { value: 'other_outcome_text', label: 'Other outcome statements' },
+  // Narrative text: the coder first quotes the results it states, then codes
+  // only those quotes (services/resultExtraction.ts).
+  { value: 'description_narrative', label: 'Program description narrative (find stated results first)' },
+  { value: 'mission_statement', label: 'Organization mission statement (find stated results first)' },
 ] as const;
 
 export type SourceType = (typeof SOURCE_TYPES)[number]['value'];

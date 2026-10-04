@@ -3,6 +3,7 @@ import { BatchAnalysisResult, BatchItemResult, AtomicBatchItem, CodebookType } f
 import { getCodebook } from "../codebooks/index.js";
 import { normalizeSecondarySubcategory } from "./reviewNormalization.js";
 import { applySourceType } from "./sourceType.js";
+import { expandExtractedRows, ExpandedRow, extractionKey, needsExtraction, StatedResult, verifyResults } from "./resultExtraction.js";
 
 // Trim/normalize a codebook string coming back from the model. Domain and
 // subcategory values are now constrained via enum in the response schema
@@ -333,8 +334,27 @@ export const processBatch = async (fileContent: string, codebookType: CodebookTy
     itemsToProcess = applySourceType(itemsToProcess, sourceType);
   } catch (e: any) { throw new Error(`Failed to parse file: ${e.message}`); }
 
+  if (itemsToProcess.length === 0) throw new Error("No items found to process.");
+
+  // Narrative rows (descriptions, mission statements) are first cut down to
+  // the results they state; see services/resultExtraction.ts.
+  let expanded: ExpandedRow[] | null = null;
+  if (itemsToProcess.some(item => needsExtraction(item.source_type))) {
+    expanded = await extractStatedResults(itemsToProcess, onProgress);
+    // A quote shared by several programs (boilerplate text) is coded once and
+    // its codes copied, so identical text never gets different codes.
+    const seen = new Set<string>();
+    itemsToProcess = expanded.filter(e => {
+      if (!e.code) return false;
+      const key = sameQuoteKey(e.row);
+      if (!key) return true;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    }).map(e => e.row);
+  }
+
   const total = itemsToProcess.length;
-  if (total === 0) throw new Error("No items found to process.");
   onProgress(0, total, `Found ${total} items. Starting batch analysis...`);
 
   const CHUNK_SIZE = 5;
@@ -406,7 +426,99 @@ export const processBatch = async (fileContent: string, codebookType: CodebookTy
     if(res) allResults = allResults.concat(res);
   });
 
+  if (expanded) {
+    const byId = new Map(allResults.map(r => [String(r.row_id), r]));
+    const byQuote = new Map<string, BatchItemResult>();
+    allResults.forEach(r => { const key = sameQuoteKey(r); if (key && !byQuote.has(key)) byQuote.set(key, r); });
+    const codedFor = (row: Record<string, any>): BatchItemResult | undefined => {
+      const own = byId.get(String(row.row_id));
+      if (own) return own;
+      const shared = byQuote.get(sameQuoteKey(row));
+      return shared && { ...shared, ...row, original_text: shared.original_text };
+    };
+    allResults = expanded.map(e => (e.code && codedFor(e.row)) || {
+      ...e.row,
+      original_text: e.row.outcome_text,
+      split_needed: "no",
+      split_items: [],
+      uncoded: true,
+      notes: e.row.notes || "Not coded.",
+    } as BatchItemResult);
+  }
+
   const atomicResults = flattenToAtomic(allResults, codebookType);
   // Return both items array and CSV string
   return { type: 'csv', data: atomicJsonToCSV(atomicResults), items: atomicResults };
+};
+
+const EXTRACTION_CHUNK_SIZE = 5;
+
+/** Identifies an extracted quote by its text and group; '' for any other row. */
+const sameQuoteKey = (row: Record<string, any>): string =>
+  row.extraction_status === 'quoted' ? `${extractionKey(String(row.outcome_text ?? ''))}|${extractionKey(String(row.group ?? ''))}` : '';
+
+const extractChunk = async (texts: { key: string; text: string }[]): Promise<Map<string, unknown[]>> => {
+  const response = await fetch('/api/extract-results', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ items: texts.map((t, i) => ({ row_id: String(i), text: t.text })) }),
+  });
+  if (!response.ok) {
+    const errorBody = await response.json().catch(() => ({}));
+    throw new Error(errorBody.error || `Extraction request failed (${response.status})`);
+  }
+  const result = await response.json();
+  const out = new Map<string, unknown[]>();
+  texts.forEach((t, i) => {
+    const found = result.items?.find((it: any) => String(it.row_id) === String(i));
+    if (found) out.set(t.key, Array.isArray(found.results) ? found.results : []);
+  });
+  return out;
+};
+
+/**
+ * Sends each distinct narrative text to /api/extract-results once, keeps the
+ * quotes that appear word for word, and returns every input row expanded
+ * (rows that need no extraction pass through unchanged, to be coded).
+ */
+const extractStatedResults = async (
+  items: any[],
+  onProgress: (processed: number, total: number, log: string) => void,
+): Promise<ExpandedRow[]> => {
+  const narrative = items.filter(item => needsExtraction(item.source_type));
+  const distinct = new Map<string, string>();
+  narrative.forEach(item => {
+    const text = String(item.outcome_text ?? '');
+    if (text.trim() && !distinct.has(extractionKey(text))) distinct.set(extractionKey(text), text);
+  });
+  const texts = [...distinct].map(([key, text]) => ({ key, text }));
+  onProgress(0, texts.length, `Finding stated results in ${texts.length} distinct texts from ${narrative.length} narrative rows...`);
+
+  const quotesByText = new Map<string, { quotes: StatedResult[]; notVerbatim: number; rejected: string[] } | { error: string }>();
+  for (let i = 0; i < texts.length; i += EXTRACTION_CHUNK_SIZE) {
+    const chunk = texts.slice(i, i + EXTRACTION_CHUNK_SIZE);
+    let lastError = '';
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        const raw = await extractChunk(chunk);
+        chunk.forEach(t => {
+          const quotes = raw.get(t.key);
+          if (!quotes) { quotesByText.set(t.key, { error: 'no answer for this text' }); return; }
+          const { kept, notVerbatim, rejected } = verifyResults(t.text, quotes);
+          quotesByText.set(t.key, { quotes: kept, notVerbatim, rejected });
+        });
+        lastError = '';
+        break;
+      } catch (e: any) {
+        lastError = e.message;
+        if (attempt < 3) await new Promise(r => setTimeout(r, 1000 * Math.pow(2, attempt - 1)));
+      }
+    }
+    if (lastError) chunk.forEach(t => quotesByText.set(t.key, { error: lastError }));
+    const done = Math.min(i + EXTRACTION_CHUNK_SIZE, texts.length);
+    onProgress(done, texts.length, lastError ? `❌ Extraction failed for ${chunk.length} texts: ${lastError}` : `Found stated results in ${done}/${texts.length} texts.`);
+  }
+
+  // Keep the file's row order: narrative rows expand in place.
+  return expandExtractedRows(items, quotesByText);
 };

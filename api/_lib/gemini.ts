@@ -2,11 +2,13 @@
 //
 // The one place that calls Gemini. Used by api/analyze-batch.ts (the coder)
 // and api/try-code.ts (single statements on the public explorer site), so
-// both send the same system instruction, schema and model settings.
+// both send the same system instruction, schema and model settings, and by
+// api/extract-results.ts (quotes the results in a description or mission).
 
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenAI, Type } from '@google/genai';
 import { buildSystemInstruction, Codebook } from '../../codebooks/index.js';
 import { buildBatchResponseSchema } from '../../codebooks/geminiSchema.js';
+import { EXTRACTION_INSTRUCTION } from '../../services/resultExtraction.js';
 
 // Model configuration ----------------------------------------------------
 // Overridable via the GEMINI_MODEL Vercel environment variable, so a model
@@ -83,6 +85,12 @@ export const codeWithGemini = async (
     responseSchema: buildBatchResponseSchema(codebook),
   };
 
+  return generateJson(ai, contents, config);
+};
+
+
+// Calls the configured model, falling back once on a retired-model error.
+const generateJson = async (ai: GoogleGenAI, contents: string, config: any): Promise<{ parsed: any; modelUsed: string }> => {
   let response;
   let modelUsed = MODEL;
   try {
@@ -102,4 +110,46 @@ export const codeWithGemini = async (
   const text = response.text;
   if (!text) throw new Error('Gemini returned an empty response.');
   return { parsed: JSON.parse(text), modelUsed };
+};
+
+export interface ExtractionRequestItem {
+  row_id: string;
+  text: string;
+}
+
+const EXTRACTION_SCHEMA = {
+  type: Type.OBJECT,
+  properties: {
+    items: {
+      type: Type.ARRAY,
+      items: {
+        type: Type.OBJECT,
+        properties: {
+          row_id: { type: Type.STRING },
+          results: { type: Type.ARRAY, items: { type: Type.STRING } },
+        },
+        required: ['row_id', 'results'],
+      },
+    },
+  },
+  required: ['items'],
+};
+
+/**
+ * Quotes the results each narrative text states (services/resultExtraction.ts
+ * has the instruction). Returns { items: [{ row_id, results: string[] }] }
+ * unverified: the caller keeps only quotes found word for word in the text.
+ */
+export const extractWithGemini = async (
+  apiKey: string,
+  items: ExtractionRequestItem[],
+): Promise<{ parsed: any; modelUsed: string }> => {
+  const ai = new GoogleGenAI({ apiKey });
+  const contents = `Quote the stated results in these ${items.length} texts.\nInput Data:\n${JSON.stringify(items, null, 2)}`;
+  return generateJson(ai, contents, {
+    systemInstruction: EXTRACTION_INSTRUCTION,
+    responseMimeType: 'application/json',
+    thinkingConfig: { thinkingBudget: 1024 },
+    responseSchema: EXTRACTION_SCHEMA,
+  });
 };

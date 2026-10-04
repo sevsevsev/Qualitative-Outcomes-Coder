@@ -3,6 +3,7 @@ import { BatchAnalysisResult, BatchItemResult, AtomicBatchItem, CodebookType } f
 import { getCodebook } from "../codebooks/index.js";
 import { normalizeSecondarySubcategory } from "./reviewNormalization.js";
 import { applySourceType } from "./sourceType.js";
+import { expandExtractedRows, ExpandedRow, extractionKey, needsExtraction, verifyQuotes } from "./resultExtraction.js";
 
 // Trim/normalize a codebook string coming back from the model. Domain and
 // subcategory values are now constrained via enum in the response schema
@@ -333,8 +334,17 @@ export const processBatch = async (fileContent: string, codebookType: CodebookTy
     itemsToProcess = applySourceType(itemsToProcess, sourceType);
   } catch (e: any) { throw new Error(`Failed to parse file: ${e.message}`); }
 
+  if (itemsToProcess.length === 0) throw new Error("No items found to process.");
+
+  // Narrative rows (descriptions, mission statements) are first cut down to
+  // the results they state; see services/resultExtraction.ts.
+  let expanded: ExpandedRow[] | null = null;
+  if (itemsToProcess.some(item => needsExtraction(item.source_type))) {
+    expanded = await extractStatedResults(itemsToProcess, onProgress);
+    itemsToProcess = expanded.filter(e => e.code).map(e => e.row);
+  }
+
   const total = itemsToProcess.length;
-  if (total === 0) throw new Error("No items found to process.");
   onProgress(0, total, `Found ${total} items. Starting batch analysis...`);
 
   const CHUNK_SIZE = 5;
@@ -406,7 +416,87 @@ export const processBatch = async (fileContent: string, codebookType: CodebookTy
     if(res) allResults = allResults.concat(res);
   });
 
+  if (expanded) {
+    const byId = new Map(allResults.map(r => [String(r.row_id), r]));
+    allResults = expanded.map(e => (e.code && byId.get(String(e.row.row_id))) || {
+      ...e.row,
+      original_text: e.row.outcome_text,
+      split_needed: "no",
+      split_items: [],
+      uncoded: true,
+      notes: e.row.notes || "Not coded.",
+    } as BatchItemResult);
+  }
+
   const atomicResults = flattenToAtomic(allResults, codebookType);
   // Return both items array and CSV string
   return { type: 'csv', data: atomicJsonToCSV(atomicResults), items: atomicResults };
+};
+
+const EXTRACTION_CHUNK_SIZE = 5;
+
+const extractChunk = async (texts: { key: string; text: string }[]): Promise<Map<string, string[]>> => {
+  const response = await fetch('/api/extract-results', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ items: texts.map((t, i) => ({ row_id: String(i), text: t.text })) }),
+  });
+  if (!response.ok) {
+    const errorBody = await response.json().catch(() => ({}));
+    throw new Error(errorBody.error || `Extraction request failed (${response.status})`);
+  }
+  const result = await response.json();
+  const out = new Map<string, string[]>();
+  texts.forEach((t, i) => {
+    const found = result.items?.find((it: any) => String(it.row_id) === String(i));
+    if (found) out.set(t.key, Array.isArray(found.results) ? found.results : []);
+  });
+  return out;
+};
+
+/**
+ * Sends each distinct narrative text to /api/extract-results once, keeps the
+ * quotes that appear word for word, and returns every input row expanded
+ * (rows that need no extraction pass through unchanged, to be coded).
+ */
+const extractStatedResults = async (
+  items: any[],
+  onProgress: (processed: number, total: number, log: string) => void,
+): Promise<ExpandedRow[]> => {
+  const narrative = items.filter(item => needsExtraction(item.source_type));
+  const distinct = new Map<string, string>();
+  narrative.forEach(item => {
+    const text = String(item.outcome_text ?? '');
+    if (text.trim() && !distinct.has(extractionKey(text))) distinct.set(extractionKey(text), text);
+  });
+  const texts = [...distinct].map(([key, text]) => ({ key, text }));
+  onProgress(0, texts.length, `Finding stated results in ${texts.length} distinct texts from ${narrative.length} narrative rows...`);
+
+  const quotesByText = new Map<string, { quotes: string[]; notVerbatim: number } | { error: string }>();
+  for (let i = 0; i < texts.length; i += EXTRACTION_CHUNK_SIZE) {
+    const chunk = texts.slice(i, i + EXTRACTION_CHUNK_SIZE);
+    let lastError = '';
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        const raw = await extractChunk(chunk);
+        chunk.forEach(t => {
+          const quotes = raw.get(t.key);
+          if (!quotes) { quotesByText.set(t.key, { error: 'no answer for this text' }); return; }
+          const { kept, notVerbatim } = verifyQuotes(t.text, quotes);
+          quotesByText.set(t.key, { quotes: kept, notVerbatim });
+        });
+        lastError = '';
+        break;
+      } catch (e: any) {
+        lastError = e.message;
+        if (attempt < 3) await new Promise(r => setTimeout(r, 1000 * Math.pow(2, attempt - 1)));
+      }
+    }
+    if (lastError) chunk.forEach(t => quotesByText.set(t.key, { error: lastError }));
+    const done = Math.min(i + EXTRACTION_CHUNK_SIZE, texts.length);
+    onProgress(done, texts.length, lastError ? `❌ Extraction failed for ${chunk.length} texts: ${lastError}` : `Found stated results in ${done}/${texts.length} texts.`);
+  }
+
+  // Keep the file's row order: narrative rows expand in place.
+  return expandExtractedRows(items, quotesByText);
 };

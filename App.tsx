@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { processBatch, atomicJsonToCSV } from './services/geminiService.js';
 import { SOURCE_TYPES, csvHasSourceType } from './services/sourceType.js';
+import { needsExtraction } from './services/resultExtraction.js';
 import { BatchAnalysisResult, LoadingState, CodebookType } from './types.js';
 import { CODEBOOK_REGISTRY, DEFAULT_CODEBOOK_ID, isSelectableCodebook, SELECTABLE_CODEBOOK_LIST } from './codebooks/index.js';
 import { loadReviewState, clearReviewState, SavedReviewState } from './services/reviewStorage.js';
@@ -324,8 +325,10 @@ const App: React.FC = () => {
                   </select>
                   <p className="text-xs text-slate-500 mt-1">
                     {fileHasSource
-                      ? 'This file already says where each outcome came from.'
-                      : 'Saved with every outcome in the export, so results from different sources can be told apart.'}
+                      ? 'This file already says where each outcome came from. Rows marked description_narrative or mission_statement are first cut down to the results they state.'
+                      : needsExtraction(sourceType)
+                        ? 'Each text is first cut down to the results it states, quoted word for word; only those quotes are coded. A text with no stated result stays uncoded. The export keeps the full text in source_text.'
+                        : 'Saved with every outcome in the export, so results from different sources can be told apart.'}
                   </p>
                 </div>
               )}

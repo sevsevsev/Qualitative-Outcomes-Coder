@@ -79,6 +79,10 @@ api/
 
 **Why enum-constrained schema?** Each codebook's domain/subcategory/subject-area/population values are passed to Gemini's structured-output `enum` field (see `codebooks/geminiSchema.ts`), so the model cannot return a value outside the codebook's own vocabulary. This replaced an earlier approach of accepting free-text and then regex-cleaning it after the fact.
 
+### Where outcomes came from, and narrative text
+
+Every exported row carries a `source_type`: from the file's own column, or from the upload screen's "Where did these outcomes come from?" choice (`services/sourceType.ts`). Two values are narrative text rather than outcome statements: `description_narrative` (a program description) and `mission_statement` (an organization's mission). For those rows the coder first calls `/api/extract-results`, which asks Gemini to quote only the results the text states, never its activities, population or setting (`services/resultExtraction.ts` holds the instruction). Quotes that do not appear word for word in the text are dropped. Each kept quote is then coded like any outcome, with row id `<row_id>-q<n>`. The export adds `source_text` (the full text), `extraction_status` (`quoted`, `no_stated_result` or `error`), `shared_text_count` (rows in the batch with the same text, which flags boilerplate) and `quotes_not_verbatim`. Each distinct text is extracted once per batch. The codebook prompt is unchanged.
+
 ### Adding a new codebook
 
 1. Create `codebooks/yourCodebook.ts` exporting a `Codebook` object (see `codebooks/types.ts` for the shape — domains, subcategories, `rulesText` for process instructions, `definitionsText` for the actual domain/subcategory definitions and examples that get sent to the model, and `capabilities` flags for which optional columns — subcategory, subject area, target population — the review table should show).

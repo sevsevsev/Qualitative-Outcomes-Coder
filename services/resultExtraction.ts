@@ -26,13 +26,13 @@ Never quote:
 
 Rules:
 1. Each quote must be copied EXACTLY from the text: same words, same order, same spelling. Do not paraphrase, fix typos, join pieces from different places, or add words.
-2. Quote the shortest span that states the whole result. When the same clause names whose change it is, start the quote there so the quote says who changes: "help parents feel confident, connected, and calm", not "feel confident, connected, and calm"; "enable individuals and families in predominantly Latino neighborhoods to achieve economic self-sufficiency", not "achieve economic self-sufficiency". Otherwise start at the result's verb or noun ("increase self-awareness and self-regulation", not "is designed to increase self-awareness and self-regulation").
+2. Quote the shortest span that states the whole result, starting at its verb or noun ("increase self-awareness and self-regulation", not "is designed to increase self-awareness and self-regulation"). Never add the people's name to the front of a quote unless those exact words come right before it in the text; put whose change it is in "who" instead.
 3. When one span lists several results, quote the span once; the coder splits it later.
 4. A purpose clause attached to an activity counts when it names a result: from "workshops that build confidence", quote "build confidence".
 5. Vague results still count ("achieve success in school and in life"); the coder decides how specific they are.
 6. Return an empty list when the text states no result. That is a correct, common answer.
 7. Return at most 8 quotes per text, in the order they appear.
-8. For each quote also return "who": the words in the text that name whose change it is ("parents", "students", "refugees and immigrants", "urban communities"), copied exactly. Use "" when the text does not say.
+8. For each quote also return "who": the words in the text that name whose change it is ("parents", "students", "refugees and immigrants", "urban communities"), copied exactly from anywhere in the text. Use "" when the text does not say. Example: from "we help parents feel confident, connected, and calm" return quote "feel confident, connected, and calm" and who "parents".
 
 Return every input row_id exactly once.`;
 
@@ -41,6 +41,7 @@ const normalize = (s: string): string =>
     .replace(/[‘’]/g, "'")
     .replace(/[“”]/g, '"')
     .replace(/[–—]/g, '-')
+    .replace(/[\u2010\u2011\u2012]/g, '-')
     .replace(/\s+/g, ' ')
     .trim()
     .toLowerCase();
@@ -50,22 +51,40 @@ const cleanQuote = (q: unknown): string => String(q ?? '').trim().replace(/^["'�
 /**
  * Keeps only quotes that appear word for word in `text` (ignoring case,
  * whitespace and curly-vs-straight punctuation), drops duplicates and quotes
- * contained in another kept quote. Returns the kept quotes in the order they
- * appear in the text, plus how many were dropped as not verbatim.
+ * contained in another kept quote. A quote with words added in front keeps its
+ * longest verbatim ending (see verbatimTail). Returns the kept quotes in the
+ * order they appear in the text, plus the dropped ones and how many there were.
  */
-export const verifyQuotes = (text: string, quotes: unknown[]): { kept: string[]; notVerbatim: number } => {
+export const verifyQuotes = (text: string, quotes: unknown[]): { kept: string[]; notVerbatim: number; rejected: string[] } => {
   const source = normalize(text);
   const candidates: string[] = [];
-  let notVerbatim = 0;
+  const rejected: string[] = [];
   for (const q of quotes) {
-    const quote = cleanQuote(q);
-    if (!quote) continue;
-    if (!source.includes(normalize(quote))) { notVerbatim++; continue; }
+    const raw = cleanQuote(q);
+    if (!raw) continue;
+    const quote = source.includes(normalize(raw)) ? raw : verbatimTail(source, raw);
+    if (!quote) { rejected.push(raw); continue; }
     if (!candidates.some(c => normalize(c) === normalize(quote))) candidates.push(quote);
   }
   const kept = candidates.filter(q => !candidates.some(o => o !== q && normalize(o).includes(normalize(q))));
   kept.sort((a, b) => source.indexOf(normalize(a)) - source.indexOf(normalize(b)));
-  return { kept, notVerbatim };
+  return { kept, notVerbatim: rejected.length, rejected };
+};
+
+/**
+ * When a quote is not in the text only because words were added in front
+ * ("students earn credit" for "allows students to earn credit"), keeps the
+ * longest ending of it that is in the text, if that ending is at least three
+ * words and at least half the quote. Otherwise returns ''.
+ */
+const verbatimTail = (source: string, quote: string): string => {
+  const words = quote.split(/\s+/);
+  for (let start = 1; start < words.length; start++) {
+    const tail = words.slice(start).join(' ');
+    if (words.length - start < 3 || (words.length - start) * 2 < words.length) return '';
+    if (source.includes(normalize(tail))) return tail;
+  }
+  return '';
 };
 
 /** One stated result: the quote and, when the text names them, whose change it is. */
@@ -78,17 +97,18 @@ export interface StatedResult {
  * Checks the model's results against the text: quotes as in verifyQuotes, and
  * a "who" that does not appear word for word is blanked.
  */
-export const verifyResults = (text: string, results: unknown[]): { kept: StatedResult[]; notVerbatim: number } => {
+export const verifyResults = (text: string, results: unknown[]): { kept: StatedResult[]; notVerbatim: number; rejected: string[] } => {
   const asResult = (r: any): StatedResult => (typeof r === 'string' ? { quote: r, who: '' } : { quote: String(r?.quote ?? ''), who: String(r?.who ?? '').trim() });
   const all = (results ?? []).map(asResult);
-  const { kept, notVerbatim } = verifyQuotes(text, all.map(r => r.quote));
+  const { kept, notVerbatim, rejected } = verifyQuotes(text, all.map(r => r.quote));
   const source = normalize(text);
   return {
     kept: kept.map(quote => {
-      const who = all.find(r => normalize(cleanQuote(r.quote)) === normalize(quote))?.who ?? '';
+      const who = all.find(r => normalize(cleanQuote(r.quote)).endsWith(normalize(quote)))?.who ?? '';
       return { quote, who: who && source.includes(normalize(who)) ? who : '' };
     }),
     notVerbatim,
+    rejected,
   };
 };
 
@@ -111,7 +131,7 @@ export interface ExpandedRow {
  */
 export const expandExtractedRows = (
   rows: Record<string, any>[],
-  quotesByText: Map<string, { quotes: (string | StatedResult)[]; notVerbatim?: number } | { error: string }>,
+  quotesByText: Map<string, { quotes: (string | StatedResult)[]; notVerbatim?: number; rejected?: string[] } | { error: string }>,
 ): ExpandedRow[] => {
   const counts = new Map<string, number>();
   rows.filter(r => needsExtraction(r.source_type)).forEach(r => {
@@ -128,6 +148,7 @@ export const expandExtractedRows = (
       return [{ row: { ...base, extraction_status: 'error' satisfies ExtractionStatus, notes: `Result extraction failed: ${found && 'error' in found ? found.error : 'no answer for this text'}` }, code: false }];
     }
     if (found.notVerbatim) base.quotes_not_verbatim = found.notVerbatim;
+    if (found.rejected?.length) base.quotes_rejected = found.rejected.join(' | ');
     if (found.quotes.length === 0) {
       return [{ row: { ...base, extraction_status: 'no_stated_result' satisfies ExtractionStatus, notes: 'The text states no result, so nothing was coded.' }, code: false }];
     }

@@ -494,7 +494,7 @@ const extractStatedResults = async (
   const texts = [...distinct].map(([key, text]) => ({ key, text }));
   onProgress(0, texts.length, `Finding stated results in ${texts.length} distinct texts from ${narrative.length} narrative rows...`);
 
-  const quotesByText = new Map<string, { quotes: StatedResult[]; notVerbatim: number } | { error: string }>();
+  const quotesByText = new Map<string, { quotes: StatedResult[]; notVerbatim: number; rejected: string[] } | { error: string }>();
   for (let i = 0; i < texts.length; i += EXTRACTION_CHUNK_SIZE) {
     const chunk = texts.slice(i, i + EXTRACTION_CHUNK_SIZE);
     let lastError = '';
@@ -504,8 +504,8 @@ const extractStatedResults = async (
         chunk.forEach(t => {
           const quotes = raw.get(t.key);
           if (!quotes) { quotesByText.set(t.key, { error: 'no answer for this text' }); return; }
-          const { kept, notVerbatim } = verifyResults(t.text, quotes);
-          quotesByText.set(t.key, { quotes: kept, notVerbatim });
+          const { kept, notVerbatim, rejected } = verifyResults(t.text, quotes);
+          quotesByText.set(t.key, { quotes: kept, notVerbatim, rejected });
         });
         lastError = '';
         break;

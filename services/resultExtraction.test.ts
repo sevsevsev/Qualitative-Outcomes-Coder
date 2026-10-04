@@ -9,14 +9,23 @@ describe('verifyQuotes', () => {
   it('keeps quotes found word for word, ignoring case, spacing and curly punctuation', () => {
     const text = 'Students build confidence and enhance self esteem, identity and self expression. They gain new skills.';
     const r = verifyQuotes(text, ['build  Confidence and enhance self esteem, identity and self expression.', 'gain new skills']);
-    expect(r).toEqual({ kept: ['build  Confidence and enhance self esteem, identity and self expression', 'gain new skills'], notVerbatim: 0 });
+    expect(r).toEqual({ kept: ['build  Confidence and enhance self esteem, identity and self expression', 'gain new skills'], notVerbatim: 0, rejected: [] });
     expect(verifyQuotes('ATY’s goal is to keep kids safe', ["ATY's goal is to keep kids safe"]).kept).toHaveLength(1);
   });
 
   it('drops paraphrases, duplicates and quotes inside a longer kept quote, and orders by position', () => {
     const r = verifyQuotes(DESC, ['self-regulation', 'improve emotional skills', 'increase self-awareness and self-regulation', 'increase self-awareness and self-regulation', '', null]);
-    expect(r).toEqual({ kept: ['increase self-awareness and self-regulation'], notVerbatim: 1 });
+    expect(r).toEqual({ kept: ['increase self-awareness and self-regulation'], notVerbatim: 1, rejected: ['improve emotional skills'] });
     expect(verifyQuotes('a gains x; b gains y', ['b gains y', 'a gains x']).kept).toEqual(['a gains x', 'b gains y']);
+  });
+});
+
+describe('verifyQuotes with words added in front', () => {
+  it('keeps the longest verbatim ending of at least three words and half the quote', () => {
+    const text = 'The program allows students to earn both high school and college credit.';
+    expect(verifyQuotes(text, ['students earn both high school and college credit']).kept).toEqual(['earn both high school and college credit']);
+    expect(verifyQuotes(text, ['young people in Philadelphia earn credit']).kept).toEqual([]);
+    expect(verifyQuotes('Elementary\u00a0participants build early\u2011literacy skills', ['participants build early-literacy skills']).kept).toHaveLength(1);
   });
 });
 
@@ -26,6 +35,7 @@ describe('verifyResults', () => {
     expect(verifyResults(text, [{ quote: 'help parents feel confident, connected, and calm.', who: 'parents' }, { quote: 'feel calm', who: 'mothers' }, 'feel confident'])).toEqual({
       kept: [{ quote: 'help parents feel confident, connected, and calm', who: 'parents' }],
       notVerbatim: 1,
+      rejected: ['feel calm'],
     });
     expect(verifyResults(text, [{ quote: 'help parents feel confident', who: 'grandparents' }]).kept).toEqual([{ quote: 'help parents feel confident', who: '' }]);
   });

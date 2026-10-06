@@ -25,6 +25,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Subject learning",
+        "description": "Demonstrated learning in a subject: reading and writing, English and home languages, math, science and computing, other academic subjects, the arts, critical thinking and inquiry, and early learning before kindergarten.",
         "codes": [
           {
             "id": "Y1.1",
@@ -174,6 +175,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "B",
         "name": "Learning behaviors & mindsets",
+        "description": "The behaviors and beliefs that shape how a young person learns: taking part in schoolwork, persisting with hard tasks, using study strategies, and believing in oneself as a learner.",
         "codes": [
           {
             "id": "Y1.9",
@@ -252,6 +254,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "C",
         "name": "Educational progress & attainment",
+        "description": "A young person's status and progress through school and beyond: attendance, discipline, grades and credits, advanced courses, graduation, and college or training after high school.",
         "codes": [
           {
             "id": "Y1.13",
@@ -376,6 +379,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Enjoyment & interest",
+        "description": "How young people feel about learning and activities: enjoying them, becoming curious, developing a lasting interest of their own, and seeing why learning matters for their goals.",
         "codes": [
           {
             "id": "Y2.1",
@@ -454,6 +458,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "B",
         "name": "Expression & participation",
+        "description": "Young people expressing themselves by making, performing or responding to creative work, and choosing to take part in enriching activities in or outside the program.",
         "codes": [
           {
             "id": "Y2.5",
@@ -507,6 +512,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Connectedness",
+        "description": "Feeling accepted, valued and safe in a program, school or community.",
         "codes": [
           {
             "id": "Y3.1",
@@ -532,6 +538,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "B",
         "name": "Close relationships",
+        "description": "A young person's close relationships: with caring adults outside the family, with friends and peers, and with their own family.",
         "codes": [
           {
             "id": "Y3.2",
@@ -592,6 +599,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "C",
         "name": "Networks",
+        "description": "A wider network of adults, peers, professionals and employers that a young person can draw on for educational or career opportunities.",
         "codes": [
           {
             "id": "Y3.5",
@@ -626,6 +634,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Self-awareness",
+        "description": "Recognizing and naming one's own emotions. This is the part of CASEL's self-awareness competency coded here; beliefs about oneself are in Identity, Confidence & Agency.",
         "codes": [
           {
             "id": "Y4.1",
@@ -649,6 +658,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "B",
         "name": "Self-management",
+        "description": "Managing emotions, stress and impulses, and setting and working toward personal goals.",
         "codes": [
           {
             "id": "Y4.2",
@@ -693,6 +703,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "C",
         "name": "Social awareness",
+        "description": "Understanding others' feelings and perspectives, reading social settings, and respecting people of different backgrounds.",
         "codes": [
           {
             "id": "Y4.4",
@@ -735,6 +746,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "D",
         "name": "Relationship skills",
+        "description": "Communicating, working in teams, building relationships and resolving conflict, and seeking or offering help.",
         "codes": [
           {
             "id": "Y4.6",
@@ -815,6 +827,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "E",
         "name": "Responsible decision-making",
+        "description": "Weighing options and solving problems, making ethical and prosocial choices, and avoiding risks and negative peer pressure.",
         "codes": [
           {
             "id": "Y4.10",
@@ -887,6 +900,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Identity",
+        "description": "Who a young person understands themselves to be: exploring their identity, taking pride in their cultural and social identities, and seeing themselves as part of a field such as STEM or the arts.",
         "codes": [
           {
             "id": "Y5.1",
@@ -946,6 +960,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "B",
         "name": "Self-beliefs",
+        "description": "A young person's general belief in their own ability and worth: confidence, self-efficacy and self-esteem.",
         "codes": [
           {
             "id": "Y5.4",
@@ -970,6 +985,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "C",
         "name": "Purpose & agency",
+        "description": "A sense of purpose, hope and aspiration for the future, and acting as the agent in one's own life by making choices and advocating for one's needs.",
         "codes": [
           {
             "id": "Y5.5",
@@ -1023,6 +1039,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Character",
+        "description": "General character traits and guiding values such as integrity, honesty and responsibility.",
         "codes": [
           {
             "id": "Y6.1",
@@ -1047,6 +1064,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "B",
         "name": "Civic understanding",
+        "description": "Understanding how government and civic institutions work, and analyzing power, inequity and injustice.",
         "codes": [
           {
             "id": "Y6.2",
@@ -1089,6 +1107,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "C",
         "name": "Civic action",
+        "description": "Taking part in civic and community life: civic voice and leadership, community service and projects, and caring for the environment.",
         "codes": [
           {
             "id": "Y6.4",
@@ -1149,6 +1168,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "D",
         "name": "Digital citizenship",
+        "description": "Behaving safely, legally and ethically online.",
         "codes": [
           {
             "id": "Y6.7",
@@ -1183,6 +1203,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Exploration & navigation",
+        "description": "Learning about careers and pathways, and knowing and completing the steps into college or work.",
         "codes": [
           {
             "id": "Y7.1",
@@ -1225,6 +1246,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "B",
         "name": "Work readiness",
+        "description": "Skills and credentials for the workplace: professionalism, technical and industry skills, certifications, internships and apprenticeships.",
         "codes": [
           {
             "id": "Y7.3",
@@ -1267,6 +1289,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "C",
         "name": "Employment & independence",
+        "description": "Results in work and adult independence: getting and keeping a job, managing money, and the daily living skills needed to live on one's own.",
         "codes": [
           {
             "id": "Y7.5",
@@ -1338,6 +1361,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Physical health",
+        "description": "A young person's physical health: daily health habits, motor and sport skills, health knowledge, sexual and reproductive health, and access to health care.",
         "codes": [
           {
             "id": "Y8.1",
@@ -1434,6 +1458,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "B",
         "name": "Mental health",
+        "description": "A young person's mental health: fewer symptoms and distress, flourishing and life satisfaction, healing from trauma, and access to mental health services.",
         "codes": [
           {
             "id": "Y8.6",
@@ -1512,6 +1537,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "C",
         "name": "Safety, risk & justice",
+        "description": "A young person's safety and risk: feeling safe, substance use, violence and bullying, and involvement with the justice system.",
         "codes": [
           {
             "id": "Y8.10",
@@ -1600,6 +1626,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Parenting & home learning",
+        "description": "How caregivers raise children and support their learning: parenting knowledge and practices, learning routines at home, and family health practices.",
         "codes": [
           {
             "id": "F1.1",
@@ -1660,6 +1687,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "B",
         "name": "Caregiver well-being & support",
+        "description": "The caregiver's own well-being, resilience and supportive connections with other parents and the community.",
         "codes": [
           {
             "id": "F1.4",
@@ -1702,6 +1730,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "C",
         "name": "Adult development & navigation",
+        "description": "Caregivers and other adult participants building their own education, skills and employment, and learning to navigate systems and know their rights.",
         "codes": [
           {
             "id": "F1.6",
@@ -1744,6 +1773,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "D",
         "name": "Family-program partnership",
+        "description": "The family's relationship with the program or school: trust and communication, and taking part in program or school activities and decisions.",
         "codes": [
           {
             "id": "F1.8",
@@ -1796,6 +1826,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Economic stability",
+        "description": "Household or independent-youth income, public benefits and financial stability.",
         "codes": [
           {
             "id": "F2.1",
@@ -1820,6 +1851,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "B",
         "name": "Food & housing",
+        "description": "Having enough healthy food and a safe, stable place to live.",
         "codes": [
           {
             "id": "F2.2",
@@ -1872,6 +1904,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Staff learning & practice",
+        "description": "What staff and volunteers learn and how they apply it in their practice.",
         "codes": [
           {
             "id": "A1.1",
@@ -1914,6 +1947,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "B",
         "name": "Workforce",
+        "description": "Whether the workforce stays and stays well: staff retention, turnover and well-being.",
         "codes": [
           {
             "id": "A1.3",
@@ -1948,6 +1982,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Quality & experience",
+        "description": "How good the program is and how it is experienced: assessed program quality and participant or family satisfaction.",
         "codes": [
           {
             "id": "A2.1",
@@ -1991,6 +2026,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "B",
         "name": "Access & inclusion",
+        "description": "Making the program reachable for everyone: providing resources and removing barriers through accommodations and language access.",
         "codes": [
           {
             "id": "A2.3",
@@ -2034,6 +2070,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "C",
         "name": "Reach & engagement systems",
+        "description": "How many people the program reaches and how much they receive, and the program's systems for engaging families.",
         "codes": [
           {
             "id": "A2.5",
@@ -2085,6 +2122,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Policy & institutions",
+        "description": "Changes in policy, funding or institutional practice in schools, districts, cities or states.",
         "codes": [
           {
             "id": "A3.1",
@@ -2109,6 +2147,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "B",
         "name": "Partnerships & community",
+        "description": "Change across organizations and neighborhoods: cross-sector partnerships and community cohesion and collective efficacy.",
         "codes": [
           {
             "id": "A3.2",

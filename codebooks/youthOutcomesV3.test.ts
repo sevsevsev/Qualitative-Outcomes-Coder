@@ -55,6 +55,13 @@ describe('codebook 3.x structure (CP-08-01)', () => {
     }
   });
 
+  it('describes every category, outside the coding prompt (CP-10-03)', () => {
+    for (const cat of V3_DOMAINS.flatMap(d => d.categories)) {
+      expect(cat.description.trim().length).toBeGreaterThan(20);
+      expect(codebook.definitionsText).not.toContain(cat.description);
+    }
+  });
+
   it('gives every code a definition, include, exclude, use-instead and source line', () => {
     for (const c of codes) {
       for (const f of ['definition', 'include', 'exclude', 'useInstead', 'source'] as const) {

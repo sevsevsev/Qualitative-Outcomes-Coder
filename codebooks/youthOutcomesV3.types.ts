@@ -33,6 +33,8 @@ export interface V3Code {
 export interface V3Category {
   letter: string;
   name: string;
+  /** What the category holds, in one or two sentences (CP-10-03). For display (dashboard, explorer); not in the coding prompt. */
+  description: string;
   codes: V3Code[];
 }
 

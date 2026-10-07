@@ -5,7 +5,7 @@
 // both send the same system instruction, schema and model settings, and by
 // api/extract-results.ts (quotes the results in a description or mission).
 
-import { GoogleGenAI, Type } from '@google/genai';
+import { GoogleGenAI, ThinkingLevel, Type } from '@google/genai';
 import { buildSystemInstruction, Codebook } from '../../codebooks/index.js';
 import { buildBatchResponseSchema } from '../../codebooks/geminiSchema.js';
 import { EXTRACTION_INSTRUCTION } from '../../services/resultExtraction.js';
@@ -32,14 +32,12 @@ import { EXTRACTION_INSTRUCTION } from '../../services/resultExtraction.js';
 // out to be wrong, GEMINI_MODEL can override this with no code change,
 // and a 404 here automatically falls back to FALLBACK_MODEL below. The
 // installed @google/genai SDK's ThinkingConfig type (node_modules,
-// dist/genai.d.ts) supports both `thinkingBudget` and `thinkingLevel` as
-// independent optional fields, so the `thinkingBudget: 1024` below stays
-// valid at the SDK level regardless of which model it's sent to -- but
-// the SDK's own docs note "allowed ranges are model dependent", so a
-// model-specific rejection of this exact value is still possible and
-// wouldn't be caught by the 404-only fallback below; it would surface as
-// a readable error in the batch progress log rather than a crash, per
-// this file's existing error handling.
+// dist/genai.d.ts) supports `thinkingLevel`, which Google asked projects to
+// use instead of the deprecated `thinkingBudget` (notice received
+// 2026-10-06; ai.google.dev/gemini-api/docs/thinking lists low, medium and
+// high for both gemini-3.8-flash and gemini-2.5-flash). Sending both in one
+// request is a 400. Temperature, top_p and top_k are also deprecated and
+// are never sent: the model's defaults apply.
 export const DEFAULT_MODEL = 'gemini-3.8-flash';
 // Used only if the primary model call fails with a model-unavailable-style
 // error (see isModelUnavailableError below). Deliberately a different,
@@ -49,6 +47,12 @@ export const DEFAULT_MODEL = 'gemini-3.8-flash';
 // same risk profile.
 export const FALLBACK_MODEL = 'gemini-2.5-flash';
 export const MODEL = process.env.GEMINI_MODEL || DEFAULT_MODEL;
+
+// Makes the model reason before answering. LOW replaces the old
+// `thinkingBudget: 1024` (a small budget for a batch of ~5 items); the
+// model default is MEDIUM. Shared by the coder, the explorer's Try it, the
+// result extraction step and scripts/codebook-eval.ts.
+export const THINKING_CONFIG = { thinkingLevel: ThinkingLevel.LOW };
 
 // Gemini returns 404 for a model ID that doesn't exist or isn't available
 // to this API key/project -- the shape a retired model takes. Only this
@@ -79,9 +83,7 @@ export const codeWithGemini = async (
   const config = {
     systemInstruction: buildSystemInstruction(codebook),
     responseMimeType: 'application/json',
-    // Forces the model to reason before answering; 1024 tokens is
-    // sufficient for a batch of ~5 items.
-    thinkingConfig: { thinkingBudget: 1024 },
+    thinkingConfig: THINKING_CONFIG,
     responseSchema: buildBatchResponseSchema(codebook),
   };
 
@@ -156,7 +158,7 @@ export const extractWithGemini = async (
   return generateJson(ai, contents, {
     systemInstruction: EXTRACTION_INSTRUCTION,
     responseMimeType: 'application/json',
-    thinkingConfig: { thinkingBudget: 1024 },
+    thinkingConfig: THINKING_CONFIG,
     responseSchema: EXTRACTION_SCHEMA,
   });
 };

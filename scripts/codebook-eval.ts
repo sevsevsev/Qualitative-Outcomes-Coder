@@ -25,6 +25,7 @@ import path from 'path';
 import { GoogleGenAI } from '@google/genai';
 import { getCodebook, buildSystemInstruction, CodebookType } from '../codebooks/index.js';
 import { buildBatchResponseSchema } from '../codebooks/geminiSchema.js';
+import { THINKING_CONFIG } from '../api/_lib/gemini.js';
 import {
   type CodedRow, type EvalSummary, cohensKappa, itemCode, parseGold, regressions, scoreRows, selectScoreable,
 } from './codebookEvalScoring.js';
@@ -44,7 +45,7 @@ async function codeOnce(ai: GoogleGenAI, codebookId: CodebookType, items: { row_
   const config = {
     systemInstruction: buildSystemInstruction(codebook),
     responseMimeType: 'application/json',
-    thinkingConfig: { thinkingBudget: 1024 },
+    thinkingConfig: THINKING_CONFIG,
     responseSchema: buildBatchResponseSchema(codebook),
   };
   const out: CodedRow[] = [];

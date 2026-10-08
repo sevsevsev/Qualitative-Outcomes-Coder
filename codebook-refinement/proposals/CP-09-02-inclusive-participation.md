@@ -6,7 +6,7 @@
 | Codes touched | A2.4 (widened), Y2.6 (narrowed), rulesText rule 10 |
 | Version bump | MINOR (batched in 3.1.0) |
 | Requirement served | R3 tie-breakers |
-| Status | draft |
+| Status | ready-to-test; applied as candidate 3.2.0 on 2026-10-08 under Severin's delegation ("I defer to you on these"); awaits the live design-set gate |
 | Enum cost | +0 (160) |
 | Framework deviation | changed FD-P19 (A2.4 is codebook-defined; its scope widens to inclusive participation). Add the change to FD-P19's entry in `DEVIATIONS.md`. |
 

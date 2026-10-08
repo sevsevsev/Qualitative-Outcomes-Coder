@@ -1,0 +1,32 @@
+[
+  {
+    "claim_id": "y73-esf-technology-use",
+    "kind": "open-verify",
+    "source_id": null,
+    "code": "Y7.3",
+    "cite_as": "U.S. Department of Education, OCTAE, Employability Skills Framework",
+    "claimed_component": "Workplace Skills: Technology Use (understands and uses technology)",
+    "url_given": "https://cte.ed.gov/initiatives/employability-skills-framework",
+    "verdict": "SUPPORTED",
+    "url_checked": "https://octae.ed.gov/cte/initiatives/employability-skills-framework",
+    "source_kind": "primary",
+    "excerpt": "Technology use skills enable employees to successfully perform work tasks by applying information technology ... Understands and uses technology",
+    "corrected_cite_as": "",
+    "notes": "CP-09-06, 2026-10-08. The given cte.ed.gov URL redirected to OCTAE's own page, which lists Technology Use as one of five Workplace Skills (Resource management, Information use, Communication skills, Systems thinking, Technology use), with the checklist item 'Understands and uses technology'. The excerpt joins two passages with '...' and came through the fetch summarizer, not a raw-HTML check."
+  },
+  {
+    "claim_id": "y72-conley-ktks-2011",
+    "kind": "open-verify",
+    "source_id": null,
+    "code": "Y7.2",
+    "cite_as": "Conley, D. T. (2011). Four Keys to College and Career Readiness [presentation]. Educational Policy Improvement Center.",
+    "claimed_component": "Key Transition Knowledge & Skills: postsecondary options, admissions and financial aid",
+    "url_given": "https://www.epiconline.org",
+    "verdict": "PARTIAL",
+    "url_checked": "https://www.pps.net/cms/lib/OR01913224/Centricity/Domain/2157/Four_Keys_to_College_and_Career_Readiness.pdf",
+    "source_kind": "secondary",
+    "excerpt": "Postsecondary program selection, admissions requirements, financial aid, career pathways, postsecondary culture, role & identity issues, agency.",
+    "corrected_cite_as": "",
+    "notes": "CP-09-03, 2026-10-08. Content matches, but the copy is a Conley/EPIC slide deck hosted by Portland Public Schools, so PARTIAL. Recorded for the paper trail only: the registry's existing conley-four-keys support for Y7.2 (verified 2026-09-27, 'select the right college and program of study, apply, obtain financial aid, understand the culture of college') already covers college visits, so no support is added from this row."
+  }
+]

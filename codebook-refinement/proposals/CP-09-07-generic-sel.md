@@ -6,7 +6,7 @@
 | Codes touched | Option A: rulesText "Uncoded" bullet. Option B: new Y4.13, rule 14. |
 | Version bump | A: PATCH · B: MINOR |
 | Requirement served | R2 breadth, R3 tie-breakers |
-| Status | draft; Severin chooses A or B |
+| Status | superseded by CP-09-09 (domain-only coding, 3.1.0) |
 | Enum cost | A: +0 (160) · B: +1 (161; under the 165 redesign line) |
 | Framework deviation | none for either. B's anchor is CASEL (2020) as a whole framework. |
 

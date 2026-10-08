@@ -6,7 +6,7 @@
 | Codes touched | Y1.4 (narrowed), Y7.3 (widened), rulesText rule 15; F1.6 unchanged |
 | Version bump | MINOR (batched in 3.1.0) |
 | Requirement served | R1 frameworks, R3 tie-breakers |
-| Status | draft; blocked on verification EC-01 |
+| Status | ready-to-test; applied as candidate 3.2.0 on 2026-10-08 under Severin's delegation ("I defer to you on these"); awaits the live design-set gate |
 | Enum cost | +0 (160) |
 | Framework deviation | none if EC-01 is verified: Y7.3 already cites the OCTAE Employability Skills Framework, and Technology Use would be one of its components. Y1.4 moves closer to NGSS/CSTA by dropping everyday digital literacy. If EC-01 fails, do not adopt this CP as written (it would be a new FD for Y7.3). |
 
@@ -37,7 +37,7 @@ after: `... coding or computer science learned -> Y1.4; everyday digital skills 
 
 | Registry ID | Status | Component relied on |
 |---|---|---|
-| octae-employability-skills-framework | verified (excerpt covers Applied Knowledge, Effective Relationships, Workplace Skills, resource management only) | Workplace Skills: Technology Use [VERIFY] |
+| octae-employability-skills-framework | verified (excerpt covers Applied Knowledge, Effective Relationships, Workplace Skills, resource management only) | Workplace Skills: Technology Use (SUPPORTED 2026-10-08, record `y73-esf-technology-use` in `v3/source-verification-2026-10-08.json`) |
 
 ## Verification requests
 

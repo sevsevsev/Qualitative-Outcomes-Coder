@@ -6,7 +6,7 @@
 | Codes touched | A2.5 (widened), Y2.6 and F1.9 (narrowed), rulesText rule 2 ("HOW TO CHOOSE A CODE") |
 | Version bump | MINOR (3.0.0 → 3.1.0, batched with the other CP-09 changes) |
 | Requirement served | R3 tie-breakers |
-| Status | draft |
+| Status | ready-to-test; applied as candidate 3.2.0 on 2026-10-08 under Severin's delegation ("I defer to you on these"); awaits the live design-set gate |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none. F1.9 moves closer to its anchor (Epstein Type 3 Volunteering, Type 5 Decision Making); A2.5 stays inside the logic-model Outputs component it cites. |
 

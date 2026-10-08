@@ -6,7 +6,7 @@
 | Codes touched | rulesText rules 7, 13 and 16; Y2.4/Y7.2 line in rule 16 or a new line |
 | Version bump | PATCH (batched in 3.1.0) |
 | Requirement served | R3 tie-breakers |
-| Status | draft; take only in the same batch as the other held-out-derived fixes |
+| Status | ready-to-test; applied as candidate 3.2.0 on 2026-10-08 under Severin's delegation ("I defer to you on these"); awaits the live design-set gate |
 | Enum cost | +0 (160) |
 | Framework deviation | none (each default stays inside its code's anchor) |
 

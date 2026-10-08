@@ -350,6 +350,10 @@ Each code's `fidelity` and `deviation` fields in the data file must match its en
 - **Evidence:** 2.4.0's 10.2 gold rows.
 - **Alternative considered:** keep the OTL citation (unverifiable).
 - **Decided in:** 3.0 proposal (PR #33).
+- **Changed (CP-09-02, 3.2.0, 2026-10-08):** scope widened to youth with disabilities (or
+  another group facing barriers) taking part alongside peers when inclusion is the point,
+  following Severin's gold on S001 and H058; Y2.6 no longer takes those rows. Still
+  codebook-defined; no new citation is claimed.
 - **Revisit:** when the ADA/504 lead is verified.
 
 ### FD-P20 · A3.1

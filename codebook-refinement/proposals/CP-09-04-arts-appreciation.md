@@ -6,7 +6,7 @@
 | Codes touched | Y2.5 (include line), rulesText rule 9 |
 | Version bump | PATCH (batched in 3.1.0) |
 | Requirement served | R3 tie-breakers |
-| Status | draft |
+| Status | ready-to-test; applied as candidate 3.2.0 on 2026-10-08 under Severin's delegation ("I defer to you on these"); awaits the live design-set gate |
 | Enum cost | +0 (160) |
 | Framework deviation | none. Appreciating and critiquing art is the National Core Arts Standards' Responding process, which Y2.5 already cites (verified; FD-P16 unchanged). |
 

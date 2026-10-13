@@ -40,6 +40,8 @@ Read these before touching any codebook:
   Y4.12, Y6.4, Y6.5 and A3.1; only A2.2 and A2.4 remain codebook-defined.
 - 3.1.3 (CP-10-03) gives each of the 39 categories a one-sentence `description`, for display
   only (outcomes dashboard, explorer); it is never part of the coding prompt.
+- 3.1.4 (CP-10-04) names racial identity in Y5.2 (definition, include), Y5.1 (exclude), Y4.5
+  (include) and the Y5.A description.
 - `codebooks/original.ts` (2.5.x) was retired on 2026-09-26: no picker offers it, but it stays registered (marked `deprecated`) so saved sessions, old exports, eval scripts and direct Codebook-tab links still resolve its codes. Older files may use
   pre-2.0.0 numbers; see `codebook-refinement/renumbering/`.
 - A public explorer-only site is built from this repo with `VITE_SITE=explorer` (README,

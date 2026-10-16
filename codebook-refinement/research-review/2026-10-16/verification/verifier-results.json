@@ -1,0 +1,515 @@
+[
+ {
+  "claim_id": "y1-subject-01",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.thecorestandards.org/ELA-Literacy/CCRA/R/",
+  "source_kind": "primary",
+  "excerpt": "Read and comprehend complex literary and informational texts independently and proficiently.",
+  "corrected_cite_as": "",
+  "notes": "CCRA.R.10 appears word for word. The page footer reads '\u00a9 Copyright 2010. National Governors Association Center for Best Practices and Council of Chief State School Officers.' The fetch tool also said the page calls itself unofficial. I did not confirm that by reading the page myself."
+ },
+ {
+  "claim_id": "y1-subject-02",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.thecorestandards.org/ELA-Literacy/RF/introduction/",
+  "source_kind": "primary",
+  "excerpt": "These standards are directed toward fostering students' understanding and working knowledge of concepts of print, the alphabetic principle, and other basic conventions of the English writing system.",
+  "corrected_cite_as": "",
+  "notes": "The introduction contains the concepts-of-print sentence, but it does not name the strands Phonological Awareness, Phonics and Word Recognition, or Fluency. Those headings are on the grade-level pages (checked https://thecorestandards.org/ELA-Literacy/RF/K/). So the claim puts the strands in the wrong place, and the phonics and fluency support comes from the grade pages, not the introduction. The fetch tool returned this sentence in two pieces; I joined them without checking the join against the page."
+ },
+ {
+  "claim_id": "y1-subject-03",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.nichd.nih.gov/publications/pubs/nrp/findings",
+  "source_kind": "primary",
+  "excerpt": "Fluency is one of several critical factors necessary for reading comprehension.",
+  "corrected_cite_as": "",
+  "notes": "The sentence appears word for word in the Fluency section of the NRP findings page hosted by NICHD. The page says it is kept for historical purposes and is no longer updated. The section also covers repeated oral reading and independent silent reading."
+ },
+ {
+  "claim_id": "y1-subject-04",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.actfl.org/uploads/files/general/SOBL_Guidelines.pdf",
+  "source_kind": "primary",
+  "excerpt": "English learners should be encouraged to maintain and improve proficiency in their home or heritage language(s)",
+  "corrected_cite_as": "ACTFL, Californians Together, Modern Language Association, National Association for Bilingual Education, National Association of English Learner Program Administrators, National Council of State Supervisors for Languages, SealofBiliteracy.org, & TESOL International Association (2020). Guidelines for Implementing the Seal of Biliteracy.",
+  "notes": "The title, the 2020 year and the statement (Implementation Guidelines, section 1) all match. The listed authors also include SealofBiliteracy.org, grouped with Californians Together, so the corrected citation adds it. Check whether it is a co-author or only a logo before adopting the change."
+ },
+ {
+  "claim_id": "y1-subject-05",
+  "verdict": "PARTIAL",
+  "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section7011&num=0&edition=prelim",
+  "source_kind": "primary",
+  "excerpt": "if such course is designed to enable all participating children to become proficient in English and a second language",
+  "corrected_cite_as": "",
+  "notes": "Clause (7)(B) contains both phrases. However, the native-language use is a means toward English: it is 'to enable the child to develop and attain English proficiency'. The two-language courses are optional ('may include'). This defines English-learner programs, not bilingual development as an outcome, so the fit to Y1.2 is looser than claimed."
+ },
+ {
+  "claim_id": "y1-subject-06",
+  "verdict": "PARTIAL",
+  "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title25-section2903&num=0&edition=prelim",
+  "source_kind": "primary",
+  "excerpt": "encourage and support the use of Native American languages as a medium of instruction in order to encourage and support-",
+  "corrected_cite_as": "",
+  "notes": "Paragraph (3) of \u00a72903 ('Declaration of policy') appears word for word. Its purposes include '(A) Native American language survival'. It is a federal policy about the language of instruction, not a description of a young person keeping or developing their language, so it supports home-language maintenance only indirectly. The excerpt ends with the colon-dash that introduces the list of purposes."
+ },
+ {
+  "claim_id": "y1-subject-07",
+  "verdict": "PARTIAL",
+  "url_checked": "https://csteachers.org/pk12standards/about/",
+  "source_kind": "primary",
+  "excerpt": "Algorithms, Programming, Data & Analysis, and Computing Systems",
+  "corrected_cite_as": "",
+  "notes": "The page confirms 'The 2026 CSTA PK\u201312 Computer Science Standards' and these core concepts. It says Computing Systems and Networks & the Internet are merged into 'Systems & Security'. It does not say the 2026 standards supersede or replace the 2017 K\u201312 standards; it only describes how the 2017 structure changed. That part of the claim is unverified."
+ },
+ {
+  "claim_id": "y1-subject-08",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapVIII-partA-sec7801.htm",
+  "source_kind": "primary",
+  "excerpt": "science, technology, engineering, mathematics, foreign languages, civics and government, economics, arts, history, geography, computer science, music",
+  "corrected_cite_as": "",
+  "notes": "Paragraph (52) lists 'technology', 'engineering' and 'computer science' among the well-rounded education subjects, which supports Y1.4 directly. It is a list of subjects with no outcome wording. Checked in the 2023 govinfo edition."
+ },
+ {
+  "claim_id": "y1-subject-09",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.nationalartsstandards.org/sites/default/files/Conceptual%20Framework%2007-21-16.pdf",
+  "source_kind": "primary",
+  "excerpt": "Anchor standards describe the general knowledge and skill that teachers expect students to demonstrate throughout their education in the arts.",
+  "corrected_cite_as": "",
+  "notes": "Both components are present, with small wording differences ('that teachers expect students to demonstrate'). Artistic literacy is defined broadly as 'the knowledge and understanding required to participate authentically in the arts', which is wider than Y1.6's technique, vocabulary or knowledge of an art form. The PDF shows no date, and the file name suggests a 2016 revision, so the 2014 year is unconfirmed. The fetch tool returned the excerpt in two pieces; I joined them without checking the join against the page."
+ },
+ {
+  "claim_id": "y1-subject-10",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.thecorestandards.org/ELA-Literacy/CCRA/W/",
+  "source_kind": "primary",
+  "excerpt": "Conduct short as well as more sustained research projects based on focused questions, demonstrating understanding of the subject under investigation.",
+  "corrected_cite_as": "",
+  "notes": "Both standards sit under the heading 'Research to Build and Present Knowledge'. CCRA.W.7 appears word for word, and CCRA.W.8 contains 'assess the credibility and accuracy of each source'. W.8 also covers gathering information from multiple sources and avoiding plagiarism. The fetch tool returned the W.7 excerpt in two pieces; I joined them without checking the join against the page."
+ },
+ {
+  "claim_id": "y1-subject-11",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.aasa.org/resources/resource/four-keys-college-career-readiness",
+  "source_kind": "primary",
+  "excerpt": "Key Cognitive Strategies consist of problem formulation, research, interpretation, communication, and precision and accuracy.",
+  "corrected_cite_as": "",
+  "notes": "The page confirms David T. Conley, School Administrator magazine (AASA), April 1, 2016. The five components match the claim word for word. Only 'research' and 'problem formulation' bear directly on Y1.7's research and inquiry part. The fetch tool returned the excerpt in two pieces; I joined them without checking the join against the page."
+ },
+ {
+  "claim_id": "y1-subject-12",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.socialstudies.org/system/files/2022/c3-framework-for-social-studies-rev0617.2.pdf",
+  "source_kind": "primary",
+  "excerpt": "Evaluating Sources and Using Evidence",
+  "corrected_cite_as": "",
+  "notes": "The URL in the claim is not the C3 Framework. It is the introduction to an NCSS online methods text by Paska and Waring, which counts as a secondary source. I checked the Framework PDF instead (NCSS, 2013; this hosted copy is the June 2017 revision). It names Dimension 1 'Developing Questions and Planning Inquiries' and Dimension 3 'Evaluating Sources and Using Evidence'. Replace the claim's URL with this one."
+ },
+ {
+  "claim_id": "y1-subject-13",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.federalregister.gov/documents/2013/08/30/2013-21138/final-priorities-requirements-definitions-and-selection-criteria-race-to-the-top-early-learning-challenge",
+  "source_kind": "primary",
+  "excerpt": "cognition and general knowledge (including early mathematics and early scientific development)",
+  "corrected_cite_as": "U.S. Department of Education & U.S. Department of Health and Human Services (2013). Final Priorities, Requirements, Definitions, and Selection Criteria; Race to the Top-Early Learning Challenge. 78 Fed. Reg. 53964 (August 30, 2013).",
+  "notes": "The Essential Domains definition includes 'the domains of language and literacy development' and the excerpt above. The Kindergarten Entry Assessment is defined as given 'during the first few months of their admission into kindergarten' and covering all Essential Domains. The definitions also include approaches to learning, physical and motor development, and social-emotional development. The corrected citation only adds the page number, 53964."
+ },
+ {
+  "claim_id": "y1-subject-14",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap105-subchapII-B-sec9858c.htm",
+  "source_kind": "primary",
+  "excerpt": "that are appropriate for children from birth to kindergarten entry, describing what such children should know and be able to do,",
+  "corrected_cite_as": "",
+  "notes": "Section 9858c(c)(2)(T)(i) requires the State to give an assurance that it will maintain or implement early learning and developmental guidelines covering 'the essential domains of early childhood development'. This is a State plan requirement and does not name specific domains such as literacy or math. The section was amended by the CCDBG Act of 2014."
+ },
+ {
+  "claim_id": "y1-subject-15",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/content/pkg/GOVPUB-HE23_1100-PURL-gpo65456/pdf/GOVPUB-HE23_1100-PURL-gpo65456.pdf",
+  "source_kind": "primary",
+  "excerpt": "For preschoolers, Language and Literacy are distinct domains to reflect the differentiation, centrality,",
+  "corrected_cite_as": "",
+  "notes": "The document confirms the title, the Office of Head Start/ACF/HHS as publisher, and the year 2015. Its central domains include 'Language and Literacy' and 'Cognition', along with Approaches to Learning, Social and Emotional Development, and Perceptual, Motor, and Physical Development. For preschoolers, Language and Literacy are split into two domains, and Cognition is split into two domains."
+ },
+ {
+  "claim_id": "y1-mindsets-01",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://files.eric.ed.gov/fulltext/ED542543.pdf",
+  "source_kind": "primary",
+  "excerpt": "involves a student's sense that the subject matter he or she is studying is interesting and holds value",
+  "corrected_cite_as": "",
+  "notes": "The authors, the 2012 year and the UChicago CCSR publisher match. 'This work has value for me' is one of the four academic mindsets, and utility value is defined as 'serving a useful purpose or meeting an end goal that is important by completing a task' (citing Eccles et al., 1983). The mindset also includes interest, intrinsic value and attainment value, which go beyond relevance."
+ },
+ {
+  "claim_id": "y1-mindsets-02",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://files.eric.ed.gov/fulltext/ED539251.pdf",
+  "source_kind": "primary",
+  "excerpt": "Self-monitoring is a form of metacognition, the ability to think about how one is thinking.",
+  "corrected_cite_as": "",
+  "notes": "The Academic Behaviors section has both the self-monitoring/metacognition sentence and the study-skills list: 'Typical studyskill behaviors include time management, preparing for and taking examinations,...' ('studyskill' is how the PDF text extracts). The report was prepared for the Gates Foundation; its own citation line names the publisher as 'Eugene, OR: Educational Policy Improvement Center.'"
+ },
+ {
+  "claim_id": "y1-mindsets-03",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/20072004.pdf",
+  "source_kind": "primary",
+  "excerpt": "Assist students in identifying what material they know well, and what needs further study",
+  "corrected_cite_as": "",
+  "notes": "Authors, NCER 2007-2004 and the NCER/IES publisher are confirmed. Rec 5 is 'Use quizzing to promote learning' and Rec 6 is 'Help students allocate study time efficiently'. Both are worded as advice to teachers, so the fit to student self-quizzing is partial, as the claim already says."
+ },
+ {
+  "claim_id": "y1-mindsets-04",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/20072003.pdf",
+  "source_kind": "primary",
+  "excerpt": "Teachers should explicitly teach students that academic abilities are expandable and improvable",
+  "corrected_cite_as": "",
+  "notes": "Authors, NCER 2007-2003 and the publisher are confirmed. Rec 1 is worded 'Teach students that academic abilities are expandable and improvable' (evidence: Moderate). It is a teacher practice in a guide about girls in math and science, so the fit to student growth mindset is partial, as the claim says."
+ },
+ {
+  "claim_id": "y1-mindsets-05",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://files.eric.ed.gov/fulltext/ED542543.pdf",
+  "source_kind": "primary",
+  "excerpt": "Chicago: University of Chicago Consortium on Chicago School Research.",
+  "corrected_cite_as": "",
+  "notes": "The cover reads 'LITERATURE REVIEW JUNE 2012'. Title and subtitle match (the cover capitalizes 'To'). Author order matches: Farrington, Roderick, Allensworth, Nagaoka, Keyes (Tasha Seneca), Johnson, Beechum. The publisher name above comes from the citation line; the cover itself shows UChicago CCSR. The fetch tool would only summarize the cover, so I could not get a verbatim cover transcript."
+ },
+ {
+  "claim_id": "y1-taxonomy-01",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.nationalacademies.org/read/25389/chapter/6",
+  "source_kind": "primary",
+  "excerpt": "Achievement in the preschool and early-childhood years refers mainly to a set of reading- and math-related skills.",
+  "corrected_cite_as": "",
+  "notes": "This URL is Chapter 4 ('Indicators of Disparities in Student Outcomes'). Under 'DOMAIN A: KINDERGARTEN READINESS', 'Indicator 1: Disparities in Academic Readiness' lists the constructs 'Reading/literacy skills' and 'Numeracy/math skills' in Table 4-1."
+ },
+ {
+  "claim_id": "y1-taxonomy-02",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.nationalacademies.org/read/25389/chapter/2",
+  "source_kind": "primary",
+  "excerpt": "Accumulating credits (being on track to graduate)",
+  "corrected_cite_as": "",
+  "notes": "This URL is the Summary chapter. In Table S-1, Indicator 4 'Disparities in Performance in Coursework' lists three separate table entries: 'Success in classes', 'Accumulating credits (being on track to graduate)' and 'Grades, GPA'. Course passing is implied by 'success in classes' rather than named."
+ },
+ {
+  "claim_id": "y1-taxonomy-03",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.nationalacademies.org/read/25389/chapter/2",
+  "source_kind": "primary",
+  "excerpt": "Achievement in reading, math, and science",
+  "corrected_cite_as": "",
+  "notes": "Indicator 5 'Disparities in Performance on Tests' exists, with constructs 'Achievement in reading, math, and science' and 'Learning growth in reading, math, and science achievement'. The source always names the subjects, so 'achievement stated without a subject' goes beyond what it says."
+ },
+ {
+  "claim_id": "y1-taxonomy-04",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.nationalacademies.org/read/25389/chapter/2",
+  "source_kind": "primary",
+  "excerpt": "Educational Attainment",
+  "corrected_cite_as": "",
+  "notes": "Table S-1 has Domains A 'Kindergarten Readiness', B 'K\u201312 Learning and Engagement' and C 'Educational Attainment', with Indicators 1-7. The source frames these as indicators of disparities in student outcomes; it never calls them one academic domain. Domain A also includes Indicator 2 (self-regulation and attention), so the Y1 grouping is the codebook's inference."
+ },
+ {
+  "claim_id": "y1-taxonomy-05",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.ed.gov/grants-and-programs/formula-grants/school-improvement-grants/nita-m-lowey-21st-century-community-learning-centers-title-iv-part-b",
+  "source_kind": "primary",
+  "excerpt": "Percentage of students in grades 1 \u2014 5 participating in 21st CCLC programming in the school year and summer who demonstrated an improvement in teacher-reported engagement in learning.",
+  "corrected_cite_as": "",
+  "notes": "The page's GPRA Measure Indicators table includes 'Engagement in learning' for grades 1-5. The measure is teacher-reported engagement. The excerpt was returned in two segments that I assume are contiguous on the page."
+ },
+ {
+  "claim_id": "y1-taxonomy-06",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm",
+  "source_kind": "primary",
+  "excerpt": "(III) student engagement;",
+  "corrected_cite_as": "",
+  "notes": "Clause (v)(II) opens 'For purposes of subclause (I), the State may include measures of\u2014' and lists student engagement as optional for the school quality or student success indicator. The list items carry labels (III), (IV) and so on; an editorial note says they probably should be (aa)-(ff). The statute does not define engagement."
+ },
+ {
+  "claim_id": "y1-taxonomy-07",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm",
+  "source_kind": "primary",
+  "excerpt": "(V) student access to and completion of advanced coursework;",
+  "corrected_cite_as": "",
+  "notes": "This is an optional measure under 20 U.S.C. 6311(c)(4)(B)(v)(II). The same label oddity applies as in y1-taxonomy-06."
+ },
+ {
+  "claim_id": "y1-taxonomy-08",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.ed.gov/grants-and-programs/formula-grants/school-improvement-grants/nita-m-lowey-21st-century-community-learning-centers-title-iv-part-b",
+  "source_kind": "primary",
+  "excerpt": "Percentage of students in grades 7-8 and 10-12 attending 21st CCLC programming during the school year and summer with a prior-year unweighted GPA of less than 3.0 who demonstrated an improved GPA.",
+  "corrected_cite_as": "",
+  "notes": "The measure is limited to students with a prior-year unweighted GPA below 3.0; the claim leaves this out, but GPA as an outcome is still supported. The excerpt was returned in two segments that I assume are contiguous."
+ },
+ {
+  "claim_id": "y1-taxonomy-09",
+  "verdict": "PARTIAL",
+  "url_checked": "https://journals.sagepub.com/doi/10.3102/00346543074001059",
+  "source_kind": "primary",
+  "excerpt": "Researchers describe behavioral, emotional, and cognitive engagement",
+  "corrected_cite_as": "",
+  "notes": "Citation details are confirmed on the DOI page. The full text is restricted, so I checked only the abstract, which names the three dimensions. The Y1.9 vs Y3.1 boundary (emotional engagement or connectedness) is not stated there; it is the codebook's inference."
+ },
+ {
+  "claim_id": "y1-taxonomy-10",
+  "verdict": "PARTIAL",
+  "url_checked": "https://wallacefoundation.org/sites/default/files/2024-09/foundations-for-young-adult-success.doi_.10.59656%252FYD-G1389.001.pdf",
+  "source_kind": "primary",
+  "excerpt": "These four foundational components are self-regulation, knowledge and skills, mindsets, and values.",
+  "corrected_cite_as": "",
+  "notes": "The PDF confirms the title, authors and June 2015 date. The authors are UChicago CCSR; the report was funded by Wallace and hosted on Wallace's site, which titles it 'A Developmental Framework for Young Adult Success'. The components are distinct, but they are general developmental constructs, not academic learning behaviors. Mapping Self-Regulation to 'learning behaviors' is therefore loose."
+ },
+ {
+  "claim_id": "y1-taxonomy-11",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.ed.gov/grants-and-programs/formula-grants/school-improvement-grants/nita-m-lowey-21st-century-community-learning-centers-title-iv-part-b",
+  "source_kind": "primary",
+  "excerpt": "who had a school day attendance rate at/or below 90% in the prior school year and demonstrated an improved attendance rate in the current school year.",
+  "corrected_cite_as": "",
+  "notes": "The measure covers grades 1-12 and only students at or below 90% attendance in the prior year; the claim leaves this out. The excerpt is the second half of the measure's text, returned in segments that I assume are contiguous."
+ },
+ {
+  "claim_id": "y1-taxonomy-12",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.nationalacademies.org/read/25389/chapter/6",
+  "source_kind": "primary",
+  "excerpt": "describes it as a multidimensional construct reflecting behavioral, emotional, and cognitive components.",
+  "corrected_cite_as": "",
+  "notes": "This URL is Chapter 4. 'Indicator 3: Disparities in Engagement in Schooling' lists 'Attendance/absenteeism' and 'Academic engagement' in Table 4-1. The excerpt is the end of a sentence that begins by saying recent work on engagement in learning consistently describes engagement this way."
+ },
+ {
+  "claim_id": "y1-attainment-01",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm",
+  "source_kind": "primary",
+  "excerpt": "measures of school quality, climate, and safety, including rates of in-school suspensions, out-of-school suspensions, expulsions, school-related arrests, referrals to law enforcement, chronic absenteeism (including both excused and unexcused absences),",
+  "corrected_cite_as": "",
+  "notes": "The clause letter is correct: (h)(1)(C)(viii)(I) names chronic absenteeism, with both excused and unexcused absences. It is a report-card reporting requirement and does not set a threshold for chronic absence; FS195 (claim 02) supplies that."
+ },
+ {
+  "claim_id": "y1-attainment-02",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.ed.gov/sites/ed/files/2024-11/fs195-20-2.pdf",
+  "source_kind": "primary",
+  "excerpt": "The unduplicated number of students absent 10% or more school days during the school year.",
+  "corrected_cite_as": "",
+  "notes": "The title, version 20.2, SY 2023-24 and August 2024 date all match. The definition appears for DG 887 and DG 814 in Table 1.0-1 and is a count definition used for EDFacts reporting."
+ },
+ {
+  "claim_id": "y1-attainment-03",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/link/uscode/42/11432",
+  "source_kind": "primary",
+  "excerpt": "continue the child's or youth's education in the school of origin for the duration of homelessness\u2014 ... School stability ... In determining the best interest of the child or youth under subparagraph (A), the local educational agency shall\u2014",
+  "corrected_cite_as": "",
+  "notes": "Checked on the govinfo official text and on Cornell LII. The labels are exact: (g)(3)(A)(i) is school of origin and (g)(3)(B) is headed 'School stability'. These are LEA duties based on the child's best interest, not outcome measures. The ellipses join separate subdivisions."
+ },
+ {
+  "claim_id": "y1-attainment-04",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm",
+  "source_kind": "primary",
+  "excerpt": "the steps a State educational agency will take to ensure collaboration with the State agency responsible for administering the State plans under parts B and E of title IV of the Social Security Act",
+  "corrected_cite_as": "",
+  "notes": "The clause letter (g)(1)(E) is correct. The same clause goes on 'to ensure the educational stability of children in foster care', with assurances about the school of origin and immediate enrollment. It is a state-plan process requirement, not a measured outcome."
+ },
+ {
+  "claim_id": "y1-attainment-05",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/link/uscode/42/675",
+  "source_kind": "primary",
+  "excerpt": "(G) A plan for ensuring the educational stability of the child while in foster care, including\u2014",
+  "corrected_cite_as": "",
+  "notes": "The label (1)(G) is correct. On 'remaining in the same school', the claim simplifies the statute: (ii)(I) requires an assurance of LEA coordination 'to ensure that the child remains in the school in which the child is enrolled at the time of each placement', with immediate enrollment in a new school as the alternative in (ii)(II). Also checked on Cornell LII."
+ },
+ {
+  "claim_id": "y1-attainment-06",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.ecfr.gov/current/title-34/subtitle-B/chapter-I/part-106/subpart-D/section-106.40",
+  "source_kind": "primary",
+  "excerpt": "A recipient shall not discriminate against any student, or exclude any student from its education program or activity, including any class or extracurricular activity, on the basis of such student's pregnancy, childbirth, false pregnancy,",
+  "corrected_cite_as": "34 CFR 106.40(b)(1) and (b)(5)",
+  "notes": "The no-exclusion rule is in (b)(1) and reinstatement after leave is in (b)(5). It is a nondiscrimination protection, not an enrollment outcome, so the fit is partial, as the claim itself says. eCFR shows a change on Sept. 29, 2026 [91 FR 61318]. The current text still contains this wording, but the verifier did not check what that amendment changed."
+ },
+ {
+  "claim_id": "y1-attainment-07",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm",
+  "source_kind": "primary",
+  "excerpt": "measures of school quality, climate, and safety, including rates of in-school suspensions, out-of-school suspensions, expulsions, school-related arrests, referrals to law enforcement,",
+  "corrected_cite_as": "",
+  "notes": "The clause letter (h)(1)(C)(viii)(I) is correct. It also lists school-related arrests, which the claim leaves out. It is a reporting requirement."
+ },
+ {
+  "claim_id": "y1-attainment-08",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapIV-partA-subpart1-sec7118.htm",
+  "source_kind": "primary",
+  "excerpt": "designing and implementing a locally-tailored plan to reduce exclusionary discipline practices",
+  "corrected_cite_as": "",
+  "notes": "Both pinpoints check out. 7118(5)(F) is an allowable activity under a paragraph that 'may include' it. 6311(g)(1)(C)(ii) reads 'the overuse of discipline practices that remove students from the classroom; and'. Both are program or plan provisions, not youth outcomes, so the fit is partial, as the claim says."
+ },
+ {
+  "claim_id": "y1-attainment-09",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://crdc.communities.ed.gov/sites/default/files/2025-01/2023-24-crdc-school-form.pdf",
+  "source_kind": "primary",
+  "excerpt": "DISC: Student Discipline (Corporal Punishment, Expulsion, Suspension)",
+  "corrected_cite_as": "",
+  "notes": "Both modules are present. ARRS is titled 'ARRS: Referrals to Law Enforcement & School-related Arrests', with ARRS-1 'Instances of Referrals to Law Enforcement'. DISC includes out-of-school suspension (DISC-21) and expulsion items (DISC-15/16)."
+ },
+ {
+  "claim_id": "y1-attainment-10",
+  "verdict": "PARTIAL",
+  "url_checked": "https://crdc.communities.ed.gov/sites/default/files/2025-01/2023-24-crdc-school-form.pdf",
+  "source_kind": "primary",
+  "excerpt": "did this school have any students who participated in at least one credit recovery program?",
+  "corrected_cite_as": "2023-24 CRDC School Form, RETN module and PENR-5 (Credit Recovery Program Indicator)",
+  "notes": "The RETN ('Retention') module counts students retained, by grade; retention is the opposite of promotion, not promotion itself. PENR-5 is only a school-level yes/no indicator for credit recovery and does not measure credit accumulation. So the fit to Y1.15 is loose. Part of the PDF text was truncated in the fetch."
+ },
+ {
+  "claim_id": "y1-attainment-11",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://crdc.communities.ed.gov/sites/default/files/2025-01/2023-24-crdc-school-form.pdf",
+  "source_kind": "primary",
+  "excerpt": "APIB: Advanced Placement (AP) & International Baccalaureate Diploma Programme (IB) Enrollment",
+  "corrected_cite_as": "",
+  "notes": "APIB-2 counts IB enrollment and APIB-6 counts AP student enrollment. PENR-3 is titled 'Dual Enrollment/Dual Credit Program Indicator' and asks whether the school had any students enrolled in a dual enrollment/dual credit program. It is a yes/no at school level, not a count of students."
+ },
+ {
+  "claim_id": "y1-attainment-12",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm",
+  "source_kind": "primary",
+  "excerpt": "(bb) accelerated coursework to earn postsecondary credit while still in high school, such as Advanced Placement and International Baccalaureate courses and examinations, and dual or concurrent enrollment programs.",
+  "corrected_cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 6311(h)(1)(C)(viii)(II)(bb) and 6311(c)(4)(B)(v)(II)",
+  "notes": "The phrase 'student access to and completion of advanced coursework;' is in subclause (v)(II), so the pinpoint should name (II). It is an optional indicator a state 'may include', not a requirement."
+ },
+ {
+  "claim_id": "y1-attainment-13",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.ecfr.gov/current/title-20/chapter-V/part-677/subpart-A/section-677.155",
+  "source_kind": "primary",
+  "excerpt": "A participant who has attained a secondary school diploma or its recognized equivalent is included in the percentage of participants who have attained a secondary school diploma or recognized equivalent only if the participant also is employed or is enrolled",
+  "corrected_cite_as": "WIOA performance accountability, 20 CFR 677.155(a)(1)(iv)(A)-(B), credential attainment indicator (U.S. Department of Labor, Employment and Training Administration)",
+  "notes": "The labels (A)-(B) are correct. (A) covers attainment 'during participation in or within 1 year after exit'. eCFR lists the agency as ETA/DOL for 20 CFR. The fit is partial, as the claim says."
+ },
+ {
+  "claim_id": "y1-attainment-14",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://nces.ed.gov/programs/digest/d21/tables/dt21_219.67.asp",
+  "source_kind": "primary",
+  "excerpt": "High school completers include those with a high school diploma",
+  "corrected_cite_as": "",
+  "notes": "Footnote 1 continues with 'those with an alternative credential, such as a GED'. The table covers 18- to 24-year-olds not enrolled in high school, for selected years 2010 through 2020."
+ },
+ {
+  "claim_id": "y1-attainment-15",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.ed.gov/sites/ed/files/2025-02/fs221-20-3.pdf",
+  "source_kind": "primary",
+  "excerpt": "who attained academic and career and technical outcomes up to 90 calendar days after exiting the program.",
+  "corrected_cite_as": "",
+  "notes": "The title, v20.3, SY 2023-24 and January 2025 all match. The permitted values include 'Enrolled in local district school', 'Earned a GED' and 'Obtained high school diploma'. The population is Title I, Part D, Subpart 2 (LEA) at-risk and delinquent programs."
+ },
+ {
+  "claim_id": "y1-attainment-16",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm",
+  "source_kind": "primary",
+  "excerpt": "the cohort rate (in the aggregate, and disaggregated for each subgroup of students defined in subsection (c)(2)), at which students who graduate from the high school enroll, for the first academic year that begins after the students' graduation\u2014",
+  "corrected_cite_as": "",
+  "notes": "The clause letter (xiii) is correct. The clause applies 'Where available'. Its subclauses cover public postsecondary programs in the State (I) and private or out-of-state programs (II) where the data are available."
+ },
+ {
+  "claim_id": "y1-attainment-17",
+  "verdict": "PARTIAL",
+  "url_checked": "https://sites.ed.gov/idea/part-b-spp-apr-indicator-14/",
+  "source_kind": "primary",
+  "excerpt": "Enrolled in higher education or in some other postsecondary education or training program; or competitively employed or in some other employment within one year of leaving high school.",
+  "corrected_cite_as": "",
+  "notes": "Measure C mixes education and employment, so using only its education part is a partial fit, as the claim says. The page is on ED's IDEA site but does not name OSEP as its author; the measures are listed as bullets without the letters A/B/C."
+ },
+ {
+  "claim_id": "y1-attainment-18",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.ed.gov/sites/ed/files/2025-02/fs221-20-3.pdf",
+  "source_kind": "primary",
+  "excerpt": "Were accepted and/or enrolled into post-secondary education",
+  "corrected_cite_as": "",
+  "notes": "The values POSTSEC and ENROLLTRAIN ('Enrolled in job training courses/programs') are present. They are counted up to 90 days after exit, only for Title I, Part D programs. 'Accepted' is counted together with 'enrolled'. The fit is partial, as the claim says."
+ },
+ {
+  "claim_id": "y1-wwc-01",
+  "verdict": "PARTIAL",
+  "url_checked": "https://ies.ed.gov/ncee/WWC/Docs/ReferenceResources/WWC-SRP50-508.pdf",
+  "source_kind": "primary",
+  "excerpt": "Academic measures in pre-k through Grade 12 based on broad standardized student assessments across multiple subjects, including at least two of literacy, mathematics, science, and social studies.",
+  "corrected_cite_as": "What Works Clearinghouse. (2024, rev. 2025). Study Review Protocol, Version 5.1. National Center for Education Evaluation and Regional Assistance, Institute of Education Sciences, U.S. Department of Education.",
+  "notes": "The document and attribution are correct (SRP v5.0, March 2023, NCEE/IES). WWC has two separate domains, 'Academic Achievement\u2014Pre-K\u201412' and 'Academic Achievement\u2014Postsecondary'. Both are defined as tests covering at least two named subjects, which is not the same as 'test scores reported with no single subject named', so the fit to Y1.15 is looser than claimed. v5.0 has been replaced by v5.1 (Dec 2024, revised Nov 2025; the IES page lists 5.1 as current), which keeps this domain as 'Academic Achievement\u2014PK\u201312'."
+ },
+ {
+  "claim_id": "y1-wwc-02",
+  "verdict": "PARTIAL",
+  "url_checked": "https://ies.ed.gov/ncee/WWC/Docs/ReferenceResources/WWC-SRP50-508.pdf",
+  "source_kind": "primary",
+  "excerpt": "Number of Carnegie units or credits the student has earned, earning credit for a particular required course or courses, whether the student was promoted to the next grade, or highest grade completed.",
+  "corrected_cite_as": "What Works Clearinghouse. (2024, rev. 2025). Study Review Protocol, Version 5.1. National Center for Education Evaluation and Regional Assistance, Institute of Education Sciences, U.S. Department of Education.",
+  "notes": "The claim matches v5.0 word for word and fits Y1.15 (credits, promotion). But v5.0 is superseded. In v5.1 (https://ies.ed.gov/ncee/wwc/Docs/ReferenceResources/WWC-SRP51-508.pdf) the domain is renamed 'Progressing in Grades 1\u201312 Education' and 'Carnegie units' is dropped ('Number of credits the student has earned...')."
+ },
+ {
+  "claim_id": "y1-wwc-03",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://ies.ed.gov/ncee/WWC/Docs/ReferenceResources/WWC-SRP50-508.pdf",
+  "source_kind": "primary",
+  "excerpt": "Student- or school-level attendance outcomes, including school attendance rates, absenteeism, and tardiness at school.",
+  "corrected_cite_as": "",
+  "notes": "Matches v5.0 and fits Y1.13. v5.1 rewords the domain as 'Attendance outcomes including attendance rates, absenteeism, tardiness at school, and truancy.' Same construct; cite v5.1."
+ },
+ {
+  "claim_id": "y1-wwc-04",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://ies.ed.gov/ncee/WWC/Docs/ReferenceResources/WWC-SRP50-508.pdf",
+  "source_kind": "primary",
+  "excerpt": "Whether the student has earned a high school diploma or a recognized equivalent, such as obtaining passing scores on a state-approved high school equivalency test or passing the GED.",
+  "corrected_cite_as": "",
+  "notes": "Fits the graduation and GED parts of Y1.17; does not cover re-engagement. v5.1 essentially unchanged (adds 'or HiSET exam'); cite v5.1."
+ },
+ {
+  "claim_id": "y1-wwc-05",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://ies.ed.gov/ncee/WWC/Docs/ReferenceResources/WWC-SRP50-508.pdf",
+  "source_kind": "primary",
+  "excerpt": "Enrolling in or attending a postsecondary institution, such as actual enrollment in college, enrollment by institution type, full-time vs. part-time enrollment, and immediate vs. delayed enrollment.",
+  "corrected_cite_as": "",
+  "notes": "Fits the enrollment part of Y1.18 only. v5.1 narrows the definition to 'First-time enrollment in a postsecondary institution...'."
+ },
+ {
+  "claim_id": "y1-wwc-06",
+  "verdict": "PARTIAL",
+  "url_checked": "https://ies.ed.gov/ncee/WWC/Docs/ReferenceResources/wwc_dp_protocol_v3.0.pdf",
+  "source_kind": "primary",
+  "excerpt": "Includes outcomes that measure whether the student has earned a high school diploma or GED or whether he or she has graduated from a district high school.",
+  "corrected_cite_as": "",
+  "notes": "Dropout Prevention protocol v3.01 (March 2014) exists as cited; a legacy topic protocol replaced by the Study Review Protocol. Its 'Progressing in school' domain fits Y1.15, not Y1.17."
+ },
+ {
+  "claim_id": "y1-fidelity-01",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm",
+  "source_kind": "primary",
+  "excerpt": "as measured by proficiency on the annual assessments required under subsection (b)(2)(B)(v)(I)",
+  "corrected_cite_as": "Elementary and Secondary Education Act of 1965, \u00a7 1111(c)(4)(B)(i), as amended by the Every Student Succeeds Act (2015), 20 U.S.C. 6311(c)(4)(B)(i)",
+  "notes": "(c)(4)(B)(i) sets an academic achievement indicator measured by proficiency on assessments in mathematics and reading or language arts. The statute does not say the subjects are measured together as one indicator; that is an inference. It names its subjects by cross-reference, so the fit to Y1.15's 'no subject named' is loose."
+ }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "claim_id": "y1-attainment-01",
+    "code": "Y1.13",
+    "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 6311(h)(1)(C)(viii)(I), State report cards",
+    "claimed_component": "6311(h)(1)(C)(viii)(I): report cards include chronic absenteeism (excused and unexcused absences); supports Y1.13 chronic absence",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm"
+  },
+  {
+    "claim_id": "y1-attainment-02",
+    "code": "Y1.13",
+    "cite_as": "U.S. Department of Education, EDFacts. FS195 - Chronic Absenteeism File Specifications, v20.2, SY 2023-24 (August 2024)",
+    "claimed_component": "Data group definition: students absent 10% or more school days during the school year; supports Y1.13 chronic absence definition",
+    "url": "https://www.ed.gov/sites/ed/files/2024-11/fs195-20-2.pdf"
+  },
+  {
+    "claim_id": "y1-attainment-03",
+    "code": "Y1.13",
+    "cite_as": "McKinney-Vento Homeless Assistance Act, 42 U.S.C. 11432(g)(3)(A)-(B)",
+    "claimed_component": "(g)(3)(A)(i) continuing education in the school of origin and (g)(3)(B) 'School stability'; supports Y1.13 school stability for homeless youth",
+    "url": "https://www.law.cornell.edu/uscode/text/42/11432"
+  },
+  {
+    "claim_id": "y1-attainment-04",
+    "code": "Y1.13",
+    "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 6311(g)(1)(E), State plan: educational stability of children in foster care",
+    "claimed_component": "6311(g)(1)(E): SEA collaboration with the child welfare agency to ensure the educational stability of children in foster care; supports Y1.13 school stability through foster placement changes",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm"
+  },
+  {
+    "claim_id": "y1-attainment-05",
+    "code": "Y1.13",
+    "cite_as": "42 U.S.C. 675(1)(G), case plan: educational stability of the child while in foster care",
+    "claimed_component": "675(1)(G): plan for ensuring the educational stability of the child while in foster care, including remaining in the same school at each placement; supports Y1.13 foster-placement school stability",
+    "url": "https://www.law.cornell.edu/uscode/text/42/675"
+  },
+  {
+    "claim_id": "y1-attainment-06",
+    "code": "Y1.13",
+    "cite_as": "U.S. Department of Education, Title IX regulations, 34 CFR 106.40(b), pregnancy or related conditions",
+    "claimed_component": "106.40(b): no exclusion of a student from an education program on the basis of pregnancy, and reinstatement after leave; partial support for Y1.13 staying enrolled through pregnancy",
+    "url": "https://www.ecfr.gov/current/title-34/subtitle-B/chapter-I/part-106/subpart-D/section-106.40"
+  },
+  {
+    "claim_id": "y1-attainment-07",
+    "code": "Y1.14",
+    "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 6311(h)(1)(C)(viii)(I), State report cards",
+    "claimed_component": "6311(h)(1)(C)(viii)(I): rates of in-school suspensions, out-of-school suspensions, expulsions and referrals to law enforcement; supports Y1.14 suspensions and expulsions",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm"
+  },
+  {
+    "claim_id": "y1-attainment-08",
+    "code": "Y1.14",
+    "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 7118(5)(F) and 20 U.S.C. 6311(g)(1)(C)(ii)",
+    "claimed_component": "7118(5)(F): locally-tailored plan to reduce exclusionary discipline practices; 6311(g)(1)(C)(ii): reducing overuse of discipline practices that remove students from the classroom; partial support for Y1.14 reducing exclusionary discipline (alternatives)",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapIV-partA-subpart1-sec7118.htm"
+  },
+  {
+    "claim_id": "y1-attainment-09",
+    "code": "Y1.14",
+    "cite_as": "U.S. Department of Education, Office for Civil Rights. 2023-24 Civil Rights Data Collection: School Form",
+    "claimed_component": "DISC module (suspension, expulsion) and ARRS module (referrals to law enforcement); supports Y1.14 exclusionary discipline (current collection)",
+    "url": "https://crdc.communities.ed.gov/sites/default/files/2025-01/2023-24-crdc-school-form.pdf"
+  },
+  {
+    "claim_id": "y1-attainment-10",
+    "code": "Y1.15",
+    "cite_as": "U.S. Department of Education, Office for Civil Rights. 2023-24 Civil Rights Data Collection: School Form",
+    "claimed_component": "RETN module (students retained in grade) and PENR credit recovery; supports Y1.15 promotion and credit accumulation",
+    "url": "https://crdc.communities.ed.gov/sites/default/files/2025-01/2023-24-crdc-school-form.pdf"
+  },
+  {
+    "claim_id": "y1-attainment-11",
+    "code": "Y1.16",
+    "cite_as": "U.S. Department of Education, Office for Civil Rights. 2023-24 Civil Rights Data Collection: School Form",
+    "claimed_component": "APIB module (AP and IB Diploma Programme enrollment) and PENR-3 dual enrollment/dual credit program indicator; supports Y1.16 AP, IB and dual enrollment",
+    "url": "https://crdc.communities.ed.gov/sites/default/files/2025-01/2023-24-crdc-school-form.pdf"
+  },
+  {
+    "claim_id": "y1-attainment-12",
+    "code": "Y1.16",
+    "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 6311(h)(1)(C)(viii)(II)(bb) and 6311(c)(4)(B)(v)",
+    "claimed_component": "(viii)(II)(bb): students enrolled in accelerated coursework to earn postsecondary credit while still in high school; (c)(4)(B)(v): student access to and completion of advanced coursework; supports Y1.16",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm"
+  },
+  {
+    "claim_id": "y1-attainment-13",
+    "code": "Y1.17",
+    "cite_as": "WIOA performance accountability, 20 CFR 677.155(a)(1)(iv), credential attainment indicator (U.S. Department of Labor and U.S. Department of Education)",
+    "claimed_component": "677.155(a)(1)(iv)(A)-(B): attainment of a secondary school diploma or its recognized equivalent within 1 year after exit (counted only with employment or enrollment); partial support for Y1.17 GED/equivalency",
+    "url": "https://www.ecfr.gov/current/title-20/chapter-V/part-677/subpart-A/section-677.155"
+  },
+  {
+    "claim_id": "y1-attainment-14",
+    "code": "Y1.17",
+    "cite_as": "U.S. Department of Education, National Center for Education Statistics. Digest of Education Statistics 2021, Table 219.67 (status completion rate)",
+    "claimed_component": "Footnote definition: high school completers include diploma holders and those with an alternative credential such as a GED; supports Y1.17 graduation or GED/equivalency",
+    "url": "https://nces.ed.gov/programs/digest/d21/tables/dt21_219.67.asp"
+  },
+  {
+    "claim_id": "y1-attainment-15",
+    "code": "Y1.17",
+    "cite_as": "U.S. Department of Education, EDFacts. FS221 - N or D Exit Outcomes - LEA File Specifications, v20.3, SY 2023-24 (January 2025)",
+    "claimed_component": "Exit outcome categories within 90 days after exit: enrolled in local district school, earned a GED, obtained high school diploma; supports Y1.17 re-engagement and equivalency after release",
+    "url": "https://www.ed.gov/sites/ed/files/2025-02/fs221-20-3.pdf"
+  },
+  {
+    "claim_id": "y1-attainment-16",
+    "code": "Y1.18",
+    "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 6311(h)(1)(C)(xiii), State report cards",
+    "claimed_component": "6311(h)(1)(C)(xiii): cohort rate at which high school graduates enroll in programs of postsecondary education in the first academic year after graduation; supports Y1.18 postsecondary enrollment",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm"
+  },
+  {
+    "claim_id": "y1-attainment-17",
+    "code": "Y1.18",
+    "cite_as": "U.S. Department of Education, Office of Special Education Programs. Part B SPP/APR Indicator 14 (Post-School Outcomes)",
+    "claimed_component": "Measure C, education component only: enrolled in higher education or in some other postsecondary education or training program within one year of leaving high school; partial support for Y1.18 'other postsecondary education or training'",
+    "url": "https://sites.ed.gov/idea/part-b-spp-apr-indicator-14/"
+  },
+  {
+    "claim_id": "y1-attainment-18",
+    "code": "Y1.18",
+    "cite_as": "U.S. Department of Education, EDFacts. FS221 - N or D Exit Outcomes - LEA File Specifications, v20.3, SY 2023-24 (January 2025)",
+    "claimed_component": "Exit outcome categories: accepted and/or enrolled into post-secondary education; enrolled in job training courses/programs; partial support for Y1.18 postsecondary education or training enrollment",
+    "url": "https://www.ed.gov/sites/ed/files/2025-02/fs221-20-3.pdf"
+  }
+]

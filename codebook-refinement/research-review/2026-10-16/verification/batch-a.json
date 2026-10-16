@@ -1,0 +1,114 @@
+[
+  {
+    "claim_id": "y1-subject-01",
+    "code": "Y1.1",
+    "cite_as": "National Governors Association Center for Best Practices & Council of Chief State School Officers (2010). Common Core State Standards for English Language Arts: College and Career Readiness Anchor Standards for Reading.",
+    "claimed_component": "CCRA.R.10 (read and comprehend complex literary and informational texts independently and proficiently) supports the reading-comprehension and reading-level part of Y1.1.",
+    "url": "https://www.thecorestandards.org/ELA-Literacy/CCRA/R/"
+  },
+  {
+    "claim_id": "y1-subject-02",
+    "code": "Y1.1",
+    "cite_as": "National Governors Association Center for Best Practices & Council of Chief State School Officers (2010). Common Core State Standards for English Language Arts: Reading: Foundational Skills.",
+    "claimed_component": "Reading: Foundational Skills introduction (concepts of print, the alphabetic principle, and other basic conventions; strands Phonological Awareness, Phonics and Word Recognition, Fluency) supports the phonics and fluency part of Y1.1.",
+    "url": "https://www.thecorestandards.org/ELA-Literacy/RF/introduction/"
+  },
+  {
+    "claim_id": "y1-subject-03",
+    "code": "Y1.1",
+    "cite_as": "National Reading Panel (2000). Report of the National Reading Panel: Teaching Children to Read. National Institute of Child Health and Human Development.",
+    "claimed_component": "Findings and determinations, Fluency section: sentence 'Fluency is one of several critical factors necessary for reading comprehension' supports the fluency and comprehension part of Y1.1 (replaces the headings-only excerpt).",
+    "url": "https://www.nichd.nih.gov/publications/pubs/nrp/findings"
+  },
+  {
+    "claim_id": "y1-subject-04",
+    "code": "Y1.2",
+    "cite_as": "ACTFL, Californians Together, Modern Language Association, National Association for Bilingual Education, National Association of English Learner Program Administrators, National Council of State Supervisors for Languages, & TESOL International Association (2020). Guidelines for Implementing the Seal of Biliteracy.",
+    "claimed_component": "Statement that English learners should be encouraged to maintain and improve proficiency in their home or heritage language(s) supports the home-language maintenance and development part of Y1.2.",
+    "url": "https://www.actfl.org/uploads/files/general/SOBL_Guidelines.pdf"
+  },
+  {
+    "claim_id": "y1-subject-05",
+    "code": "Y1.2",
+    "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 7011(7)(B): definition of 'language instruction educational program'.",
+    "claimed_component": "Clause (B): instructional use of both English and a child's native language, and courses designed to enable participating children to become proficient in English and a second language, supports the bilingual development part of Y1.2.",
+    "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section7011&num=0&edition=prelim"
+  },
+  {
+    "claim_id": "y1-subject-06",
+    "code": "Y1.2",
+    "cite_as": "Native American Languages Act (1990), 25 U.S.C. 2903: Declaration of policy.",
+    "claimed_component": "Paragraph (3): encourage and support the use of Native American languages as a medium of instruction, supports home-language maintenance for Native American youth in Y1.2.",
+    "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title25-section2903&num=0&edition=prelim"
+  },
+  {
+    "claim_id": "y1-subject-07",
+    "code": "Y1.4",
+    "cite_as": "Computer Science Teachers Association (2026). CSTA PK-12 Computer Science Standards.",
+    "claimed_component": "Core concepts Algorithms, Programming, Data & Analysis, and Computing Systems (Systems & Security) support the computer science part of Y1.4; supersedes the CSTA K-12 Computer Science Standards, Revised 2017 citation.",
+    "url": "https://csteachers.org/pk12standards/about/"
+  },
+  {
+    "claim_id": "y1-subject-08",
+    "code": "Y1.4",
+    "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 7801(52): definition of 'well-rounded education'.",
+    "claimed_component": "Subjects 'technology, engineering' and 'computer science' named in the definition support the engineering and computer science part of Y1.4.",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapVIII-partA-sec7801.htm"
+  },
+  {
+    "claim_id": "y1-subject-09",
+    "code": "Y1.6",
+    "cite_as": "National Coalition for Core Arts Standards (2014). National Core Arts Standards: A Conceptual Framework for Arts Learning.",
+    "claimed_component": "Definition of artistic literacy and statement that anchor standards describe the general knowledge and skill students are expected to demonstrate support Y1.6's definition of arts learning as a gain in technique, vocabulary or knowledge of an art form.",
+    "url": "https://www.nationalartsstandards.org/sites/default/files/Conceptual%20Framework%2007-21-16.pdf"
+  },
+  {
+    "claim_id": "y1-subject-10",
+    "code": "Y1.7",
+    "cite_as": "National Governors Association Center for Best Practices & Council of Chief State School Officers (2010). Common Core State Standards for English Language Arts: College and Career Readiness Anchor Standards for Writing.",
+    "claimed_component": "Research to Build and Present Knowledge, CCRA.W.7 (conduct research projects based on focused questions) and CCRA.W.8 (assess the credibility and accuracy of each source) support the research/inquiry and source-evaluation part of Y1.7.",
+    "url": "https://www.thecorestandards.org/ELA-Literacy/CCRA/W/"
+  },
+  {
+    "claim_id": "y1-subject-11",
+    "code": "Y1.7",
+    "cite_as": "Conley, D. T. (2016, April). Four Keys to College and Career Readiness. School Administrator. AASA, The School Superintendents Association.",
+    "claimed_component": "Key Cognitive Strategies (problem formulation, research, interpretation, communication, precision and accuracy) support the research and inquiry part of Y1.7.",
+    "url": "https://www.aasa.org/resources/resource/four-keys-college-career-readiness"
+  },
+  {
+    "claim_id": "y1-subject-12",
+    "code": "Y1.7",
+    "cite_as": "National Council for the Social Studies (2013). The College, Career, and Civic Life (C3) Framework for Social Studies State Standards.",
+    "claimed_component": "Inquiry Arc, Dimension 3 'Evaluating Sources and Using Evidence' (and Dimension 1 'Developing Questions and Planning Inquiries') supports the inquiry and source-evaluation part of Y1.7.",
+    "url": "https://www.socialstudies.org/sites/default/files/attach-pdf-2023-05/Introduction.pdf"
+  },
+  {
+    "claim_id": "y1-subject-13",
+    "code": "Y1.8",
+    "cite_as": "U.S. Department of Education & U.S. Department of Health and Human Services (2013). Final Priorities, Requirements, Definitions, and Selection Criteria; Race to the Top-Early Learning Challenge. 78 Fed. Reg. (August 30, 2013).",
+    "claimed_component": "Definitions of 'Essential Domains of School Readiness' (language and literacy development; cognition and general knowledge, including early mathematics and early scientific development) and 'Kindergarten Entry Assessment' support Y1.8's early language, literacy, math and cognitive development and kindergarten readiness.",
+    "url": "https://www.federalregister.gov/documents/2013/08/30/2013-21138/final-priorities-requirements-definitions-and-selection-criteria-race-to-the-top-early-learning-challenge"
+  },
+  {
+    "claim_id": "y1-subject-14",
+    "code": "Y1.8",
+    "cite_as": "Child Care and Development Block Grant Act of 2014, 42 U.S.C. 9858c(c)(2)(T): early learning and developmental guidelines.",
+    "claimed_component": "Requirement that States maintain early learning and developmental guidelines for children from birth to kindergarten entry describing what such children should know and be able to do supports the early-learning construct of Y1.8.",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap105-subchapII-B-sec9858c.htm"
+  },
+  {
+    "claim_id": "y1-subject-15",
+    "code": "Y1.8",
+    "cite_as": "Office of Head Start, Administration for Children and Families, U.S. Department of Health and Human Services (2015). Head Start Early Learning Outcomes Framework: Ages Birth to Five.",
+    "claimed_component": "Central domains Language and Literacy and Cognition support Y1.8; this URL confirms the 2015 publication year on the primary document.",
+    "url": "https://www.govinfo.gov/content/pkg/GOVPUB-HE23_1100-PURL-gpo65456/pdf/GOVPUB-HE23_1100-PURL-gpo65456.pdf"
+  },
+  {
+    "claim_id": "y1-mindsets-01",
+    "code": "Y2.4",
+    "cite_as": "Farrington, C. A., Roderick, M., Allensworth, E., Nagaoka, J., Keyes, T. S., Johnson, D. W., & Beechum, N. O. (2012). Teaching Adolescents to Become Learners: The Role of Noncognitive Factors in Shaping School Performance: A Critical Literature Review. University of Chicago Consortium on Chicago School Research.",
+    "claimed_component": "Academic Mindsets: 'This work has value for me' (subject matter seen as interesting and holding value, including utility value), supporting Y2.4 seeing schoolwork as relevant or valuable",
+    "url": "https://files.eric.ed.gov/fulltext/ED542543.pdf"
+  }
+]

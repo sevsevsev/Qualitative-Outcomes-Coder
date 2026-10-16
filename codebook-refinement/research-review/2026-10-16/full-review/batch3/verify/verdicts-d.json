@@ -1,0 +1,107 @@
+[
+ {
+  "claim_id": "f1-11",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://snaped.fns.usda.gov/framework/components/mt1",
+  "excerpt": "Changes in individual and family healthy eating behaviors on the pathway to achieving the current Dietary Guidelines",
+  "note": "The page heading is 'Changes - Nutrition-Related Behavioral Changes'. Fruit and vegetable consumption is covered by sub-items on the same page (e.g. 'MT1m. Cups of vegetables consumed per day'), so the component matches F1.3's family eating habits and family fruit and vegetable intake. Some MT1 respondents may be youth participants rather than families."
+ },
+ {
+  "claim_id": "f1-12",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://aps2016.apsva.us/wp-content/uploads/2021/11/DCBFVERSION2FINAL.pdf",
+  "excerpt": "Relational: built on mutual trust",
+  "note": "This copy is a secondary host (Arlington Public Schools). It names no authors and gives no year, so 'Mapp & Bergman (2019)' is unconfirmed; Harvard GSE (https://www.gse.harvard.edu/news/20/04/effective-family-engagement-starts-trust) calls the framework Mapp's and describes Bergman as having 'worked with Mapp on the framework's revision', with no year. The extracted layout does not clearly put the bullet under 'Process Conditions', and as a design condition for partnership efforts it fits F1.8 (family trust in the program) only loosely."
+ },
+ {
+  "claim_id": "f1-13",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.law.cornell.edu/uscode/text/7/2036a",
+  "excerpt": "that promotes healthy food choices and physical activity consistent with the most recent Dietary Guidelines for Americans",
+  "note": "The wording and citation are correct for 7 U.S.C. 2036a(b). However, the clause authorizes a program for 'eligible individuals' and does not describe a family or household health-practice outcome, and it adds physical activity, so it fits F1.3 more broadly than claimed."
+ },
+ {
+  "claim_id": "f1-14",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://cssp.org/wp-content/uploads/2025/03/Core-Meanings-of-the-SF-Protective-Factors-2015.pdf",
+  "excerpt": "regular, predictable and consistent routines",
+  "note": "The item appears in a list under 'the importance of', but two other items come between that phrase and this one, so the component is a close paraphrase rather than a quote. The PDF names neither CSSP nor a year (only the cssp.org address; 2015 comes from the filename). The item is framed as parenting knowledge (F1.1) rather than a home routine practice, which F1.2 excludes as 'parenting knowledge in general', so the fit is partial."
+ },
+ {
+  "claim_id": "f2-01",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://acf.gov/cb/fact-sheet/about-nytd",
+  "excerpt": "States will survey youth regarding six outcomes: financial self-sufficiency, experience with homelessness,",
+  "note": "The same page confirms surveys on or around the 17th, 19th and 21st birthdays. The page does not define 'financial self-sufficiency' further, and 'living independently' is the codebook's own framing of these foster youth."
+ },
+ {
+  "claim_id": "f2-02",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://files.consumerfinance.gov/f/201512_cfpb_financial-well-being-user-guide-scale.pdf",
+  "excerpt": "Having a financial \"cushion\" against unexpected expenses and emergencies.",
+  "note": "Section 2.1 'What financial well-being is' (December 2015) also has 'a state of being wherein a person can fully meet current and ongoing financial obligations' and the control element 'Having control over one's finances in terms of being able to pay bills on time'. It is a subjective, individual-level construct, which fits F2.1's financial stability."
+ },
+ {
+  "claim_id": "f2-03",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/health-care-access-and-quality/increase-proportion-people-health-insurance-ahs-01/data-methodology",
+  "excerpt": "Number of persons under 65 years who report coverage by any type of public or private health insurance.",
+  "note": "AHS-01 counts any coverage, public or private (data source NHIS); Medicaid is only one of the qualifying types listed in the methodology notes. It is broader than F2.1's 'Medicaid enrollment' include line and is a coverage measure, not a benefits-enrollment measure."
+ },
+ {
+  "claim_id": "f2-04",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.usda.gov/sites/default/files/documents/usda-actions-nutrition-security.pdf",
+  "excerpt": "consistent access, availability, and afordability of foods and beverages that promote well-being, prevent disease",
+  "note": "The definition matches, and the PDF really does read 'afordability' (an 'ff' ligature lost in extraction). The fetched text never prints the title 'USDA Actions on Nutrition Security'; it names the 'USDA Food, Nutrition, and Consumer Services Mission Area' and is dated March 2022, so the title is taken from the URL only and needs confirming before the citation is SUPPORTED."
+ },
+ {
+  "claim_id": "f2-05",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/nutrition-and-healthy-eating/reduce-household-food-insecurity-and-hunger-nws-01",
+  "excerpt": "Reduce household food insecurity and in doing so reduce hunger.",
+  "note": "The page lists the data source as 'Current Population Survey Food Security Supplement (CPS-FSS), Census and USDA/ERS'. This fits F2.2's 'reduced food insecurity' directly."
+ },
+ {
+  "claim_id": "f2-06",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.ecfr.gov/current/title-45/subtitle-B/chapter-XIII/subchapter-D/part-1351",
+  "excerpt": "(iii) Education or Employment; and (iv) Stable Housing.",
+  "note": "The identical list appears in 1351.30(a)(1) (Basic Center) and 1351.31(a)(1) (Transitional Living, including Maternity Group Homes), each introduced by 'Grantees shall consistently enhance outcomes for youth in the following four core areas'. The chapter is issued by ACF, HHS."
+ },
+ {
+  "claim_id": "f2-07",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.ecfr.gov/current/title-45/subtitle-B/chapter-XIII/subchapter-D/part-1351",
+  "excerpt": "To the private residence of a parent, guardian, another adult relative, or another adult",
+  "note": "The 1351.1 definition also lists 'To independent living if consistent with the youth's needs and abilities', and its non-qualifying exits include 'To the street' and 'To an unknown or unspecified other living situation'. 1351.30(d) and 1351.31(e) require safe and appropriate exits. The component's paraphrase leaves out the 'another residential program' examples."
+ },
+ {
+  "claim_id": "f2-08",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.law.cornell.edu/uscode/text/42/11386a",
+  "excerpt": "the extent to which individuals and families who leave homelessness experience additional spells of homelessness;",
+  "note": "Clauses (i), (ii) and (vi) are worded as claimed. But they are criteria for judging a Continuum of Care recipient's 'previous performance', not household outcome definitions, and none of them says 'exits to stable housing', so the fit to F2.3 is partial."
+ },
+ {
+  "claim_id": "f2-09",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/housing-and-homes/reduce-proportion-families-spend-more-30-percent-income-housing-sdoh-04",
+  "excerpt": "Reduce the proportion of families that spend more than 30 percent of income on housing",
+  "note": "The page lists the data source as 'American Housing Survey (AHS), HUD & Census'. This fits F2.3's 'reduced rent burden' directly."
+ },
+ {
+  "claim_id": "f2-10",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.law.cornell.edu/uscode/text/42/11434a",
+  "excerpt": "means individuals who lack a fixed, regular, and adequate nighttime residence",
+  "note": "This is 11434a(2)(A), which defines 'homeless children and youths'. It is a definition, not an outcome, and the claim correctly limits it to telling what counts as lacking stable housing for children and youths. Subparagraph (B) adds shared housing, motels, cars and similar situations."
+ },
+ {
+  "claim_id": "f2-11",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://americorps.gov/sites/default/files/document/2025-01/CEV2023_HeadlineReport_12192024_508.pdf",
+  "excerpt": "Over 28 percent of Americans—or 75.7 million people—volunteered for an organization between September 2022 and 2023.",
+  "note": "The title, the AmeriCorps origin, the December 2024 date, the CEV Supplement source and 'age 16 and up' are confirmed. cite_as should name the author, Laura Hanson Schlachter. Fit is partial: CEV formal volunteering is population-wide civic volunteering, while F1.9 covers families volunteering in the program or school."
+ }
+]

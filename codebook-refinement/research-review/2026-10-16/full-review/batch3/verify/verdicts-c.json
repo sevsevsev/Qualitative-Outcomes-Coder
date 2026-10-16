@@ -1,0 +1,128 @@
+[
+ {
+  "claim_id": "y8b-10",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://monitoringthefuture.org/wp-content/uploads/2025/12/mtfvol12026.pdf",
+  "excerpt": "in particular perceived risk and disapproval associated with use of the various substances tracked by the survey.",
+  "note": "The title, the five authors, the year (2026) and ISR, University of Michigan as publisher are all confirmed (NIDA is the sponsor only). The fit is partial: Y8.11's definition covers perceived risk but not disapproval of use, so disapproval goes beyond the code's construct."
+ },
+ {
+  "claim_id": "y8b-11",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/yrbs/media/pdf/2025/2025-YRBS-national-HS-questionnaire508.pdf",
+  "excerpt": "During the past 12 months, how many times were you in a physical fight?",
+  "note": "Checked against this PDF: Q16 is the excerpt above, Q11 weapon on school property, Q12 gun carrying, Q21 and Q22 sexual and physical dating violence, Q26 bullied on school property, Q27 electronically bullied. The document calls itself '2025 National Youth Risk Behavior Survey', so the cite title could read 'CDC (2025). 2025 National Youth Risk Behavior Survey [high school questionnaire]'."
+ },
+ {
+  "claim_id": "y8b-12",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/yrbs/about/index.html",
+  "excerpt": "Student experiences: parental monitoring, school connectedness, unstable housing, and exposure to community violence.",
+  "note": "This bullet sits under the page's 'Components' list. Community violence is named in Y8.12's definition, so the fit is direct. The page shows no year."
+ },
+ {
+  "claim_id": "y8b-13",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/youth-violence/about/index.html",
+  "excerpt": "It can include things like fighting, bullying, threats with weapons, and gang-related violence.",
+  "note": "The definition sentence is 'the intentional use of physical force or power to threaten or harm others by young people ages 10-24'. The component leaves out the age range 10-24. The page is dated February 15, 2024, which matches the cited year."
+ },
+ {
+  "claim_id": "y8b-14",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.ojp.gov/ncjrs/virtual-library/abstracts/cjca-white-paper-defining-and-measuring-recidivism",
+  "excerpt": "presents the results of the Group's efforts at developing standards for defining and measuring recidivism",
+  "note": "The title, authors, November 2009, CJCA as author and NCJ 237765 are confirmed; OJJDP is listed only as sponsoring agency. The abstract does not mention re-arrest, re-adjudication or recommitment, and I could not find the 47-page full text online, so that part of the component is unverified."
+ },
+ {
+  "claim_id": "y8b-15",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://cjja.net/about/",
+  "excerpt": "originally incorporated as the Council of Juvenile Correctional Administrators on July 1, 1994",
+  "note": "The rename is confirmed (incorporated July 1, 1994). But this fact only supports attribution for the CJCA white paper. It describes no construct, so it gives no fit for Y8.13."
+ },
+ {
+  "claim_id": "y8b-16",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://ojjdp.ojp.gov/library/publications/model-programs-guide-literature-review-diversion",
+  "excerpt": "an attempt to divert, or channel out, youthful offenders from the juvenile justice system",
+  "note": "The title, February 2017 and NCJ 249701 are confirmed on OJJDP's page, which marks the report 'OJJDP-Sponsored' and names no author or preparer. Diversion is in Y8.13's definition, so the fit is direct."
+ },
+ {
+  "claim_id": "y8b-17",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://ojjdp.ojp.gov/sites/ojjdp/files/mpg-iguides/topics/juvenile-reentry-programs/index.html",
+  "excerpt": "Juvenile reentry — sometimes called aftercare — refers to the services that prepare youth",
+  "note": "The rest of that sentence is 'who serve time in out-of-home placements for their eventual return to the community'. A separate passage states the aim 'while reducing their recidivism rates and ensuring public safety'. The archived OJJDP I-Guide is dated September 24, 2018 and was prepared by Development Services Group for OJJDP."
+ },
+ {
+  "claim_id": "f1-01",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://cssp.org/wp-content/uploads/2025/03/Core-Meanings-of-the-SF-Protective-Factors-2015.pdf",
+  "excerpt": "Managing stress and functioning well when faced with challenges, adversity and trauma.",
+  "note": "This is the 'Parental Resilience' definition. The items 'having self-confidence', 'managing anger, anxiety, sadness, feelings of loneliness and other negative feelings' and 'seeking help for self when needed' appear under 'Resilience Related to General Life Stressors'; that this list belongs to Parental Resilience is inferred from the table layout. The year 2015 appears only in the filename (CSSP's resource page shows October 16, 2018), so the cite year is unconfirmed."
+ },
+ {
+  "claim_id": "f1-02",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://cssp.org/wp-content/uploads/2025/03/Core-Meanings-of-the-SF-Protective-Factors-2015.pdf",
+  "excerpt": "Understanding child development and parenting strategies that support physical, cognitive, language, social and emotional development.",
+  "note": "The listed items include 'positive discipline techniques', 'appropriate developmental expectations' and 'being nurturing, responsive and reliable', and the fit to F1.1 is direct. The year 2015 appears only in the filename (resource page dated October 16, 2018)."
+ },
+ {
+  "claim_id": "f1-03",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf",
+  "excerpt": "Involve families with their children in learning at home, including homework, other curriculum-related activities,",
+  "note": "The footer confirms 'School, Family, and Community Partnerships, Fourth Edition by J. L. Epstein et al. Copyright © 2019 by Corwin.' The handout's heading is 'Epstein's Six Types of Involvement'."
+ },
+ {
+  "claim_id": "f1-04",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf",
+  "excerpt": "Communicate with families about school programs and student progress through effective school-to-home",
+  "note": "The text continues 'and home-to-school communications', so the component is present. The fit is partial: Type 2 describes communications the school designs, while F1.8's core is the family's relationship with and trust in the program, with communication only one part of it."
+ },
+ {
+  "claim_id": "f1-05",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf",
+  "excerpt": "Improve recruitment, training, and schedules to involve families as volunteers and audiences at the school",
+  "note": "Type 5 is also confirmed in the same document: 'Include families as participants in school decisions, governance, and advocacy through the PTA/PTO,'. Both types fit F1.9 (volunteering, taking part in decisions) directly."
+ },
+ {
+  "claim_id": "f1-06",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.law.cornell.edu/uscode/text/29/3272",
+  "excerpt": "academic instruction and education services below the postsecondary level that increase an individual's ability to",
+  "note": "In 3272(1), (A) reads 'read, write, and speak in English and perform mathematics...' toward a secondary school diploma or equivalent, and (C) reads 'obtain employment'. The component leaves out (B), transition to postsecondary education. The fit to F1.6 is direct."
+ },
+ {
+  "claim_id": "f1-07",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.law.cornell.edu/uscode/text/29/3272",
+  "excerpt": "designed to help eligible individuals who are English language learners achieve competence in reading,",
+  "note": "This is 3272(6)(A), which continues 'writing, speaking, and comprehension of the English language'. It fits F1.6's English proficiency and adult ESL."
+ },
+ {
+  "claim_id": "f1-08",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://ascend.aspeninstitute.org/2gen-approach/",
+  "excerpt": "financial education and asset building, tax credits, student financial aid, nutrition assistance, and more.",
+  "note": "The page calls these 'components' ('six key components'), not 'building blocks', so the cite should say 'components'. Economic Assets is much broader than financial skills (it also covers housing, transportation, tax credits and benefits, which is F2.1 territory), so the fit to F1.6 is partial."
+ },
+ {
+  "claim_id": "f1-09",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.law.cornell.edu/uscode/text/47/1721",
+  "excerpt": "(B) aging individuals;",
+  "note": "The paragraph numbers check out: 1721(8)(B) lists aging individuals as a covered population, and 1721(3) defines 'aging individual' by reference to 'older individual' in 42 U.S.C. 3002. But covered populations only says who is covered; it does not describe the F1.6 outcome (adult digital skills), so the fit is partial."
+ },
+ {
+  "claim_id": "f1-10",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.law.cornell.edu/uscode/text/29/3272",
+  "excerpt": "Interactive literacy activities between parents or family members and their children.",
+  "note": "The text of 3272(9)(B) and (C) is confirmed; (C) continues 'and full partners in the education of their children'. These are program activities that a family literacy program must combine. (B) fits F1.2's home literacy practice, but (C), training parents as their child's primary teacher, is closer to F1.1, so the fit is partial."
+ }
+]

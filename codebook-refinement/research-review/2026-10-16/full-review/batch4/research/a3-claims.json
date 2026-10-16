@@ -1,0 +1,44 @@
+[
+  {
+    "claim_id": "a3-01",
+    "code": "A3.2",
+    "cite_as": "Reisman, J., Gienapp, A., & Stachowiak, S. (2007). A Guide to Measuring Advocacy and Policy. Organizational Research Services, for the Annie E. Casey Foundation.",
+    "claimed_component": "Outcome category Strengthened alliances: level of coordination, collaboration and mission alignment among community and system partners; increased number of partners and level of collaboration",
+    "url": "https://measureresults.issuelab.org/resources/1347/1347.pdf"
+  },
+  {
+    "claim_id": "a3-02",
+    "code": "A3.2",
+    "cite_as": "Coffman, J. (2009). A User's Guide to Advocacy Evaluation Planning. Harvard Family Research Project.",
+    "claimed_component": "Interim outcome Partnerships or Alliances: mutually beneficial relationships with other organizations; measure 'New or stronger organizational relationships developed'",
+    "url": "https://www.countyhealthrankings.org/sites/default/files/media/document/resources/UserGuideAdvocacyEvaluationPlanning%20(2).pdf"
+  },
+  {
+    "claim_id": "a3-03",
+    "code": "A3.3",
+    "cite_as": "Sampson, R. J., Raudenbush, S. W., & Earls, F. (1997). Neighborhoods and violent crime: A multilevel study of collective efficacy. Science, 277(5328), 918-924.",
+    "claimed_component": "Collective efficacy: social cohesion among neighbors combined with their willingness to intervene on behalf of the common good (abstract)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/9252316/"
+  },
+  {
+    "claim_id": "a3-04",
+    "code": "A3.1",
+    "cite_as": "Reisman, J., Gienapp, A., & Stachowiak, S. (2007). A Guide to Measuring Advocacy and Policy. Organizational Research Services, for the Annie E. Casey Foundation.",
+    "claimed_component": "Improved policies includes school policy (Table A-5 example: new school policy about nutritious options in vending machines)",
+    "url": "https://measureresults.issuelab.org/resources/1347/1347.pdf"
+  },
+  {
+    "claim_id": "a3-05",
+    "code": "A3.3",
+    "cite_as": "Reisman, J., Gienapp, A., & Stachowiak, S. (2007). A Guide to Measuring Advocacy and Policy. Organizational Research Services, for the Annie E. Casey Foundation.",
+    "claimed_component": "Outcome category Changes in impact: ultimate changes in social and physical lives and conditions; improved social and physical conditions (e.g., poverty, health, equality)",
+    "url": "https://measureresults.issuelab.org/resources/1347/1347.pdf"
+  },
+  {
+    "claim_id": "a3-06",
+    "code": "A3 (new code candidate: school climate)",
+    "cite_as": "U.S. Department of Education, Safe Supportive Schools model, as described by youth.gov",
+    "claimed_component": "School climate model with three components: Engagement, Safety, and Environment",
+    "url": "https://youth.gov/youth-topics/components-positive-school-climate"
+  }
+]

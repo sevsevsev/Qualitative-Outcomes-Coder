@@ -1,0 +1,142 @@
+[
+ {
+  "claim_id": "y5-01",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://aspe.hhs.gov/reports/positive-youth-development-united-states-research-findings-evaluations-positive-youth-development-0",
+  "excerpt": "Programs were classified as fostering spirituality if they promoted the development of beliefs in a higher power,",
+  "note": "The sentence continues with 'internal reflection or meditation, or supported youth in exploring a spiritual belief system', which I quoted verbatim in a separate fetch. The 'spiritual identity, meaning, or practice' clause was only paraphrased by the fetch tool. On attribution, the authors are SDRG/UW and ASPE funded the work (through NICHD) and hosts it; the page names no publisher outright, so 'published by ASPE' is reasonable but loose, and the cite has no year."
+ },
+ {
+  "claim_id": "y5-02",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://aspe.hhs.gov/reports/positive-youth-development-united-states-research-findings-evaluations-positive-youth-development-0",
+  "excerpt": "Belief in the future is the internalization of hope and optimism about possible outcomes.",
+  "note": "The definition matches word for word. The classification text adds 'belief in his or her future potential, goals, options, choices', which fits hopes and goals. The same attribution caveat as y5-01 applies: ASPE funded and hosts the report; SDRG/UW wrote it."
+ },
+ {
+  "claim_id": "y5-03",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://casel.org/casel-sel-framework-11-2020/?view=1",
+  "excerpt": "Developing interests and a sense of purpose",
+  "note": "Correct the URL: the claimed S3 PDF is a different one-page document headed 'THE CASEL 5' (same bullet, no date). The document with the cited title is at casel.org/casel-sel-framework-11-2020/. Neither document prints the year 2020; it comes only from the URL slug."
+ },
+ {
+  "claim_id": "y5-04",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://aspe.hhs.gov/reports/positive-youth-development-united-states-research-findings-evaluations-positive-youth-development-0",
+  "excerpt": "Self-determination is the ability to think for oneself, and to take action consistent with that thought.",
+  "note": "The classification criterion was also confirmed verbatim in a separate fetch: 'for empowerment, autonomy, independent thinking, or self-advocacy'. The same attribution caveat as y5-01 applies (ASPE is funder and host)."
+ },
+ {
+  "claim_id": "y5-05",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.law.cornell.edu/uscode/text/29/733",
+  "excerpt": "instruction in self-advocacy, which may include peer mentoring.",
+  "note": "This is (b)(5) under 'Required activities' for students with disabilities. Cornell LII reproduces the statute; it is not the official publisher, and my fetch of the official uscode.house.gov page failed with a server error. The statute describes a service activity, not an outcome, but the construct fits."
+ },
+ {
+  "claim_id": "y5-06",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://2014conf.asc.asn.au/files/2013/12/NAP.pdf",
+  "excerpt": "Think about themselves as science learners and develop an identity as someone who knows about, uses,",
+  "note": "Strand 6 matches; a separate fetch confirmed it ends 'and sometimes contributes to science.' The text comes from a copy on a conference website (secondary host). The NAP page (nationalacademies.org/read/12190) confirms the NRC 2009 title and publisher but did not render the strand text, so the URL should point to NAP."
+ },
+ {
+  "claim_id": "y5-07",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://consortium.uchicago.edu/sites/default/files/2019-05/Arts%20Education%20and%20Social-Emotional-June2019-Consortium%20and%20Ingenuity.pdf",
+  "excerpt": "students' artistic skills and identities as artists have an impact on the way they interact with the world from a social-emotional perspective.",
+  "note": "This is on p. 18. 'Self-expression and identity' appears on pp. 15 and 22, and the authors match. The fetched text shows no copyright line or date, so the year 2019 and Ingenuity as co-publisher are inferred from the URL and file name only."
+ },
+ {
+  "claim_id": "y5-08",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://consortium.uchicago.edu/sites/default/files/2018-10/Foundations%20for%20Young%20Adult-Jun2015-Consortium.pdf",
+  "excerpt": "a strong identity and a set of competencies that allow her to act with agency in one role or setting (for example,",
+  "note": "The passage is in Chapter 1 and continues '...as a songwriter who performs at regular open-mics), but lack the identity'. So the report uses role-bound identity to show the absence of an integrated identity; it does not name it as a construct. The fit to 'identity tied to a role or field' is therefore partial."
+ },
+ {
+  "claim_id": "y5-09",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.nationalacademies.org/read/25388/chapter/5",
+  "excerpt": "making sense of one’s ERI is a normative developmental process that often begins in adolescence",
+  "note": "This is p. 64 of Chapter 2, 'Adolescent Development'. The same page says 'Adolescence is also a time when identities or sense of self related to gender and sexuality are developed and solidified', which I quoted verbatim."
+ },
+ {
+  "claim_id": "y5-10",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://casel.org/casel-sel-framework-11-2020/?view=1",
+  "excerpt": "Identifying personal, cultural, and linguistic assets",
+  "note": "The text is there, but it is about recognizing assets, not holding a cultural or linguistic identity, so the fit to Y5.2 is partial. The same list has 'Integrating personal and social identities'. The same URL and year caveat as y5-03 applies."
+ },
+ {
+  "claim_id": "y5-11",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.learningforjustice.org/sites/default/files/2022-09/LFJ-Social-Justice-Standards-September-2022-09292022.pdf",
+  "excerpt": "Students will develop positive social identities based on their membership in multiple groups in society.",
+  "note": "The claim quotes ID.9-12.4 short: the full text is 'I express pride and confidence in my identity without perceiving or treating anyone else as inferior.' Second Edition, © 2014-2022, publisher printed as The Southern Poverty Law Center, Inc."
+ },
+ {
+  "claim_id": "y5-12",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://casel.org/casel-sel-framework-11-2020/?view=1",
+  "excerpt": "Linking feelings, values, and thoughts",
+  "note": "The bullet is there, but it is about connecting feelings with values, not stating one's values, so the fit to 'articulating one's values' is partial. The Self-Awareness definition ('understand one's own emotions, thoughts, and values') is closer. The same URL and year caveat as y5-03 applies."
+ },
+ {
+  "claim_id": "y5-13",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://consortium.uchicago.edu/sites/default/files/2018-10/Foundations%20for%20Young%20Adult-Jun2015-Consortium.pdf",
+  "excerpt": "©2015 University of Chicago Consortium on Chicago School Research",
+  "note": "The copyright line and the 2015 title are confirmed. The authors match; the middle names print as David W. Johnson and Ashley Cureton Turner, which fits 'Turner, A. C.'. Whether the report fits as the domain anchor cannot be checked from the wording of one component."
+ },
+ {
+  "claim_id": "y5-14",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.search-institute.org/our-research/youth-development-research/spiritual-development/",
+  "excerpt": "It involves at least three core developmental processes",
+  "note": "The three process names ('Awareness or awakening', 'Interconnecting and belonging', 'Living an integrated life') were each quoted verbatim, but they sit in separate places on the page. The page has no year, and it names Search Institute only in its body text."
+ },
+ {
+  "claim_id": "y5-15",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://coa.stanford.edu/sites/default/files/devofpurpose_0.pdf",
+  "excerpt": "Purpose is a stable and generalized intention to accomplish something that is at once meaningful to the self",
+  "note": "The sentence continues 'and of consequence to the world beyond the self', which I confirmed in a separate fragment. The PDF is a copy hosted by the authors' Stanford center, not the publisher (Applied Developmental Science 7(3), 119-128); the bibliographic details match."
+ },
+ {
+  "claim_id": "y6-01",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://spherelab.psych.ucla.edu/wp-content/uploads/sites/301/2023/03/Critical-consciousness-Current-status-and-future-directions.pdf",
+  "excerpt": "Critical reflection refers to a social analysis and moral rejection of societal inequities",
+  "note": "This is p. 47, which also has 'Critical action refers to individual or collective action taken to change aspects of society' (quoted verbatim). The PDF is a copy on a lab site, but the citation details match (NDCAD 134, 43-57, doi 10.1002/cd.310)."
+ },
+ {
+  "claim_id": "y6-02",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://spherelab.psych.ucla.edu/wp-content/uploads/sites/301/2023/03/Critical-consciousness-Current-status-and-future-directions.pdf",
+  "excerpt": "Political efficacy is the perceived capacity to effect social and political change",
+  "note": "The component is there, but the source's construct (political efficacy for social and political change, inside critical consciousness) is broader than Y6.4's 'believing one can influence community decisions'. The term 'civic efficacy' does not appear in the source."
+ },
+ {
+  "claim_id": "y6-03",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://searchinstitute.org/resources-hub/developmental-assets-framework",
+  "excerpt": "Young people are given useful roles on the community.",
+  "note": "The page really says 'roles on the community'. Placing the asset under Empowerment is inferred from page order; the page does not label it. 'Useful roles' is broader than youth councils and advisory roles, so the fit is partial."
+ },
+ {
+  "claim_id": "y6-04",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://searchinstitute.org/resources-hub/developmental-assets-framework",
+  "excerpt": "Young person serves in the community one hour or more per week.",
+  "note": "The page confirms the 40 assets and an Empowerment heading under External Assets. Placing 'Service to others' under Empowerment is by page order only. The fit to community service is direct."
+ },
+ {
+  "claim_id": "y6-05",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://gdrc.org/uem/ee/EE-Tbilisi_1977.pdf",
+  "excerpt": "to help social groups and individuals acquire an awareness of and sensitivity to the total environment and its allied problems.",
+  "note": "The text is in Recommendation No. 2. Attitudes reads 'acquire a set of values and feelings of concern for the environment, and the motivation for actively participating in environmental improvement and protection.' Both are about environmental problems and protection, not connection to nature, so the fit is partial. The PDF is a copy of the UNESCO/UNEP 1978 ED/MD/49 report hosted by GDRC."
+ }
+]

@@ -1,0 +1,142 @@
+[
+ {
+  "claim_id": "y6-06",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://iste.org/standards/students",
+  "excerpt": "Students take action to protect their digital privacy on devices and manage their personal data and security while online.",
+  "note": "The page shows 'ISTE Standards © 2024' with 1.2 Digital Citizen and indicators 1.2.b Online Interactions ('empathetic, inclusive interactions online') and 1.2.d Digital Privacy. This matches Y6.7. The codebook's current line cites the 2016 edition, Standard 2, so that line should change to the 2024 numbering if this claim is adopted."
+ },
+ {
+  "claim_id": "y6-07",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.viacharacter.org/character-strengths",
+  "excerpt": "I forgive others when they upset me and/or when they behave badly towards me",
+  "note": "The page labels Forgiveness as Temperance, along with Humility, Prudence and Self-Regulation. Y6.1's definition names forgiveness explicitly. The classification originates with Peterson & Seligman (2004), but VIA Institute publishes it, so the attribution is acceptable."
+ },
+ {
+  "claim_id": "y7-01",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.govinfo.gov/link/uscode/20/2302",
+  "excerpt": "may include career exploration at the high school level or as early as the middle grades (as such term is defined in section",
+  "note": "This is 20 U.S.C. 2302(5)(D), part of the CTE definition, and it matches the claimed wording. It names a program content element, not a measured youth outcome, but the topic matches Y7.1."
+ },
+ {
+  "claim_id": "y7-02",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.govinfo.gov/link/uscode/20/2302",
+  "excerpt": "information regarding career awareness exploration opportunities and planning with respect to an individual’s occupational",
+  "note": "2302(7)(A) matches the claimed wording almost exactly; the text continues 'and academic future;'. It is a guidance-service definition that matches Y7.1 career awareness and planning."
+ },
+ {
+  "claim_id": "y7-03",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.ecfr.gov/current/title-20/chapter-V/part-681/subpart-C/section-681.460",
+  "excerpt": "available in the local area, such as career awareness, career counseling, and career exploration services; and",
+  "note": "20 CFR 681.460(a)(13) is a DOL/ETA regulation and matches the claim. The element opens 'Services that provide labor market and employment information about in-demand industry sectors or occupations'. It describes a service, but the topic matches Y7.1."
+ },
+ {
+  "claim_id": "y7-04",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.govinfo.gov/link/uscode/20/2302",
+  "excerpt": "with respect to career options, financial aid, job training, secondary and postsecondary options (including associate",
+  "note": "2302(7)(B) exists and the citation is correct. The fit is partial: it describes information provided to students, and 'career options' fits Y7.1 better. Only the financial-aid and postsecondary-options parts touch Y7.2's transition steps (applications, FAFSA, resumes)."
+ },
+ {
+  "claim_id": "y7-05",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.ecfr.gov/current/title-20/chapter-V/part-681/subpart-C/section-681.460",
+  "excerpt": "Activities that help youth prepare for and transition to postsecondary education and training.",
+  "note": "681.460(a)(14) is quoted accurately. The fit is partial: it is a broad service category with no named transition steps, and it covers only the postsecondary side, not Y7.2's work-transition side."
+ },
+ {
+  "claim_id": "y7-06",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.govinfo.gov/link/uscode/29/3272",
+  "excerpt": "critical thinking skills, digital literacy skills, and self-management skills, including competencies in utilizing resources,",
+  "note": "29 U.S.C. 3272(17) (WIOA sec. 203(17)) defines 'workforce preparation activities' as the claim says. Note that it defines activities and covers readiness for both postsecondary education and employment, not only the workplace."
+ },
+ {
+  "claim_id": "y7-07",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.casey.org/casey-life-skills/",
+  "excerpt": "Computer literacy and online safety",
+  "note": "The page names the 'Casey Life Skills Toolkit' and the release notes give Version 1.4 (December 19, 2022), so the citation is correct and the life skill area is listed. The fit is weak: Y7.3 is defined as workplace and employability skills, while this is a general daily-life area, and its online-safety part overlaps Y6.7."
+ },
+ {
+  "claim_id": "y7-08",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.govinfo.gov/link/uscode/20/2302",
+  "excerpt": "provides technical skill proficiency or a recognized postsecondary credential, which may include",
+  "note": "This is 2302(5)(A)(ii). (5)(B) was also fetched and reads 'include competency-based, work-based, or other applied learning that supports the development of academic knowledge...'. The two parts are not adjacent, so one excerpt cannot cover both; both match Y7.4."
+ },
+ {
+  "claim_id": "y7-09",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.ecfr.gov/current/title-20/chapter-V/part-681/subpart-C/section-681.460",
+  "excerpt": "(ii) Pre-apprenticeship programs; (iii) Internships and job shadowing; and",
+  "note": "This is 681.460(a)(3). (a)(4) was also fetched: 'Occupational skill training, which includes priority consideration for training programs that lead to recognized postsecondary credentials...'. The excerpt covers element 3 only. These are service elements that match Y7.4's work-based learning and credentials."
+ },
+ {
+  "claim_id": "y7-10",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.ecfr.gov/current/title-20/chapter-V/part-681/subpart-C/section-681.560",
+  "excerpt": "Entrepreneurial skills training provides the basics of starting and operating a small business.",
+  "note": "681.560 exists and the listed skills are close paraphrases ('Take initiative;', 'Develop budgets and forecast resource needs;', 'market oneself and one's ideas'). The fit is partial: Y7.4 is defined as industry-specific technical skills, credentials and work-based learning, and general entrepreneurship skills are not named there."
+ },
+ {
+  "claim_id": "y7-11",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.govinfo.gov/link/uscode/29/705",
+  "excerpt": "The term ‘‘competitive integrated employment’’ means work that is performed on a fulltime or part-time basis",
+  "note": "The govinfo rendering drops the hyphen in 'full-time'. Cornell LII (the given URL, a secondary host) reads '...on a full-time or part-time basis (including self-employment)'. The full definition also requires competitive wages and an integrated setting; Y7.5's include list names this term directly."
+ },
+ {
+  "claim_id": "y7-12",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.ecfr.gov/current/title-20/chapter-V/part-681/subpart-C/section-681.500",
+  "excerpt": "Support the ability of participants to create budgets, initiate checking and savings accounts at banks",
+  "note": "This is 681.500(a). (b) covers managing spending, credit and debt, and (c) covers credit reports and credit scores. It matches Y7.6 directly."
+ },
+ {
+  "claim_id": "y7-13",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.casey.org/casey-life-skills/",
+  "excerpt": "regardless of whether they are in foster care, live with biological parents or reside in a group home.",
+  "note": "The same page lists the life skill area 'Daily living and self-care activities', says the toolkit is for 'any youth between the ages of 14 and 21', and gives Version 1.4 (2022). This supports Y7.7's scope beyond foster care."
+ },
+ {
+  "claim_id": "y7-14",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.maine.gov/doe/sites/maine.gov.doe/files/2023-01/CLS%20Practitioners%20Guide.pdf",
+  "excerpt": "The CLS assessment is appropriate for all youth ages 14 to 21 years old regardless of living circumstances",
+  "note": "The content matches: the cover reads Casey Family Programs, 2021 edition, and the guide has 'Internet safety, healthy meal planning, and home maintenance', 'access to reliable transportation' and 'time management'. I gave PARTIAL only because the copy is hosted by Maine DOE; no casey.org copy was found."
+ },
+ {
+  "claim_id": "y7-15",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.ecfr.gov/current/title-34/subtitle-B/chapter-III/part-300/subpart-A/subject-group-ECFR4c0b2a4a4b7d4d5/section-300.43",
+  "excerpt": "If appropriate, acquisition of daily living skills and provision of a functional vocational evaluation.",
+  "note": "34 CFR 300.43(a)(2)(v) matches the claim. The citation and fit are correct."
+ },
+ {
+  "claim_id": "y7-16",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.govinfo.gov/link/uscode/29/733",
+  "excerpt": "(4) workplace readiness training to develop social skills and independent living; and",
+  "note": "This is 29 U.S.C. 733(b)(4) under 'Required activities' (pre-employment transition services), and the wording matches. The fit is partial: independent living appears only as a goal of workplace readiness training, with no daily-living skills (cooking, transportation, documents) named. Given URL was Cornell LII; the govinfo primary was used."
+ },
+ {
+  "claim_id": "y7-17",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://portal.ct.gov/-/media/sde/cte/national_standards_for_fcs.pdf",
+  "excerpt": "Apply time management, organizational, and process skills to prioritize tasks and achieve goals.",
+  "note": "The document names NASAFACS, FCS National Standards 3.0, 2018. 2.1.1 matches, but 14.3.3 actually reads 'Demonstrate ability to select, store, prepare, and serve nutritious, aesthetically pleasing food and food product.', so the component wording should be corrected. I gave PARTIAL also because the only copy found is hosted by the Connecticut State Department of Education, not NASAFACS."
+ },
+ {
+  "claim_id": "y7-18",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.govinfo.gov/link/uscode/42/675",
+  "excerpt": "an official or certified copy of the United States birth certificate of the child, a social security card issued by the",
+  "note": "42 U.S.C. 675(5)(I) (SSA sec. 475(5)(I)) applies when 'the child is leaving foster care by reason of having attained 18 years of age' or an older state-elected age, and also lists a driver's license or state ID. It matches Y7.7's vital-documents include. Given URL was Cornell LII; the govinfo primary was used."
+ }
+]

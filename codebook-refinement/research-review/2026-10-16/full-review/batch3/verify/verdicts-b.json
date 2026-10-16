@@ -1,0 +1,128 @@
+[
+ {
+  "claim_id": "y8a-19",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.advocatesforyouth.org/wp-content/uploads/2020/03/NSES-2020-web.pdf",
+  "excerpt": "Develop a plan to access local resources and services related to reducing the risk of pregnancy and/or STDs (including HIV)",
+  "note": "Both standards are in the PDF as claimed: SH.8.CC.2 reads 'Explain there are many methods of short- and long-term contraception that are safe and effective and describe how to access [them]'. The document gives its own citation as Future of Sex Education Initiative (2020), Second Edition, so cite_as is correct."
+ },
+ {
+  "claim_id": "y8a-20",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.advocatesforyouth.org/wp-content/uploads/2020/03/NSES-2020-web.pdf",
+  "excerpt": "Outlines the functional knowledge and essentials skills students need to understand pivotal milestones for every person",
+  "note": "The strand is named 'Puberty and Adolescent Sexual Development (PD)'. Its description goes on to cover physical, social and emotional development and says sexual development is normal and healthy (example standard PD.5.AI.1)."
+ },
+ {
+  "claim_id": "y8a-21",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf",
+  "excerpt": "The last time you had sexual intercourse, did you or your partner use a condom?",
+  "note": "This is Q59, and Q60 asks what one method was used to prevent pregnancy at last sexual intercourse with an opposite-sex partner. The document's own title is '2025 State and Local Youth Risk Behavior Survey', so cite_as should say that; the claim also gives no item numbers, and they should be added as Q59 and Q60."
+ },
+ {
+  "claim_id": "y8a-22",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_phw.pdf",
+  "excerpt": "Use healthcare services to address common infectious diseases and manage chronic diseases and conditions.",
+  "note": "HBO 9 ('Prevent serious health problems that result from common chronic diseases and conditions, such as allergies, asthma, diabetes, and epilepsy') and HBO 10 match the claim, and the module header gives 2021. HBO 10 also covers infectious diseases, which does not weaken the chronic-condition fit."
+ },
+ {
+  "claim_id": "y8a-23",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_phw.pdf",
+  "excerpt": "Seek out healthcare professionals for appropriate screenings and examinations.",
+  "note": "HBO 11 supports screenings and exams in general, but it never names dental or vision visits; its only expectation found (PHW1.12.14) mentions 'checkups' and 'immunizations'. The fit for the dental and vision part is partial, and vision appears separately as HBO 3 ('Prevent vision and hearing loss')."
+ },
+ {
+  "claim_id": "y8a-24",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/vaccination/increase-proportion-adolescents-who-get-recommended-doses-hpv-vaccine-iid-08",
+  "excerpt": "Increase the proportion of adolescents who receive recommended doses of the human papillomavirus (HPV) vaccine",
+  "note": "The objective exists and is correctly attributed, but it covers one vaccine (HPV) for adolescents aged 13-15 only. It is a narrow instance of the broader immunizations part of Y8.5, so the fit is partial."
+ },
+ {
+  "claim_id": "y8a-25",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/health-care/increase-use-oral-health-care-system-oh-08",
+  "excerpt": "Increase the proportion of children, adolescents, and adults who use the oral health care system",
+  "note": "The objective ID, title and population match the claim. The page gives no specific age ranges."
+ },
+ {
+  "claim_id": "y8a-26",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/children/increase-proportion-children-who-receive-developmental-screening-mich-17",
+  "excerpt": "Increase the proportion of children who receive a developmental screening",
+  "note": "MICH-17 is real; its baseline covers children aged 9 through 35 months. It fits only early-childhood statements under Y8.5."
+ },
+ {
+  "claim_id": "y8a-27",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf",
+  "excerpt": "When was the last time you saw a dentist for a check-up, exam, teeth cleaning, or other dental work?",
+  "note": "This is Q80 in this document. As in y8a-21, the document's own title is '2025 State and Local Youth Risk Behavior Survey', so cite_as should say that."
+ },
+ {
+  "claim_id": "y8b-01",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/children-mental-health/about/about-behavior-or-conduct-problems-in-children.html",
+  "excerpt": "There are two types of disruptive behavior disorders: Oppositional Defiant Disorder and Conduct Disorder.",
+  "note": "The page lists 'Often being angry or losing one's temper' as an ODD example. The page shows the date May 15, 2026 (the metadata says first published 2024-10-16), so 2026 in cite_as is acceptable."
+ },
+ {
+  "claim_id": "y8b-02",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/yrbs/media/pdf/2025/2025-YRBS-national-HS-questionnaire508.pdf",
+  "excerpt": "During the past 12 months, did you ever feel so sad or hopeless almost every day for two weeks or more in a row",
+  "note": "Q29 is correct for this document, which is titled '2025 National Youth Risk Behavior Survey'. The question continues 'that you stopped doing some usual activities?', which the component could mention."
+ },
+ {
+  "claim_id": "y8b-03",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://api.crossref.org/works/10.1037/0002-9432.76.3.395",
+  "excerpt": "Mental health in adolescence: Is America's youth flourishing?",
+  "note": "Crossref confirms the author, title, journal and 76(3), 395-402 (2006, published by APA). The abstract could not be read (PubMed returned only a CAPTCHA, the APA DOI page refused the fetch under robots.txt, and Europe PMC rate-limited), so the excerpt is only the title and the component is not confirmed beyond it."
+ },
+ {
+  "claim_id": "y8b-04",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.nctsn.org/sites/default/files/resources/fact-sheet/12CoreConcepts-bulletedlist%20(2).pdf",
+  "excerpt": "Traumatic experiences can undermine children's sense of protection and safety",
+  "note": "Concepts 5 (danger and safety) and 10 (culture) are both in the document, but its title is '12 Core Concepts for Understanding Traumatic Stress Responses in Childhood' (Layne, Strand & NCTSN Task Force, 2012), so cite_as should be corrected. Concept 10 is about how culture shapes the meaning of trauma, expressions of distress and help-seeking, not 'trauma recovery' as an outcome, so the fit is partial."
+ },
+ {
+  "claim_id": "y8b-05",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/mental-health-and-mental-disorders/increase-proportion-children-mental-health-problems-who-get-treatment-mhmd-03",
+  "excerpt": "Increase the proportion of children with mental health problems who receive treatment",
+  "note": "The objective ID, wording and ages 4-17 all match the claim."
+ },
+ {
+  "claim_id": "y8b-06",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/mental-health-and-mental-disorders/increase-proportion-adolescents-depression-who-get-treatment-mhmd-06",
+  "excerpt": "Increase the proportion of adolescents with major depressive episodes (MDEs) who receive treatment",
+  "note": "The objective ID, wording and ages 12-17 all match the claim."
+ },
+ {
+  "claim_id": "y8b-07",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/yrbs/media/pdf/2025/2025-YRBS-national-HS-questionnaire508.pdf",
+  "excerpt": "During the past 12 months, which of the following best describes your experience with counseling or therapy",
+  "note": "Q94 is correct for this document. The question continues 'from a health professional ... to help with emotions, concentration, behavior, or mental health'."
+ },
+ {
+  "claim_id": "y8b-08",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/mmwr/volumes/75/su/su7501a1.htm",
+  "excerpt": "a new YRBS question assessing receipt of mental health counseling or therapy was added in 2025",
+  "note": "The report is MMWR Supplements Vol. 75, Suppl. 1, pp. 1-11 (October 2026), by Mpofu et al. Adding the authors and supplement number to cite_as would make it complete."
+ },
+ {
+  "claim_id": "y8b-09",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/yrbs/media/pdf/2025/2025-YRBS-national-HS-questionnaire508.pdf",
+  "excerpt": "During the past 30 days, on how many days did you not go to school because you felt you would be unsafe",
+  "note": "Q13 is correct for this document. The question continues 'at school or on your way to or from school?'."
+ }
+]

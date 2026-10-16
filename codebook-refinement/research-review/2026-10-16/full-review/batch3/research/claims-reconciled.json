@@ -1,0 +1,485 @@
+[
+  {
+    "claim_id": "y8a-01",
+    "code": "Y8",
+    "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), 2021 edition.",
+    "claimed_component": "HECAT topic modules (Food and Nutrition; Physical Activity; Personal Health and Wellness; Safety; Sexual Health) support category A (Physical health) of domain Y8.",
+    "url": "https://www.cdc.gov/healthy-youth/hecat/index.html"
+  },
+  {
+    "claim_id": "y8a-02",
+    "code": "Y8.1",
+    "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module PA (Physical Activity).",
+    "claimed_component": "Healthy Behavior Outcome 1 (engage in moderate to vigorous physical activity for at least 60 minutes every day) supports the physical-activity part of Y8.1.",
+    "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_pa.pdf"
+  },
+  {
+    "claim_id": "y8a-03",
+    "code": "Y8.1",
+    "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module PA (Physical Activity).",
+    "claimed_component": "Healthy Behavior Outcome 2 (activities that enhance cardio-respiratory endurance, flexibility, muscle endurance and muscle strength) supports the fitness part of Y8.1.",
+    "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_pa.pdf"
+  },
+  {
+    "claim_id": "y8a-04",
+    "code": "Y8.1",
+    "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module FN (Food and Nutrition).",
+    "claimed_component": "Healthy Behavior Outcome 3 (eat lots of fruits and vegetables) supports the nutrition and fruit-and-vegetable-intake part of Y8.1.",
+    "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_fn.pdf"
+  },
+  {
+    "claim_id": "y8a-05",
+    "code": "Y8.1",
+    "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module FN (Food and Nutrition).",
+    "claimed_component": "Healthy Behavior Outcome 10 (prepare good-tasting, nutrient-dense foods for yourself and others) supports the healthy-cooking part of Y8.1.",
+    "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_fn.pdf"
+  },
+  {
+    "claim_id": "y8a-06",
+    "code": "Y8.1",
+    "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module PHW (Personal Health and Wellness).",
+    "claimed_component": "Healthy Behavior Outcome 1 (practice appropriate hygiene habits) supports the hygiene and handwashing part of Y8.1.",
+    "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_phw.pdf"
+  },
+  {
+    "claim_id": "y8a-07",
+    "code": "Y8.1",
+    "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module PHW (Personal Health and Wellness).",
+    "claimed_component": "Healthy Behavior Outcome 2 (get an appropriate amount of sleep and rest) supports the sleep part of Y8.1.",
+    "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_phw.pdf"
+  },
+  {
+    "claim_id": "y8a-08",
+    "code": "Y8.1",
+    "cite_as": "Centers for Disease Control and Prevention (2025). Youth Risk Behavior Survey, 2025 Standard High School Questionnaire.",
+    "claimed_component": "Sleep item (hours of sleep on an average school night) supports the sleep part of Y8.1.",
+    "url": "https://cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf"
+  },
+  {
+    "claim_id": "y8a-09",
+    "code": "Y8.1",
+    "cite_as": "Centers for Disease Control and Prevention (2025). Youth Risk Behavior Survey, 2025 Standard High School Questionnaire.",
+    "claimed_component": "Physical activity item (days physically active at least 60 minutes per day in the past 7 days) supports the physical-activity part of Y8.1.",
+    "url": "https://cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf"
+  },
+  {
+    "claim_id": "y8a-10",
+    "code": "Y8.1",
+    "cite_as": "Centers for Disease Control and Prevention (2025). Youth Risk Behavior Survey, 2025 Standard High School Questionnaire.",
+    "claimed_component": "Fruit and vegetable items (times eating fruit, green salad, carrots and other vegetables in the past 7 days) support the fruit-and-vegetable-intake part of Y8.1.",
+    "url": "https://cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf"
+  },
+  {
+    "claim_id": "y8a-11",
+    "code": "Y8.1",
+    "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, objective PA-06: Increase the proportion of adolescents who do enough aerobic physical activity.",
+    "claimed_component": "Objective PA-06 (adolescent aerobic physical activity) supports the physical-activity part of Y8.1.",
+    "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/physical-activity/increase-proportion-adolescents-who-do-enough-aerobic-physical-activity-pa-06"
+  },
+  {
+    "claim_id": "y8a-12",
+    "code": "Y8.1",
+    "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, objective PA-R02: Increase the proportion of parents who follow AAP recommendations on limiting screen time for children aged 6 to 17 years.",
+    "claimed_component": "Research objective PA-R02 (limiting screen time for children aged 6 to 17) supports the recreational-screen-time part of Y8.1.",
+    "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/physical-activity/increase-proportion-parents-who-follow-aap-recommendations-limiting-screen-time-children-aged-6-17-years-pa-r02"
+  },
+  {
+    "claim_id": "y8a-13",
+    "code": "Y8.2",
+    "cite_as": "U.S. Department of Health and Human Services, Administration for Children and Families, Office of Head Start (2015). Head Start Early Learning Outcomes Framework: Ages Birth to Five.",
+    "claimed_component": "Perceptual, Motor, and Physical Development domain, Fine Motor sub-domain, supports the fine-motor part of Y8.2.",
+    "url": "https://headstart.gov/school-readiness/effective-practice-guides/perceptual-motor-physical-development"
+  },
+  {
+    "claim_id": "y8a-14",
+    "code": "Y8.2",
+    "cite_as": "SHAPE America (2024). National Physical Education Standards.",
+    "claimed_component": "Standard 1 grade-span indicators 1.8.1 (correct technique in a variety of outdoor activities) and 1.12.9 (water safety and basic swimming skills) support the outdoor-skill and swimming parts of Y8.2.",
+    "url": "https://shapeamerica.org/standards/pe/new-pe-standards/"
+  },
+  {
+    "claim_id": "y8a-15",
+    "code": "Y8.3",
+    "cite_as": "SHAPE America (2024). National Health Education Standards.",
+    "claimed_component": "Standard 3 (access valid and reliable resources to support health and well-being) and indicator 3.8.3 (access valid and reliable sources of health information) support the finding-reliable-health-information part of Y8.3.",
+    "url": "https://shapeamerica.org/standards/health/new-he-standards/"
+  },
+  {
+    "claim_id": "y8a-16",
+    "code": "Y8.3",
+    "cite_as": "SHAPE America (2024). National Health Education Standards.",
+    "claimed_component": "Standard 1 indicators 1.2.3, 1.5.3, 1.8.3 and 1.12.3 (prevent or reduce risks for illnesses and injuries) support the injury-prevention part of Y8.3.",
+    "url": "https://shapeamerica.org/standards/health/new-he-standards/"
+  },
+  {
+    "claim_id": "y8a-17",
+    "code": "Y8.3",
+    "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module S (Safety).",
+    "claimed_component": "Healthy Behavior Outcome 4 (apply safety rules and procedures to avoid risky behaviors and injury) supports the injury-prevention and outdoor-safety part of Y8.3.",
+    "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_s.pdf"
+  },
+  {
+    "claim_id": "y8a-18",
+    "code": "Y8.3",
+    "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module S (Safety).",
+    "claimed_component": "Healthy Behavior Outcome 7 (get help for oneself or others when injured or suddenly ill) supports the first-aid and responding-to-an-allergic-reaction part of Y8.3.",
+    "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_s.pdf"
+  },
+  {
+    "claim_id": "y8a-19",
+    "code": "Y8.4",
+    "cite_as": "Future of Sex Education Initiative (2020). National Sex Education Standards: Core Content and Skills, K-12 (2nd ed.).",
+    "claimed_component": "Sexual Health strand standards SH.8.CC.2 (methods of contraception) and SH.12.GS.1 (plan to access local resources and services related to reducing the risk of pregnancy and/or STDs) support the pregnancy-prevention and accessing-services parts of Y8.4.",
+    "url": "https://www.advocatesforyouth.org/wp-content/uploads/2020/03/NSES-2020-web.pdf"
+  },
+  {
+    "claim_id": "y8a-20",
+    "code": "Y8.4",
+    "cite_as": "Future of Sex Education Initiative (2020). National Sex Education Standards: Core Content and Skills, K-12 (2nd ed.).",
+    "claimed_component": "Puberty and Adolescent Sexual Development strand supports puberty and sexual development as part of Y8.4.",
+    "url": "https://www.advocatesforyouth.org/wp-content/uploads/2020/03/NSES-2020-web.pdf"
+  },
+  {
+    "claim_id": "y8a-21",
+    "code": "Y8.4",
+    "cite_as": "Centers for Disease Control and Prevention (2025). Youth Risk Behavior Survey, 2025 Standard High School Questionnaire.",
+    "claimed_component": "Condom-use item (condom use at last sexual intercourse) and pregnancy-prevention-method item support the STI- and pregnancy-prevention behavior part of Y8.4.",
+    "url": "https://cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf"
+  },
+  {
+    "claim_id": "y8a-22",
+    "code": "Y8.5",
+    "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module PHW (Personal Health and Wellness).",
+    "claimed_component": "Healthy Behavior Outcomes 9 (prevent serious health problems from common chronic diseases and conditions such as allergies and asthma) and 10 (use healthcare services to manage chronic diseases and conditions) support the chronic-condition-management part of Y8.5.",
+    "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_phw.pdf"
+  },
+  {
+    "claim_id": "y8a-23",
+    "code": "Y8.5",
+    "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module PHW (Personal Health and Wellness).",
+    "claimed_component": "Healthy Behavior Outcome 11 (seek out healthcare professionals for appropriate screenings and examinations) supports the screenings and dental or vision visits part of Y8.5.",
+    "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_phw.pdf"
+  },
+  {
+    "claim_id": "y8a-24",
+    "code": "Y8.5",
+    "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, objective IID-08: Increase the proportion of adolescents who get recommended doses of the HPV vaccine.",
+    "claimed_component": "Objective IID-08 (adolescent HPV vaccination) supports the immunizations part of Y8.5.",
+    "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/vaccination/increase-proportion-adolescents-who-get-recommended-doses-hpv-vaccine-iid-08"
+  },
+  {
+    "claim_id": "y8a-25",
+    "code": "Y8.5",
+    "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, objective OH-08: Increase use of the oral health care system.",
+    "claimed_component": "Objective OH-08 (use of the oral health care system by children, adolescents and adults) supports the dental-visits part of Y8.5.",
+    "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/health-care/increase-use-oral-health-care-system-oh-08"
+  },
+  {
+    "claim_id": "y8a-26",
+    "code": "Y8.5",
+    "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, objective MICH-17: Increase the proportion of children who receive a developmental screening.",
+    "claimed_component": "Objective MICH-17 (developmental screening of young children) supports the developmental-screenings-received part of Y8.5.",
+    "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/children/increase-proportion-children-who-receive-developmental-screening-mich-17"
+  },
+  {
+    "claim_id": "y8a-27",
+    "code": "Y8.5",
+    "cite_as": "Centers for Disease Control and Prevention (2025). Youth Risk Behavior Survey, 2025 Standard High School Questionnaire.",
+    "claimed_component": "Dental visit item (last time saw a dentist for a check-up, exam, teeth cleaning or other dental work) supports the dental-visits part of Y8.5.",
+    "url": "https://cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf"
+  },
+  {
+    "claim_id": "y8b-01",
+    "code": "Y8.6",
+    "cite_as": "Centers for Disease Control and Prevention (2026). Behavior or Conduct Problems in Children. Children's Mental Health.",
+    "claimed_component": "Disruptive behavior disorders (Oppositional Defiant Disorder, Conduct Disorder) as a children's mental health condition, including losing one's temper",
+    "url": "https://www.cdc.gov/children-mental-health/about/about-behavior-or-conduct-problems-in-children.html"
+  },
+  {
+    "claim_id": "y8b-02",
+    "code": "Y8.6",
+    "cite_as": "Centers for Disease Control and Prevention (2025). 2025 Youth Risk Behavior Survey, National High School Questionnaire.",
+    "claimed_component": "Q29: felt so sad or hopeless almost every day for two weeks or more in a row (persistent sadness or hopelessness)",
+    "url": "https://www.cdc.gov/yrbs/media/pdf/2025/2025-YRBS-national-HS-questionnaire508.pdf"
+  },
+  {
+    "claim_id": "y8b-03",
+    "code": "Y8.7",
+    "cite_as": "Keyes, C. L. M. (2006). Mental health in adolescence: Is America's youth flourishing? American Journal of Orthopsychiatry, 76(3), 395-402.",
+    "claimed_component": "Flourishing (positive mental health) among adolescents",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16981819/"
+  },
+  {
+    "claim_id": "y8b-04",
+    "code": "Y8.8",
+    "cite_as": "Layne, C. M., Strand, V., & NCTSN Core Curriculum on Childhood Trauma Task Force (2012). The 12 Core Concepts: Concepts for Understanding Traumatic Stress Responses in Children and Families.",
+    "claimed_component": "Core Concept 5 (danger and safety are core concerns in the lives of traumatized children) and Core Concept 10 (culture and trauma recovery)",
+    "url": "https://www.nctsn.org/sites/default/files/resources/fact-sheet/12CoreConcepts-bulletedlist%20(2).pdf"
+  },
+  {
+    "claim_id": "y8b-05",
+    "code": "Y8.9",
+    "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, objective MHMD-03.",
+    "claimed_component": "MHMD-03: increase the proportion of children (ages 4-17) with mental health problems who receive treatment",
+    "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/mental-health-and-mental-disorders/increase-proportion-children-mental-health-problems-who-get-treatment-mhmd-03"
+  },
+  {
+    "claim_id": "y8b-06",
+    "code": "Y8.9",
+    "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, objective MHMD-06.",
+    "claimed_component": "MHMD-06: increase the proportion of adolescents (ages 12-17) with major depressive episodes who receive treatment",
+    "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/mental-health-and-mental-disorders/increase-proportion-adolescents-depression-who-get-treatment-mhmd-06"
+  },
+  {
+    "claim_id": "y8b-07",
+    "code": "Y8.9",
+    "cite_as": "Centers for Disease Control and Prevention (2025). 2025 Youth Risk Behavior Survey, National High School Questionnaire.",
+    "claimed_component": "Q94: student's experience with counseling or therapy (receipt of mental health counseling or therapy)",
+    "url": "https://www.cdc.gov/yrbs/media/pdf/2025/2025-YRBS-national-HS-questionnaire508.pdf"
+  },
+  {
+    "claim_id": "y8b-08",
+    "code": "Y8.9",
+    "cite_as": "Centers for Disease Control and Prevention (2026). Overview and Methods for the Youth Risk Behavior Surveillance System, United States, 2025. MMWR Supplements, 75.",
+    "claimed_component": "New 2025 YRBS question assessing receipt of mental health counseling or therapy",
+    "url": "https://www.cdc.gov/mmwr/volumes/75/su/su7501a1.htm"
+  },
+  {
+    "claim_id": "y8b-09",
+    "code": "Y8.10",
+    "cite_as": "Centers for Disease Control and Prevention (2025). 2025 Youth Risk Behavior Survey, National High School Questionnaire.",
+    "claimed_component": "Q13: days the student did not go to school because they felt they would be unsafe at school or on the way to or from school",
+    "url": "https://www.cdc.gov/yrbs/media/pdf/2025/2025-YRBS-national-HS-questionnaire508.pdf"
+  },
+  {
+    "claim_id": "y8b-10",
+    "code": "Y8.11",
+    "cite_as": "Miech, R. A., Patrick, M. E., O'Malley, P. M., Jager, J. O., & Jang, J. B. (2026). Monitoring the Future national survey results on drug use, 1975-2025: Overview and detailed results for secondary school students. Institute for Social Research, University of Michigan.",
+    "claimed_component": "Perceived risk and disapproval of substance use among secondary school students",
+    "url": "https://monitoringthefuture.org/wp-content/uploads/2025/12/mtfvol12026.pdf"
+  },
+  {
+    "claim_id": "y8b-11",
+    "code": "Y8.12",
+    "cite_as": "Centers for Disease Control and Prevention (2025). 2025 Youth Risk Behavior Survey, National High School Questionnaire.",
+    "claimed_component": "Q16 physical fight; Q11-Q12 weapon and gun carrying; Q26-Q27 bullied on school property and electronically bullied; Q21-Q22 sexual and physical dating violence",
+    "url": "https://www.cdc.gov/yrbs/media/pdf/2025/2025-YRBS-national-HS-questionnaire508.pdf"
+  },
+  {
+    "claim_id": "y8b-12",
+    "code": "Y8.12",
+    "cite_as": "Centers for Disease Control and Prevention. About the Youth Risk Behavior Surveillance System (YRBSS).",
+    "claimed_component": "Student experiences: exposure to community violence",
+    "url": "https://www.cdc.gov/yrbs/about/index.html"
+  },
+  {
+    "claim_id": "y8b-13",
+    "code": "Y8.12",
+    "cite_as": "Centers for Disease Control and Prevention (2024). About Youth Violence.",
+    "claimed_component": "Definition of youth violence: intentional use of physical force or power to threaten or harm others, including fighting, bullying, threats with weapons and gang-related violence",
+    "url": "https://www.cdc.gov/youth-violence/about/index.html"
+  },
+  {
+    "claim_id": "y8b-14",
+    "code": "Y8.13",
+    "cite_as": "Harris, P. W., Lockwood, B., & Mengers, L. (2009, November). A CJCA White Paper: Defining and Measuring Recidivism. Council of Juvenile Correctional Administrators. NCJ 237765.",
+    "claimed_component": "Definition and measurement of juvenile recidivism (re-arrest, re-adjudication, recommitment)",
+    "url": "https://www.ojp.gov/ncjrs/virtual-library/abstracts/cjca-white-paper-defining-and-measuring-recidivism"
+  },
+  {
+    "claim_id": "y8b-15",
+    "code": "Y8.13",
+    "cite_as": "Council of Juvenile Justice Administrators. About CJJA.",
+    "claimed_component": "CJJA was originally incorporated as the Council of Juvenile Correctional Administrators (organization rename)",
+    "url": "https://cjja.net/about/"
+  },
+  {
+    "claim_id": "y8b-16",
+    "code": "Y8.13",
+    "cite_as": "Office of Juvenile Justice and Delinquency Prevention (2017). Model Programs Guide Literature Review: Diversion from Formal Juvenile Court Processing. NCJ 249701.",
+    "claimed_component": "Diversion of youth from formal juvenile court processing",
+    "url": "https://ojjdp.ojp.gov/library/publications/model-programs-guide-literature-review-diversion"
+  },
+  {
+    "claim_id": "y8b-17",
+    "code": "Y8.13",
+    "cite_as": "Office of Juvenile Justice and Delinquency Prevention (2018). Juvenile Reentry Programs (Model Programs Guide I-Guide, archived).",
+    "claimed_component": "Juvenile reentry: services preparing youth in out-of-home placement for return to the community, aimed at reducing recidivism",
+    "url": "https://ojjdp.ojp.gov/sites/ojjdp/files/mpg-iguides/topics/juvenile-reentry-programs/index.html"
+  },
+  {
+    "claim_id": "f1-01",
+    "code": "F1.4",
+    "cite_as": "Center for the Study of Social Policy (2015). Core Meanings of the Strengthening Families Protective Factors.",
+    "claimed_component": "Parental Resilience: managing stress and functioning well; managing anger, anxiety, sadness and other negative feelings; having self-confidence; seeking help for self",
+    "url": "https://cssp.org/wp-content/uploads/2025/03/Core-Meanings-of-the-SF-Protective-Factors-2015.pdf"
+  },
+  {
+    "claim_id": "f1-02",
+    "code": "F1.1",
+    "cite_as": "Center for the Study of Social Policy (2015). Core Meanings of the Strengthening Families Protective Factors.",
+    "claimed_component": "Knowledge of Parenting and Child Development: understanding child development and parenting strategies; positive discipline techniques; appropriate developmental expectations; nurturing, responsive parenting",
+    "url": "https://cssp.org/wp-content/uploads/2025/03/Core-Meanings-of-the-SF-Protective-Factors-2015.pdf"
+  },
+  {
+    "claim_id": "f1-03",
+    "code": "F1.2",
+    "cite_as": "Epstein, J. L., et al. (2019). Epstein's Six Types of Involvement, in School, Family, and Community Partnerships: Your Handbook for Action (4th ed.). Corwin.",
+    "claimed_component": "Type 4 Learning at Home: involving families with their children in learning at home, including homework",
+    "url": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf"
+  },
+  {
+    "claim_id": "f1-04",
+    "code": "F1.8",
+    "cite_as": "Epstein, J. L., et al. (2019). Epstein's Six Types of Involvement, in School, Family, and Community Partnerships: Your Handbook for Action (4th ed.). Corwin.",
+    "claimed_component": "Type 2 Communicating: school-to-home and home-to-school communications about school programs and student progress",
+    "url": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf"
+  },
+  {
+    "claim_id": "f1-05",
+    "code": "F1.9",
+    "cite_as": "Epstein, J. L., et al. (2019). Epstein's Six Types of Involvement, in School, Family, and Community Partnerships: Your Handbook for Action (4th ed.). Corwin.",
+    "claimed_component": "Type 3 Volunteering (families as volunteers and audiences) and Type 5 Decision Making (families as participants in school decisions, governance and advocacy)",
+    "url": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf"
+  },
+  {
+    "claim_id": "f1-06",
+    "code": "F1.6",
+    "cite_as": "Workforce Innovation and Opportunity Act, Title II (Adult Education and Family Literacy Act), 29 U.S.C. 3272",
+    "claimed_component": "29 U.S.C. 3272(1) adult education: instruction below the postsecondary level to read, write and speak English, attain a secondary school diploma or equivalent, and obtain employment",
+    "url": "https://www.law.cornell.edu/uscode/text/29/3272"
+  },
+  {
+    "claim_id": "f1-07",
+    "code": "F1.6",
+    "cite_as": "Workforce Innovation and Opportunity Act, Title II (Adult Education and Family Literacy Act), 29 U.S.C. 3272",
+    "claimed_component": "29 U.S.C. 3272(6) English language acquisition program: competence in reading, writing, speaking and comprehension of English for English language learners",
+    "url": "https://www.law.cornell.edu/uscode/text/29/3272"
+  },
+  {
+    "claim_id": "f1-08",
+    "code": "F1.6",
+    "cite_as": "Ascend at the Aspen Institute. 2Gen Approach building blocks.",
+    "claimed_component": "Economic Assets building block: financial education and asset building",
+    "url": "https://ascend.aspeninstitute.org/2gen-approach/"
+  },
+  {
+    "claim_id": "f1-09",
+    "code": "F1.6",
+    "cite_as": "Digital Equity Act of 2021, 47 U.S.C. 1721",
+    "claimed_component": "47 U.S.C. 1721(8) covered populations, including aging individuals (1721(3))",
+    "url": "https://www.law.cornell.edu/uscode/text/47/1721"
+  },
+  {
+    "claim_id": "f1-10",
+    "code": "F1.2",
+    "cite_as": "Workforce Innovation and Opportunity Act, Title II (Adult Education and Family Literacy Act), 29 U.S.C. 3272",
+    "claimed_component": "29 U.S.C. 3272(9)(B)-(C) family literacy activities: interactive literacy activities between parents or family members and their children; training parents to be the primary teacher for their children",
+    "url": "https://www.law.cornell.edu/uscode/text/29/3272"
+  },
+  {
+    "claim_id": "f1-11",
+    "code": "F1.3",
+    "cite_as": "U.S. Department of Agriculture, Food and Nutrition Service. SNAP-Ed Evaluation Framework, MT1 Nutrition-Related Behavioral Changes.",
+    "claimed_component": "MT1: changes in individual and family healthy eating behaviors, including fruit and vegetable consumption",
+    "url": "https://snaped.fns.usda.gov/framework/components/mt1"
+  },
+  {
+    "claim_id": "f1-12",
+    "code": "F1.8",
+    "cite_as": "Mapp, K. L., & Bergman, E. (2019). Dual Capacity-Building Framework for Family-School Partnerships (Version 2).",
+    "claimed_component": "Process conditions: Relational, built on mutual trust",
+    "url": "https://aps2016.apsva.us/wp-content/uploads/2021/11/DCBFVERSION2FINAL.pdf"
+  },
+  {
+    "claim_id": "f1-13",
+    "code": "F1.3",
+    "cite_as": "Food and Nutrition Act of 2008, sec. 28, 7 U.S.C. 2036a(b): Nutrition education and obesity prevention grant program",
+    "claimed_component": "7 U.S.C. 2036a(b): programs that promote healthy food choices and physical activity consistent with the Dietary Guidelines for Americans",
+    "url": "https://www.law.cornell.edu/uscode/text/7/2036a"
+  },
+  {
+    "claim_id": "f1-14",
+    "code": "F1.2",
+    "cite_as": "Center for the Study of Social Policy (2015). Core Meanings of the Strengthening Families Protective Factors.",
+    "claimed_component": "Knowledge of Parenting and Child Development: the importance of using predictable routines",
+    "url": "https://cssp.org/wp-content/uploads/2025/03/Core-Meanings-of-the-SF-Protective-Factors-2015.pdf"
+  },
+  {
+    "claim_id": "f2-01",
+    "code": "F2.1",
+    "cite_as": "Administration for Children and Families, Children's Bureau. National Youth in Transition Database (NYTD) outcomes survey",
+    "claimed_component": "NYTD outcome 'financial self-sufficiency' (youth surveyed at about ages 17, 19 and 21) supports income and financial stability of a young person living independently",
+    "url": "https://acf.gov/cb/fact-sheet/about-nytd"
+  },
+  {
+    "claim_id": "f2-02",
+    "code": "F2.1",
+    "cite_as": "Consumer Financial Protection Bureau (2015). Measuring financial well-being: A guide to using the CFPB Financial Well-Being Scale",
+    "claimed_component": "Section 2.1 definition of financial well-being ('a state of being wherein a person can fully meet current and ongoing financial obligations'; control over finances; financial cushion against emergencies) supports household or adult financial stability",
+    "url": "https://files.consumerfinance.gov/f/201512_cfpb_financial-well-being-user-guide-scale.pdf"
+  },
+  {
+    "claim_id": "f2-03",
+    "code": "F2.1",
+    "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, AHS-01: Increase the proportion of people with health insurance",
+    "claimed_component": "AHS-01 (persons under 65 with public or private health insurance) supports Medicaid or public health insurance enrollment in F2.1's include line",
+    "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/health-care-access-and-quality/increase-proportion-people-health-insurance-ahs-01/data-methodology"
+  },
+  {
+    "claim_id": "f2-04",
+    "code": "F2.2",
+    "cite_as": "U.S. Department of Agriculture, Food, Nutrition, and Consumer Services (2022). USDA Actions on Nutrition Security",
+    "claimed_component": "Definition of nutrition security ('consistent access, availability, and affordability of foods and beverages that promote well-being, prevent disease') supports access to healthy food in F2.2",
+    "url": "https://www.usda.gov/sites/default/files/documents/usda-actions-nutrition-security.pdf"
+  },
+  {
+    "claim_id": "f2-05",
+    "code": "F2.2",
+    "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, NWS-01: Reduce household food insecurity and hunger",
+    "claimed_component": "Objective NWS-01 (household food insecurity and hunger, measured by the CPS Food Security Supplement) supports reduced household food insecurity as an outcome",
+    "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/nutrition-and-healthy-eating/reduce-household-food-insecurity-and-hunger-nws-01"
+  },
+  {
+    "claim_id": "f2-06",
+    "code": "F2.3",
+    "cite_as": "Runaway and Homeless Youth Program regulations, 45 CFR 1351.30(a)(1) and 1351.31(a)(1) (U.S. Department of Health and Human Services, Administration for Children and Families)",
+    "claimed_component": "Core outcome area '(iv) Stable Housing' for Basic Center and Transitional Living Program youth supports housing stability of a young person",
+    "url": "https://www.ecfr.gov/current/title-45/subtitle-B/chapter-XIII/subchapter-D/part-1351"
+  },
+  {
+    "claim_id": "f2-07",
+    "code": "F2.3",
+    "cite_as": "Runaway and Homeless Youth Program regulations, 45 CFR 1351.1 (definition of 'Safe and appropriate exits') and 1351.30(d), 1351.31(e) (U.S. Department of Health and Human Services, Administration for Children and Families)",
+    "claimed_component": "Definition of safe and appropriate exits (to a parent, relative or adult who can provide a stable arrangement, or to independent living; not to the street or an unknown situation) supports safe living situation",
+    "url": "https://www.ecfr.gov/current/title-45/subtitle-B/chapter-XIII/subchapter-D/part-1351"
+  },
+  {
+    "claim_id": "f2-08",
+    "code": "F2.3",
+    "cite_as": "McKinney-Vento Homeless Assistance Act as amended by the HEARTH Act, 42 U.S.C. 11386a(b)(1)(A) (Continuum of Care selection criteria)",
+    "claimed_component": "Clauses (i) length of time individuals and families remain homeless, (ii) additional spells of homelessness after leaving homelessness, and (vi) reducing the number who become homeless support exits to stable housing and avoided homelessness for households",
+    "url": "https://www.law.cornell.edu/uscode/text/42/11386a"
+  },
+  {
+    "claim_id": "f2-09",
+    "code": "F2.3",
+    "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, SDOH-04: Reduce the proportion of families that spend more than 30 percent of income on housing",
+    "claimed_component": "Objective SDOH-04 (housing cost burden, American Housing Survey) supports reduced rent burden in F2.3's include line",
+    "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/housing-and-homes/reduce-proportion-families-spend-more-30-percent-income-housing-sdoh-04"
+  },
+  {
+    "claim_id": "f2-10",
+    "code": "F2.3",
+    "cite_as": "McKinney-Vento Homeless Assistance Act, Subtitle VII-B, 42 U.S.C. 11434a(2) (definition of homeless children and youths)",
+    "claimed_component": "Definition 'individuals who lack a fixed, regular, and adequate nighttime residence' supports what counts as not having stable housing for children and youths",
+    "url": "https://www.law.cornell.edu/uscode/text/42/11434a"
+  },
+  {
+    "claim_id": "f2-11",
+    "code": "F1.9",
+    "cite_as": "AmeriCorps Office of Research and Evaluation (December 2024). Renewed Engagement in American Civic Life (Volunteering and Civic Life in America Research Summary), from the Current Population Survey Civic Engagement and Volunteering Supplement",
+    "claimed_component": "Formal volunteering through an organization, measured for residents age 16 and up, supports volunteering by adult program participants",
+    "url": "https://americorps.gov/sites/default/files/document/2025-01/CEV2023_HeadlineReport_12192024_508.pdf"
+  }
+]

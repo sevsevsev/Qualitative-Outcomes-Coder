@@ -1,0 +1,121 @@
+[
+ {
+  "claim_id": "y3-01",
+  "code": "Y3.1",
+  "cite_as": "Search Institute. (n.d.). The Developmental Assets Framework: 40 Developmental Assets for Adolescents (ages 12-18).",
+  "claimed_component": "Support: Caring neighborhood and Caring school climate (young person experiences caring neighbors; school provides a caring, encouraging environment), supporting felt acceptance and care in a school or community",
+  "url": "https://searchinstitute.org/resources-hub/developmental-assets-framework"
+ },
+ {
+  "claim_id": "y3-02",
+  "code": "Y3.1",
+  "cite_as": "Search Institute. (n.d.). The Developmental Assets Framework: 40 Developmental Assets for Adolescents (ages 12-18).",
+  "claimed_component": "Empowerment: Community values youth (young person perceives that adults in the community value youth), supporting mattering",
+  "url": "https://searchinstitute.org/resources-hub/developmental-assets-framework"
+ },
+ {
+  "claim_id": "y3-03",
+  "code": "Y3.1",
+  "cite_as": "National Research Council and Institute of Medicine (2002). Community Programs to Promote Youth Development. Washington, DC: The National Academies Press.",
+  "claimed_component": "Chapter 5, Features of Community Programs for Youth, Opportunities to Belong: promoting young people's sense of belonging in community programs",
+  "url": "https://www.nationalacademies.org/read/10022/chapter/7"
+ },
+ {
+  "claim_id": "y3-04",
+  "code": "Y3.1",
+  "cite_as": "Office of the U.S. Surgeon General (2023). Our Epidemic of Loneliness and Isolation: The U.S. Surgeon General's Advisory on the Healing Effects of Social Connection and Community. U.S. Department of Health and Human Services.",
+  "claimed_component": "Glossary definitions of belonging, loneliness and social isolation, supporting belonging and reduced loneliness or isolation",
+  "url": "https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf"
+ },
+ {
+  "claim_id": "y3-05",
+  "code": "Y3.2",
+  "cite_as": "42 U.S.C. 677(a)(2), John H. Chafee Foster Care Program for Successful Transition to Adulthood",
+  "claimed_component": "Purpose (a)(2): helping youth who experienced foster care at age 14 or older achieve meaningful, permanent connections with a caring adult",
+  "url": "https://www.law.cornell.edu/uscode/text/42/677"
+ },
+ {
+  "claim_id": "y3-06",
+  "code": "Y3.2",
+  "cite_as": "Administration for Children and Families, Children's Bureau. National Youth in Transition Database (NYTD): About NYTD.",
+  "claimed_component": "NYTD outcome 'positive connections with adults' for youth in or aging out of foster care",
+  "url": "https://acf.gov/cb/fact-sheet/about-nytd"
+ },
+ {
+  "claim_id": "y3-07",
+  "code": "Y3.2",
+  "cite_as": "Search Institute. (n.d.). The Developmental Assets Framework: 40 Developmental Assets for Adolescents (ages 12-18).",
+  "claimed_component": "Support: Other adult relationships (young person receives support from three or more nonparent adults), supporting caring relationships with adults outside the family",
+  "url": "https://searchinstitute.org/resources-hub/developmental-assets-framework"
+ },
+ {
+  "claim_id": "y3-08",
+  "code": "Y3.2",
+  "cite_as": "Search Institute. (n.d.). The Developmental Assets Framework: 40 Developmental Assets for Adolescents (ages 12-18).",
+  "claimed_component": "Boundaries and Expectations: Adult role models (parents and other adults model positive, responsible behavior), supporting positive adult role models",
+  "url": "https://searchinstitute.org/resources-hub/developmental-assets-framework"
+ },
+ {
+  "claim_id": "y3-09",
+  "code": "Y3.4",
+  "cite_as": "42 U.S.C. 671(a)(15)(B), State plan for foster care and adoption assistance",
+  "claimed_component": "Reasonable efforts to preserve and reunify families, including making it possible for a child to safely return to the child's home, supporting family reunification",
+  "url": "https://www.law.cornell.edu/uscode/text/42/671"
+ },
+ {
+  "claim_id": "y3-10",
+  "code": "Y3.4",
+  "cite_as": "34 U.S.C. 11212(b)(3), Runaway and Homeless Youth Act, Basic Center Grant Program: eligibility; plan requirements",
+  "claimed_component": "Plan requirement (b)(3): ensuring the safe return of the youth according to the best interests of the youth, supporting reunification of runaway youth with family",
+  "url": "https://www.law.cornell.edu/uscode/text/34/11212"
+ },
+ {
+  "claim_id": "y3-11",
+  "code": "Y3.5",
+  "cite_as": "Search Institute \u2014 Developmental Relationships Framework (Express Care, Challenge Growth, Provide Support, Share Power, Expand Possibilities)",
+  "claimed_component": "Expand Possibilities, action Connect (introduce me to people who can help me grow), supporting introductions to a wider network",
+  "url": "https://searchinstitute.org/resources-hub/developmental-relationships-framework"
+ },
+ {
+  "claim_id": "y4a-01",
+  "code": "Y4.6",
+  "cite_as": "National Governors Association Center for Best Practices & Council of Chief State School Officers (2010). Common Core State Standards for English Language Arts: College and Career Readiness Anchor Standards for Speaking and Listening.",
+  "claimed_component": "Presentation of Knowledge and Ideas, CCRA.SL.4: presenting information, findings and supporting evidence appropriate to task, purpose and audience, supporting Y4.6 presentations and speaking to an audience",
+  "url": "https://thecorestandards.org/ELA-Literacy/CCRA/SL/"
+ },
+ {
+  "claim_id": "y4a-02",
+  "code": "Y4.6",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Relationship Skills competency definition: 'the capacities to communicate clearly, listen actively', supporting Y4.6 expressing oneself clearly and listening actively",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/sites/5/CASEL-Framework-and-Skills.pdf"
+ },
+ {
+  "claim_id": "y4a-03",
+  "code": "Y4.5",
+  "cite_as": "Learning for Justice, Southern Poverty Law Center (2022). Social Justice Standards: The Learning for Justice Anti-Bias Framework, Second Edition.",
+  "claimed_component": "Diversity anchor standard 6: 'express comfort with people who are both similar to and different from them and engage respectfully with all people', supporting Y4.5 respecting people of different backgrounds and identities",
+  "url": "https://www.learningforjustice.org/sites/default/files/2022-09/LFJ-Social-Justice-Standards-September-2022-09292022.pdf"
+ },
+ {
+  "claim_id": "y4a-04",
+  "code": "Y4.5",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Social Awareness competency definition: 'understand the perspectives of and empathize with others, including those from diverse backgrounds, cultures, & contexts', supporting Y4.5 respect for people of different backgrounds",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/sites/5/CASEL-Framework-and-Skills.pdf"
+ },
+ {
+  "claim_id": "y4a-05",
+  "code": "Y4.4",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Social Awareness: 'Understanding and expressing gratitude', supporting Y4.4 expressing gratitude",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/sites/5/CASEL-Framework-and-Skills.pdf"
+ },
+ {
+  "claim_id": "y4a-06",
+  "code": "Y4.4",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Social Awareness: 'Showing concern for the feelings of others'; 'Recognizing situational demands and opportunities', supporting Y4.4 caring about others' feelings and reading expectations in different settings",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/sites/5/CASEL-Framework-and-Skills.pdf"
+ }
+]

@@ -1,0 +1,198 @@
+[
+  {
+    "claim_id": "a1-01",
+    "code": "A1.1",
+    "cite_as": "Learning Forward (2022). Standards for Professional Learning (Standards Summary).",
+    "claimed_component": "2022 Standards for Professional Learning, eleven standards in three frames, including Implementation and Professional Expertise",
+    "url": "https://learningforward.org/wp-content/uploads/sites/29/2022/04/Standards-Summary.pdf"
+  },
+  {
+    "claim_id": "a1-02",
+    "code": "A1.1",
+    "cite_as": "Learning Forward. History of Standards for Professional Learning.",
+    "claimed_component": "Edition history: 2022 update and a later 2025 edition of the Standards for Professional Learning",
+    "url": "https://standards.learningforward.org/history"
+  },
+  {
+    "claim_id": "a1-03",
+    "code": "A1.1",
+    "cite_as": "Kirkpatrick Partners. The Kirkpatrick Model.",
+    "claimed_component": "Level 2: Learning, participants acquiring intended knowledge, skills, attitude, confidence and commitment",
+    "url": "https://www.kirkpatrickpartners.com/wp-content/uploads/2024/04/the-kirkpatrick-model-1.pdf"
+  },
+  {
+    "claim_id": "a1-04",
+    "code": "A1.2",
+    "cite_as": "Kirkpatrick Partners. The Kirkpatrick Model.",
+    "claimed_component": "Level 3: Behavior, participants applying what they learned in training on the job",
+    "url": "https://www.kirkpatrickpartners.com/wp-content/uploads/2024/04/the-kirkpatrick-model-1.pdf"
+  },
+  {
+    "claim_id": "a1-05",
+    "code": "A1.2",
+    "cite_as": "SAMHSA (2014). SAMHSA's Concept of Trauma and Guidance for a Trauma-Informed Approach (HHS Pub. No. SMA 14-4884).",
+    "claimed_component": "Trauma-informed approach: integrating knowledge about trauma into policies, procedures and practices",
+    "url": "https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA%5FTrauma.pdf"
+  },
+  {
+    "claim_id": "a1-06",
+    "code": "A1.3",
+    "cite_as": "U.S. Bureau of Labor Statistics. Job Openings and Labor Turnover Survey (JOLTS): Data Definitions.",
+    "claimed_component": "Job openings (positions open, not filled) and hires (additions to the payroll)",
+    "url": "https://www.bls.gov/jlt/jltdef.htm"
+  },
+  {
+    "claim_id": "a1-07",
+    "code": "A1.3",
+    "cite_as": "World Health Organization (2019). Burn-out an \"occupational phenomenon\": International Classification of Diseases.",
+    "claimed_component": "ICD-11 burn-out: syndrome from chronic workplace stress, with exhaustion, mental distance from one's job and reduced professional efficacy",
+    "url": "https://www.who.int/news-room/detail/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases"
+  },
+  {
+    "claim_id": "a1-08",
+    "code": "A1.3",
+    "cite_as": "Spinney, S., & Clinton, Y. (2024). Engaging Volunteers: A Comprehensive Literature Review. ICF, prepared for the AmeriCorps Office of Research and Evaluation.",
+    "claimed_component": "Volunteer retention as an outcome of volunteer management practices",
+    "url": "https://americorps.gov/sites/default/files/document/Literature%20Review%20for%20Volunteer%20Management_0.pdf"
+  },
+  {
+    "claim_id": "a2-01",
+    "code": "A2.2",
+    "cite_as": "Lampkin, L. M., Winkler, M. K., Kerlin, J., Hatry, H. P., Natenshon, D., Saul, J., Melkers, J., & Seshadri, A. (2006). Building a Common Outcome Framework to Measure Nonprofit Performance. The Urban Institute and The Center for What Works.",
+    "claimed_component": "Common outcome framework, program-centered outcomes: satisfaction (participant satisfaction with the program, measured across program areas)",
+    "url": "https://www.urban.org/sites/default/files/publication/43036/411404-Building-a-Common-Outcome-Framework-To-Measure-Nonprofit-Performance.PDF"
+  },
+  {
+    "claim_id": "a2-02",
+    "code": "A2.2",
+    "cite_as": "Substance Abuse and Mental Health Services Administration (2023). 2023 SAMHSA Uniform Reporting System (URS) Output Tables (Maine).",
+    "claimed_component": "Consumer Perception of Care (Children/Adolescents), YSS-F family survey: Overall/General Satisfaction with Services (families' satisfaction with services their child received)",
+    "url": "https://www.samhsa.gov/data/sites/default/files/reports/rpt53122/Maine.pdf"
+  },
+  {
+    "claim_id": "a2-03",
+    "code": "A2.4",
+    "cite_as": "Centers for Disease Control and Prevention (2025). Disability Inclusion Strategies.",
+    "claimed_component": "Disability inclusion: practices and policies that identify and remove physical, communication and attitudinal barriers to full participation, the same as people without disabilities; reasonable accommodations",
+    "url": "https://cdc.gov/disability-inclusion/strategies/index.html"
+  },
+  {
+    "claim_id": "a2-04",
+    "code": "A2.4",
+    "cite_as": "Centers for Disease Control and Prevention (2024). Disability Inclusion (About).",
+    "claimed_component": "Disability inclusion: identifying and eliminating barriers to participation of people with disabilities in everyday activities",
+    "url": "https://www.cdc.gov/disability-inclusion/about"
+  },
+  {
+    "claim_id": "a2-05",
+    "code": "A2.4",
+    "cite_as": "U.S. Department of Education. 34 CFR 104.34(b), Nonacademic settings (Section 504 regulations).",
+    "claimed_component": "104.34(b): students with disabilities participate with students without disabilities in nonacademic and extracurricular activities to the maximum extent appropriate",
+    "url": "https://www.law.cornell.edu/cfr/text/34/104.34"
+  },
+  {
+    "claim_id": "a2-06",
+    "code": "A2.4",
+    "cite_as": "U.S. Department of Education. 34 CFR 104.37(a), Nonacademic services (Section 504 regulations).",
+    "claimed_component": "104.37(a)(1)-(2): nonacademic and extracurricular services and activities, including recreational activities and clubs, provided so as to afford students with disabilities an equal opportunity for participation",
+    "url": "https://www.ecfr.gov/current/title-34/subtitle-B/chapter-I/part-104/subpart-D/section-104.37"
+  },
+  {
+    "claim_id": "a2-07",
+    "code": "A2.4",
+    "cite_as": "Elementary and Secondary Education Act as amended by the Every Student Succeeds Act, 20 U.S.C. 6318(f), Accessibility.",
+    "claimed_component": "6318(f): informed participation of parents and family members with limited English proficiency or disabilities, with information in a format and language parents understand",
+    "url": "https://www.govinfo.gov/link/uscode/20/6318"
+  },
+  {
+    "claim_id": "a2-08",
+    "code": "A2.4",
+    "cite_as": "CAST (2024). Universal Design for Learning Guidelines version 3.0.",
+    "claimed_component": "Consideration 4.2: optimize access to accessible materials and assistive and accessible technologies and tools; Consideration 1.1: customize the display of information",
+    "url": "https://udlguidelines.cast.org/"
+  },
+  {
+    "claim_id": "a2-09",
+    "code": "A2.5",
+    "cite_as": "U.S. Department of Education, Office of Elementary and Secondary Education (2021). Nita M. Lowey 21st Century Community Learning Centers (21st CCLC) Overview of the Annual Performance Data: 2019-2020.",
+    "claimed_component": "Annual performance data: number of people served; GPRA definition of regular attendance as attending 30 days or more in the academic year",
+    "url": "https://www.ed.gov/sites/ed/files/2022/11/21st-CCLC-Overview-of-the-Annual-Performance-Data-2019-2020.pdf"
+  },
+  {
+    "claim_id": "a2-10",
+    "code": "A2.5",
+    "cite_as": "Weiss, H. B., Little, P. M. D., & Bouffard, S. M. (2005). More than just being there: Balancing the participation equation. New Directions for Youth Development, 105, 15-31. Jossey-Bass.",
+    "claimed_component": "Participation equation (participation = enrollment + attendance + engagement): enrollment and attendance",
+    "url": "https://eric.ed.gov/?id=EJ790687"
+  },
+  {
+    "claim_id": "a2-11",
+    "code": "A2.5",
+    "cite_as": "Lampkin, L. M., Winkler, M. K., Kerlin, J., Hatry, H. P., Natenshon, D., Saul, J., Melkers, J., & Seshadri, A. (2006). Building a Common Outcome Framework to Measure Nonprofit Performance. The Urban Institute and The Center for What Works.",
+    "claimed_component": "Common outcome framework, program-centered outcomes: reach and participation",
+    "url": "https://www.urban.org/sites/default/files/publication/43036/411404-Building-a-Common-Outcome-Framework-To-Measure-Nonprofit-Performance.PDF"
+  },
+  {
+    "claim_id": "a2-12",
+    "code": "A2.6",
+    "cite_as": "Elementary and Secondary Education Act as amended by the Every Student Succeeds Act, 20 U.S.C. 6318(a)(2) and (c)(1).",
+    "claimed_component": "6318(a)(2): written parent and family engagement policy developed with parents; 6318(c)(1): annual meeting to which all parents of participating children are invited",
+    "url": "https://www.govinfo.gov/link/uscode/20/6318"
+  },
+  {
+    "claim_id": "a2-13",
+    "code": "A2.6",
+    "cite_as": "Mapp, K. L., & Bergman, E. (2019). Dual Capacity-Building Framework for Family-School Partnerships (Version 2).",
+    "claimed_component": "Organizational conditions: systemic, integrated, sustained (organizational systems for family engagement)",
+    "url": "https://www.dualcapacity.org/s/DCBF-VERSION-2-FINAL.pdf"
+  },
+  {
+    "claim_id": "a2-14",
+    "code": "A2.3",
+    "cite_as": "Elementary and Secondary Education Act as amended by the Every Student Succeeds Act, 20 U.S.C. 7119(a)(2).",
+    "claimed_component": "7119(a)(2): building technological capacity and infrastructure, including purchasing devices, equipment and software applications",
+    "url": "https://www.govinfo.gov/link/uscode/20/7119"
+  },
+  {
+    "claim_id": "a3-01",
+    "code": "A3.2",
+    "cite_as": "Reisman, J., Gienapp, A., & Stachowiak, S. (2007). A Guide to Measuring Advocacy and Policy. Organizational Research Services, for the Annie E. Casey Foundation.",
+    "claimed_component": "Outcome category Strengthened alliances: level of coordination, collaboration and mission alignment among community and system partners; increased number of partners and level of collaboration",
+    "url": "https://measureresults.issuelab.org/resources/1347/1347.pdf"
+  },
+  {
+    "claim_id": "a3-02",
+    "code": "A3.2",
+    "cite_as": "Coffman, J. (2009). A User's Guide to Advocacy Evaluation Planning. Harvard Family Research Project.",
+    "claimed_component": "Interim outcome Partnerships or Alliances: mutually beneficial relationships with other organizations; measure 'New or stronger organizational relationships developed'",
+    "url": "https://www.countyhealthrankings.org/sites/default/files/media/document/resources/UserGuideAdvocacyEvaluationPlanning%20(2).pdf"
+  },
+  {
+    "claim_id": "a3-03",
+    "code": "A3.3",
+    "cite_as": "Sampson, R. J., Raudenbush, S. W., & Earls, F. (1997). Neighborhoods and violent crime: A multilevel study of collective efficacy. Science, 277(5328), 918-924.",
+    "claimed_component": "Collective efficacy: social cohesion among neighbors combined with their willingness to intervene on behalf of the common good (abstract)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/9252316/"
+  },
+  {
+    "claim_id": "a3-04",
+    "code": "A3.1",
+    "cite_as": "Reisman, J., Gienapp, A., & Stachowiak, S. (2007). A Guide to Measuring Advocacy and Policy. Organizational Research Services, for the Annie E. Casey Foundation.",
+    "claimed_component": "Improved policies includes school policy (Table A-5 example: new school policy about nutritious options in vending machines)",
+    "url": "https://measureresults.issuelab.org/resources/1347/1347.pdf"
+  },
+  {
+    "claim_id": "a3-05",
+    "code": "A3.3",
+    "cite_as": "Reisman, J., Gienapp, A., & Stachowiak, S. (2007). A Guide to Measuring Advocacy and Policy. Organizational Research Services, for the Annie E. Casey Foundation.",
+    "claimed_component": "Outcome category Changes in impact: ultimate changes in social and physical lives and conditions; improved social and physical conditions (e.g., poverty, health, equality)",
+    "url": "https://measureresults.issuelab.org/resources/1347/1347.pdf"
+  },
+  {
+    "claim_id": "a3-06",
+    "code": "A3",
+    "cite_as": "U.S. Department of Education, Safe Supportive Schools model, as described by youth.gov",
+    "claimed_component": "School climate model with three components: Engagement, Safety, and Environment",
+    "url": "https://youth.gov/youth-topics/components-positive-school-climate"
+  }
+]

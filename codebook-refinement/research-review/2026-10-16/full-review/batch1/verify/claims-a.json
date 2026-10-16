@@ -1,0 +1,121 @@
+[
+ {
+  "claim_id": "y2-01",
+  "code": "Y2.1",
+  "cite_as": "Pekrun, R. (2024). Control-Value Theory: From Achievement Emotion to a General Theory of Human Emotions. Educational Psychology Review, 36, Article 83.",
+  "claimed_component": "Achievement emotions: activity emotions such as enjoyment during learning, supporting Y2.1 enjoying learning and activities",
+  "url": "https://repository.essex.ac.uk/39185/1/Pekrun%20Ed%20Psych%20Rev%202024%20Control-Value%20Theory.pdf"
+ },
+ {
+  "claim_id": "y2-02",
+  "code": "Y2.1",
+  "cite_as": "Pekrun, R. (2024). Control-Value Theory: From Achievement Emotion to a General Theory of Human Emotions. Educational Psychology Review, 36, Article 83.",
+  "claimed_component": "Achievement settings named as school, university and the workplace, supporting achievement emotions outside school",
+  "url": "https://repository.essex.ac.uk/39185/1/Pekrun%20Ed%20Psych%20Rev%202024%20Control-Value%20Theory.pdf"
+ },
+ {
+  "claim_id": "y2-03",
+  "code": "Y2.1",
+  "cite_as": "Pekrun, R. (2024). Control-Value Theory: From Achievement Emotion to a General Theory of Human Emotions. Educational Psychology Review, 36, Article 83.",
+  "claimed_component": "Outcome emotions: pride, supporting Y2.1 pride",
+  "url": "https://repository.essex.ac.uk/39185/1/Pekrun%20Ed%20Psych%20Rev%202024%20Control-Value%20Theory.pdf"
+ },
+ {
+  "claim_id": "y2-04",
+  "code": "Y2.1",
+  "cite_as": "Fredricks, J. A., Blumenfeld, P. C., & Paris, A. H. (2004). School Engagement: Potential of the Concept, State of the Evidence. Review of Educational Research, 74(1), 59-109.",
+  "claimed_component": "Emotional engagement: affective reactions including interest, boredom, happiness, sadness and anxiety, supporting Y2.1 positive emotional experience of learning",
+  "url": "https://www.isbe.net/Documents/engagement-concept.pdf"
+ },
+ {
+  "claim_id": "y2-05",
+  "code": "Y2.2",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Responsible Decision-Making: 'Demonstrating curiosity and open-mindedness', supporting Y2.2 curiosity",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/sites/5/CASEL-Framework-and-Skills.pdf"
+ },
+ {
+  "claim_id": "y2-06",
+  "code": "Y2.2",
+  "cite_as": "OECD (2021). Survey on Social and Emotional Skills (SSES): Houston (United States). OECD.",
+  "claimed_component": "Open-mindedness: Curiosity, defined as interest in ideas and love of learning, understanding and intellectual exploration, supporting Y2.2 curiosity",
+  "url": "https://search.oecd.org/education/ceri/social-emotional-skills-study/sses-houston-report.pdf"
+ },
+ {
+  "claim_id": "y2-07",
+  "code": "Y2.2",
+  "cite_as": "Hidi, S., & Renninger, K. A. (2006). The Four-Phase Model of Interest Development. Educational Psychologist, 41(2), 111-127.",
+  "claimed_component": "Phase 1 triggered situational interest: sparked by environmental or text features and typically externally supported, supporting Y2.2 interest sparked in the moment",
+  "url": "https://sciencecommunication.ut.ee/wp-content/uploads/2018/09/Article-5-The-Four-Phase-Model-of-Interest-Development.pdf"
+ },
+ {
+  "claim_id": "y2-08",
+  "code": "Y2.3",
+  "cite_as": "Hidi, S., & Renninger, K. A. (2006). The Four-Phase Model of Interest Development. Educational Psychologist, 41(2), 111-127.",
+  "claimed_component": "Phases 2-4 maintained situational, emerging individual and well-developed individual interest, including self-generated curiosity questions in phases 3-4, supporting Y2.3 sustained and individual interest",
+  "url": "https://sciencecommunication.ut.ee/wp-content/uploads/2018/09/Article-5-The-Four-Phase-Model-of-Interest-Development.pdf"
+ },
+ {
+  "claim_id": "y2-09",
+  "code": "Y2.4",
+  "cite_as": "Eccles, J. S., & Wigfield, A. (2020). From expectancy-value theory to situated expectancy-value theory: A developmental, social cognitive, and sociocultural perspective on motivation. Contemporary Educational Psychology, 61, 101859.",
+  "claimed_component": "Theory renamed Situated Expectancy-Value Theory (SEVT), supporting Y2.4's expectancy-value citation",
+  "url": "https://acuresearchbank.acu.edu.au/item/8w507/from-expectancy-value-theory-to-situated-expectancy-value-theory-a-developmental-social-cognitive-and-sociocultural-perspective-on-motivation"
+ },
+ {
+  "claim_id": "y2-10",
+  "code": "Y2.4",
+  "cite_as": "Eccles, J. S., & Wigfield, A. (2020). From expectancy-value theory to situated expectancy-value theory: A developmental, social cognitive, and sociocultural perspective on motivation. Contemporary Educational Psychology, 61, 101859.",
+  "claimed_component": "Subjective task value: utility value as how well a task fits into an individual's present or future plans, supporting Y2.4 seeing learning as useful for one's goals and plans",
+  "url": "https://msofc.org/wp-content/uploads/2022/08/2020-Situated-Expectancy-Value-Theory.pdf"
+ },
+ {
+  "claim_id": "y2-11",
+  "code": "Y2.5",
+  "cite_as": "OECD. Framework for the Assessment of Creative Thinking in PISA 2021: Third Draft.",
+  "claimed_component": "Creative expression domain, including written expression (expressing imagination in a written format), supporting Y2.5 creative writing as self-expression",
+  "url": "https://teachertoolkit.co.uk/wp-content/uploads/2024/09/PISA-2021-creative-thinking-framework.pdf"
+ },
+ {
+  "claim_id": "y2-12",
+  "code": "Y2.5",
+  "cite_as": "OECD (2021). Survey on Social and Emotional Skills (SSES): Houston (United States). OECD.",
+  "claimed_component": "Open-mindedness: Creativity, defined as generating novel ways to do or think about things, supporting Y2.5 creativity or creative thinking",
+  "url": "https://search.oecd.org/education/ceri/social-emotional-skills-study/sses-houston-report.pdf"
+ },
+ {
+  "claim_id": "y2-13",
+  "code": "Y2.5",
+  "cite_as": "National Coalition for Core Arts Standards (2014). National Core Arts Standards.",
+  "claimed_component": "Artistic process Responding: 'Understanding and evaluating how the arts convey meaning', supporting Y2.5 appreciating and critiquing art",
+  "url": "https://www.nationalartsstandards.org/"
+ },
+ {
+  "claim_id": "y2-14",
+  "code": "Y2.5",
+  "cite_as": "National Coalition for Core Arts Standards (2014). National Core Arts Standards.",
+  "claimed_component": "Artistic process Connecting: relating artistic ideas and work with personal meaning and external context, supporting Y2.5 connecting art to personal meaning",
+  "url": "https://www.nationalartsstandards.org/"
+ },
+ {
+  "claim_id": "y2-15",
+  "code": "Y2.5",
+  "cite_as": "Young Audiences Arts for Learning (2025, February 19). Announcing Review of the National Arts Standards.",
+  "claimed_component": "Announcement that the National Coalition for Arts Standards (NCAS) will launch a review of the National Standards, supporting a currency note on the Y2.5 anchor",
+  "url": "https://www.youngaudiences.org/whyarts/announcing-review-national-arts-standards"
+ },
+ {
+  "claim_id": "y2-16",
+  "code": "Y2.5",
+  "cite_as": "National Coalition for Arts Standards (2026, March). NCAS Standards Process Updates for the Field.",
+  "claimed_component": "Standards review covering five arts disciplines: Dance, Media Arts, Music, Theatre and Visual Arts, supporting the scope of disciplines in the Y2.5 anchor",
+  "url": "https://www.nationalartsstandards.org/sites/default/files/2026-03/NCAS%20Standards%20Process%20Updates%20for%20the%20Field%20-%20Final%202026.pdf"
+ },
+ {
+  "claim_id": "y2-17",
+  "code": "Y2.6",
+  "cite_as": "Health Resources and Services Administration, Maternal and Child Health Bureau. National Survey of Children's Health, 2023-2024 (as reported by the Annie E. Casey Foundation KIDS COUNT Data Center, Extracurricular activities).",
+  "claimed_component": "Indicator: children ages 6 to 17 who participated in organized activities outside of school such as sports teams, lessons, clubs or organizations, supporting Y2.6 taking part in activities outside the program",
+  "url": "https://datacenter.aecf.org/data/tables/11513-extracurricular-activities"
+ }
+]

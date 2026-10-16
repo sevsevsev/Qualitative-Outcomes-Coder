@@ -1,0 +1,72 @@
+[
+  {
+    "claim_id": "y4a-01",
+    "code": "Y4.6",
+    "cite_as": "National Governors Association Center for Best Practices & Council of Chief State School Officers (2010). Common Core State Standards for English Language Arts: College and Career Readiness Anchor Standards for Speaking and Listening.",
+    "claimed_component": "Presentation of Knowledge and Ideas, CCRA.SL.4: presenting information, findings and supporting evidence appropriate to task, purpose and audience, supporting Y4.6 presentations and speaking to an audience",
+    "url": "https://thecorestandards.org/ELA-Literacy/CCRA/SL/"
+  },
+  {
+    "claim_id": "y4a-02",
+    "code": "Y4.6",
+    "cite_as": "CASEL (2020). CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted? Collaborative for Academic, Social, and Emotional Learning.",
+    "claimed_component": "Relationship Skills competency definition: 'the capacities to communicate clearly, listen actively', supporting Y4.6 expressing oneself clearly and listening actively",
+    "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+  },
+  {
+    "claim_id": "y4a-03",
+    "code": "Y4.5",
+    "cite_as": "Learning for Justice, Southern Poverty Law Center (2022). Social Justice Standards: The Learning for Justice Anti-Bias Framework, Second Edition.",
+    "claimed_component": "Diversity anchor standard 6: 'express comfort with people who are both similar to and different from them and engage respectfully with all people', supporting Y4.5 respecting people of different backgrounds and identities",
+    "url": "https://www.learningforjustice.org/sites/default/files/2022-09/LFJ-Social-Justice-Standards-September-2022-09292022.pdf"
+  },
+  {
+    "claim_id": "y4a-04",
+    "code": "Y4.5",
+    "cite_as": "CASEL (2020). CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted? Collaborative for Academic, Social, and Emotional Learning.",
+    "claimed_component": "Social Awareness competency definition: 'understand the perspectives of and empathize with others, including those from diverse backgrounds, cultures, & contexts', supporting Y4.5 respect for people of different backgrounds within the Social awareness category",
+    "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+  },
+  {
+    "claim_id": "y4a-05",
+    "code": "Y4.4",
+    "cite_as": "CASEL (2020). CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted? Collaborative for Academic, Social, and Emotional Learning.",
+    "claimed_component": "Social Awareness: 'Understanding and expressing gratitude', supporting Y4.4 expressing gratitude",
+    "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+  },
+  {
+    "claim_id": "y4a-06",
+    "code": "Y4.4",
+    "cite_as": "CASEL (2020). CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted? Collaborative for Academic, Social, and Emotional Learning.",
+    "claimed_component": "Social Awareness: 'Showing concern for the feelings of others'; 'Recognizing situational demands and opportunities', supporting Y4.4 caring about others' feelings and reading expectations in different settings",
+    "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+  },
+  {
+    "claim_id": "y4a-07",
+    "code": "Y4.1",
+    "cite_as": "CASEL (2020). CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted? Collaborative for Academic, Social, and Emotional Learning.",
+    "claimed_component": "Self-Awareness: 'Linking feelings, values, and thoughts', supporting Y4.1 awareness of one's own emotions and how they connect to thoughts and reactions",
+    "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+  },
+  {
+    "claim_id": "y4a-08",
+    "code": "Y4.2",
+    "cite_as": "CASEL (2020). CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted? Collaborative for Academic, Social, and Emotional Learning.",
+    "claimed_component": "Self-Management competency definition: 'manage one's emotions, thoughts, and behaviors effectively in different situations' and 'the capacities to delay gratification, manage stress', supporting Y4.2 managing impulses and self-regulation",
+    "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+  },
+  {
+    "claim_id": "y4a-09",
+    "code": "Y4.3",
+    "cite_as": "CASEL (2020). CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted? Collaborative for Academic, Social, and Emotional Learning.",
+    "claimed_component": "Self-Management competency definition: 'feel motivation & agency to accomplish personal/collective goals', supporting Y4.3 persistence and follow-through toward personal goals",
+    "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+  },
+  {
+    "claim_id": "y4a-10",
+    "code": "Y4",
+    "cite_as": "CASEL (2020). CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted? Collaborative for Academic, Social, and Emotional Learning.",
+    "claimed_component": "Document heading 'CASEL'S SEL FRAMEWORK: What Are the Core Competence Areas and Where Are They Promoted?' and the five competencies Self-awareness, Self-management, Social awareness, Relationship skills, Responsible decision-making, supporting Y4's five categories",
+    "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+  }
+]

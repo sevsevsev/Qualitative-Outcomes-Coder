@@ -1,0 +1,100 @@
+[
+ {
+  "claim_id": "a2-07",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.govinfo.gov/link/uscode/20/6318",
+  "excerpt": "parents and family members who have limited English proficiency, parents and family members with disabilities",
+  "note": "20 U.S.C. 6318(f) 'Accessibility' covers informed participation and requires information 'in a format and, to the extent practicable, in a language' parents understand. The section number and component are correct."
+ },
+ {
+  "claim_id": "a2-08",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://udlguidelines.cast.org/",
+  "excerpt": "Optimize access to accessible materials and assistive and accessible technologies and tools",
+  "note": "The page is UDL Guidelines version 3.0, released July 30, 2024. Consideration 4.2 matches word for word, and 1.1 reads 'Support opportunities to customize the display of information', which matches the claim."
+ },
+ {
+  "claim_id": "a2-09",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.ed.gov/sites/ed/files/2022/11/21st-CCLC-Overview-of-the-Annual-Performance-Data-2019-2020.pdf",
+  "excerpt": "“regular” is defined as attending 30 days or more throughout the academic year.",
+  "note": "Title, office and year (December 2021) are correct, and the report says 'over 1.8 million people were served'. But it defines 'regular' two ways: '30 days or more' in the Methodology and 'more than 30 days' in the footnotes. I did not confirm that the document calls this the GPRA definition."
+ },
+ {
+  "claim_id": "a2-10",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://eric.ed.gov/?id=EJ790687",
+  "excerpt": "The participation equation (participation = enrollment + attendance + engagement)",
+  "note": "ERIC confirms the authors, title, 2005 date, pages 15-31, Jossey-Bass and DOI 10.1002/yd.105. '105' is the issue number (n105), not a volume. The claim draws only on the enrollment and attendance parts of the equation, which is consistent with the abstract."
+ },
+ {
+  "claim_id": "a2-11",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.urban.org/sites/default/files/publication/43036/411404-Building-a-Common-Outcome-Framework-To-Measure-Nonprofit-Performance.PDF",
+  "excerpt": "program-centered outcomes (reach, participation, satisfaction)",
+  "note": "The PDF is dated December 2006 and names no authors on the cover; it lists them as 'Common Measures Project Staff'. Urban Institute's publication page credits the same eight authors and gives the date as January 5, 2007, so the cite is acceptable as is (2006 per the PDF)."
+ },
+ {
+  "claim_id": "a2-12",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.govinfo.gov/link/uscode/20/6318",
+  "excerpt": "convene an annual meeting, at a convenient time, to which all parents of participating children shall be invited",
+  "note": "(c)(1) matches as quoted. (a)(2) is confirmed by a separate fetch: the agency 'shall develop jointly with, agree on with, and distribute to' parents 'a written parent and family engagement policy'."
+ },
+ {
+  "claim_id": "a2-13",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://static1.squarespace.com/static/5d150244a50589000120e07f/t/5d236b7bad195500013c09db/1562602363855/DCBF+VERSION+2+FINAL.pdf",
+  "excerpt": "Systemic: embraced by leadership across the organization",
+  "note": "The dualcapacity.org URL redirects to this Squarespace PDF, which also lists 'Integrated: embedded in all strategies' and 'Sustained: with resources and infrastructure'. The PDF text shows no authors or year; the dualcapacity.org site gives the suggested citation 'Mapp, K. L. & Bergman, E. (2019)'."
+ },
+ {
+  "claim_id": "a2-14",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.govinfo.gov/link/uscode/20/7119",
+  "excerpt": "(B) purchasing devices, equipment, and software applications in order to address readiness shortfalls;",
+  "note": "Section 7119(a)(2) opens 'building technological capacity and infrastructure, which may include—'. The claim leaves out the qualifier 'in order to address readiness shortfalls' and the (A) content-procurement item, but it is otherwise accurate."
+ },
+ {
+  "claim_id": "a3-01",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://measureresults.issuelab.org/resources/1347/1347.pdf",
+  "excerpt": "the level of coordination, collaboration and mission alignment among community and system partners,",
+  "note": "Table 1 lists the example outcomes 'Increased number of partners supporting an issue' and 'Increased level of collaboration (e.g., coordination)'. The guide is by Reisman, Gienapp and Stachowiak of ORS (2007) and was commissioned by the Annie E. Casey Foundation, so the attribution is correct."
+ },
+ {
+  "claim_id": "a3-02",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.countyhealthrankings.org/sites/default/files/media/document/resources/UserGuideAdvocacyEvaluationPlanning%20(2).pdf",
+  "excerpt": "Mutually beneficial relationships with other organizations or individuals who support or participate in an advocacy strategy.",
+  "note": "The measure 'New or stronger organizational relationships developed' appears word for word. This is the full HFRP (Coffman, 2009) document, but it is hosted by County Health Rankings, not by the publisher; the definition also includes 'or individuals'."
+ },
+ {
+  "claim_id": "a3-03",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://pubmed.ncbi.nlm.nih.gov/9252316/",
+  "excerpt": "defined as social cohesion among neighbors combined with their willingness to intervene on behalf of the common good",
+  "note": "PubMed confirms Science 277(5328):918-924, 1997, and the abstract definition. The fetched page text did not show author names, so the authors rest on the citation itself."
+ },
+ {
+  "claim_id": "a3-04",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://measureresults.issuelab.org/resources/1347/1347.pdf",
+  "excerpt": "How did students respond to new school policy about nutritious options in vending machines?",
+  "note": "The vending-machine example is in Table A-5 ('Case study Documentation of Process and Impacts'), but the guide does not tie that row to the Improved Policies category. Improved Policies is defined as stages of policy change 'in the public policy arena', and its Table 1 examples never mention school policy, so 'Improved policies includes school policy' is the codebook's inference."
+ },
+ {
+  "claim_id": "a3-05",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://measureresults.issuelab.org/resources/1347/1347.pdf",
+  "excerpt": "the ultimate changes in social and physical lives and conditions,",
+  "note": "The Table 1 example reads 'Improved social and physical conditions (e.g., poverty, habitat diversity, health, equality, democracy)'. The claim's 'e.g.' list shortens it, but its wording is accurate."
+ },
+ {
+  "claim_id": "a3-06",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://youth.gov/youth-topics/components-positive-school-climate",
+  "excerpt": "This model includes three main components of school environment: Engagement, Safety, and Environment.",
+  "note": "youth.gov is a secondary description of a model it says was 'developed by the U.S. Department of Education', and it cites Harper (2010) for the figure; I did not fetch an ED primary source. The claim's code is 'A3', which is a domain prefix, not an assignable code, so the caller should check which code was meant."
+ }
+]

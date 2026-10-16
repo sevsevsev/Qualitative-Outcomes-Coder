@@ -1,0 +1,100 @@
+[
+ {
+  "claim_id": "a1-01",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://learningforward.org/wp-content/uploads/sites/29/2022/04/Standards-Summary.pdf",
+  "excerpt": "Professional learning results in equitable and excellent outcomes for all students when educators understand and apply",
+  "note": "Learning Forward is the publisher, and the PDF groups 11 standards under three frames, including Implementation and Professional Expertise. Fit to A1.1 is partial: these are standards for designing professional learning, not staff-learning outcomes. The PDF states neither a year (2022 comes only from the URL path and the history page) nor the count 'eleven' (counted from the diagram)."
+ },
+ {
+  "claim_id": "a1-02",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://standards.learningforward.org/history",
+  "excerpt": "Developments in the ensuing years led to a 2025 edition to ensure access, relevance, and availability to all educators.",
+  "note": "Both the 2022 update ('organized the resulting 11 standards into three frames') and a 2025 edition are confirmed. This is edition history, not a construct component, so it gives no fit for A1.1. It also suggests the codebook's 'Learning Forward (2022)' citation may now be superseded by the 2025 edition."
+ },
+ {
+  "claim_id": "a1-03",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.kirkpatrickpartners.com/wp-content/uploads/2024/04/the-kirkpatrick-model-1.pdf",
+  "excerpt": "The degree to which participants acquire the intended knowledge, skills, attitude, confidence and commitment based on their participation in the training",
+  "note": "Level 2: Learning wording matches, and it fits A1.1 (staff gaining knowledge and skills) directly. The document has no publication year (copyright 2010-2021), so cite it undated or as (2021)."
+ },
+ {
+  "claim_id": "a1-04",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.kirkpatrickpartners.com/wp-content/uploads/2024/04/the-kirkpatrick-model-1.pdf",
+  "excerpt": "The degree to which participants apply what they learned during training when they are back on the job",
+  "note": "Level 3: Behavior matches the claimed component and fits A1.2 (adults applying new practices) directly. There is no publication year (copyright 2010-2021)."
+ },
+ {
+  "claim_id": "a1-05",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA%5FTrauma.pdf",
+  "excerpt": "responds by fully integrating knowledge about trauma into policies, procedures, and practices",
+  "note": "Title, HHS Pub. No. (SMA) 14-4884 and year 2014 are confirmed, and the excerpt fits A1.2 (adopting trauma-informed practice) directly. The URL is the full document hosted by HHS/ACF's NCSACW rather than SAMHSA's own site; SAMHSA remains the author."
+ },
+ {
+  "claim_id": "a1-06",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.bls.gov/jlt/jltdef.htm",
+  "excerpt": "JOLTS defines Job Openings as all positions that are open (not filled) on the last business day of the month.",
+  "note": "Both definitions are verbatim on the page, including 'JOLTS defines Hires as all additions to the payroll during the month.' Fit to A1.3 (staff retention and turnover) is only partial: openings and hires measure vacancy and hiring, not retention or turnover. JOLTS separations/quits are the turnover measures."
+ },
+ {
+  "claim_id": "a1-07",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.who.int/news-room/detail/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases",
+  "excerpt": "Burn-out is a syndrome conceptualized as resulting from chronic workplace stress that has not been successfully managed.",
+  "note": "WHO is the publisher, and the title and date (28 May 2019) match. The three dimensions (exhaustion, mental distance from one's job, reduced professional efficacy) are verbatim. This fits A1.3, which explicitly includes burnout, directly."
+ },
+ {
+  "claim_id": "a1-08",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://americorps.gov/sites/default/files/document/Literature%20Review%20for%20Volunteer%20Management_0.pdf",
+  "excerpt": "positively associated with retention and other positive volunteer outcomes",
+  "note": "Title, authors (Spinney & Clinton), ICF, 2024 and 'prepared for AmeriCorps ORE' are all confirmed. Fit is partial: the source is a review finding about volunteer retention (many studies used proxies such as intent to remain), while A1.3 is defined as staff retention."
+ },
+ {
+  "claim_id": "a2-01",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.urban.org/sites/default/files/publication/43036/411404-Building-a-Common-Outcome-Framework-To-Measure-Nonprofit-Performance.PDF",
+  "excerpt": "It includes program-centered outcomes (reach, participation, satisfaction);",
+  "note": "Satisfaction is a program-centered outcome, and the text says satisfaction indicators 'tend to be similar across program areas'. The fetched text did not include the indicator box, so 'participant satisfaction with the program' is not confirmed verbatim, and families are not covered (A2.2 includes family satisfaction). The eight named people appear as 'Common Measures Project Staff', not cover authors. A safer cite is 'The Urban Institute & The Center for What Works (2006)', unless Urban's catalog page confirms the author list."
+ },
+ {
+  "claim_id": "a2-02",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.samhsa.gov/data/sites/default/files/reports/rpt53122/Maine.pdf",
+  "excerpt": "OUTCOMES DOMAIN: Consumer Survey Results, FY 2023 Reporting positively about General Satisfaction with Services",
+  "note": "The Maine 2023 URS Output Tables exist. They include 'Consumer Perception of Care: (Children/Adolescents)', a row 'Overall Satisfaction with Care', and YSS-F use. The document does not say YSS-F is completed by families, and the measure is satisfaction with public mental-health services in one state's report, so fit to A2.2 (satisfaction with a youth program) is partial."
+ },
+ {
+  "claim_id": "a2-03",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://cdc.gov/disability-inclusion/strategies/index.html",
+  "excerpt": "identify and remove barriers, such as physical, communication, and attitudinal, that hamper individuals' ability",
+  "note": "The page also says 'the same as people without disabilities' and has a 'Reasonable accommodations' section defining accommodations. Its last-reviewed date is April 3, 2025, matching the cite. This fits A2.4's disability barrier-removal and accommodations directly; it does not cover A2.4's language-access part."
+ },
+ {
+  "claim_id": "a2-04",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.cdc.gov/disability-inclusion/about",
+  "excerpt": "identifying and eliminating barriers to their participation",
+  "note": "The claim joins two passages. 'Everyday activities' is in the definition ('including people with disabilities in everyday activities...'), but the barriers phrase is in the health-promotion section, not the definition. The page was first published Dec 17, 2024 and last reviewed Apr 3, 2025; (2024) is defensible, but (2025) matches the current version."
+ },
+ {
+  "claim_id": "a2-05",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.law.cornell.edu/cfr/text/34/104.34",
+  "excerpt": "shall ensure that handicapped persons participate with nonhandicapped persons",
+  "note": "104.34(b) does say this, 'to the maximum extent appropriate to the needs of the handicapped person in question', using 'handicapped persons' rather than 'students with disabilities'. It is a legal duty on recipients' education programs about integrated settings, not barrier removal or accommodations, so fit to A2.4 is partial. Cornell LII is a reproduction; eCFR (ecfr.gov, 34 CFR 104.34) is the preferred URL."
+ },
+ {
+  "claim_id": "a2-06",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.ecfr.gov/current/title-34/subtitle-B/chapter-I/part-104/subpart-D/section-104.37",
+  "excerpt": "in such manner as is necessary to afford handicapped students an equal opportunity for participation",
+  "note": "104.37(a)(1)-(2) match: the list includes 'recreational activities, special interest groups or clubs', and the wording is 'handicapped students'. It is a legal duty for Section 504 recipients' education programs (Subpart D), not an outcome framework, and it does not name accommodations or barrier removal, so fit to A2.4 is partial."
+ }
+]

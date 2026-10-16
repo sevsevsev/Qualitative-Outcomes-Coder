@@ -1,0 +1,128 @@
+[
+ {
+  "claim_id": "y8b-10",
+  "code": "Y8.11",
+  "cite_as": "Miech, R. A., Patrick, M. E., O'Malley, P. M., Jager, J. O., & Jang, J. B. (2026). Monitoring the Future national survey results on drug use, 1975-2025: Overview and detailed results for secondary school students. Institute for Social Research, University of Michigan.",
+  "claimed_component": "Perceived risk and disapproval of substance use among secondary school students",
+  "url": "https://monitoringthefuture.org/wp-content/uploads/2025/12/mtfvol12026.pdf"
+ },
+ {
+  "claim_id": "y8b-11",
+  "code": "Y8.12",
+  "cite_as": "Centers for Disease Control and Prevention (2025). 2025 Youth Risk Behavior Survey, National High School Questionnaire.",
+  "claimed_component": "Q16 physical fight; Q11-Q12 weapon and gun carrying; Q26-Q27 bullied on school property and electronically bullied; Q21-Q22 sexual and physical dating violence",
+  "url": "https://www.cdc.gov/yrbs/media/pdf/2025/2025-YRBS-national-HS-questionnaire508.pdf"
+ },
+ {
+  "claim_id": "y8b-12",
+  "code": "Y8.12",
+  "cite_as": "Centers for Disease Control and Prevention. About the Youth Risk Behavior Surveillance System (YRBSS).",
+  "claimed_component": "Student experiences: exposure to community violence",
+  "url": "https://www.cdc.gov/yrbs/about/index.html"
+ },
+ {
+  "claim_id": "y8b-13",
+  "code": "Y8.12",
+  "cite_as": "Centers for Disease Control and Prevention (2024). About Youth Violence.",
+  "claimed_component": "Definition of youth violence: intentional use of physical force or power to threaten or harm others, including fighting, bullying, threats with weapons and gang-related violence",
+  "url": "https://www.cdc.gov/youth-violence/about/index.html"
+ },
+ {
+  "claim_id": "y8b-14",
+  "code": "Y8.13",
+  "cite_as": "Harris, P. W., Lockwood, B., & Mengers, L. (2009, November). A CJCA White Paper: Defining and Measuring Recidivism. Council of Juvenile Correctional Administrators. NCJ 237765.",
+  "claimed_component": "Definition and measurement of juvenile recidivism (re-arrest, re-adjudication, recommitment)",
+  "url": "https://www.ojp.gov/ncjrs/virtual-library/abstracts/cjca-white-paper-defining-and-measuring-recidivism"
+ },
+ {
+  "claim_id": "y8b-15",
+  "code": "Y8.13",
+  "cite_as": "Council of Juvenile Justice Administrators. About CJJA.",
+  "claimed_component": "CJJA was originally incorporated as the Council of Juvenile Correctional Administrators (organization rename)",
+  "url": "https://cjja.net/about/"
+ },
+ {
+  "claim_id": "y8b-16",
+  "code": "Y8.13",
+  "cite_as": "Office of Juvenile Justice and Delinquency Prevention (2017). Model Programs Guide Literature Review: Diversion from Formal Juvenile Court Processing. NCJ 249701.",
+  "claimed_component": "Diversion of youth from formal juvenile court processing",
+  "url": "https://ojjdp.ojp.gov/library/publications/model-programs-guide-literature-review-diversion"
+ },
+ {
+  "claim_id": "y8b-17",
+  "code": "Y8.13",
+  "cite_as": "Office of Juvenile Justice and Delinquency Prevention (2018). Juvenile Reentry Programs (Model Programs Guide I-Guide, archived).",
+  "claimed_component": "Juvenile reentry: services preparing youth in out-of-home placement for return to the community, aimed at reducing recidivism",
+  "url": "https://ojjdp.ojp.gov/sites/ojjdp/files/mpg-iguides/topics/juvenile-reentry-programs/index.html"
+ },
+ {
+  "claim_id": "f1-01",
+  "code": "F1.4",
+  "cite_as": "Center for the Study of Social Policy (2015). Core Meanings of the Strengthening Families Protective Factors.",
+  "claimed_component": "Parental Resilience: managing stress and functioning well; managing anger, anxiety, sadness and other negative feelings; having self-confidence; seeking help for self",
+  "url": "https://cssp.org/wp-content/uploads/2025/03/Core-Meanings-of-the-SF-Protective-Factors-2015.pdf"
+ },
+ {
+  "claim_id": "f1-02",
+  "code": "F1.1",
+  "cite_as": "Center for the Study of Social Policy (2015). Core Meanings of the Strengthening Families Protective Factors.",
+  "claimed_component": "Knowledge of Parenting and Child Development: understanding child development and parenting strategies; positive discipline techniques; appropriate developmental expectations; nurturing, responsive parenting",
+  "url": "https://cssp.org/wp-content/uploads/2025/03/Core-Meanings-of-the-SF-Protective-Factors-2015.pdf"
+ },
+ {
+  "claim_id": "f1-03",
+  "code": "F1.2",
+  "cite_as": "Epstein, J. L., et al. (2019). Epstein's Six Types of Involvement, in School, Family, and Community Partnerships: Your Handbook for Action (4th ed.). Corwin.",
+  "claimed_component": "Type 4 Learning at Home: involving families with their children in learning at home, including homework",
+  "url": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf"
+ },
+ {
+  "claim_id": "f1-04",
+  "code": "F1.8",
+  "cite_as": "Epstein, J. L., et al. (2019). Epstein's Six Types of Involvement, in School, Family, and Community Partnerships: Your Handbook for Action (4th ed.). Corwin.",
+  "claimed_component": "Type 2 Communicating: school-to-home and home-to-school communications about school programs and student progress",
+  "url": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf"
+ },
+ {
+  "claim_id": "f1-05",
+  "code": "F1.9",
+  "cite_as": "Epstein, J. L., et al. (2019). Epstein's Six Types of Involvement, in School, Family, and Community Partnerships: Your Handbook for Action (4th ed.). Corwin.",
+  "claimed_component": "Type 3 Volunteering (families as volunteers and audiences) and Type 5 Decision Making (families as participants in school decisions, governance and advocacy)",
+  "url": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf"
+ },
+ {
+  "claim_id": "f1-06",
+  "code": "F1.6",
+  "cite_as": "Workforce Innovation and Opportunity Act, Title II (Adult Education and Family Literacy Act), 29 U.S.C. 3272",
+  "claimed_component": "29 U.S.C. 3272(1) adult education: instruction below the postsecondary level to read, write and speak English, attain a secondary school diploma or equivalent, and obtain employment",
+  "url": "https://www.law.cornell.edu/uscode/text/29/3272"
+ },
+ {
+  "claim_id": "f1-07",
+  "code": "F1.6",
+  "cite_as": "Workforce Innovation and Opportunity Act, Title II (Adult Education and Family Literacy Act), 29 U.S.C. 3272",
+  "claimed_component": "29 U.S.C. 3272(6) English language acquisition program: competence in reading, writing, speaking and comprehension of English for English language learners",
+  "url": "https://www.law.cornell.edu/uscode/text/29/3272"
+ },
+ {
+  "claim_id": "f1-08",
+  "code": "F1.6",
+  "cite_as": "Ascend at the Aspen Institute. 2Gen Approach building blocks.",
+  "claimed_component": "Economic Assets building block: financial education and asset building",
+  "url": "https://ascend.aspeninstitute.org/2gen-approach/"
+ },
+ {
+  "claim_id": "f1-09",
+  "code": "F1.6",
+  "cite_as": "Digital Equity Act of 2021, 47 U.S.C. 1721",
+  "claimed_component": "47 U.S.C. 1721(8) covered populations, including aging individuals (1721(3))",
+  "url": "https://www.law.cornell.edu/uscode/text/47/1721"
+ },
+ {
+  "claim_id": "f1-10",
+  "code": "F1.2",
+  "cite_as": "Workforce Innovation and Opportunity Act, Title II (Adult Education and Family Literacy Act), 29 U.S.C. 3272",
+  "claimed_component": "29 U.S.C. 3272(9)(B)-(C) family literacy activities: interactive literacy activities between parents or family members and their children; training parents to be the primary teacher for their children",
+  "url": "https://www.law.cornell.edu/uscode/text/29/3272"
+ }
+]

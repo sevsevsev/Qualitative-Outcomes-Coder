@@ -1,0 +1,100 @@
+[
+  {
+    "claim_id": "f1-01",
+    "code": "F1.4",
+    "cite_as": "Center for the Study of Social Policy (2015). Core Meanings of the Strengthening Families Protective Factors.",
+    "claimed_component": "Parental Resilience: managing stress and functioning well; managing anger, anxiety, sadness and other negative feelings; having self-confidence; seeking help for self",
+    "url": "https://cssp.org/wp-content/uploads/2025/03/Core-Meanings-of-the-SF-Protective-Factors-2015.pdf"
+  },
+  {
+    "claim_id": "f1-02",
+    "code": "F1.1",
+    "cite_as": "Center for the Study of Social Policy (2015). Core Meanings of the Strengthening Families Protective Factors.",
+    "claimed_component": "Knowledge of Parenting and Child Development: understanding child development and parenting strategies; positive discipline techniques; appropriate developmental expectations; nurturing, responsive parenting",
+    "url": "https://cssp.org/wp-content/uploads/2025/03/Core-Meanings-of-the-SF-Protective-Factors-2015.pdf"
+  },
+  {
+    "claim_id": "f1-03",
+    "code": "F1.2",
+    "cite_as": "Epstein, J. L., et al. (2019). Epstein's Six Types of Involvement, in School, Family, and Community Partnerships: Your Handbook for Action (4th ed.). Corwin.",
+    "claimed_component": "Type 4 Learning at Home: involving families with their children in learning at home, including homework",
+    "url": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf"
+  },
+  {
+    "claim_id": "f1-04",
+    "code": "F1.8",
+    "cite_as": "Epstein, J. L., et al. (2019). Epstein's Six Types of Involvement, in School, Family, and Community Partnerships: Your Handbook for Action (4th ed.). Corwin.",
+    "claimed_component": "Type 2 Communicating: school-to-home and home-to-school communications about school programs and student progress",
+    "url": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf"
+  },
+  {
+    "claim_id": "f1-05",
+    "code": "F1.9",
+    "cite_as": "Epstein, J. L., et al. (2019). Epstein's Six Types of Involvement, in School, Family, and Community Partnerships: Your Handbook for Action (4th ed.). Corwin.",
+    "claimed_component": "Type 3 Volunteering (families as volunteers and audiences) and Type 5 Decision Making (families as participants in school decisions, governance and advocacy)",
+    "url": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf"
+  },
+  {
+    "claim_id": "f1-06",
+    "code": "F1.6",
+    "cite_as": "Workforce Innovation and Opportunity Act, Title II (Adult Education and Family Literacy Act), 29 U.S.C. 3272",
+    "claimed_component": "29 U.S.C. 3272(1) adult education: instruction below the postsecondary level to read, write and speak English, attain a secondary school diploma or equivalent, and obtain employment",
+    "url": "https://www.law.cornell.edu/uscode/text/29/3272"
+  },
+  {
+    "claim_id": "f1-07",
+    "code": "F1.6",
+    "cite_as": "Workforce Innovation and Opportunity Act, Title II (Adult Education and Family Literacy Act), 29 U.S.C. 3272",
+    "claimed_component": "29 U.S.C. 3272(6) English language acquisition program: competence in reading, writing, speaking and comprehension of English for English language learners",
+    "url": "https://www.law.cornell.edu/uscode/text/29/3272"
+  },
+  {
+    "claim_id": "f1-08",
+    "code": "F1.6",
+    "cite_as": "Ascend at the Aspen Institute. 2Gen Approach building blocks.",
+    "claimed_component": "Economic Assets building block: financial education and asset building",
+    "url": "https://ascend.aspeninstitute.org/2gen-approach/"
+  },
+  {
+    "claim_id": "f1-09",
+    "code": "F1.6",
+    "cite_as": "Digital Equity Act of 2021, 47 U.S.C. 1721",
+    "claimed_component": "47 U.S.C. 1721(8) covered populations, including aging individuals (1721(3))",
+    "url": "https://www.law.cornell.edu/uscode/text/47/1721"
+  },
+  {
+    "claim_id": "f1-10",
+    "code": "F1.2",
+    "cite_as": "Workforce Innovation and Opportunity Act, Title II (Adult Education and Family Literacy Act), 29 U.S.C. 3272",
+    "claimed_component": "29 U.S.C. 3272(9)(B)-(C) family literacy activities: interactive literacy activities between parents or family members and their children; training parents to be the primary teacher for their children",
+    "url": "https://www.law.cornell.edu/uscode/text/29/3272"
+  },
+  {
+    "claim_id": "f1-11",
+    "code": "F1.3",
+    "cite_as": "U.S. Department of Agriculture, Food and Nutrition Service. SNAP-Ed Evaluation Framework, MT1 Nutrition-Related Behavioral Changes.",
+    "claimed_component": "MT1: changes in individual and family healthy eating behaviors, including fruit and vegetable consumption",
+    "url": "https://snaped.fns.usda.gov/framework/components/mt1"
+  },
+  {
+    "claim_id": "f1-12",
+    "code": "F1.8",
+    "cite_as": "Mapp, K. L., & Bergman, E. (2019). Dual Capacity-Building Framework for Family-School Partnerships (Version 2).",
+    "claimed_component": "Process conditions: Relational, built on mutual trust",
+    "url": "https://aps2016.apsva.us/wp-content/uploads/2021/11/DCBFVERSION2FINAL.pdf"
+  },
+  {
+    "claim_id": "f1-13",
+    "code": "F1.3",
+    "cite_as": "Food and Nutrition Act of 2008, sec. 28, 7 U.S.C. 2036a(b): Nutrition education and obesity prevention grant program",
+    "claimed_component": "7 U.S.C. 2036a(b): programs that promote healthy food choices and physical activity consistent with the Dietary Guidelines for Americans",
+    "url": "https://www.law.cornell.edu/uscode/text/7/2036a"
+  },
+  {
+    "claim_id": "f1-14",
+    "code": "F1.2",
+    "cite_as": "Center for the Study of Social Policy (2015). Core Meanings of the Strengthening Families Protective Factors.",
+    "claimed_component": "Knowledge of Parenting and Child Development: the importance of using predictable routines",
+    "url": "https://cssp.org/wp-content/uploads/2025/03/Core-Meanings-of-the-SF-Protective-Factors-2015.pdf"
+  }
+]

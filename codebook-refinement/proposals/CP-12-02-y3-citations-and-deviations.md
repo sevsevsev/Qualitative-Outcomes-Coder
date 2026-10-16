@@ -1,14 +1,40 @@
 # CP-12-02: Y3 citation fixes and deviation log (cross-setting belonging, youth in care, reunification, FD-P01 narrowed)
 
+**In plain words.** This proposal corrects the research references behind the Belonging and
+Relationships codes; nothing the coding model reads changes. Belonging and Mattering (Y3.1) gains
+sources for belonging, mattering and loneliness outside school (the Surgeon General's 2023 advisory on
+social connection, the Search Institute's Developmental Assets, and a National Academies report on
+community programs), so its existing entry in the deviations log shrinks to a single element: feeling
+"safe", which still rests only on a school-based source and which test rows S163 and S131 depend on.
+Supportive Adult Relationships (Y3.2) gains the federal foster-care transition law (the Chafee
+program) and the national survey of youth leaving foster care, which cover "permanent adult
+connections for youth in care" without any new deviation. Family Relationships (Y3.4) gains two
+federal laws that name family reunification; because they set duties for agencies rather than
+outcomes for young people, they are recorded as partial support with no deviation, as you decided.
+All of this lands now, with no scoring run.
+
 | Field | Value |
 |---|---|
-| Type | CITATION_FIX, with the FD-P01 change the citation findings require (S4.1; R-08 requires the FD-P01 change and any Y3.4 decision in one CP). Splits into citations and deviation log if Severin prefers the pilot's two-CP form. |
+| Type | CITATION_FIX, with the FD-P01 change the citation findings require (S4.1; R-08 requires the FD-P01 change and the Y3.4 decision in one CP). One CP. |
 | Codes touched | Registry: search-40-assets (Y3.1, Y3.2), acf-nytd (Y3.2), search-developmental-relationships (Y3.5), plus 5 new sources (Y3.1 ×2, Y3.2, Y3.4 ×2). `basis` notes: Y3.1, Y3.2, Y3.4, Y3.5. DEVIATIONS.md: FD-P01 (narrowed), a dated no-entry note, drift table. `docs/codebook/research-basis.md` Y3 table and paragraph. **No definition, include, exclude, useInstead, example, source line, `frameworkBasis`, `fidelity` or rulesText change.** |
 | Version bump | PATCH, relative to the version current when applied (3.1.4 today, so 3.1.5; 3.2.1 if PR #62's 3.2.0 merges first). Bumped at merge. |
 | Requirement served | R1 frameworks; R4 drift |
-| Status | draft (batch 1 research review, 2026-10-16); not applied |
+| Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
 | Enum cost | +0 (160 → 160) |
-| Framework deviation | **changed FD-P01** (Y3.1): narrowed from "widened from school to any program or community" to the **"safe" element** only; case sector-widening, still open and counted (Y3 stays 1 of 5). Y3.2 "youth in care": none (decision C; closed by Chafee/NYTD). Y3.4 reunification: none, under decision B1-3 as recommended. If Severin takes B1-3's alternative, **new FD-P44 (provisional id)**, counted, which puts Y3 at 2 of 5 (40%, over the line; R-08). |
+| Framework deviation | **changed FD-P01** (Y3.1): narrowed from "widened from school to any program or community" to the **"safe" element** only; case sector-widening, still open and counted (decision Y3-1; Y3 stays 1 of 5, 20%). Y3.2 "youth in care": none (G1; the population is covered by Chafee/NYTD). Y3.4 reunification: none (G4: SUPPORTED statutory duties are partial-fit support). |
+| Reaches the prompt | No. Y3.2's source line is in CP-12-16 and the Chafee/NYTD "secondary" clause in Y3's `frameworkBasis` is in CP-12-29 (G2), both at the gate. |
+
+## When each part lands
+
+| Part | Reaches the prompt? | When |
+|---|---|---|
+| Registry: 5 new sources, 9 supports, notes | no | Now (G10), no eval |
+| `basis` Y3.1, Y3.2, Y3.4, Y3.5 | no | Now, no eval |
+| DEVIATIONS.md: FD-P01 narrowed, dated Y3 note, drift row text | no | Now, no eval |
+| `docs/codebook/research-basis.md` Y3 table and paragraph | no | Now, no eval |
+| Y3.2 source line; Y3 `frameworkBasis` secondary | yes | Not in this CP: CP-12-16 and CP-12-29, at the one gate after PRs #62 and #66 |
+
+Every part of this CP is of kind (a) and lands now.
 
 ## Problem
 
@@ -22,8 +48,8 @@ found:
    accepted at the program") and **S131** ("feeling safe and affirmed in program spaces") depend on
    that word. So FD-P01 cannot close, but its stated departure is now too broad.
 2. **Y3.2's include names "permanent adult connections for youth in care"**, a population neither
-   CDC nor Developmental Relationships covers. Decision C (age and population rule) applies here,
-   the one place in the batch it bites. Chafee (a)(2) and NYTD verify it (y3-05, y3-06); **S102**
+   CDC nor Developmental Relationships covers. G1 (age and sector rule) applies here, the one place
+   in the batch it bites. Chafee (a)(2) and NYTD verify it (y3-05, y3-06); **S102**
    rests on it.
 3. **Y3.4 "reunification" goes past Developmental Assets 1-2.** Two statutes name reunification and
    safe return (y3-09, y3-10, SUPPORTED), but they are agency or grantee duties, not youth outcomes
@@ -41,7 +67,7 @@ found:
 |---|---|---|
 | Y3.1 | CDC (2009) School Connectedness (verified). | CDC (2009) School Connectedness (verified, partial: school only). Across settings (CP-12-02, all verified, partial): U.S. Surgeon General (2023), social connection advisory, glossary: belonging, loneliness, social isolation (claim y3-04); Search Institute Developmental Assets, Community values youth (mattering; claim y3-02); NRC/IOM (2002), Community Programs to Promote Youth Development, chapter 5, 'Opportunities to Belong' (a program feature; claim y3-03). Feeling safe rests on CDC alone (FD-P01, narrowed). |
 | Y3.2 | Search Institute Developmental Relationships (Express Care; Challenge Growth; Provide Support) (verified); CDC (2009) (verified). | Search Institute Developmental Relationships (Express Care; Challenge Growth; Provide Support) (verified); CDC (2009) (verified); Search Institute Developmental Assets, Other adult relationships (verified; claim y3-07). Youth in care: 42 U.S.C. 677(a)(2), Chafee, meaningful, permanent connections with a caring adult (verified; claim y3-05); ACF NYTD outcome 'positive connections with adults' (verified; claim y3-06). |
-| Y3.4 | Chafee, 42 U.S.C. 677 / ACF NYTD 'positive connections' (verified for adult connections); Butts, Bazemore & Meroe (2010) relationships domain (partial). Hybrid: no source names family reunification as a youth outcome on its own. Re-review 2026-09-26 (STANDARDS S4.9): Search Institute Developmental Assets, Support assets 1-2 (content verified; publication year unconfirmed) and Developmental Relationships with parents (verified). Now Framework; FD-P17 closed. | Search Institute Developmental Assets, Support assets 1-2, family support and positive family communication (verified, direct; publication year unconfirmed) and Developmental Relationships with parents (verified, partial). Reunification: 42 U.S.C. 671(a)(15)(B), reasonable efforts to preserve and reunify families (claim y3-09), and Runaway and Homeless Youth Act, 34 U.S.C. 11212(b)(3), safe return of the youth (claim y3-10) (both verified, partial: agency and grantee duties, not youth outcomes; decision B1-3). FD-P17 closed 2026-09-26. |
+| Y3.4 | Chafee, 42 U.S.C. 677 / ACF NYTD 'positive connections' (verified for adult connections); Butts, Bazemore & Meroe (2010) relationships domain (partial). Hybrid: no source names family reunification as a youth outcome on its own. Re-review 2026-09-26 (STANDARDS S4.9): Search Institute Developmental Assets, Support assets 1-2 (content verified; publication year unconfirmed) and Developmental Relationships with parents (verified). Now Framework; FD-P17 closed. | Search Institute Developmental Assets, Support assets 1-2, family support and positive family communication (verified, direct; publication year unconfirmed) and Developmental Relationships with parents (verified, partial). Reunification: 42 U.S.C. 671(a)(15)(B), reasonable efforts to preserve and reunify families (claim y3-09), and Runaway and Homeless Youth Act, 34 U.S.C. 11212(b)(3), safe return of the youth (claim y3-10) (both verified, partial: agency and grantee duties, not youth outcomes; G4). FD-P17 closed 2026-09-26. |
 | Y3.5 | Mathematica (2022), Education-to-Workforce Indicator Framework, social capital (verified); Developmental Relationships, Expand Possibilities (partial, secondary). | Mathematica (2022), Education-to-Workforce Indicator Framework, social capital (verified); Search Institute Developmental Relationships, Expand Possibilities: Connect, 'Introduce me to people who can help me grow' (verified, direct for introductions; claim y3-11). |
 
 Y3.1's `fidelity` (`adapted`) and `deviation` (`FD-P01`) are unchanged.
@@ -86,14 +112,20 @@ NEW = [
 ]
 NOTES_APPEND = {
     'nrc-iom-2002-community-programs': "Chapter citation corrected by the verifier (claim y3-03): the chapter is 'Chapter 5: The Landscape of Community Programs for Youth'; 'Features of Community Programs for Youth' is a section in it and 'Opportunities to Belong' a subsection. It describes a feature of program settings, not the young person's felt belonging, so the fit is partial. Added by CP-12-02.",
-    'usc-42-671-a15b-reunification': "Agency duty, not a measured youth outcome; recorded as partial (decision B1-3, A3.1 precedent). Clause (ii) adds 'to make it possible for a child to safely return to the child's home' (verifier note). Added by CP-12-02.",
-    'rhya-34usc11212-b3': 'A grantee plan assurance rather than a youth outcome (verifier note), so partial. Added by CP-12-02.',
-    'chafee-42usc677-a2': 'Separate pinpoint entry, in the pattern of the essa-6311-* entries, so chafee-42usc677 (677(a)(1), Y7.7) is untouched. Added by CP-12-02.',
+    'usc-42-671-a15b-reunification': "Agency duty, not a measured youth outcome; recorded as partial with no FD (G4, A3.1 precedent). Clause (ii) adds 'to make it possible for a child to safely return to the child's home' (verifier note). Read on Cornell LII; bibliographic match recorded by the verifier (claim y3-09: citation and component correct). Added by CP-12-02.",
+    'rhya-34usc11212-b3': "A grantee plan assurance rather than a youth outcome (verifier note), so partial with no FD (G4). Read on Cornell LII; bibliographic match recorded by the verifier (claim y3-10: section heading 'Eligibility; plan requirements'). Added by CP-12-02.",
+    'chafee-42usc677-a2': "Separate pinpoint entry, in the pattern of the essa-6311-* entries, so chafee-42usc677 (677(a)(1), Y7.7) is untouched. Read on Cornell LII; bibliographic match recorded by the verifier (claim y3-05: section heading matches). Added by CP-12-02.",
 }
 ```
 
 Each support takes `excerpt` and `verifier_note` from its claim. Effect: +5 sources, +9 supports.
 `codebook_extensions` unchanged.
+
+**Hosts (G8).** The Surgeon General advisory (hhs.gov), NRC/IOM (nationalacademies.org), NYTD
+(acf.gov) and Search Institute pages are the publishers' own copies. The three statute entries were
+read on Cornell LII, a secondary host; each note records the verifier's bibliographic match, as G8
+requires. Moving statute URLs to the official copy (uscode.house.gov or govinfo) is CP-12-28's
+registry-wide sweep, not this CP.
 
 Not used: y3-01 (PARTIAL, and a caring setting, not felt belonging), y3-08 (PARTIAL, role models;
 rejected).
@@ -113,8 +145,8 @@ Fidelity and Case unchanged):
 - **Departs:** narrowed 2026-10-16 (CP-12-02). Belonging, mattering and less isolation outside school now have verified cross-setting sources. What still departs is the **"safe" element**: feeling safe in a program or community as part of connectedness rests only on CDC's school-based construct; none of the cross-setting sources names felt safety.
 - **Evidence:** S163 ("Students will feel safe and accepted at the program.") and S131 ("LGBTQ+ youth will report feeling safe and affirmed in program spaces."), both gold Y3.1 with Y8.10 or Y5.2 as alternate; H063 ("a new community", the 3.0 evidence).
 - **Alternative considered:** close the entry on the new sources (practitioner review; rejected because no verified source names safety); drop "safe" from the definition and route felt safety to Y8.10 (MINOR; would move S163 and S131 against Severin's adjudication).
-- **Decided in:** 3.0 proposal (PR #33); narrowed by CP-12-02 (batch 1 research review, 2026-10-16), pending Severin.
-- **Revisit:** close if a verifier rates a source SUPPORTED for felt safety as part of belonging in a program or community (first candidate: NRC/IOM (2002), "physical and psychological safety"; request V1).
+- **Decided in:** 3.0 proposal (PR #33); narrowed by CP-12-02 (batch 1 research review); Severin, 2026-10-16 (decision Y3-1).
+- **Revisit:** close if a verifier rates a source SUPPORTED for felt safety, as the young person's experience, as part of belonging in a program or community (first candidate: NRC/IOM (2002), "physical and psychological safety"; request V1).
 ```
 
 **Dated note** (a new section after "Anchor re-review, 2026-09-26", or after CP-11-02's "Y1
@@ -126,8 +158,8 @@ review" section if that has merged). Bullets use "**Label.**", not "**Label:**",
 
 Batch 1 of the research review checked Y3's codes against their sources. FD-P01 was narrowed to the "safe" element. Two departures were checked and need no entry:
 
-- **Y3.2, youth in care.** Closed by sources, not logged. 42 U.S.C. 677(a)(2) (Chafee), "to help children who have experienced foster care at age 14 or older achieve meaningful, permanent connections" (claim y3-05), and the NYTD outcome "positive connections with adults" (claim y3-06), both SUPPORTED, cover the population the include names (decision C).
-- **Y3.4, reunification.** No entry (decision B1-3). 42 U.S.C. 671(a)(15)(B) and 34 U.S.C. 11212(b)(3) (claims y3-09, y3-10, both SUPPORTED) name reunification and safe return as agency and grantee duties. They are recorded as partial-fit support, as Coffman (2009) and Reisman et al. (2007) were for A3.1. If Severin instead counts the element as codebook-defined, FD-P01 must close first, or Y3 passes a third (R-08).
+- **Y3.2, youth in care.** Closed by sources, not logged. 42 U.S.C. 677(a)(2) (Chafee), "to help children who have experienced foster care at age 14 or older achieve meaningful, permanent connections" (claim y3-05), and the NYTD outcome "positive connections with adults" (claim y3-06), both SUPPORTED, cover the population the include names (G1).
+- **Y3.4, reunification.** No entry (G4, decided 2026-10-16). 42 U.S.C. 671(a)(15)(B) and 34 U.S.C. 11212(b)(3) (claims y3-09, y3-10, both SUPPORTED) name reunification and safe return as agency and grantee duties. They are recorded as partial-fit support, as Coffman (2009) and Reisman et al. (2007) were for A3.1.
 ```
 
 **Drift table.** Y3 row text only (count unchanged):
@@ -139,26 +171,10 @@ Batch 1 of the research review checked Y3's codes against their sources. FD-P01 
 
 Intro sentence: append ", and for CP-12-02 (2026-10-16), which narrowed FD-P01".
 
-**Alternative under B1-3 (not recommended):**
-
-```markdown
-### FD-P44 · Y3.4
-
-- **Status:** open
-- **Fidelity:** adapted
-- **Case:** codebook-defined
-- **Anchor:** Search Institute Developmental Assets, Support assets 1-2 (verified, direct).
-- **Departs:** "reunification" (definition and include). The statutes that name it (claims y3-09, y3-10) set agency duties, not youth outcomes.
-- **Evidence:** S024 (gold Y3.4).
-- **Alternative considered:** partial-fit support with no entry (B1-3, recommended).
-- **Decided in:** CP-12-02 (batch 1 research review, 2026-10-16), pending Severin.
-- **Revisit:** if a verified source names family reunification as a youth outcome.
-```
-
-With it, Y3.4 becomes `adapted` / `FD-P44` and the Y3 row reads 2 of 5 (40%, over a third), which
-triggers an anchor re-review (S4.9) unless FD-P01 has closed.
-
 ### `docs/codebook/research-basis.md`, Y3 section (docs only)
+
+CP-12-30 also drops Chafee/Butts from research-basis.md. This CP lands first, so that part of
+CP-12-30 is already done for Y3 and CP-12-30 re-applies only its other parts.
 
 Table, before (two rows):
 
@@ -192,7 +208,8 @@ own, with convergent support from the Developmental Assets and CDC."
 
 ### Domain `hint`, `rulesText`, source lines, `frameworkBasis`, `CONFUSIONS.md`
 
-Unchanged. Y3.2's source line and Y3's `frameworkBasis` are in CP-12-16.
+Unchanged. Y3.2's source line is in CP-12-16; the Chafee/NYTD "secondary" clause in Y3's
+`frameworkBasis` is in CP-12-29 (G2). Both wait for the shared gate.
 
 ## Sources
 
@@ -225,36 +242,45 @@ url: https://www.nationalacademies.org/read/10022/chapter/7
 ```
 
 Outcomes: if SUPPORTED and framed as the youth's experience, a follow-up CP closes FD-P01 (Y3 goes
-to 0 of 5). If SUPPORTED only as a setting feature, record it as partial; FD-P01 stays open and
-Severin decides whether a setting feature can close it (the B1-3 reasoning). If PARTIAL or
-unsupported, nothing changes. This CP does not wait for V1.
+to 0 of 5). Any other result is recorded, at most, as a partial row and FD-P01 stays open: a
+setting's safety does not contain the young person's felt safety, so the source is not broader than
+the element (G3). This CP does not wait for V1.
 
-## Decisions for Severin (this CP depends on them)
+## Decisions applied (settled 2026-10-16)
 
-- **B1-3 (Y3.4 reunification).** Recommended: partial-fit support, no FD (T, P, D). Alternative: a
-  counted FD-P44 (F), which needs FD-P01 closed first.
-- **C (age and population rule).** Recommended: keep the pilot rule. It bites only on Y3.2 ("youth
-  in care"), which Chafee/NYTD close. Developmental Assets is written for ages 12-18, but Y3.1 names
-  no age, so no entry.
-- **FD-P01 closure.** Recommended: keep open, narrowed (T, F, D). The practitioner would close it now.
-- **D (timing).** Recommended: land now (no prompt change).
-- **E (review desk).** Not part of this CP; the Truancy Provider rows coded Y3.4 wait for an owner
-  of R-26.
+- **G4 (statutory duties).** Y3.4 reunification: partial-fit support, no FD.
+- **Y3-1 (FD-P01).** Kept open, narrowed to "safe", until a source that names safety verifies
+  (S163, S131).
+- **G1 (age and sector rule).** It bites only on Y3.2 ("youth in care"), which Chafee/NYTD cover.
+  The Developmental Assets are written for ages 12-18, but Y3.1 names no age, so no entry.
+- **G3 (partial fits).** The cross-setting rows for Y3.1 cover parts of the code and are recorded as
+  partial; none names safety, so they do not close FD-P01.
+- **G8 (official copy).** Statute entries read on Cornell LII carry the verifier's bibliographic
+  match in `notes`.
+- **G10 (timing).** Land now (no prompt change).
+- **G12 and G13 (review desk).** The DHS "Truancy Provider" template rows coded Y3.4 are corrected at
+  the review desk now, to F1 domain-only ("prevention of youth entry into the child welfare system",
+  G13). That is not part of this CP and changes no gold row.
 
 ## Dependencies and boundaries
 
 - **R-08.** FD-P01's change and the Y3.4 decision are in this one CP, as required.
-- **CP-12-16** needs this CP's Y3.2 rows (y3-05, y3-06) before the Y3.2 source line can cite them.
+- **CP-12-16** and **CP-12-29** need this CP's Y3.2 rows (y3-05, y3-06) before the Y3.2 source line
+  and Y3's secondary clause can cite them.
 - **PR #62 / #66.** No Y3 field either PR edits is touched (CP-09-04 sends "welcome in arts spaces"
   to Y3.1, which the new cross-setting sources support; R-18). CP-11-02 also adds a dated section
   and edits the drift intro; re-apply only this CP's parts.
 
 ## Not bundled
 
-Y3.4 exclude for "prevention of entry into child welfare" (R-26, needs an owner); Y3.2 staff-rapport
-example (R-29); Y3.2 role models (rejected); Y3.1 useInstead's stale "Follows the safety
-tie-breaker being tested in PR #31" (prompt text; a separate PATCH if wanted); the null `tier` and
-`publisher` on `chafee-42usc677` (Y7.7's entry).
+Y3.4 exclude sending "prevention of entry into child welfare" to F1 domain-only (G13; a later Y3.4
+CP, prompt text); Y3.2 staff-rapport example (R-29); Y3.2 role models (rejected); Y3.1 useInstead's
+stale "Follows the safety tie-breaker being tested in PR #31" (CP-12-26, at the gate); the null `tier`
+and `publisher` on `chafee-42usc677` (Y7.7's entry; CP-12-25); statute URLs on the official host
+(CP-12-28).
+
+Overlap noted: CP-12-26 lists "remove Chafee and Butts from Y3.4's `basis`". This CP's Y3.4 `basis`
+rewrite already does that (no prompt), so CP-12-26 keeps only its `useInstead` items.
 
 ## Gold impact
 
@@ -262,6 +288,7 @@ tie-breaker being tested in PR #31" (prompt text; a separate PATCH if wanted); t
 - Design rows these records rest on: S163, S131 (Y3.1 "safe"; keep FD-P01 open), S112 (isolation
   with friends → Y3.3, alternate Y3.1; unaffected), S102 (Y3.2 youth in care), S026 (Y3.2), S024,
   S070 (Y3.4), S099 (Y3.5).
+- No change here waits on a gold row (G11, G14 do not apply).
 - New proposed rows: none.
 - Held-out gold was not read or used.
 

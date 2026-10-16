@@ -1,14 +1,32 @@
 # CP-12-04: Y5 citation fixes and deviation log (batch 2 research review)
 
+**In plain words.** This proposal fixes where the Identity domain's codes get their sources. It changes no wording that tells coders what a code means. Purpose and Future Orientation (Y5.5) now has a checked source for growth in faith (Search Institute's Spiritual Development), so the note that it departs from its framework is closed. Domain Identity (Y5.3) names athletes, readers and writers, which no checked source covers, so that departure is now written down openly; Agency, Self-Determination and Self-Advocacy (Y5.6) gets the federal disability-services law that requires "instruction in self-advocacy" once a checker reads the official government copy, and Cultural and Social Identity (Y5.2) gets its Learning for Justice edition and year. The record-keeping changes can land now; the source lines that coders see wait for one combined pair of test runs after the two open pull requests (#62 and #66) merge.
+
 | Field | Value |
 |---|---|
 | Type | CITATION_FIX (with the matching `DEVIATIONS.md` entries, as in recommendations section 2: "Each item is a citation-and-deviation CP") |
-| Codes touched | Source lines (part b only): Y5.2, Y5.3, Y5.5, Y5.6. `basis`: Y5.2, Y5.3, Y5.4, Y5.5, Y5.6. `fidelity`/`deviation`: Y5.3 (framework → adapted, FD-P24), Y5.5 (adapted → framework, FD-P12 removed). Registry: `nagaoka-2015-foundations`, `learning-for-justice-sjs`, plus up to 4 new sources. No definition, include, exclude, useInstead, example, hint or rulesText changes. **Y5.1 is not touched. Y4.5 is not touched** (it shares the LFJ entry only if batch 1 adopts claim y4a-03). |
-| Version bump | PATCH. Part (a): relative to the version current when applied (3.1.4 today, so 3.1.5; after PR #66 or PR #62, the next PATCH). Part (b): inside the single batched Y5-Y7 Source PATCH after PR #62 merges (decision D), with one two-run gate. |
+| Codes touched | Source lines (part b only): Y5.2, Y5.3, Y5.5, Y5.6. `basis`: Y5.2, Y5.3, Y5.4, Y5.5, Y5.6. `fidelity`/`deviation`: Y5.3 (framework → adapted, FD-P24), Y5.5 (adapted → framework, FD-P12 removed). Registry: `nagaoka-2015-foundations`, `learning-for-justice-sjs`, plus 2 new sources now and 2 more when V-Y5-1 and V-Y5-2 return. No definition, include, exclude, useInstead, example, hint or rulesText changes. **Y5.1 is not touched. Y4.5 is not touched** (it shares the LFJ entry only if batch 1 adopts claim y4a-03). |
+| Version bump | PATCH. Part (a): the next PATCH when applied (3.1.5 if it is the first after 3.1.4). Part (b): inside the single batched Source PATCH after PRs #62 and #66 merge (decision G10), with one two-run design-set gate. |
 | Requirement served | R1 frameworks, R4 drift |
-| Status | draft (batch 2 research review, 2026-10-16); not applied |
+| Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
 | Enum cost | +0 (160 → 160; no code added, removed or renamed) |
-| Framework deviation | changed FD-P12 (closed: Y5.5's faith element now rests on Search Institute, Spiritual Development, claim y5-14); new **FD-P24 (provisional id)**, Y5.3, sector-widening, counted; FD-005 (2.x) gets a note that its revisit trigger is met, status unchanged. None for Y5.2, Y5.4, Y5.6 (reasons recorded in `DEVIATIONS.md`, below). Y5 drift: 1/6 → 1/6 (Y5.5 out, Y5.3 in). |
+| Framework deviation | changed FD-P12 (closed: Y5.5's faith element now rests on Search Institute, Spiritual Development, claim y5-14; decision Y5-1); new **FD-P24 (provisional id)**, Y5.3, sector-widening, counted; FD-005 (2.x) gets a note that its revisit trigger is met, status unchanged. None for Y5.2 (decision G5), Y5.4, Y5.6 (decisions G1, G4); reasons recorded in `DEVIATIONS.md`, below. Y5 drift: 1/6 → 1/6 (Y5.5 out, Y5.3 in). |
+
+## What lands when
+
+Every change in this CP is either (a) outside the coding prompt, landing now with `npm test` as
+the check, or (b) inside the prompt, waiting for the two live design-set runs after PRs #62 and
+#66 merge (G10). This CP mixes both:
+
+| Change | Reaches the prompt? | Lands |
+|---|---|---|
+| (a1) `fidelity`/`deviation`: Y5.3, Y5.5 | no | now |
+| (a2) `basis`: Y5.2, Y5.3, Y5.4, Y5.5, and Y5.6 except its statute sentence | no | now |
+| (a2) `basis`: Y5.6 statute sentence | no | now, once V-Y5-1 returns SUPPORTED or PARTIAL on the official copy |
+| (a3) registry rows (module `verification_2026_10_16_b2.py`) | no | now; the rows for 733(b)(5) and NRC (2009) when V-Y5-1 and V-Y5-2 return |
+| (a4) `DEVIATIONS.md`: FD-P12 closed, FD-005 note, FD-P24 opened, "Batch 2 review" section, drift table | no | now |
+| (b) Source lines: Y5.2, Y5.3, Y5.5, Y5.6 | yes | the batched gate after PRs #62 and #66 |
+| (b) Y5 `frameworkBasis` secondary clause (decision G2) | yes | in CP-12-29, in the same gate (not edited by this CP) |
 
 ## Problem
 
@@ -46,10 +64,9 @@ removed. Every fix is a citation, a `basis` note, a fidelity field or a log entr
 
 ## Change
 
-The change is split by whether it reaches the coding prompt. `youthOutcomesV3.ts` prints each
-code's definition, include, exclude, useInstead, example and `source`, and each domain's
-`frameworkBasis`. It does not print `basis`, `fidelity`, `deviation`, the registry or
-`DEVIATIONS.md`.
+`youthOutcomesV3.ts` prints each code's definition, include, exclude, useInstead, example and
+`source`, and each domain's `frameworkBasis`. It does not print `basis`, `fidelity`,
+`deviation`, the registry or `DEVIATIONS.md`.
 
 ### Part (a): no prompt change (lands now; `npm test` is the check)
 
@@ -68,15 +85,18 @@ The public explorer shows the new fidelity on both code cards.
 
 | Code | Before | After |
 |---|---|---|
-| Y5.2 | Learning for Justice Social Justice Standards, Identity (verified); Muhammad, Pursuit 1 Identity (verified). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) integrated identity names race/ethnicity and culture (verified). | Learning for Justice (2022), Social Justice Standards, Second Edition, Identity anchor standard ID.1 (verified, direct; claim y5-11). Muhammad, Pursuit 1 Identity (verified, direct; names race, and is the source for "racial" added by CP-10-04). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) integrated identity names race/ethnicity and culture (verified, partial). Sexual, gender and linguistic identity are read as named instances of LFJ ID.1's "multiple groups in society" (decision B2-1); no FD. |
+| Y5.2 | Learning for Justice Social Justice Standards, Identity (verified); Muhammad, Pursuit 1 Identity (verified). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) integrated identity names race/ethnicity and culture (verified). | Learning for Justice (2022), Social Justice Standards, Second Edition, Identity anchor standard ID.1 (verified, direct; claim y5-11). Muhammad, Pursuit 1 Identity (verified, direct; names race, and is the source for "racial" added by CP-10-04). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) integrated identity names race/ethnicity and culture (verified, partial). Sexual, gender and linguistic identity are named instances of LFJ ID.1's "multiple groups in society", which the registry quotes (decision G5); no FD. |
 | Y5.3 | Carlone & Johnson (2007), science identity: competence, performance, recognition (partial). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) integrated identity names profession among social identities (verified). | Farrington et al. (2019), arts education and SEL, "identities as artists" (verified, direct; claim y5-07; year and publisher pending V-Y5-3). National Research Council (2009), Strand 6, identity as a science learner (pending re-verification on NAP, V-Y5-2). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) integrated identity names profession among social identities (verified, partial; supporting only: the full report uses a role-bound identity as the contrast to integrated identity, claim y5-08). Athlete, reader and writer go past these sources: sector widening, FD-P24. |
 | Y5.4 | CASEL (2020) SEL Framework (verified), Self-Awareness: 'Experiencing self-efficacy'; 'Having a growth mindset'; 'Identifying personal, cultural, and linguistic assets'; Search Institute Positive Identity, Self-esteem (located). Re-review … FD-P11 closed. | CASEL (2020) SEL Framework (verified), Self-Awareness: 'Experiencing self-efficacy'; 'Having a growth mindset'; Search Institute Positive Identity, Self-esteem (verified). Re-review … FD-P11 closed. *(the rest of the string is unchanged)* |
 | Y5.5 | Search Institute Positive Identity, Sense of purpose; Positive view of personal future (located). Re-review 2026-09-26 (STANDARDS S4.9): Search Institute sense of purpose and positive view of future assets (content verified). Nagaoka does not support purpose (verifier: unsupported). | Search Institute Positive Identity, Sense of purpose; Positive view of personal future (verified, direct). Re-review 2026-09-26 (STANDARDS S4.9): Search Institute sense of purpose and positive view of future assets (content verified). Nagaoka does not support purpose (verifier: unsupported). CP-12-04: Search Institute, Spiritual Development, three core developmental processes (verified, direct; claim y5-14) covers spiritual purpose and growth in faith. FD-P12 closed. |
-| Y5.6 | Shogren, Wehmeyer et al. (2015), Causal Agency Theory (partial); Search Institute Personal Power (located); Nagaoka et al. (2015) agency (partial). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) agency (verified); Search Institute personal power asset (content verified). | Search Institute Personal Power (verified, partial); Nagaoka et al. (2015) agency (partial). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) agency (verified); Search Institute personal power asset (content verified). CP-12-04: Rehabilitation Act, 29 U.S.C. 733(b)(5), pre-employment transition services, "instruction in self-advocacy" (verified, direct; claim y5-05, official copy per V-Y5-1). The code names IEPs, which is inside the statute's population (students with disabilities), so no FD (decision C). |
+| Y5.6 | Shogren, Wehmeyer et al. (2015), Causal Agency Theory (partial); Search Institute Personal Power (located); Nagaoka et al. (2015) agency (partial). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) agency (verified); Search Institute personal power asset (content verified). | Search Institute Personal Power (verified, partial); Nagaoka et al. (2015) agency (partial). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) agency (verified); Search Institute personal power asset (content verified). CP-12-04: Rehabilitation Act, 29 U.S.C. 733(b)(5), pre-employment transition services, "instruction in self-advocacy" (verified on the official copy, claim y5-05b; partial: a required service, counted as partial-fit support with no FD, decision G4). The code names IEPs, which is inside the statute's population (students with disabilities), so no FD (decision G1). |
 
-Y5.6's new `basis` sentence lands only once V-Y5-1 returns (or Severin answers B2-4 to allow the
-Cornell LII copy). Until then only the Shogren and "(located)" edits land. Y5.4's edit does not
-add the "linguistic assets" bullet to Y5.2 either (recommendation item 6).
+Y5.6's last two sentences ("CP-12-04: Rehabilitation Act … (decision G1).") land only once
+V-Y5-1 returns on the official copy. Under decision G8 the Cornell LII copy (claim y5-05) is not
+enough: the verifier recorded no bibliographic match, only that "Cornell LII reproduces the
+statute; it is not the official publisher". Until then only the Shogren and "(located)" edits
+land for Y5.6. Y5.4's edit does not add the "linguistic assets" bullet to Y5.2 either
+(recommendation item 6).
 
 #### (a3) Registry
 
@@ -99,7 +119,7 @@ Same row shape as `source-verification-2026-09-27.json` (`claim_id`, `kind`, `so
 | y5-11 | SUPPORTED | primary (learningforjustice.org) | LFJ cite_as, year, URL and Y5.2 excerpt |
 | y5-13 | SUPPORTED | primary | Nagaoka publisher as printed |
 | y5-14 | SUPPORTED | primary (search-institute.org) | new source: Search Institute, Spiritual Development → Y5.5 |
-| y5-05 | SUPPORTED | secondary (Cornell LII) | 733(b)(5); replaced by V-Y5-1's govinfo row when it returns |
+| y5-05 | SUPPORTED | secondary (Cornell LII) | recorded as a content lead only; not used for the registry (G8); V-Y5-1's official-copy row replaces it |
 | (V-Y5-1, V-Y5-2, V-Y5-3) | pending | | added when the verifier answers |
 
 **New script: `codebook-refinement/v3/verification_2026_10_16_b2.py`**, shared by CP-12-04,
@@ -116,7 +136,7 @@ DATE = '2026-10-16'
 BY = 'Batch 2 research review, Y5-Y7 (independent codebook-citation-verifier, blind to proposer; WebFetch)'
 
 # A copy of the document itself on a non-publisher host is accepted only where the
-# verifier recorded a bibliographic match (decision B2-4). CP-12-05 adds its entry.
+# verifier recorded a bibliographic match (decision G8). CP-12-05 adds its entry.
 FULL_TEXT_ELSEWHERE = set()
 
 CITE_AS = {
@@ -161,16 +181,17 @@ NEW = [
         'tier': 'C', 'publisher': 'University of Chicago Consortium on School Research and Ingenuity (per V-Y5-3)', 'year': 2019,
         'supports': [('Y5.3', "social-emotional competency 'Self-expression and identity' (pp. 15, 22); 'identities as artists' (p. 18)")],
     },
-    # Added only when V-Y5-1 returns (govinfo). If Severin answers B2-4 that Cornell LII
-    # is acceptable for statutes, use claim y5-05 instead and keep the Cornell URL.
+    # Added when V-Y5-1 returns on the official copy (govinfo). The Cornell LII copy (y5-05)
+    # is not used (decision G8: no bibliographic match recorded).
     {
         'id': 'rehab-act-29usc733-pre-ets', 'claim': 'y5-05b',
         'cite_as': '29 U.S.C. 733(b)(5), Rehabilitation Act of 1973, as amended by WIOA: pre-employment transition services, required activities.',
         'codebook_names': ['29 U.S.C. 733(b)(5)'],
         'tier': 'A', 'publisher': 'U.S. Congress', 'year': None,
+        'fit': 'partial',  # a required service, not an outcome: partial-fit support, no FD (decision G4)
         'supports': [('Y5.6', "required activity (b)(5) for students with disabilities: 'instruction in self-advocacy, which may include peer mentoring'")],
     },
-    # Added only when V-Y5-2 returns SUPPORTED or PARTIAL from a NAP copy.
+    # Added when V-Y5-2 returns SUPPORTED or PARTIAL from a NAP copy.
     {
         'id': 'nrc-2009-informal-science', 'claim': 'y5-06b',
         'cite_as': 'National Research Council (2009). Learning Science in Informal Environments: People, Places, and Pursuits. Washington, DC: The National Academies Press.',
@@ -184,8 +205,9 @@ NEW = [
 `apply()` follows the CP-11-01 draft: it sets `verified_on` and `verified_by` on each source it
 touches, sets `notes: 'Added by CP-12-04.'` on new sources, takes `codebook_names` from the
 table, and asserts every claim it uses is SUPPORTED or PARTIAL with `source_kind == 'primary'` or
-the source in `FULL_TEXT_ELSEWHERE`. It skips a `NEW` row whose claim is not yet in the record,
-so the V-gated sources can wait without blocking the rest.
+the source in `FULL_TEXT_ELSEWHERE`. A support's `fit` comes from the row's `'fit'` key when
+present (decision G4 rows), else from the verdict. It skips a `NEW` row whose claim is not yet
+in the record, so the V-gated sources wait without blocking the rest.
 
 **`codebook-refinement/v3/build_registry.py`**: after the existing `apply_2026_09_27(out, CODES)`
 (and after CP-11-01's `apply_2026_10_16`, if present), add
@@ -195,6 +217,12 @@ version and date this ships in.
 
 Result for CP-12-04 alone: 87 → 89 sources and 146 → 148 supports now; 91 and 150 once V-Y5-1
 and V-Y5-2 return. (Add CP-11-01's +3 if it lands first.) `codebook_extensions` unchanged.
+
+**Shared with cross-batch CPs (one CP applies each, whichever lands first; the other drops the
+rows).** The LFJ `CITE_AS`, `PUBLISHER`, `YEAR`, `URLS`, `SOURCE_EXCERPT` and `NOTES` rows are
+also CP-12-21's; the Nagaoka `PUBLISHER` and `NOTES` rows (name as printed, fall-2026 watch item)
+are also CP-12-24's; the "(located)" edits in (a2) are also CP-12-25's script sweep. The strings
+here are the ones those CPs must use. The Y5.2 component and support re-check stay in this CP.
 
 #### (a4) `codebook-refinement/DEVIATIONS.md`
 
@@ -219,7 +247,7 @@ and V-Y5-2 return. (Add CP-11-01's +3 if it lands first.) `codebook_extensions` 
 ```markdown
 ### FD-P12 · Y5.5
 
-- **Status:** closed (2026-10-16, CP-12-04: the revisit trigger is met; Search Institute, Spiritual Development, three core developmental processes, verified (claim y5-14), covers spiritual purpose and growth in faith, from the publisher already in Y5's framework basis. Y5.5 is now Framework. No merged-components entry: faith growth and optimism about the future are easy to tell apart, so S1.6's merged case does not apply.)
+- **Status:** closed (2026-10-16, CP-12-04: the revisit trigger is met; Search Institute, Spiritual Development, three core developmental processes, verified (claim y5-14), covers spiritual purpose and growth in faith, from the publisher already in Y5's framework basis. Y5.5 is now Framework. No merged-components entry: faith growth and optimism about the future are easy to tell apart, so S1.6's merged case does not apply (decisions Y5-1 and G6).)
 - **Fidelity:** adapted
 - **Case:** codebook-defined
 - **Anchor:** Search Institute Positive Identity, Sense of purpose (verified).
@@ -254,9 +282,9 @@ first), before the drift-count section:
 - **Anchor:** Farrington et al. (2019), arts education and SEL, "identities as artists" (verified, claim y5-07); National Research Council (2009), Learning Science in Informal Environments, Strand 6, identity as a science learner (pending re-verification on NAP); Nagaoka et al. (2015), integrated identity, "profession" among social identities (verified, partial; supporting only).
 - **Departs:** each source covers one field (the arts; science). Y5.3 applies the same construct, seeing oneself as a certain kind of person in a field, to any field, and its definition names three that no source names: "an athlete, a reader, a writer". The construct and wording are unchanged; only the fields widen.
 - **Evidence:** S036 (adjudicated design row, Y5.3, STEM identity; also the code's prompt example). No adjudicated row covers athlete, reader or writer; the practitioner review found "Students will see themselves as readers and writers" coded Y5.3 in the real run (model code, not gold).
-- **Alternative considered:** narrow the definition to STEM and the arts (MINOR; nothing in design gold flips, but real "readers and writers" texts lose their home; rejected by T, F, P). No entry, treating the fields as instances of Nagaoka's "profession" (D, under decision B2-1; rejected because Nagaoka's fit is partial and y5-08 shows the report uses role-bound identity as a contrast case).
-- **Decided in:** CP-12-04 (batch 2 research review, 2026-10-16), pending Severin. Provisional id; renumbered at merge.
-- **Revisit:** if a verified source names domain or field identity in general (for example a sport or literacy identity framework), or if Severin's B2-1 ruling treats named fields as instances.
+- **Alternative considered:** narrow the definition to STEM and the arts (MINOR; nothing in design gold flips, but real "readers and writers" texts lose their home; rejected). No entry, reading the fields as named instances of Nagaoka's "profession" (rejected: decision G5 covers a named instance only where the registry quotes the general category, and Nagaoka's "profession" is a partial fit that the full report uses as a contrast case, claim y5-08).
+- **Decided in:** CP-12-04 (batch 2 research review; decisions settled 2026-10-16). Provisional id; renumbered at merge.
+- **Revisit:** if a verified source names domain or field identity in general (for example a sport or literacy identity framework).
 ```
 
 **New dated section** after "Anchor re-review, 2026-09-26" (and after CP-11-02's "Y1 review"
@@ -267,14 +295,16 @@ last `### ` heading as fields of the last FD entry.
 ```markdown
 ## Batch 2 review (Y5-Y7), 2026-10-16 (CP-12-04 to CP-12-06)
 
-The batch 2 research review (`research-review/full-review/batch2/`) checked whether each Y5, Y6 and Y7 code's own text goes past its sources. Entries opened or changed: FD-P12 closed, FD-P24 opened (Y5.3). Checked and needing no entry:
+The batch 2 research review (`research-review/full-review/batch2/`) checked whether each Y5, Y6 and Y7 code's own text goes past its sources. Decisions applied: Severin's of 2026-10-16 (recommended options). Entries opened or changed: FD-P12 closed, FD-P24 opened (Y5.3). Checked and needing no entry:
 
-- **Y5.2, sexual, gender and linguistic identity.** FD none. Learning for Justice (2022) ID.1, "Students will develop positive social identities based on their membership in multiple groups in society" (claim y5-11, verified), is the general category; a named group is an instance of it, not a departure (decision B2-1, pending Severin). "Racial" rests on Muhammad, Pursuit 1 (direct), not on Nagaoka (partial).
-- **Y5.6, self-advocacy and IEPs.** FD none. 29 U.S.C. 733(b)(5), "instruction in self-advocacy, which may include peer mentoring" (claim y5-05), is written for students with disabilities, and the code's own text names IEPs, which is inside that population (decision C).
+- **Y5.2, sexual, gender and linguistic identity.** FD none. Learning for Justice (2022) ID.1, "Students will develop positive social identities based on their membership in multiple groups in society" (claim y5-11, verified), is the general category, and the registry quotes it; a named group is an instance of it, not a departure (decision G5). "Racial" rests on Muhammad, Pursuit 1 (direct), not on Nagaoka (partial).
+- **Y5.6, self-advocacy and IEPs.** FD none. 29 U.S.C. 733(b)(5), "instruction in self-advocacy, which may include peer mentoring" (claim y5-05, re-read on the official copy as y5-05b), is a required service for students with disabilities: partial-fit support with no FD (decision G4). The code's own text names IEPs, which is inside that population (decision G1).
 - **Y5.4, "linguistic assets".** Not a departure: the bullet was named in `basis` without registry support and is removed (R-04).
 
 Watch item (S4.9): Y5's anchor, Nagaoka et al. (2015), was reported to have an update due in fall 2026 (review lead, not verified). Re-review the anchor when it is published.
 ```
+
+The Y5.6 bullet lands with the Y5.6 statute sentence, once V-Y5-1 returns.
 
 **Drift table.** Intro sentence: append ", and for CP-12-04 to CP-12-06 (2026-10-16, batch 2
 review)". Y5 row, before and after:
@@ -291,7 +321,7 @@ review)". Y5 row, before and after:
 
 Unchanged. (`CONFUSIONS.md` is the 2.x registry; no 3.x tie-breaker depends on these citations.)
 
-### Part (b): prompt-reaching changes (batched Y5-Y7 Source PATCH after PR #62; two-run design-set gate)
+### Part (b): prompt-reaching changes (batched Source PATCH after PRs #62 and #66; two-run design-set gate)
 
 #### Source lines (print as "Source Framework:")
 
@@ -304,21 +334,31 @@ Unchanged. (`CONFUSIONS.md` is the 2.x registry; no 3.x tie-breaker depends on t
 
 Notes on the (b) lines:
 
-- **Y5.3** keeps Nagaoka, last, as the link to Y5's anchor (S1.6 asks a code to match a component
-  of its domain's Framework Basis; Farrington and NRC are not in it). The recommendation says
-  "keep Nagaoka as supporting only"; listing it last does that. If Severin would rather drop it
-  from the line, the FD-P24 anchor already records Farrington and NRC. The NRC item is dropped
-  from the line if V-Y5-2 does not return a NAP copy; the Farrington year stays only if V-Y5-3
-  confirms it.
-- **Y5.6**'s new item is dropped if V-Y5-1 fails and B2-4 rules out the Cornell copy.
+- **Y5.2**'s year is the same edit as CP-12-21's Source-line year; it is applied once, in this gate.
+- **Y5.3** keeps Nagaoka, last, as the link to Y5's anchor, as recommended: it stays as
+  supporting only. Each item on the line prints only if its verification has returned by the
+  gate: NRC needs V-Y5-2 (a NAP copy), and the Farrington year needs V-Y5-3. A verification that
+  fails drops only its own item.
+- **Y5.6**'s new item prints only if V-Y5-1 has returned on the official copy (G8).
 - No line uses "partial", "located", "(verified)" or "VERIFY" (`youthOutcomesV3.test.ts`).
-- Domain Y5 `frameworkBasis`: unchanged. Search Institute is already in it; adding Farrington or
-  NRC is not proposed (Decisions item 5).
+
+#### Domain Y5 `frameworkBasis`: in CP-12-29, not here
+
+Decision G2: a framework that grounds an element outside the domain's anchor is named in
+`frameworkBasis` as a "secondary" clause, and all such edits sit in one gated CP, CP-12-29. This
+CP leaves Y5's `frameworkBasis` unedited and hands CP-12-29 these names for Y5's secondary
+clause: Search Institute, Spiritual Development (Y5.5); Farrington et al. (2019), arts education
+and SEL (Y5.3); National Research Council (2009), Learning Science in Informal Environments
+(Y5.3, once V-Y5-2 returns); Rehabilitation Act, 29 U.S.C. 733(b)(5) (Y5.6, once V-Y5-1
+returns). CP-12-29's list in the full-review SUMMARY does not yet include them; it must, because
+its new `sync.test.ts` check requires every cited framework in its domain's `frameworkBasis`.
+The clause's wording and format are CP-12-29's.
 
 #### Gate
 
-One two-run design-set eval for all of CP-12-04, CP-12-05 and CP-12-06 part (b), after PR #62
-merges (decision D), with the command from CP-11-03 and output under
+One two-run design-set eval for the Source parts of CP-12-04, CP-12-05 and CP-12-06, together
+with the other gated citation CPs (CP-12-16, CP-12-29 and the rest listed in the full-review
+SUMMARY), after PRs #62 and #66 merge (decision G10). Command from CP-11-03; output under
 `codebook-refinement/eval/cp-12-b2-sources/`. Rows to watch: S036 (Y5.3), S129 (Y5.2), S016,
 S250 (Y5.5), S032, S236, H060 (Y5.6). Expected flips: none.
 
@@ -334,23 +374,24 @@ verifier's excerpts.
 | learning-for-justice-sjs | verified | ID.1; edition, year, publisher | y5-11 SUPPORTED: "Students will develop positive social identities based on their membership in multiple groups in society." |
 | nagaoka-2015-foundations | verified | publisher as printed | y5-13 SUPPORTED: "©2015 University of Chicago Consortium on Chicago School Research" |
 | nagaoka-2015-foundations → Y5.3 | verified, partial (unchanged) | note only | y5-08 PARTIAL: "a strong identity and a set of competencies that allow her to act with agency in one role or setting (for example," |
-| rehab-act-29usc733-pre-ets (new) | **pending V-Y5-1** (content verified on Cornell LII) | (b)(5) instruction in self-advocacy | y5-05 SUPPORTED: "instruction in self-advocacy, which may include peer mentoring." |
-| nrc-2009-informal-science (new) | **pending V-Y5-2** (PARTIAL, host only) | Strand 6 | y5-06 PARTIAL: "Think about themselves as science learners and develop an identity as someone who knows about, uses," |
+| rehab-act-29usc733-pre-ets (new) | **located; verification pending V-Y5-1** (content verified on Cornell LII, not admissible under G8) | (b)(5) instruction in self-advocacy; fit partial (G4) | y5-05 SUPPORTED: "instruction in self-advocacy, which may include peer mentoring." |
+| nrc-2009-informal-science (new) | **located; verification pending V-Y5-2** (PARTIAL, host only) | Strand 6 | y5-06 PARTIAL: "Think about themselves as science learners and develop an identity as someone who knows about, uses," |
 
 Caveats carried into registry notes: y5-14's three process names sit in separate places on the
 page, which has no year; y5-07's year and Ingenuity co-publisher are inferred from the URL and
 file name; 733(b)(5) "describes a service activity, not an outcome" (verifier).
 
 Considered and not used: Catalano et al. (y5-01, y5-02, y5-04; S1.4 year and publisher open,
-later cycle), CASEL "Developing interests and a sense of purpose" (y5-03; optional, not needed
-once y5-14 is in), CASEL bullets for Y5.1 and Y5.2 (y5-12, y5-10; rejected), Damon et al.
-(y5-15; rejected), NASEM 2019 (y5-09; later cycle, excerpt must be re-recorded).
+later cycle; the Catalano-plus-merged-components route for Y5.5 is ruled out by decision Y5-1),
+CASEL "Developing interests and a sense of purpose" (y5-03; not needed once y5-14 is in), CASEL
+bullets for Y5.1 and Y5.2 (y5-12, y5-10; rejected), Damon et al. (y5-15; rejected), NASEM 2019
+(y5-09; later cycle, excerpt must be re-recorded).
 
 ## Verification requests
 
 Send each to `codebook-citation-verifier`, which sees only these fields.
 
-**V-Y5-1. 29 U.S.C. 733(b)(5) on the official copy** (decision B2-4).
+**V-Y5-1. 29 U.S.C. 733(b)(5) on the official copy** (decision G8).
 
 ```
 claim_id: y5-05b
@@ -387,26 +428,25 @@ url: https://consortium.uchicago.edu/sites/default/files/2019-05/Arts%20Educatio
 Why: the y5-07 verifier: "The fetched text shows no copyright line or date, so the year 2019
 and Ingenuity as co-publisher are inferred from the URL and file name only" (S1.4).
 
-Gates: part (a) lands without them, except the Y5.6 registry row and `basis` sentence (V-Y5-1).
-Part (b) waits for all three; a failed request drops only its own item.
+Gates: part (a) lands without them, except the Y5.6 registry row, `basis` sentence and
+`DEVIATIONS.md` bullet (V-Y5-1) and the NRC registry row (V-Y5-2). In part (b) a failed request
+drops only its own item.
 
-## Decisions for Severin (this CP depends on them)
+## Decisions applied (settled 2026-10-16, Severin: recommended options)
 
-1. **D** (timing). Recommended: (a) now, (b) in one batched Y5-Y7 Source PATCH after PR #62.
-2. **B2-1** (instances of a cited general category are not departures). Decides "no FD" for
-   Y5.2. If rejected, Y5.2 needs a codebook-defined-element entry for sexual, gender and
-   linguistic identity (S129 is the gold row), and Y5 rises to 2/6 (33%, at the line).
-3. **B2-2** (Y5.5: close FD-P12 on Search Institute, Spiritual Development, no merged-components
-   entry). The alternative (T, P) is Catalano plus a merged-components entry, which needs
-   Catalano's year and publisher fixed first (later-cycle item).
-4. **B2-4** (official copies; a secondary host only with a recorded bibliographic match).
-   Decides whether Y5.6 waits for V-Y5-1.
-5. **C** (extended to sector populations). Decides "no FD" for Y5.6. If C is limited to age
-   (F's reading), Y5.6 still needs no entry, because the code names IEPs, which are inside the
-   statute's population; the C question matters for Y5.6 only if the code were read as general
-   self-advocacy for all youth.
-6. Y5.3: keep or drop Nagaoka on the (b) Source line (see the (b) notes). Recommended: keep it,
-   last.
+| Decision | What it settles here |
+|---|---|
+| G10 | Part (a) lands now; part (b) waits for the one gate after PRs #62 and #66. |
+| G5 | Y5.2: sexual, gender and linguistic identity are instances of LFJ ID.1's "multiple groups"; no FD. Y5 stays at 1/6. |
+| Y5-1 | Y5.5: FD-P12 closes on Search Institute, Spiritual Development; no merged-components entry. |
+| G8 | Y5.6's statute waits for the official copy (V-Y5-1); the Cornell copy is not used. NRC waits for NAP (V-Y5-2). |
+| G1 | Y5.6: no FD; the code names IEPs, inside the statute's population. |
+| G4 | 733(b)(5) is a required service, so it is partial-fit support with no FD. |
+| G2 | Y5's secondary frameworks go into `frameworkBasis` through CP-12-29 (above). |
+| G6 | No merged-components entry for Y5.5 (faith growth and future orientation are easy to tell apart). |
+
+Y5.3 keeps Nagaoka, last, on its Source line (the CP's own recommendation; not a listed
+decision).
 
 ## Dependencies and boundaries
 
@@ -417,13 +457,16 @@ Part (b) waits for all three; a failed request drops only its own item.
   provisional either way. CP-11-01's `verification_2026_10_16.py` may host these tables instead.
 - **Batch 1** (Y4): the LFJ `cite_as` here is the one string R-05 asks for; the Y4.5 support (if
   y4a-03 is adopted) belongs to the batch 1 CP.
+- **Cross-batch CPs:** CP-12-21 (LFJ string), CP-12-24 (Nagaoka name and watch item), CP-12-25
+  ("(located)" sweep), CP-12-29 (secondary clauses). See (a3) and (b).
 
 ## Not bundled (separate CPs if wanted)
 
 Catalano as supporting framework basis for Y5 and for Y5.6 (later-cycle item 1); the resilience
-tie-breaker Y4.2/Y5.4 (needs gold first, B2-6); Y5.2 "sexual" → "sexual orientation" (MINOR,
-later cycle); the CASEL Self-Awareness allocation table (R-03, with batch 1); Y5.4's
-"linguistic assets" as a new Y5.4 support (P's option; not proposed).
+tie-breaker Y4.2/Y5.4 (blocked: under decision G11 Severin first adjudicates two proposed design
+rows per side, and none exist yet); Y5.2 "sexual" → "sexual orientation" (MINOR, later cycle);
+the CASEL Self-Awareness allocation table (R-03, in CP-12-20); Y5.4's "linguistic assets" as a
+new Y5.4 support (not proposed).
 
 ## Gold impact
 
@@ -431,9 +474,11 @@ later cycle); the CASEL Self-Awareness allocation table (R-03, with batch 1); Y5
   rule changes. The (b) gate confirms this.
 - Design rows the edits rest on: S032, S236, H060 (Y5.6); S016, S250 (Y5.5); S036 (Y5.3); S129
   (Y5.2); S243, S158 (Y5.4); S004, S059, S253 (leadership is not Y5.3; unaffected).
-- New proposed rows: none required by this CP. A Y5.3 row for "readers and writers" would give
-  FD-P24 its own gold evidence (suggested text from the real run: "Students will see themselves
-  as readers and writers", suggested Y5.3); for Severin to adjudicate, ID assigned when added.
+- No change in this CP is blocked on a gold adjudication (G11 and G14 do not apply to it).
+- New proposed rows: none required. A Y5.3 row for "readers and writers" would give FD-P24 its
+  own gold evidence (suggested text from the real run: "Students will see themselves as readers
+  and writers", suggested Y5.3); for Severin to adjudicate, ID assigned when added. No gold file
+  is written by this CP.
 - Held-out gold (`youth_outcomes_v3.heldout.gold.csv`) was not read or used.
 
 ## Judge result

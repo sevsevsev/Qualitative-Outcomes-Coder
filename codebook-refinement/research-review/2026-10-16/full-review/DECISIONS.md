@@ -1,5 +1,9 @@
 # Decisions only Severin can make (codebook 3.x research review, 2026-10-16)
 
+> **Decided 2026-10-16 (Severin, in the review thread):** "I want you to go with your recommendations on the decisions."
+> Every question below, and pilot decisions A-E, is settled on the recommended (bold, first) option.
+> Gold rows still change only by Severin's own adjudication: where a recommended option needs a gold row looked at (G11's proposed rows, G14's S176), the row stays as it is until he settles it.
+
 This list merges the Y1 pilot's decisions (A-E) with the batch decisions (B1-*, B2-*, B3-*, B4-*), with duplicates combined. The source IDs are in brackets. Each line gives the question, the options with the **recommended one first and in bold**, and the CPs that depend on it. Each question can be answered in one word.
 
 ## Rules that affect many domains

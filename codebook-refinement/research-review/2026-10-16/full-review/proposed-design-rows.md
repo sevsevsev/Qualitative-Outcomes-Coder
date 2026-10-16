@@ -2,8 +2,13 @@
 
 ## What these are
 
-`proposed-design-rows.csv` holds 44 example statements, written so that Severin can rule on
-them before any new coding hint or wider code definition ships. Decision G11 in `DECISIONS.md`
+`proposed-design-rows.csv` holds 75 example statements, written so that Severin can rule on
+them before any new coding hint or wider code definition ships. Rows P-01 to P-44 cover the
+boundaries named in decision G11. Rows P-45 to P-75 are the rows other change proposals asked
+for: P-45 to P-56 for the early-learning hints (CP-11-03), P-57 to P-64 for health coverage and
+food security (CP-12-15), P-65 to P-68 for puberty (CP-12-14), P-69 to P-72 for money learning
+versus money status (CP-12-31), and P-73 to P-75 for community conditions (CP-12-19).
+Decision G11 in `DECISIONS.md`
 says each such boundary needs two adjudicated design rows on each side first. These rows are the
 candidates for that.
 
@@ -36,5 +41,11 @@ the design gold file. No agent adds them, and no agent marks a row as adjudicate
   statements in the fresh held-out set, so they were left out. This means the review queue and the
   held-out set share some statements. Severin should still check each row against the held-out
   set before adding it to gold.
-- 20 of the 44 rows are invented, mostly for volunteers, staffing, pitching and family eating,
-  where the queues had no clean example.
+- Of the 75 rows, 10 come from the logic-model queue, 22 from the no-logic-model queue and 43 are
+  invented. Invented rows are mostly for volunteers, staffing, pitching, family eating, health
+  coverage, puberty and money, where the queues had no clean example. Where a change proposal
+  suggested an invented row and a real queue statement fit the same side, the real statement
+  was used instead.
+- One change proposal suggested a district statement about readiness for university coursework.
+  It appears only outside the review queue, so a real queue statement about readiness for
+  higher-level coursework (P-53) takes its place.

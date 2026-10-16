@@ -19,6 +19,7 @@ reads wait for one combined test run after the two open pull requests (numbers 6
 | Version bump | Part (a): PATCH when applied (3.1.4 today, so 3.1.5; one PATCH later if another release lands first). Part (b): ships in the single citation-text gate release (decision G10), with whatever bump that release carries. |
 | Requirement served | R1 frameworks |
 | Status | Status: draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: registry module `v3/verification_2026_10_16.py` and its record (Farrington, Allensworth & Easton and Conley citations; ELOF and NRP fixes; new Seal of Biliteracy entry after round-2 V1, PARTIAL on authorship, cite_as per the document's own suggested citation; ESSA advanced coursework, 42 U.S.C. 675(1)(G) and RTT-ELC entries), the `build_registry.py` hook and the `basis` notes for Y1.1, Y1.2, Y1.7, Y1.8, Y1.13, Y1.15, Y1.16. Waits for the gate: Source lines Y1.2, Y1.13, Y1.16; the Seal `frameworkBasis` clause (CP-12-29). |
 | Reaches the coding prompt? | **Mixed.** Part (a), registry and `basis`: no, lands now. Part (b), three Source lines: yes, waits for the gate. See "What lands when". |
 | Enum cost | +0 (160 → 160; no code added, removed or renamed) |
 | Framework deviation | none. No code changes its anchor or its scope. The Seal of Biliteracy Guidelines close an existing unlogged departure (Y1.2's home-language half had no source); they do not open one. The ED-HHS school-readiness definitions are a second source for Y1.8 inside its own age range (decision Y1-1). The FD entries for Y1.10, Y1.13 and Y1.15 are in CP-11-02. |
@@ -28,7 +29,7 @@ reads wait for one combined test run after the two open pull requests (numbers 6
 - **A / Y1-1.** Head Start ELOF stays Y1.8's anchor and is used for Y1.8 only; the joint ED-HHS
   Race to the Top-Early Learning Challenge definitions (claim y1-subject-13, SUPPORTED) are added
   as a second Y1.8 support. ELOF is not borrowed for Motor & Sport Skills (Y8.2): Y8.2 keeps
-  "fine motor" as a codebook-defined element, logged in CP-12-07 (provisional FD-P31). This CP
+  "fine motor" as a codebook-defined element, logged in CP-12-07 (provisional FD-P29). This CP
   only records the "Y1.8 only" rule in the ELOF registry note; it changes nothing in Y8.
 - **D / G10.** Part (a) lands now. Part (b), the Source lines, lands in the one two-run
   design-set gate for all Source and `frameworkBasis` edits, after PRs #62 and #66 merge.

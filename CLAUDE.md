@@ -42,6 +42,11 @@ Read these before touching any codebook:
   only (outcomes dashboard, explorer); it is never part of the coding prompt.
 - 3.1.4 (CP-10-04) names racial identity in Y5.2 (definition, include), Y5.1 (exclude), Y4.5
   (include) and the Y5.A description.
+- 3.1.5 (2026-10-16 research review, land-now parts of CP-11-01..CP-12-32) changes the registry,
+  `basis`, fidelity labels, DEVIATIONS.md and CONFUSIONS.md only; the coding prompt is byte-identical.
+  Y8 is over the S4.9 drift line (5 of 13), so its anchor frameworks are re-reviewed before any
+  further Y8 change. Prompt-text parts wait for one live design-set gate after PRs #62 and #66.
+  Details: `codebook-refinement/research-review/2026-10-16/full-review/applied-3.1.5.md`.
 - `codebooks/original.ts` (2.5.x) was retired on 2026-09-26: no picker offers it, but it stays registered (marked `deprecated`) so saved sessions, old exports, eval scripts and direct Codebook-tab links still resolve its codes. Older files may use
   pre-2.0.0 numbers; see `codebook-refinement/renumbering/`.
 - A public explorer-only site is built from this repo with `VITE_SITE=explorer` (README,

@@ -9,6 +9,7 @@
 | Version bump | PATCH, relative to the version current when this is applied (3.1.4 today; one PATCH later for each of PR #62 or PR #66 that lands first) |
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: NYTD and AHS-01 F2.1 rows; new CFPB financial well-being, NWS-01, RHY 45 CFR 1351, SDOH-04 and HEARTH 11386a (after V11) entries; `basis` F2.1, F2.2, F2.3; V8 not supported, so no USDA nutrition-security row and F2.2 adapted (FD-P35); F2 drift row (1/3, at the line). Waits for the gate: F2 `frameworkBasis` names (CP-12-29). |
 | Reaches the coding prompt? | **No.** Registry and `basis` only (plus, if V8 fails, F2.2's `fidelity` and one DEVIATIONS entry). No scoring run; `npm test` is the gate. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | **none.** F2.1 "independent-youth" is covered by NYTD (foster youth, "financial self-sufficiency") and CFPB Financial Well-Being (individual-level), and F2.3 "a young person living independently" by the RHY rule (45 CFR 1351) (decision G1). F2.1 "Medicaid" rests on AHS-01, a partial fit whose source is broader than the element (decisions G3, G5). **Verification-gated FD-P35 (provisional id)**, F2.2, codebook-defined element ("access to healthy food"), counted, opened only if V8 fails. That would put F2 at 1/3, at S4.9's line but not over it (decision G7). F2 drift stays 0/3. |

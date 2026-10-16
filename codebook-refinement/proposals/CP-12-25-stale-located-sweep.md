@@ -17,6 +17,7 @@ requests that edit those codes have merged.
 | Version bump | PATCH against the version current when applied |
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: `v3/refresh_basis_status.py` and its test, run once (Y8.10 now "(verified; ...)"; the other rows were already fixed by their CPs; WAIT is Y2.6, F1.9, A2.6, since Y1 is on this branch); `tier`/`publisher` filled on four null entries (`shape-nhes-2024` was already set by CP-12-03); `search-40-assets` Y8.10 component and note. Waits for the gate: nothing; the Y2.6 and F1.9 tags wait for PR #62 and the A2.6 tag for CP-12-18's held part. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none |
 

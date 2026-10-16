@@ -99,7 +99,8 @@ describe('gold set (STANDARDS S4.3)', () => {
   });
 
   it('gives every confusion entry at least two gold examples (STANDARDS S3.1)', () => {
-    const confusions = fs.readFileSync(path.join(here, 'CONFUSIONS.md'), 'utf-8');
+    // 2.x entries only; the 3.x section is checked in codebooks/youthOutcomesV3.test.ts (CP-12-15).
+    const confusions = fs.readFileSync(path.join(here, 'CONFUSIONS.md'), 'utf-8').split(/^## Codebook 3\.x tie-breakers$/m)[0];
     const cfIds = [...confusions.matchAll(/^### (CF-\d{3})/gm)].map(m => m[1]);
     expect(cfIds.length).toBeGreaterThan(0);
     for (const cf of cfIds) {

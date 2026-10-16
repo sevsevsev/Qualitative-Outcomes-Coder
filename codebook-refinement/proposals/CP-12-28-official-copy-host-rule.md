@@ -18,6 +18,7 @@ lands now.
 | Version bump | PATCH against the version current when applied |
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: `v3/hosts.py` and the host check in `build_registry.py`; the V-HOST results through `v3/verification_2026_10_16_hosts.py`: Chafee 677, both Digital Equity Act entries, IDEA 1471 and McKinney-Vento 11432 moved to govinfo (corrected pinpoints from the verifiers); circle, farrington (with its corrected cite) and mapp recorded as secondary-host matches; conley-2007, hulleman, cjca and eccles (corrected cite) recorded as matches with their PARTIAL caveats in the notes; Muhammad (V-HOST-8 PARTIAL, corrected cite applied) stays pending with hidi and essa-4109. Waits for the gate: nothing. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none |
 

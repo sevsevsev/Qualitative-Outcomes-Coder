@@ -9,15 +9,16 @@
 | Version bump | PATCH, relative to the version current when this is applied (3.1.4 today, so 3.1.5; one PATCH later for each of PR #62 or PR #66 that lands first) |
 | Requirement served | R1 frameworks · R4 drift |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: registry rows in `v3/verification_2026_10_16_b3.py` (HECAT, Healthy People 2030 objectives, MTF, CDC youth violence, OJJDP, SHAPE and NSES supports, NCTSN and CJCA titles); `basis` for Y8.1-Y8.5, Y8.8, Y8.9, Y8.11-Y8.13; FD-P28 (Y8.13) and FD-P29 (Y8.2, V2 not supported); FD-P30 (Y8.11, intentions only after V4b), FD-P31 (Y8.12, V5 and V5b not supported) and FD-P32 (Y8.1, V12 PARTIAL) opened; no Y8.5 entry (V13 SUPPORTED); dated note and drift row (Y8 at 5/13, over the line). Waits for the gate: Y8 `frameworkBasis` names (CP-12-29). |
 | Reaches the coding prompt? | **No.** Registry, `basis`, `fidelity`, `deviation` and `DEVIATIONS.md` are not printed in `definitionsText` (`youthOutcomesV3.ts` prints definition, include, exclude, use instead, source and example). No scoring run is needed; `npm test` is the gate. The explorer shows the new fidelity on the Y8.2 and Y8.13 cards. |
 | Enum cost | +0 (160 → 160) |
-| Framework deviation | **new FD-P30 (provisional id)**, Y8.13, codebook-defined element, counted. **new FD-P31 (provisional id)**, Y8.2, codebook-defined element, counted (decision Y1-1). **Verification-gated, counted (decisions Y8-1, G3, G6):** FD-P32 (Y8.11), FD-P33 (Y8.12), FD-P36 (Y8.1 screen time), FD-P37 (Y8.5 immunizations), each opened only for an element its verification request does not cover. Every other item closes a gap by citation and states none. Y8 drift goes from 0/13 to 2/13 (15%) now; the worst case is 6/13 (46%), over S4.9's third. |
+| Framework deviation | **new FD-P28 (provisional id)**, Y8.13, codebook-defined element, counted. **new FD-P29 (provisional id)**, Y8.2, codebook-defined element, counted (decision Y1-1). **Verification-gated, counted (decisions Y8-1, G3, G6):** FD-P30 (Y8.11), FD-P31 (Y8.12), FD-P32 (Y8.1 screen time), FD-unassigned (Y8.5) (Y8.5 immunizations), each opened only for an element its verification request does not cover. Every other item closes a gap by citation and states none. Y8 drift goes from 0/13 to 2/13 (15%) now; the worst case is 6/13 (46%), over S4.9's third. |
 
 ## Decisions applied (2026-10-16)
 
 | Decision | Effect on this CP |
 |---|---|
-| Y1-1 | Head Start ELOF stays Y1.8-only. Y8.2 keeps "fine motor" as a codebook-defined element: FD-P31 opens now. S192 stays Y8.2. |
+| Y1-1 | Head Start ELOF stays Y1.8-only. Y8.2 keeps "fine motor" as a codebook-defined element: FD-P29 opens now. S192 stays Y8.2. |
 | Y8-1, G6 | Y8.11 and Y8.12 knowledge, intentions and warning signs are **counted** entries (coders can tell knowledge and intentions from use, so the strict merged-components test fails). They open only for elements that V3, V4, V4b, V5 and V5b do not cover. |
 | G3 | A PARTIAL fit avoids an FD only where the source is broader than the code. Applied row by row below ("G3 check"). Two partial rows the draft relied on fail the test: PA-R02 for Y8.1 screen time (parents' rule-following, not the young person's own screen time) and IID-08 for Y8.5 immunizations (one vaccine; the code names immunizations in general). Both now follow the Y8-1 pattern: verify first (V12, V13), log a counted entry if that fails. |
 | G5 | HECAT Safety HBO 4 and 7 cover "outdoor safety" and "allergic reaction" in Y8.3, and HECAT PHW HBO 11 covers dental and vision screenings in Y8.5, as named instances of categories the registry quotes. No FD. |
@@ -68,8 +69,8 @@ from Y8.1 would flip S207 and H086.
 |---|---|---|
 | Registry rows (`verification_2026_10_16_b3.py`, Y8 section, and the record file) | no | now (after CP-12-03, which owns the shared NHES 2024 re-quote, and after or with CP-12-23, whose YRBS rows and Y8.1 YRBS sentence the `basis` strings build on) |
 | `basis` for Y8.1, Y8.2, Y8.3, Y8.4, Y8.5, Y8.8, Y8.9, Y8.11, Y8.12, Y8.13 | no | now, same commit |
-| `fidelity`/`deviation` for Y8.2 and Y8.13; FD-P30, FD-P31; dated note; drift row | no | now, same commit |
-| FD-P32, FD-P33, FD-P36, FD-P37 and their `fidelity`/`deviation` fields | no | when V3-V5b, V12 and V13 return: a follow-up PATCH opens an entry for each element still uncovered and adds a support row for each SUPPORTED claim |
+| `fidelity`/`deviation` for Y8.2 and Y8.13; FD-P28, FD-P29; dated note; drift row | no | now, same commit |
+| FD-P30, FD-P31, FD-P32, FD-unassigned (Y8.5) and their `fidelity`/`deviation` fields | no | when V3-V5b, V12 and V13 return: a follow-up PATCH opens an entry for each element still uncovered and adds a support row for each SUPPORTED claim |
 | Prompt-side naming of the new frameworks | yes | CP-12-29 (G2), in the one gate after PRs #62 and #66. Not part of this CP. |
 
 ## Change
@@ -177,8 +178,8 @@ NOTES = {  # appended to `notes`
     'cjca-2009': "Title corrected 2026-10-16 (claim y8b-14, PARTIAL: the NCJRS abstract confirms title, authors, date and CJCA authorship, not the recidivism detail; the full-text URL and excerpt are kept). NCJRS record: https://www.ojp.gov/ncjrs/virtual-library/abstracts/cjca-white-paper-defining-and-measuring-recidivism. The CJJA rename note is CP-12-24's.",
     'cdc-hecat-2021': 'Module-level supports were read in the module PDFs: hecat_module_pa.pdf, _fn.pdf, _phw.pdf and _s.pdf under https://www.cdc.gov/healthy-youth/hecat/pdfs/. Each support verifier_note starts with the PDF it was read in. The AOD, Tobacco and Violence Prevention modules, a PA screen-time HBO and a PHW immunization HBO are not verified (requests V3 to V5, V12, V13).',
     'hp2030-mich17': 'Early-childhood source, allowed because developmental screening of infants and toddlers is about young children by definition (early-childhood rule; S061).',
-    'hp2030-pa-r02': 'Partial and kept for evidence only: the parent is the actor, so the row does not cover the young person\'s own screen time (G3). FD-P36 opens if V12 finds no youth-level source.',
-    'hp2030-iid08': 'Partial and kept for evidence only: one vaccine, so it does not cover "immunizations" in general (G3). FD-P37 opens if V13 finds no general source.',
+    'hp2030-pa-r02': 'Partial and kept for evidence only: the parent is the actor, so the row does not cover the young person\'s own screen time (G3). FD-P32 opens if V12 finds no youth-level source.',
+    'hp2030-iid08': 'Partial and kept for evidence only: one vaccine, so it does not cover "immunizations" in general (G3). FD-unassigned (Y8.5) opens if V13 finds no general source.',
 }
 ```
 
@@ -207,8 +208,8 @@ Y8.2 (rejected by decision Y1-1; R-09).
 |---|---|---|---|
 | Y8.3 outdoor safety, allergic reaction | HECAT S HBO 4, 7 | yes (general safety and "suddenly ill" categories, quoted) | no FD (G3, G5) |
 | Y8.5 dental, vision screenings | HECAT PHW HBO 11 | yes ("screenings and examinations", quoted); OH-08 is direct for dental | no FD (G3, G5) |
-| Y8.5 immunizations | HP2030 IID-08 | **no** (one vaccine; the code names immunizations in general) | verify (V13); FD-P37 if it fails |
-| Y8.1 screen time | HP2030 PA-R02 | **no** (a parent's rule-following, not the young person's own screen time) | verify (V12); FD-P36 if it fails |
+| Y8.5 immunizations | HP2030 IID-08 | **no** (one vaccine; the code names immunizations in general) | verify (V13); FD-unassigned (Y8.5) if it fails |
+| Y8.1 screen time | HP2030 PA-R02 | **no** (a parent's rule-following, not the young person's own screen time) | verify (V12); FD-P32 if it fails |
 | Y8.11 perceived risk | MTF (2026) | yes (perceived risk and disapproval; only risk is used) | no FD |
 | Y8.8 danger and safety | NCTSN Concept 5 | not assessed here: Y8.8 "processing trauma" is later item 4 | unchanged (see dated note) |
 | Y8.13 recidivism | CJCA (2009), unchanged fit | the paper defines the recidivism measures the code names | unchanged |
@@ -223,16 +224,16 @@ this CP writes the whole `basis` string, using CP-12-23's item wording.
 
 | Code | Before | After |
 |---|---|---|
-| Y8.1 | CDC/ASCD WSCC (verified); Healthy People 2030 SH-04 sleep (verified); CDC (2025) 2025 State and Local YRBS, standard high school questionnaire, Q83 sleep, Q73 physical activity, Q66-Q70 fruit and vegetables (verified, direct; CP-12-23). YRBS screen-time hours items exist only in 2021 and earlier questionnaires (research-basis appendix A, R03); not cited. *(CP-12-23's text)* | CDC/ASCD WSCC (verified, partial: school service components); Healthy People 2030 SH-04 sleep (verified); CDC (2025) 2025 State and Local YRBS, standard high school questionnaire, Q83 sleep, Q73 physical activity, Q66-Q70 fruit and vegetables (verified, direct; CP-12-23). YRBS screen-time hours items exist only in 2021 and earlier questionnaires (research-basis appendix A, R03); not cited. CP-12-07 (2026-10-16): CDC HECAT (2021) PA HBO 1-2, FN HBO 3 and 10, PHW HBO 1-2 (verified, direct: activity, fitness, fruit and vegetables, cooking, hygiene, sleep); Healthy People 2030 PA-06 (verified, direct). Screen time: Healthy People 2030 PA-R02 (verified, partial: parents following AAP limits, not the young person's own screen time); youth-level source pending request V12 (FD-P36 if it fails). |
-| Y8.2 | SHAPE America (2024) National PE Standards, Standard 1 motor skills (verified). | SHAPE America (2024) National PE Standards, Standard 1 motor skills (verified). "Fine motor" has no source the codebook may cite: Head Start ELOF's Fine Motor sub-domain verifies (claim y8a-13), but the early-childhood rule keeps ELOF for Y1.8 only (decision Y1-1). See FD-P31. |
+| Y8.1 | CDC/ASCD WSCC (verified); Healthy People 2030 SH-04 sleep (verified); CDC (2025) 2025 State and Local YRBS, standard high school questionnaire, Q83 sleep, Q73 physical activity, Q66-Q70 fruit and vegetables (verified, direct; CP-12-23). YRBS screen-time hours items exist only in 2021 and earlier questionnaires (research-basis appendix A, R03); not cited. *(CP-12-23's text)* | CDC/ASCD WSCC (verified, partial: school service components); Healthy People 2030 SH-04 sleep (verified); CDC (2025) 2025 State and Local YRBS, standard high school questionnaire, Q83 sleep, Q73 physical activity, Q66-Q70 fruit and vegetables (verified, direct; CP-12-23). YRBS screen-time hours items exist only in 2021 and earlier questionnaires (research-basis appendix A, R03); not cited. CP-12-07 (2026-10-16): CDC HECAT (2021) PA HBO 1-2, FN HBO 3 and 10, PHW HBO 1-2 (verified, direct: activity, fitness, fruit and vegetables, cooking, hygiene, sleep); Healthy People 2030 PA-06 (verified, direct). Screen time: Healthy People 2030 PA-R02 (verified, partial: parents following AAP limits, not the young person's own screen time); youth-level source pending request V12 (FD-P32 if it fails). |
+| Y8.2 | SHAPE America (2024) National PE Standards, Standard 1 motor skills (verified). | SHAPE America (2024) National PE Standards, Standard 1 motor skills (verified). "Fine motor" has no source the codebook may cite: Head Start ELOF's Fine Motor sub-domain verifies (claim y8a-13), but the early-childhood rule keeps ELOF for Y1.8 only (decision Y1-1). See FD-P29. |
 | Y8.3 | SHAPE America (2024) National Health Education Standards, Standard 1 (verified). | SHAPE America (2024) National Health Education Standards, Standard 1 (verified), indicators 1.2.3 and 1.5.3 injury and illness prevention, and Standard 3, indicator 3.8.3 reliable health information (verified, direct; CP-12-07). CDC HECAT (2021) Safety HBO 4 and 7 (verified, partial: the general categories cover outdoor safety and allergic reactions). |
 | Y8.4 | National Sex Education Standards, 2nd ed. (2020) (verified); CDC YRBS (verified). | National Sex Education Standards, 2nd ed. (2020) (verified), SH.8.CC.2 and SH.12.GS.1 (CP-12-07); CDC YRBS (verified); CDC (2025) 2025 State and Local YRBS, standard HS questionnaire, Q59-Q60 (verified, direct; CP-12-23). |
-| Y8.5 | Healthy People 2030 AH-01, AHS-01 (verified); ACF NYTD health insurance (verified). | Healthy People 2030 AH-01, AHS-01 (verified); ACF NYTD health insurance (verified). CP-12-07: CDC HECAT (2021) PHW HBO 9-10 chronic conditions (verified, direct) and HBO 11 screenings (verified, partial: the general category covers dental and vision); Healthy People 2030 OH-08 dental (verified, direct), MICH-17 developmental screening (verified, direct; early-childhood statements only); CDC (2025) 2025 State and Local YRBS, Q80 dental visit (verified, direct; CP-12-23). Immunizations: Healthy People 2030 IID-08 HPV vaccine (verified, partial: one vaccine, ages 13-15); a general source is pending request V13 (FD-P37 if it fails). |
+| Y8.5 | Healthy People 2030 AH-01, AHS-01 (verified); ACF NYTD health insurance (verified). | Healthy People 2030 AH-01, AHS-01 (verified); ACF NYTD health insurance (verified). CP-12-07: CDC HECAT (2021) PHW HBO 9-10 chronic conditions (verified, direct) and HBO 11 screenings (verified, partial: the general category covers dental and vision); Healthy People 2030 OH-08 dental (verified, direct), MICH-17 developmental screening (verified, direct; early-childhood statements only); CDC (2025) 2025 State and Local YRBS, Q80 dental visit (verified, direct; CP-12-23). Immunizations: Healthy People 2030 IID-08 HPV vaccine (verified, partial: one vaccine, ages 13-15); a general source is pending request V13 (FD-unassigned (Y8.5) if it fails). |
 | Y8.8 | NCTSN 12 Core Concepts (located). | Layne, Strand & NCTSN Task Force (2012), 12 Core Concepts for Understanding Traumatic Stress Responses in Childhood, Concept 5, danger and safety (verified, partial: a framework for understanding stress responses, not an outcome framework). "Processing trauma" has no verified component yet (later item 4). |
 | Y8.9 | CDC WSCC, Counseling, Psychological, and Social Services (verified). | Healthy People 2030 MHMD-03 (verified, direct; primary) and MHMD-06 (verified, direct); CDC (2025) 2025 National YRBS, Q94 counseling or therapy (verified, direct; CP-12-23); CDC WSCC, Counseling, Psychological, and Social Services (verified, partial: a school service component). |
-| Y8.11 | Re-verified 2026-09-27 (CP-10-01): CDC YRBS (verified, direct); Healthy People 2030 SU-05 (verified, direct for drug use). SAMHSA Strategic Prevention Framework dropped: it is a planning process, not an outcome framework (CP-01-13 item 5). | *(unchanged text, then)* CP-12-07 (2026-10-16): Miech et al. (2026), Monitoring the Future, perceived risk (verified, partial: the survey pairs it with disapproval, which is outside the code). Knowledge of risks and intentions: no verified component yet (requests V3, V4, V4b, V5b; FD-P32 for any element they do not cover). |
-| Y8.12 | CDC YRBS (verified); CDC & U.S. ED (2014) bullying definitions (located). | CDC YRBSS About page, exposure to community violence (verified, direct; CP-12-23); CDC (2025) 2025 National YRBS, Q11, Q12, Q16, Q21-Q22, Q26-Q27 (verified, direct; CP-12-23); CDC (2024) About Youth Violence (verified, direct; CP-12-07); CDC & U.S. ED (2014) bullying definitions (verified, partial: bullying only). Dating-violence warning signs: no verified component yet (requests V5, V5b; FD-P33 if they fail). |
-| Y8.13 | Harris, Lockwood & Mengers (2009), CJCA white paper (verified). | Harris, Lockwood & Mengers (2009), Defining and Measuring Recidivism: A CJCA White Paper (verified, partial: recidivism measurement; CJCA is now CJJA). OJJDP (2017), Model Programs Guide Literature Review: Diversion from Formal Juvenile Court Processing (verified, direct; CP-12-07). Completing probation, court conditions or a restorative agreement: codebook-defined, FD-P30. |
+| Y8.11 | Re-verified 2026-09-27 (CP-10-01): CDC YRBS (verified, direct); Healthy People 2030 SU-05 (verified, direct for drug use). SAMHSA Strategic Prevention Framework dropped: it is a planning process, not an outcome framework (CP-01-13 item 5). | *(unchanged text, then)* CP-12-07 (2026-10-16): Miech et al. (2026), Monitoring the Future, perceived risk (verified, partial: the survey pairs it with disapproval, which is outside the code). Knowledge of risks and intentions: no verified component yet (requests V3, V4, V4b, V5b; FD-P30 for any element they do not cover). |
+| Y8.12 | CDC YRBS (verified); CDC & U.S. ED (2014) bullying definitions (located). | CDC YRBSS About page, exposure to community violence (verified, direct; CP-12-23); CDC (2025) 2025 National YRBS, Q11, Q12, Q16, Q21-Q22, Q26-Q27 (verified, direct; CP-12-23); CDC (2024) About Youth Violence (verified, direct; CP-12-07); CDC & U.S. ED (2014) bullying definitions (verified, partial: bullying only). Dating-violence warning signs: no verified component yet (requests V5, V5b; FD-P31 if they fail). |
+| Y8.13 | Harris, Lockwood & Mengers (2009), CJCA white paper (verified). | Harris, Lockwood & Mengers (2009), Defining and Measuring Recidivism: A CJCA White Paper (verified, partial: recidivism measurement; CJCA is now CJJA). OJJDP (2017), Model Programs Guide Literature Review: Diversion from Formal Juvenile Court Processing (verified, direct; CP-12-07). Completing probation, court conditions or a restorative agreement: codebook-defined, FD-P28. |
 
 FD ids in `basis` are written as the provisional ids and renumbered with the entries at merge.
 
@@ -241,9 +242,9 @@ FD ids in `basis` are written as the provisional ids and renumbered with the ent
 | Code | Field | Before | After |
 |---|---|---|---|
 | Y8.2 | `fidelity` | `"framework"` | `"adapted"` |
-| Y8.2 | `deviation` | (absent) | `"FD-P31"` (provisional id), after `fidelity` |
+| Y8.2 | `deviation` | (absent) | `"FD-P29"` (provisional id), after `fidelity` |
 | Y8.13 | `fidelity` | `"framework"` | `"adapted"` |
-| Y8.13 | `deviation` | (absent) | `"FD-P30"` (provisional id) |
+| Y8.13 | `deviation` | (absent) | `"FD-P28"` (provisional id) |
 
 Both codes keep verified supports, so neither enters `codebook_extensions`. The follow-up PATCH
 sets the same two fields on Y8.1, Y8.5, Y8.11 and Y8.12 for each entry it opens.
@@ -254,7 +255,7 @@ Inserted after the last 3.x FD entry (FD-P20 today; after FD-P23 and its section
 first). Field labels follow the parsed format (`- **Label:** value`).
 
 ```markdown
-### FD-P30 · Y8.13
+### FD-P28 · Y8.13
 
 - **Status:** open
 - **Fidelity:** adapted
@@ -266,7 +267,7 @@ first). Field labels follow the parsed format (`- **Label:** value`).
 - **Decided in:** CP-12-07 (batch 3 research review, 2026-10-16; decisions settled by Severin on the recommended options).
 - **Revisit:** when the OJJDP performance-measures lead for completion outcomes is filed and verified.
 
-### FD-P31 · Y8.2
+### FD-P29 · Y8.2
 
 - **Status:** open
 - **Fidelity:** adapted
@@ -287,7 +288,7 @@ and adds a support row for each SUPPORTED claim. The text is fixed now so the fo
 mechanical.
 
 ```markdown
-### FD-P32 · Y8.11
+### FD-P30 · Y8.11
 
 - **Status:** open
 - **Fidelity:** adapted
@@ -299,7 +300,7 @@ mechanical.
 - **Decided in:** CP-12-07, decisions Y8-1 and G6.
 - **Revisit:** if a HECAT AOD or Tobacco HBO, or an NHES indicator, verifies for the element.
 
-### FD-P33 · Y8.12
+### FD-P31 · Y8.12
 
 - **Status:** open
 - **Fidelity:** adapted
@@ -307,11 +308,11 @@ mechanical.
 - **Anchor:** CDC (2025) 2025 National YRBS, violence items; CDC (2024) About Youth Violence; CDC YRBSS, community violence (all verified).
 - **Departs:** "dating-violence warning signs" (include) is knowledge, not violence or victimization, and no verified Y8.12 source names it.
 - **Evidence:** S248 ("Youth will be able to identify warning signs of dating violence." → Y8.12, alternate Y8.4).
-- **Alternative considered:** as FD-P32.
+- **Alternative considered:** as FD-P30.
 - **Decided in:** CP-12-07, decisions Y8-1 and G6.
 - **Revisit:** if a HECAT Violence Prevention HBO or an NHES indicator verifies for it.
 
-### FD-P36 · Y8.1
+### FD-P32 · Y8.1
 
 - **Status:** open
 - **Fidelity:** adapted
@@ -323,7 +324,7 @@ mechanical.
 - **Decided in:** CP-12-07, decision G3.
 - **Revisit:** if a HECAT PA HBO or a current YRBS item on the young person's own screen time verifies (V12); watch the PA-R02 revision (CP-12-24).
 
-### FD-P37 · Y8.5
+### FD-unassigned (Y8.5) · Y8.5
 
 - **Status:** open
 - **Fidelity:** adapted
@@ -344,14 +345,14 @@ New section after the entries (bullets use "**Label.**", not "**Label:**", becau
 ```markdown
 ## Batch 3 review: Y8, 2026-10-16 (CP-12-07)
 
-The batch 3 research review (Y8, F1, F2) closed most of Y8's unlogged departures by citation (Y8.1, Y8.3, Y8.5 and Y8.13's diversion half, through CDC HECAT 2021, Healthy People 2030, the 2025 YRBS instruments and OJJDP 2017). Two entries were opened: FD-P30 (Y8.13) and FD-P31 (Y8.2, decision Y1-1).
+The batch 3 research review (Y8, F1, F2) closed most of Y8's unlogged departures by citation (Y8.1, Y8.3, Y8.5 and Y8.13's diversion half, through CDC HECAT 2021, Healthy People 2030, the 2025 YRBS instruments and OJJDP 2017). Two entries were opened: FD-P28 (Y8.13) and FD-P29 (Y8.2, decision Y1-1).
 
-- **Waiting on verification.** Y8.11 knowledge and intentions (FD-P32), Y8.12 warning signs (FD-P33), Y8.1 screen time (FD-P36) and Y8.5 immunizations (FD-P37) are counted entries, opened by a follow-up PATCH for each element requests V3 to V5b, V12 and V13 do not cover (decisions Y8-1, G3, G6).
+- **Waiting on verification.** Y8.11 knowledge and intentions (FD-P30), Y8.12 warning signs (FD-P31), Y8.1 screen time (FD-P32) and Y8.5 immunizations (FD-unassigned (Y8.5)) are counted entries, opened by a follow-up PATCH for each element requests V3 to V5b, V12 and V13 do not cover (decisions Y8-1, G3, G6).
 - **Later Y8 CPs.** Y8.6 behavior is narrowed to symptoms after PR #66, with "use instead" Y1.14, Y4.2 or Y4 domain-only (decision Y8-3; a behavior with no code goes to domain-only with a `codebook_gap` flag, decision G9). Y8.7 "restored" stays while the Keyes positive-affect lead is verified (decision Y8-2). Y8.8 "processing trauma" gets one NCTSN recovery claim, and a codebook-defined entry if it fails (later item 4).
 - **S4.9.** Y8 is at 2/13 now. The four entries waiting on verification would take it to 6/13 (46%), and a Y8.8 entry to 7/13; at 5/13 Y8 is over a third and its anchor is re-reviewed before any further Y8 change (decision G7).
 ```
 
-Drift-table intro: append ", and for CP-12-07 (2026-10-16), which opened FD-P30 and FD-P31 in Y8".
+Drift-table intro: append ", and for CP-12-07 (2026-10-16), which opened FD-P28 and FD-P29 in Y8".
 
 Y8 row, before → after:
 
@@ -426,10 +427,10 @@ V12 claim_id: y8a-30 · code: Y8.1 · cite_as: Centers for Disease Control and P
 V13 claim_id: y8a-31 · code: Y8.5 · cite_as: Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module PHW (Personal Health and Wellness). · claimed_component: A healthy behavior outcome or expectation that names immunizations or vaccinations in general (not one vaccine). · url: https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_phw.pdf
 ```
 
-What depends on the answers: V2 SUPPORTED closes FD-P31 (Y8.2 back to framework). V3, V4 or V5b
-SUPPORTED for knowledge keeps "knowledge of risks" out of FD-P32. V4 or V4b SUPPORTED for
-intentions keeps "intentions" out. V5 or V5b SUPPORTED means FD-P33 is not opened. V12 SUPPORTED
-means FD-P36 is not opened; V13 SUPPORTED means FD-P37 is not opened. Each SUPPORTED claim becomes
+What depends on the answers: V2 SUPPORTED closes FD-P29 (Y8.2 back to framework). V3, V4 or V5b
+SUPPORTED for knowledge keeps "knowledge of risks" out of FD-P30. V4 or V4b SUPPORTED for
+intentions keeps "intentions" out. V5 or V5b SUPPORTED means FD-P31 is not opened. V12 SUPPORTED
+means FD-P32 is not opened; V13 SUPPORTED means FD-unassigned (Y8.5) is not opened. Each SUPPORTED claim becomes
 a support row in the follow-up PATCH.
 
 ## Gold impact

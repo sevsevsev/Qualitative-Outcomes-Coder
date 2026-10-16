@@ -20,6 +20,7 @@ because nothing here reaches the coding prompt.
 | Version bump | PATCH when applied (3.1.4 today; one PATCH later if another release lands first). Ships in the same release as CP-11-01 part (a) or after it, never before (see Dependencies). |
 | Requirement served | R4 drift |
 | Status | Status: draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: `fidelity`/`deviation` for Y1.10, Y1.13, Y1.15; FD-P21, FD-P22, FD-P23; the dated Y1 section with the Y1.2 Seal bullet; Y1 drift row. Waits for the gate: nothing (no part b). |
 | Reaches the coding prompt? | **No.** Every change is in `fidelity`, `deviation` and `DEVIATIONS.md`, none of which `definitionsText` prints. Lands now (G10); `npm test` is the gate. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | new FD-P21 (provisional id; Y1.10, sector-widening, counted), new FD-P22 (provisional id; Y1.13, sector-widening, counted), new FD-P23 (provisional id; Y1.15, merged-components, not counted; passes the G6 strict test, see below). Y1.14 and Y1.2: none, with the reason recorded. Y1 drift 0/18 → 2/18 (11%). |

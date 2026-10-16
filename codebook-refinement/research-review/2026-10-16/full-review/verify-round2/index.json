@@ -1,0 +1,267 @@
+{
+ "CP-11-01-V1": {
+  "cp_file": "codebook-refinement/proposals/CP-11-01-y1-citation-fixes.md",
+  "v_label": "V1",
+  "optional": false
+ },
+ "CP-11-02-V2": {
+  "cp_file": "codebook-refinement/proposals/CP-11-02-y1-deviation-log.md",
+  "v_label": "V2",
+  "optional": false
+ },
+ "CP-12-01-V1": {
+  "cp_file": "codebook-refinement/proposals/CP-12-01-y2-citations-and-deviations.md",
+  "v_label": "V1",
+  "optional": false
+ },
+ "CP-12-20-V-CASEL-1-Y4.1": {
+  "cp_file": "codebook-refinement/proposals/CP-12-20-casel-url-and-self-awareness-table.md",
+  "v_label": "V-CASEL-1",
+  "optional": false
+ },
+ "CP-12-20-V-CASEL-1-Y4.3": {
+  "cp_file": "codebook-refinement/proposals/CP-12-20-casel-url-and-self-awareness-table.md",
+  "v_label": "V-CASEL-1",
+  "optional": false
+ },
+ "CP-12-20-V-CASEL-1-Y4.4": {
+  "cp_file": "codebook-refinement/proposals/CP-12-20-casel-url-and-self-awareness-table.md",
+  "v_label": "V-CASEL-1",
+  "optional": false
+ },
+ "CP-12-20-V-CASEL-1-Y4.5": {
+  "cp_file": "codebook-refinement/proposals/CP-12-20-casel-url-and-self-awareness-table.md",
+  "v_label": "V-CASEL-1",
+  "optional": false
+ },
+ "CP-12-20-V-CASEL-1-Y4.6": {
+  "cp_file": "codebook-refinement/proposals/CP-12-20-casel-url-and-self-awareness-table.md",
+  "v_label": "V-CASEL-1",
+  "optional": false
+ },
+ "CP-12-20-V-CASEL-1-Y4.10": {
+  "cp_file": "codebook-refinement/proposals/CP-12-20-casel-url-and-self-awareness-table.md",
+  "v_label": "V-CASEL-1",
+  "optional": false
+ },
+ "CP-12-20-V-CASEL-1-Y4.12": {
+  "cp_file": "codebook-refinement/proposals/CP-12-20-casel-url-and-self-awareness-table.md",
+  "v_label": "V-CASEL-1",
+  "optional": false
+ },
+ "CP-12-20-V-CASEL-1-Y5.1": {
+  "cp_file": "codebook-refinement/proposals/CP-12-20-casel-url-and-self-awareness-table.md",
+  "v_label": "V-CASEL-1",
+  "optional": false
+ },
+ "CP-12-20-V-CASEL-1-Y5.4": {
+  "cp_file": "codebook-refinement/proposals/CP-12-20-casel-url-and-self-awareness-table.md",
+  "v_label": "V-CASEL-1",
+  "optional": false
+ },
+ "CP-12-20-V-CASEL-1-Y2.2": {
+  "cp_file": "codebook-refinement/proposals/CP-12-20-casel-url-and-self-awareness-table.md",
+  "v_label": "V-CASEL-1",
+  "optional": false
+ },
+ "CP-12-20-V-CASEL-1-self-awareness-list": {
+  "cp_file": "codebook-refinement/proposals/CP-12-20-casel-url-and-self-awareness-table.md",
+  "v_label": "V-CASEL-1",
+  "optional": false
+ },
+ "CP-12-01-V2": {
+  "cp_file": "codebook-refinement/proposals/CP-12-01-y2-citations-and-deviations.md",
+  "v_label": "V2",
+  "optional": false
+ },
+ "CP-12-01-V3": {
+  "cp_file": "codebook-refinement/proposals/CP-12-01-y2-citations-and-deviations.md",
+  "v_label": "V3",
+  "optional": false
+ },
+ "CP-12-02-V1": {
+  "cp_file": "codebook-refinement/proposals/CP-12-02-y3-citations-and-deviations.md",
+  "v_label": "V1",
+  "optional": false
+ },
+ "CP-12-03-V1": {
+  "cp_file": "codebook-refinement/proposals/CP-12-03-y4-citations-and-deviations.md",
+  "v_label": "V1",
+  "optional": true
+ },
+ "CP-12-07-V5b": {
+  "cp_file": "codebook-refinement/proposals/CP-12-07-y8-citations-and-deviation-log.md",
+  "v_label": "V5b",
+  "optional": false
+ },
+ "CP-12-07-V2": {
+  "cp_file": "codebook-refinement/proposals/CP-12-07-y8-citations-and-deviation-log.md",
+  "v_label": "V2",
+  "optional": false
+ },
+ "CP-12-07-V3": {
+  "cp_file": "codebook-refinement/proposals/CP-12-07-y8-citations-and-deviation-log.md",
+  "v_label": "V3",
+  "optional": false
+ },
+ "CP-12-07-V4": {
+  "cp_file": "codebook-refinement/proposals/CP-12-07-y8-citations-and-deviation-log.md",
+  "v_label": "V4",
+  "optional": false
+ },
+ "CP-12-07-V5": {
+  "cp_file": "codebook-refinement/proposals/CP-12-07-y8-citations-and-deviation-log.md",
+  "v_label": "V5",
+  "optional": false
+ },
+ "CP-12-07-V12": {
+  "cp_file": "codebook-refinement/proposals/CP-12-07-y8-citations-and-deviation-log.md",
+  "v_label": "V12",
+  "optional": false
+ },
+ "CP-12-07-V13": {
+  "cp_file": "codebook-refinement/proposals/CP-12-07-y8-citations-and-deviation-log.md",
+  "v_label": "V13",
+  "optional": false
+ },
+ "CP-12-07-V4b": {
+  "cp_file": "codebook-refinement/proposals/CP-12-07-y8-citations-and-deviation-log.md",
+  "v_label": "V4b",
+  "optional": false
+ },
+ "CP-12-10-V1": {
+  "cp_file": "codebook-refinement/proposals/CP-12-10-a1-citations-and-deviation.md",
+  "v_label": "V1",
+  "optional": false
+ },
+ "CP-12-04-V-Y5-1": {
+  "cp_file": "codebook-refinement/proposals/CP-12-04-y5-citations-and-deviations.md",
+  "v_label": "V-Y5-1",
+  "optional": false
+ },
+ "CP-12-04-V-Y5-2": {
+  "cp_file": "codebook-refinement/proposals/CP-12-04-y5-citations-and-deviations.md",
+  "v_label": "V-Y5-2",
+  "optional": false
+ },
+ "CP-12-04-V-Y5-3": {
+  "cp_file": "codebook-refinement/proposals/CP-12-04-y5-citations-and-deviations.md",
+  "v_label": "V-Y5-3",
+  "optional": false
+ },
+ "CP-12-05-V-Y6-1": {
+  "cp_file": "codebook-refinement/proposals/CP-12-05-y6-citations-and-deviations.md",
+  "v_label": "V-Y6-1",
+  "optional": false
+ },
+ "CP-12-05-V-Y6-2": {
+  "cp_file": "codebook-refinement/proposals/CP-12-05-y6-citations-and-deviations.md",
+  "v_label": "V-Y6-2",
+  "optional": true
+ },
+ "CP-12-28-V-HOST-5-circle-2002-civic-indicators": {
+  "cp_file": "codebook-refinement/proposals/CP-12-28-official-copy-host-rule.md",
+  "v_label": "V-HOST-5",
+  "optional": false
+ },
+ "CP-12-08-V6": {
+  "cp_file": "codebook-refinement/proposals/CP-12-08-f1-citations.md",
+  "v_label": "V6",
+  "optional": false
+ },
+ "CP-12-08-V7": {
+  "cp_file": "codebook-refinement/proposals/CP-12-08-f1-citations.md",
+  "v_label": "V7",
+  "optional": false
+ },
+ "CP-12-24-V-STATUS-2": {
+  "cp_file": "codebook-refinement/proposals/CP-12-24-status-and-rename-notes.md",
+  "v_label": "V-STATUS-2",
+  "optional": false
+ },
+ "CP-12-08-V10": {
+  "cp_file": "codebook-refinement/proposals/CP-12-08-f1-citations.md",
+  "v_label": "V10",
+  "optional": false
+ },
+ "CP-12-08-V14": {
+  "cp_file": "codebook-refinement/proposals/CP-12-08-f1-citations.md",
+  "v_label": "V14",
+  "optional": false
+ },
+ "CP-12-24-V-STATUS-1": {
+  "cp_file": "codebook-refinement/proposals/CP-12-24-status-and-rename-notes.md",
+  "v_label": "V-STATUS-1",
+  "optional": false
+ },
+ "CP-12-09-V8": {
+  "cp_file": "codebook-refinement/proposals/CP-12-09-f2-citations.md",
+  "v_label": "V8",
+  "optional": false
+ },
+ "CP-12-09-V9": {
+  "cp_file": "codebook-refinement/proposals/CP-12-09-f2-citations.md",
+  "v_label": "V9",
+  "optional": false
+ },
+ "CP-12-09-V11": {
+  "cp_file": "codebook-refinement/proposals/CP-12-09-f2-citations.md",
+  "v_label": "V11",
+  "optional": false
+ },
+ "CP-12-28-V-HOST-4": {
+  "cp_file": "codebook-refinement/proposals/CP-12-28-official-copy-host-rule.md",
+  "v_label": "V-HOST-4",
+  "optional": false
+ },
+ "CP-12-28-V-HOST-1": {
+  "cp_file": "codebook-refinement/proposals/CP-12-28-official-copy-host-rule.md",
+  "v_label": "V-HOST-1",
+  "optional": false
+ },
+ "CP-12-28-V-HOST-2": {
+  "cp_file": "codebook-refinement/proposals/CP-12-28-official-copy-host-rule.md",
+  "v_label": "V-HOST-2",
+  "optional": false
+ },
+ "CP-12-28-V-HOST-3": {
+  "cp_file": "codebook-refinement/proposals/CP-12-28-official-copy-host-rule.md",
+  "v_label": "V-HOST-3",
+  "optional": false
+ },
+ "CP-12-28-V-HOST-5-conley-2007-college-readiness": {
+  "cp_file": "codebook-refinement/proposals/CP-12-28-official-copy-host-rule.md",
+  "v_label": "V-HOST-5",
+  "optional": false
+ },
+ "CP-12-28-V-HOST-5-farrington-2012": {
+  "cp_file": "codebook-refinement/proposals/CP-12-28-official-copy-host-rule.md",
+  "v_label": "V-HOST-5",
+  "optional": false
+ },
+ "CP-12-28-V-HOST-5-mapp-kuttner-2013": {
+  "cp_file": "codebook-refinement/proposals/CP-12-28-official-copy-host-rule.md",
+  "v_label": "V-HOST-5",
+  "optional": false
+ },
+ "CP-12-28-V-HOST-5-hulleman-2010-utility-value": {
+  "cp_file": "codebook-refinement/proposals/CP-12-28-official-copy-host-rule.md",
+  "v_label": "V-HOST-5",
+  "optional": false
+ },
+ "CP-12-28-V-HOST-7": {
+  "cp_file": "codebook-refinement/proposals/CP-12-28-official-copy-host-rule.md",
+  "v_label": "V-HOST-7",
+  "optional": false
+ },
+ "CP-12-28-V-HOST-6": {
+  "cp_file": "codebook-refinement/proposals/CP-12-28-official-copy-host-rule.md",
+  "v_label": "V-HOST-6",
+  "optional": false
+ },
+ "CP-12-28-V-HOST-8": {
+  "cp_file": "codebook-refinement/proposals/CP-12-28-official-copy-host-rule.md",
+  "v_label": "V-HOST-8",
+  "optional": false
+ }
+}

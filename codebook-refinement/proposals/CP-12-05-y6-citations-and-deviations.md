@@ -5,21 +5,22 @@
 | Field | Value |
 |---|---|
 | Type | CITATION_FIX (with the matching `DEVIATIONS.md` entries, as in recommendations section 2) |
-| Codes touched | Source lines (part b only): Y6.1, Y6.3, Y6.4, Y6.7. `basis`: Y6.1, Y6.3, Y6.4, Y6.6, Y6.7. `fidelity`/`deviation`: Y6.6 (framework → adapted, FD-P25). Registry: `search-40-assets` (Y6.1 component, new Y6.4 support), `iste-students-2016` (note), plus 3 new sources. No definition, include, exclude, useInstead, example, hint or rulesText changes. **Y6.2 and Y6.5 are not touched. "Leadership" in Y6.4 is not touched** (it stays, with no FD, decision Y6-1; its rule and exclude wait for PR #62, see Deferred). Domain Y6 `frameworkBasis` is not edited here (the ISTE year and the secondary clause are in CP-12-29). |
+| Codes touched | Source lines (part b only): Y6.1, Y6.3, Y6.4, Y6.7. `basis`: Y6.1, Y6.3, Y6.4, Y6.6, Y6.7. `fidelity`/`deviation`: Y6.6 (framework → adapted, FD-P27). Registry: `search-40-assets` (Y6.1 component, new Y6.4 support), `iste-students-2016` (note), plus 3 new sources. No definition, include, exclude, useInstead, example, hint or rulesText changes. **Y6.2 and Y6.5 are not touched. "Leadership" in Y6.4 is not touched** (it stays, with no FD, decision Y6-1; its rule and exclude wait for PR #62, see Deferred). Domain Y6 `frameworkBasis` is not edited here (the ISTE year and the secondary clause are in CP-12-29). |
 | Version bump | PATCH. Part (a): the next PATCH when applied (same release as CP-12-04 if both are approved). Part (b): inside the single batched Source PATCH after PRs #62 and #66 merge (decision G10). |
 | Requirement served | R1 frameworks, R4 drift |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: registry rows (VIA, Watts-Diemer-Voight, ISTE 2024, Developmental Assets Y6.4, NAAEE Y6.6 as a partial row after V-Y6-1 PARTIAL); `basis` Y6.1, Y6.3, Y6.4, Y6.6, Y6.7; Y6.6 adapted (FD-P27 stays open, G3); FD-P13 closure note; Batch 2 bullets and drift row. Waits for the gate: Source lines Y6.1, Y6.3, Y6.4, Y6.7 and the Y6 `frameworkBasis` (CP-12-29). |
 | Enum cost | +0 (160 → 160) |
-| Framework deviation | new **FD-P25 (provisional id)**, Y6.6, codebook-defined element "connection to nature", counted (decision G3: the only partial source, Tbilisi, is narrower than the code); changed FD-P13 (closed entry; its closure note is rescoped to say what CIRCLE covers; stays closed). None for Y6.1 (decision G5), Y6.3, Y6.4 (decisions G3 and Y6-1), Y6.7; reasons recorded. Y6 drift: 0/7 → 1/7. |
+| Framework deviation | new **FD-P27 (provisional id)**, Y6.6, codebook-defined element "connection to nature", counted (decision G3: the only partial source, Tbilisi, is narrower than the code); changed FD-P13 (closed entry; its closure note is rescoped to say what CIRCLE covers; stays closed). None for Y6.1 (decision G5), Y6.3, Y6.4 (decisions G3 and Y6-1), Y6.7; reasons recorded. Y6 drift: 0/7 → 1/7. |
 
 ## What lands when
 
 | Change | Reaches the prompt? | Lands |
 |---|---|---|
-| (a1) `fidelity`/`deviation`: Y6.6 → adapted, FD-P25 | no | now |
+| (a1) `fidelity`/`deviation`: Y6.6 → adapted, FD-P27 | no | now |
 | (a2) `basis`: Y6.1, Y6.3, Y6.4, Y6.6, Y6.7 | no | now |
 | (a3) registry rows (shared module `verification_2026_10_16_b2.py`) | no | now |
-| (a4) `DEVIATIONS.md`: FD-P13 closure note, FD-P25, "Batch 2 review" bullets, drift table | no | now |
+| (a4) `DEVIATIONS.md`: FD-P13 closure note, FD-P27, "Batch 2 review" bullets, drift table | no | now |
 | (b) Source lines: Y6.1, Y6.3, Y6.4, Y6.7 | yes | the batched gate after PRs #62 and #66 |
 | (b) Y6 `frameworkBasis`: ISTE year and secondary clause (decision G2) | yes | in CP-12-29, same gate (not edited by this CP) |
 
@@ -62,11 +63,11 @@ needed under decision G5, and is not bundled.
 | Code | Field | Before | After |
 |---|---|---|---|
 | Y6.6 | `fidelity` | `"framework"` | `"adapted"` |
-| Y6.6 | `deviation` | (absent) | `"FD-P25"` (provisional id; renumbered at merge), inserted after `fidelity` |
+| Y6.6 | `deviation` | (absent) | `"FD-P27"` (provisional id; renumbered at merge), inserted after `fidelity` |
 
 The verified NAAEE text does not name connection to nature, so the departure is logged now.
-V-Y6-1 (the full NAAEE K-12 Guidelines) is sent at the same time; it is FD-P25's revisit
-trigger. If it finds a component that covers connection to nature, a later PATCH closes FD-P25,
+V-Y6-1 (the full NAAEE K-12 Guidelines) is sent at the same time; it is FD-P27's revisit
+trigger. If it finds a component that covers connection to nature, a later PATCH closes FD-P27,
 sets `fidelity` back to `"framework"` and updates the NAAEE support from the new record.
 
 #### (a2) `codebooks/youthOutcomesV3.data.ts`: `basis` notes
@@ -76,7 +77,7 @@ sets `fidelity` back to `"framework"` and updates the NAAEE support from the new
 | Y6.1 | Search Institute 40 Developmental Assets, Positive Values (located); Lerner et al. (2005), Character (partial). | Search Institute 40 Developmental Assets, Positive Values (verified, direct: integrity, honesty, responsibility). VIA Institute on Character, VIA Classification of Character Strengths, Forgiveness (verified, direct; claim y6-07; cited for this component only). Sportsmanship and faith-grounded values are named instances of Positive Values (honesty, integrity) practised in a setting, which the registry quotes (decision G5); no FD. |
 | Y6.3 | Muhammad, Five Pursuits, Pursuit 4 Criticality (verified). No measurement framework in the records [VERIFY before adding one]. | Muhammad, Five Pursuits, Pursuit 4 Criticality (verified, direct). Watts, Diemer & Voight (2011), critical consciousness: critical reflection and critical action (verified, direct; claim y6-01). |
 | Y6.4 | Re-verified 2026-09-27 (CP-10-02): CIRCLE (2002) core civic engagement indicators, political voice (contacting officials, petitions, protest, boycotts) and electoral participation (verified, direct). Now Framework; FD-P13 closed. NCSS C3 Dimension 4 (partial) no longer cited. | *(unchanged text, then)* CP-12-05: CIRCLE covers the behavioral core only. Civic efficacy rests on Watts, Diemer & Voight (2011), political efficacy (verified, partial; claim y6-02), and youth councils and advisory roles on Search Institute, 40 Developmental Assets, "Young people are given useful roles on the community" (verified, partial; claim y6-03). Both sources are broader than the code, so no FD (decision G3). "Leadership" in the name needs no FD (decision Y6-1); its rule 7 line and an exclude pointer to Y4.7 follow PR #62. |
-| Y6.6 | NAAEE (2019) K-12 Guidelines, Personal and Civic Responsibility (verified; 'connection to nature' not covered). | NAAEE (2019) K-12 Guidelines, Personal and Civic Responsibility (verified, direct for stewardship and pro-environmental behavior). Connection to nature: not in the verified NAAEE text (the registry's copy is the executive summary); codebook-defined element, FD-P25. The full guidelines are with a verifier (V-Y6-1). |
+| Y6.6 | NAAEE (2019) K-12 Guidelines, Personal and Civic Responsibility (verified; 'connection to nature' not covered). | NAAEE (2019) K-12 Guidelines, Personal and Civic Responsibility (verified, direct for stewardship and pro-environmental behavior). Connection to nature: not in the verified NAAEE text (the registry's copy is the executive summary); codebook-defined element, FD-P27. The full guidelines are with a verifier (V-Y6-1). |
 | Y6.7 | ISTE Standards for Students (2016), Standard 2 Digital Citizen (verified). | ISTE Standards for Students (2024), 1.2 Digital Citizen: 1.2.b Online Interactions, 1.2.d Digital Privacy (verified, direct; claim y6-06). The 2016 edition, Standard 2 (verified 2026-09-27), is superseded and kept in the registry as history. |
 
 #### (a3) Registry (rows added to the shared module defined in CP-12-04)
@@ -110,7 +111,7 @@ NOTES.update({
 })
 SUPPORT_NOTE_APPEND.update({
     ('iste-students-2016', 'Y6.7'): ' Superseded (CP-12-05): the Source line cites the 2024 edition, 1.2.b and 1.2.d.',
-    ('naaee-k12-2019', 'Y6.6'): ' CP-12-05: connection to nature is not in this verified text (executive summary); logged as FD-P25. V-Y6-1 checks the full guidelines.',
+    ('naaee-k12-2019', 'Y6.6'): ' CP-12-05: connection to nature is not in this verified text (executive summary); logged as FD-P27. V-Y6-1 checks the full guidelines.',
 })
 EXTRA_SUPPORTS = [  # (source, code, component, claim); fit from the verdict
     ('search-40-assets', 'Y6.4', "Empowerment asset (by page order): 'Young people are given useful roles on the community' (youth councils and advisory roles)", 'y6-03'),
@@ -162,10 +163,10 @@ Result for CP-12-05 alone: +3 sources and +5 supports (87 → 90, 146 → 151 on
 - **Status:** closed (2026-09-27, CP-10-02: CIRCLE's 2002 core civic engagement indicators, verified, added to Y6's framework basis; Y6.4 matches its political voice and electoral indicators. Scope of the closure, CP-12-05, 2026-10-16: CIRCLE covers Y6.4's behavioral core only, that is contacting officials, petitions, protest, boycotts and voting; civic efficacy rests on Watts, Diemer & Voight (2011) political efficacy and youth councils on Search Institute's useful-roles asset, both verified with the source broader than the code, so they need no entry (decision G3); "leadership" in the name needs no entry either (decision Y6-1), and its rule 7 line and exclude pointer to Y4.7 follow PR #62)
 ```
 
-**New entry**, inserted after FD-P24 (CP-12-04):
+**New entry**, inserted after FD-P26 (CP-12-04):
 
 ```markdown
-### FD-P25 · Y6.6
+### FD-P27 · Y6.6
 
 - **Status:** open
 - **Fidelity:** adapted
@@ -192,7 +193,7 @@ create it here if CP-12-05 lands first):
 - **Y6.1, sportsmanship and faith-grounded values.** FD none. Both are named instances of Search Institute Positive Values (integrity, honesty, responsibility), which the registry quotes, practised in a setting with the construct unchanged (decision G5). Forgiveness is cited to VIA's Forgiveness component (claim y6-07). Gold: H015, S180, S125, S145, S167.
 - **Y6.4, civic efficacy and youth councils.** FD none. Watts, Diemer & Voight (2011), "Political efficacy is the perceived capacity to effect social and political change" (claim y6-02), and Search Institute, "Young people are given useful roles on the community" (claim y6-03), are both PARTIAL because the source is broader than the code (decision G3). Gold: H030, S039, S211.
 - **Y6.4, leadership.** FD none (decision Y6-1). A rule 7 line and an exclude pointer to Y4.7 follow PR #62 in their own CP; they must not flip S059 (leading a trail cleanup, Y4.7).
-- **Y6.6, connection to nature.** FD-P25 opened (codebook-defined element). V-Y6-1 checks the full NAAEE Guidelines.
+- **Y6.6, connection to nature.** FD-P27 opened (codebook-defined element). V-Y6-1 checks the full NAAEE Guidelines.
 ```
 
 **Drift table.** Y6 row, before and after:
@@ -256,19 +257,19 @@ Expected flips: none.
 | watts-diemer-voight-2011 → Y6.4 | verified, partial | political efficacy | y6-02 PARTIAL: "Political efficacy is the perceived capacity to effect social and political change" |
 | search-40-assets → Y6.4 | verified, partial | useful roles (Empowerment by page order) | y6-03 PARTIAL: "Young people are given useful roles on the community." |
 | iste-students-2024 (new) | verified | 1.2.d (and 1.2.b, in the verifier's note) | y6-06 SUPPORTED: "Students take action to protect their digital privacy on devices and manage their personal data and security while online." |
-| naaee-k12-2019 | verified (unchanged) | Personal and Civic Responsibility | existing CP-10-01 record; V-Y6-1 pending (FD-P25's revisit trigger) |
+| naaee-k12-2019 | verified (unchanged) | Personal and Civic Responsibility | existing CP-10-01 record; V-Y6-1 pending (FD-P27's revisit trigger) |
 
 Caveats carried into registry notes: y6-03's Empowerment placement is by page order; y6-06's
 excerpt covers 1.2.d only and 1.2.b is in the note; y6-07's classification originates with
 Peterson & Seligman (2004), published by VIA (verifier: "the attribution is acceptable").
 
 Considered and not used: UNESCO-UNEP Tbilisi (y6-05, PARTIAL, third-party host; narrower than
-the code, so it does not close FD-P25, and it is not cited); Search "Service to others" for Y6.5
+the code, so it does not close FD-P27, and it is not cited); Search "Service to others" for Y6.5
 (y6-04; later cycle).
 
 ## Verification requests
 
-**V-Y6-1. NAAEE K-12 Guidelines, full text, for connection to nature** (FD-P25's revisit
+**V-Y6-1. NAAEE K-12 Guidelines, full text, for connection to nature** (FD-P27's revisit
 trigger; non-gating for this CP).
 
 ```
@@ -303,7 +304,7 @@ efficacy element on the existing anchor; this CP does not wait for it.
 |---|---|
 | G10 | Part (a) lands now; part (b) waits for the one gate after PRs #62 and #66. |
 | G5 | Y6.1: sportsmanship and faith-grounded values are instances of Positive Values; no FD. |
-| G3 | Y6.4: Watts and Search Institute are broader than the code, so no FD. Y6.6: Tbilisi is narrower than the code, so FD-P25 opens. |
+| G3 | Y6.4: Watts and Search Institute are broader than the code, so no FD. Y6.6: Tbilisi is narrower than the code, so FD-P27 opens. |
 | G8 | The Watts lab copy is admissible (bibliographic match recorded). Tbilisi's third-party copy would not be, and it is not used. |
 | Y6-1 | "Leadership" stays in Y6.4 with no FD; rule 7 and an exclude pointer to Y4.7 follow PR #62 in their own CP. |
 | G2 | VIA and Watts go into Y6's `frameworkBasis` as a secondary clause, through CP-12-29, with the ISTE year. |
@@ -317,7 +318,7 @@ The batch's optional Tbilisi support is not taken (its recommendation was no).
   boundary. This CP changes no Y6.4 definition, include, exclude, rule or name.
 - **PR #66.** No Y6 code. CP-11-02's FD-P21..P23 may land first.
 - **CP-12-04.** Creates the shared module and the "Batch 2 review" section in `DEVIATIONS.md`;
-  this CP adds rows to both. FD-P25 assumes FD-P24 exists; both ids are provisional.
+  this CP adds rows to both. FD-P27 assumes FD-P26 exists; both ids are provisional.
 - **CP-12-29.** Owns the Y6 `frameworkBasis` edits (ISTE year, secondary clause).
 - **CP-12-25** sweeps stale "(located)" in `basis`; the Y6.1 edit here is the same change.
 

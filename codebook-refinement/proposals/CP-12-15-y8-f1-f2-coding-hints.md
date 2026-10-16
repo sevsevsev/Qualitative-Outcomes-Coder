@@ -9,6 +9,7 @@
 | Version bump | PATCH, relative to the version current when the hint text is applied (after CP-12-14's MINOR, so 3.3.x if nothing else intervenes). The `CONFUSIONS.md` and test part bumps nothing on its own: it is documentation and tests, not codebook data. |
 | Requirement served | R3 tie-breakers |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: the "Codebook 3.x tie-breakers" section with CF-029 and CF-030 (hint held); `sync.test.ts` and `registry.test.ts` read only the 2.x part of CONFUSIONS.md; the new "3.x confusion entries (S3.1)" test. Waits for the gate: hint 29 and hint 30 text, after Severin adjudicates their proposed rows (G11). |
 | Reaches the coding prompt? | **Mixed.** The `useInstead` and `exclude` edits are printed in `definitionsText` and need their own two-run design-set gate. The `CONFUSIONS.md` entries and the test edits do not reach the prompt. See "What lands when". |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | **none**, for each hint. Hint 29 routes by whose coverage changes. A young person's own coverage stays in Y8.5 (Healthy People 2030 AHS-01, NYTD access to health insurance; both direct for Y8.5). A household's benefits enrollment stays in F2.1 (AHS-01 partial, a broader category that names any coverage; Ascend Economic Assets). Hint 30 routes by whose eating changes. Each side stays inside a framework that already names it: HECAT FN HBO 3 and 10 for a young person's own eating (Y8.1, CP-12-07); SNAP-Ed MT1 "individual and family healthy eating behaviors" for household practice (F1.3, CP-12-08); HFSSM and NWS-01 for having or getting food (F2.2, CP-12-09), joined by the 2022 nutrition-security definition once V8 confirms it. No construct crosses a framework's boundary. |
@@ -67,7 +68,7 @@ visible where the coder reads "Use instead". No definition widens or narrows.
 
 | Part | Reaches the prompt? | When |
 |---|---|---|
-| `CONFUSIONS.md`: the "Codebook 3.x tie-breakers" section, CF-P01 and CF-P02 | no | now (after CP-12-07, -08 and -09, whose rows the rationales cite) |
+| `CONFUSIONS.md`: the "Codebook 3.x tie-breakers" section, CF-029 and CF-030 | no | now (after CP-12-07, -08 and -09, whose rows the rationales cite) |
 | Test edits (`sync.test.ts`, `registry.test.ts`, `youthOutcomesV3.test.ts`) | no | now, same commit as the CF entries |
 | Hint 29 text (F2.1, Y8.5 `useInstead`) | yes | after Severin adjudicates the hint-29 proposed rows, including the boundary row (G11), then its own two-run gate |
 | Hint 30 text (Y8.1, F1.3, F2.2 `useInstead`; F1.3 `exclude`) | yes | after Severin adjudicates the hint-30 proposed rows (G11), then its own two-run gate |
@@ -190,7 +191,7 @@ Entries for codebook 3.x (`codebooks/youthOutcomesV3.data.ts`) use `CF-P##` ids 
 ```
 
 ```markdown
-### CF-P01: Whose health coverage? · hint held (CP-12-15, decision G11)
+### CF-029: Whose health coverage? · hint held (CP-12-15, decision G11)
 
 **Codes:** **Y8.5** · F2.1
 
@@ -206,7 +207,7 @@ Entries for codebook 3.x (`codebooks/youthOutcomesV3.data.ts`) use `CF-P##` ids 
 ```
 
 ```markdown
-### CF-P02: Whose eating? · hint held (CP-12-15, decision G11)
+### CF-030: Whose eating? · hint held (CP-12-15, decision G11)
 
 **Codes:** **Y8.1** · F1.3 · F2.2
 
@@ -230,7 +231,7 @@ the status suffix changes from "hint held" to the version that carries it.
 The existing CF tests read the whole file as 2.x:
 
 - `registry.test.ts` "gives every confusion entry at least two gold examples" matches only
-  `^### (CF-\d{3})`. `CF-P01` is skipped, so 3.x entries go unchecked.
+  `^### (CF-\d{3})`. `CF-029` is skipped, so 3.x entries go unchecked.
 - `sync.test.ts` splits `CONFUSIONS.md` on `### ` and reads code numbers with a 2.x regex, so
   "F2.1" is read as 2.x "2.1", "Y8.5" as "8.5", and "F1.3" as "1.3". Those 2.x titles are not in
   `PAIRS_WITHOUT_CF`, and all are live 2.x codes, so the tests would pass, but for a wrong reason,

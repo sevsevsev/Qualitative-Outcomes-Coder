@@ -17,6 +17,7 @@ the coding model reads, so that part waits for the shared test run after the two
 | Version bump | Part (a): PATCH against the version current when applied. Part (b): inside the single Source/`frameworkBasis` PATCH after PRs #62 and #66 (G10). |
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: part (a): `epstein-six-types` moved to the Corwin handout (cite_as with the handout title from round-2 claim CP-12-08-V14's corrected_cite_as; publisher Corwin; 2019; source excerpt f1-03); F1.2 (f1-03, direct) and F1.8 (f1-04, partial) re-reads; copy notes on F1.1, F1.9 and A2.6; F1.8 `basis` (without the Mapp Version 2 clause, which is CP-12-11's note and has not landed). Waits for the gate: the F1.7 Source line and the `mapp-kuttner-2013` F1.7 removal and F1.7 `basis` (part b). Held: the A2.6 component (CP-12-18) and F1.9 re-point (PR #62). |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none |
 

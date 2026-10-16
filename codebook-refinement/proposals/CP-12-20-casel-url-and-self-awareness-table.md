@@ -16,6 +16,7 @@ the same skill for both Emotion Awareness (Y4.1) and Self-Understanding & Identi
 | Version bump | PATCH, against the version current when applied (3.1.4 today, so 3.1.5; the next PATCH if PR #62 or PR #66 merges first) |
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: `casel-2020` URL of record (11.2020 PDF), source excerpt and note with the Self-Awareness allocation table (completed from round-2 claim V-CASEL-1 self-awareness-list; "Demonstrating honesty and integrity" is unallocated); V-CASEL-1 re-reads for Y4.1, Y4.3, Y4.4, Y4.5, Y4.6, Y4.10, Y4.12, Y5.1, Y5.4 with fits unchanged (Y5.1 came back PARTIAL and stays partial); a copy note on the other CP-10-01 rows; the Y2.2 claim is recorded only (no Y2.2 support until CP-12-01). Waits for the gate: nothing. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none |
 

@@ -16,6 +16,7 @@ Nothing the coding model reads changes, so this lands now without a test run.
 | Version bump | PATCH against the version current when applied |
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: the two YRBS 2025 instrument entries with item-level supports; `cdc-yrbss` name, note and Y8.12 re-check; the Y8.1 `basis` sentence. Waits for the gate: nothing. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none |
 

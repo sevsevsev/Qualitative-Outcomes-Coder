@@ -205,6 +205,10 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from verification_2026_09_27 import apply as apply_2026_09_27
 apply_2026_09_27(out, CODES)
+# 3.1.5: the 2026-10-16 research review (CP-11-01, CP-12-02 ... CP-12-28; see
+# review_2026_10_16.py for the engine and the dated modules it applies in order).
+from review_2026_10_16 import apply_all as apply_2026_10_16
+apply_2026_10_16(out, CODES)
 SUPPORTED_CODES = {sup['code'] for s in out.values() for sup in s['supports']}
 
 dev = (ROOT / 'codebook-refinement/DEVIATIONS.md').read_text()
@@ -214,10 +218,34 @@ for cid, c in CODES.items():
         assert c['fidelity'] == 'codebook-defined' or c.get('deviation'), cid
         extensions.append({'code': cid, 'reason': f"Codebook-defined: no verified or located framework names this construct. See {c.get('deviation', 'DEVIATIONS.md')}."})
 
+# CP-12-28 (G8): official copy, or a secondary host with a recorded bibliographic match.
+from urllib.parse import urlparse
+from hosts import HOSTS, SECONDARY_HOST_MATCH, HOST_PENDING
+_match_claims = {r['claim_id']: r['verdict'] for f in sorted((ROOT / 'codebook-refinement/v3').glob('source-verification-2026-10-16*.json')) for r in json.loads(f.read_text())}
+for sid, cid in SECONDARY_HOST_MATCH.items():
+    if _match_claims.get(cid) not in ('SUPPORTED', 'PARTIAL'):
+        raise SystemExit(f'{sid}: match claim {cid} is not a recorded SUPPORTED or PARTIAL verdict (G8)')
+for sid, rec in out.items():
+    host = urlparse(rec.get('url') or '').netloc
+    kind = HOSTS.get(host)
+    if kind is None:
+        raise SystemExit(f'{sid}: host {host!r} is not classified in v3/hosts.py (G8)')
+    if kind == 'secondary' and sid not in SECONDARY_HOST_MATCH and sid not in HOST_PENDING:
+        raise SystemExit(f'{sid}: secondary host {host} needs a recorded bibliographic match (G8)')
+    if sid in SECONDARY_HOST_MATCH:
+        if kind != 'secondary':
+            raise SystemExit(f'{sid}: on an official host now; remove it from SECONDARY_HOST_MATCH')
+        note = f'Secondary host ({host}); bibliographic match recorded in claim {SECONDARY_HOST_MATCH[sid]} (G8).'
+        if note not in (rec.get('notes') or ''):
+            rec['notes'] = ((rec.get('notes') or '') + ' ' + note).strip()
+stale = [sid for sid in HOST_PENDING if sid in out and HOSTS.get(urlparse(out[sid].get('url') or '').netloc) == 'official']
+if stale:
+    raise SystemExit(f'remove from HOST_PENDING (now on an official host): {stale}')
+
 registry = {
     'codebook_id': 'youth_outcomes_v3',
-    'codebook_version_reviewed': '3.1.2',
-    'last_reviewed': '2026-09-27',
+    'codebook_version_reviewed': '3.1.5',
+    'last_reviewed': '2026-10-16',
     'status_legend': {
         **ORIG['status_legend'],
         'verified': 'A verifier who did not propose the source fetched the document itself and recorded a verbatim excerpt (`excerpt`). Whether it covers each code is recorded per support in `fit`.',

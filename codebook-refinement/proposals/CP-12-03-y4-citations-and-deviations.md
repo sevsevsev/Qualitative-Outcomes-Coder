@@ -19,12 +19,13 @@ its scope is decided in a later proposal after pull request #66.
 | Field | Value |
 |---|---|
 | Type | CITATION_FIX, with the deviation-log entries the citation findings require (S4.1). One CP (CP-B1-01 in the recommendations). |
-| Codes touched | Registry: shape-nhes-2024 (Y4.12, Y4.9; also the source entry behind Y8.3), casel-2020 (Y4.2, Y4.4, Y4.7, Y4.8, Y4.9, Y4.11, Y4.12), learning-for-justice-sjs (Y4.5 support only). `basis` notes: Y4.2, Y4.4, Y4.5, Y4.7, Y4.8, Y4.9, Y4.11, Y4.12. `fidelity`/`deviation`: Y4.5 and Y4.12 (framework → adapted); Y4.4, Y4.8, Y4.9, Y4.11 (adapted → framework). DEVIATIONS.md: new FD-P42, FD-P43; FD-P04, FD-P05, FD-P06, FD-P08 closed (G6); a dated Y4 note; drift table. **No definition, include, exclude, useInstead, example, source line, `frameworkBasis` or rulesText change.** Y4.3 and FD-P03 are not touched (decision Y4-1). |
+| Codes touched | Registry: shape-nhes-2024 (Y4.12, Y4.9; also the source entry behind Y8.3), casel-2020 (Y4.2, Y4.4, Y4.7, Y4.8, Y4.9, Y4.11, Y4.12), learning-for-justice-sjs (Y4.5 support only). `basis` notes: Y4.2, Y4.4, Y4.5, Y4.7, Y4.8, Y4.9, Y4.11, Y4.12. `fidelity`/`deviation`: Y4.5 and Y4.12 (framework → adapted); Y4.4, Y4.8, Y4.9, Y4.11 (adapted → framework). DEVIATIONS.md: new FD-P24, FD-P25; FD-P04, FD-P05, FD-P06, FD-P08 closed (G6); a dated Y4 note; drift table. **No definition, include, exclude, useInstead, example, source line, `frameworkBasis` or rulesText change.** Y4.3 and FD-P03 are not touched (decision Y4-1). |
 | Version bump | PATCH, relative to the version current when applied (3.1.4 today, so 3.1.5; if PR #62's 3.2.0 candidate merges first, 3.2.1). Bumped once per release at merge, not on the branch. |
 | Requirement served | R1 frameworks; R4 drift |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: NHES 2024 metadata; the Y4.12 support now quotes text that is on the 2024 page (round-2 V1 found the proposed phrase absent, so the support quotes indicator 4.5.5, "Demonstrate refusal skills to use in a variety of situations.", as `fit: partial`, resting on claim y4b-10); 12 new supports and the Y4.7 component fix; `basis` Y4.2, Y4.4, Y4.5, Y4.7, Y4.8, Y4.9, Y4.11, Y4.12; Y4.4, Y4.8, Y4.9, Y4.11 to framework (FD-P04, FD-P05, FD-P06, FD-P08 closed); Y4.5 and Y4.12 adapted (FD-P25, FD-P24); Y4 note and drift row. Waits for the gate: Y4 Source lines (CP-12-16), `frameworkBasis` secondaries (CP-12-29) and the Y4.7 `useInstead` (CP-12-26). |
 | Enum cost | +0 (160 → 160; no code added, removed or renamed) |
-| Framework deviation | **new FD-P42 (provisional id)** Y4.12, codebook-defined element "avoiding/leaving unsafe situations", counted (G3). **new FD-P43 (provisional id)** Y4.5, codebook-defined element "including" people, counted: the code is relabelled `adapted` (decision Y4-2), and under the G6 test the cross-competency merge is not a merged-components case, so the entry rests on the unsourced element. **closed FD-P04 (Y4.4), FD-P05 (Y4.8), FD-P06 (Y4.9), FD-P08 (Y4.11)**: they fail the G6 test (their evidence is sparsity, and statements separate the components), and every element they merge is a verified CASEL component, so each code is `framework`. **FD-P02 (Y4.2), FD-P03 (Y4.3), FD-P07 (Y4.10)** pass the G6 test on their stated evidence and are unchanged. FD-P09 stays closed, on corrected evidence. Y4 after: **2 of 12 (17%)**. Provisional ids are renumbered when applied. |
+| Framework deviation | **new FD-P24 (provisional id)** Y4.12, codebook-defined element "avoiding/leaving unsafe situations", counted (G3). **new FD-P25 (provisional id)** Y4.5, codebook-defined element "including" people, counted: the code is relabelled `adapted` (decision Y4-2), and under the G6 test the cross-competency merge is not a merged-components case, so the entry rests on the unsourced element. **closed FD-P04 (Y4.4), FD-P05 (Y4.8), FD-P06 (Y4.9), FD-P08 (Y4.11)**: they fail the G6 test (their evidence is sparsity, and statements separate the components), and every element they merge is a verified CASEL component, so each code is `framework`. **FD-P02 (Y4.2), FD-P03 (Y4.3), FD-P07 (Y4.10)** pass the G6 test on their stated evidence and are unchanged. FD-P09 stays closed, on corrected evidence. Y4 after: **2 of 12 (17%)**. Provisional ids are renumbered when applied. |
 | Reaches the prompt | No. Y4's prompt-reaching lines (Y4.4, Y4.6, Y4.7, Y4.12 sources) are in CP-12-16; the CCSS and NHES "secondary" clauses in Y4's `frameworkBasis` are in CP-12-29 (G2); the Y4.7 `useInstead` fix is in CP-12-26. All three wait for the gate. |
 
 ## When each part lands
@@ -34,7 +35,7 @@ its scope is decided in a later proposal after pull request #66.
 | Registry: NHES re-quote and metadata, 12 supports, component fix, notes | no | Now (G10), first among the batch-1 CPs, no eval |
 | `basis` Y4.2, Y4.4, Y4.5, Y4.7, Y4.8, Y4.9, Y4.11, Y4.12 | no | Now, no eval |
 | `fidelity`/`deviation` on six codes | no | Now, no eval (the public explorer shows the new labels) |
-| DEVIATIONS.md: FD-P42, FD-P43, four closures, Y4 note, drift row | no | Now, no eval |
+| DEVIATIONS.md: FD-P24, FD-P25, four closures, Y4 note, drift row | no | Now, no eval |
 | Y4 source lines, Y4 `frameworkBasis` secondaries, Y4.7 `useInstead` | yes | Not in this CP: CP-12-16, CP-12-29 and CP-12-26, at the one gate after PRs #62 and #66 |
 | FD-P02..P08 2.x numbers; CF-016 3.x column | no | Not in this CP: CP-12-27 (one script for every CF and FD entry, with a test); input in the appendix |
 
@@ -90,9 +91,9 @@ an independent verifier who saw only `{claim_id, code, cite_as, claimed_componen
 | Code | Field | Before | After |
 |---|---|---|---|
 | Y4.5 | `fidelity` | `"framework"` | `"adapted"` |
-| Y4.5 | `deviation` | (absent) | `"FD-P43"` (provisional), inserted after `fidelity` |
+| Y4.5 | `deviation` | (absent) | `"FD-P25"` (provisional), inserted after `fidelity` |
 | Y4.12 | `fidelity` | `"framework"` | `"adapted"` |
-| Y4.12 | `deviation` | (absent) | `"FD-P42"` (provisional) |
+| Y4.12 | `deviation` | (absent) | `"FD-P24"` (provisional) |
 | Y4.4 | `fidelity` / `deviation` | `"adapted"` / `"FD-P04"` | `"framework"` / (removed) |
 | Y4.8 | `fidelity` / `deviation` | `"adapted"` / `"FD-P05"` | `"framework"` / (removed) |
 | Y4.9 | `fidelity` / `deviation` | `"adapted"` / `"FD-P06"` | `"framework"` / (removed) |
@@ -108,12 +109,12 @@ all four re-labelled codes have casel-2020 supports.
 |---|---|---|
 | Y4.2 | CASEL (2020) SEL Framework (verified), Self-Management: 'Managing one's emotions'; 'Identifying and using stress-management strategies'. | CASEL (2020) SEL Framework (verified), Self-Management: 'Managing one's emotions'; 'Identifying and using stress-management strategies'; competency definition 'manage one's emotions, thoughts, and behaviors effectively in different situations' (verified, direct for impulses and self-regulation; claim y4a-08, CP-12-03). |
 | Y4.4 | CASEL (2020) SEL Framework (verified), Social Awareness: 'Taking others' perspectives'; 'Demonstrating empathy and compassion'; 'Identifying diverse social norms, including unjust ones' (registry). 'Understanding and expressing gratitude' is cited in CP-01-06's source table but is not yet a registry support entry. | CASEL (2020) SEL Framework (verified), Social Awareness: 'Taking others' perspectives'; 'Demonstrating empathy and compassion'; 'Identifying diverse social norms, including unjust ones'; 'Understanding and expressing gratitude' (verified, direct; claim y4a-05); 'Showing concern for the feelings of others' (verified, direct; claim y4a-06). |
-| Y4.5 | CASEL (2020) SEL Framework (verified), Relationship Skills: 'Demonstrating cultural competency'; Self-Awareness: 'Examining prejudices and biases'. | CASEL (2020) SEL Framework (verified), Relationship Skills: 'Demonstrating cultural competency'; Self-Awareness: 'Examining prejudices and biases'. Learning for Justice (2022), Social Justice Standards, Diversity standard 6 (verified, direct for respect and comfort across difference; claim y4a-03). 'Including' people has no verified component and is codebook-defined (FD-P43). |
+| Y4.5 | CASEL (2020) SEL Framework (verified), Relationship Skills: 'Demonstrating cultural competency'; Self-Awareness: 'Examining prejudices and biases'. | CASEL (2020) SEL Framework (verified), Relationship Skills: 'Demonstrating cultural competency'; Self-Awareness: 'Examining prejudices and biases'. Learning for Justice (2022), Social Justice Standards, Diversity standard 6 (verified, direct for respect and comfort across difference; claim y4a-03). 'Including' people has no verified component and is codebook-defined (FD-P25). |
 | Y4.7 | CASEL (2020) SEL Framework (verified), Relationship Skills: 'Practicing teamwork and collaborative problem-solving'; 'Showing leadership in groups' (the second is cited in CP-01-06's source table, not yet a registry support entry). | CASEL (2020) SEL Framework (verified), Relationship Skills: 'Practicing teamwork and collaborative problem-solving'; 'Showing leadership in groups' (verified, direct; claim y4b-01). |
 | Y4.8 | CASEL (2020) SEL Framework (verified), Relationship Skills: 'Developing positive relationships'; 'Resolving conflicts constructively'. | CASEL (2020) SEL Framework (verified), Relationship Skills: 'Developing positive relationships'; 'Resolving conflicts constructively'; competency definition 'establish and maintain healthy and supportive relationships' (verified, direct; claim y4b-03). |
 | Y4.9 | CASEL (2020) SEL Framework (verified), Relationship Skills: 'Seeking or offering support and help when needed'. Absorbs 2.4.0's 4.3.4, which had no source. | CASEL (2020) SEL Framework (verified), Relationship Skills: 'Seeking or offering support and help when needed'; Social Awareness definition 'recognize family, school, and community resources and supports' (verified, direct; claim y4b-04). National Health Education Standards (SHAPE America, 2024), 3.5.2 and 4.8.3 (verified, direct; claims y4b-05, y4b-06). Both elements are verified CASEL components (FD-P06 closed by CP-12-03). |
 | Y4.11 | CASEL (2020) SEL Framework (verified), Responsible Decision-Making: 'Evaluating personal, interpersonal, community, and institutional impacts'; 'Reflecting on one's role to promote personal, family, and community well-being' (registry supports for 4.5.2 and 4.5.5). | CASEL (2020) SEL Framework (verified), Responsible Decision-Making: 'Evaluating personal, interpersonal, community, and institutional impacts'; 'Reflecting on one's role to promote personal, family, and community well-being' (verified, partial); competency definition 'make caring and constructive choices about personal behavior and social interactions across diverse situations' (verified, direct; claim y4b-07). |
-| Y4.12 | Re-verified 2026-09-27 (CP-10-02): CASEL (2020), Relationship Skills: 'Resisting negative social pressure' (verified, partial: covers resisting peer pressure, not avoiding unsafe situations); National Health Education Standards (2024) Standard 4, 'Demonstrate refusal skills to avoid or reduce health risks' (verified, direct). Now Framework; FD-P09 closed. | CASEL (2020), Relationship Skills: 'Resisting negative social pressure' (verified, partial: peer pressure only). National Health Education Standards (SHAPE America, 2024), Standard 4 refusal-skills indicators 4.5.5, 4.8.5, 4.12.5 (verified, direct; claim y4b-10; replaces the CP-10-02 quote, which came from the separate NCSHE set). Avoiding unsafe situations: CASEL Responsible Decision-Making 'consider ethical standards and safety concerns' and NHES 4.2.3 (both verified, partial; claims y4b-09, y4b-11), logged as codebook-defined (FD-P42). FD-P09 stays closed for refusal and peer pressure. |
+| Y4.12 | Re-verified 2026-09-27 (CP-10-02): CASEL (2020), Relationship Skills: 'Resisting negative social pressure' (verified, partial: covers resisting peer pressure, not avoiding unsafe situations); National Health Education Standards (2024) Standard 4, 'Demonstrate refusal skills to avoid or reduce health risks' (verified, direct). Now Framework; FD-P09 closed. | CASEL (2020), Relationship Skills: 'Resisting negative social pressure' (verified, partial: peer pressure only). National Health Education Standards (SHAPE America, 2024), Standard 4 refusal-skills indicators 4.5.5, 4.8.5, 4.12.5 (verified, direct; claim y4b-10; replaces the CP-10-02 quote, which came from the separate NCSHE set). Avoiding unsafe situations: CASEL Responsible Decision-Making 'consider ethical standards and safety concerns' and NHES 4.2.3 (both verified, partial; claims y4b-09, y4b-11), logged as codebook-defined (FD-P24). FD-P09 stays closed for refusal and peer pressure. |
 
 The `basis` strings are not tested for forbidden words (only `source` is), so "(verified,
 partial)" tags are fine here, as in CP-11-01.
@@ -210,7 +211,7 @@ Effect: +0 sources, +12 supports. `codebook_extensions` unchanged (A2.2, A2.4).
 `- **Label:** value` form that `deviations.test.ts` parses):
 
 ```markdown
-### FD-P42 · Y4.12
+### FD-P24 · Y4.12
 
 - **Status:** open
 - **Fidelity:** adapted
@@ -222,7 +223,7 @@ Effect: +0 sources, +12 supports. `codebook_extensions` unchanged (A2.2, A2.4).
 - **Decided in:** CP-12-03 (batch 1 research review); decisions settled 2026-10-16 (G3).
 - **Revisit:** close if a verifier rates a source SUPPORTED for avoiding or leaving unsafe situations (first candidate: HECAT Safety HBO 4, a batch 3 lead not yet verified for Y4.12).
 
-### FD-P43 · Y4.5
+### FD-P25 · Y4.5
 
 - **Status:** open
 - **Fidelity:** adapted
@@ -267,13 +268,13 @@ Batch 1 of the research review checked Y4's codes against their sources, and app
 
 - **Pass.** FD-P02 (Y4.2), FD-P03 (Y4.3) and FD-P07 (Y4.10) cite that test as their evidence ("the gold and the model could not separate them reliably"). They stay open and are not counted.
 - **Closed.** FD-P04 (Y4.4), FD-P05 (Y4.8), FD-P06 (Y4.9) and FD-P08 (Y4.11) rested on sparsity. Each code names only verified CASEL components, so it is framework coverage, not a departure.
-- **Y4.5.** Relabelled adapted (FD-P43, counted) for its unsourced "including" element; its cross-competency grouping is framework coverage, as Y4.12's use of a Relationship Skills bullet is.
-- **Y4.12.** FD-P42, counted, for "avoiding unsafe situations" (only partial support, with the code the broader one; G3).
+- **Y4.5.** Relabelled adapted (FD-P25, counted) for its unsourced "including" element; its cross-competency grouping is framework coverage, as Y4.12's use of a Relationship Skills bullet is.
+- **Y4.12.** FD-P24, counted, for "avoiding unsafe situations" (only partial support, with the code the broader one; G3).
 - **Not here.** Writing the test into STANDARDS.md is Severin's own edit. The other merged-components entries are tested in their own CPs (FD-P16 in the PR #62 note; Y1.15 in CP-11-02; Y8.11/Y8.12 in CP-12-07).
 ```
 
-**Drift table.** Intro sentence: append ", and for CP-12-03 (2026-10-16), which opened FD-P42 and
-FD-P43 and closed FD-P04, FD-P05, FD-P06 and FD-P08 in Y4". Y4 row, before → after:
+**Drift table.** Intro sentence: append ", and for CP-12-03 (2026-10-16), which opened FD-P24 and
+FD-P25 and closed FD-P04, FD-P05, FD-P06 and FD-P08 in Y4". Y4 row, before → after:
 
 ```
 | Y4 SEL (CASEL) | 12 | 0 | 0% | no |
@@ -337,8 +338,8 @@ sentence.
   codebook-defined element ("including"), not a merged-components entry.
 - **G6 (merged-components test).** Applied to every Y4 entry at once: FD-P02, FD-P03, FD-P07 pass;
   FD-P04, FD-P05, FD-P06, FD-P08 close as framework coverage.
-- **G3 (partial fits).** Y4.12 avoidance: the code is broader than both partial sources, so FD-P42.
-  Y4.5 inclusion: same reasoning, so FD-P43.
+- **G3 (partial fits).** Y4.12 avoidance: the code is broader than both partial sources, so FD-P24.
+  Y4.5 inclusion: same reasoning, so FD-P25.
 - **Y4-1 (Y4.3 scope).** Decided after PR #66 in a later Y4 CP. This CP leaves Y4.3, its `basis` and
   FD-P03 as they are; FD-P03 passes the G6 test on its stated evidence.
 - **G1 (age and sector rule).** NHES grade-band indicators (4.2.3 is grade 2) are cited; no Y4 code
@@ -376,7 +377,7 @@ rows per side first, G11); the leadership hint (PR #62 rule 7); the CASEL URL (C
 - Design rows these entries rest on: S172, S052 (Y4.12); S065 (incidence stays Y8.11); S122, S007
   (Y4.9; they also show statements separate the two FD-P06 components); S082, S242 (Y4.4 gratitude);
   S027, S223, S227 (Y4.11); S103 (Y4.2); S059 (Y4.7). S177 and S186 (Y4.5 as alternate).
-- No change here waits on a gold row (G11, G14 do not apply). FD-P43's evidence would be stronger with
+- No change here waits on a gold row (G11, G14 do not apply). FD-P25's evidence would be stronger with
   adjudicated Y4.5 inclusion rows; proposing them is for the gold owner, and Severin adjudicates them.
 - New proposed rows: none here.
 - Held-out gold was not read or used.

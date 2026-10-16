@@ -15,6 +15,7 @@ which the coding model reads, waits for the shared test run after the two open p
 | Version bump | Part (a): PATCH against the version current when applied. Part (b): inside the single Source/`frameworkBasis` PATCH after PRs #62 and #66 (G10). |
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: the registry part (citation as printed, publisher, 2022, PDF URL, source excerpt, note with the old URL). Waits for the gate: the Y5.2 Source line year and edition. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none |
 

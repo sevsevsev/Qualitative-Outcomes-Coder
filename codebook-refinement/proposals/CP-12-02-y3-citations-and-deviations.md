@@ -20,6 +20,7 @@ All of this lands now, with no scoring run.
 | Version bump | PATCH, relative to the version current when applied (3.1.4 today, so 3.1.5; 3.2.1 if PR #62's 3.2.0 merges first). Bumped at merge. |
 | Requirement served | R1 frameworks; R4 drift |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: registry rows (5 new sources; Developmental Assets, NYTD and Developmental Relationships supports; round-2 V1 PARTIAL recorded as a partial NRC/IOM safety row, so FD-P01 stays open), `basis` Y3.1, Y3.2, Y3.4, Y3.5, FD-P01 narrowed to "safe", the dated Y3 note and the research-basis.md Y3 table and paragraph. Waits for the gate: the Y3.2 Source line (CP-12-16) and the Y3 `frameworkBasis` secondary (CP-12-29). |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | **changed FD-P01** (Y3.1): narrowed from "widened from school to any program or community" to the **"safe" element** only; case sector-widening, still open and counted (decision Y3-1; Y3 stays 1 of 5, 20%). Y3.2 "youth in care": none (G1; the population is covered by Chafee/NYTD). Y3.4 reunification: none (G4: SUPPORTED statutory duties are partial-fit support). |
 | Reaches the prompt | No. Y3.2's source line is in CP-12-16 and the Chafee/NYTD "secondary" clause in Y3's `frameworkBasis` is in CP-12-29 (G2), both at the gate. |

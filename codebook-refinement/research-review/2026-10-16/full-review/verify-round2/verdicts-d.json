@@ -1,0 +1,128 @@
+[
+ {
+  "claim_id": "CP-12-09-V8",
+  "verdict": "NOT SUPPORTED",
+  "url_checked": "https://www.usda.gov/sites/default/files/documents/usda-actions-nutrition-security.pdf",
+  "source_kind": "primary",
+  "excerpt": "This report summarizes how the U.S. Department of Agriculture (USDA) is leveraging its existing authorities",
+  "corrected_cite_as": "U.S. Department of Agriculture (2022, March). [Actions on Nutrition Security] (report released with the USDA press release 'USDA Announces Actions on Nutrition Security', March 17, 2022).",
+  "notes": "USDA still hosts the PDF and nothing marks it archived. The extracted text has no printed title, the phrase 'USDA Actions on Nutrition Security' appears nowhere, and no issuing office is on the first page; 'March 2022' is printed only at the end. The Food, Nutrition, and Consumer Services Mission Area is the report's subject, not a printed author. USDA's press release (https://www.usda.gov/node/48242) links the PDF as 'Actions on Nutrition Security'. A person should check the cover visually in case the title is an image."
+ },
+ {
+  "claim_id": "CP-12-09-V9",
+  "verdict": "PARTIAL",
+  "url_checked": "https://files.consumerfinance.gov/f/201512_cfpb_financial-well-being-user-guide-scale.pdf",
+  "source_kind": "primary",
+  "excerpt": "“Adult” refers to those ages 18 and older.",
+  "corrected_cite_as": "Consumer Financial Protection Bureau (2015, December). Measuring financial well-being: A guide to using the CFPB Financial Well-Being Scale.",
+  "notes": "The guide aims at 'all adults', defines adult as 18 and older in a footnote, and scores two groups: ages 18-61 and 62 and older. It does not state the age range of the samples the scale was developed or tested on, so 'developed and normed for adults 18+' goes a little beyond what the text says."
+ },
+ {
+  "claim_id": "CP-12-09-V11",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section11386a&num=0&edition=prelim",
+  "source_kind": "primary",
+  "excerpt": "the extent to which individuals and families who leave homelessness experience additional spells of homelessness;",
+  "corrected_cite_as": "",
+  "notes": "This is the official Office of the Law Revision Counsel site. The URL as given returned a server error, so I read the same page with &num=0&edition=prelim added. That is the preliminary edition. Clauses (i), (ii) and (vi) match the law.cornell.edu text word for word, and the section heading is '§11386a. Selection criteria'."
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-4",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/link/uscode/42/11432",
+  "source_kind": "primary",
+  "excerpt": "continue the child's or youth's education in the school of origin for the duration of homelessness",
+  "corrected_cite_as": "",
+  "notes": "The URL is govinfo.gov, the official source, and returned no redirect, though the page text itself does not name govinfo. (g)(3)(A)(i) and the 'School stability' heading in (g)(3)(B) are confirmed. The 11434a definition is on a separate official page (https://www.govinfo.gov/link/uscode/42/11434a), where (2)(A) reads 'means individuals who lack a fixed, regular, and adequate nighttime residence'."
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-1",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/link/uscode/42/677",
+  "source_kind": "primary",
+  "excerpt": "daily living skills (such as financial literacy training and driving instruction),",
+  "corrected_cite_as": "",
+  "notes": "Official govinfo copy. The section heading reads 'John H. Chafee Foster Care Program for Successful Transition to Adulthood'. The phrase 'training and opportunities to practice' comes right before the excerpt in 677(a)(1)."
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-2",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/link/uscode/47/1721",
+  "source_kind": "primary",
+  "excerpt": "The term 'digital literacy' means the skills associated with using technology to enable users to find,",
+  "corrected_cite_as": "Digital Equity Act of 2021, 47 U.S.C. 1721(12) and 1723(c)(1)(B)(v)",
+  "notes": "1721(12) is confirmed on the 1721 page. The 1721 page does not contain section 1723. I confirmed that text on a separate official page (https://www.govinfo.gov/link/uscode/47/1723): clause (v) of 1723(c)(1)(B) reads 'the availability and affordability of consumer devices and technical support for those devices;'."
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-3",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/link/uscode/20/1471",
+  "source_kind": "primary",
+  "excerpt": "assist parents and students with disabilities to understand their rights and responsibilities under this chapter",
+  "corrected_cite_as": "IDEA section 671(b)(7), 20 U.S.C. 1471(b)(7)",
+  "notes": "Official govinfo copy. The heading is 'Parent training and information centers'. The quoted activity is paragraph (7) of subsection (b), 'Required activities'."
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-5-conley-2007-college-readiness",
+  "verdict": "PARTIAL",
+  "url_checked": "https://files.eric.ed.gov/fulltext/ED539251.pdf",
+  "source_kind": "secondary",
+  "excerpt": "Prepared for the Bill & Melinda Gates Foundation, March 2007",
+  "corrected_cite_as": "",
+  "notes": "The ERIC copy prints the title 'Redefining College Readiness', David T. Conley as author, March 2007, and a 'To cite this report' line ending 'Eugene, OR: Educational Policy Improvement Center'; Gates is the funder, not the publisher. The publisher-copy part is not confirmed. inflexion.org/redefining-college-readiness/ offers a PDF, but the file is labeled '2011' and the page does not say Inflexion is EPIC. Don't confuse this with a different Conley 2007 paper hosted by Gates, 'Toward a More Comprehensive Conception of College Readiness'."
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-5-farrington-2012",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://files.eric.ed.gov/fulltext/ED542543.pdf",
+  "source_kind": "secondary",
+  "excerpt": "Camille A. Farrington, Melissa Roderick, Elaine Allensworth, Jenny Nagaoka, Tasha Seneca Keyes, David W. Johnson, and Nicole O. Beechum",
+  "corrected_cite_as": "Farrington, C. A., Roderick, M., Allensworth, E., Nagaoka, J., Keyes, T. S., Johnson, D. W., & Beechum, N. O. (2012, June). Teaching Adolescents to Become Learners: The Role of Noncognitive Factors in Shaping School Performance: A Critical Literature Review. Chicago: University of Chicago Consortium on Chicago School Research.",
+  "notes": "Title, author order, June 2012 and the 'CITE AS' publisher line all match. The publisher's own page offers the PDF: https://consortium.uchicago.edu/publications/teaching-adolescents-become-learners-role-noncognitive-factors-shaping-school (reached via the bit.ly link on the Consortium's site). That page lists the authors in a different order; the printed order matches the citation."
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-5-mapp-kuttner-2013",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://files.eric.ed.gov/fulltext/ED593896.pdf",
+  "source_kind": "secondary",
+  "excerpt": "A publication of SEDL in collaboration with the U.S. Department of Education",
+  "corrected_cite_as": "",
+  "notes": "The title matches, the PDF prints '2013 © Copyright by SEDL', and Mapp and Kuttner are named under AUTHORS on the credits page, not the title page. The publisher's copy is linked from https://sedl.org/pubs/catalog/items/family132.html (https://sedl.org/pubs/framework/FE-Cap-Building.pdf), but that catalog page gives the year as 2014. The printed 2013 should stand."
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-5-hulleman-2010-utility-value",
+  "verdict": "PARTIAL",
+  "url_checked": "https://eric.ed.gov/?id=EJ910428",
+  "source_kind": "secondary",
+  "excerpt": "v102 n4 p880-895 Nov 2010",
+  "corrected_cite_as": "",
+  "notes": "The URL is an ERIC catalog record (details only), not a copy of the article. Its title, authors, journal, volume, issue, pages and DOI 10.1037/a0019506 match the citation, and Crossref confirms them. I could not open the APA DOI landing page because the site blocks automated fetching, so I did not see the publisher's copy myself."
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-7",
+  "verdict": "PARTIAL",
+  "url_checked": "https://acmd615.pbworks.com/f/ExpectancyValueTheory.pdf",
+  "source_kind": "secondary",
+  "excerpt": "doi:10.1006/ceps.1999.1015",
+  "corrected_cite_as": "Wigfield, A., & Eccles, J. S. (2000). Expectancy-value theory of achievement motivation. Contemporary Educational Psychology, 25(1), 68-81.",
+  "notes": "The PDF prints Contemporary Educational Psychology, 25, 68-81 (2000) and this DOI. Crossref shows the DOI goes to Elsevier's linkinghub record for this article, but the landing page came back empty, so I did not see it directly. The copy sits on a course wiki (pbworks), not the publisher's site, and may not be an authorized copy."
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-6",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.doc.ks.gov/juvenile-services/committee/documentation/6-2017/CJCA/view",
+  "source_kind": "secondary",
+  "excerpt": "Defining and Measuring Recidivism",
+  "corrected_cite_as": "",
+  "notes": "A Kansas Department of Corrections committee page hosts this copy, not CJCA. The title page reads 'A CJCA White Paper', 'November 2009' and 'Council of Juvenile Correctional Administrators (CJCA)'; Harris, Lockwood and Mengers are named on the next page. Pages are marked 'of 42', but the fetched text stopped at 'Page 41' in the References, so I could not confirm the copy is complete. NCJ 237765 is not printed on it; an NCJRS abstract exists at ojp.gov."
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-8",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.hillpedagogies.com/",
+  "source_kind": "secondary",
+  "excerpt": "In Unearthing Joy, Dr. Gholdy Muhammad expands her equity framework by adding a fifth pursuit—joy",
+  "corrected_cite_as": "Muhammad, G. Unearthing Joy (five pursuits), extending Cultivating Genius (four pursuits)",
+  "notes": "The page names Dr. Gholdy Muhammad and both books, and defines all five pursuits. It calls itself the site of 'HILL Pedagogies' Five Pursuits Framework™' and says it draws on her scholarship, but never says she owns or founded it. So 'the author's own description' is not confirmed. It also attributes the five-pursuit version to Unearthing Joy; Cultivating Genius has four pursuits."
+ }
+]

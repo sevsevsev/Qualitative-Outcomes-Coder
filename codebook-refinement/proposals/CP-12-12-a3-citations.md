@@ -16,6 +16,7 @@ printed source line waits for the shared test run, in a separate change.
 | Version bump | PATCH, against whatever version is current at apply time (3.1.4 today; after PR #62 / PR #66 if they merge first) |
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: Reisman (direct) and Coffman (partial) A3.2 supports; Sampson PubMed URL, excerpt and fit; `basis` A3.2, A3.3. Waits for the gate: the A3.2 Source line naming Reisman (CP-12-18). |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none. Reisman "strengthened alliances" covers the ordinary partnerships A3.2 already codes. Kania & Kramer alone did not (they set collective impact apart from "most collaborations"), so this closes an unlogged gap rather than opening an FD. A3 drift stays 0/3 here; the A3.1 FD decided under A3-1 takes it to 1/3 later. |
 

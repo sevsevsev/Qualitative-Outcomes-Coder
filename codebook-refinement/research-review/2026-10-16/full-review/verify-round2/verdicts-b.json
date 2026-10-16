@@ -1,0 +1,119 @@
+[
+ {
+  "claim_id": "CP-12-01-V2",
+  "verdict": "PARTIAL",
+  "url_checked": "https://sciencecommunication.ut.ee/wp-content/uploads/2018/09/Article-5-The-Four-Phase-Model-of-Interest-Development.pdf",
+  "source_kind": "secondary",
+  "excerpt": "Triggered situational interest can be sparked by environmental or text features such as incongruous, surprising information;",
+  "corrected_cite_as": "",
+  "notes": "The article lists the Phase 1 triggers as incongruous or surprising information, personal relevance, character identification and intensity. The words 'novel', 'novelty' and 'new activity' never appear, and the paper does not say that trying a new activity expresses phase-1 interest; that step is the claimant's own. The copy is a university course host, not the publisher; the last ~7k characters were not read."
+ },
+ {
+  "claim_id": "CP-12-01-V3",
+  "verdict": "PARTIAL",
+  "url_checked": "https://sciencecommunication.ut.ee/wp-content/uploads/2018/09/Article-5-The-Four-Phase-Model-of-Interest-Development.pdf",
+  "source_kind": "secondary",
+  "excerpt": "DOI: 10.1207/s15326985ep4102_4",
+  "corrected_cite_as": "",
+  "notes": "The copy matches the citation in full: same title, same authors (Suzanne Hidi and K. Ann Renninger), Educational Psychologist 41(2) pp. 111-127, with DOI 10.1207/s15326985ep4102_4 printed on it. It is PARTIAL only because the host is a third-party course site, not Taylor & Francis or the DOI landing page."
+ },
+ {
+  "claim_id": "CP-12-02-V1",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.nationalacademies.org/read/10022/chapter/7",
+  "source_kind": "primary",
+  "excerpt": "Youth report that these guidelines for behavior are elemental to their own feelings of safety and comfort",
+  "corrected_cite_as": "",
+  "notes": "The cited URL is Chapter 5 (Landscape of Community Programs), not the features chapter. In Chapter 4 (read at chapter/6), Table 4-1 describes the feature by setting traits ('Safe and health-promoting facilities; and practices that increase safe peer group interaction'), with 'fear; feeling of insecurity' only as the opposite pole. The youth-felt-safety framing appears in Chapter 5, so the claimed framing is looser than stated."
+ },
+ {
+  "claim_id": "CP-12-03-V1",
+  "verdict": "UNSUPPORTED",
+  "url_checked": "https://shapeamerica.org/standards/health/new-he-standards/",
+  "source_kind": "primary",
+  "excerpt": "Demonstrate refusal skills to use in a variety of situations.",
+  "corrected_cite_as": "",
+  "notes": "The phrase 'Demonstrate refusal skills to avoid or reduce health risks' does not appear on the 2024 page. The closest is the grades 3-5 Standard 4 indicator quoted here, which does not mention health risks. I remember similar wording from the 2007 NHES, but I did not fetch that, so it is only a lead. The page footer says 'Copyright 2026' while the standards are labeled '2024'."
+ },
+ {
+  "claim_id": "CP-12-07-V5b",
+  "verdict": "UNSUPPORTED",
+  "url_checked": "https://shapeamerica.org/standards/health/new-he-standards/",
+  "source_kind": "primary",
+  "excerpt": "Use functional health information to support health and well-being of self and others.",
+  "corrected_cite_as": "",
+  "notes": "The excerpt is the Standard 1 title. Its 30 indicators are about general health themes (strengths, wellness dimensions, illness and injury prevention, health literacy). The page has no text about risks of alcohol, tobacco or drugs, and the word 'violent' does not appear."
+ },
+ {
+  "claim_id": "CP-12-07-V2",
+  "verdict": "UNSUPPORTED",
+  "url_checked": "https://shapeamerica.org/standards/pe/new-pe-standards/",
+  "source_kind": "primary",
+  "excerpt": "1.2.15 Demonstrates locomotor, non-locomotor, and manipulative movements based on a variety of dance forms.",
+  "corrected_cite_as": "",
+  "notes": "No Standard 1 indicator mentions scissors, pencils, writing or grasping. On this page 'manipulative' refers to whole-body object skills such as throwing, catching, kicking and striking, not fine motor control of the hands."
+ },
+ {
+  "claim_id": "CP-12-07-V3",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_aod.pdf",
+  "source_kind": "primary",
+  "excerpt": "Identify the risks associated with alcohol and marijuana use.",
+  "corrected_cite_as": "",
+  "notes": "This is knowledge expectation AOD1.5.9. Other risk items include AOD1.8.8 (physical and mental effects) and AOD1.12.8 (short- and long-term effects of alcohol). The document is the 2021 HECAT Module AOD on cdc.gov, with no separate publisher line printed."
+ },
+ {
+  "claim_id": "CP-12-07-V4",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_t.pdf",
+  "source_kind": "primary",
+  "excerpt": "Identify short- and long-term health effects of using tobacco products, including e-cigarettes or vaping products.",
+  "corrected_cite_as": "",
+  "notes": "This is T1.5.1, which matches the health-risk half of the claim. Nothing measures intention as such: the closest items are HBO 1 'Avoid using (or experimenting with) any form of tobacco' (a behavior) and benefits-of-not-using items such as T1.8.6."
+ },
+ {
+  "claim_id": "CP-12-07-V5",
+  "verdict": "UNSUPPORTED",
+  "url_checked": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_v.pdf",
+  "source_kind": "primary",
+  "excerpt": "V1.12.20 Summarize the qualities of a healthy dating or sexual relationship. (HBO 1, 2 & 4)",
+  "corrected_cite_as": "",
+  "notes": "No HBO or expectation names warning signs of dating or relationship violence; the phrases 'warning sign', 'unhealthy relationship' and 'abusive' do not appear. The only 'signs' items are V1.8.34 and V1.12.31, about people in danger of hurting themselves or others. The end of the text (appendix) was truncated and not read."
+ },
+ {
+  "claim_id": "CP-12-07-V12",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_pa.pdf",
+  "source_kind": "primary",
+  "excerpt": "Analyze personal practices and behaviors that reduce or prevent sedentary behavior.",
+  "corrected_cite_as": "",
+  "notes": "This is PA7.8.2 (with PA7.12.2 at grades 9-12, plus peer-resistance items PA4.5.3 and PA4.12.2). No HBO concerns sedentary time, and 'screen', 'TV' and 'video games' never appear. Only the 'reduce sedentary behavior' reading of the claim is supported, at the skill level, not the screen-time reading."
+ },
+ {
+  "claim_id": "CP-12-07-V13",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_phw.pdf",
+  "source_kind": "primary",
+  "excerpt": "Summarize important health screenings, immunizations, checkups, and examinations necessary to maintain good health.",
+  "corrected_cite_as": "",
+  "notes": "This is PHW1.12.14, a grades 9-12 knowledge expectation tied to HBO 10 and 11, and it names immunizations in general. No HBO names immunizations, and this is the only expectation in the module that does, so the support is knowledge-level only."
+ },
+ {
+  "claim_id": "CP-12-07-V4b",
+  "verdict": "UNSUPPORTED",
+  "url_checked": "https://monitoringthefuture.org/wp-content/uploads/2025/12/mtfvol12026.pdf",
+  "source_kind": "primary",
+  "excerpt": "",
+  "corrected_cite_as": "",
+  "notes": "The title, authors, year and publisher match. The extracted text (~78k characters) never uses 'intend', 'intention', 'expect', 'five years' or 'plan to'. Chapters 8 and 9 cover perceived risk, disapproval, availability and social context, not future-use intentions. The extraction may be incomplete, but I found no supporting passage."
+ },
+ {
+  "claim_id": "CP-12-10-V1",
+  "verdict": "UNREACHABLE",
+  "url_checked": "https://www.opm.gov/WIKI/uploads/docs/Wiki/OPM/training/Field%20Guide%20to%20Training%20Evaluation_6-8-2011-FINAL.pdf",
+  "source_kind": "primary",
+  "excerpt": "",
+  "corrected_cite_as": "",
+  "notes": "No URL was given. Search found the opm.gov copy (2011 Field Guide), but it failed to fetch both encoded and unencoded. The 2014 Supplement PDF and DOCX on opm.gov also failed. The pdf4pro mirror loaded but its preview stops before the Level 2 definition, so the claim, including 'for any workforce', is unverified."
+ }
+]

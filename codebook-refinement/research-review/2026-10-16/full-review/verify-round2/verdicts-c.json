@@ -1,0 +1,110 @@
+[
+ {
+  "claim_id": "CP-12-04-V-Y5-1",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.govinfo.gov/link/uscode/29/733",
+  "source_kind": "primary",
+  "excerpt": "(5) instruction in self-advocacy, which may include peer mentoring.",
+  "corrected_cite_as": "",
+  "notes": "The govinfo U.S. Code page for section 733 has (b)(5) word for word, listed among the required pre-employment transition services. The page header reads '§ 733 TITLE 29—LABOR Page 252' but does not give the Code edition year."
+ },
+ {
+  "claim_id": "CP-12-04-V-Y5-2",
+  "verdict": "PARTIAL",
+  "url_checked": "https://2014conf.asc.asn.au/files/2013/12/NAP.pdf",
+  "source_kind": "secondary",
+  "excerpt": "Think about themselves as science learners and develop an identity as someone who knows about, uses, and",
+  "corrected_cite_as": "",
+  "notes": "The NAP pages (nationalacademies.org/read/12190 and /chapter/2) loaded but showed only citation details (NRC 2009, NAP, DOI 10.17226/12190), not the Strand 6 text. So the claim that 'this National Academies Press copy contains' the strand is not confirmed. The wording comes from a secondary conference-hosted excerpt, where the tool broke it into two pieces; the second piece reads 'sometimes contributes to science.' Only the first piece is quoted here so the excerpt is not joined."
+ },
+ {
+  "claim_id": "CP-12-04-V-Y5-3",
+  "verdict": "PARTIAL",
+  "url_checked": "https://consortium.uchicago.edu/sites/default/files/2019-05/Arts%20Education%20and%20Social-Emotional-June2019-Consortium%20and%20Ingenuity.pdf",
+  "source_kind": "primary",
+  "excerpt": "ARTS EDUCATION AND SOCIAL-EMOTIONAL LEARNING OUTCOMES AMONG K–12 STUDENTS: DEVELOPING A THEORY OF ACTION",
+  "corrected_cite_as": "",
+  "notes": "The title and all eight authors match the citation. But I read the whole PDF text (offsets 0, 100000 and 112000; about 123k characters) and found no copyright line, printed year, suggested citation or publisher statement, so the claimed component is not confirmed. 2019 and the Consortium plus Ingenuity pairing rest only on the file path and name ('2019-05', 'June2019-Consortium and Ingenuity') and on a UChicago Consortium press release dated June 11, 2019 (https://consortium.uchicago.edu/sites/default/files/2019-06/UCCSR_Ingenuity_ArtsEd_PressRelease_FINAL_0.pdf)."
+ },
+ {
+  "claim_id": "CP-12-05-V-Y6-1",
+  "verdict": "PARTIAL",
+  "url_checked": "https://eepro.naaee.org/sites/default/files/eepro-post-files/k-12_ee_guidelines_for_excellence_2019.pdf",
+  "source_kind": "primary",
+  "excerpt": "Identify, clarify, and express their beliefs and values regarding the environment",
+  "corrected_cite_as": "",
+  "notes": "The full NAAEE PDF ('Copyright © 2019 by the North American Association for Environmental Education') exists, and the attribution is correct. But the K–4 and 5–8 guidelines I could read have no explicit learner outcome on connection to nature. The closest are this values outcome (K–4, 3.2A) and an underpinning, 'learners connect with, explore, and understand their immediate surroundings.' The 9–12 section did not come through in the extracted text, so it is unchecked. Treat this as a loose fit at best."
+ },
+ {
+  "claim_id": "CP-12-05-V-Y6-2",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://files.eric.ed.gov/fulltext/ED498892.pdf",
+  "source_kind": "primary",
+  "excerpt": "Individuals who feel they can make a difference in their communities or believe they have a responsibility to get involved are more active than are those who don't hold these views.",
+  "corrected_cite_as": "",
+  "notes": "This is the ERIC full text. The sentence is from the section 'The Engaged Worldview: Efficacious and Dutiful', and the title page carries CIRCLE branding, the four named authors and the date September 19, 2002. Pew funded the work, but it is not the author."
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-5-circle-2002-civic-indicators",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://files.eric.ed.gov/fulltext/ED498892.pdf",
+  "source_kind": "primary",
+  "excerpt": "THE CIVIC AND POLITICAL HEALTH OF THE NATION: A GENERATIONAL PORTRAIT",
+  "corrected_cite_as": "",
+  "notes": "The ERIC title page matches the title, the authors (Keeter, Zukin, Andolina, Jenkins) and the year (September 19, 2002). It carries the header 'The Center for Information & Research on Civic Learning & Engagement' but does not literally say 'published by'. CIRCLE's own copy is online at http://archive.civicyouth.org/wp-content/uploads/2016/02/Civic_Political_Health_2002.pdf (fetched; same title page), listed on https://archive.civicyouth.org/special-report-the-2002-civic-and-political-health-of-the-nation/."
+ },
+ {
+  "claim_id": "CP-12-08-V6",
+  "verdict": "PARTIAL",
+  "url_checked": "https://cssp.org/resource/core-meanings-of-the-strengthening-families-protective-factors/",
+  "source_kind": "primary",
+  "excerpt": "October 16, 2018",
+  "corrected_cite_as": "Center for the Study of Social Policy. (n.d.; posted October 16, 2018). Core Meanings of the Strengthening Families Protective Factors.",
+  "notes": "The PDF prints neither a year nor the name 'Center for the Study of Social Policy'; it shows only the CSSP address and cssp.org. The CSSP resource page gives the date October 16, 2018 and the author 'CSSP', but the PDF filename says 2015. So the publisher is confirmed, but the publication year is uncertain: the 2018 date may only be when the page was posted."
+ },
+ {
+  "claim_id": "CP-12-08-V7",
+  "verdict": "UNREACHABLE",
+  "url_checked": "https://web.archive.org/web/2025/https://snaped.fns.usda.gov/framework/components/mt1",
+  "source_kind": "secondary",
+  "excerpt": "",
+  "corrected_cite_as": "",
+  "notes": "web.archive.org is blocked for this verifier (SITE_BLOCKED on both the snapshot and the calendar URL), so no dated snapshot could be read. The live MT1 page does not contain the phrase 'Changes in individual and family healthy eating behaviors'; it says 'Indicator MT1 measures healthy eating behavioral changes reported by SNAP-Ed participants...'."
+ },
+ {
+  "claim_id": "CP-12-24-V-STATUS-2",
+  "verdict": "PARTIAL",
+  "url_checked": "https://fns-prod.azureedge.us/sites/default/files/resource-files/snap-ed-OBBBqas081325.pdf",
+  "source_kind": "primary",
+  "excerpt": "by ending required funding of SNAP-Ed with the fiscal year (FY) 2025 grant allocation.",
+  "corrected_cite_as": "",
+  "notes": "The cited MT1 page has no notice about funding. The FNS SNAP-Ed Q&A memo dated August 13, 2025 (on the FNS file host; a usda.gov copy also exists) says OBBB Section 10107 ends required funding with the FY2025 allocation, and that states may spend funds until September 30, 2026. That makes it a dated end of new funding, not a statement that funding 'has ended'."
+ },
+ {
+  "claim_id": "CP-12-08-V10",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title29-section3272&num=0&edition=prelim",
+  "source_kind": "primary",
+  "excerpt": "The term \"adult education\" means academic instruction and education services below the postsecondary level",
+  "corrected_cite_as": "",
+  "notes": "The given URL errored once; the same OLRC page with edition parameters loaded. Paragraphs (1) and (6) match the law.cornell.edu text (fetched) word for word, apart from typographic quotes and dashes. This is the preliminary (prelim) edition."
+ },
+ {
+  "claim_id": "CP-12-08-V14",
+  "verdict": "UNSUPPORTED",
+  "url_checked": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf",
+  "source_kind": "primary",
+  "excerpt": "Involve families with their children in learning at home, including homework, other curriculum-related activities,",
+  "corrected_cite_as": "Epstein, J. L., et al. (2019). School, Family, and Community Partnerships: Your Handbook for Action (4th ed.). Corwin. Handout: The Keys to Successful School, Family, and Community Partnerships.",
+  "notes": "The Learning at Home definition on this Corwin handout does not mention family or daily routines or schedules, and the handout lists no sample practices. The only 'schedules' wording is under Volunteering. The handout is titled 'The Keys to Successful School, Family, and Community Partnerships', not 'Epstein's Six Types of Involvement'."
+ },
+ {
+  "claim_id": "CP-12-24-V-STATUS-1",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/sleep/increase-proportion-high-school-students-who-get-enough-sleep-sh-04",
+  "source_kind": "primary",
+  "excerpt": "Per a court order, HHS is required to restore this website to its version as of 12:00 AM on January 29, 2025.",
+  "corrected_cite_as": "",
+  "notes": "The banner is at the top of the SH-04 objective page ('Increase the proportion of high school students who get enough sleep — SH‑04'), fetched 2026-10-16. Verdicts use the protocol's labels: UNSUPPORTED means NOT SUPPORTED and UNREACHABLE means COULD NOT FETCH."
+ }
+]

@@ -18,6 +18,7 @@ advocacy-evaluation guides. The document is never shown to the coding model, so 
 | Version bump | none (docs only; no codebook text changes). If the orchestrator bundles it with a registry PATCH, it rides that PATCH. |
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: items 1, 2, 3, 5, 6, 7 in `docs/codebook/research-basis.md` (item 4 was applied by CP-12-02); the A3 text names the institutional-practice question without a deviation id, because its entry is not opened. Waits for the gate: nothing. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none |
 
@@ -29,7 +30,7 @@ Framework deviation: none. The document describes deviations already logged; it 
 |---|---|
 | G10 (no-prompt parts land now) | The whole CP lands now. |
 | G2 (secondary frameworks named in `frameworkBasis`, not in an anchor line here) | This document is not used to name secondary frameworks; CP-12-29 does that in the data. |
-| A3-1 | The A3 text names the institutional-practice question and its provisional deviation (FD-P51, which records that formal adoption of a program or practice by a school goes beyond the two policy guides) without settling it; that is CP-12-19's prerequisite CP. |
+| A3-1 | The A3 text names the institutional-practice question and its provisional deviation (FD-unassigned (A3.1), which records that formal adoption of a program or practice by a school goes beyond the two policy guides) without settling it; that is CP-12-19's prerequisite CP. |
 
 ## What lands now and what waits
 
@@ -229,7 +230,7 @@ After:
 Stachowiak (2007), re-verified 2026-09-27 (CP-10-02), which closed the earlier codebook-defined
 entry (FD-P20). Both guides define policy change in the public policy arena; whether a school or
 district formally adopting a program or practice also belongs in A3.1 is decided separately
-(decision A3-1, provisional FD-P51), after Severin rules on the proposed practice rows.
+(decision A3-1, provisional FD-unassigned (A3.1)), after Severin rules on the proposed practice rows.
 ```
 
 Appendix B, "[VERIFY] leads not yet fetched" (lines 502-505): drop "a policy-change framework for

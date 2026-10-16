@@ -18,21 +18,22 @@ changes, so all of it can land now without a test run.
 | Version bump | PATCH, against whatever version is current when this is applied (3.1.4 today, so 3.1.5; the next PATCH after PR #62 or PR #66 if either merges first). |
 | Requirement served | R1 frameworks, R4 drift |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: Learning Forward URL and note, SAMHSA URL and A1.2 fit, new WHO burnout row (`v3/verification_2026_10_16_batch4.py`); A1.2 `basis`; A1.1 adapted (FD-P36 stays open: V1 could not fetch); drift row. Waits for the gate: nothing (Guskey in A1's `frameworkBasis` is CP-12-29's). |
 | Enum cost | +0 (160 → 160) |
-| Framework deviation | new FD-P50 (provisional id; renumbered at merge): A1.1, adapted, sector widening, counted. A1 drift goes from 0/3 to 1/3 (at the line, not over). A1.2 needs none (G1). |
+| Framework deviation | new FD-P36 (provisional id; renumbered at merge): A1.1, adapted, sector widening, counted. A1 drift goes from 0/3 to 1/3 (at the line, not over). A1.2 needs none (G1). |
 
-Framework deviation: new FD-P50 (provisional id), A1.1 sector widening, counted.
+Framework deviation: new FD-P36 (provisional id), A1.1 sector widening, counted.
 
 ## Decisions applied
 
 | Decision | Effect on this CP |
 |---|---|
-| G1 (FD only when a code's own text names a population outside its source) | A1.1 names volunteers, mentors, coaches and case managers, so FD-P50 opens. A1.2 ("Adults applying new practices") names no outside population and SAMHSA is cross-sector, so A1.2 gets no FD; A1's worst case is 1/3, not 2/3 (R-14). |
-| G3 (a partial fit avoids an FD only when the source is broader than the code) | Learning Forward is partial because the code is broader than the source, so it does not avoid FD-P50. |
-| A1-1 (Kirkpatrick Partners not admissible) | FD-P50 stays open. Kirkpatrick Level 2 (a1-03) appears only as the alternative considered. OPM's restatement goes to a verifier (V1). |
+| G1 (FD only when a code's own text names a population outside its source) | A1.1 names volunteers, mentors, coaches and case managers, so FD-P36 opens. A1.2 ("Adults applying new practices") names no outside population and SAMHSA is cross-sector, so A1.2 gets no FD; A1's worst case is 1/3, not 2/3 (R-14). |
+| G3 (a partial fit avoids an FD only when the source is broader than the code) | Learning Forward is partial because the code is broader than the source, so it does not avoid FD-P36. |
+| A1-1 (Kirkpatrick Partners not admissible) | FD-P36 stays open. Kirkpatrick Level 2 (a1-03) appears only as the alternative considered. OPM's restatement goes to a verifier (V1). |
 | G8 (official copy; secondary host only with a recorded bibliographic match) | Learning Forward: the publisher's own PDF. WHO: who.int. SAMHSA: the NCSACW copy is an HHS/ACF federal host, not SAMHSA's own site; the a1-05 verifier recorded the bibliographic match (title, HHS Pub. No. (SMA) 14-4884, 2014), which the registry note repeats. |
 | G10 (no-prompt CPs land now) | All of this CP lands now. |
-| G15 (adult volunteers) | Volunteers' skills for the role stay in A1.1, which is what FD-P50 covers. Retention or satisfaction with serving → A1.3 and the volunteer's own life outcomes → A1 domain-only are later hint CPs (see "Not bundled"). |
+| G15 (adult volunteers) | Volunteers' skills for the role stay in A1.1, which is what FD-P36 covers. Retention or satisfaction with serving → A1.3 and the volunteer's own life outcomes → A1 domain-only are later hint CPs (see "Not bundled"). |
 | G16 (hold CP-09-05) | The A1.3 staffing widening is not touched and stays held with CP-09-05. |
 
 ## What lands now and what waits for the gate
@@ -41,7 +42,7 @@ Framework deviation: new FD-P50 (provisional id), A1.1 sector widening, counted.
 |---|---|---|
 | A1.1 `fidelity` and `deviation` | no | now |
 | A1.2 `basis` | no | now |
-| DEVIATIONS.md: FD-P50 and the drift table | no | now |
+| DEVIATIONS.md: FD-P36 and the drift table | no | now |
 | Registry: Learning Forward URL and note, SAMHSA URL and fit, new WHO row; the shared batch 4 module and record | no | now |
 | (none) | yes | nothing in this CP waits for the gate. Guskey in A1's `frameworkBasis` moved to CP-12-29 (G2). |
 
@@ -77,7 +78,7 @@ CP-12-29, the single gated `frameworkBasis` CP.
 | Code | Field | Before | After |
 |---|---|---|---|
 | A1.1 | `fidelity` | `"framework"` | `"adapted"` |
-| A1.1 | `deviation` | (absent) | `"FD-P50"`, inserted after `fidelity` as in the other 3.x codes |
+| A1.1 | `deviation` | (absent) | `"FD-P36"`, inserted after `fidelity` as in the other 3.x codes |
 | A1.2 | `basis` | `Re-verified 2026-09-27 (CP-10-01): Learning Forward (2022) (verified, partial); Guskey (2002) Level 4 (verified, direct); SAMHSA (2014) (verified from the full document on an NCTSN copy, direct).` | `Re-verified 2026-09-27 (CP-10-01): Learning Forward (2022) (verified, partial); Guskey (2002) Level 4 (verified, direct); SAMHSA (2014) (verified, direct; full document on the HHS/ACF NCSACW copy, claim a1-05, CP-12-10).` |
 
 None of these fields reaches the coding prompt (`definitionsText` prints definition, include,
@@ -92,7 +93,7 @@ Inserted after the last 3.x entry in place at apply time, before "## Drift count
 (S4.9)". Field labels follow the `- **Label:** value` format that `deviations.test.ts` parses.
 
 ```markdown
-### FD-P50 · A1.1
+### FD-P36 · A1.1
 
 - **Status:** open
 - **Fidelity:** adapted
@@ -108,7 +109,7 @@ Inserted after the last 3.x entry in place at apply time, before "## Drift count
 **Case.** Sector widening keeps "construct and wording unchanged", and the roles fit it.
 "Confidence" is named under Departs. Either case is counted, so A1's drift is the same.
 
-**Numbering.** FD-P50 is a provisional id and is renumbered at merge to the next free FD-P number.
+**Numbering.** FD-P36 is a provisional id and is renumbered at merge to the next free FD-P number.
 `deviations.test.ts` accepts any `FD-P\d+`, and the A1.1 `deviation` field is renumbered with it.
 
 ### `codebook-refinement/DEVIATIONS.md`: drift table (lands now)
@@ -116,7 +117,7 @@ Inserted after the last 3.x entry in place at apply time, before "## Drift count
 Intro sentence: append one clause, after any clause another CP has added first:
 
 ```
-..., and for CP-12-10 (2026-10-16), which opened FD-P50 in A1.
+..., and for CP-12-10 (2026-10-16), which opened FD-P36 in A1.
 ```
 
 A1 row, before → after:
@@ -208,11 +209,11 @@ verifier's excerpts.
 
 | Registry ID | Status | Component relied on | claim_id and verifier excerpt |
 |---|---|---|---|
-| guskey-2002-pd-evaluation | verified (direct) | Level 2 (FD-P50 anchor) | existing CP-10-01 record (no new claim) |
+| guskey-2002-pd-evaluation | verified (direct) | Level 2 (FD-P36 anchor) | existing CP-10-01 record (no new claim) |
 | learning-forward-2022 | verified (fit stays partial) | URL and edition only | a1-01 PARTIAL: "Professional learning results in equitable and excellent outcomes for all students when educators understand and apply"; a1-02 PARTIAL: "Developments in the ensuing years led to a 2025 edition to ensure access, relevance, and availability to all educators." |
 | samhsa-tic-2014 | verified (partial → direct) | trauma-informed approach | a1-05 SUPPORTED: "responds by fully integrating knowledge about trauma into policies, procedures, and practices" |
 | who-2019-burnout (new) | verified | ICD-11 burn-out | a1-07 SUPPORTED: "Burn-out is a syndrome conceptualized as resulting from chronic workplace stress that has not been successfully managed." |
-| (not cited) Kirkpatrick Partners | SUPPORTED, not admissible (A1-1) | named in FD-P50 only as the alternative considered | a1-03: "The degree to which participants acquire the intended knowledge, skills, attitude, confidence and commitment based on their participation in the training" |
+| (not cited) Kirkpatrick Partners | SUPPORTED, not admissible (A1-1) | named in FD-P36 only as the alternative considered | a1-03: "The degree to which participants acquire the intended knowledge, skills, attitude, confidence and commitment based on their participation in the training" |
 
 Not used: a1-04 (Kirkpatrick L3; not needed under G1, and not admissible under A1-1), a1-06
 (JOLTS openings and hires, PARTIAL; waits on CP-09-05, held under G16), a1-08 (volunteer
@@ -220,7 +221,7 @@ retention, PARTIAL; rejected).
 
 ## Verification requests
 
-**V1 (lead only; closes FD-P50 if SUPPORTED; decision A1-1 sends it).** OPM's restatement of the
+**V1 (lead only; closes FD-P36 if SUPPORTED; decision A1-1 sends it).** OPM's restatement of the
 Kirkpatrick levels is an unverified lead from the review ("Unverified leads"). Neither the review
 nor this draft has recorded a URL for it, so the orchestrator finds a .gov URL before sending:
 
@@ -241,7 +242,7 @@ gated CP; this CP does not wait for it.
 - **Guskey in A1's `frameworkBasis`:** CP-12-29 (G2). **The research-basis.md sentence on A1's
   split:** CP-12-30.
 - **Volunteer routing (G15), a later hint CP.** Skills for the role → A1.1 (already covered by
-  FD-P50); retention or satisfaction with serving → A1.3; the volunteer's own life outcomes → A1
+  FD-P36); retention or satisfaction with serving → A1.3; the volunteer's own life outcomes → A1
   domain-only with the `codebook_gap` flag (G9). It is blocked on G11: Severin adjudicates two
   proposed design rows per side first (P-27 to P-32 in
   `research-review/2026-10-16/full-review/proposed-design-rows.csv`). Warning for that CP: under G1, writing
@@ -256,7 +257,7 @@ gated CP; this CP does not wait for it.
 ## Gold impact
 
 - Rows expected to change code: none. Nothing in the prompt changes, so no scoring run is needed.
-- Rows FD-P50 rests on: S043, S083, S142, S146, S244, H014. Other rows on edited citations: S204,
+- Rows FD-P36 rests on: S043, S083, S142, S146, S244, H014. Other rows on edited citations: S204,
   S148 (A1.2), S149 (A1.3).
 - New proposed rows: none.
 - Held-out gold (`youth_outcomes_v3.heldout.gold.csv`) was not read. CP-09-05's evidence row is
@@ -266,7 +267,7 @@ gated CP; this CP does not wait for it.
 
 `npm test`, `npm run typecheck`, `npm run typecheck:server`, then
 `python3 codebook-refinement/v3/build_registry.py` with no diff on a second run.
-`deviations.test.ts` fails if A1.1's `fidelity`/`deviation` and FD-P50 disagree.
+`deviations.test.ts` fails if A1.1's `fidelity`/`deviation` and FD-P36 disagree.
 
 **Not run yet.** The drafter tried these edits in a scratch copy, but the test run was refused
 by the permission system and was not retried, so the module and edits here are untested.

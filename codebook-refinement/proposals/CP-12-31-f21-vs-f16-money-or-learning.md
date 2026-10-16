@@ -13,15 +13,16 @@ codebook wording that the model reads comes later, in its own proposal.
 | Field | Value |
 |---|---|
 | Type | TIEBREAKER |
-| Codes touched | None in the codebook data. `CONFUSIONS.md`: new 3.x entry CF-P03 (provisional id) in the "Codebook 3.x tie-breakers" section. Tests: the CONFUSIONS scoping and the 3.x CF check, shared with CP-12-15. No definition, include, exclude, useInstead, example, Source line, `frameworkBasis`, rulesText or registry changes. |
+| Codes touched | None in the codebook data. `CONFUSIONS.md`: new 3.x entry CF-034 (provisional id) in the "Codebook 3.x tie-breakers" section. Tests: the CONFUSIONS scoping and the 3.x CF check, shared with CP-12-15. No definition, include, exclude, useInstead, example, Source line, `frameworkBasis`, rulesText or registry changes. |
 | Version bump | PATCH against the version current when applied (CONFUSIONS and tests only) |
 | Requirement served | R3 tie-breakers |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: CF-034 in CONFUSIONS.md (in force for reviewers; no hint). Waits for the gate: any `useInstead` or rule 11 text, after Severin adjudicates the proposed rows (G11). |
 | Enum cost | +0 (160 → 160) |
-| Framework deviation | none (FD-P38, F1.6 "financial skills", is opened by CP-12-08, not here) |
+| Framework deviation | none (FD-P33, F1.6 "financial skills", is opened by CP-12-08, not here) |
 
 Framework deviation: none. The entry sorts statements between two existing codes inside their
-current text. It relies on F1.6 keeping "financial skills", which CP-12-08 logs as FD-P38
+current text. It relies on F1.6 keeping "financial skills", which CP-12-08 logs as FD-P33
 (provisional id; a codebook-defined element of F1.6 that none of its sources names).
 
 ## Decisions applied
@@ -36,15 +37,15 @@ current text. It relies on F1.6 keeping "financial skills", which CP-12-08 logs 
 
 | Change | Reaches the coding prompt? | When |
 |---|---|---|
-| CF-P03 in `CONFUSIONS.md` | no | now (after CP-12-08, whose FD-P38 the entry cites) |
+| CF-034 in `CONFUSIONS.md` | no | now (after CP-12-08, whose FD-P33 the entry cites) |
 | The "Codebook 3.x tie-breakers" section header and the test scoping (if CP-12-15 has not landed) | no | now |
 | Any `useInstead` or rule 11 text carrying this line | yes | not in this CP: a later hint CP, after Severin adjudicates the proposed rows below (G11), with its own two-run gate |
 
 **Shared rows (whichever lands first applies them; the other drops the rows).** CP-12-15 drafts
 the same section header, the same scoping of `sync.test.ts` and `registry.test.ts`, and the same
 `describe('3.x confusion entries (S3.1)')` in `codebooks/youthOutcomesV3.test.ts`. The text to use
-is CP-12-15's, reproduced under "Change". CF ids are provisional: CF-P01 and CF-P02 are CP-12-15's,
-CF-P03 is this CP's, CF-P04 and CF-P05 are CP-12-32's, CF-P06 to CF-P09 are CP-12-27's. They are
+is CP-12-15's, reproduced under "Change". CF ids are provisional: CF-029 and CF-030 are CP-12-15's,
+CF-034 is this CP's, CF-035 and CF-036 are CP-12-32's, CF-031 to CF-033 are CP-12-27's. They are
 renumbered at merge.
 
 ## Problem
@@ -97,25 +98,25 @@ Entries for codebook 3.x (`codebooks/youthOutcomesV3.data.ts`) use `CF-P##` ids 
 **Entry**, appended to the section (before: no entry):
 
 ```markdown
-### CF-P03: Money result or adult learning? · in force for reviewers; no hint yet (CP-12-31, decision F1-1)
+### CF-034: Money result or adult learning? · in force for reviewers; no hint yet (CP-12-31, decision F1-1)
 
 **Codes:** **F2.1** · F1.6
 
 **Rule:**
 
 - The household's or an adult's money situation: income, public benefits, savings, debt, financial stability, or confidence or stress about money → **F2.1**. Financial coaching named as the service also goes here (rule 11).
-- An adult participant learning a skill or completing education or training (GED, job training, English, digital skills, a financial-education course), with no household money result named → **F1.6**. A caregiver learning a money skill, such as budgeting, is F1.6 (its "financial skills" element, FD-P38).
+- An adult participant learning a skill or completing education or training (GED, job training, English, digital skills, a financial-education course), with no household money result named → **F1.6**. A caregiver learning a money skill, such as budgeting, is F1.6 (its "financial skills" element, FD-P33).
 - Both named (training and a money result): the money result → **F2.1**, with F1.6 as the secondary code.
 - Confidence goes by its object: confidence about money → F2.1; confidence using a skill (technology, English) → F1.6.
 - The young person's own money skills stay **Y7.6** (rule 11); a youth's wages stay Y7.5.
 
-**Rationale:** F2.1's anchor, Ascend 2Gen Economic Assets, and the CFPB financial well-being definition (f2-02, "Having a financial 'cushion' against unexpected expenses and emergencies.", CP-12-09) describe a household's financial position. F1.6's sources (Ascend Postsecondary & Employment Pathways; WIOA Title II adult education, f1-06 and f1-07, CP-12-08; the Digital Equity Act) describe adults gaining education and skills; its "financial skills" element is the codebook's own (FD-P38). The line is status against learning, as Severin ruled on H027.
+**Rationale:** F2.1's anchor, Ascend 2Gen Economic Assets, and the CFPB financial well-being definition (f2-02, "Having a financial 'cushion' against unexpected expenses and emergencies.", CP-12-09) describe a household's financial position. F1.6's sources (Ascend Postsecondary & Employment Pathways; WIOA Title II adult education, f1-06 and f1-07, CP-12-08; the Digital Equity Act) describe adults gaining education and skills; its "financial skills" element is the codebook's own (FD-P33). The line is status against learning, as Severin ruled on H027.
 
 **Gold:** H027, S006, H067 (F2.1); S118, H062, S206 (F1.6).
 ```
 
 The CF lists only adjudicated design rows on its **Gold:** line. No adjudicated row yet codes a
-caregiver's money-skill learning to F1.6 (FD-P38's evidence line says the same); the rule's
+caregiver's money-skill learning to F1.6 (FD-P33's evidence line says the same); the rule's
 second bullet rests on decision F1-1 until Severin rules on the proposed rows below.
 
 ## Change: tests (shared with CP-12-15; whichever lands first applies them)
@@ -130,7 +131,7 @@ second bullet rests on decision F1-1 until Severin rules on the proposed rows be
    the entry's codes; each listed code has at least one such row; no ID from the fresh held-out
    file appears (the test reads that file's ID column only to check absence; no agent reads it).
 
-CF-P03 passes: F2.1 has H027, S006, H067; F1.6 has S118, H062, S206; all six are adjudicated with
+CF-034 passes: F2.1 has H027, S006, H067; F1.6 has S118, H062, S206; all six are adjudicated with
 `v3_gold` F2.1 or F1.6.
 
 ## Sources

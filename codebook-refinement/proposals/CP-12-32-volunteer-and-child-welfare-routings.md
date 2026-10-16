@@ -9,38 +9,39 @@ Second, "preventing young people from entering the child welfare system" goes to
 Caregiver Strengthening domain (F1) with no specific code, and no longer to Family Relationships
 (Y3.4). Both routings change text the coding model reads, so neither ships until Severin has ruled
 on the example statements written for each side and a test run has passed. Widening A1.3 to
-volunteers is logged as a departure from its workplace sources (provisional id FD-P60). With the
-volunteer departure A1.1 already has (FD-P50), it puts two of A1's three codes outside their
+volunteers is logged as a departure from its workplace sources (provisional id FD-unassigned (A1.3)). With the
+volunteer departure A1.1 already has (FD-P36), it puts two of A1's three codes outside their
 frameworks, so A1's anchor frameworks are reviewed again before any further change to that domain.
 
 | Field | Value |
 |---|---|
 | Type | TIEBREAKER (two routings; the volunteer one is carried by widening A1.3's text, which counts as a deviation under the template's tie-breaker rule) |
-| Codes touched | A1.3 (definition, include, exclude, useInstead; `fidelity`, `deviation`, `basis`). Y6.5 (exclude, useInstead). Y3.4 (exclude, useInstead). rulesText: the `mentors_volunteers` target-population line; the DOMAIN ONLY bullet, shared with CP-12-19. `CONFUSIONS.md`: CF-P04, CF-P05 (provisional ids). `DEVIATIONS.md`: FD-P60 (provisional), A1 drift row. Domain hints follow from `useInstead`. No Source line, `frameworkBasis`, example or registry changes. |
+| Codes touched | A1.3 (definition, include, exclude, useInstead; `fidelity`, `deviation`, `basis`). Y6.5 (exclude, useInstead). Y3.4 (exclude, useInstead). rulesText: the `mentors_volunteers` target-population line; the DOMAIN ONLY bullet, shared with CP-12-19. `CONFUSIONS.md`: CF-035, CF-036 (provisional ids). `DEVIATIONS.md`: FD-unassigned (A1.3) (provisional), A1 drift row. Domain hints follow from `useInstead`. No Source line, `frameworkBasis`, example or registry changes. |
 | Version bump | MINOR (A1.3's definition widens; Y3.4's scope narrows), against the version current when applied |
 | Requirement served | R3 tie-breakers |
-| Status | draft, decisions settled 2026-10-16 (Severin: recommended options). **Blocked** on: (1) Severin adjudicating the proposed design rows P-27 to P-32 (volunteers) and P-41 to P-44 (child welfare) (G11); (2) the `codebook_gap` flag in exports (G9; an app change with no owner yet, as CP-12-19 notes); (3) for the volunteer arm only, landing after CP-12-10 (FD-P50) so A1 crosses the S4.9 line with this CP and not before. |
+| Status | draft, decisions settled 2026-10-16 (Severin: recommended options). **Blocked** on: (1) Severin adjudicating the proposed design rows P-27 to P-32 (volunteers) and P-41 to P-44 (child welfare) (G11); (2) the `codebook_gap` flag in exports (G9; an app change with no owner yet, as CP-12-19 notes); (3) for the volunteer arm only, landing after CP-12-10 (FD-P36) so A1 crosses the S4.9 line with this CP and not before. |
+| Applied | Applied 2026-10-16 in 3.1.5: CF-035 and CF-036 only, marked "hint held". Waits for the gate: the A1.3, Y6.5 and Y3.4 text, the `mentors_volunteers` line, the DOMAIN ONLY bullet and the A1.3 deviation entry, after Severin adjudicates P-27 to P-32 and P-41 to P-44 (G11) and the `codebook_gap` flag exists (G9). |
 | Enum cost | +0 (160 → 160) |
-| Framework deviation | new FD-P60 (provisional id): A1.3, adapted, sector widening (workers → volunteers), counted. A1 drift 1/3 → 2/3, over the S4.9 line: the A1 anchor re-review starts when this CP lands. |
+| Framework deviation | new FD-unassigned (A1.3) (provisional id): A1.3, adapted, sector widening (workers → volunteers), counted. A1 drift 1/3 → 2/3, over the S4.9 line: the A1 anchor re-review starts when this CP lands. |
 
 ## Decisions applied
 
 | Decision | Effect on this CP |
 |---|---|
 | G15 (volunteers: skills for the role → A1.1; retention or satisfaction with serving → A1.3; their own life outcomes → A1 domain-only) | The volunteer routing below, and the Y6.5 exclude G15 names. |
-| G13 (prevention of youth entry into the child welfare system → F1 domain-only) | The Y3.4 exclude and useInstead below; CF-P05. |
+| G13 (prevention of youth entry into the child welfare system → F1 domain-only) | The Y3.4 exclude and useInstead below; CF-036. |
 | G9 (domain-only may hold a specific result that has no code, with a `codebook_gap` flag) | Both domain-only routes are specific results with no code. They rely on CP-12-19's DOMAIN ONLY bullet, carried here too; proposed domain-only rows suggest `codebook_gap` = 1, which Severin sets on adjudication. |
 | G11 (two adjudicated design rows per side before any hint or widening ships) | Blocked until Severin rules on P-27 to P-32 and P-41 to P-44 (`codebook-refinement/research-review/2026-10-16/full-review/proposed-design-rows.csv`). |
-| G1, G3 | A1.3's sources (Surgeon General 2022, NIOSH WellBQ 2021, BLS JOLTS) are about workers. Writing volunteers into A1.3's own text names a sector outside them, so FD-P60 opens. a1-08 (volunteer retention, PARTIAL) is narrower than the code, not broader, so it cannot avoid the FD (G3). |
-| G7 (S4.9 as written) | FD-P50 (A1.1) + FD-P60 (A1.3) = 2 of 3 A1 codes: more than a third. The A1 anchor is re-reviewed (keep, replace or split) before any further A1 change, including CP-09-05's A1.3 staffing widening (held under G16). |
+| G1, G3 | A1.3's sources (Surgeon General 2022, NIOSH WellBQ 2021, BLS JOLTS) are about workers. Writing volunteers into A1.3's own text names a sector outside them, so FD-unassigned (A1.3) opens. a1-08 (volunteer retention, PARTIAL) is narrower than the code, not broader, so it cannot avoid the FD (G3). |
+| G7 (S4.9 as written) | FD-P36 (A1.1) + FD-unassigned (A1.3) (A1.3) = 2 of 3 A1 codes: more than a third. The A1 anchor is re-reviewed (keep, replace or split) before any further A1 change, including CP-09-05's A1.3 staffing widening (held under G16). |
 | G12 (review-desk correction of the DHS truancy template) | Not part of this CP. The 12 real-run rows are corrected at the review desk now; this CP makes the prompt agree later. |
 
 ## What lands now and what waits for the gate
 
 | Change | Reaches the coding prompt? | When |
 |---|---|---|
-| CF-P04 and CF-P05 in `CONFUSIONS.md`, marked "hint held" | no | now, so reviewers apply G13 and G15 (as CP-12-15 does for CF-P01 and CF-P02) |
-| FD-P60 in `DEVIATIONS.md`, A1.3 `fidelity`/`deviation`/`basis` | no | with the A1.3 text below, not before (an FD records text that exists) |
+| CF-035 and CF-036 in `CONFUSIONS.md`, marked "hint held" | no | now, so reviewers apply G13 and G15 (as CP-12-15 does for CF-029 and CF-030) |
+| FD-unassigned (A1.3) in `DEVIATIONS.md`, A1.3 `fidelity`/`deviation`/`basis` | no | with the A1.3 text below, not before (an FD records text that exists) |
 | A1.3 definition, include, exclude, useInstead; Y6.5 exclude, useInstead; `mentors_volunteers` line | yes | after P-27 to P-32 are adjudicated (G11), then this CP's own two-run gate |
 | Y3.4 exclude, useInstead | yes | after P-41 to P-44 are adjudicated (G11), in the same gate |
 | DOMAIN ONLY bullet | yes | with whichever of CP-12-19 and this CP ships first |
@@ -76,10 +77,10 @@ P03; this CP: P04, P05; CP-12-27: P06 to P09) and are renumbered at merge.
 | exclude | `Staff learning.` | `Staff learning; a volunteer's own life outcomes outside the role (Domain A1, subcategory none).` |
 | useInstead | `A1.1.` | `A1.1; Domain A1 (subcategory none) for a volunteer's own life outcomes.` |
 | fidelity | `"framework"` | `"adapted"` |
-| deviation | (absent) | `"FD-P60"` (provisional), after `fidelity` |
-| basis | (current text) | current text, then: ` Volunteers (retention, satisfaction with serving): no A1.3 source names volunteers; adapted, FD-P60 (decision G15).` |
+| deviation | (absent) | `"FD-unassigned (A1.3)"` (provisional), after `fidelity` |
+| basis | (current text) | current text, then: ` Volunteers (retention, satisfaction with serving): no A1.3 source names volunteers; adapted, FD-unassigned (A1.3) (decision G15).` |
 
-A1.1 and A1.2 are unchanged: A1.1 already names volunteers and their "understanding" (FD-P50),
+A1.1 and A1.2 are unchanged: A1.1 already names volunteers and their "understanding" (FD-P36),
 which covers skills for the role.
 
 ### Y6.5 Community Service & Action (volunteer arm)
@@ -132,24 +133,24 @@ No numbered rule changes. Rule 1 (who changes decides the part) already sends vo
 ## Change: `CONFUSIONS.md` (lands now, in the "Codebook 3.x tie-breakers" section)
 
 ```markdown
-### CF-P04: Adult volunteers: role skill, staying, or their own life? · hint held (CP-12-32, decision G15)
+### CF-035: Adult volunteers: role skill, staying, or their own life? · hint held (CP-12-32, decision G15)
 
 **Codes:** **A1.1** · A1.3 · Y6.5
 
 **Rule:**
 
 - A volunteer, mentor or coach gaining knowledge or a skill for the role → **A1.1**; applying it in the role → A1.2.
-- A volunteer returning to serve, staying in the role, or satisfied with serving → **A1.3** (FD-P60).
+- A volunteer returning to serve, staying in the role, or satisfied with serving → **A1.3** (FD-unassigned (A1.3)).
 - A volunteer's own life outcomes outside the role (well-being, isolation, career path) → **Domain A1, subcategory none**, with `codebook_gap` = 1 in gold.
 - Young people doing service → **Y6.5**; adults volunteering are Part A (rule 1).
 
-**Rationale:** Guskey (2002) Level 2 grounds learning for the role (A1.1, with FD-P50 for the volunteer sector). A1.3's sources (Surgeon General 2022, NIOSH WellBQ 2021, BLS JOLTS) measure a workforce's stability and well-being; volunteers are added as a logged widening (FD-P60). Outcomes for the volunteer as a person have no A1 code and stay at the domain (decision G9).
+**Rationale:** Guskey (2002) Level 2 grounds learning for the role (A1.1, with FD-P36 for the volunteer sector). A1.3's sources (Surgeon General 2022, NIOSH WellBQ 2021, BLS JOLTS) measure a workforce's stability and well-being; volunteers are added as a logged widening (FD-unassigned (A1.3)). Outcomes for the volunteer as a person have no A1 code and stay at the domain (decision G9).
 
 **Gold:** S083, S244, S146 (A1.1); S149 (A1.3); S005, S184 (Y6.5).
 ```
 
 ```markdown
-### CF-P05: Preventing entry into child welfare · hint held (CP-12-32, decision G13)
+### CF-036: Preventing entry into child welfare · hint held (CP-12-32, decision G13)
 
 **Codes:** **Y3.4** · F1.1 · F2.3
 
@@ -174,7 +175,7 @@ carries it, and the adjudicated proposed rows are added to the **Gold:** lines.
 New entry (before: none):
 
 ```markdown
-### FD-P60 · A1.3
+### FD-unassigned (A1.3) · A1.3
 
 - **Status:** open
 - **Fidelity:** adapted
@@ -184,18 +185,18 @@ New entry (before: none):
 - **Evidence:** the A1.3 volunteer rows Severin adjudicates from the proposed design rows (P-29, P-30; gold ids filled in on adjudication). Adjudicated S149 (staff turnover) is the workforce side and does not move.
 - **Alternative considered:** citing Spinney & Clinton (2024), ICF for AmeriCorps, volunteer retention (claim a1-08, PARTIAL: "positively associated with retention and other positive volunteer outcomes"), rejected in CP-12-10 because it is a literature-review finding that is narrower than the code (G3); routing volunteer retention to A1 domain-only (rejected by G15).
 - **Decided in:** CP-12-32 (2026-10-16 research review; decisions G15, G1, G3 settled by Severin 2026-10-16). Provisional id.
-- **Revisit:** in the A1 anchor re-review this entry starts (S4.9), with FD-P50.
+- **Revisit:** in the A1 anchor re-review this entry starts (S4.9), with FD-P36.
 ```
 
-Drift table, A1 row: `1 / 3` (FD-P50) → `2 / 3` (FD-P50, FD-P60), marked "over the line: anchor
+Drift table, A1 row: `1 / 3` (FD-P36) → `2 / 3` (FD-P36, FD-unassigned (A1.3)), marked "over the line: anchor
 re-review (S4.9)". The re-review is the next A1 change; CP-09-05 (A1.3 staffing, held under G16)
 waits for it.
 
 ## Change: registry and tests
 
-- Registry: unchanged. No source is added or removed; FD-P60 records the gap.
-- Tests: the 3.x CF test (CP-12-15) checks CF-P04 and CF-P05. `deviations.test.ts` checks that
-  FD-P60 is open, is cited by A1.3's `deviation` field, and has the same fidelity (`adapted`).
+- Registry: unchanged. No source is added or removed; FD-unassigned (A1.3) records the gap.
+- Tests: the 3.x CF test (CP-12-15) checks CF-035 and CF-036. `deviations.test.ts` checks that
+  FD-unassigned (A1.3) is open, is cited by A1.3's `deviation` field, and has the same fidelity (`adapted`).
 
 ## Sources
 
@@ -204,7 +205,7 @@ No new citations.
 | Registry ID | Status | Component relied on |
 |---|---|---|
 | guskey-2002-pd-evaluation | verified, direct (A1.1) | Level 2 participants' learning |
-| surgeon-general-2022-workplace-wellbeing, niosh-wellbq-2021, bls-jolts-definitions | verified (A1.3) | workplace well-being and turnover (anchor of FD-P60) |
+| surgeon-general-2022-workplace-wellbeing, niosh-wellbq-2021, bls-jolts-definitions | verified (A1.3) | workplace well-being and turnover (anchor of FD-unassigned (A1.3)) |
 | search-40-assets, search-developmental-relationships | verified (Y3.4) | Support assets; relationships with parents |
 
 ## Verification requests

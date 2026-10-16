@@ -21,8 +21,9 @@ on the design test set after pull requests #62 and #66, together with the separa
 | Version bump | PATCH, relative to the version current when applied (after PR #62, so 3.2.x if its 3.2.0 candidate merges). Bumped at merge. |
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: the registry part: new `ccss-speaking-listening-anchors` (y4a-01), the casel-2020 Y4.6 definition support (y4a-02), `codebook_names` on `acf-nytd` and `chafee-42usc677-a2`; the Y4.6 `basis`. Waits for the gate: Source lines Y2.1, Y2.2, Y3.2, Y4.4, Y4.6, Y4.7, Y4.12 and the Y2 `frameworkBasis` re-anchor. The note sentence "Named as a Y4 secondary by CP-12-29" was left out, because CP-12-29 has not landed. |
 | Enum cost | +0 (160 → 160) |
-| Framework deviation | none. No code's scope changes. The lines name sources whose supports CP-12-01, -02, -03 and this CP add. Two existing unlogged departures close by citation, not by entry: Y4.6 public speaking (CCSS SL.4, named as a Y4 secondary by CP-12-29 under G2) and Y3.2 youth in care (Chafee/NYTD, G1). Y2.1's anchor moves from Muhammad to Pekrun with no new FD (G1); its pride element is FD-P40 (CP-12-01). |
+| Framework deviation | none. No code's scope changes. The lines name sources whose supports CP-12-01, -02, -03 and this CP add. Two existing unlogged departures close by citation, not by entry: Y4.6 public speaking (CCSS SL.4, named as a Y4 secondary by CP-12-29 under G2) and Y3.2 youth in care (Chafee/NYTD, G1). Y2.1's anchor moves from Muhammad to Pekrun with no new FD (G1); its pride element is FD-unassigned (Y2.1) (CP-12-01). |
 | Reaches the prompt | **Yes.** `source` prints as "Source Framework:" and `frameworkBasis` as "Framework Basis:" in `definitionsText`. The prompt part waits for the one two-run design-set gate after PRs #62 and #66 (G10), shared with CP-12-29, CP-12-26 and the other Source-line CPs. |
 
 ## When each part lands
@@ -110,7 +111,7 @@ The new lines avoid "partial", "located", "(verified)" and "VERIFY", which `yout
 forbids in a source line. Y2.2 does not name SSES: it corroborates CASEL and adds nothing a coder
 uses. Y4.4 leaves out "Recognizing situational demands and opportunities" until an excerpt shows
 it (S1.5; CP-12-03). Y4.12 names no avoidance source, because its avoidance element is logged
-(FD-P42, CP-12-03).
+(FD-P24, CP-12-03).
 
 The Y4.7 `useInstead` "(in flight)" fix drafted here moves to CP-12-26 (stale in-flight text), which
 is at the same gate.

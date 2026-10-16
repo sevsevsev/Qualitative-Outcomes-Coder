@@ -1,0 +1,93 @@
+[
+ {
+  "claim_id": "CP-12-01-V2",
+  "code": "Y2.2",
+  "cite_as": "Hidi, S., & Renninger, K. A. (2006). The Four-Phase Model of Interest Development. Educational Psychologist, 41(2), 111-127.",
+  "claimed_component": "Phase 1, triggered situational interest, is described as interest triggered by novel or new activities or experiences, such that engaging with (trying) a new activity expresses phase-1 interest.",
+  "url": "https://sciencecommunication.ut.ee/wp-content/uploads/2018/09/Article-5-The-Four-Phase-Model-of-Interest-Development.pdf"
+ },
+ {
+  "claim_id": "CP-12-01-V3",
+  "code": "Y2.2, Y2.3",
+  "cite_as": "Hidi, S., & Renninger, K. A. (2006). The Four-Phase Model of Interest Development. Educational Psychologist, 41(2), 111-127.",
+  "claimed_component": "This copy is the cited article: title 'The Four-Phase Model of Interest Development', authors Hidi and Renninger, journal Educational Psychologist, volume 41, issue 2, pages 111-127, and its DOI as printed on the copy.",
+  "url": "https://sciencecommunication.ut.ee/wp-content/uploads/2018/09/Article-5-The-Four-Phase-Model-of-Interest-Development.pdf"
+ },
+ {
+  "claim_id": "CP-12-02-V1",
+  "code": "Y3.1",
+  "cite_as": "National Research Council and Institute of Medicine (2002). Community Programs to Promote Youth Development. Washington, DC: The National Academies Press.",
+  "claimed_component": "Among the features of positive developmental settings, 'physical and psychological safety' is framed as young people feeling safe in the program (an experience of the youth).",
+  "url": "https://www.nationalacademies.org/read/10022/chapter/7"
+ },
+ {
+  "claim_id": "CP-12-03-V1",
+  "code": "Y4.12",
+  "cite_as": "SHAPE America - Society of Health and Physical Educators (2024). National Health Education Standards.",
+  "claimed_component": "The phrase 'Demonstrate refusal skills to avoid or reduce health risks' appears on this page, among the Standard 4 indicators.",
+  "url": "https://shapeamerica.org/standards/health/new-he-standards/"
+ },
+ {
+  "claim_id": "CP-12-07-V5b",
+  "code": "Y8.11, Y8.12",
+  "cite_as": "SHAPE America (2024). National Health Education Standards.",
+  "claimed_component": "A Standard 1 indicator about knowing the health risks of substance use, or about recognizing signs of unhealthy or violent relationships.",
+  "url": "https://shapeamerica.org/standards/health/new-he-standards/"
+ },
+ {
+  "claim_id": "CP-12-07-V2",
+  "code": "Y8.2",
+  "cite_as": "SHAPE America (2024). National Physical Education Standards.",
+  "claimed_component": "A Standard 1 grade-span indicator (K-2 or later) names fine motor or manipulative skills of the hands (e.g. using scissors, grasping a pencil).",
+  "url": "https://shapeamerica.org/standards/pe/new-pe-standards/"
+ },
+ {
+  "claim_id": "CP-12-07-V3",
+  "code": "Y8.11",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module AOD (Alcohol and Other Drugs).",
+  "claimed_component": "A healthy behavior outcome or knowledge expectation about knowing the health risks of alcohol or other drug use.",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_aod.pdf"
+ },
+ {
+  "claim_id": "CP-12-07-V4",
+  "code": "Y8.11",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module T (Tobacco).",
+  "claimed_component": "A healthy behavior outcome or knowledge expectation about knowing the health risks of tobacco or vaping products, or about students' intentions not to use them.",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_t.pdf"
+ },
+ {
+  "claim_id": "CP-12-07-V5",
+  "code": "Y8.12",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module V (Violence Prevention).",
+  "claimed_component": "A healthy behavior outcome or knowledge expectation about recognizing warning signs of dating or relationship violence.",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_v.pdf"
+ },
+ {
+  "claim_id": "CP-12-07-V12",
+  "code": "Y8.1",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module PA (Physical Activity).",
+  "claimed_component": "A healthy behavior outcome or expectation about a student limiting their own sedentary or recreational screen time.",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_pa.pdf"
+ },
+ {
+  "claim_id": "CP-12-07-V13",
+  "code": "Y8.5",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module PHW (Personal Health and Wellness).",
+  "claimed_component": "A healthy behavior outcome or expectation that names immunizations or vaccinations in general (not one specific vaccine).",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_phw.pdf"
+ },
+ {
+  "claim_id": "CP-12-07-V4b",
+  "code": "Y8.11",
+  "cite_as": "Miech, R. A., Patrick, M. E., O'Malley, P. M., Jager, J. O., & Jang, J. B. (2026). Monitoring the Future national survey results on drug use, 1975-2025. Institute for Social Research, University of Michigan.",
+  "claimed_component": "The volume reports a measure of students' intentions or expectations to use a substance in the future.",
+  "url": "https://monitoringthefuture.org/wp-content/uploads/2025/12/mtfvol12026.pdf"
+ },
+ {
+  "claim_id": "CP-12-10-V1",
+  "code": "A1.1",
+  "cite_as": "U.S. Office of Personnel Management. Training Evaluation Field Guide.",
+  "claimed_component": "Kirkpatrick Level 2, Learning: the degree to which participants acquire the intended knowledge, skills, attitude, confidence and commitment from training, for any workforce (not only educators).",
+  "url": ""
+ }
+]

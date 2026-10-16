@@ -15,6 +15,7 @@ source line or meaning changes, and the coding model never reads these notes, so
 | Version bump | PATCH against the version current when applied |
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Applied | Applied 2026-10-16 in 3.1.5: notes 2 (CJCA rename), 4 (CSTA 2026 watch), 5 (Digital Equity Act, unverified), 6 (SNAP-Ed: round-2 V-STATUS-2 PARTIAL, so the note quotes the FNS memo's dated end of required funding instead of a review lead), 8 (Healthy People 2030 court-order banner: V-STATUS-1 SUPPORTED, quoted on all 14 `hp2030-*` entries) and 9 (PA-R02 watch); items 1 and 3 were already applied by CP-12-04 and CP-12-10. Left out: item 7, because the USDA nutrition-security entry does not exist (CP-12-09 V8 failed). Waits for the gate: nothing. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none |
 

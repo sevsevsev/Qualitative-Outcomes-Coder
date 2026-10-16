@@ -15,10 +15,11 @@ to re-review the "family advisory board" row (S176). Nothing the coding model re
 | Field | Value |
 |---|---|
 | Type | RULES (documentation renumbering by generated map; no code renumbered) |
-| Codes touched | None in the codebook. `CONFUSIONS.md`: new section "Codebook 3.x tie-breakers" (if not already created by CP-12-15 or CP-12-31) with four generated entries, CF-P06..CF-P09 (provisional ids). `DEVIATIONS.md`: 24 lines in the 3.x section (FD-P02..FD-P20) gain "(now Y…)". New script `codebook-refinement/v3/renumber_2x_refs.py`; test changes in `codebooks/youthOutcomesV3.test.ts`, `codebook-refinement/sync.test.ts`, `codebook-refinement/registry.test.ts`. |
+| Codes touched | None in the codebook. `CONFUSIONS.md`: new section "Codebook 3.x tie-breakers" (if not already created by CP-12-15 or CP-12-31) with four generated entries, CF-031..CF-033 (provisional ids). `DEVIATIONS.md`: 24 lines in the 3.x section (FD-P02..FD-P20) gain "(now Y…)". New script `codebook-refinement/v3/renumber_2x_refs.py`; test changes in `codebooks/youthOutcomesV3.test.ts`, `codebook-refinement/sync.test.ts`, `codebook-refinement/registry.test.ts`. |
 | Version bump | PATCH (documentation and tests; codebook text unchanged). Not MAJOR: no code string or identifier changes, and `services/reviewNormalization.ts` needs no mapping. |
 | Requirement served | R3 tie-breakers, R4 drift (readable log) |
-| Status | draft, decisions settled 2026-10-16 (Severin: recommended options). CF-P07 (from CF-008) is generated with status "open" and is **blocked on G14**: S176 is re-reviewed alongside CP-09-01 and Severin adjudicates it; the row is unchanged until then. |
+| Status | draft, decisions settled 2026-10-16 (Severin: recommended options). CF-unassigned (3.x copy of CF-008) (from CF-008) is generated with status "open" and is **blocked on G14**: S176 is re-reviewed alongside CP-09-01 and Severin adjudicates it; the row is unchanged until then. |
+| Applied | Applied 2026-10-16 in 3.1.5: `v3/renumber_2x_refs.py` and its tests; "(now Y…)" on 24 lines of FD-P02 to FD-P20 (the script annotates FD-P01 to FD-P20 only, because later entries use 3.x ids and standard indicator numbers); CF-031, CF-032, CF-033 generated from CF-003, CF-016, CF-019. Left out: the 3.x copy of CF-008, blocked on S176's re-review (G14). Waits for the gate: nothing. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none |
 
@@ -30,7 +31,7 @@ Framework deviation: none. No entry opens, closes or changes its case; only the 
 |---|---|
 | Renumbering rule (CLAUDE.md: "Any renumbering is a generated map applied by script, with a test") | Every 3.x number here comes from `v3/crosswalk-2.5.1-to-3.0.0.csv` through the script. The only non-generated input is one override row, itself taken from live rulesText rule 14 and tested (below). |
 | G10 | No prompt text; lands now. |
-| G14 (S176 re-reviewed with CP-09-01; Severin adjudicates; row unchanged until then) | CF-P07 is written as "open" and names the conflict; its restatement by the Part axis waits on S176. |
+| G14 (S176 re-reviewed with CP-09-01; Severin adjudicates; row unchanged until then) | CF-unassigned (3.x copy of CF-008) is written as "open" and names the conflict; its restatement by the Part axis waits on S176. |
 | G6 (merged-components only when coders cannot tell the parts apart) | Not applied here. FD-P02..P08 keep their case; the "(now Y…)" notes make the G6 re-test (CP-12-03) readable. |
 
 ## What lands now and what waits for the gate
@@ -38,8 +39,8 @@ Framework deviation: none. No entry opens, closes or changes its case; only the 
 | Change | Reaches the coding prompt? | When |
 |---|---|---|
 | Script, tests, DEVIATIONS annotations | no | now |
-| CF-P06 (from CF-003), CF-P08 (from CF-016), CF-P09 (from CF-019) | no | now |
-| CF-P07 (from CF-008), status open | no | now as an open entry; its restatement waits for S176 (G14) |
+| CF-031 (from CF-003), CF-032 (from CF-016), CF-033 (from CF-019) | no | now |
+| CF-unassigned (3.x copy of CF-008) (from CF-008), status open | no | now as an open entry; its restatement waits for S176 (G14) |
 | New 3.x routings for CASEL skills (CF-016's batch 1 R-30 leads) | would reach it | not here; each needs its own CP |
 
 Nothing waits for the gate.
@@ -83,8 +84,8 @@ print every changed line, refuse to run twice.
   "<old> (now <new>)", or "<old> (now <new> and <targets>)" for a split. A token already followed
   by " (now " is skipped, so the script is safe to re-run after per-domain CPs edit an entry.
   FD-001..FD-005 (the 2.x section) are not touched: they describe `codebooks/original.ts`.
-- **CONFUSIONS.md.** For each id in `SOURCES = {'CF-003': 'CF-P06', 'CF-008': 'CF-P07',
-  'CF-016': 'CF-P08', 'CF-019': 'CF-P09'}`, copy the 2.x block into the 3.x section, replace each
+- **CONFUSIONS.md.** For each id in `SOURCES = {'CF-003': 'CF-031', 'CF-008': 'CF-unassigned (3.x copy of CF-008)',
+  'CF-016': 'CF-032', 'CF-019': 'CF-033'}`, copy the 2.x block into the 3.x section, replace each
   one-to-one or merge token with its 3.x code, write a split or multi-domain token as
   "<old> [2.x; split in 3.0: …]", map each **Gold:** G-id to the v3 design row with the same
   `outcome_text` (exact match, from `gold/original.gold.csv` to `gold/youth_outcomes_v3.gold.csv`),
@@ -112,7 +113,7 @@ Entries for codebook 3.x (`codebooks/youthOutcomesV3.data.ts`) use `CF-P##` ids 
 Then the script's output (dry run of the prototype against today's files, override applied):
 
 ```markdown
-### CF-P06: Coping skill vs. symptom state vs. caregiver state (3.x ids) · active (generated)
+### CF-031: Coping skill vs. symptom state vs. caregiver state (3.x ids) · active (generated)
 
 _Renumbered from CF-003 by `v3/renumber_2x_refs.py`; do not edit by hand._
 
@@ -128,7 +129,7 @@ _Renumbered from CF-003 by `v3/renumber_2x_refs.py`; do not edit by hand._
 ```
 
 ```markdown
-### CF-P07: Family codes (3.x ids) · open (generated; contradicts live F1.9 and A2.6; restated after S176 is re-reviewed, decision G14)
+### CF-unassigned (3.x copy of CF-008): Family codes (3.x ids) · open (generated; contradicts live F1.9 and A2.6; restated after S176 is re-reviewed, decision G14)
 
 _Renumbered from CF-008 by `v3/renumber_2x_refs.py`; do not edit by hand._
 
@@ -150,7 +151,7 @@ Parent Advisory Council" to A2.6. Do not apply this entry until it is restated.
 ```
 
 ```markdown
-### CF-P08: CASEL 2020 skills with no dedicated subcode (3.x ids) · active (generated)
+### CF-032: CASEL 2020 skills with no dedicated subcode (3.x ids) · active (generated)
 
 _Renumbered from CF-016 by `v3/renumber_2x_refs.py`; do not edit by hand. One override: 6.4 → Y5.6, from rulesText rule 14._
 
@@ -171,7 +172,7 @@ Routing table. Adding a new code for any of these would need its own CP.
 ```
 
 ```markdown
-### CF-P09: Trauma (3.x ids) · active (generated)
+### CF-033: Trauma (3.x ids) · active (generated)
 
 _Renumbered from CF-019 by `v3/renumber_2x_refs.py`; do not edit by hand._
 
@@ -185,7 +186,7 @@ _Renumbered from CF-019 by `v3/renumber_2x_refs.py`; do not edit by hand._
 **Gold:** S204 (A1.2), S078 (Y8.8)
 ```
 
-CF-P08 agrees with rulesText rule 14 row for row, so S3.2 holds. "see CF-015" is carried as it
+CF-032 agrees with rulesText rule 14 row for row, so S3.2 holds. "see CF-015" is carried as it
 is; CF-015's 3.x counterpart is rule 13, and a 3.x leadership entry is the PR #62 leadership work
 (Y6-1), not this CP. The CASEL routings that batch 1 found unrouted (honesty → Y6.1, systems →
 Y6.3; R-14, R-30) need their own CPs and are not added.
@@ -243,7 +244,7 @@ in the PR.
      followed by " (now ".
 3. The 3.x CF check CP-12-15 drafts (≥2 adjudicated rows per code) applies to new tie-breakers.
    Generated entries carry the 2.x rule instead (S3.1, as `registry.test.ts` applies it: at least
-   two adjudicated rows per entry); CF-P06, CF-P08 and CF-P09 have 3, 2 and 2. Open entries (CF-P07)
+   two adjudicated rows per entry); CF-031, CF-032 and CF-033 have 3, 2 and 2. Open entries (CF-unassigned (3.x copy of CF-008))
    are exempt, like "proposed" ones.
 
 ### Codebook, registry, rulesText
@@ -262,9 +263,9 @@ None.
 ## Gold impact
 
 - Rows expected to change code: none. No gold file is written.
-- Rows named: S069, S067, S239 (CF-P06); S157, S176, S119 (CF-P07); S052, S082 (CF-P08); S204,
-  S078 (CF-P09). **S176 is blocked:** it stays F1.9 until Severin re-reviews it alongside CP-09-01
-  (G14); CF-P07 is restated after that, in a TIEBREAKER CP of its own.
+- Rows named: S069, S067, S239 (CF-031); S157, S176, S119 (CF-unassigned (3.x copy of CF-008)); S052, S082 (CF-032); S204,
+  S078 (CF-033). **S176 is blocked:** it stays F1.9 until Severin re-reviews it alongside CP-09-01
+  (G14); CF-unassigned (3.x copy of CF-008) is restated after that, in a TIEBREAKER CP of its own.
 - New proposed rows: none. Held-out gold was not read.
 
 ## Judge result

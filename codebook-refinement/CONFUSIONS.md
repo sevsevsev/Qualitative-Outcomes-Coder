@@ -468,3 +468,128 @@ places that broaden their world). The Education-to-Workforce framework's social
 capital indicator is about mobilizing relationships to further one's goals.
 
 **Gold:** G-075, G-076, G-077
+
+---
+
+## Codebook 3.x tie-breakers
+
+Entries for codebook 3.x (`codebooks/youthOutcomesV3.data.ts`) continue the `CF-###` numbering from CF-029 and use 3.x code ids. Gold IDs point to `gold/youth_outcomes_v3.gold.csv` (design set; never held-out rows). The 2.x entries above keep their numbers. For 3.x, the text of `useInstead` and rulesText must say the same thing as these entries (S3.2). An entry marked "hint held" is in force for reviewers; its prompt text ships with the CP named. The consistency tests read the 2.x entries above this heading and the 3.x entries below it separately (`codebooks/youthOutcomesV3.test.ts`, "3.x confusion entries (S3.1)").
+
+### CF-029: Whose health coverage? · hint held (CP-12-15, decision G11)
+
+**Codes:** **Y8.5** · F2.1
+
+**Rule:**
+
+- A young person's own health insurance or coverage (enrolling, keeping coverage) → **Y8.5**, even through Medicaid.
+- A family's or household's enrollment in public benefits, including Medicaid named among other benefits → **F2.1**.
+- A caregiver enrolling a child in coverage: settled by Severin's adjudication of the proposed boundary row (CP-12-15); until then, code by rule 1 and flag for review.
+
+**Rationale:** Healthy People 2030 AHS-01 and ACF NYTD "access to health insurance" (both direct for Y8.5) measure a person's coverage. F2.1's anchor, Ascend Economic Assets, and AHS-01 (partial for F2.1) frame benefits as household economic stability. Rule 1 (who changes) decides.
+
+**Gold:** S191 (Y8.5), S139 (F2.1).
+
+### CF-030: Whose eating? · hint held (CP-12-15, decision G11)
+
+**Codes:** **Y8.1** · F1.3 · F2.2
+
+**Rule:**
+
+- A young person's own eating or nutrition habits → **Y8.1**.
+- A household's or family's eating practices → **F1.3**.
+- Having or getting enough or healthy food (food security, access) → **F2.2**, for a household or a young person living independently.
+
+**Rationale:** CDC HECAT (2021) Food and Nutrition HBO 3 and 10 are youth behaviors (Y8.1). SNAP-Ed MT1 covers "individual and family healthy eating behaviors" (F1.3; family side). The USDA Household Food Security Survey Module and Healthy People 2030 NWS-01 measure having enough food (F2.2). The line is skill or behavior against status.
+
+**Gold:** S121, S187, H085 (Y8.1); H072 (F1.3); S062, S210, H070 (F2.2).
+
+### CF-031: Coping skill vs. symptom state vs. caregiver state (3.x ids) · active (generated)
+
+_Renumbered from CF-003 by `v3/renumber_2x_refs.py`; do not edit by hand._
+
+**Codes:** Y4.2 · Y8.6 · F1.4
+
+**Rule:**
+
+- A youth learns or uses a coping tool → Y4.2.
+- A youth's symptoms go down → Y8.6.
+- A caregiver's own stress goes down → F1.4.
+
+**Gold:** S069 (Y4.2), S067 (Y8.6), S239 (F1.4)
+
+### CF-032: CASEL 2020 skills with no dedicated subcode (3.x ids) · active (generated)
+
+_Renumbered from CF-016 by `v3/renumber_2x_refs.py`; do not edit by hand. One override: 6.4 → Y5.6, from rulesText rule 14._
+
+Routing table. Adding a new code for any of these would need its own CP.
+
+| CASEL skill (2020) | Route to | Why |
+|---|---|---|
+| Resisting negative social pressure | Y4.12 | In youth-program outcome statements it is almost always framed as risk refusal. |
+| Demonstrating curiosity and open-mindedness | Y2.2 | Hidi & Renninger triggered interest is the more specific construct. |
+| Understanding and expressing gratitude | Y4.4 | Closest social-awareness code. |
+| Recognizing strengths in others | Y4.4 | Social awareness of others. Y5.4 is the youth's *own* strengths. |
+| Standing up for the rights of others | Y6.3 if systemic/injustice-framed; else Y4.11 | Criticality vs. a situational ethical choice. |
+| Showing the courage to take initiative; demonstrating personal and collective agency | Y5.6 | Search Institute places 'Personal power' under Positive Identity (verified cycle-01b). Use Y6.4 if civic. |
+| Showing leadership in groups | see CF-015 | |
+| Examining prejudices and biases | Y4.5 | |
+
+**Gold:** S052 (Y4.12), S082 (Y4.4)
+
+### CF-033: Trauma (3.x ids) · active (generated)
+
+_Renumbered from CF-019 by `v3/renumber_2x_refs.py`; do not edit by hand._
+
+**Codes:** Y8.8 · A1.2
+
+**Rule:**
+
+- The youth's own recovery → Y8.8.
+- Staff or organization adopting trauma-informed practice → A1.2.
+
+**Gold:** S204 (A1.2), S078 (Y8.8)
+
+### CF-034: Money result or adult learning? · in force for reviewers; no hint yet (CP-12-31, decision F1-1)
+
+**Codes:** **F2.1** · F1.6
+
+**Rule:**
+
+- The household's or an adult's money situation: income, public benefits, savings, debt, financial stability, or confidence or stress about money → **F2.1**. Financial coaching named as the service also goes here (rule 11).
+- An adult participant learning a skill or completing education or training (GED, job training, English, digital skills, a financial-education course), with no household money result named → **F1.6**. A caregiver learning a money skill, such as budgeting, is F1.6 (its "financial skills" element, FD-P33).
+- Both named (training and a money result): the money result → **F2.1**, with F1.6 as the secondary code.
+- Confidence goes by its object: confidence about money → F2.1; confidence using a skill (technology, English) → F1.6.
+- The young person's own money skills stay **Y7.6** (rule 11); a youth's wages stay Y7.5.
+
+**Rationale:** F2.1's anchor, Ascend 2Gen Economic Assets, and the CFPB financial well-being definition (f2-02, "Having a financial 'cushion' against unexpected expenses and emergencies.", CP-12-09) describe a household's financial position. F1.6's sources (Ascend Postsecondary & Employment Pathways; WIOA Title II adult education, f1-06 and f1-07, CP-12-08; the Digital Equity Act) describe adults gaining education and skills; its "financial skills" element is the codebook's own (FD-P33). The line is status against learning, as Severin ruled on H027.
+
+**Gold:** H027, S006, H067 (F2.1); S118, H062, S206 (F1.6).
+
+### CF-035: Adult volunteers: role skill, staying, or their own life? · hint held (CP-12-32, decision G15)
+
+**Codes:** **A1.1** · A1.3 · Y6.5
+
+**Rule:**
+
+- A volunteer, mentor or coach gaining knowledge or a skill for the role → **A1.1**; applying it in the role → A1.2.
+- A volunteer returning to serve, staying in the role, or satisfied with serving → **A1.3** (a widening of its workplace sources, logged in DEVIATIONS.md when A1.3's text ships; FD-unassigned (A1.3)).
+- A volunteer's own life outcomes outside the role (well-being, isolation, career path) → **Domain A1, subcategory none**, with `codebook_gap` = 1 in gold.
+- Young people doing service → **Y6.5**; adults volunteering are Part A (rule 1).
+
+**Rationale:** Guskey (2002) Level 2 grounds learning for the role (A1.1, with FD-P36 for the volunteer sector). A1.3's sources (Surgeon General 2022, NIOSH WellBQ 2021, BLS JOLTS) measure a workforce's stability and well-being; volunteers are added as a logged widening when the A1.3 text ships. Outcomes for the volunteer as a person have no A1 code and stay at the domain (decision G9).
+
+**Gold:** S083, S244, S146 (A1.1); S149 (A1.3); S005, S184 (Y6.5).
+
+### CF-036: Preventing entry into child welfare · hint held (CP-12-32, decision G13)
+
+**Codes:** **Y3.4** · F1.1 · F2.3
+
+**Rule:**
+
+- Preventing a young person's entry into the child welfare system, with no family result named → **Domain F1, subcategory none**, with `codebook_gap` = 1 in gold.
+- A young person's own relationship with family, including reunification after care → **Y3.4**.
+- Parents' practices or knowledge named → **F1.1**; housing named → **F2.3**.
+
+**Rationale:** The outcome is about the family staying out of the system, so it belongs to the family domain (F1) by rule 1, but it names no parenting practice, protective factor or partnership that an F1 code covers. Y3.4's sources (Search Institute Support assets, Developmental Relationships with parents) describe the youth's relationship, which the template does not name.
+
+**Gold:** S024, S070 (Y3.4); S053, H068 (F1.1); S029 (F2.3).

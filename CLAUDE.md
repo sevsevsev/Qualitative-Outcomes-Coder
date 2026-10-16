@@ -100,6 +100,11 @@ Read these before touching any codebook:
   - Put inputs in a scratch directory outside `codebook-refinement/gold/`.
   - Compare their outputs yourself. Agreement is not accuracy; human adjudication is.
 
+- The `academic-research-skills` plugin (enabled in `.claude/settings.json`, pinned to
+  v3.23.1) adds deep-research, academic-paper, academic-paper-reviewer, sr-screener and
+  academic-pipeline. Its citation checks and fact-checks are leads only: the hard rules
+  above (verifier fetch, verbatim excerpt, independent checks, CPs) still decide.
+
 ## Checks
 
 - `npm test`: includes `codebook-refinement/registry.test.ts`,

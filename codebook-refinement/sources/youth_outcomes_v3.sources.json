@@ -15,6 +15,29 @@
   },
   "sources": [
     {
+      "id": "acf-cwpm-8-3b1-q9-incidentals",
+      "cite_as": "ACF Children's Bureau. Child Welfare Policy Manual 8.3B.1, Title IV-E Foster Care Maintenance Payments, Allowable costs, Question 9 (personal incidentals).",
+      "codebook_names": [],
+      "tier": "A",
+      "publisher": "U.S. Department of Health and Human Services, ACF Children's Bureau",
+      "year": null,
+      "url": "https://cwpm.acf.gov/pdfs/CW%20Policy%20Database%20-%20Section%208.3B.1%20Policy%20Questions%20&%20Answers.pdf",
+      "status": "verified",
+      "verified_on": "2026-10-17",
+      "verified_by": "2026-10-17 F2.4 verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "For title IV-E purposes, what does the term \"personal incidentals\" include? ... items related to personal hygiene; cosmetics; over-the-counter medications and special dietary foods;",
+      "notes": "Added by CP-12-33. A rule on which costs the title IV-E payment covers, not a measure of going without (verifier, PARTIAL on fit). Supporting only; not named on the Source line.",
+      "supports": [
+        {
+          "code": "F2.4",
+          "component": "items related to personal hygiene among a foster child's personal incidentals (statutory guidance; decision G4)",
+          "fit": "partial",
+          "excerpt": "For title IV-E purposes, what does the term \"personal incidentals\" include? ... items related to personal hygiene; cosmetics; over-the-counter medications and special dietary foods;",
+          "verifier_note": "The source is the ACF Children's Bureau CWPM, Section 8.3B.1 (Title IV-E Foster Care Maintenance Payments, Allowable costs), Question 9. The citation and the component are correct: the answer lists 'items related to personal hygiene' and the question cites 475(4)(A). It is PARTIAL because of fit. This is a rule about which costs a foster child's maintenance payment may reimburse, not a measure of a family or adult going without hygiene items. It can back the idea that hygiene items are a recognised basic need, not an F-part outcome directly. The answer text itself says 'section 475 (4)' without the '(A)'."
+        }
+      ]
+    },
+    {
       "id": "acf-nytd",
       "cite_as": "Administration for Children and Families — National Youth in Transition Database (NYTD) outcomes survey",
       "tier": "A",
@@ -1098,6 +1121,29 @@
       ]
     },
     {
+      "id": "cso-ireland-silc-child-deprivation-2024",
+      "cite_as": "Central Statistics Office Ireland (2025). SILC Module on Child Deprivation 2024, Background Notes, Table 6.1.",
+      "codebook_names": [],
+      "tier": "A",
+      "publisher": "Central Statistics Office Ireland",
+      "year": 2025,
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-silccd/silcmoduleonchilddeprivation2024/backgroundnotes",
+      "status": "verified",
+      "verified_on": "2026-10-17",
+      "verified_by": "2026-10-17 F2.4 verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "A child is considered as deprived if they suffer from an enforced lack of at least three items out of the 17 items.",
+      "notes": "Added by CP-12-33. The same measure restated by a national statistics office; supporting only, not named on the Source line.",
+      "supports": [
+        {
+          "code": "F2.4",
+          "component": "Table 6.1 child-specific deprivation items (new clothes, two pairs of shoes, outdoor leisure equipment); supporting only",
+          "fit": "direct",
+          "excerpt": "A child is considered as deprived if they suffer from an enforced lack of at least three items out of the 17 items.",
+          "verifier_note": "Table 6.1 (Child-specific deprivation Items) has 13 child items, including new clothes, two pairs of shoes and outdoor leisure equipment; the 17 is the full index. Release dated 08 May 2025, which matches the 2025 citation."
+        }
+      ]
+    },
+    {
       "id": "cssp-concrete-support",
       "cite_as": "Center for the Study of Social Policy (CSSP). Strengthening Families Protective & Promotive Factors: Concrete Support in Times of Need.",
       "codebook_names": [],
@@ -1109,7 +1155,7 @@
       "verified_on": "2026-09-27",
       "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "Parents need experiences that enable them to understand their rights in accessing services, gain knowledge of relevant services and learn how to navigate through service systems",
-      "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here.",
+      "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here. Does not name clothing (claim f2new-13, PARTIAL, 2026-10-17); not cited for F2.4. The verifier's corrected cite: Center for the Study of Social Policy (n.d.). Strengthening Families: Concrete Support in Times of Need.",
       "supports": [
         {
           "code": "F1.7",
@@ -1611,6 +1657,57 @@
       ]
     },
     {
+      "id": "eu-reg-112-2013-silc-child-items",
+      "cite_as": "European Commission (2013). Commission Regulation (EU) No 112/2013 of 7 February 2013 implementing Regulation (EC) No 1177/2003, Annex, children's items HD100, HD110, HD160.",
+      "codebook_names": [
+        "Commission Regulation (EU) No 112/2013"
+      ],
+      "tier": "A",
+      "publisher": "European Commission",
+      "year": 2013,
+      "url": "https://eur-lex.europa.eu/eli/reg/2013/112/oj/eng/pdf",
+      "status": "verified",
+      "verified_on": "2026-10-17",
+      "verified_by": "2026-10-17 F2.4 verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "HD100 Some new (not second-hand) clothes ... HD110 Two pairs of properly fitting shoes (including a pair of all-weather shoes) ... HD160 Outdoor leisure equipment ... all household members aged between 1 and 15",
+      "notes": "Added by CP-12-33. The instrument behind the Eurostat child items (tier A, CP-12-33 decision 2). HD100 counts new (not second-hand) clothes; F2.4 does not require new clothes, which rests on 42 U.S.C. 675(4)(A) and CRC Art. 27(3) (CP-12-33).",
+      "supports": [
+        {
+          "code": "F2.4",
+          "component": "Annex, children's items HD100 (some new clothes), HD110 (two pairs of properly fitting shoes), HD160 (outdoor leisure equipment)",
+          "fit": "direct",
+          "excerpt": "HD100 Some new (not second-hand) clothes ... HD110 Two pairs of properly fitting shoes (including a pair of all-weather shoes) ... HD160 Outdoor leisure equipment ... all household members aged between 1 and 15",
+          "verifier_note": "Regulation number, date and item labels all match. The excerpt joins label fragments, so the ellipses mark gaps."
+        }
+      ]
+    },
+    {
+      "id": "eurostat-child-deprivation-2023",
+      "cite_as": "Eurostat (2023, 24 April). 13% of EU children faced material deprivation. Eurostat News; child-specific material deprivation rate.",
+      "codebook_names": [
+        "Eurostat, EU-SILC child-specific material deprivation items",
+        "Eurostat EU-SILC child-specific deprivation items"
+      ],
+      "tier": "A",
+      "publisher": "Eurostat (European Commission)",
+      "year": 2023,
+      "url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/DDN-20230424-2",
+      "status": "verified",
+      "verified_on": "2026-10-17",
+      "verified_by": "2026-10-17 F2.4 verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "The child-specific deprivation rate is the percentage of children below 16 ... Child: Some new clothes ... Child: Two pairs of shoes ... Child: Outdoor leisure equipment",
+      "notes": "Added by CP-12-33. Official statistics of the EU (tier A, CP-12-33 decision 2). HD100 counts new (not second-hand) clothes; F2.4 does not require new clothes, which rests on 42 U.S.C. 675(4)(A) and CRC Art. 27(3) (CP-12-33).",
+      "supports": [
+        {
+          "code": "F2.4",
+          "component": "child-specific items: some new clothes, two pairs of shoes, outdoor leisure equipment; only items lacked because they cannot be afforded count",
+          "fit": "direct",
+          "excerpt": "The child-specific deprivation rate is the percentage of children below 16 ... Child: Some new clothes ... Child: Two pairs of shoes ... Child: Outdoor leisure equipment",
+          "verifier_note": "Title and date (24 April 2023) confirmed. The source says only children lacking an item for affordability reasons count as deprived of it."
+        }
+      ]
+    },
+    {
       "id": "farrington-2012",
       "cite_as": "Farrington, C. A., Roderick, M., Allensworth, E., Nagaoka, J., Keyes, T. S., Johnson, D. W., & Beechum, N. O. (2012, June). Teaching Adolescents to Become Learners: The Role of Noncognitive Factors in Shaping School Performance: A Critical Literature Review. Chicago: University of Chicago Consortium on Chicago School Research.",
       "codebook_names": [
@@ -1701,6 +1798,31 @@
           "fit": "direct",
           "excerpt": "The device or equipment type (i.e. laptop, tablet, mobile hotspot, modem, router); The device or equipment make/model; The device or equipment serial number",
           "verifier_note": "54.1715 is titled 'Records retention', not an inventory section, but it requires asset and service inventories of devices provided. 54.1702 and 54.1706 are verified. Fits the code's providing devices and connectivity."
+        }
+      ]
+    },
+    {
+      "id": "global-mhh-indicators-2022",
+      "cite_as": "Global MHH Monitoring Group (2022). Priority List of Indicators for Girls' Menstrual Health and Hygiene: Technical Guidance for National Monitoring. Columbia University. Indicator 1.",
+      "codebook_names": [
+        "Global MHH Monitoring Group (2022)"
+      ],
+      "tier": "B",
+      "publisher": "Global MHH Monitoring Group; Columbia University",
+      "year": 2022,
+      "url": "https://www.publichealth.columbia.edu/sites/default/files/priority_list_of_indicators_for_girls_menstrual_health_and_hygiene-_technical_guidance_for_national_monitoring.pdf",
+      "status": "verified",
+      "verified_on": "2026-10-17",
+      "verified_by": "2026-10-17 F2.4 verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "% of girls who reported having enough menstrual materials during their last menstrual period.",
+      "notes": "Added by CP-12-33. The document's recommended citation names the Global MHH Monitoring Group, Columbia University, March 2022 (verifier note). Indicator 19 (class participation, claim f2new-06) is routing only (Y1.9) and is not cited.",
+      "supports": [
+        {
+          "code": "F2.4",
+          "component": "Indicator 1: girls who report having enough menstrual materials during their last period",
+          "fit": "direct",
+          "excerpt": "% of girls who reported having enough menstrual materials during their last menstrual period.",
+          "verifier_note": "This is Indicator 1. The document's recommended citation names the Global MHH Monitoring Group, Columbia University, March 2022."
         }
       ]
     },
@@ -2262,6 +2384,29 @@
       ]
     },
     {
+      "id": "isphere-destitution-uk",
+      "cite_as": "I-SPHERE, Heriot-Watt University, for the Joseph Rowntree Foundation. Destitution in the UK (2016, 2018, 2020, 2023), project page.",
+      "codebook_names": [],
+      "tier": "D",
+      "publisher": "I-SPHERE, Heriot-Watt University",
+      "year": null,
+      "url": "https://i-sphere.site.hw.ac.uk/research-projects/destitution-in-the-uk/",
+      "status": "verified",
+      "verified_on": "2026-10-17",
+      "verified_by": "2026-10-17 F2.4 verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "People who have lacked two or more of six essentials over the past month, because they cannot afford them. ... Basic toiletries (soap, shampoo, toothpaste, toothbrush) ... including around one million children.",
+      "notes": "Added by CP-12-33. The research team behind the JRF measure (verifier: undertaken by I-SPHERE on behalf of JRF in 2016). Supporting only; not named on the Source line.",
+      "supports": [
+        {
+          "code": "F2.4",
+          "component": "the same essential (basic toiletries); estimates include around one million children; supporting only",
+          "fit": "direct",
+          "excerpt": "People who have lacked two or more of six essentials over the past month, because they cannot afford them. ... Basic toiletries (soap, shampoo, toothpaste, toothbrush) ... including around one million children.",
+          "verifier_note": "The page confirms the attribution: the study was 'undertaken by I-SPHERE on behalf of the Joseph Rowntree Foundation in 2016', with later reports in 2018, 2020 and 2023. It contains the toiletries essential and the 2022 estimate of about 3.8 million people, 'including around one million children'. The excerpt joins three separate passages with ellipses, and the summary tool returned the toiletries line as a quoted list item rather than a full sentence. Fit: the toiletries essential fits; the child count is background, not the construct."
+        }
+      ]
+    },
+    {
       "id": "iste-students-2016",
       "cite_as": "ISTE Standards for Students (2016), Standard 2: Digital Citizen",
       "codebook_names": [
@@ -2308,6 +2453,32 @@
           "fit": "direct",
           "excerpt": "Students take action to protect their digital privacy on devices and manage their personal data and security while online.",
           "verifier_note": "The page shows 'ISTE Standards © 2024' with 1.2 Digital Citizen and indicators 1.2.b Online Interactions ('empathetic, inclusive interactions online') and 1.2.d Digital Privacy. This matches Y6.7. The codebook's current line cites the 2016 edition, Standard 2, so that line should change to the 2024 numbering if this claim is adopted."
+        }
+      ]
+    },
+    {
+      "id": "jrf-destitution-thresholds-2026",
+      "cite_as": "Bramley, G. and Ayed, N. (2026). Destitution in the UK: income thresholds for October 2025. Joseph Rowntree Foundation.",
+      "codebook_names": [
+        "Joseph Rowntree Foundation and I-SPHERE, Destitution in the UK",
+        "JRF and I-SPHERE, Destitution in the UK"
+      ],
+      "tier": "D",
+      "publisher": "Joseph Rowntree Foundation",
+      "year": 2026,
+      "url": "https://www.jrf.org.uk/deep-poverty-and-destitution/destitution-in-the-uk-income-thresholds-for-october-2025",
+      "status": "verified",
+      "verified_on": "2026-10-17",
+      "verified_by": "2026-10-17 F2.4 verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "People are considered destitute if they have lacked 2 or more of the following essentials over the past month because they cannot afford them: ... Basic toiletries (such as soap, shampoo, toothpaste, and a toothbrush).",
+      "notes": "Added by CP-12-33. Citation from the verifier's corrected_cite_as (authors Bramley and Ayed, Heriot-Watt University). The publication date, 13 January 2026, is taken from the verifier's fetch summary and was not confirmed on the page when this entry was built; confirm it at the next re-verification. Accepted as a nonprofit and university measure (tier D) that names the items directly (CP-12-33 decision 5; Severin, P-F24-10).",
+      "supports": [
+        {
+          "code": "F2.4",
+          "component": "destitution essential 6: basic toiletries (soap, shampoo, toothpaste, a toothbrush), lacked because they cannot be afforded; an all-ages measure, broader than the code (decision G3)",
+          "fit": "direct",
+          "excerpt": "People are considered destitute if they have lacked 2 or more of the following essentials over the past month because they cannot afford them: ... Basic toiletries (such as soap, shampoo, toothpaste, and a toothbrush).",
+          "verifier_note": "The page is published by JRF and names the six essentials and the 'past month' period. Toiletries is the sixth item, and the wording matches the claim exactly. The year is wrong: the fetched page gives the date as 13 January 2026, not 2025, and the authors are Bramley and Ayed of Heriot-Watt. Please confirm the date on the page before it goes in the registry, because I got it from the fetch summary. Fit: the component's wording describes not being able to afford basic hygiene items."
         }
       ]
     },
@@ -3658,6 +3829,55 @@
       ]
     },
     {
+      "id": "un-crc-art27",
+      "cite_as": "United Nations (1989). Convention on the Rights of the Child, Article 27(1) and 27(3).",
+      "codebook_names": [],
+      "tier": "A",
+      "publisher": "United Nations",
+      "year": 1989,
+      "url": "https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-child",
+      "status": "verified",
+      "verified_on": "2026-10-17",
+      "verified_by": "2026-10-17 F2.4 verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "shall in case of need provide material assistance and support programmes, particularly with regard to nutrition, clothing and housing.",
+      "notes": "Added by CP-12-33. Supporting only; not named on the Source line.",
+      "supports": [
+        {
+          "code": "F2.4",
+          "component": "clothing as part of a child's adequate standard of living, Art. 27(3) (a right, broader than the code; decision G3)",
+          "fit": "partial",
+          "excerpt": "shall in case of need provide material assistance and support programmes, particularly with regard to nutrition, clothing and housing.",
+          "verifier_note": "Art. 27(1) reads: 'the right of every child to a standard of living adequate for the child's physical, mental, spiritual, moral and social development.' It is a right, broader than the code, as the claim says."
+        }
+      ]
+    },
+    {
+      "id": "usc-42-11433-d15-school-supplies",
+      "cite_as": "McKinney-Vento Homeless Assistance Act, 42 U.S.C. 11433(d)(15): authorized activities, provision of school supplies.",
+      "codebook_names": [
+        "McKinney-Vento Act, 42 U.S.C. 11433(d)(15)",
+        "42 U.S.C. 11433(d)(15)"
+      ],
+      "tier": "A",
+      "publisher": "U.S. Congress",
+      "year": null,
+      "url": "https://www.govinfo.gov/link/uscode/42/11433",
+      "status": "verified",
+      "verified_on": "2026-10-17",
+      "verified_by": "2026-10-17 F2.4 verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "The provision of school supplies, including those supplies to be distributed at shelters or temporary housing facilities",
+      "notes": "Added by CP-12-33. A provision duty; also a lead for A2.3 'materials' (separate CP, A2 re-review).",
+      "supports": [
+        {
+          "code": "F2.4",
+          "component": "authorized activity (15): the provision of school supplies (a statutory duty; decision G4)",
+          "fit": "partial",
+          "excerpt": "The provision of school supplies, including those supplies to be distributed at shelters or temporary housing facilities",
+          "verifier_note": "Paragraph (15) is confirmed; (14) is about nonschool facilities and (16) about extraordinary or emergency assistance. It covers school supplies, not clothing, so the fit is partial, as the claim says."
+        }
+      ]
+    },
+    {
       "id": "usc-42-671-a15b-reunification",
       "cite_as": "42 U.S.C. 671(a)(15)(B), State plan for foster care and adoption assistance: reasonable efforts to preserve and reunify families",
       "codebook_names": [],
@@ -3702,6 +3922,31 @@
           "fit": "direct",
           "excerpt": "(G) A plan for ensuring the educational stability of the child while in foster care, including—",
           "verifier_note": "The label (1)(G) is correct. On 'remaining in the same school', the claim simplifies the statute: (ii)(I) requires an assurance of LEA coordination 'to ensure that the child remains in the school in which the child is enrolled at the time of each placement', with immediate enrollment in a new school as the alternative in (ii)(II). Also checked on Cornell LII."
+        }
+      ]
+    },
+    {
+      "id": "usc-42-675-4a-maintenance-payments",
+      "cite_as": "Social Security Act sec. 475(4)(A), 42 U.S.C. 675(4)(A): foster care maintenance payments.",
+      "codebook_names": [
+        "Social Security Act, 42 U.S.C. 675(4)(A)"
+      ],
+      "tier": "A",
+      "publisher": "U.S. Congress",
+      "year": null,
+      "url": "https://www.govinfo.gov/link/uscode/42/675",
+      "status": "verified",
+      "verified_on": "2026-10-17",
+      "verified_by": "2026-10-17 F2.4 verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "payments to cover the cost of (and the cost of providing) food, clothing, shelter, daily supervision, school supplies, a child's personal incidentals",
+      "notes": "Added by CP-12-33. A payment definition, not a measured outcome: partial support with no FD (decision G4). Carries clothing in general (not only new clothes) and school supplies.",
+      "supports": [
+        {
+          "code": "F2.4",
+          "component": "payments to cover the cost of a child's clothing and school supplies (a statutory duty; decision G4)",
+          "fit": "partial",
+          "excerpt": "payments to cover the cost of (and the cost of providing) food, clothing, shelter, daily supervision, school supplies, a child's personal incidentals",
+          "verifier_note": "The wording matches verbatim. It is a statutory payment definition, so the fit is partial, as the claim says."
         }
       ]
     },

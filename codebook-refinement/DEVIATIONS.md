@@ -591,7 +591,7 @@ Each code's `fidelity` and `deviation` fields in the data file must match its en
 ## Drift count for codebook 3.x (S4.9)
 
 Counted in the domain where the code sits, open entries only; merged-components entries
-are logged but not counted. Updated after the 2026-09-26 re-review below, again for CP-10-02 (2026-09-27), which closed FD-P09, FD-P13, FD-P14 and FD-P20, and again for 3.1.5 (2026-10-16 research review, CP-11-01 to CP-12-32), which opened FD-P21, FD-P22 and FD-P24 to FD-P36 (FD-P23 is merged-components and not counted) and closed FD-P12 and FD-P15 (FD-P04, FD-P05, FD-P06 and FD-P08, also closed, were merged-components), and for 3.3.0 (2026-10-17), which opened FD-P37 and FD-P38 in Y2 (CP-12-01). The "Before" column is the count before 3.1.5.
+are logged but not counted. Updated after the 2026-09-26 re-review below, again for CP-10-02 (2026-09-27), which closed FD-P09, FD-P13, FD-P14 and FD-P20, and again for 3.1.5 (2026-10-16 research review, CP-11-01 to CP-12-32), which opened FD-P21, FD-P22 and FD-P24 to FD-P36 (FD-P23 is merged-components and not counted) and closed FD-P12 and FD-P15 (FD-P04, FD-P05, FD-P06 and FD-P08, also closed, were merged-components), and for 3.3.0 (2026-10-17), which opened FD-P37 and FD-P38 in Y2 (CP-12-01) and added F2.4 at `framework` fidelity with no entry (CP-12-33), so F2 moves from 1 of 3 to 1 of 4. The "Before" column is the count before 3.1.5.
 
 | Domain | Codes | Before 3.1.5 | Counted deviations | Share | Over a third? |
 |---|---|---|---|---|---|
@@ -604,7 +604,7 @@ are logged but not counted. Updated after the 2026-09-26 re-review below, again 
 | Y7 Career | 7 | 1 (Y7.7) | 0 | 0% | no |
 | Y8 Health | 13 | 0 | 5 (Y8.1, Y8.2, Y8.11, Y8.12, Y8.13) | 38% | **yes: anchor re-review required (S4.9)** |
 | F1 Family | 9 | 0 | 2 (F1.2, F1.6) | 22% | no |
-| F2 Basic needs | 3 | 0 | 1 (F2.2) | 33% | no (at the line) |
+| F2 Basic needs | 4 | 0 | 1 (F2.2) | 25% | no |
 | A1 Staff | 3 | 0 | 1 (A1.1) | 33% | no (at the line) |
 | A2 Quality & access | 6 | 2 (A2.2, A2.4) | 2 (A2.2, A2.4) | 33% | no (at the line) |
 | A3 Systems | 3 | 0 | 0 | 0% | no |
@@ -612,7 +612,7 @@ are logged but not counted. Updated after the 2026-09-26 re-review below, again 
 Most of the rise is not new departures but old ones now written down: the 2026-10-16 review read
 each code's text against its verified sources and logged the elements no source names. Y8 is over
 the line, so its anchor frameworks are re-reviewed (keep, replace or split) before any further Y8
-change; see "Batch 3 review: Y8, F1 and F2" below. Y2, F2, A1 and A2 sit at the line: one more
+change; see "Batch 3 review: Y8, F1 and F2" below. Y2, A1 and A2 sit at the line: one more
 counted entry in any of them triggers the same review.
 
 ## Anchor re-review, 2026-09-26 (S4.9)

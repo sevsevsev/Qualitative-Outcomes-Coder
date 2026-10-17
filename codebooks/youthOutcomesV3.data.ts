@@ -1829,9 +1829,9 @@ export const V3_DOMAINS: V3Domain[] = [
     "id": "F2",
     "part": "F",
     "name": "Basic Needs & Economic Stability",
-    "description": "The material stability of a household or of a young person living independently: income and benefits, food, housing.",
-    "frameworkBasis": "CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); USDA Household Food Security Survey Module; ACF NYTD; secondary: CFPB Financial Well-Being (financial cushion); Runaway and Homeless Youth Program, 45 CFR 1351 (stable housing and safe exits); Healthy People 2030, AHS-01, NWS-01 and SDOH-04; McKinney-Vento Act, including the HEARTH Act.",
-    "categoryLine": "A. Economic stability (F2.1) · B. Food & housing (F2.2–F2.3)",
+    "description": "The material stability of a household or of a young person living independently, and the basic goods a young person has: income and benefits, food, housing, clothing and supplies.",
+    "frameworkBasis": "CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); USDA Household Food Security Survey Module; ACF NYTD; Eurostat EU-SILC child-specific deprivation items (Commission Regulation (EU) No 112/2013; F2.4 only); Global MHH Monitoring Group (2022), girls' menstrual health indicators (F2.4 only); JRF and I-SPHERE, Destitution in the UK (basic toiletries; F2.4 only); secondary: CFPB Financial Well-Being (financial cushion); Runaway and Homeless Youth Program, 45 CFR 1351 (stable housing and safe exits); Healthy People 2030, AHS-01, NWS-01 and SDOH-04; McKinney-Vento Act, including the HEARTH Act and 42 U.S.C. 11433(d)(15) (school supplies); Social Security Act, 42 U.S.C. 675(4)(A) (clothing and school supplies).",
+    "categoryLine": "A. Economic stability (F2.1) · B. Food, housing & material necessities (F2.2–F2.4)",
     "categories": [
       {
         "letter": "A",
@@ -1860,8 +1860,8 @@ export const V3_DOMAINS: V3Domain[] = [
       },
       {
         "letter": "B",
-        "name": "Food & housing",
-        "description": "Having enough healthy food and a safe, stable place to live.",
+        "name": "Food, housing & material necessities",
+        "description": "Having enough healthy food, a safe, stable place to live, and the clothing, shoes, gear and supplies a young person needs.",
         "codes": [
           {
             "id": "F2.2",
@@ -1899,6 +1899,23 @@ export const V3_DOMAINS: V3Domain[] = [
             },
             "source": "ACF NYTD (housing); McKinney-Vento Act.",
             "basis": "RHY Program rule, 45 CFR 1351.30(a)(1) and 1351.31(a)(1) Stable Housing, and 1351.1 safe and appropriate exits (verified, direct; claims f2-06, f2-07, CP-12-09); Healthy People 2030 SDOH-04 rent burden (verified, direct; claim f2-09); ACF NYTD, experience with homelessness (verified, partial); McKinney-Vento, 42 U.S.C. 11434a definition (verified, partial); McKinney-Vento as amended by HEARTH, 42 U.S.C. 11386a(b)(1)(A) (verified, partial: performance criteria; claim f2-08, official copy matched in round 2, claim CP-12-09-V11). Young people living independently are covered by the RHY rule (decision G1)."
+          },
+          {
+            "id": "F2.4",
+            "name": "Material Necessities (Clothing, Gear & Supplies)",
+            "short": "Material necessities",
+            "flag": "deductive",
+            "fidelity": "framework",
+            "from2x": "new",
+            "definition": "A young person having, or being given, the basic goods a child needs, rather than going without them for lack of money (the statement need not name the cause): clothing, properly fitting shoes, outdoor leisure equipment, school supplies, enough menstrual materials, and basic toiletries.",
+            "include": "Weather-appropriate clothing; shoes that fit; outdoor play gear such as a bike; school supplies, including students coming to class with the supplies they need; enough period products; soap, shampoo, toothpaste, a toothbrush, deodorant and other basic toiletries; the number of children who will have a coat or other goods; goods distributed, provided or given to named young people (\"coats distributed to students\", \"each student will receive a backpack of supplies\", \"cleats and a uniform for every player\").",
+            "exclude": "Goods counted with no young people named, or access to goods (\"500 pairs of gloves handed out\", \"free period products available at school\"); devices and internet; food; housing; basic needs or material hardship in general; what having the goods leads to (school attendance, joining a team, physical activity, confidence or dignity, belonging, household costs).",
+            "useInstead": "A2.3 goods counted with no young people named, access to goods, and devices or internet; Domain F2 with subcategory none for basic needs or material hardship in general; F2.1 household costs; F2.2 food; F2.3 housing; Y1.13 attendance; Y1.9 class participation; Y2.6 joining or staying in an activity; Y8.1 physical activity; Y5.4 confidence, self-worth or dignity; Y3.1 belonging.",
+            "example": {
+              "text": "Every student we serve will have a warm winter coat and properly fitting shoes by December."
+            },
+            "source": "Eurostat, EU-SILC child-specific material deprivation items (Commission Regulation (EU) No 112/2013, HD100, HD110, HD160); Global MHH Monitoring Group (2022), Priority List of Indicators for Girls' Menstrual Health and Hygiene, Indicator 1; Social Security Act, 42 U.S.C. 675(4)(A); McKinney-Vento Act, 42 U.S.C. 11433(d)(15); Joseph Rowntree Foundation and I-SPHERE, Destitution in the UK (essential 6, basic toiletries).",
+            "basis": "Eurostat (2023, 24 April), child-specific material deprivation rate (verified, direct: new clothes, two pairs of shoes, outdoor leisure equipment; only items lacked for affordability count; claim f2new-01); Commission Regulation (EU) No 112/2013, Annex, HD100, HD110, HD160 (verified, direct; claim f2new-02); CSO Ireland (2025), SILC Module on Child Deprivation 2024, Table 6.1 (verified, direct, supporting only; claim f2new-03); Global MHH Monitoring Group (2022), Indicator 1 (verified, direct: enough menstrual materials; claim f2new-05). Clothing in general, not only new clothes: 42 U.S.C. 675(4)(A) (verified, partial: a duty to pay for a child's clothing and school supplies, decision G4; claim f2new-07); UN Convention on the Rights of the Child, Art. 27(3) (verified, partial: a right broader than the code, decision G3; claim f2new-09). School supplies: 42 U.S.C. 675(4)(A) and 42 U.S.C. 11433(d)(15) (verified, partial: statutory duties, decision G4; claims f2new-07, f2new-08). Outdoor sports gear is an instance of 'outdoor leisure equipment' and period products of 'menstrual materials' (decision G5). Goods given to young people, not only had (Severin, P-F24-01 to -03 and -26): 42 U.S.C. 675(4)(A) (payments to cover the cost of a child's clothing and school supplies) and 42 U.S.C. 11433(d)(15) ('The provision of school supplies') are provision duties (verified, partial, decision G4); gear and period products given are instances (G5). Basic toiletries: Bramley and Ayed (2026), Destitution in the UK: income thresholds for October 2025, Joseph Rowntree Foundation (verified, direct for the item: 'Basic toiletries (such as soap, shampoo, toothpaste, and a toothbrush)', lacked because unaffordable; an all-ages measure, broader than the code, decision G3; claim f2hyg-01); I-SPHERE, Destitution in the UK project page (verified, supporting only: counts about one million children; claim f2hyg-02); ACF Child Welfare Policy Manual 8.3B.1, Question 9 (verified, partial: a foster child's 'personal incidentals' include 'items related to personal hygiene', decision G4; claim f2hyg-03). Deodorant is an instance of basic toiletries (decision G5). The code names no foster-care or homeless population (decision G1). Innocenti Report Card 10 (claim f2new-04) waits for an official copy (decision G8). CSSP Concrete Support does not name clothing (claim f2new-13) and is not cited. No FD (CP-12-33)."
           }
         ]
       }
@@ -2049,8 +2066,8 @@ export const V3_DOMAINS: V3Domain[] = [
             "from2x": "10.1",
             "definition": "Providing materials, devices, connectivity or facilities, including counts of resources distributed.",
             "include": "Laptops and hotspots; home internet; facilities access.",
-            "exclude": "Participants' digital skills.",
-            "useInstead": "Y1.4; F1.6.",
+            "exclude": "Participants' digital skills; clothing, shoes, gear, school supplies, menstrual materials or toiletries that young people are stated to have or to be given.",
+            "useInstead": "Y1.4; F1.6; F2.4 when young people are stated to have, or to be given, clothing, shoes, gear, school supplies, menstrual materials or toiletries.",
             "example": {
               "text": "Families will receive a laptop and home internet access.",
               "goldId": "S196"

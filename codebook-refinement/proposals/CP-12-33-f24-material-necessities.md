@@ -18,7 +18,7 @@ sources; nothing ships until Severin rules on 29 example statements and a test r
 | Codes touched | F2.4 (new). F2: `description`, `frameworkBasis`, `categoryLine`, category B `name` and `description`. A2.3: exclude, useInstead. rulesText: rule 1 (one clause), rule 2 (one sentence). `CONFUSIONS.md`: CF-037 (provisional id). `DEVIATIONS.md`: F2 drift row only (no FD). Registry: ten new entries, one note. Tests: code count 98 → 99. No change to F2.2, F2.3, Y8.1, Y2.6, Y1.13 (reasons under "Neighbouring codes"). |
 | Version bump | MINOR: 3.2.0 if it is the first MINOR after 3.1.5, otherwise the next minor (version bumped at merge) |
 | Requirement served | R2 breadth (with R1 frameworks and R3 tie-breakers for the new code) |
-| Status | draft, 2026-10-17 (Severin asked for it). **Blocked** on: (1) Severin's answer on laptops and internet for young people (P-F24-07; he has ruled all 29 rows, decision G11); (2) the live design-set gate after PRs #62 and #66 (decision G10). |
+| Status | draft, 2026-10-17 (Severin asked for it). **Blocked** on: (1) the 29 ruled rows becoming adjudicated design rows (Severin ruled all 29 on 2026-10-17, decision G11); (2) the live design-set gate after PRs #62 and #66 (decision G10). |
 | Enum cost | +1 (160 → 161; redesign line 165; test cap 180) |
 | Framework deviation | none. F2.4 enters as `framework`; F2 drift 1 of 3 (33%, at the line) → 1 of 4 (25%, below it). |
 
@@ -422,7 +422,7 @@ rulings.
 
   | Boundary | Sides (rows) |
   |---|---|
-  | F2.4 or A2.3 | A2.3: P-F24-27; device check -07 (Severin: F2.4, see below); F2.4: -01, -02, -03, -04, -05, -06, -26 |
+  | F2.4 or A2.3 | A2.3: P-F24-27; device check -07; F2.4: -01, -02, -03, -04, -05, -06, -26 |
   | F2.4 or F2 domain-only | F2 domain-only: -08, -09; F2.4: -10 (basic toiletries, Severin), -11, -12 |
   | F2.4 or the downstream result | Y1.13: -13, -14; Y2.6: -15, -16; Y8.1: -17; Y1.9: -18, -28; Y5.4: -19, -25; Y3.1: -20; F2.1: -21, -29; F2.4: -22, -23; split F2.4 and Y1.13: -24 |
 
@@ -473,10 +473,10 @@ the same day.
   definition, include, exclude, useInstead, basis, the A2.3 pointer, rule 2 and CF-037 updated.
   No adjudicated row changes: every A2.3 test row is a laptop row.
 - P-F24-07 "Every participating student will have a working laptop and home internet": **F2.4**
-  (panel: A2.3). Not yet applied, because it conflicts with Severin's adjudicated test row S240
-  ("Every participating family will have a working laptop and home internet" -> A2.3) and rule 15,
-  and F2.4 has no verified source for devices (naming them would be a deviation and put F2 at 2 of
-  4, over the S4.9 line). Asked him on 2026-10-17 whether laptops for young people move to F2.4.
+  (panel: A2.3). It conflicted with his adjudicated test row S240 ("Every participating family will
+  have a working laptop and home internet" -> A2.3) and rule 15, and F2.4 has no verified source for
+  devices. Asked, he chose to keep laptops and internet in A2.3 for everyone (2026-10-17), so the
+  row is **A2.3** and rule 15 stands.
 
 - Agreed with the panel on 8: P-F24-08, -09 (F2 domain only), -18 (Y1.9), -21, -29 (F2.1), -22
   (F2.4), -25 (Y5.4), -27 (A2.3).
@@ -521,12 +521,8 @@ option and listed here so he can overrule any of them:
 
 ## Open for Severin
 
-All 29 example statements are ruled (2026-10-17). One question remains: should a young person
-having or getting a laptop and home internet (P-F24-07) move to F2.4? **No: laptops and internet
-stay with Access to Resources (A2.3), matching test rows S196, S228, S240 and H076 (recommended)** ·
-Yes: P-F24-07 goes to F2.4, test row S240 stays A2.3 only because it names families, and F2.4
-needs a verified source for devices (without one, a deviation puts Basic Needs over the one-third
-line and its frameworks are re-reviewed first).
+Nothing. All 29 example statements are ruled (2026-10-17), and laptops and internet stay in
+A2.3 (Severin, 2026-10-17).
 
 ## Judge result
 

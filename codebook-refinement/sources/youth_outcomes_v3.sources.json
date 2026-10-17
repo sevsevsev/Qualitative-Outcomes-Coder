@@ -365,6 +365,13 @@
           "fit": "direct",
           "excerpt": "This includes the capacities to communicate clearly, listen actively, cooperate, work collaboratively",
           "verifier_note": "The fetched PDF has no title or date. The cited title appears on the same content at https://casel.org/casel-sel-framework-11-2020/?view=1, and the year 2020 comes only from that URL; consider citing that URL."
+        },
+        {
+          "code": "Y2.2",
+          "component": "Responsible Decision-Making: 'Demonstrating curiosity and open-mindedness'",
+          "fit": "partial",
+          "excerpt": "Demonstrating curiosity and open-mindedness",
+          "verifier_note": "The bullet is verbatim (claim y2-05, SUPPORTED, read at casel.org/casel-sel-framework-11-2020/). Round 2 (CP-12-20 V-CASEL-1-Y2.2, PARTIAL, read on the 11.2020 PDF): CASEL places it under Responsible Decision-Making as a disposition, and open-mindedness is broader than Y2.2's triggered interest and curiosity; it gives no wording about trying new activities (CP-12-01-V1, NOT SUPPORTED). Broader than the code, so partial with no FD (G3). Rule 14 routes CASEL curiosity here."
         }
       ]
     },
@@ -1314,10 +1321,10 @@
       ],
       "tier": "C",
       "publisher": null,
-      "year": null,
+      "year": 2000,
       "url": "https://acmd615.pbworks.com/f/ExpectancyValueTheory.pdf",
       "status": "verified",
-      "notes": "The verifier should pin this to a specific paper, e.g. Wigfield & Eccles (2000), Contemporary Educational Psychology. Round 2 (CP-12-28 V-HOST-7, PARTIAL): the copy prints Contemporary Educational Psychology, 25, 68-81 (2000) and doi:10.1006/ceps.1999.1015; the DOI landing page came back empty, and the course-wiki copy may not be authorized. Citation corrected from the verifier's corrected_cite_as. Secondary host (acmd615.pbworks.com); bibliographic match recorded in claim CP-12-28-V-HOST-7 (G8).",
+      "notes": "The verifier should pin this to a specific paper, e.g. Wigfield & Eccles (2000), Contemporary Educational Psychology. The theory was renamed Situated Expectancy-Value Theory in 2020 (eccles-wigfield-2020-sevt, CP-12-01); this entry keeps the 2000 utility-value definition. Round 2 (CP-12-28 V-HOST-7, PARTIAL): the copy prints Contemporary Educational Psychology, 25, 68-81 (2000) and doi:10.1006/ceps.1999.1015; the DOI landing page came back empty, and the course-wiki copy may not be authorized. Citation corrected from the verifier's corrected_cite_as. Secondary host (acmd615.pbworks.com); bibliographic match recorded in claim CP-12-28-V-HOST-7 (G8).",
       "cite_as_in_codebook": "Eccles, J. S., & Wigfield, A. — Expectancy-Value Theory (utility value)",
       "verified_on": "2026-10-16",
       "verified_by": "2026-10-16 research review (independent codebook-citation-verifier, blind to proposer; WebFetch)",
@@ -1331,6 +1338,29 @@
         }
       ],
       "excerpt": "Utility value or usefulness refers to how a task fits into an individual's future plans, for instance, taking a math class to fulfill a requirement for a science degree."
+    },
+    {
+      "id": "eccles-wigfield-2020-sevt",
+      "cite_as": "Eccles, J. S., & Wigfield, A. (2020). From expectancy-value theory to situated expectancy-value theory: A developmental, social cognitive, and sociocultural perspective on motivation. Contemporary Educational Psychology, 61, 101859.",
+      "codebook_names": [],
+      "tier": "C",
+      "publisher": "Contemporary Educational Psychology",
+      "year": 2020,
+      "url": "https://doi.org/10.1016/j.cedpsych.2020.101859",
+      "status": "verified",
+      "verified_on": "2026-10-16",
+      "verified_by": "2026-10-16 research review (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "how well a particular task fits into an individual's present or future plans",
+      "notes": "Added by CP-12-01. Claim y2-09 (ACU repository record, SUPPORTED): 'justify our decision to call the theory Situated Expectancy-Value Theory (SEVT)'. Bibliographic match recorded there: authors, Contemporary Educational Psychology 61, article 101859 (2020), DOI 10.1016/j.cedpsych.2020.101859. Excerpt y2-10 read on a third-party full-text copy (msofc.org), which shows the Elsevier copyright; the verifier tied it to the ACU record. The 2000 statement stays as eccles-expectancy-value.",
+      "supports": [
+        {
+          "code": "Y2.4",
+          "component": "subjective task value: utility value, how well a task fits into an individual's present or future plans",
+          "fit": "direct",
+          "excerpt": "how well a particular task fits into an individual's present or future plans",
+          "verifier_note": "msofc.org is a third-party copy of the article: it shows '© 2020 published by Elsevier' but not the journal, volume or article number. Those details come from the ACU record checked for y2-09. Better to cite via DOI 10.1016/j.cedpsych.2020.101859."
+        }
+      ]
     },
     {
       "id": "ed-hhs-rtt-elc-2013-definitions",
@@ -1750,26 +1780,26 @@
       "tier": "C",
       "publisher": "Educational Psychologist",
       "year": 2006,
-      "url": "https://works.swarthmore.edu/fac-education/12/",
+      "url": "https://doi.org/10.1207/s15326985ep4102_4",
       "status": "verified",
-      "verified_on": "2026-09-27",
-      "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
-      "excerpt": "The model describes 4 phases in the development and deepening of learner interest: triggered situational interest, maintained situational interest, emerging (less-developed) individual interest, and well-developed individual interest.",
-      "notes": "The codebook also cites 'Hidi & Renninger (Phase 3/4)' for 2.3 Utility Value. Phases 3 and 4 are about individual interest, not utility value, so that citation is misapplied (CP-01-04).",
+      "verified_on": "2026-10-16",
+      "verified_by": "2026-10-16 research review (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "maintained situational interest, emerging (less-developed) individual interest, and well-developed individual interest",
+      "notes": "The codebook also cites 'Hidi & Renninger (Phase 3/4)' for 2.3 Utility Value. Phases 3 and 4 are about individual interest, not utility value, so that citation is misapplied (CP-01-04). URL of record is the DOI (G8; CP-12-01). Full text read 2026-10-16 on a University of Tartu course copy (https://sciencecommunication.ut.ee/wp-content/uploads/2018/09/Article-5-The-Four-Phase-Model-of-Interest-Development.pdf; claims y2-07, y2-08; bibliographic match: round-2 claim CP-12-01-V3, PARTIAL only because the host is a course site) and in CP-10-01 on the Swarthmore repository.",
       "supports": [
         {
           "code": "Y2.2",
           "component": "Phase 1: triggered situational interest",
-          "fit": "partial",
-          "excerpt": "The model describes 4 phases in the development and deepening of learner interest: triggered situational interest, maintained situational interest, emerging (less-developed) individual interest, and well-developed individual interest.",
-          "verifier_note": "The citation details and component match and fit the code. However, ERIC EJ736298 returned an unrelated record (ED578886) when fetched, and the T&F DOI page returned 403. So only the Swarthmore institutional repository copy was checked."
+          "fit": "direct",
+          "excerpt": "Triggered situational interest can be sparked by environmental or text features",
+          "verifier_note": "Phase 1 confirmed in the full text (claim y2-07), read on a University of Tartu course copy whose bibliographic match is recorded in round-2 claim CP-12-01-V3 (title, authors, Educational Psychologist 41(2) 111-127, DOI 10.1207/s15326985ep4102_4). Phase 1 is 'typically, but not exclusively, externally supported' (y2-07 note). 'Willingness to try a new activity' is not in it (CP-12-01-V2, PARTIAL): FD-P38."
         },
         {
           "code": "Y2.3",
           "component": "Phases 2-4: maintained situational, emerging and well-developed individual interest",
-          "fit": "partial",
-          "excerpt": "The model describes 4 phases in the development and deepening of learner interest: triggered situational interest, maintained situational interest, emerging (less-developed) individual interest, and well-developed individual interest.",
-          "verifier_note": "Phases 2-4 are verified and fit sustained or individual interest. This rests only on a secondary (institutional repository) copy, because the ERIC and DOI fetches failed."
+          "fit": "direct",
+          "excerpt": "maintained situational interest, emerging (less-developed) individual interest, and well-developed individual interest",
+          "verifier_note": "Phases 2-4 confirmed in the full text (claim y2-08), read on a University of Tartu course copy whose bibliographic match is recorded in round-2 claim CP-12-01-V3."
         }
       ]
     },
@@ -2517,7 +2547,7 @@
       "verified_on": "2026-10-16",
       "verified_by": "2026-10-16 research review (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "This involves teaching and learning the multiple and diverse identities of students and others, such as culture, race, gender, and more.",
-      "notes": "The codebook currently calls this 'Gholdy Muhammad's Hill Model'. 'HILL' is the acronym of her organization (Histories, Identities, Literacies and Liberation). The framework is the HRL / Five Pursuits framework. See the linked misattribution entry and CP-01-01. Round 2 (CP-12-28 V-HOST-8, PARTIAL): hillpedagogies.com names Dr. Gholdy Muhammad and both books and defines all five pursuits, but never says she owns or founded the site, so it is not confirmed as the author's own description; the entry stays on HOST_PENDING. The five-pursuit version is in Unearthing Joy; Cultivating Genius has four (citation text from the verifier's corrected_cite_as; it was 'Muhammad, G. — Culturally and Historically Responsive Literacy / Five Pursuits Framework (Identity, Skills, Intellect, Criticality, Joy); Cultivating Genius (2020), Unearthing Joy (2023)').",
+      "notes": "The codebook currently calls this 'Gholdy Muhammad's Hill Model'. 'HILL' is the acronym of her organization (Histories, Identities, Literacies and Liberation). The framework is the HRL / Five Pursuits framework. See the linked misattribution entry and CP-01-01. Y2.1: no longer the anchor; Pekrun (2024) replaces it in the Y2.1 Source line (CP-12-01, CP-12-16). The Y2.1 support is kept as a partial pointer. Round 2 (CP-12-28 V-HOST-8, PARTIAL): hillpedagogies.com names Dr. Gholdy Muhammad and both books and defines all five pursuits, but never says she owns or founded the site, so it is not confirmed as the author's own description; the entry stays on HOST_PENDING. The five-pursuit version is in Unearthing Joy; Cultivating Genius has four (citation text from the verifier's corrected_cite_as; it was 'Muhammad, G. — Culturally and Historically Responsive Literacy / Five Pursuits Framework (Identity, Skills, Intellect, Criticality, Joy); Cultivating Genius (2020), Unearthing Joy (2023)').",
       "supports": [
         {
           "code": "Y2.1",
@@ -2938,6 +2968,29 @@
       ]
     },
     {
+      "id": "oecd-sses-2021-houston",
+      "cite_as": "OECD (2021). Survey on Social and Emotional Skills (SSES): Houston (United States). OECD.",
+      "codebook_names": [],
+      "tier": "B",
+      "publisher": "OECD",
+      "year": 2021,
+      "url": "https://search.oecd.org/education/ceri/social-emotional-skills-study/sses-houston-report.pdf",
+      "status": "verified",
+      "verified_on": "2026-10-16",
+      "verified_by": "2026-10-16 research review (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "Interest in ideas and love of learning, understanding and intellectual exploration; an inquisitive mind-set.",
+      "notes": "Added by CP-12-01. OECD-hosted report (official copy). Corroborates CASEL for Y2.2 in the registry and `basis`; not named in a Source line. The SSES creativity definition (claim y2-12) is not used: bare creativity is not routed to Y2.5.",
+      "supports": [
+        {
+          "code": "Y2.2",
+          "component": "Open-mindedness: Curiosity",
+          "fit": "direct",
+          "excerpt": "Interest in ideas and love of learning, understanding and intellectual exploration; an inquisitive mind-set.",
+          "verifier_note": "This is OECD's own 2021 publication. The Curiosity definition under Open-mindedness matches the claim."
+        }
+      ]
+    },
+    {
       "id": "ojjdp-2017-diversion-review",
       "cite_as": "Office of Juvenile Justice and Delinquency Prevention (2017, February). Model Programs Guide Literature Review: Diversion from Formal Juvenile Court Processing. NCJ 249701.",
       "codebook_names": [],
@@ -2957,6 +3010,45 @@
           "fit": "direct",
           "excerpt": "an attempt to divert, or channel out, youthful offenders from the juvenile justice system",
           "verifier_note": "The title, February 2017 and NCJ 249701 are confirmed on OJJDP's page, which marks the report 'OJJDP-Sponsored' and names no author or preparer. Diversion is in Y8.13's definition, so the fit is direct."
+        }
+      ]
+    },
+    {
+      "id": "pekrun-2024-control-value",
+      "cite_as": "Pekrun, R. (2024). Control-Value Theory: From Achievement Emotion to a General Theory of Human Emotions. Educational Psychology Review, 36, Article 83.",
+      "codebook_names": [
+        "Pekrun (2024)"
+      ],
+      "tier": "C",
+      "publisher": "Educational Psychology Review",
+      "year": 2024,
+      "url": "https://doi.org/10.1007/s10648-024-09909-7",
+      "status": "verified",
+      "verified_on": "2026-10-16",
+      "verified_by": "2026-10-16 research review (independent codebook-citation-verifier, blind to proposer; WebFetch)",
+      "excerpt": "concurrent activity emotions such as enjoyment or boredom during learning",
+      "notes": "Added by CP-12-01. Full text read on the University of Essex repository copy (https://repository.essex.ac.uk/39185/1/Pekrun%20Ed%20Psych%20Rev%202024%20Control-Value%20Theory.pdf). Bibliographic match recorded by the verifier (claim y2-01): the header reads 'Educational Psychology Review (2024) 36:83' with DOI 10.1007/s10648-024-09909-7. Replaces Muhammad's Joy as Y2.1's anchor (S1.6).",
+      "supports": [
+        {
+          "code": "Y2.1",
+          "component": "activity emotions: enjoyment during learning",
+          "fit": "direct",
+          "excerpt": "concurrent activity emotions such as enjoyment or boredom during learning",
+          "verifier_note": "The full text is the Essex institutional repository copy, not the publisher's page. The header reads 'Educational Psychology Review (2024) 36:83' with DOI 10.1007/s10648-024-09909-7, which matches cite_as."
+        },
+        {
+          "code": "Y2.1",
+          "component": "achievement settings named as school, university and the workplace",
+          "fit": "partial",
+          "excerpt": "Achievement settings in today’s world, such as school, university, and the workplace, are recent products of civilization.",
+          "verifier_note": "The wording matches exactly, but the fit is partial. The sentence lists university and the workplace as settings beyond school, but it does not name out-of-school youth programs or leisure activities, so it only loosely supports 'achievement emotions outside school' for Y2.1."
+        },
+        {
+          "code": "Y2.1",
+          "component": "outcome emotions: pride (pride in an achievement outcome only)",
+          "fit": "partial",
+          "excerpt": "retrospective outcome emotions like pride and shame",
+          "verifier_note": "Pride appears as an outcome emotion, i.e. pride in an achievement outcome. Same repository copy and citation as y2-01."
         }
       ]
     },

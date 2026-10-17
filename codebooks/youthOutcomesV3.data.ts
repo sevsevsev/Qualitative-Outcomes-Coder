@@ -389,7 +389,8 @@ export const V3_DOMAINS: V3Domain[] = [
             "name": "Enjoyment & Joy",
             "short": "Enjoyment",
             "flag": "deductive",
-            "fidelity": "framework",
+            "fidelity": "adapted",
+            "deviation": "FD-P37",
             "from2x": "2.1",
             "definition": "A positive emotional experience of the program or of learning: fun, happiness, excitement, pride in being part of it.",
             "include": "Reports of enjoying activities; excitement to attend; pride in the program.",
@@ -400,14 +401,15 @@ export const V3_DOMAINS: V3Domain[] = [
               "goldId": "S234"
             },
             "source": "Muhammad, Five Pursuits (Pursuit 5: Joy).",
-            "basis": "Muhammad, Five Pursuits, Joy (verified)."
+            "basis": "Pekrun (2024), control-value theory: activity emotions, enjoyment during learning (verified, direct; claim y2-01); achievement settings beyond school (verified, partial; claim y2-02); outcome-emotion pride (verified, partial: achievement pride only; claim y2-03). Pride in being part of a program is codebook-defined (FD-P37). Muhammad, Five Pursuits, Joy (verified, partial: a teaching aim, not the learner's enjoyment) is kept as a pointer, not as the anchor."
           },
           {
             "id": "Y2.2",
             "name": "Curiosity & Triggered Interest",
             "short": "Curiosity",
             "flag": "deductive",
-            "fidelity": "framework",
+            "fidelity": "adapted",
+            "deviation": "FD-P38",
             "from2x": "2.2",
             "definition": "Interest sparked in the moment: curiosity, asking questions about something new, willingness to try a new activity.",
             "include": "Asking questions during a demonstration; trying new activities; showing curiosity.",
@@ -418,7 +420,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "goldId": "S128"
             },
             "source": "Hidi & Renninger (2006), Four-Phase Model of Interest Development, phase 1 (triggered situational interest).",
-            "basis": "Hidi & Renninger (2006), phase 1 triggered situational interest (verified)."
+            "basis": "Hidi & Renninger (2006), phase 1 triggered situational interest (verified, direct, full text; claim y2-07). CASEL (2020), Responsible Decision-Making: 'Demonstrating curiosity and open-mindedness' (verified, partial: a disposition broader than triggered interest; claims y2-05, CP-12-20-V-CASEL-1-Y2.2); OECD (2021), SSES Houston, Open-mindedness: Curiosity (verified, direct; claim y2-06). Willingness to try a new activity is codebook-defined (FD-P38; claims CP-12-01-V1, CP-12-01-V2)."
           },
           {
             "id": "Y2.3",
@@ -436,7 +438,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "goldId": "S214"
             },
             "source": "Hidi & Renninger (2006), Four-Phase Model of Interest Development, phases 2-4.",
-            "basis": "Hidi & Renninger (2006), phases 2-4 (verified)."
+            "basis": "Hidi & Renninger (2006), phases 2-4 (verified, direct, full text; claim y2-08)."
           },
           {
             "id": "Y2.4",
@@ -454,7 +456,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "goldId": "S115"
             },
             "source": "Eccles and colleagues, expectancy-value theory (utility value); Hulleman et al. (2010), utility value intervention.",
-            "basis": "Re-verified 2026-09-27 (CP-10-01): Wigfield & Eccles (2000), utility value: 'how a task fits into an individual's future plans' (verified from a full-text copy, not the publisher's); Hulleman, Godes, Hendricks & Harackiewicz (2010) (verified, direct)."
+            "basis": "Re-verified 2026-09-27 (CP-10-01): Wigfield & Eccles (2000), utility value: 'how a task fits into an individual's future plans' (verified from a full-text copy, not the publisher's); Hulleman, Godes, Hendricks & Harackiewicz (2010) (verified, direct). Eccles & Wigfield (2020), Situated Expectancy-Value Theory, utility value: 'how well a particular task fits into an individual's present or future plans' (verified, direct; claims y2-09, y2-10)."
           }
         ]
       },

@@ -17,7 +17,8 @@ FD-P39,FD-P34,CP-12-08
 FD-P34,not opened (F1.3; MT1 page read live),CP-12-08
 FD-P35,FD-P35,CP-12-09
 FD-P50,FD-P36,CP-12-10
-FD-P40,not opened (Y2.1; CP-12-01 not applied),CP-12-01
+FD-P40,FD-P37,CP-12-01
+FD-P41,FD-P38,CP-12-01
 FD-P51,not opened (A3.1; its CP not applied),CP-12-19
 FD-P60,not opened (A1.3; gated part of CP-12-32),CP-12-32
 CF-P01,CF-029,CP-12-15

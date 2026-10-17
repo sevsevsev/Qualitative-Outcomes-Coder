@@ -562,17 +562,41 @@ Each code's `fidelity` and `deviation` fields in the data file must match its en
 - **Decided in:** CP-12-10 (batch 4 research review, 2026-10-16; decisions G1 and A1-1 settled by Severin 2026-10-16).
 - **Revisit:** if a non-vendor statement of Kirkpatrick Level 2 (the OPM Training Evaluation Field Guide lead) is fetched and verified; then cite it on A1.1 in a gated CP and close this entry.
 
+### FD-P37 · Y2.1
+
+- **Status:** open
+- **Fidelity:** adapted
+- **Case:** codebook-defined
+- **Anchor:** Pekrun (2024), control-value theory, activity emotions: "concurrent activity emotions such as enjoyment or boredom during learning" (verified, claim y2-01). Y2.1's Source line names it from 3.3.0 (CP-12-16).
+- **Departs:** the element "pride in being part of it" (definition) and "pride in the program" (include). Pekrun's pride is an outcome emotion after achievement, "retrospective outcome emotions like pride and shame" (claim y2-03), not pride in membership. The code is broader than the source, so the partial row does not avoid an entry (G3). No verified source names pride in belonging to a program as a youth outcome.
+- **Evidence:** S008 ("Students will say they feel proud to be part of the program.", adjudicated design row, gold Y2.1, alternate Y3.1). Dropping the phrase would put S008 at risk of moving to Y3.1.
+- **Alternative considered:** record y2-03 as partial support with no entry (not chosen: G3); drop the phrase (MINOR; flips S008).
+- **Decided in:** CP-12-01 (batch 1 research review); Severin, 2026-10-16 (decision Y2-1). Provisional id FD-P40; applied 2026-10-17 in 3.3.0.
+- **Revisit:** close if a verified source names pride in membership or belonging to a program as an outcome.
+
+### FD-P38 · Y2.2
+
+- **Status:** open
+- **Fidelity:** adapted
+- **Case:** codebook-defined
+- **Anchor:** Hidi & Renninger (2006), phase 1 triggered situational interest (verified, claim y2-07); CASEL (2020), "Demonstrating curiosity and open-mindedness" (verified, claim y2-05; partial fit after round-2 claim CP-12-20-V-CASEL-1-Y2.2).
+- **Departs:** the element "willingness to try a new activity" (definition) and "trying new activities" (include). Round 2 found no source that contains it (G3): CASEL gives the bullet no further wording, and nothing describes curiosity or open-mindedness as willingness to try new activities (claim CP-12-01-V1, NOT SUPPORTED); Hidi & Renninger list phase-1 triggers (incongruous or surprising information, personal relevance, character identification, intensity) and never use "novel" or "new activity" (claim CP-12-01-V2, PARTIAL: the step to trying a new activity is the claimant's own).
+- **Evidence:** S049 (trying an activity that made campers nervous, gold Y2.2, alternate Y5.4) and S080 (trying new enrichment activities, gold Y2.2, alternate Y2.6).
+- **Alternative considered:** drop the element (MINOR; flips S049 and S080); move it to Y5.4 (confidence) or Y2.6 (participation) (against the adjudicated rows).
+- **Decided in:** CP-12-01 (batch 1 research review; decisions settled 2026-10-16), opened on the round-2 verdicts under the CP's G3 rule. Provisional id FD-P41; applied 2026-10-17 in 3.3.0.
+- **Revisit:** close if a verified source names willingness to try new activities as part of interest or open-mindedness.
+
 ---
 
 ## Drift count for codebook 3.x (S4.9)
 
 Counted in the domain where the code sits, open entries only; merged-components entries
-are logged but not counted. Updated after the 2026-09-26 re-review below, again for CP-10-02 (2026-09-27), which closed FD-P09, FD-P13, FD-P14 and FD-P20, and again for 3.1.5 (2026-10-16 research review, CP-11-01 to CP-12-32), which opened FD-P21, FD-P22 and FD-P24 to FD-P36 (FD-P23 is merged-components and not counted) and closed FD-P12 and FD-P15 (FD-P04, FD-P05, FD-P06 and FD-P08, also closed, were merged-components). The "Before" column is the count before 3.1.5.
+are logged but not counted. Updated after the 2026-09-26 re-review below, again for CP-10-02 (2026-09-27), which closed FD-P09, FD-P13, FD-P14 and FD-P20, and again for 3.1.5 (2026-10-16 research review, CP-11-01 to CP-12-32), which opened FD-P21, FD-P22 and FD-P24 to FD-P36 (FD-P23 is merged-components and not counted) and closed FD-P12 and FD-P15 (FD-P04, FD-P05, FD-P06 and FD-P08, also closed, were merged-components), and for 3.3.0 (2026-10-17), which opened FD-P37 and FD-P38 in Y2 (CP-12-01). The "Before" column is the count before 3.1.5.
 
 | Domain | Codes | Before 3.1.5 | Counted deviations | Share | Over a third? |
 |---|---|---|---|---|---|
 | Y1 Academic | 18 | 0 | 2 (Y1.10, Y1.13) | 11% | no |
-| Y2 Engagement | 6 | 0 | 0 | 0% | no |
+| Y2 Engagement | 6 | 0 | 2 (Y2.1, Y2.2) | 33% | no (at the line) |
 | Y3 Belonging | 5 | 1 (Y3.1) | 1 (Y3.1) | 20% | no |
 | Y4 SEL (CASEL) | 12 | 0 | 2 (Y4.5, Y4.12) | 17% | no |
 | Y5 Identity | 6 | 1 (Y5.5) | 1 (Y5.3) | 17% | no |
@@ -588,7 +612,7 @@ are logged but not counted. Updated after the 2026-09-26 re-review below, again 
 Most of the rise is not new departures but old ones now written down: the 2026-10-16 review read
 each code's text against its verified sources and logged the elements no source names. Y8 is over
 the line, so its anchor frameworks are re-reviewed (keep, replace or split) before any further Y8
-change; see "Batch 3 review: Y8, F1 and F2" below. F2, A1 and A2 sit at the line: one more
+change; see "Batch 3 review: Y8, F1 and F2" below. Y2, F2, A1 and A2 sit at the line: one more
 counted entry in any of them triggers the same review.
 
 ## Anchor re-review, 2026-09-26 (S4.9)
@@ -621,6 +645,15 @@ The Y1 research review (`research-review/2026-10-16/`) checked whether each Y1 c
 - **Y1.14, "alternatives that replace them".** FD none. Adjudicated S055 ("restorative circles to repair harm instead of receiving a suspension" → Y1.14) reads as a suspension replaced, i.e. a change in exclusionary discipline, which is what the CRDC discipline elements count directly. Read that way the code is no broader than its direct source, so no PARTIAL fit is needed to avoid an entry (decision G3). ESSA 20 U.S.C. 7118(5)(F), "designing and implementing a locally-tailored plan to reduce exclusionary discipline practices" (claim y1-attainment-08, PARTIAL: a plan provision, not an outcome), is context only. If a statement is ever coded Y1.14 for taking part in a restorative practice with no suspension, referral or expulsion it replaces, open a codebook-defined entry.
 
 Age and sector rule (decision C / G1, Severin, 2026-10-16): an entry is opened only when a code's own text names a population, by age or by sector, outside its source. Farrington (middle grades up) and the On-Track Indicator (9th grade) are also applied to younger students in practice, but Y1.9 to Y1.12 and Y1.15 name no population, so they need no entry for that.
+
+## Y2 review, 2026-10-16, applied 2026-10-17 (CP-12-01, 3.3.0)
+
+CP-12-01 waited for PR #62 so that Y2 was counted on the merged Y2.5 and Y2.6 text (decision G7).
+
+- **Y2.1** moves its anchor from Muhammad's Joy (a teaching aim) to Pekrun (2024), activity enjoyment (claim y2-01). No entry for the setting: Y2.1 names no population or sector outside the source (decision G1). Pride in being part of the program is FD-P37 (decision Y2-1, S008).
+- **Y2.2** gains CASEL curiosity (partial: broader than the code, decision G3) and OECD SSES curiosity (direct). Willingness to try a new activity is FD-P38: round 2 found it in neither CASEL (CP-12-01-V1, not supported) nor Hidi & Renninger phase 1 (CP-12-01-V2, partial).
+- **Y2.3, Y2.4.** Hidi & Renninger is now direct on the full text (CP-12-01-V3 records the match), and the 2020 Situated Expectancy-Value Theory is recorded beside the 2000 article.
+- **S4.9.** Y2 is at 2 of 6 (33%), at the line but not over it. One more counted Y2 entry (such as a Y2.5 creative-writing entry) starts Y2's anchor re-review before any further Y2 change.
 
 ## Y3 review, 2026-10-16 (CP-12-02)
 

@@ -18,7 +18,7 @@ sources; nothing ships until Severin rules on 29 example statements and a test r
 | Codes touched | F2.4 (new). F2: `description`, `frameworkBasis`, `categoryLine`, category B `name` and `description`. A2.3: exclude, useInstead. rulesText: rule 1 (one clause), rule 2 (one sentence). `CONFUSIONS.md`: CF-037 (provisional id). `DEVIATIONS.md`: F2 drift row only (no FD). Registry: ten new entries, one note. Tests: code count 98 → 99. No change to F2.2, F2.3, Y8.1, Y2.6, Y1.13 (reasons under "Neighbouring codes"). |
 | Version bump | MINOR: 3.2.0 if it is the first MINOR after 3.1.5, otherwise the next minor (version bumped at merge) |
 | Requirement served | R2 breadth (with R1 frameworks and R3 tie-breakers for the new code) |
-| Status | draft, 2026-10-17 (Severin asked for it). **Blocked** on: (1) Severin settling the 29 proposed rows P-F24-01 to P-F24-29 (decision G11); (2) the live design-set gate after PRs #62 and #66 (decision G10). |
+| Status | draft, 2026-10-17 (Severin asked for it). **Blocked** on: (1) Severin's answer on laptops and internet for young people (P-F24-07; he has ruled all 29 rows, decision G11); (2) the live design-set gate after PRs #62 and #66 (decision G10). |
 | Enum cost | +1 (160 → 161; redesign line 165; test cap 180) |
 | Framework deviation | none. F2.4 enters as `framework`; F2 drift 1 of 3 (33%, at the line) → 1 of 4 (25%, below it). |
 
@@ -144,16 +144,16 @@ CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); U
             "flag": "deductive",
             "fidelity": "framework",
             "from2x": "new",
-            "definition": "A young person having the basic goods a child needs, rather than going without them for lack of money (the statement need not name the cause): clothing, properly fitting shoes, outdoor leisure equipment, school supplies, enough menstrual materials, and basic toiletries.",
-            "include": "Weather-appropriate clothing; shoes that fit; outdoor play gear such as a bike; school supplies, including students coming to class with the supplies they need; enough period products; soap, shampoo, toothpaste, a toothbrush, deodorant and other basic toiletries; the number of children who will have a coat or other goods.",
-            "exclude": "Goods given, received, distributed or counted, or access to them; devices and internet; food; housing; basic needs or material hardship in general; what having the goods leads to (school attendance, joining a team, physical activity, confidence or dignity, belonging, household costs).",
-            "useInstead": "A2.3 goods provided, counted or made accessible, and devices or internet; Domain F2 with subcategory none for basic needs or material hardship in general; F2.1 household costs; F2.2 food; F2.3 housing; Y1.13 attendance; Y1.9 class participation; Y2.6 joining or staying in an activity; Y8.1 physical activity; Y5.4 confidence, self-worth or dignity; Y3.1 belonging.",
+            "definition": "A young person having, or being given, the basic goods a child needs, rather than going without them for lack of money (the statement need not name the cause): clothing, properly fitting shoes, outdoor leisure equipment, school supplies, enough menstrual materials, and basic toiletries.",
+            "include": "Weather-appropriate clothing; shoes that fit; outdoor play gear such as a bike; school supplies, including students coming to class with the supplies they need; enough period products; soap, shampoo, toothpaste, a toothbrush, deodorant and other basic toiletries; the number of children who will have a coat or other goods; goods distributed, provided or given to named young people ("coats distributed to students", "each student will receive a backpack of supplies", "cleats and a uniform for every player").",
+            "exclude": "Goods counted with no young people named, or access to goods (\"500 pairs of gloves handed out\", \"free period products available at school\"); devices and internet; food; housing; basic needs or material hardship in general; what having the goods leads to (school attendance, joining a team, physical activity, confidence or dignity, belonging, household costs).",
+            "useInstead": "A2.3 goods counted with no young people named, access to goods, and devices or internet; Domain F2 with subcategory none for basic needs or material hardship in general; F2.1 household costs; F2.2 food; F2.3 housing; Y1.13 attendance; Y1.9 class participation; Y2.6 joining or staying in an activity; Y8.1 physical activity; Y5.4 confidence, self-worth or dignity; Y3.1 belonging.",
             "example": {
               "text": "<the first F2.4 row Severin confirms; draft: P-F24-04, \"Every student we serve will have a warm winter coat and properly fitting shoes by December.\">",
               "goldId": "<the design gold id Severin gives that row>"
             },
             "source": "Eurostat, EU-SILC child-specific material deprivation items (Commission Regulation (EU) No 112/2013, HD100, HD110, HD160); Global MHH Monitoring Group (2022), Priority List of Indicators for Girls' Menstrual Health and Hygiene, Indicator 1; Social Security Act, 42 U.S.C. 675(4)(A); McKinney-Vento Act, 42 U.S.C. 11433(d)(15); Joseph Rowntree Foundation and I-SPHERE, Destitution in the UK (essential 6, basic toiletries).",
-            "basis": "Eurostat (2023, 24 April), child-specific material deprivation rate (verified, direct: new clothes, two pairs of shoes, outdoor leisure equipment; only items lacked for affordability count; claim f2new-01); Commission Regulation (EU) No 112/2013, Annex, HD100, HD110, HD160 (verified, direct; claim f2new-02); CSO Ireland (2025), SILC Module on Child Deprivation 2024, Table 6.1 (verified, direct, supporting only; claim f2new-03); Global MHH Monitoring Group (2022), Indicator 1 (verified, direct: enough menstrual materials; claim f2new-05). Clothing in general, not only new clothes: 42 U.S.C. 675(4)(A) (verified, partial: a duty to pay for a child's clothing and school supplies, decision G4; claim f2new-07); UN Convention on the Rights of the Child, Art. 27(3) (verified, partial: a right broader than the code, decision G3; claim f2new-09). School supplies: 42 U.S.C. 675(4)(A) and 42 U.S.C. 11433(d)(15) (verified, partial: statutory duties, decision G4; claims f2new-07, f2new-08). Outdoor sports gear is an instance of 'outdoor leisure equipment' and period products of 'menstrual materials' (decision G5). Basic toiletries: Bramley and Ayed (2026), Destitution in the UK: income thresholds for October 2025, Joseph Rowntree Foundation (verified, direct for the item: 'Basic toiletries (such as soap, shampoo, toothpaste, and a toothbrush)', lacked because unaffordable; an all-ages measure, broader than the code, decision G3; claim f2hyg-01); I-SPHERE, Destitution in the UK project page (verified, supporting only: counts about one million children; claim f2hyg-02); ACF Child Welfare Policy Manual 8.3B.1, Question 9 (verified, partial: a foster child's 'personal incidentals' include 'items related to personal hygiene', decision G4; claim f2hyg-03). Deodorant is an instance of basic toiletries (decision G5). The code names no foster-care or homeless population (decision G1). Innocenti Report Card 10 (claim f2new-04) waits for an official copy (decision G8). CSSP Concrete Support does not name clothing (claim f2new-13) and is not cited. No FD (CP-12-33)."
+            "basis": "Eurostat (2023, 24 April), child-specific material deprivation rate (verified, direct: new clothes, two pairs of shoes, outdoor leisure equipment; only items lacked for affordability count; claim f2new-01); Commission Regulation (EU) No 112/2013, Annex, HD100, HD110, HD160 (verified, direct; claim f2new-02); CSO Ireland (2025), SILC Module on Child Deprivation 2024, Table 6.1 (verified, direct, supporting only; claim f2new-03); Global MHH Monitoring Group (2022), Indicator 1 (verified, direct: enough menstrual materials; claim f2new-05). Clothing in general, not only new clothes: 42 U.S.C. 675(4)(A) (verified, partial: a duty to pay for a child's clothing and school supplies, decision G4; claim f2new-07); UN Convention on the Rights of the Child, Art. 27(3) (verified, partial: a right broader than the code, decision G3; claim f2new-09). School supplies: 42 U.S.C. 675(4)(A) and 42 U.S.C. 11433(d)(15) (verified, partial: statutory duties, decision G4; claims f2new-07, f2new-08). Outdoor sports gear is an instance of 'outdoor leisure equipment' and period products of 'menstrual materials' (decision G5). Goods given to young people, not only had (Severin, P-F24-01 to -03 and -26): 42 U.S.C. 675(4)(A) (payments to cover the cost of a child's clothing and school supplies) and 42 U.S.C. 11433(d)(15) ('The provision of school supplies') are provision duties (verified, partial, decision G4); gear and period products given are instances (G5). Basic toiletries: Bramley and Ayed (2026), Destitution in the UK: income thresholds for October 2025, Joseph Rowntree Foundation (verified, direct for the item: 'Basic toiletries (such as soap, shampoo, toothpaste, and a toothbrush)', lacked because unaffordable; an all-ages measure, broader than the code, decision G3; claim f2hyg-01); I-SPHERE, Destitution in the UK project page (verified, supporting only: counts about one million children; claim f2hyg-02); ACF Child Welfare Policy Manual 8.3B.1, Question 9 (verified, partial: a foster child's 'personal incidentals' include 'items related to personal hygiene', decision G4; claim f2hyg-03). Deodorant is an instance of basic toiletries (decision G5). The code names no foster-care or homeless population (decision G1). Innocenti Report Card 10 (claim f2new-04) waits for an official copy (decision G8). CSSP Concrete Support does not name clothing (claim f2new-13) and is not cited. No FD (CP-12-33)."
           }
 ```
 
@@ -177,12 +177,15 @@ not "sports equipment"), and "basic toiletries" (the destitution measure's words
 
 | Field | Before | After |
 |---|---|---|
-| exclude | `Participants' digital skills.` | `Participants' digital skills; young people stated to have the clothing, shoes, gear, school supplies or menstrual materials they need (not given or counted).` |
-| useInstead | `Y1.4; F1.6.` | `Y1.4; F1.6; F2.4 when young people are stated to have the clothing, shoes, gear, school supplies or menstrual materials they need.` |
+| exclude | `Participants' digital skills.` | `Participants' digital skills; clothing, shoes, gear, school supplies, menstrual materials or toiletries that young people are stated to have or to be given.` |
+| useInstead | `Y1.4; F1.6.` | `Y1.4; F1.6; F2.4 when young people are stated to have, or to be given, clothing, shoes, gear, school supplies, menstrual materials or toiletries.` |
 
-Definition, include, fidelity and basis unchanged. A2.3 never covered a young person's state of
-having non-digital goods, so the pointer narrows nothing and moves no construct across a framework
-(no FD; A2 stays 2 of 6).
+Definition, include, fidelity and basis unchanged. Since Severin's rulings on P-F24-01 to -03 the
+pointer also moves non-digital goods given to named young people out of A2.3. A2.3's verified
+sources are the digital-equity ones (devices and connectivity), and no adjudicated A2.3 row is
+about non-digital goods (S196, S228, S240 and H076 are all laptops), so the narrowing moves no
+construct away from A2.3's framework and changes no test row (no FD; A2 stays 2 of 6). A2.3 keeps
+counts of goods with no young people named, access to goods, and devices.
 
 ### Neighbouring codes: no edit (smallest fit)
 
@@ -216,7 +219,7 @@ A young person's own housing, food, income, or clothing and supplies is F2, with
 **Rule 2**, appended after "A specific student's school attendance -> Y1.13." (before: no text):
 
 ```
-Goods given, received, distributed, counted or made accessible ("500 pairs of gloves handed out", "families can pick up free hats and scarves") -> A2.3; young people stated to have, or a number of children who will have, the clothing, shoes, gear, supplies or menstrual materials they need -> F2.4, and what the goods lead to (attendance, joining a team, confidence) takes its own code. Devices and internet stay A2.3 either way (rule 15).
+Goods counted with no young people named or made accessible ("500 pairs of gloves handed out", "families can pick up free hats and scarves") -> A2.3; young people stated to have, or to be given, the clothing, shoes, gear, supplies, menstrual materials or toiletries they need -> F2.4, and what the goods lead to (attendance, joining a team, confidence) takes its own code. Devices and internet stay A2.3 either way (rule 15).
 ```
 
 Rule 15 is unchanged. The rule 2 sentence restates CF-037 (S3.2).
@@ -236,13 +239,13 @@ tie-breakers" (before: no entry):
 **Rule:**
 
 - Young people stated to have, or no longer go without, clothing, shoes, outdoor leisure equipment, school supplies or menstrual materials ("every student will have a coat that fits", "fewer students without supplies", "girls report having enough period products") → **F2.4**.
-- The program giving, distributing or counting goods, or young people receiving them ("1,200 coats distributed", "students will receive a backpack of supplies") → **A2.3**.
+- Goods distributed, provided or given to named young people ("1,200 winter coats distributed to students", "each student will receive a backpack of supplies", "cleats and a uniform for every player") → **F2.4** (Severin, P-F24-01 to -03).
 - Devices and internet → **A2.3** whether given or had (rule 15; S240). Only non-digital goods split by had or given.
 - What the goods lead to takes its own code; the goods are the means (rule 2): school attendance → Y1.13; joining or staying in a sport or activity → Y2.6; physical activity → Y8.1; taking part in class → Y1.9; confidence or self-worth → Y5.4; fitting in or not being singled out → Y3.1; less household spending → F2.1 (CF-034). When the statement names both having the goods and a further result, split (rule 2).
 - Basic toiletries (soap, shampoo, toothpaste, a toothbrush, deodorant) a young person has → **F2.4** (Severin, P-F24-10); hygiene kits given out → **A2.3**.
 - Basic needs in general or material hardship in general (named in F2.4's exclude) → **Domain F2, subcategory none** (decision G9).
 - Warmth or physical comfort alone ("clothes that keep them warm") → **F2.4**; dignity, pride or self-worth → **Y5.4** (the goods are the means).
-- A count of goods given out ("500 pairs of gloves handed out") or access to goods the program supplies ("access to free period products") → **A2.3**. A number of children who will have the goods ("put a warm coat on 1,200 kids") → **F2.4** (Severin, P-F24-26). Students coming to class with the supplies they need → **F2.4**, not Y1.9 (Severin, P-F24-28).
+- A count of goods with no young people named ("500 pairs of gloves handed out") or access to goods the program supplies ("access to free period products") → **A2.3** (Severin, P-F24-27). A number of children who will have the goods ("put a warm coat on 1,200 kids") → **F2.4** (Severin, P-F24-26). Students coming to class with the supplies they need → **F2.4**, not Y1.9 (Severin, P-F24-28).
 
 **Rationale:** F2.4's anchors measure a child's state: the EU-SILC child items (Eurostat 2023; Regulation (EU) No 112/2013, HD100, HD110, HD160) count children lacking clothes, shoes or outdoor leisure equipment, and Global MHH Indicator 1 counts girls having enough menstrual materials. The Joseph Rowntree Foundation's destitution measure counts people lacking basic toiletries they cannot afford. A2.3's definition is provision ("Providing materials ... including counts of resources distributed"), and the output/outcome line is the codebook's own (rule 2; CF-009 in 2.x). Devices stay with A2.3's digital-equity sources (47 CFR 54 Subpart Q; ESSA 7119(a)(2); Digital Equity Act), which frame device access as access, and S240 is adjudicated there.
 
@@ -419,7 +422,7 @@ rulings.
 
   | Boundary | Sides (rows) |
   |---|---|
-  | F2.4 or A2.3 | A2.3: P-F24-01, -02, -03, -26, -27, and the device check -07; F2.4: -04, -05, -06 |
+  | F2.4 or A2.3 | A2.3: P-F24-27; device check -07 (Severin: F2.4, see below); F2.4: -01, -02, -03, -04, -05, -06, -26 |
   | F2.4 or F2 domain-only | F2 domain-only: -08, -09; F2.4: -10 (basic toiletries, Severin), -11, -12 |
   | F2.4 or the downstream result | Y1.13: -13, -14; Y2.6: -15, -16; Y8.1: -17; Y1.9: -18, -28; Y5.4: -19, -25; Y3.1: -20; F2.1: -21, -29; F2.4: -22, -23; split F2.4 and Y1.13: -24 |
 
@@ -457,8 +460,23 @@ coders coded the rows from the 3.1.5 prompt with this CP's prompt changes; four 
 
 ## Severin's decisions on the example statements (2026-10-17)
 
-Severin ruled on the 11 flagged statements on the review page
-(https://claude.ai/artifact/UtpiYrSBsnyYioHhi9jtc5); the other 18 wait for his confirmation.
+Severin ruled on all 29 statements on the review page
+(https://claude.ai/artifact/UtpiYrSBsnyYioHhi9jtc5): the 11 flagged ones first, the other 18 later
+the same day.
+
+- Of the 18 unflagged, he kept the panel's code on 14: P-F24-04, -05, -06, -11, -12, -23 (F2.4),
+  -13, -14 (Y1.13), -15, -16 (Y2.6), -17 (Y8.1), -19 (Y5.4), -20 (Y3.1), -24 (F2.4 and Y1.13).
+- P-F24-01 "We will distribute 1,200 winter coats to students", -02 "Each participating student
+  will receive a backpack filled with grade-level school supplies" and -03 "The league will provide
+  cleats, shin guards and a uniform to every player": **F2.4** (panel: A2.3). Goods given to named
+  young people are F2.4; A2.3 keeps counts with no young people named and access to goods. F2.4
+  definition, include, exclude, useInstead, basis, the A2.3 pointer, rule 2 and CF-037 updated.
+  No adjudicated row changes: every A2.3 test row is a laptop row.
+- P-F24-07 "Every participating student will have a working laptop and home internet": **F2.4**
+  (panel: A2.3). Not yet applied, because it conflicts with Severin's adjudicated test row S240
+  ("Every participating family will have a working laptop and home internet" -> A2.3) and rule 15,
+  and F2.4 has no verified source for devices (naming them would be a deviation and put F2 at 2 of
+  4, over the S4.9 line). Asked him on 2026-10-17 whether laptops for young people move to F2.4.
 
 - Agreed with the panel on 8: P-F24-08, -09 (F2 domain only), -18 (Y1.9), -21, -29 (F2.1), -22
   (F2.4), -25 (Y5.4), -27 (A2.3).
@@ -503,9 +521,12 @@ option and listed here so he can overrule any of them:
 
 ## Open for Severin
 
-Will you rule on the 29 example statements in `proposed-design-rows-f24.csv` (which code each
-should get) before the code ships? **Yes (recommended; required by decision G11)** · No; ship the
-code as a non-scoring preview only.
+All 29 example statements are ruled (2026-10-17). One question remains: should a young person
+having or getting a laptop and home internet (P-F24-07) move to F2.4? **No: laptops and internet
+stay with Access to Resources (A2.3), matching test rows S196, S228, S240 and H076 (recommended)** ·
+Yes: P-F24-07 goes to F2.4, test row S240 stays A2.3 only because it names families, and F2.4
+needs a verified source for devices (without one, a deviation puts Basic Needs over the one-third
+line and its frameworks are re-reviewed first).
 
 ## Judge result
 

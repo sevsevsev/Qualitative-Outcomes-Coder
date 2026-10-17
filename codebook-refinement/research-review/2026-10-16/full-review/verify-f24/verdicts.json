@@ -1,0 +1,119 @@
+[
+ {
+  "claim_id": "f2new-01",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/DDN-20230424-2",
+  "source_kind": "primary",
+  "excerpt": "The child-specific deprivation rate is the percentage of children below 16 ... Child: Some new clothes ... Child: Two pairs of shoes ... Child: Outdoor leisure equipment",
+  "corrected_cite_as": "",
+  "note": "Title and date (24 April 2023) confirmed. The source says only children lacking an item for affordability reasons count as deprived of it."
+ },
+ {
+  "claim_id": "f2new-02",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://eur-lex.europa.eu/eli/reg/2013/112/oj/eng/pdf",
+  "source_kind": "primary",
+  "excerpt": "HD100 Some new (not second-hand) clothes ... HD110 Two pairs of properly fitting shoes (including a pair of all-weather shoes) ... HD160 Outdoor leisure equipment ... all household members aged between 1 and 15",
+  "corrected_cite_as": "",
+  "note": "Regulation number, date and item labels all match. The excerpt joins label fragments, so the ellipses mark gaps."
+ },
+ {
+  "claim_id": "f2new-03",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cso.ie/en/releasesandpublications/ep/p-silccd/silcmoduleonchilddeprivation2024/backgroundnotes",
+  "source_kind": "primary",
+  "excerpt": "A child is considered as deprived if they suffer from an enforced lack of at least three items out of the 17 items.",
+  "corrected_cite_as": "",
+  "note": "Table 6.1 (Child-specific deprivation Items) has 13 child items, including new clothes, two pairs of shoes and outdoor leisure equipment; the 17 is the full index. Release dated 08 May 2025, which matches the 2025 citation."
+ },
+ {
+  "claim_id": "f2new-04",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://webuat.unicef.org.hk/upload/review/176/pdf2/635b79e585085.pdf",
+  "source_kind": "secondary",
+  "excerpt": "5. Outdoor leisure equipment (bicycle, roller-skates, etc.) ... 11. Some new clothes (i.e. not all second-hand) 12. Two pairs of properly fitting shoes (including at least one pair of all-weather shoes)",
+  "corrected_cite_as": "",
+  "note": "The items, their numbers, the author (written by Peter Adamson), May 2012 and Report Card 10 are all confirmed. But the UN Digital Library record 4031924 failed to load, so the only copy read is on a UNICEF Hong Kong test server; re-fetch an official UNICEF or UN copy before calling this primary."
+ },
+ {
+  "claim_id": "f2new-05",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.publichealth.columbia.edu/sites/default/files/priority_list_of_indicators_for_girls_menstrual_health_and_hygiene-_technical_guidance_for_national_monitoring.pdf",
+  "source_kind": "primary",
+  "excerpt": "% of girls who reported having enough menstrual materials during their last menstrual period.",
+  "corrected_cite_as": "",
+  "note": "This is Indicator 1. The document's recommended citation names the Global MHH Monitoring Group, Columbia University, March 2022."
+ },
+ {
+  "claim_id": "f2new-06",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.publichealth.columbia.edu/sites/default/files/priority_list_of_indicators_for_girls_menstrual_health_and_hygiene-_technical_guidance_for_national_monitoring.pdf",
+  "source_kind": "primary",
+  "excerpt": "% of girls whose class participation was not impacted by their last menstrual period.",
+  "corrected_cite_as": "",
+  "note": "This is Indicator 19. It fits Y1.9 only as the downstream outcome the claim describes; I did not check it against the Y1.9 definition."
+ },
+ {
+  "claim_id": "f2new-07",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.govinfo.gov/link/uscode/42/675",
+  "source_kind": "primary",
+  "excerpt": "payments to cover the cost of (and the cost of providing) food, clothing, shelter, daily supervision, school supplies, a child's personal incidentals",
+  "corrected_cite_as": "",
+  "note": "The wording matches verbatim. It is a statutory payment definition, so the fit is partial, as the claim says."
+ },
+ {
+  "claim_id": "f2new-08",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.govinfo.gov/link/uscode/42/11433",
+  "source_kind": "primary",
+  "excerpt": "The provision of school supplies, including those supplies to be distributed at shelters or temporary housing facilities",
+  "corrected_cite_as": "",
+  "note": "Paragraph (15) is confirmed; (14) is about nonschool facilities and (16) about extraordinary or emergency assistance. It covers school supplies, not clothing, so the fit is partial, as the claim says."
+ },
+ {
+  "claim_id": "f2new-09",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-child",
+  "source_kind": "primary",
+  "excerpt": "shall in case of need provide material assistance and support programmes, particularly with regard to nutrition, clothing and housing.",
+  "corrected_cite_as": "",
+  "note": "Art. 27(1) reads: 'the right of every child to a standard of living adequate for the child's physical, mental, spiritual, moral and social development.' It is a right, broader than the code, as the claim says."
+ },
+ {
+  "claim_id": "f2new-10",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://witnessslips.ilga.gov/legislation/ilcs/documents/010500050K34-18.56.htm",
+  "source_kind": "primary",
+  "excerpt": "When students do not have access to affordable menstrual hygiene products, they may miss multiple days of school every month.",
+  "corrected_cite_as": "",
+  "note": "This is subsection (a)(3), a General Assembly finding in Sec. 34-18.56 'Availability of menstrual hygiene products'. It is downstream evidence only."
+ },
+ {
+  "claim_id": "f2new-11",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://odphp.health.gov/sites/default/files/2019-10/National_Youth_Sports_Strategy.pdf",
+  "source_kind": "primary",
+  "excerpt": "The cost of equipment and the need to purchase new equipment as youth grow and develop create additional financial strain.",
+  "corrected_cite_as": "",
+  "note": "It sits in Chapter 6, under Barriers to Sustained Participation, subheading Cost. The suggested citation confirms HHS, 2019."
+ },
+ {
+  "claim_id": "f2new-12",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.attendanceworks.org/chronic-absence/addressing-chronic-absence/strategies-for-school-sites/",
+  "source_kind": "primary",
+  "excerpt": "whether they're related to transportation, family needs such as food or clothing, or access to healthcare.",
+  "corrected_cite_as": "",
+  "note": "It is in the section 'Learn why students are missing school', which tells teams to uncover root causes. The page shows no date, which matches the undated citation."
+ },
+ {
+  "claim_id": "f2new-13",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://cssp.org/wp-content/uploads/2025/03/SF_Concrete-Support-in-Times-of-Need.pdf",
+  "source_kind": "primary",
+  "excerpt": "help to ensure they and their family receive the basic necessities everyone deserves in order to grow (e.g., healthy food, a safe environment)",
+  "corrected_cite_as": "Center for the Study of Social Policy (n.d.). Strengthening Families: Concrete Support in Times of Need",
+  "note": "The basic-necessities quote is confirmed. The negative finding (no 'clothing' or 'clothes') rests only on the page reader's report, not a raw-text search. The PDF has no date or copyright year and its URL shows a 2025/03 upload, so 2018 is unsupported."
+ }
+]

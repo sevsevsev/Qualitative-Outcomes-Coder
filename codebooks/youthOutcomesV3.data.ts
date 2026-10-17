@@ -937,7 +937,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will report greater self-acceptance of their sexual orientation and gender identity.",
               "goldId": "S129"
             },
-            "source": "Nagaoka et al. (2015), Foundations for Young Adult Success, integrated identity across social identities (race/ethnicity, culture); Learning for Justice, Social Justice Standards (Identity); Muhammad, Five Pursuits (Pursuit 1: Identity).",
+            "source": "Nagaoka et al. (2015), Foundations for Young Adult Success, integrated identity across social identities (race/ethnicity, culture); Learning for Justice (2022), Social Justice Standards, Second Edition (Identity); Muhammad, Five Pursuits (Pursuit 1: Identity).",
             "basis": "Learning for Justice (2022), Social Justice Standards, Second Edition, Identity anchor standard ID.1 (verified, direct; claim y5-11). Muhammad, Pursuit 1 Identity (verified, direct; names race, and is the source for \"racial\" added by CP-10-04). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) integrated identity names race/ethnicity and culture (verified, partial). Sexual, gender and linguistic identity are named instances of LFJ ID.1's \"multiple groups in society\", which the registry quotes (decision G5); no FD."
           },
           {
@@ -956,7 +956,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Girls in the program will increasingly see themselves as 'a STEM person.'",
               "goldId": "S036"
             },
-            "source": "Nagaoka et al. (2015), Foundations for Young Adult Success, integrated identity across social identities (including profession).",
+            "source": "Farrington et al. (2019), Arts Education and Social-Emotional Learning Outcomes Among K-12 Students (identities as artists); Nagaoka et al. (2015), Foundations for Young Adult Success, integrated identity across social identities (including profession).",
             "basis": "Farrington et al. (2019), arts education and SEL, \"identities as artists\" (verified, direct; claim y5-07; the year and publishers are not printed in the document and rest on the file path and a June 2019 press release, round-2 claim CP-12-04-V-Y5-3). National Research Council (2009), Strand 6, identity as a science learner: not added (round-2 claim CP-12-04-V-Y5-2 found the strand only on a secondary conference host, not a National Academies Press copy). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) integrated identity names profession among social identities (verified, partial; supporting only: the full report uses a role-bound identity as the contrast to integrated identity, claim y5-08). Science, athlete, reader and writer go past these sources: sector widening, FD-P26."
           }
         ]
@@ -1006,7 +1006,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will develop a sense of purpose for their lives.",
               "goldId": "S250"
             },
-            "source": "Search Institute, Developmental Assets Framework, Positive Identity (Sense of purpose; Positive view of personal future).",
+            "source": "Search Institute, Developmental Assets Framework, Positive Identity (Sense of purpose; Positive view of personal future); Search Institute, Spiritual Development (awareness or awakening; interconnecting and belonging; living an integrated life).",
             "basis": "Search Institute Positive Identity, Sense of purpose; Positive view of personal future (verified, direct). Re-review 2026-09-26 (STANDARDS S4.9): Search Institute sense of purpose and positive view of future assets (content verified). Nagaoka does not support purpose (verifier: unsupported). CP-12-04: Search Institute, Spiritual Development, three core developmental processes (verified, direct; claim y5-14) covers spiritual purpose and growth in faith. FD-P12 closed."
           },
           {
@@ -1024,7 +1024,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Students with IEPs will lead their own IEP meetings by the end of the school year.",
               "goldId": "S032"
             },
-            "source": "Nagaoka et al. (2015), Foundations for Young Adult Success, key outcome: agency; Search Institute, Developmental Assets Framework, Positive Identity (Personal power).",
+            "source": "Nagaoka et al. (2015), Foundations for Young Adult Success, key outcome: agency; Search Institute, Developmental Assets Framework, Positive Identity (Personal power); Rehabilitation Act, 29 U.S.C. 733(b)(5), pre-employment transition services (instruction in self-advocacy).",
             "basis": "Search Institute Personal Power (verified, partial); Nagaoka et al. (2015) agency (partial). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) agency (verified); Search Institute personal power asset (content verified). CP-12-04: Rehabilitation Act, 29 U.S.C. 733(b)(5), pre-employment transition services, \"instruction in self-advocacy\" (verified on the official copy, round-2 claim CP-12-04-V-Y5-1; partial: a required service, counted as partial-fit support with no FD, decision G4). The code names IEPs, which is inside the statute's population (students with disabilities), so no FD (decision G1)."
           }
         ]
@@ -1059,7 +1059,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will demonstrate honesty and integrity.",
               "goldId": "S012"
             },
-            "source": "Search Institute, 40 Developmental Assets, Positive Values.",
+            "source": "Search Institute, 40 Developmental Assets, Positive Values; VIA Institute on Character, VIA Classification of Character Strengths (Forgiveness).",
             "basis": "Search Institute 40 Developmental Assets, Positive Values (verified, direct: integrity, honesty, responsibility). VIA Institute on Character, VIA Classification of Character Strengths, Forgiveness (verified, direct; claim y6-07; cited for this component only). Sportsmanship and faith-grounded values are named instances of Positive Values (honesty, integrity) practised in a setting, which the registry quotes (decision G5); no FD."
           }
         ]
@@ -1102,7 +1102,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will articulate how systemic racism affects their community and advocate for policy change.",
               "goldId": "S123"
             },
-            "source": "Muhammad, Five Pursuits (Pursuit 4: Criticality).",
+            "source": "Muhammad, Five Pursuits (Pursuit 4: Criticality); Watts, Diemer & Voight (2011), critical consciousness (critical reflection and critical action).",
             "basis": "Muhammad, Five Pursuits, Pursuit 4 Criticality (verified, direct). Watts, Diemer & Voight (2011), critical consciousness: critical reflection and critical action (verified, direct; claim y6-01)."
           }
         ]
@@ -1127,7 +1127,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth organizers will present testimony to the city council on a policy issue affecting their neighborhood.",
               "goldId": "S136"
             },
-            "source": "Keeter, Zukin, Andolina & Jenkins (2002), CIRCLE, The Civic and Political Health of the Nation: political voice and electoral indicators.",
+            "source": "Keeter, Zukin, Andolina & Jenkins (2002), CIRCLE, The Civic and Political Health of the Nation: political voice and electoral indicators; Watts, Diemer & Voight (2011), critical consciousness (political efficacy); Search Institute, 40 Developmental Assets (young people given useful roles in the community).",
             "basis": "Re-verified 2026-09-27 (CP-10-02): CIRCLE (2002) core civic engagement indicators, political voice (contacting officials, petitions, protest, boycotts) and electoral participation (verified, direct). Now Framework; FD-P13 closed. NCSS C3 Dimension 4 (partial) no longer cited. CP-12-05: CIRCLE covers the behavioral core only. Civic efficacy rests on Watts, Diemer & Voight (2011), political efficacy (verified, partial; claim y6-02), and youth councils and advisory roles on Search Institute, 40 Developmental Assets, \"Young people are given useful roles on the community\" (verified, partial; claim y6-03). Both sources are broader than the code, so no FD (decision G3). \"Leadership\" in the name needs no FD (decision Y6-1); its rule 7 line and an exclude pointer to Y4.7 follow PR #62. Round 2 also found CIRCLE's own \"engaged worldview\" passage on civic efficacy (claim CP-12-05-V-Y6-2, verified), recorded for a later CP."
           },
           {
@@ -1189,7 +1189,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will learn to protect their personal information online.",
               "goldId": "S107"
             },
-            "source": "ISTE Standards for Students (2016), Standard 2: Digital Citizen.",
+            "source": "ISTE Standards for Students (2024), 1.2 Digital Citizen (1.2.b Online Interactions; 1.2.d Digital Privacy).",
             "basis": "ISTE Standards for Students (2024), 1.2 Digital Citizen: 1.2.b Online Interactions, 1.2.d Digital Privacy (verified, direct; claim y6-06). The 2016 edition, Standard 2 (verified 2026-09-27), is superseded and kept in the registry as history."
           }
         ]
@@ -1285,7 +1285,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Apprentices will complete a registered apprenticeship program.",
               "goldId": "S166"
             },
-            "source": "Perkins V; WIOA performance indicators, 20 CFR 677.155 (credential attainment).",
+            "source": "Perkins V; WIOA performance indicators, 20 CFR 677.155 (credential attainment); WIOA youth program elements, 20 CFR 681.460(a)(3)-(4) (work experience, including internships and pre-apprenticeship; occupational skill training).",
             "basis": "Perkins V, 20 U.S.C. 2302(5)(A)(ii) and (5)(B) (verified, direct, on govinfo; claim y7-08); WIOA 20 CFR 677.155, credential attainment (verified); WIOA youth program elements, 20 CFR 681.460(a)(3)-(4), work experience (including pre-apprenticeship, internships and job shadowing) and occupational skill training (verified, partial: program elements a local area must provide, counted as partial-fit support with no FD, decision G4; claim y7-09)."
           }
         ]
@@ -1310,7 +1310,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will secure a job within 90 days of release.",
               "goldId": "S218"
             },
-            "source": "WIOA performance indicators, 20 CFR 677.155.",
+            "source": "WIOA performance indicators, 20 CFR 677.155; Rehabilitation Act, 29 U.S.C. 705(5) (competitive integrated employment).",
             "basis": "WIOA, 20 CFR 677.155 (verified); Rehabilitation Act, 29 U.S.C. 705(5), competitive integrated employment (verified, direct; claim y7-11)."
           },
           {
@@ -1346,7 +1346,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Transition-age youth will obtain their birth certificate, Social Security card, and state ID before exiting care.",
               "goldId": "S120"
             },
-            "source": "Chafee Foster Care Program for Successful Transition to Adulthood, 42 U.S.C. 677(a)(1) (daily living skills).",
+            "source": "Chafee Foster Care Program for Successful Transition to Adulthood, 42 U.S.C. 677(a)(1) (daily living skills); Casey Family Programs (2022), Casey Life Skills Toolkit (daily living and self-care); Social Security Act sec. 475(5)(I), 42 U.S.C. 675(5)(I) (birth certificate, Social Security card and state ID for youth leaving foster care).",
             "basis": "Chafee, 42 U.S.C. 677(a)(1), daily living skills (verified). Casey Family Programs (2022), Casey Life Skills Toolkit v1.4, daily living and self-care activities, for any youth 14-21 \"regardless of whether they are in foster care\" (verified, direct; claim y7-13). 42 U.S.C. 675(5)(I), birth certificate, Social Security card and state ID for youth leaving foster care (verified, partial: a statutory duty, counted as partial-fit support with no FD, decision G4; claim y7-18). IDEA, 34 CFR 300.43(a)(2)(v), daily living skills in transition services (verified, partial; supporting only; claim y7-15). FD-P15 closed (CP-12-06)."
           }
         ]

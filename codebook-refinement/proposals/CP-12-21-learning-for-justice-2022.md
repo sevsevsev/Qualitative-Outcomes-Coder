@@ -16,6 +16,7 @@ which the coding model reads, waits for the shared test run after the two open p
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
 | Applied | Applied 2026-10-16 in 3.1.5: the registry part (citation as printed, publisher, 2022, PDF URL, source excerpt, note with the old URL). Waits for the gate: the Y5.2 Source line year and edition. |
+| Gate candidate | Part (b) applied 2026-10-17 in the 3.3.0 gate candidate, once, together with CP-12-04's Y5.2 line: "Learning for Justice (2022), Social Justice Standards, Second Edition (Identity)". |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none |
 

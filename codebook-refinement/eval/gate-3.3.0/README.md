@@ -43,3 +43,20 @@ npx tsx scripts/codebook-eval.ts --codebook youth_outcomes_v3 --gold codebook-re
 npx tsx scripts/codebook-eval.ts --codebook youth_outcomes_v3 --gold codebook-refinement/gold/youth_outcomes_v3.gold.csv --set heldout --runs 2 --out codebook-refinement/eval/gate-3.3.0/<baseline|candidate>-<ver>-heldout.json
 npx tsx scripts/codebook-eval.ts --codebook youth_outcomes_v3 --gold codebook-refinement/gold/youth_outcomes_v3.domain-only.gold.csv --set design --runs 2 --out codebook-refinement/eval/gate-3.3.0/<baseline|candidate>-<ver>-domain-only.json
 ```
+
+## Round two (commit dbe89f0, F2.1 include / F1.6 exclude name "confidence about money")
+
+Same commands, run from a worktree at dbe89f0. Files: `candidate-3.3.0-r2-{design,heldout,domain-only}.json`, `comparison-r2-{design,heldout,domain-only}.txt` (each against the 3.2.1 baseline and against round one).
+
+| Set | 3.2.1 baseline (run 1; run 2) | Round one (run 1; run 2) | Round two (run 1; run 2) |
+|---|---|---|---|
+| Design, 255 (the gate), strict / lenient | 98.0/99.2; 98.4/100 | 98.8/100; 99.2/100 | 98.4/99.6; 98.8/100 |
+| Older test rows, 90 | 95.6/96.7; 95.6/96.7 | 94.4/95.6; 94.4/95.6 | 95.6/96.7; 95.6/96.7 |
+| Domain-only, 10 | 70; 80 | 80; 80 | 70; 70 |
+
+- H027 is back to F2.1 Income, Benefits & Financial Stability (round two run 1, confidence high).
+- Design set, round two run 1: no row worse than the baseline; S073 still fixed. S247 (community garden, expected Y6.6 Environmental Stewardship) got Y8.1 Healthy Daily Habits at low confidence, the same miss as baseline run 1; it was right in baseline run 2 and in round one, and round two run 2 scored 100% lenient, so it flips run to run.
+- S006 and S139 first-listed split code changed between rounds; F2.1 is still among the codes (scored correct in every run).
+- Laptop / access rows S196, S228, S240 still A2.3 Access to Resources. No row coded F2.4.
+- Older test rows: H032 changed first-listed split code only (scored correct). Same four misses as the baseline.
+- Domain-only: G-D07 (expected Y3 domain) went back to Y3.1 as in baseline run 1; it was right in baseline run 2 and in round one, so it also flips. G-D09 and G-D10 still missed, as in every run.

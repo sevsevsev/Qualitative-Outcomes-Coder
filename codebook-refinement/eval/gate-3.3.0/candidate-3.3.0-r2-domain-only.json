@@ -1,0 +1,174 @@
+{
+  "generated_at": "2026-10-17T22:44:31.668Z",
+  "model": "gemini-3.8-flash",
+  "codebook_id": "youth_outcomes_v3",
+  "codebook_version": "3.3.0",
+  "gold_path": "codebook-refinement/gold/youth_outcomes_v3.domain-only.gold.csv",
+  "set": "design",
+  "gating": true,
+  "applied_cps": [],
+  "n_rows": 10,
+  "runs": [
+    {
+      "strict_accuracy": 0.7,
+      "lenient_accuracy": 0.7,
+      "low_or_none_confidence_rate": 0.3,
+      "by_confusion": {},
+      "error_pairs": [
+        {
+          "expected": "Y3",
+          "got": "Y3.1",
+          "count": 1,
+          "gold_ids": [
+            "G-D07"
+          ]
+        },
+        {
+          "expected": "Y2",
+          "got": "none",
+          "count": 1,
+          "gold_ids": [
+            "G-D09"
+          ]
+        },
+        {
+          "expected": "Y5",
+          "got": "none",
+          "count": 1,
+          "gold_ids": [
+            "G-D10"
+          ]
+        }
+      ]
+    },
+    {
+      "strict_accuracy": 0.7,
+      "lenient_accuracy": 0.7,
+      "low_or_none_confidence_rate": 0.3,
+      "by_confusion": {},
+      "error_pairs": [
+        {
+          "expected": "Y3",
+          "got": "Y3.1",
+          "count": 1,
+          "gold_ids": [
+            "G-D07"
+          ]
+        },
+        {
+          "expected": "Y2",
+          "got": "none",
+          "count": 1,
+          "gold_ids": [
+            "G-D09"
+          ]
+        },
+        {
+          "expected": "Y5",
+          "got": "none",
+          "count": 1,
+          "gold_ids": [
+            "G-D10"
+          ]
+        }
+      ]
+    }
+  ],
+  "stability": {
+    "agreement": 1,
+    "kappa": 1,
+    "disagreements": []
+  },
+  "rows": [
+    {
+      "gold_id": "G-D01",
+      "expected": "Y4",
+      "got": "Y4",
+      "strict": true,
+      "lenient": true,
+      "confidence": "high",
+      "confusion_ids": []
+    },
+    {
+      "gold_id": "G-D02",
+      "expected": "Y4",
+      "got": "Y4",
+      "strict": true,
+      "lenient": true,
+      "confidence": "high",
+      "confusion_ids": []
+    },
+    {
+      "gold_id": "G-D03",
+      "expected": "Y4",
+      "got": "Y4",
+      "strict": true,
+      "lenient": true,
+      "confidence": "high",
+      "confusion_ids": []
+    },
+    {
+      "gold_id": "G-D04",
+      "expected": "Y8",
+      "got": "Y8",
+      "strict": true,
+      "lenient": true,
+      "confidence": "high",
+      "confusion_ids": []
+    },
+    {
+      "gold_id": "G-D05",
+      "expected": "Y8",
+      "got": "Y8",
+      "strict": true,
+      "lenient": true,
+      "confidence": "medium",
+      "confusion_ids": []
+    },
+    {
+      "gold_id": "G-D06",
+      "expected": "Y1",
+      "got": "Y1",
+      "strict": true,
+      "lenient": true,
+      "confidence": "medium",
+      "confusion_ids": []
+    },
+    {
+      "gold_id": "G-D07",
+      "expected": "Y3",
+      "got": "Y3.1",
+      "strict": false,
+      "lenient": false,
+      "confidence": "medium",
+      "confusion_ids": []
+    },
+    {
+      "gold_id": "G-D08",
+      "expected": "none",
+      "got": "none",
+      "strict": true,
+      "lenient": true,
+      "confidence": "none",
+      "confusion_ids": []
+    },
+    {
+      "gold_id": "G-D09",
+      "expected": "Y2",
+      "got": "none",
+      "strict": false,
+      "lenient": false,
+      "confidence": "none",
+      "confusion_ids": []
+    },
+    {
+      "gold_id": "G-D10",
+      "expected": "Y5",
+      "got": "none",
+      "strict": false,
+      "lenient": false,
+      "confidence": "none",
+      "confusion_ids": []
+    }
+  ]
+}

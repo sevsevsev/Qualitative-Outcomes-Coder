@@ -19,7 +19,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Academic Learning & Achievement",
     "description": "What young people learn and how they progress through school: demonstrated learning by subject, the behaviors and beliefs that shape learning, and school and postsecondary status. All academic outcomes live here, in three categories.",
-    "frameworkBasis": "ESSA State academic standards, 20 U.S.C. 6311(b)(1)(C), and well-rounded education, 20 U.S.C. 7801(52); subject standards (Common Core writing anchors, NGSS, CSTA, National Core Arts Standards, WIDA); Farrington et al. (2012), academic mindsets and behaviors; UChicago On-Track Indicator; Civil Rights Data Collection; National Student Clearinghouse.",
+    "frameworkBasis": "ESSA State academic standards, 20 U.S.C. 6311(b)(1)(C), and well-rounded education, 20 U.S.C. 7801(52); subject standards (Common Core writing anchors, NGSS, CSTA, National Core Arts Standards, WIDA); Farrington et al. (2012), academic mindsets and behaviors; UChicago On-Track Indicator; Civil Rights Data Collection; National Student Clearinghouse; secondary: Seal of Biliteracy Guidelines (home-language maintenance); National Reading Panel (2000) (reading); NAEP (subjects of a well-rounded education); NAMLE, Core Principles of Media Literacy Education; Conley, Four Keys (key cognitive strategies); Head Start Early Learning Outcomes Framework (early childhood); Irvin et al. (2004) (office discipline referrals); Attendance Works (chronic absence); McKinney-Vento Act and 42 U.S.C. 675(1)(G) (school stability); ESSA State report cards (advanced coursework); ESSA graduation-rate indicator; WIOA youth program elements, 20 CFR 681.460 (dropout recovery).",
     "categoryLine": "A. Subject learning (Y1.1–Y1.8) · B. Learning behaviors & mindsets (Y1.9–Y1.12) · C. Educational progress & attainment (Y1.13–Y1.18)",
     "categories": [
       {
@@ -376,7 +376,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Engagement, Interest & Creative Expression",
     "description": "How young people experience learning and activities: enjoyment, curiosity, lasting interest, seeing relevance, creative expression, and choosing to take part.",
-    "frameworkBasis": "Hidi & Renninger (2006), Four-Phase Model of Interest Development; Pekrun (2024), control-value theory of achievement emotions (activity enjoyment); National Core Arts Standards (artistic processes); Search Institute Developmental Assets (Constructive Use of Time).",
+    "frameworkBasis": "Hidi & Renninger (2006), Four-Phase Model of Interest Development; Pekrun (2024), control-value theory of achievement emotions (activity enjoyment); National Core Arts Standards (artistic processes); Search Institute Developmental Assets (Constructive Use of Time); secondary: CASEL (2020) SEL Framework (curiosity and open-mindedness); Eccles and colleagues, expectancy-value theory (utility value); Hulleman et al. (2010), utility-value intervention.",
     "categoryLine": "A. Enjoyment & interest (Y2.1–Y2.4) · B. Expression & participation (Y2.5–Y2.6)",
     "categories": [
       {
@@ -511,7 +511,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Belonging & Relationships",
     "description": "The relationships around a young person: belonging, supportive adults, friends, family, and wider networks.",
-    "frameworkBasis": "Search Institute Developmental Relationships Framework; CDC (2009) School Connectedness; Search Institute Developmental Assets (Support); Education-to-Workforce Indicator Framework (social capital).",
+    "frameworkBasis": "Search Institute Developmental Relationships Framework; CDC (2009) School Connectedness; Search Institute Developmental Assets (Support); Education-to-Workforce Indicator Framework (social capital); secondary: Chafee, 42 U.S.C. 677(a)(2), and the National Youth in Transition Database (permanent connections with caring adults for youth in foster care).",
     "categoryLine": "A. Connectedness (Y3.1) · B. Close relationships (Y3.2–Y3.4) · C. Networks (Y3.5)",
     "categories": [
       {
@@ -633,7 +633,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Social & Emotional Skills (CASEL)",
     "description": "Social and emotional skills: what young people can do, organized by CASEL's five competencies. Beliefs about oneself are in Y5.",
-    "frameworkBasis": "CASEL (2020) SEL Framework: the five competencies are this domain's categories.",
+    "frameworkBasis": "CASEL (2020) SEL Framework: the five competencies are this domain's categories. Secondary: Common Core State Standards, Speaking and Listening anchor 4 (presenting to an audience); National Health Education Standards (SHAPE America, 2024), Standard 4 (refusal skills).",
     "categoryLine": "A. Self-awareness (Y4.1) · B. Self-management (Y4.2–Y4.3) · C. Social awareness (Y4.4–Y4.5) · D. Relationship skills (Y4.6–Y4.9) · E. Responsible decision-making (Y4.10–Y4.12)",
     "categories": [
       {
@@ -897,7 +897,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Identity, Confidence & Agency",
     "description": "Who young people believe they are and what they believe they can do: identity, confidence, purpose and agency.",
-    "frameworkBasis": "Nagaoka et al. (2015), Foundations for Young Adult Success (agency, integrated identity, mindsets); Search Institute Developmental Assets (Positive Identity); Learning for Justice Social Justice Standards (Identity).",
+    "frameworkBasis": "Nagaoka et al. (2015), Foundations for Young Adult Success (agency, integrated identity, mindsets); Search Institute Developmental Assets (Positive Identity); Learning for Justice Social Justice Standards (Identity); secondary: CASEL (2020) SEL Framework (Self-Awareness); Muhammad, Five Pursuits (Identity); Search Institute, Spiritual Development (sense of purpose); Farrington et al. (2019), arts education and social-emotional learning (identity as an artist); Rehabilitation Act, 29 U.S.C. 733(b)(5) (self-advocacy).",
     "categoryLine": "A. Identity (Y5.1–Y5.3) · B. Self-beliefs (Y5.4) · C. Purpose & agency (Y5.5–Y5.6)",
     "categories": [
       {
@@ -1036,7 +1036,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Character, Values & Civic Life",
     "description": "How young people relate to their community and its systems: values, civic knowledge, critical consciousness, civic action, environmental stewardship and digital citizenship.",
-    "frameworkBasis": "Search Institute Developmental Assets (Positive Values); NCSS (2013) C3 Framework (Civics); Muhammad, Five Pursuits (Criticality); NAAEE (2019) Guidelines for Excellence; ISTE Standards for Students (Digital Citizen); CIRCLE (2002) civic engagement indicators (civic voice and community action).",
+    "frameworkBasis": "Search Institute Developmental Assets (Positive Values); NCSS (2013) C3 Framework (Civics); Muhammad, Five Pursuits (Criticality); NAAEE (2019) Guidelines for Excellence; ISTE Standards for Students (2024) (Digital Citizen); CIRCLE (2002) civic engagement indicators (civic voice and community action); secondary: VIA Classification of Character Strengths (Forgiveness); Watts, Diemer & Voight (2011), critical consciousness.",
     "categoryLine": "A. Character (Y6.1) · B. Civic understanding (Y6.2–Y6.3) · C. Civic action (Y6.4–Y6.6) · D. Digital citizenship (Y6.7)",
     "categories": [
       {
@@ -1201,7 +1201,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Career & Economic Readiness",
     "description": "Readiness for and results in work and independent adult life: career exploration, transition steps, work skills, credentials, employment, money skills and daily living skills.",
-    "frameworkBasis": "Perkins V; WIOA performance indicators, 20 CFR 677.155; OCTAE Employability Skills Framework; CFPB Building Blocks and National Standards for Personal Financial Education; Conley, Four Keys; Chafee daily living skills.",
+    "frameworkBasis": "Perkins V; WIOA performance indicators, 20 CFR 677.155, and youth program elements, 20 CFR 681.460; OCTAE Employability Skills Framework; CFPB Building Blocks and National Standards for Personal Financial Education; Conley, Four Keys; Chafee daily living skills; secondary: Casey Life Skills Toolkit (2022) (daily living skills); 42 U.S.C. 675(5)(I) (documents for youth leaving foster care); 29 U.S.C. 705(5) (competitive integrated employment).",
     "categoryLine": "A. Exploration & navigation (Y7.1–Y7.2) · B. Work readiness (Y7.3–Y7.4) · C. Employment & independence (Y7.5–Y7.7)",
     "categories": [
       {
@@ -1628,7 +1628,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "F",
     "name": "Family & Caregiver Strengthening",
     "description": "Caregivers and other adult participants: parenting and home learning, caregiver well-being and connections, adult education and system navigation, and the family's partnership with the program.",
-    "frameworkBasis": "CSSP Strengthening Families Protective Factors; Ascend 2Gen Approach; Epstein's six types of involvement; Mapp & Kuttner (2013) Dual Capacity-Building Framework; MIECHV (F1.3 only).",
+    "frameworkBasis": "CSSP Strengthening Families Protective Factors; Ascend 2Gen Approach; Epstein's six types of involvement; Mapp & Kuttner (2013) Dual Capacity-Building Framework; MIECHV (F1.3 only); secondary: WIOA Title II, Adult Education and Family Literacy Act (adult education); Digital Equity Act (digital skills); IDEA Parent Training and Information Centers, 20 U.S.C. 1471 (parent training); SNAP-Ed Evaluation Framework (family eating habits); Healthy People 2030, MICH-14 and MICH-15 (infant health practices).",
     "categoryLine": "A. Parenting & home learning (F1.1–F1.3) · B. Caregiver well-being & support (F1.4–F1.5) · C. Adult development & navigation (F1.6–F1.7) · D. Family-program partnership (F1.8–F1.9)",
     "categories": [
       {
@@ -1830,7 +1830,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "F",
     "name": "Basic Needs & Economic Stability",
     "description": "The material stability of a household or of a young person living independently: income and benefits, food, housing.",
-    "frameworkBasis": "CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); USDA Household Food Security Survey Module; ACF NYTD.",
+    "frameworkBasis": "CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); USDA Household Food Security Survey Module; ACF NYTD; secondary: CFPB Financial Well-Being (financial cushion); Runaway and Homeless Youth Program, 45 CFR 1351 (stable housing and safe exits); Healthy People 2030, AHS-01, NWS-01 and SDOH-04; McKinney-Vento Act, including the HEARTH Act.",
     "categoryLine": "A. Economic stability (F2.1) · B. Food & housing (F2.2–F2.3)",
     "categories": [
       {
@@ -1909,7 +1909,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "A",
     "name": "Staff & Volunteer Capacity",
     "description": "The adults who serve young people: what they learn, what they change in practice, and whether the workforce is stable and well.",
-    "frameworkBasis": "Learning Forward (2022) Standards for Professional Learning; U.S. Surgeon General (2022) Framework for Workplace Mental Health & Well-Being.",
+    "frameworkBasis": "Learning Forward (2022) Standards for Professional Learning; U.S. Surgeon General (2022) Framework for Workplace Mental Health & Well-Being; secondary: Guskey (2002), Levels 2 and 4 (participants' learning, and their use of new knowledge and skills); SAMHSA (2014), trauma-informed approach; NIOSH WellBQ (2021); BLS Job Openings and Labor Turnover Survey.",
     "categoryLine": "A. Staff learning & practice (A1.1–A1.2) · B. Workforce (A1.3)",
     "categories": [
       {

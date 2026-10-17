@@ -57,7 +57,8 @@
         }
       ],
       "codebook_names": [
-        "National Youth in Transition Database"
+        "National Youth in Transition Database",
+        "ACF NYTD"
       ]
     },
     {
@@ -65,7 +66,8 @@
       "cite_as": "Allensworth, E. M., & Easton, J. Q. (2005). The On-Track Indicator as a Predictor of High School Graduation. Consortium on Chicago School Research at the University of Chicago.",
       "codebook_names": [
         "UChicago Consortium On-Track Indicator",
-        "Allensworth & Easton, 2005"
+        "Allensworth & Easton, 2005",
+        "UChicago On-Track Indicator"
       ],
       "tier": "C",
       "publisher": "Consortium on Chicago School Research at the University of Chicago",
@@ -90,7 +92,8 @@
       "id": "allensworth-easton-2007",
       "cite_as": "Allensworth, E. M., & Easton, J. Q. (2007, July). What Matters for Staying On-Track and Graduating in Chicago Public High Schools: A Close Look at Course Grades, Failures, and Attendance in the Freshman Year. Consortium on Chicago School Research at the University of Chicago.",
       "codebook_names": [
-        "Allensworth & Easton, 2007"
+        "Allensworth & Easton, 2007",
+        "UChicago On-Track Indicator"
       ],
       "tier": "C",
       "publisher": "Consortium on Chicago School Research at the University of Chicago",
@@ -169,7 +172,9 @@
     {
       "id": "bls-jolts-definitions",
       "cite_as": "U.S. Bureau of Labor Statistics. Job Openings and Labor Turnover Survey (JOLTS): Data Definitions.",
-      "codebook_names": [],
+      "codebook_names": [
+        "Job Openings and Labor Turnover Survey"
+      ],
       "tier": "A",
       "publisher": null,
       "year": null,
@@ -818,7 +823,8 @@
       "excerpt": "Financial Habits and Norms: The values, standards, routine practices, and rules to live by used to navigate day-to-day financial life.",
       "codebook_names": [
         "Building Blocks to Help Youth Achieve Financial Capability",
-        "CFPB Youth Financial Capability Building Blocks"
+        "CFPB Youth Financial Capability Building Blocks",
+        "CFPB Building Blocks"
       ],
       "supports": [
         {
@@ -833,7 +839,9 @@
     {
       "id": "cfpb-financial-well-being-2015",
       "cite_as": "Consumer Financial Protection Bureau (2015, December). Measuring financial well-being: A guide to using the CFPB Financial Well-Being Scale.",
-      "codebook_names": [],
+      "codebook_names": [
+        "CFPB Financial Well-Being"
+      ],
       "tier": "A",
       "publisher": "Consumer Financial Protection Bureau",
       "year": 2015,
@@ -1245,7 +1253,9 @@
     {
       "id": "digital-equity-act",
       "cite_as": "Digital Equity Act of 2021, Pub. L. 117-58, div. F, title III; 47 U.S.C. 1721(12)",
-      "codebook_names": [],
+      "codebook_names": [
+        "Digital Equity Act"
+      ],
       "tier": null,
       "publisher": null,
       "year": null,
@@ -1268,7 +1278,9 @@
     {
       "id": "digital-equity-act-1723",
       "cite_as": "Digital Equity Act of 2021, 47 U.S.C. 1723(c)(1)(B)(v) (State Digital Equity Plan measurable objectives) and 1721(11) (digital inclusion)",
-      "codebook_names": [],
+      "codebook_names": [
+        "Digital Equity Act"
+      ],
       "tier": "A",
       "publisher": null,
       "year": null,
@@ -1464,7 +1476,9 @@
     {
       "id": "essa-6311-advanced-coursework",
       "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 6311(h)(1)(C)(viii)(II)(bb) and 6311(c)(4)(B)(v)(II)",
-      "codebook_names": [],
+      "codebook_names": [
+        "ESSA State report cards"
+      ],
       "tier": "A",
       "publisher": "U.S. Congress",
       "year": 2015,
@@ -1750,7 +1764,9 @@
     {
       "id": "hearth-42usc11386a",
       "cite_as": "McKinney-Vento Homeless Assistance Act, as amended by the HEARTH Act, 42 U.S.C. 11386a(b)(1)(A)(i), (ii) and (vi): Continuum of Care selection criteria.",
-      "codebook_names": [],
+      "codebook_names": [
+        "HEARTH Act"
+      ],
       "tier": "A",
       "publisher": "U.S. Congress",
       "year": null,
@@ -1806,7 +1822,9 @@
     {
       "id": "hp2030-ah01-ahs01",
       "cite_as": "Healthy People 2030, AH-01 (adolescent preventive health care visit) and AHS-01 (health insurance).",
-      "codebook_names": [],
+      "codebook_names": [
+        "Healthy People 2030"
+      ],
       "tier": "A",
       "publisher": "U.S. DHHS, Office of Disease Prevention and Health Promotion",
       "year": null,
@@ -1905,7 +1923,9 @@
     {
       "id": "hp2030-mich14",
       "cite_as": "Healthy People 2030, MICH-14: Increase the proportion of infants who are put to sleep on their backs.",
-      "codebook_names": [],
+      "codebook_names": [
+        "Healthy People 2030"
+      ],
       "tier": "A",
       "publisher": null,
       "year": null,
@@ -1928,7 +1948,9 @@
     {
       "id": "hp2030-mich15",
       "cite_as": "Healthy People 2030, MICH-15: Increase the proportion of infants who are breastfed exclusively through age 6 months.",
-      "codebook_names": [],
+      "codebook_names": [
+        "Healthy People 2030"
+      ],
       "tier": "A",
       "publisher": null,
       "year": null,
@@ -1974,7 +1996,9 @@
     {
       "id": "hp2030-nws01",
       "cite_as": "Healthy People 2030, objective NWS-01: Reduce household food insecurity and hunger. U.S. DHHS, ODPHP.",
-      "codebook_names": [],
+      "codebook_names": [
+        "Healthy People 2030"
+      ],
       "tier": "A",
       "publisher": "U.S. DHHS, Office of Disease Prevention and Health Promotion",
       "year": null,
@@ -2066,7 +2090,9 @@
     {
       "id": "hp2030-sdoh04",
       "cite_as": "Healthy People 2030, objective SDOH-04: Reduce the proportion of families that spend more than 30 percent of income on housing. U.S. DHHS, ODPHP.",
-      "codebook_names": [],
+      "codebook_names": [
+        "Healthy People 2030"
+      ],
       "tier": "A",
       "publisher": "U.S. DHHS, Office of Disease Prevention and Health Promotion",
       "year": null,
@@ -2089,7 +2115,9 @@
     {
       "id": "hp2030-sh04",
       "cite_as": "Healthy People 2030, SH-04: Increase the proportion of high school students who get enough sleep.",
-      "codebook_names": [],
+      "codebook_names": [
+        "Healthy People 2030"
+      ],
       "tier": "A",
       "publisher": "U.S. DHHS, Office of Disease Prevention and Health Promotion",
       "year": null,
@@ -2112,7 +2140,9 @@
     {
       "id": "hp2030-su05",
       "cite_as": "Healthy People 2030, objective SU-05: Reduce the proportion of adolescents who used drugs in the past month. U.S. DHHS, ODPHP.",
-      "codebook_names": [],
+      "codebook_names": [
+        "Healthy People 2030"
+      ],
       "tier": "A",
       "publisher": "U.S. DHHS, Office of Disease Prevention and Health Promotion",
       "year": null,
@@ -2135,7 +2165,9 @@
     {
       "id": "hulleman-2010-utility-value",
       "cite_as": "Hulleman, C. S., Godes, O., Hendricks, B. L., & Harackiewicz, J. M. (2010). Enhancing interest and performance with a utility value intervention. Journal of Educational Psychology, 102(4), 880-895.",
-      "codebook_names": [],
+      "codebook_names": [
+        "Hulleman et al. (2010)"
+      ],
       "tier": "C",
       "publisher": "American Psychological Association",
       "year": 2010,
@@ -2181,7 +2213,10 @@
     {
       "id": "idea-671-pti",
       "cite_as": "Individuals with Disabilities Education Act, section 671(b)(7), 20 U.S.C. 1471(b)(7): Parent Training and Information Centers",
-      "codebook_names": [],
+      "codebook_names": [
+        "20 U.S.C. 1471",
+        "IDEA Parent Training and Information Centers"
+      ],
       "tier": "A",
       "publisher": null,
       "year": null,
@@ -2204,7 +2239,9 @@
     {
       "id": "irvin-2004-odr",
       "cite_as": "Irvin, L. K., Tobin, T. J., Sprague, J. R., Sugai, G., & Vincent, C. G. (2004). Validity of office discipline referral measures as indices of school-wide behavioral status and effects of school-wide behavioral interventions. Journal of Positive Behavior Interventions, 6(3), 131-147.",
-      "codebook_names": [],
+      "codebook_names": [
+        "Irvin et al. (2004)"
+      ],
       "tier": "C",
       "publisher": null,
       "year": null,
@@ -2530,7 +2567,8 @@
       "id": "muhammad-five-pursuits",
       "cite_as": "Muhammad, G. Unearthing Joy (five pursuits), extending Cultivating Genius (four pursuits)",
       "codebook_names": [
-        "Gholdy Muhammad"
+        "Gholdy Muhammad",
+        "Muhammad, Five Pursuits"
       ],
       "tier": "C",
       "publisher": "Gholdy Muhammad / HILL Pedagogies (Scholastic)",
@@ -2675,7 +2713,9 @@
     {
       "id": "namle-core-principles",
       "cite_as": "NAMLE — Core Principles of Media Literacy Education (definition of media literacy)",
-      "codebook_names": [],
+      "codebook_names": [
+        "NAMLE"
+      ],
       "tier": null,
       "publisher": null,
       "year": null,
@@ -2827,7 +2867,9 @@
     {
       "id": "niosh-wellbq-2021",
       "cite_as": "National Institute for Occupational Safety and Health (2021). NIOSH Worker Well-Being Questionnaire (WellBQ). DHHS (NIOSH) Publication No. 2021-110.",
-      "codebook_names": [],
+      "codebook_names": [
+        "NIOSH WellBQ"
+      ],
       "tier": "A",
       "publisher": null,
       "year": null,
@@ -2904,7 +2946,9 @@
     {
       "id": "nses-2020",
       "cite_as": "Future of Sex Education Initiative (2020). National Sex Education Standards: Core Content and Skills, K-12 (2nd ed.).",
-      "codebook_names": [],
+      "codebook_names": [
+        "National Sex Education Standards"
+      ],
       "tier": "B",
       "publisher": "Future of Sex Education Initiative",
       "year": null,
@@ -3162,7 +3206,9 @@
     {
       "id": "rhy-45cfr1351",
       "cite_as": "Runaway and Homeless Youth Program, 45 CFR Part 1351 (U.S. Department of Health and Human Services, Administration for Children and Families): 1351.30(a)(1) and 1351.31(a)(1) core outcome areas; 1351.1 'safe and appropriate exits', 1351.30(d), 1351.31(e).",
-      "codebook_names": [],
+      "codebook_names": [
+        "45 CFR 1351"
+      ],
       "tier": "A",
       "publisher": "U.S. DHHS, Administration for Children and Families",
       "year": null,
@@ -3291,7 +3337,8 @@
       "cite_as": "Search Institute. (n.d.). The Developmental Assets Framework: 40 Developmental Assets for Adolescents (ages 12-18).",
       "codebook_names": [
         "Developmental Assets Framework",
-        "40 Developmental Assets"
+        "40 Developmental Assets",
+        "Search Institute Developmental Assets"
       ],
       "tier": "D",
       "publisher": "Search Institute",
@@ -3450,7 +3497,8 @@
       "id": "shape-nhes-2024",
       "cite_as": "SHAPE America - Society of Health and Physical Educators (2024). National Health Education Standards.",
       "codebook_names": [
-        "National Health Education Standards"
+        "National Health Education Standards",
+        "SHAPE America national standards"
       ],
       "tier": "B",
       "publisher": "SHAPE America - Society of Health and Physical Educators",
@@ -3516,7 +3564,9 @@
     {
       "id": "shape-pe-2024",
       "cite_as": "SHAPE America (2024). National Physical Education Standards, Standard 1: Develops a variety of motor skills.",
-      "codebook_names": [],
+      "codebook_names": [
+        "SHAPE America national standards"
+      ],
       "tier": "B",
       "publisher": "SHAPE America",
       "year": null,
@@ -3539,7 +3589,9 @@
     {
       "id": "snap-ed-framework-mt1",
       "cite_as": "U.S. Department of Agriculture, Food and Nutrition Service. SNAP-Ed Evaluation Framework, MT1: Nutrition-Related Behavioral Changes.",
-      "codebook_names": [],
+      "codebook_names": [
+        "SNAP-Ed"
+      ],
       "tier": "A",
       "publisher": "U.S. Department of Agriculture, Food and Nutrition Service",
       "year": null,
@@ -3631,7 +3683,9 @@
     {
       "id": "usc-42-675-1g-educational-stability",
       "cite_as": "42 U.S.C. 675(1)(G), case plan: educational stability of the child while in foster care",
-      "codebook_names": [],
+      "codebook_names": [
+        "42 U.S.C. 675(1)(G)"
+      ],
       "tier": "A",
       "publisher": "U.S. Congress",
       "year": null,
@@ -3886,7 +3940,9 @@
     {
       "id": "wioa-20cfr681460",
       "cite_as": "WIOA youth program elements, 20 CFR 681.460(a).",
-      "codebook_names": [],
+      "codebook_names": [
+        "20 CFR 681.460"
+      ],
       "tier": "A",
       "publisher": "U.S. Department of Labor",
       "year": null,
@@ -3916,7 +3972,9 @@
     {
       "id": "wioa-title-ii-aefla",
       "cite_as": "Workforce Innovation and Opportunity Act, Title II (Adult Education and Family Literacy Act), 29 U.S.C. 3272(1) and 3272(6).",
-      "codebook_names": [],
+      "codebook_names": [
+        "WIOA Title II"
+      ],
       "tier": "A",
       "publisher": "U.S. Congress",
       "year": null,

@@ -18,6 +18,7 @@ wait for the review of that domain's anchor.
 | Version bump | PATCH, inside the single Source/`frameworkBasis` PATCH after PRs #62 and #66 (G10) |
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Gate candidate | Applied 2026-10-17 in the 3.3.0 gate candidate: `frameworkBasis` of Y1, Y2, Y3, Y4, Y5, Y6, Y7, F1, F2 and A1 as drafted, except: **Y8 is not edited** (Y8 is over the S4.9 line; its clause waits for the Y8 anchor re-review, and the three Y8 pairs the check finds, Y8.4 nses-2020, Y8.5 acf-nytd and Y8.10 search-40-assets, are listed in the test's `KNOWN_GAPS` with that reason, beside A2.6); Y5 leaves out the NRC (2009) item (no registry entry, V-Y5-2); F2 leaves out "USDA nutrition security (2022)" (V8 not supported) and names the HEARTH Act (V11 supported). Table R names are in `v3/verification_2026_10_16_batch4.py`, without the Y8-only part-2 names. The `sync.test.ts` block is as drafted. CP-12-33 later inserts the F2.4 anchors into F2's line. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none |
 

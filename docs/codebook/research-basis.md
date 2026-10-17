@@ -23,6 +23,15 @@ verification records or was checked by an independent verifier agent for this re
 Registry ids (for example `casel-2020`) point to `codebook-refinement/sources/original.sources.json`;
 v2 ids point to `codebook-refinement/v2/v2-candidate-sources.json`.
 
+**Status update, 2026-10-16 (CP-12-30).** The tags in this document are as of the 2026-09-26
+review. On 2026-09-27 (CP-10-01, CP-10-02) independent verifiers re-read every 3.x source, and the
+3.x registry, `codebook-refinement/sources/youth_outcomes_v3.sources.json`, now records each
+source's status and, for each code, whether the fit is direct or partial. Most sources tagged
+**located** below are now **verified**; at this update one 3.x source is still located (Weiss,
+Little & Bouffard, 2005, A2.5). Where this document and the registry differ, the registry is
+current. Tags are not edited one by one here; sections whose sources changed are updated in place
+(Y3, Y5, Y6, A1, A3).
+
 ## What the codebook is for, and what that asks of a framework
 
 The app codes **outcome statements written by youth-serving programs**: logic models,
@@ -67,6 +76,11 @@ category level Severin asked for:
 | Category | **Dimension** of that construct, taken from the domain's anchor framework where it has one | Y8-B Mental health |
 | Code | **Observable indicator** | Y8.6 Mental Health Symptoms & Distress |
 
+Where a domain has one anchor framework, its categories are that framework's dimensions (for
+example Y4, CASEL's five competencies). In Y1, Y2, Y3, Y5, Y6, Y7 and A2, and in category B of A3,
+the categories are the codebook's own grouping of codes that rest on different frameworks; each of
+those sections says so.
+
 **Fewer, broader domains than the v2 draft.** The v2 draft's held-out test showed that
 adding domains adds boundaries: domain agreement fell from 94.4% (v1.1.1) to 88.9%
 (v2) even though fit improved (`v2/STRUCTURE.md` §1). The proposal keeps v2's codes
@@ -94,7 +108,7 @@ an optional field in phase 4, gated on a live schema test.
 ### Y1 Academic Learning & Achievement
 
 **Categories:** A. Subject learning (Y1.1–Y1.8) · B. Learning behaviors & mindsets
-(Y1.9–Y1.12) · C. Educational progress & attainment (Y1.13–Y1.18)
+(Y1.9–Y1.12) · C. Educational progress & attainment (Y1.13–Y1.18) *Codebook grouping: these categories are the codebook's own arrangement, not one framework's dimensions.*
 
 | Framework | Citation | Status | Codes |
 |---|---|---|---|
@@ -158,7 +172,7 @@ proposal keeps), and folds Y6/Y7/Y8 into categories.
 ### Y2 Engagement, Interest & Creative Expression
 
 **Categories:** A. Enjoyment & interest (Y2.1–Y2.4) · B. Expression & participation
-(Y2.5–Y2.6)
+(Y2.5–Y2.6) *Codebook grouping: these categories are the codebook's own arrangement, not one framework's dimensions.*
 
 | Framework | Citation | Status | Codes |
 |---|---|---|---|
@@ -192,14 +206,17 @@ per-person vs aggregate rule (Y2.6 vs A2.5) resolves the 11.5 confusion (S003).
 ### Y3 Belonging & Relationships
 
 **Categories:** A. Connectedness (Y3.1) · B. Close relationships (Y3.2–Y3.4) ·
-C. Networks (Y3.5)
+C. Networks (Y3.5) *Codebook grouping: these categories are the codebook's own arrangement, not one framework's dimensions.*
 
 | Framework | Citation | Status | Codes |
 |---|---|---|---|
 | CDC School Connectedness | CDC (2009), *School Connectedness: Strategies for Increasing Protective Factors Among Youth* | verified (`cdc-school-connectedness-2009`) | Y3.1, Y3.2, Y3.3 |
 | Developmental Relationships Framework | Search Institute (Express Care; Challenge Growth; Provide Support; Share Power; Expand Possibilities) | verified (`search-developmental-relationships`) | Y3.2, Y3.5 |
-| Chafee / NYTD permanent connections | 42 U.S.C. 677; ACF NYTD outcomes survey | verified (`chafee-42usc677`, `acf-nytd`) | Y3.2, Y3.4 |
-| Positive Youth Justice, relationships | Butts, Bazemore & Meroe (2010) | partial (covers peers, family and community together) | Y3.4 |
+| Chafee / NYTD permanent connections | 42 U.S.C. 677(a)(2); ACF NYTD outcomes survey | verified (`chafee-42usc677-a2`, `acf-nytd`) | Y3.2 |
+| Developmental Assets | Search Institute (Support: family support, positive family communication, other adult relationships; Empowerment: community values youth) | verified (`search-40-assets`) | Y3.1 (partial), Y3.2, Y3.4 |
+| Social connection advisory | Office of the U.S. Surgeon General (2023) | verified, partial (`surgeon-general-2023-social-connection`) | Y3.1 |
+| Community programs, opportunities to belong | NRC/IOM (2002), chapter 5 | verified, partial: a program feature (`nrc-iom-2002-community-programs`) | Y3.1 |
+| Reunification duties | 42 U.S.C. 671(a)(15)(B); 34 U.S.C. 11212(b)(3) | verified, partial: agency duties (`usc-42-671-a15b-reunification`, `rhya-34usc11212-b3`) | Y3.4 |
 | Education-to-Workforce social capital | Mathematica (2022), Education-to-Workforce Indicator Framework | verified (`e2w-social-capital`) | Y3.5 |
 
 **Why these fit.** Connectedness and supportive relationships are among the most
@@ -207,10 +224,13 @@ common stated outcomes of mentoring, afterschool and school-climate programs, an
 CDC and Search Institute frameworks name exactly the constructs statements use
 (belonging, a trusted adult, friends, a network).
 
-**Where they don't fit.** CDC connectedness is school-specific; the code widens it to
-any program or community (H063 "a new community"). No framework in the records names
-family reunification as a youth relationship outcome; Y3.4 relies on the Chafee/NYTD
-"positive connections" language and is flagged hybrid.
+**Where they don't fit.** CDC connectedness is school-specific. The Surgeon General's
+advisory, the Developmental Assets and NRC/IOM cover belonging, mattering and loneliness
+in other settings, but none names felt safety, so the "safe" part of Y3.1 stays a logged
+widening (FD-P01). Family reunification appears only as an agency duty (42 U.S.C. 671;
+the Runaway and Homeless Youth Act), recorded as partial support for Y3.4. The category
+level (grouping by relationship partner) is the codebook's own, with convergent support
+from the Developmental Assets and CDC.
 
 **Structure.** Cultural identity (3.4) leaves for Y5, where identity constructs sit;
 family-program partnership (3.5) leaves for F1, because its subject is the family.
@@ -252,7 +272,7 @@ format is retired, so no prompt rule is needed for it.
 ### Y5 Identity, Confidence & Agency
 
 **Categories:** A. Identity (Y5.1–Y5.3) · B. Self-beliefs (Y5.4) · C. Purpose & agency
-(Y5.5–Y5.6)
+(Y5.5–Y5.6) *Codebook grouping: these categories are the codebook's own arrangement, not one framework's dimensions.*
 
 | Framework | Citation | Status | Codes |
 |---|---|---|---|
@@ -261,7 +281,6 @@ format is retired, so no prompt rule is needed for it.
 | Learning for Justice, Identity standards | Social Justice Standards | verified (`learning-for-justice-sjs`) | Y5.2 |
 | Muhammad, Pursuit 1 Identity | Five Pursuits | verified | Y5.2 |
 | Foundations for Young Adult Success | Nagaoka, J., Farrington, C. A., et al. (2015), UChicago Consortium: agency, integrated identity | partial (agency and identity fit; competencies do not) | domain |
-| Five Cs, Confidence | Lerner, R. M., et al. (2005), *Journal of Early Adolescence* | partial (definitions only via a secondary copy) | domain |
 | Causal Agency Theory | Shogren, K. A., Wehmeyer, M. L., et al. (2015), *Causal Agency Theory: Reconceptualizing a functional model of self-determination* [VERIFY: journal and pages] | partial (author upload; wording "agentic" vs "causal" unresolved) | Y5.6 |
 | Science identity | Carlone, H. B., & Johnson, A. (2007). *Journal of Research in Science Teaching, 44*(8), 1187–1218 | partial (three dimensions confirmed only through a citing article) | Y5.3 |
 
@@ -284,12 +303,11 @@ its own and its boundary with confidence was the triangle the move is meant to e
 ### Y6 Character, Values & Civic Life
 
 **Categories:** A. Character (Y6.1) · B. Civic understanding (Y6.2–Y6.3) · C. Civic
-action (Y6.4–Y6.6) · D. Digital citizenship (Y6.7)
+action (Y6.4–Y6.6) · D. Digital citizenship (Y6.7) *Codebook grouping: these categories are the codebook's own arrangement, not one framework's dimensions.*
 
 | Framework | Citation | Status | Codes |
 |---|---|---|---|
 | Search Institute, Positive Values | 40 Developmental Assets | located | Y6.1 |
-| Five Cs, Character and Contribution | Lerner et al. (2005) | partial | Y6.1, Y6.5 |
 | NCSS C3 Framework | NCSS (2013), *College, Career, and Civic Life (C3) Framework*: Dimension 2 Civics; Dimension 4 Taking Informed Action | verified for Civics and Dimension 2; partial for Dimension 4 scope (v2 `ncss-c3-2013`) | Y6.2, Y6.4, Y6.5 |
 | Muhammad, Pursuit 4 Criticality | Five Pursuits | verified | Y6.3 |
 | NAAEE K–12 Guidelines | NAAEE (2019), *K–12 Environmental Education: Guidelines for Excellence*, Personal and Civic Responsibility strand | verified for the strand; "connection to nature" not covered (v2 `naaee-k12-2019`) | Y6.6 |
@@ -306,15 +324,14 @@ H028) rest on Dimension 4 at partial scope. Criticality rests on a pedagogical m
 no measurement framework for critical consciousness is in the records [VERIFY before
 adding one, e.g. a published critical-consciousness scale].
 
-**Structure.** Positive values joins civic life (as in v2 and Lerner's Character and
-Contribution) because both are about how youth relate to others and the community,
+**Structure.** Positive values joins civic life (as in v2) because both are about how youth relate to others and the community,
 and Domain 6 as a whole dissolves. Civic *knowledge* of government moves here from
 1.3, so civics has one home (S254).
 
 ### Y7 Career & Economic Readiness
 
 **Categories:** A. Exploration & navigation (Y7.1–Y7.2) · B. Work readiness
-(Y7.3–Y7.4) · C. Employment & independence (Y7.5–Y7.7)
+(Y7.3–Y7.4) · C. Employment & independence (Y7.5–Y7.7) *Codebook grouping: these categories are the codebook's own arrangement, not one framework's dimensions.*
 
 | Framework | Citation | Status | Codes |
 |---|---|---|---|
@@ -438,17 +455,23 @@ covers that since 2.3.0).
 
 | Framework | Citation | Status | Codes |
 |---|---|---|---|
-| Standards for Professional Learning | Learning Forward (2022) | located (`learning-forward-2022`) | A1.1, A1.2 |
-| Trauma-informed approach | SAMHSA (2014), SMA 14-4884 | located (`samhsa-tic-2014`) | A1.2 |
+| Evaluating professional development | Guskey, T. R. (2002), Level 2 (participants' learning) and Level 4 (participants' use of new knowledge and skills) | verified (`guskey-2002-pd-evaluation`) | A1.1, A1.2 |
+| Standards for Professional Learning | Learning Forward (2022) | verified, partial: how professional learning is designed (`learning-forward-2022`) | A1.1, A1.2 |
+| Trauma-informed approach | SAMHSA (2014), SMA 14-4884 | verified (`samhsa-tic-2014`) | A1.2 |
 | Workplace mental health and well-being | Office of the U.S. Surgeon General (2022) | verified | A1.3 |
 | NIOSH WellBQ | NIOSH (2021), Pub. No. 2021-110 | verified | A1.3 |
 | JOLTS separations and quits | U.S. BLS | verified | A1.3 |
 
-**Structure and fit.** Adult learning vs practice change follows Learning Forward's
-distinction between educator learning and changes in practice. A1.3 uses general
-workforce sources, not Head Start, by Severin's decision.
+**Structure and fit.** Adult learning vs practice change follows Guskey's (2002) Level 2
+(participants' learning) and Level 4 (participants' use of new knowledge and skills);
+Learning Forward's standards (partial) describe how professional learning is designed. A1.3 uses
+general workforce sources, not Head Start, by Severin's decision.
 
 ### A2 Program Quality, Access & Reach
+
+**Categories:** A. Quality & experience (A2.1–A2.2) · B. Access & inclusion (A2.3–A2.4) ·
+C. Reach & engagement systems (A2.5–A2.6). *Codebook grouping: these categories are the
+codebook's own arrangement, not one framework's dimensions.*
 
 | Framework | Citation | Status | Codes |
 |---|---|---|---|
@@ -468,15 +491,23 @@ Domain 10 remains unverifiable and is dropped.
 
 ### A3 Systems, Policy & Community Conditions
 
+**Categories:** A. Policy & institutions (A3.1) · B. Partnerships & community (A3.2–A3.3).
+*Category B is a codebook grouping: it joins Collective Impact (A3.2) and collective efficacy
+(A3.3), two separate frameworks.*
+
 | Framework | Citation | Status | Codes |
 |---|---|---|---|
 | Collective Impact | Kania, J., & Kramer, M. (2011). *Stanford Social Innovation Review* | verified | A3.2 |
 | Collective efficacy | Sampson, R. J., Raudenbush, S. W., & Earls, F. (1997). *Science, 277*, 918–924 | verified | A3.3 |
-| Standards for Professional Learning (systems) | Learning Forward (2022) | located | A3.1 |
+| Policy change outcomes | Coffman, J. (2009), *A User's Guide to Advocacy Evaluation Planning*, Harvard Family Research Project | verified (`coffman-2009-advocacy-evaluation`; CP-10-02) | A3.1 |
+| Improved policies | Reisman, J., Gienapp, A., & Stachowiak, S. (2007), *A Guide to Measuring Advocacy and Policy* | verified (`reisman-2007-advocacy-policy`; CP-10-02) | A3.1 |
 
-**Where they don't fit.** Policy change (A3.1) has no dedicated framework in the
-records; it is a codebook-defined status (hybrid) [VERIFY before citing a
-policy-change framework].
+**Where they don't fit.** Policy change (A3.1) rests on Coffman (2009) and Reisman, Gienapp &
+Stachowiak (2007), re-verified 2026-09-27 (CP-10-02), which closed the earlier codebook-defined
+entry (FD-P20). Both guides define policy change in the public policy arena; whether a school or
+district formally adopting a program or practice also belongs in A3.1 is decided separately
+(decision A3-1; a deviation entry for it is not opened yet), after Severin rules on the proposed
+practice rows.
 
 ---
 
@@ -497,11 +528,11 @@ are verbatim and 40 words or fewer.
 
 ## Appendix B. Open items before any of this enters the codebook
 
-- **Library access** would close five partials at once: MacQueen (1998), Keyes (2002),
-  Shogren et al. (2015), Carlone & Johnson (2007), Lerner et al. (2005).
+- **Library access** would close four partials at once: MacQueen (1998), Keyes (2002),
+  Shogren et al. (2015), Carlone & Johnson (2007).
 - **[VERIFY] leads not yet fetched:** a Healthy People 2030 screen-time objective; an
   ADA Title II / Section 504 program-access anchor for A2.4; a critical-consciousness
-  measure for Y6.3; a policy-change framework for A3.1; ed.gov status of the 2015
+  measure for Y6.3; ed.gov status of the 2015
   ED/DOJ language-access letter.
 - Every citation in `proposed-codebook.md` still goes through a CP and the registry
   (STANDARDS S1, S4) in phase 4. This document is the research map, not the registry.

@@ -1,0 +1,107 @@
+[
+ {
+  "claim_id": "f1-11",
+  "code": "F1.3",
+  "cite_as": "U.S. Department of Agriculture, Food and Nutrition Service. SNAP-Ed Evaluation Framework, MT1 Nutrition-Related Behavioral Changes.",
+  "claimed_component": "MT1: changes in individual and family healthy eating behaviors, including fruit and vegetable consumption",
+  "url": "https://snaped.fns.usda.gov/framework/components/mt1"
+ },
+ {
+  "claim_id": "f1-12",
+  "code": "F1.8",
+  "cite_as": "Mapp, K. L., & Bergman, E. (2019). Dual Capacity-Building Framework for Family-School Partnerships (Version 2).",
+  "claimed_component": "Process conditions: Relational, built on mutual trust",
+  "url": "https://aps2016.apsva.us/wp-content/uploads/2021/11/DCBFVERSION2FINAL.pdf"
+ },
+ {
+  "claim_id": "f1-13",
+  "code": "F1.3",
+  "cite_as": "Food and Nutrition Act of 2008, sec. 28, 7 U.S.C. 2036a(b): Nutrition education and obesity prevention grant program",
+  "claimed_component": "7 U.S.C. 2036a(b): programs that promote healthy food choices and physical activity consistent with the Dietary Guidelines for Americans",
+  "url": "https://www.law.cornell.edu/uscode/text/7/2036a"
+ },
+ {
+  "claim_id": "f1-14",
+  "code": "F1.2",
+  "cite_as": "Center for the Study of Social Policy (2015). Core Meanings of the Strengthening Families Protective Factors.",
+  "claimed_component": "Knowledge of Parenting and Child Development: the importance of using predictable routines",
+  "url": "https://cssp.org/wp-content/uploads/2025/03/Core-Meanings-of-the-SF-Protective-Factors-2015.pdf"
+ },
+ {
+  "claim_id": "f2-01",
+  "code": "F2.1",
+  "cite_as": "Administration for Children and Families, Children's Bureau. National Youth in Transition Database (NYTD) outcomes survey",
+  "claimed_component": "NYTD outcome 'financial self-sufficiency' (youth surveyed at about ages 17, 19 and 21) supports income and financial stability of a young person living independently",
+  "url": "https://acf.gov/cb/fact-sheet/about-nytd"
+ },
+ {
+  "claim_id": "f2-02",
+  "code": "F2.1",
+  "cite_as": "Consumer Financial Protection Bureau (2015). Measuring financial well-being: A guide to using the CFPB Financial Well-Being Scale",
+  "claimed_component": "Section 2.1 definition of financial well-being ('a state of being wherein a person can fully meet current and ongoing financial obligations'; control over finances; financial cushion against emergencies) supports household or adult financial stability",
+  "url": "https://files.consumerfinance.gov/f/201512_cfpb_financial-well-being-user-guide-scale.pdf"
+ },
+ {
+  "claim_id": "f2-03",
+  "code": "F2.1",
+  "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, AHS-01: Increase the proportion of people with health insurance",
+  "claimed_component": "AHS-01 (persons under 65 with public or private health insurance) supports Medicaid or public health insurance enrollment in F2.1's include line",
+  "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/health-care-access-and-quality/increase-proportion-people-health-insurance-ahs-01/data-methodology"
+ },
+ {
+  "claim_id": "f2-04",
+  "code": "F2.2",
+  "cite_as": "U.S. Department of Agriculture, Food, Nutrition, and Consumer Services (2022). USDA Actions on Nutrition Security",
+  "claimed_component": "Definition of nutrition security ('consistent access, availability, and affordability of foods and beverages that promote well-being, prevent disease') supports access to healthy food in F2.2",
+  "url": "https://www.usda.gov/sites/default/files/documents/usda-actions-nutrition-security.pdf"
+ },
+ {
+  "claim_id": "f2-05",
+  "code": "F2.2",
+  "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, NWS-01: Reduce household food insecurity and hunger",
+  "claimed_component": "Objective NWS-01 (household food insecurity and hunger, measured by the CPS Food Security Supplement) supports reduced household food insecurity as an outcome",
+  "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/nutrition-and-healthy-eating/reduce-household-food-insecurity-and-hunger-nws-01"
+ },
+ {
+  "claim_id": "f2-06",
+  "code": "F2.3",
+  "cite_as": "Runaway and Homeless Youth Program regulations, 45 CFR 1351.30(a)(1) and 1351.31(a)(1) (U.S. Department of Health and Human Services, Administration for Children and Families)",
+  "claimed_component": "Core outcome area '(iv) Stable Housing' for Basic Center and Transitional Living Program youth supports housing stability of a young person",
+  "url": "https://www.ecfr.gov/current/title-45/subtitle-B/chapter-XIII/subchapter-D/part-1351"
+ },
+ {
+  "claim_id": "f2-07",
+  "code": "F2.3",
+  "cite_as": "Runaway and Homeless Youth Program regulations, 45 CFR 1351.1 (definition of 'Safe and appropriate exits') and 1351.30(d), 1351.31(e) (U.S. Department of Health and Human Services, Administration for Children and Families)",
+  "claimed_component": "Definition of safe and appropriate exits (to a parent, relative or adult who can provide a stable arrangement, or to independent living; not to the street or an unknown situation) supports safe living situation",
+  "url": "https://www.ecfr.gov/current/title-45/subtitle-B/chapter-XIII/subchapter-D/part-1351"
+ },
+ {
+  "claim_id": "f2-08",
+  "code": "F2.3",
+  "cite_as": "McKinney-Vento Homeless Assistance Act as amended by the HEARTH Act, 42 U.S.C. 11386a(b)(1)(A) (Continuum of Care selection criteria)",
+  "claimed_component": "Clauses (i) length of time individuals and families remain homeless, (ii) additional spells of homelessness after leaving homelessness, and (vi) reducing the number who become homeless support exits to stable housing and avoided homelessness for households",
+  "url": "https://www.law.cornell.edu/uscode/text/42/11386a"
+ },
+ {
+  "claim_id": "f2-09",
+  "code": "F2.3",
+  "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, SDOH-04: Reduce the proportion of families that spend more than 30 percent of income on housing",
+  "claimed_component": "Objective SDOH-04 (housing cost burden, American Housing Survey) supports reduced rent burden in F2.3's include line",
+  "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/housing-and-homes/reduce-proportion-families-spend-more-30-percent-income-housing-sdoh-04"
+ },
+ {
+  "claim_id": "f2-10",
+  "code": "F2.3",
+  "cite_as": "McKinney-Vento Homeless Assistance Act, Subtitle VII-B, 42 U.S.C. 11434a(2) (definition of homeless children and youths)",
+  "claimed_component": "Definition 'individuals who lack a fixed, regular, and adequate nighttime residence' supports what counts as not having stable housing for children and youths",
+  "url": "https://www.law.cornell.edu/uscode/text/42/11434a"
+ },
+ {
+  "claim_id": "f2-11",
+  "code": "F1.9",
+  "cite_as": "AmeriCorps Office of Research and Evaluation (December 2024). Renewed Engagement in American Civic Life (Volunteering and Civic Life in America Research Summary), from the Current Population Survey Civic Engagement and Volunteering Supplement",
+  "claimed_component": "Formal volunteering through an organization, measured for residents age 16 and up, supports volunteering by adult program participants",
+  "url": "https://americorps.gov/sites/default/files/document/2025-01/CEV2023_HeadlineReport_12192024_508.pdf"
+ }
+]

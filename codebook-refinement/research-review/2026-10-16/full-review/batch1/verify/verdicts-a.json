@@ -1,0 +1,121 @@
+[
+ {
+  "claim_id": "y2-01",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://repository.essex.ac.uk/39185/1/Pekrun%20Ed%20Psych%20Rev%202024%20Control-Value%20Theory.pdf",
+  "excerpt": "concurrent activity emotions such as enjoyment or boredom during learning",
+  "note": "The full text is the Essex institutional repository copy, not the publisher's page. The header reads 'Educational Psychology Review (2024) 36:83' with DOI 10.1007/s10648-024-09909-7, which matches cite_as."
+ },
+ {
+  "claim_id": "y2-02",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://repository.essex.ac.uk/39185/1/Pekrun%20Ed%20Psych%20Rev%202024%20Control-Value%20Theory.pdf",
+  "excerpt": "Achievement settings in today’s world, such as school, university, and the workplace, are recent products of civilization.",
+  "note": "The wording matches exactly, but the fit is partial. The sentence lists university and the workplace as settings beyond school, but it does not name out-of-school youth programs or leisure activities, so it only loosely supports 'achievement emotions outside school' for Y2.1."
+ },
+ {
+  "claim_id": "y2-03",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://repository.essex.ac.uk/39185/1/Pekrun%20Ed%20Psych%20Rev%202024%20Control-Value%20Theory.pdf",
+  "excerpt": "retrospective outcome emotions like pride and shame",
+  "note": "Pride appears as an outcome emotion, i.e. pride in an achievement outcome. Same repository copy and citation as y2-01."
+ },
+ {
+  "claim_id": "y2-04",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.isbe.net/Documents/engagement-concept.pdf",
+  "excerpt": "affective reactions in the classroom, including interest, boredom, happiness, sadness, and anxiety",
+  "note": "The fetched file is a full-text copy of the article on the Illinois State Board of Education site, not the SAGE publisher page. Title, authors and RER 74(1), 59-109 match. Better to point the URL at DOI 10.3102/00346543074001059."
+ },
+ {
+  "claim_id": "y2-05",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://casel.org/casel-sel-framework-11-2020/?view=1",
+  "excerpt": "Demonstrating curiosity and open-mindedness",
+  "note": "Correct the URL: the given URL (CASEL-Framework-and-Skills.pdf) has the same bullet under Responsible Decision-Making, but it has no title or date. The cited title 'CASEL'S SEL FRAMEWORK: What Are the Core Competence Areas and Where Are They Promoted?' is at casel.org/casel-sel-framework-11-2020; the year 2020 comes from that slug, since no date shows in the document."
+ },
+ {
+  "claim_id": "y2-06",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://search.oecd.org/education/ceri/social-emotional-skills-study/sses-houston-report.pdf",
+  "excerpt": "Interest in ideas and love of learning, understanding and intellectual exploration; an inquisitive mind-set.",
+  "note": "This is OECD's own 2021 publication. The Curiosity definition under Open-mindedness matches the claim."
+ },
+ {
+  "claim_id": "y2-07",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://sciencecommunication.ut.ee/wp-content/uploads/2018/09/Article-5-The-Four-Phase-Model-of-Interest-Development.pdf",
+  "excerpt": "Triggered situational interest can be sparked by environmental or text features",
+  "note": "The full text is a University of Tartu course copy, not the Taylor & Francis page (DOI 10.1207/s15326985ep4102_4). The source says 'typically, but not exclusively, externally supported', which is a bit more hedged than the claim's 'typically externally supported'."
+ },
+ {
+  "claim_id": "y2-08",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://sciencecommunication.ut.ee/wp-content/uploads/2018/09/Article-5-The-Four-Phase-Model-of-Interest-Development.pdf",
+  "excerpt": "maintained situational interest, emerging (less-developed) individual interest, and well-developed individual interest",
+  "note": "The curiosity-questions part is also in the source: phase 3 says 'The student begins to regularly generate his or her own \"curiosity\" questions', and phase 4 mentions 'generating and seeking answers to curiosity questions'. Same course-site copy as y2-07."
+ },
+ {
+  "claim_id": "y2-09",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://acuresearchbank.acu.edu.au/item/8w507/from-expectancy-value-theory-to-situated-expectancy-value-theory-a-developmental-social-cognitive-and-sociocultural-perspective-on-motivation",
+  "excerpt": "justify our decision to call the theory Situated Expectancy-Value Theory (SEVT)",
+  "note": "The ACU repository record confirms the authors, Contemporary Educational Psychology 61, article 101859 (2020), and DOI 10.1016/j.cedpsych.2020.101859."
+ },
+ {
+  "claim_id": "y2-10",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://msofc.org/wp-content/uploads/2022/08/2020-Situated-Expectancy-Value-Theory.pdf",
+  "excerpt": "how well a particular task fits into an individual's present or future plans",
+  "note": "msofc.org is a third-party copy of the article: it shows '© 2020 published by Elsevier' but not the journal, volume or article number. Those details come from the ACU record checked for y2-09. Better to cite via DOI 10.1016/j.cedpsych.2020.101859."
+ },
+ {
+  "claim_id": "y2-11",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://teachertoolkit.co.uk/wp-content/uploads/2024/09/PISA-2021-creative-thinking-framework.pdf",
+  "excerpt": "In the cognitive test, students will need to demonstrate a capacity to express their imagination in a written format",
+  "note": "The only copy found is on a third-party blog (teachertoolkit.co.uk), so this is a secondary source. The draft names no author or date beyond being an OECD 'For Official Use' document, and the OECD's own PISA 2022 framework page did not show the written-expression text when fetched. Cite the final PISA 2022 Creative Thinking Framework (OECD) if it can be verified."
+ },
+ {
+  "claim_id": "y2-12",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://search.oecd.org/education/ceri/social-emotional-skills-study/sses-houston-report.pdf",
+  "excerpt": "Generating novel ways to do or think about things through exploring, learning from failure, insight and vision.",
+  "note": "This is OECD's own 2021 publication. The Creativity definition under Open-mindedness matches the claim."
+ },
+ {
+  "claim_id": "y2-13",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.nationalartsstandards.org/",
+  "excerpt": "Understanding and evaluating how the arts convey meaning.",
+  "note": "The process definition matches word for word. The homepage does not name the coalition as author or give the year 2014 (its footer is '© Young Audiences, Inc. 2026'). Those come from the NCCAS membership PDF on the same site and the NCAS 2025 announcement, which refers to the 2014 release."
+ },
+ {
+  "claim_id": "y2-14",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.nationalartsstandards.org/",
+  "excerpt": "Relating artistic ideas and work with personal meaning and external context.",
+  "note": "Matches the Connecting definition word for word. Attribution and year are as noted for y2-13."
+ },
+ {
+  "claim_id": "y2-15",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.youngaudiences.org/whyarts/announcing-review-national-arts-standards",
+  "excerpt": "National Coalition for Arts Standards (NCAS) Announces Review of National Arts Standards.",
+  "note": "The post (Feb 19, 2025) is hosted by Young Audiences, but the announcement is issued by NCAS. Credit NCAS, e.g. 'National Coalition for Arts Standards (2025, February 19). NCAS Announces Review of National Arts Standards [posted by Young Audiences Arts for Learning]'. The body says NCAS 'will launch a thorough survey to collect data on the National Standards'; the word 'review' appears in the headline and in 'this review process'."
+ },
+ {
+  "claim_id": "y2-16",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.nationalartsstandards.org/sites/default/files/2026-03/NCAS%20Standards%20Process%20Updates%20for%20the%20Field%20-%20Final%202026.pdf",
+  "excerpt": "across all five arts disciplines—Dance, Media Arts, Music, Theatre, and Visual Arts",
+  "note": "The component is in the document and the publisher is NCAS, but the document has no title. The cited title 'NCAS Standards Process Updates for the Field' comes only from the file name, and the March 2026 date comes from the folder path and an internal 'Timeline of Standards Review Process (March 2026)' item. Mark the title as descriptive, e.g. '[Standards process updates for the field]'."
+ },
+ {
+  "claim_id": "y2-17",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://datacenter.aecf.org/data/tables/11513-extracurricular-activities",
+  "excerpt": "Children ages 6 to 17 who participated in organized activities outside of school, such as sports teams or lessons,",
+  "note": "The KIDS COUNT page credits the data to the National Survey of Children's Health via the Child and Adolescent Health Measurement Initiative's Data Resource Center (childhealthdata.org), not HRSA/MCHB, which the page never names. The years run 2016-2017 to 2023-2024 (two-year averages). The fit is partial: the indicator counts organized activities outside school, not activities outside a particular program."
+ }
+]

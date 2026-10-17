@@ -1,0 +1,128 @@
+[
+ {
+  "claim_id": "y8a-01",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.cdc.gov/healthy-youth/hecat/index.html",
+  "excerpt": "Physical Activity. Safety. Sexual Health. Tobacco. Violence Prevention. Comprehensive Health Education.",
+  "note": "The CDC HECAT 2021 edition and all five named modules are real and correctly attributed (the page says 'The 2021 edition of HECAT is available for download and through HECAT Online'), but the index page only lists module names and defines no construct. The Safety module (motor vehicles, impaired driving) also reaches into Y8 category C, so the fit to category A is partial. The list separators in the excerpt come from the fetch tool's rendering of a bulleted list."
+ },
+ {
+  "claim_id": "y8a-02",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_pa.pdf",
+  "excerpt": "HBO 1. Engage in moderate to vigorous physical activity for at least 60 minutes every day.",
+  "note": "The HBO number and wording match HECAT Module PA (2021). It fits the physical-activity part of Y8.1 directly."
+ },
+ {
+  "claim_id": "y8a-03",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_pa.pdf",
+  "excerpt": "HBO 2. Regularly engage in physical activities that enhance cardio-respiratory endurance, flexibility, muscle endurance, and muscle strength.",
+  "note": "The HBO number matches. The claim leaves out the word 'Regularly engage in' but is otherwise exact. It fits the fitness part of Y8.1 directly."
+ },
+ {
+  "claim_id": "y8a-04",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_fn.pdf",
+  "excerpt": "HBO 3. Eat lots of fruits and vegetables.",
+  "note": "The HBO number and wording match HECAT Module FN (2021) exactly. It fits fruit-and-vegetable intake in Y8.1 directly."
+ },
+ {
+  "claim_id": "y8a-05",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_fn.pdf",
+  "excerpt": "HBO 10. Prepare good-tasting, nutrient-dense foods for yourself and others.",
+  "note": "The HBO number and wording match exactly. It fits Y8.1's 'healthy cooking framed as nutrition' include."
+ },
+ {
+  "claim_id": "y8a-06",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_phw.pdf",
+  "excerpt": "HBO 1. Practice appropriate hygiene habits.",
+  "note": "The HBO number and wording match HECAT Module PHW (2021). The HBO does not name handwashing, but handwashing is a hygiene habit, and Y8.1 names hygiene directly."
+ },
+ {
+  "claim_id": "y8a-07",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_phw.pdf",
+  "excerpt": "HBO 2. Get an appropriate amount of sleep and rest.",
+  "note": "The HBO number and wording match exactly. It fits the sleep part of Y8.1 directly."
+ },
+ {
+  "claim_id": "y8a-08",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf",
+  "excerpt": "83. On an average school night, how many hours of sleep do you get?",
+  "note": "This is item Q83. The document's own title is '2025 State and Local Youth Risk Behavior Survey' (the standard high school questionnaire), so cite_as should read: CDC (2025), 2025 State and Local Youth Risk Behavior Survey (standard high school questionnaire), Q83."
+ },
+ {
+  "claim_id": "y8a-09",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf",
+  "excerpt": "73. During the past 7 days, on how many days were you physically active for a total of at least 60 minutes per day?",
+  "note": "This is item Q73. Use the same title fix as y8a-08: '2025 State and Local Youth Risk Behavior Survey' (standard high school questionnaire)."
+ },
+ {
+  "claim_id": "y8a-10",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf",
+  "excerpt": "66. During the past 7 days, how many times did you eat fruit? (Do not count fruit juice.)",
+  "note": "The items are Q66 fruit, Q67 green salad, Q69 carrots and Q70 other vegetables; Q68 (potatoes) also sits in the block but the claim omits it. Use the same title fix as y8a-08."
+ },
+ {
+  "claim_id": "y8a-11",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/physical-activity/increase-proportion-adolescents-who-do-enough-aerobic-physical-activity-pa-06",
+  "excerpt": "Increase the proportion of adolescents who do enough aerobic physical activity",
+  "note": "The PA-06 ID and title match. The page says it is coordinated by ODPHP, HHS, so attribution is correct. It fits the physical-activity part of Y8.1 directly."
+ },
+ {
+  "claim_id": "y8a-12",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/physical-activity/increase-proportion-parents-who-follow-aap-recommendations-limiting-screen-time-children-aged-6-17-years-pa-r02",
+  "excerpt": "Increase the proportion of parents who follow AAP recommendations on limiting screen time for children aged 6 to 17 years",
+  "note": "The PA-R02 ID, title and Research status are confirmed. However, the objective measures parents following AAP guidance, not the young person's own screen time, so the fit to Y8.1's recreational screen time is partial (indirect). The claimed component should say 'parents following AAP recommendations on limiting screen time' rather than 'limiting screen time for children'."
+ },
+ {
+  "claim_id": "y8a-13",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.headstart.gov/school-readiness/article/perceptual-preschool",
+  "excerpt": "Sub-Domain: Fine Motor\nGoal P-PMP 3. Child demonstrates increasing control, strength, and coordination of small muscles.",
+  "note": "The row's URL is an Effective Practice Guide page, which never names the ELOF; correct the URL to the ELOF domain page (https://www.headstart.gov/school-readiness/article/perceptual-preschool). The govinfo PDF of the ELOF confirms the title, the 2015 date, the publisher (HHS/ACF/Office of Head Start) and the domain name, so cite_as is correct, and the Fine Motor sub-domain fits Y8.2's fine-motor include directly."
+ },
+ {
+  "claim_id": "y8a-14",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://shapeamerica.org/standards/pe/new-pe-standards/",
+  "excerpt": "1.12.9 Demonstrates water safety skills. If a pool facility is available, demonstrates water safety and basic swimming skills.",
+  "note": "Both indicators appear under Standard 1 ('Develops a variety of motor skills') of the 2024 standards: 1.8.1 reads 'Demonstrates correct technique in a variety of outdoor activities.' Swimming in 1.12.9 only applies if a pool is available. The same water-safety indicator also appears at 1.2.17, 1.5.22 and 1.8.20."
+ },
+ {
+  "claim_id": "y8a-15",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://shapeamerica.org/standards/health/new-he-standards/",
+  "excerpt": "3.8.3 Access valid and reliable sources of health information, products, services, and other resources.",
+  "note": "The full Standard 3 text ends '...of self and others', which the claim truncates. Indicator 3.8.3 matches. It fits finding reliable health information in Y8.3 directly."
+ },
+ {
+  "claim_id": "y8a-16",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://shapeamerica.org/standards/health/new-he-standards/",
+  "excerpt": "1.2.3 Identify ways to prevent or reduce risks for illnesses and injuries.",
+  "note": "Indicators 1.2.3 and 1.5.3 use 'prevent or reduce risks for illnesses and injuries'. Indicators 1.8.3 ('Analyze behaviors that reduce or prevent illnesses and injuries') and 1.12.3 ('Evaluate behaviors...') are worded differently but are close. All four fit Y8.3's injury-prevention knowledge."
+ },
+ {
+  "claim_id": "y8a-17",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_s.pdf",
+  "excerpt": "HBO 4. Apply safety rules and procedures to avoid risky behaviors and injury.",
+  "note": "The HBO number and wording match HECAT Module S (2021) and fit injury prevention directly. Outdoor safety is not named, so that part of the claimed fit is only general (partial)."
+ },
+ {
+  "claim_id": "y8a-18",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_s.pdf",
+  "excerpt": "HBO 7. Get help for oneself or others when injured or suddenly ill.",
+  "note": "The HBO number and wording match, and its expectations (for example S1.8.23, 'Describe first response procedures needed to treat injuries and other emergencies') support first aid. The HBO itself is about getting help, though, and allergic reactions are not named in the visible text, so the fit to the allergic-reaction part is partial."
+ }
+]

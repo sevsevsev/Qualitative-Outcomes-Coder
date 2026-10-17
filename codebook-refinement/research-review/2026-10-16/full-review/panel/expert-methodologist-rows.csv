@@ -1,0 +1,76 @@
+proposal_id,determination,side_right,rule,confidence,reason
+P-01,Y4.2,yes,adopt,high,Coping mechanisms are a named regulation skill; all three coders agree without a hint.
+P-02,Y4.2,yes,adopt,high,"Healthy coping named, no self-belief; clean Y4.2 exemplar."
+P-03,Y5.4,yes,adopt,high,Comfort with challenge is a general belief about handling difficulty; matches adjudicated S158.
+P-04,Y5.4,yes,adopt,high,Belief one can handle hard situations is self-efficacy; unanimous.
+P-05,Y4.2,partly,adopt,medium,Bare resilience spans Y4/Y5 so domain-only is barred; fixed Y4.2 default matches 2/3 coders and F1.4's coping-style resilience.
+P-06,Y4.2,partly,adopt,medium,Same bare case; a fixed default is what makes it reproducible. Y5.4 only when a self-belief is named.
+P-07,Y7.7,yes,adopt,high,"Practical life skills, nothing named; Y7.7 default agrees with adjudicated rows and three coders."
+P-08,Y7.7,yes,adopt,high,Life skills tied to adulthood is the independent-living core.
+P-09,Y4.7,yes,adopt,high,"Named skill outranks the umbrella label; unanimous. Rule: name a skill, code the skill."
+P-10,Y7.6,yes,adopt,high,Money-only skills are Y7.7's exclude; unanimous Y7.6.
+P-11,Y7.4,yes,adopt,medium,Business planning is a technical work skill; all coders chose Y7.4 but flagged no text; add an entrepreneurship-skills include.
+P-12,Y7.5,no,change,medium,"Launching a business and earning sales is self-employment, an employment result; 3/3 coders chose Y7.5. Skills stay Y7.4."
+P-13,Y4.6,yes,adopt,high,Pitching is speaking to an audience; unanimous. Activity context does not decide the code.
+P-14,Y4.6,yes,adopt,high,Presentation skill is the result; unanimous Y4.6.
+P-15,Y5.6,yes,adopt,medium,Initiative already routes to Y5.6 by rule 14; 3/3 coders followed it. Extend rule 14 to name entrepreneurial mindset.
+P-16,Y5.6,yes,adopt,medium,Bare mindset: Y5.6 default keeps it consistent with P-15; 2/3 coders and live run agree.
+P-17,Y4 domain only,yes,adopt,medium,"Text names CASEL competency label (category Y4.A) as a whole; coders split Y5.1/Y4, so a written hint is required."
+P-18,Y4 domain only,yes,adopt,medium,Same bare label; Y4.1 is too narrow (emotions only) and Y5.1 claims part. Needs explicit hint.
+P-19,Y4.1 (Y4.2 secondary),partly,adopt,high,Compound: identify (Y4.1) and address (Y4.2); unanimous split. Weak one-side evidence; prefer P-20.
+P-20,Y4.1,yes,adopt,high,Naming one's feelings is the Y4.1 core; unanimous.
+P-21,Y5.1,yes,adopt,high,Self-discovery is understanding who one is; unanimous.
+P-22,Y5.1,yes,adopt,high,Identity exploration and values named; unanimous.
+P-23,A3.1,partly,adopt,medium,"District institutionalizing content fits A3.1, but compound and vague; poor sole evidence for FD-P51. Replace with a cleaner real row."
+P-24,A3.1,yes,change,medium,2/3 coders chose A1.2 because its include says implementing a curriculum. Rule 18 needs A1.2 include limited to adults' own practice.
+P-25,A3 domain only,yes,adopt,medium,"School-wide culture, no formal adoption; coders' A2.1 shows the climate hint (E-38) must ship with it."
+P-26,A3 domain only,yes,adopt,medium,"College-going culture is a school norm, not adoption; unanimous A3.1 shows current wording pulls it; tightened A3.1 fixes."
+P-27,A1.1,yes,adopt,high,Volunteer learning a role skill; unanimous.
+P-28,A1.1,yes,adopt,high,"Role, not age, decides the part for volunteers; state this in the mentors_volunteers line."
+P-29,A1.3,yes,adopt,medium,"Satisfaction with serving per G15; unanimous though all flagged A1.3 as staff-only, so the widening text is needed."
+P-30,A1.3,yes,adopt,high,Returning to serve is retention in the role; unanimous.
+P-31,A1 domain only,yes,change,medium,"Field retention after service is a career path, not role retention; 3/3 read A1.3, so exclude must name 'after service or in a field'."
+P-32,A1.3,no,change,medium,A1.3 already names well-being; 3/3 coders chose it. Well-being arising from serving joins A1.3 under the same FD; reopens G15 arm.
+P-33,A1.1,no,change,low,Credentials earned code A1.1 whether one person or a count; measure form must not decide. 2/3 coders agree.
+P-34,A1.3,yes,adopt,medium,"Filling positions is a staffing level; unanimous, but rests on the held staffing widening (CP-09-05)."
+P-35,A1.1,yes,adopt,high,Individual credential earned is learning for the role; unanimous.
+P-36,A1.1,yes,adopt,high,Single certification is A1.1; unanimous.
+P-37,Y8.1,yes,adopt,high,"Students' own intake; 'at home' is setting, not subject; unanimous."
+P-38,Y8.1,yes,adopt,high,Youth's own food preference/choice; unanimous.
+P-39,F1.3,yes,adopt,high,Family is the subject of the eating practice; unanimous.
+P-40,F1.3,yes,adopt,high,Caregiver practice is the subject even though the child eats; unanimous.
+P-41,F1 domain only,yes,adopt,medium,"System-avoidance with no family result named; coders scattered (F1.1, Y3.4), proving the G13 hint is needed."
+P-42,F1 domain only,yes,adopt,medium,Same template outcome; same scatter. Gap flag set.
+P-43,Y3.4,yes,adopt,high,Reunification is Y3.4's include; the new exclude must not catch it; unanimous.
+P-44,Y3.4,yes,adopt,high,Youth's own family relationship; unanimous.
+P-45,Y1.1,yes,adopt,high,"Grade named, so Y1.1; coders already right without hint; the real fix is keeping the beneficiary (E-54)."
+P-46,Y1.1,yes,adopt,high,Kindergartners are in school; unanimous.
+P-47,Y1.8,yes,adopt,high,Below kindergarten; Y1.8 core; unanimous.
+P-48,Y1.8,yes,adopt,high,Kindergarten readiness for four-year-olds; unanimous.
+P-49,Y2.4,yes,adopt,high,Value of schoolwork is utility value; unanimous.
+P-50,Y2.4,yes,adopt,high,Usefulness for the future; unanimous.
+P-51,Y1.12,yes,adopt,high,Academic self-efficacy in a class; unanimous.
+P-52,Y1.12,yes,adopt,high,Belonging in a class is named in Y1.12's definition; unanimous.
+P-53,Y1.3,yes,adopt,high,"Math named, no course taken, so subject code; unanimous."
+P-54,Y1.4,yes,adopt,high,"Science named, no course taken; unanimous."
+P-55,Y1.16,yes,adopt,high,Dual credit earned; unanimous.
+P-56,Y1.16,yes,adopt,high,Passing an AP exam is completing advanced coursework; unanimous.
+P-57,Y8.5,yes,adopt,high,"Youth's own coverage, youth is subject; unanimous."
+P-58,Y8.5,yes,adopt,high,Keeping own coverage; unanimous.
+P-59,F2.1,yes,adopt,high,Adult's own benefit enrollment; Part F has no adult-health code; unanimous.
+P-60,F2.1,yes,adopt,high,Medicaid among household benefits; unanimous.
+P-61,F2.1,partly,change,medium,Subject is the parent (rule 1) and Medicaid enrollment is F2.1's include; unanimous. Hint 29's Y8.5 clause must say 'youth is the subject'.
+P-62,F2.1,partly,adopt,high,"Family enrollment rate, whose coverage unstated; unanimous F2.1."
+P-63,F2.2,yes,adopt,high,Having enough food; unanimous.
+P-64,F2.2,yes,adopt,high,Access to produce; unanimous.
+P-65,Y8.4,yes,adopt,high,Coders put puberty in Y8.4 unprompted; include only names it. Waits on Y8 re-review (E-47).
+P-66,Y8.4,yes,adopt,high,Same; unanimous.
+P-67,Y8.1,yes,adopt,high,Hygiene habits are daily health behaviors; unanimous.
+P-68,Y8.3,yes,adopt,high,Knowing changing needs is health knowledge; unanimous.
+P-69,F1.6,yes,adopt,medium,"Financial literacy is a skill; 'community members' must be adult participants, else A3."
+P-70,F1.6,yes,adopt,high,Course completion is learning; unanimous.
+P-71,F2.1,yes,adopt,high,Savings are money status; unanimous.
+P-72,F2.1 (F1.4 secondary),yes,change,low,"Object rule (stress about money) parallels H027, but 3/3 chose F1.4; F1.4 needs an exclude or CF-034 never holds in practice."
+P-73,A3.3,yes,adopt,medium,"Residents acting together is Sampson's shared action; messy compound, so not sole evidence."
+P-74,A3 domain only,yes,adopt,medium,"Community-level health, no cohesion; Y8.5 votes followed the services named, so exclude must say who changes."
+P-75,A3 domain only,yes,adopt,medium,"Regional economic condition, no cohesion; coders split A3.3/F1.6, so the A3.3 exclude is needed."

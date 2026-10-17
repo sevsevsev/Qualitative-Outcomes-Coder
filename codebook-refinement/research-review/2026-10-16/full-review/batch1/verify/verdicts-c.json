@@ -1,0 +1,121 @@
+[
+ {
+  "claim_id": "y4a-07",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "excerpt": "Linking feelings, values, and thoughts",
+  "note": "The bullet appears word for word under Self-Awareness, but the fit is partial: Y4.1 is about recognizing and naming one's own emotions, and this bullet is about linking feelings to values and thoughts. The direct match is the bullet 'Identifying one's emotions'. Change the URL as well: the sites/5 PDF given is titled 'The CASEL 5' and does not have the cited heading, while the 11.2020 PDF has both the heading and this bullet."
+ },
+ {
+  "claim_id": "y4a-08",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "excerpt": "manage one’s emotions, thoughts, and behaviors effectively in different situations and to achieve goals and aspirations",
+  "note": "Both quoted phrases appear word for word in the Self-Management definition, including 'delay gratification, manage stress'. Change the URL to the 11.2020 PDF: the sites/5 URL is a handout titled 'The CASEL 5', not the cited document, though it has the same definition text."
+ },
+ {
+  "claim_id": "y4a-09",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "excerpt": "delay gratification, manage stress, and feel motivation & agency to accomplish personal/collective goals",
+  "note": "The phrase is word for word, but it describes motivation and agency, not 'persistence and follow-through', so the fit to Y4.3 is partial. The closer bullets are 'Setting personal and collective goals' and 'Exhibiting self-discipline and self-motivation'. Change the URL to the 11.2020 PDF; the sites/5 handout is titled 'The CASEL 5'."
+ },
+ {
+  "claim_id": "y4a-10",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "excerpt": "CASEL'S SEL FRAMEWORK: What Are the Core Competence Areas and Where Are They Promoted?",
+  "note": "The heading and all five competencies (self-awareness, self-management, social awareness, relationship skills, responsible decision-making) appear in this document. It has no copyright or date line, so the year 2020 is supported only by the file name '11.2020'."
+ },
+ {
+  "claim_id": "y4b-01",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "excerpt": "Showing leadership in groups",
+  "note": "This is a word-for-word Relationship Skills bullet, and it matches Y4.7's leadership within a group. Change the URL to the 11.2020 PDF; the sites/5 PDF is 'The CASEL 5' handout, though it has the same bullet."
+ },
+ {
+  "claim_id": "y4b-02",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "excerpt": "cooperate, work collaboratively to problem solve",
+  "note": "Both phrases appear word for word; the full clause is 'work collaboratively to problem solve and negotiate conflict constructively' (excerpt is from the 11.2020 PDF; the quote 'provide leadership' was confirmed in a separate fetch). The fit is partial: 'provide leadership' is a general capacity and is not limited to leading within a group, which is Y4.7's scope. Change the URL to the 11.2020 PDF."
+ },
+ {
+  "claim_id": "y4b-03",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "excerpt": "establish and maintain healthy and supportive relationships",
+  "note": "This is word for word in the Relationship Skills definition and matches Y4.8's building and maintaining relationships. Change the URL to the 11.2020 PDF; the sites/5 handout is titled 'The CASEL 5'."
+ },
+ {
+  "claim_id": "y4b-04",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "excerpt": "recognize family, school, and community resources and supports",
+  "note": "This is word for word in the Social Awareness definition and matches Y4.9's 'knowing where to find support'. Change the URL to the 11.2020 PDF."
+ },
+ {
+  "claim_id": "y4b-05",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://shapeamerica.org/standards/health/new-he-standards/",
+  "excerpt": "3.5.2 Locate home, school, and community resources to support health and well-being.",
+  "note": "The indicator is word for word on SHAPE America's own page. The 2024 year comes from SHAPE's press release of March 25, 2024 (https://shapeamerica.org/pressroom/2024/shape-america-releases-new-national-standards-for-physical-education-and-health-education.aspx); the standards page itself carries only 2026 update and copyright dates."
+ },
+ {
+  "claim_id": "y4b-06",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://shapeamerica.org/standards/health/new-he-standards/",
+  "excerpt": "4.8.3 Use various communication strategies to seek and offer support and assistance.",
+  "note": "This is word for word under Standard 4 and covers both seeking help and offering it, which matches Y4.9. The 2024 year is confirmed by SHAPE's March 2024 press release."
+ },
+ {
+  "claim_id": "y4b-07",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "excerpt": "make caring and constructive choices about personal behavior and social interactions across diverse situations",
+  "note": "This is word for word in the Responsible Decision-Making definition, and 'consider ethical standards' was also confirmed word for word. Its wording about caring choices and ethical standards matches Y4.11's ethical or prosocial choices. Change the URL to the 11.2020 PDF."
+ },
+ {
+  "claim_id": "y4b-08",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "excerpt": "Standing up for the rights of others",
+  "note": "This is a word-for-word Relationship Skills bullet, but it is broader than Y4.11's choice in a specific situation. 'Rights of others' can also mean advocacy against injustice, which Y4.11 sends to Y6.3, so the fit is partial. Change the URL to the 11.2020 PDF."
+ },
+ {
+  "claim_id": "y4b-09",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "excerpt": "consider ethical standards and safety concerns",
+  "note": "The phrase is word for word, but weighing safety concerns when deciding is looser than Y4.12's 'avoiding unsafe situations', so the fit is partial. Change the URL to the 11.2020 PDF."
+ },
+ {
+  "claim_id": "y4b-10",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://shapeamerica.org/standards/health/new-he-standards/",
+  "excerpt": "4.12.5 Apply refusal skills and strategies in a variety of situations.",
+  "note": "All three indicators appear word for word: 4.5.5 'Demonstrate refusal skills to use in a variety of situations.', 4.8.5 'Use refusal skills and strategies in a variety of situations.' and 4.12.5. They are a direct fit for Y4.12's refusal skills. The 2024 year is confirmed by SHAPE's press release."
+ },
+ {
+  "claim_id": "y4b-11",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://shapeamerica.org/standards/health/new-he-standards/",
+  "excerpt": "4.2.3 Demonstrate communication skills and strategies to use if uncomfortable, unsafe, or harmed.",
+  "note": "The indicator is word for word, but it covers communicating when unsafe, not leaving or avoiding unsafe situations, and it overlaps with help-seeking (Y4.9). The fit to Y4.12 is therefore partial."
+ },
+ {
+  "claim_id": "y4b-12",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "excerpt": "manage one’s emotions, thoughts, and behaviors effectively in different situations and to achieve goals and aspirations",
+  "note": "This is word for word, but it is the whole Self-Management definition: it also covers emotion regulation (Y4.2) and does not name focus or self-discipline, so the fit to Y4.3 is partial. The closer item is the bullet 'Exhibiting self-discipline and self-motivation'. Change the URL to the 11.2020 PDF."
+ },
+ {
+  "claim_id": "y4b-13",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://wallacefoundation.org/sites/default/files/2024-10/navigating-social-and-emotional-learning-from-the-inside-out-2ed.doi_.10.59656%252FYD-OS5671.001.pdf",
+  "excerpt": "The ability to attend to relevant information and goal-directed tasks while resisting distractions",
+  "note": "The definition is word for word, and the authors are correct (EASEL Lab, HGSE; the Wallace Foundation is the funder only). Change cite_as to: Jones, S. M., Brush, K. E., Ramirez, T., et al. (2021), Navigating SEL from the Inside Out: Looking Inside & Across 33 Leading SEL Programs: A Practical Resource for Schools and OST Providers (Preschool & Elementary Focus, Revised & Expanded Second Edition). The fit is partial because Y4.3's definition (goals, organization, self-discipline, persistence) does not name attention or focus."
+ }
+]

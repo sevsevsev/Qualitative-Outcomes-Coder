@@ -1,0 +1,37 @@
+[
+  {
+    "claim_id": "y1-mindsets-01",
+    "code": "Y2.4",
+    "cite_as": "Farrington, C. A., Roderick, M., Allensworth, E., Nagaoka, J., Keyes, T. S., Johnson, D. W., & Beechum, N. O. (2012). Teaching Adolescents to Become Learners: The Role of Noncognitive Factors in Shaping School Performance: A Critical Literature Review. University of Chicago Consortium on Chicago School Research.",
+    "claimed_component": "Academic Mindsets: 'This work has value for me' (subject matter seen as interesting and holding value, including utility value), supporting Y2.4 seeing schoolwork as relevant or valuable",
+    "url": "https://files.eric.ed.gov/fulltext/ED542543.pdf"
+  },
+  {
+    "claim_id": "y1-mindsets-02",
+    "code": "Y1.11",
+    "cite_as": "Conley, D. T. (2007). Redefining College Readiness. Educational Policy Improvement Center.",
+    "claimed_component": "Academic Behaviors: self-monitoring as a form of metacognition, and study skills (time management, preparing for and taking examinations, taking class notes), supporting Y1.11 named study techniques and metacognition",
+    "url": "https://files.eric.ed.gov/fulltext/ED539251.pdf"
+  },
+  {
+    "claim_id": "y1-mindsets-03",
+    "code": "Y1.11",
+    "cite_as": "Pashler, H., Bain, P. M., Bottge, B. A., Graesser, A., Koedinger, K., McDaniel, M., & Metcalfe, J. (2007). Organizing Instruction and Study to Improve Student Learning (NCER 2007-2004). National Center for Education Research, Institute of Education Sciences, U.S. Department of Education.",
+    "claimed_component": "Recommendation 5 'Use quizzing to promote learning' and Recommendation 6 'Help students allocate study time efficiently' (identifying what material is known and what needs further study), supporting Y1.11 self-quizzing and metacognitive monitoring (partial: framed as teacher practice)",
+    "url": "https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/20072004.pdf"
+  },
+  {
+    "claim_id": "y1-mindsets-04",
+    "code": "Y1.12",
+    "cite_as": "Halpern, D. F., Aronson, J., Reimer, N., Simpkins, S., Star, J. R., & Wentzel, K. (2007). Encouraging Girls in Math and Science (NCER 2007-2003). National Center for Education Research, Institute of Education Sciences, U.S. Department of Education.",
+    "claimed_component": "Recommendation 1 'Teach students that academic abilities are expandable and improvable', supporting Y1.12 growth mindset about academic ability (partial: math and science focus)",
+    "url": "https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/20072003.pdf"
+  },
+  {
+    "claim_id": "y1-mindsets-05",
+    "code": "Y1.9",
+    "cite_as": "Farrington, C. A., Roderick, M., Allensworth, E., Nagaoka, J., Keyes, T. S., Johnson, D. W., & Beechum, N. O. (2012). Teaching Adolescents to Become Learners: The Role of Noncognitive Factors in Shaping School Performance: A Critical Literature Review. University of Chicago Consortium on Chicago School Research.",
+    "claimed_component": "Title page: exact title, author order, publisher name as printed ('University of Chicago Consortium on Chicago School Research') and date (June 2012); corrected attribution for the farrington-2012 entry used by Y1.9, Y1.10, Y1.11 and Y1.12",
+    "url": "https://files.eric.ed.gov/fulltext/ED542543.pdf"
+  }
+]

@@ -1,0 +1,128 @@
+[
+ {
+  "claim_id": "CP-11-01-V1",
+  "verdict": "PARTIAL",
+  "url_checked": "https://www.actfl.org/uploads/files/general/SOBL_Guidelines.pdf",
+  "source_kind": "primary",
+  "excerpt": "NCSSFL (National Council of State Supervisors for Languages) SealofBiliteracy.org and Californians Together TESOL International Association",
+  "corrected_cite_as": "",
+  "notes": "SealofBiliteracy.org is one of the seven organizations the introduction says 'have partnered to present these updated guidelines', but it shares entry 6 with Californians Together. The document's own suggested citation (2020) leaves it out and matches the given cite_as. So it is an issuing partner, not a listed author in the citation, and the cite_as is faithful to the document as written."
+ },
+ {
+  "claim_id": "CP-11-02-V2",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://ies.ed.gov/ncee/wwc/Docs/ReferenceResources/WWC-SRP51-508.pdf",
+  "source_kind": "primary",
+  "excerpt": "Academic measures in preschool through grade 12 based on broad standardized student assessments across multiple subjects",
+  "corrected_cite_as": "What Works Clearinghouse (2024, rev. November 2025). Study Review Protocol and Supplement to the What Works Clearinghouse Procedures and Standards Handbook, Version 5.0 (Study Review Protocol Version 5.1). National Center for Education Evaluation and Regional Assistance, Institute of Education Sciences, U.S. Department of Education.",
+  "notes": "The domain text matches; the source also requires at least two of literacy, math, science and social studies, and names the ACT, SAT and state tests. It fits only Y1.15's 'test scores with no subject named' part, not grades, credits or on-track status. The full title is longer than the cite_as, and the November 2025 file says it updates the December 2024 version 5.1."
+ },
+ {
+  "claim_id": "CP-12-01-V1",
+  "verdict": "NOT SUPPORTED",
+  "url_checked": "https://casel.org/casel-sel-framework-11-2020/?view=1",
+  "source_kind": "primary",
+  "excerpt": "Demonstrating curiosity and open-mindedness",
+  "corrected_cite_as": "",
+  "notes": "The bullet exists under Responsible Decision-Making, but the framework gives it no further wording. Nothing in it describes curiosity or open-mindedness as willingness to try new or unfamiliar activities, so the claimed reading is not in the source."
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.1",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "source_kind": "primary",
+  "excerpt": "Integrating personal and social identities Identifying personal, cultural, and linguistic assets Identifying one's emotions",
+  "corrected_cite_as": "",
+  "notes": "Exact bullet under Self-Awareness; fits Y4.1 (recognizing and naming one's own emotions) directly. The title on the PDF matches the cite_as."
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.3",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "source_kind": "primary",
+  "excerpt": "Exhibiting self-discipline and self-motivation Setting personal and collective goals Using planning and organizational skills",
+  "corrected_cite_as": "",
+  "notes": "All three Self-Management bullets are present word for word and fit Y4.3 (goals, organization, self-discipline) directly. 'Collective' goals are slightly broader than the code's personal goals."
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.4",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "source_kind": "primary",
+  "excerpt": "Taking others' perspectives Recognizing strengths in others Demonstrating empathy and compassion Showing concern for the feelings of others Understanding and expressing gratitude Identifying diverse social norms, including unjust ones",
+  "corrected_cite_as": "",
+  "notes": "All three cited Social Awareness bullets are present word for word, and they fit Y4.4 (perspective-taking, empathy, reading social norms) directly. The PDF prints a curly apostrophe in others’."
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.5",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "source_kind": "primary",
+  "excerpt": "Communicating effectively Developing positive relationships Demonstrating cultural competency",
+  "corrected_cite_as": "",
+  "notes": "'Demonstrating cultural competency' is under Relationship Skills. 'Examining prejudices and biases' was confirmed under Self-Awareness in the same fetch but is not next to it, so it is not in the excerpt (see the self-awareness-list row). Together they fit Y4.5 (respect across backgrounds; examining one's own biases)."
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.6",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "source_kind": "primary",
+  "excerpt": "Communicating effectively Developing positive relationships",
+  "corrected_cite_as": "",
+  "notes": "Exact bullet under Relationship Skills; fits Y4.6's communication part directly. Public speaking, which the code's name includes, is not named in the source."
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.10",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "source_kind": "primary",
+  "excerpt": "Identifying solutions for personal and social problems Learning to make a reasoned judgment after analyzing information, data, facts Anticipating and evaluating the consequences of one's actions",
+  "corrected_cite_as": "",
+  "notes": "Both Responsible Decision-Making bullets are present word for word, and they fit Y4.10 (weighing consequences; problem-solving) directly."
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.12",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "source_kind": "primary",
+  "excerpt": "Resolving conflicts constructively Resisting negative social pressure Showing leadership in groups",
+  "corrected_cite_as": "",
+  "notes": "Exact bullet under Relationship Skills, not Responsible Decision-Making where Y4.12 sits. It fits only the 'resisting negative peer pressure' half of Y4.12 and does not cover avoiding unsafe situations, consistent with the registry's existing partial-fit note."
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y5.1",
+  "verdict": "PARTIAL",
+  "url_checked": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "source_kind": "primary",
+  "excerpt": "Integrating personal and social identities",
+  "corrected_cite_as": "",
+  "notes": "The bullet is exact, but its fit to Y5.1 is only partial. 'Social identities' reaches into what Y5.1 excludes (pride in social identity goes to Y5.2), so the component is broader than the code's self-understanding construct."
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y5.4",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "source_kind": "primary",
+  "excerpt": "Examining prejudices and biases Experiencing self-efficacy Having a growth mindset",
+  "corrected_cite_as": "",
+  "notes": "Both Self-Awareness bullets are present word for word and fit Y5.4 (general self-efficacy and growth mindset) directly. CASEL does not say whether the mindset is general or academic, and the code's Y1.12 line handles that."
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y2.2",
+  "verdict": "PARTIAL",
+  "url_checked": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "source_kind": "primary",
+  "excerpt": "Demonstrating curiosity and open-mindedness Identifying solutions for personal and social problems",
+  "corrected_cite_as": "",
+  "notes": "The bullet is exact, but CASEL puts it under Responsible Decision-Making as a decision-making disposition. 'Open-mindedness' is broader than Y2.2's triggered interest and curiosity. The source gives no wording about trying new activities (see CP-12-01-V1)."
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-self-awareness-list",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf",
+  "source_kind": "primary",
+  "excerpt": "Integrating personal and social identities Identifying personal, cultural, and linguistic assets Identifying one's emotions Demonstrating honesty and integrity Linking feelings, values, and thoughts Examining prejudices and biases Experiencing self-efficacy Having a growth mindset Developing interests and a sense of purpose",
+  "corrected_cite_as": "",
+  "notes": "The complete Self-Awareness list is nine bullets (39 words, quoted in full). The casel.org web view (https://casel.org/casel-sel-framework-11-2020/?view=1), fetched separately, returned the same nine in the same order. Because the PDF is a graphic, the order reflects text extraction, not necessarily the visual layout."
+ }
+]

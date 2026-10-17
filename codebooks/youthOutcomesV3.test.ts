@@ -113,6 +113,16 @@ describe('codebook 3.x source registry (CP-10-01)', () => {
     expect(bare).toEqual([]);
   });
 
+  it('tags a basis source "located" only if the registry still has a located source for that code (CP-12-25)', () => {
+    // WAIT mirrors codebook-refinement/v3/refresh_basis_status.py; remove a code once its wait
+    // clears (Y2.6, F1.9: PR #62; A2.6: CP-12-18's held part) and the script has run.
+    const WAIT = new Set(['Y2.6', 'F1.9', 'A2.6']);
+    const located = new Set(reg.sources.filter((s: any) => s.status === 'located').flatMap((s: any) => s.supports.map((x: any) => x.code)));
+    const stale = codes.filter(c => /\(located\b/.test(c.basis ?? '') && !located.has(c.id)).map(c => c.id);
+    expect(stale.filter(id => !WAIT.has(id)), 'stale "(located" tags: run refresh_basis_status.py').toEqual([]);
+    expect([...WAIT].filter(id => !stale.includes(id)), 'fixed: remove from WAIT').toEqual([]);
+  });
+
   it('keeps a verbatim excerpt of 40 words or fewer on every verified source', () => {
     for (const s of reg.sources.filter((x: any) => x.status === 'verified')) {
       expect(s.excerpt?.trim(), s.id).toBeTruthy();
@@ -174,6 +184,67 @@ describe('crosswalk 2.5.1 -> 3.0.0 (renumbering rule: generated map, tested)', (
     const orphans = codes.filter(c => !reached.has(v3Code(c)) && !c.from2x.startsWith('new'));
     expect(orphans.map(c => c.id)).toEqual([]);
   });
+
+  // CP-12-27: 2.x numbers in CONFUSIONS.md and DEVIATIONS.md are renumbered only by
+  // codebook-refinement/v3/renumber_2x_refs.py, from this crosswalk. These checks mirror the script.
+  const map = new Map(rows.map(r => [r.old_code.split(' ')[0], {
+    to: r.new_code.split(' ')[0],
+    targets: r.mapping === 'split' ? r.re_review_targets.split(' | ').filter(Boolean).map(x => x.split(' ')[0]) : [],
+  }]));
+  const TOKEN = /(?<![\w.#§$-])(\d{1,2}\.\d{1,2}(?:\.\d)?)(?![.\d]\d|\.x)/g;
+  const OVERRIDE: Record<string, Record<string, string>> = { 'CF-016': { '6.4': 'Y5.6' } };
+  const confusions = read('codebook-refinement/CONFUSIONS.md');
+  const [twoX, threeX = ''] = confusions.split(/^## Codebook 3\.x tie-breakers$/m);
+  const blockOf = (text: string, id: string) =>
+    text.match(new RegExp(`^### ${id}:[\\s\\S]*?(?=^### |^## |^---$|(?![\\s\\S]))`, 'm'))?.[0] ?? '';
+  const generated = [...threeX.matchAll(/^### (CF-\d{3}):[^\n]*\n\n_Renumbered from (CF-\d{3})/gm)].map(m => ({ id: m[1], from: m[2] }));
+
+  it('generates each 3.x copy of a 2.x tie-breaker from the crosswalk (CP-12-27)', () => {
+    expect(generated.map(g => g.from).sort()).toEqual(['CF-003', 'CF-016', 'CF-019']);
+    const body = (b: string) => b.split('\n').slice(1).filter(l => !/^\*\*Gold:\*\*|^_Renumbered from/.test(l)).join('\n').trim();
+    for (const g of generated) {
+      const src = blockOf(twoX, g.from);
+      expect(src, g.from).not.toBe('');
+      const expected = body(src).replace(TOKEN, tok => {
+        if (OVERRIDE[g.from]?.[tok]) return OVERRIDE[g.from][tok];
+        const m = map.get(tok);
+        if (!m) return tok;
+        return m.targets.length ? `${tok} [2.x; split in 3.0: ${[m.to, ...m.targets].join(', ')}]` : m.to;
+      });
+      expect(body(blockOf(threeX, g.id)), g.id).toBe(expected);
+    }
+  });
+
+  it('maps each generated entry\'s gold to the design rows with the same statements', () => {
+    const gold2x = new Map(parseCsv(read('codebook-refinement/gold/original.gold.csv')).map(r => [r.gold_id, r.outcome_text.trim()]));
+    const goldV3 = new Map(parseCsv(read('codebook-refinement/gold/youth_outcomes_v3.gold.csv')).map(r => [r.gold_id, r.outcome_text.trim()]));
+    const goldLine = (b: string) => b.match(/^\*\*Gold:\*\*(.*)$/m)?.[1] ?? '';
+    for (const g of generated) {
+      const want = [...goldLine(blockOf(twoX, g.from)).matchAll(/\bG-\d{3}\b/g)].map(m => gold2x.get(m[0])).sort();
+      const have = [...goldLine(blockOf(threeX, g.id)).matchAll(/\b([SH]\d{3})\b/g)].map(m => goldV3.get(m[1])).sort();
+      expect(have, g.id).toEqual(want);
+    }
+  });
+
+  it('takes the one override from live rulesText rule 14', () => {
+    expect(codebook.rulesText).toContain('initiative or personal agency -> Y5.6');
+  });
+
+  it('annotates every 2.x code in the 3.0 build entries of DEVIATIONS.md with its 3.x code', () => {
+    const dev = read('codebook-refinement/DEVIATIONS.md');
+    const section = dev.slice(dev.indexOf('\n## Codebook 3.x'), dev.indexOf('\n## Drift count'));
+    const bare: string[] = [];
+    let entry = '';
+    for (const line of section.split('\n')) {
+      if (line.startsWith('### ')) entry = line.slice(4).split(' ')[0];
+      const n = /^FD-P(\d{2})$/.exec(entry);
+      if (!n || Number(n[1]) > 20 || !line.startsWith('- **') || line.startsWith('- **Status:**')) continue;
+      for (const m of line.matchAll(TOKEN)) {
+        if (map.has(m[1]) && !line.slice(m.index! + m[1].length).startsWith(' (now ')) bare.push(`${entry}: ${m[1]}`);
+      }
+    }
+    expect(bare, 'run codebook-refinement/v3/renumber_2x_refs.py --write').toEqual([]);
+  });
 });
 
 describe('codebook 3.x gold (youth_outcomes_v3.gold.csv)', () => {
@@ -198,6 +269,52 @@ describe('codebook 3.x gold (youth_outcomes_v3.gold.csv)', () => {
       expect(r.status, r.gold_id).toBe('proposed');
       expect(r.v3_gold, r.gold_id).toBe('');
       expect(r.adjudicated_by, r.gold_id).toBe('');
+    }
+  });
+});
+
+describe('3.x confusion entries (S3.1)', () => {
+  // The "Codebook 3.x tie-breakers" section of CONFUSIONS.md (CP-12-15). Each entry names live
+  // 3.x codes and rests on adjudicated design gold, with at least one row per listed code.
+  const section = read('codebook-refinement/CONFUSIONS.md').split(/^## Codebook 3\.x tie-breakers$/m)[1] ?? '';
+  const entries = section.split(/^### /m).slice(1).filter(b => /^CF-\d{3}/.test(b));
+  const gold = new Map(parseCsv(read('codebook-refinement/gold/youth_outcomes_v3.gold.csv')).map(r => [r.gold_id, r]));
+  // Read only to prove absence: no 3.x CF entry may cite a fresh held-out row.
+  const heldOutIds = new Set(parseCsv(read('codebook-refinement/gold/youth_outcomes_v3.heldout.gold.csv')).map(r => r.gold_id));
+  const liveIds = new Set(codes.map(c => c.id));
+  const field = (b: string, label: string) => b.match(new RegExp(`^\\*\\*${label}:\\*\\*(.*)$`, 'm'))?.[1] ?? '';
+
+  it('has entries with unique CF ids after CF-028', () => {
+    const ids = entries.map(b => b.slice(0, 6));
+    expect(ids.length).toBeGreaterThan(0);
+    expect(new Set(ids).size).toBe(ids.length);
+    for (const id of ids) expect(Number(id.slice(3)), id).toBeGreaterThan(28);
+  });
+
+  it('names only live 3.x codes, and rests every listed code on adjudicated design gold', () => {
+    for (const b of entries) {
+      const id = b.slice(0, 6);
+      // A copy generated from a 2.x entry (CP-12-27) keeps the 2.x rule (S3.1): at least two
+      // adjudicated rows for the entry, each coded with one of its codes. A routing table has no
+      // Codes line, so its codes are the ones the block names.
+      const isGenerated = /^_Renumbered from CF-\d{3}/m.test(b);
+      const codeText = isGenerated ? b.split(/^\*\*Gold:\*\*/m)[0] : field(b, 'Codes');
+      const listed = [...new Set([...codeText.matchAll(/\b([YFA]\d+\.\d+)\b/g)].map(m => m[1]))];
+      expect(listed.length, `${id} codes`).toBeGreaterThanOrEqual(2);
+      for (const c of listed) expect(liveIds.has(c), `${id} ${c}`).toBe(true);
+      const goldIds = [...field(b, 'Gold').matchAll(/\b([A-Z][A-Z-]*\d+)\b(?!\.\d)/g)].map(m => m[1]);
+      expect(goldIds.length, `${id} gold`).toBeGreaterThanOrEqual(2);
+      const covered = new Set<string>();
+      for (const g of goldIds) {
+        expect(heldOutIds.has(g), `${id} cites a fresh held-out row`).toBe(false);
+        const row = gold.get(g);
+        expect(row, `${id} ${g} in design gold`).toBeTruthy();
+        expect(row!.status, `${id} ${g}`).toBe('adjudicated');
+        const code = row!.v3_gold.split(' ')[0];
+        expect(listed, `${id} ${g} -> ${code}`).toContain(code);
+        covered.add(code);
+      }
+      if (!isGenerated) for (const c of listed) expect(covered.has(c), `${id}: no gold row for ${c}`).toBe(true);
     }
   });
 });

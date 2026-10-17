@@ -1,0 +1,51 @@
+[
+  {
+    "claim_id": "y1-wwc-01",
+    "code": "Y1.15",
+    "cite_as": "What Works Clearinghouse. (2023). Study Review Protocol, Version 5.0. Institute of Education Sciences, U.S. Department of Education.",
+    "claimed_component": "Outcome domains Academic Achievement (Pre-K-12 and Postsecondary): achievement measured by broad standardized assessments across multiple subjects, supporting achievement or test scores reported with no single subject named",
+    "url": "https://ies.ed.gov/ncee/WWC/Docs/ReferenceResources/WWC-SRP50-508.pdf"
+  },
+  {
+    "claim_id": "y1-wwc-02",
+    "code": "Y1.15",
+    "cite_as": "What Works Clearinghouse. (2023). Study Review Protocol, Version 5.0. Institute of Education Sciences, U.S. Department of Education.",
+    "claimed_component": "Outcome domain 'Progressing in Pre-K—12 Education': number of Carnegie units or credits the student has earned, and whether the student was promoted to the next grade (credits, progressing in school).",
+    "url": "https://ies.ed.gov/ncee/WWC/Docs/ReferenceResources/WWC-SRP50-508.pdf"
+  },
+  {
+    "claim_id": "y1-wwc-03",
+    "code": "Y1.13",
+    "cite_as": "What Works Clearinghouse. (2023). Study Review Protocol, Version 5.0. Institute of Education Sciences, U.S. Department of Education.",
+    "claimed_component": "Outcome domain 'School Attendance': student- or school-level attendance outcomes, including attendance rates, absenteeism and tardiness.",
+    "url": "https://ies.ed.gov/ncee/WWC/Docs/ReferenceResources/WWC-SRP50-508.pdf"
+  },
+  {
+    "claim_id": "y1-wwc-04",
+    "code": "Y1.17",
+    "cite_as": "What Works Clearinghouse. (2023). Study Review Protocol, Version 5.0. Institute of Education Sciences, U.S. Department of Education.",
+    "claimed_component": "Outcome domain 'High School Completion': whether the student has earned a high school diploma or a recognized equivalent.",
+    "url": "https://ies.ed.gov/ncee/WWC/Docs/ReferenceResources/WWC-SRP50-508.pdf"
+  },
+  {
+    "claim_id": "y1-wwc-05",
+    "code": "Y1.18",
+    "cite_as": "What Works Clearinghouse. (2023). Study Review Protocol, Version 5.0. Institute of Education Sciences, U.S. Department of Education.",
+    "claimed_component": "Outcome domain 'College Enrollment': enrolling in or attending a postsecondary institution.",
+    "url": "https://ies.ed.gov/ncee/WWC/Docs/ReferenceResources/WWC-SRP50-508.pdf"
+  },
+  {
+    "claim_id": "y1-wwc-06",
+    "code": "Y1.17",
+    "cite_as": "What Works Clearinghouse. (2014). WWC Evidence Review Protocol for Dropout Prevention Interventions, Version 3.01. Institute of Education Sciences, U.S. Department of Education.",
+    "claimed_component": "Domains Completing school (diploma or GED) and Progressing in school (credits earned)",
+    "url": "https://ies.ed.gov/ncee/WWC/Docs/ReferenceResources/wwc_dp_protocol_v3.0.pdf"
+  },
+  {
+    "claim_id": "y1-fidelity-01",
+    "code": "Y1.15",
+    "cite_as": "Every Student Succeeds Act (2015), 20 U.S.C. 6311(c)(4)(B)(i)",
+    "claimed_component": "Academic achievement indicator: proficiency on the annual assessments in reading/language arts and mathematics, measured together as one indicator (support for test-based achievement reported across subjects)",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm"
+  }
+]

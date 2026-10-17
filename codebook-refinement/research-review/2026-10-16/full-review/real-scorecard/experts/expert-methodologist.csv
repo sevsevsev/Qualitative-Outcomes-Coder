@@ -1,0 +1,121 @@
+sid,determination,confidence,gap,reason
+R001,A1.1 | F1 domain only,medium,no,Two subjects so split by rule 1; caregiver capacity names F1's area but no specific practice or well-being result.
+R002,Y1.18,high,no,College persistence after first year is in Y1.18's definition; the percentage framing does not change the construct.
+R003,Y1.12,medium,no,Confidence tied to the classroom is academic confidence (rule 7; E-17 setting reading).
+R004,Y4.1,high,no,Recognizing anger triggers and emotional responses is emotion awareness.
+R005,Y4.6 | Y4.7,medium,no,Two skills: speaking/debate and team leadership; confidence in a named skill takes the skill code (S255 precedent).
+R006,Y1.12,low,yes,Attitude toward reading is a belief about learning (rule 8); no code names subject attitude or reading motivation.
+R007,Y3.5,high,no,An industry peer who supports one's career journey is a professional network contact.
+R008,Y1.17,high,no,High school graduation rate.
+R009,Y1.6,high,no,Competency in an art form is arts learning.
+R010,Y8.1,high,no,Physical activity is a healthy daily habit.
+R011,A2.3,medium,no,Campus improvements are facilities; read as the program's own site (E-31).
+R012,Y4.1,high,no,Identifying and speaking about emotions is one result: recognizing and naming emotions.
+R013,Y1.1,high,no,Literacy rates are a reading result.
+R014,Y1.13,high,no,School absenteeism.
+R015,Y2.5,medium,no,A creative outlet is self-expression as experience with no stated skill gain.
+R016,Y3.1,medium,no,Comfort in the school community is belonging.
+R017,Y7.2,medium,no,Auditioning is applying for arts work; one result for both targets of the audition.
+R018,Y4.10,medium,no,"'Including' names the components of one result, not separate results; framed as problem-solving and decision-making, rule 16/E-15 give Y4.10."
+R019,Y5.4,medium,no,Pride in one's accomplishments is self-worth.
+R020,A1.1,high,no,Teachers gaining awareness of resources is educator knowledge.
+R021,Y4.7,high,no,Collaboration and teamwork skills.
+R022,Y5.5,medium,no,Beginning to think about post-high-school life is future orientation; no career field or pathway learning named for Y7.1.
+R023,Y1.14,high,no,Disciplinary incidents and referrals (E-06).
+R024,Y2.3 | Y7.1,medium,no,Two objects of interest: electives (lasting interest) and career pathways (Y7.1 takes career interest).
+R025,Y5.4 | Y5.1 | Y4.2 | Y4.1 | Y5.4,medium,no,List of five named results each coded; unscoped growth mindset goes to Y5.4.
+R026,Y1.15,medium,no,The example (grade-to-grade transition) defines the result as promotion.
+R027,Y4.3,high,no,Goal-setting; the count of students follows the construct.
+R028,Y1 domain only | A1.1,low,no,Split by subject; 'design and discipline' fits Y1.4 or Y1.6 equally so only Y1 is clear.
+R029,Y8.3,high,no,Health literacy is finding and using health information.
+R030,Y7 domain only,medium,no,Readiness for STEM pathways names Y7's area but no specific result (awareness; skills; credential).
+R031,A2.1,low,no,The result is the quality of programming and events; competition is part of the program.
+R032,Y7.1,high,no,Awareness of career pathways.
+R033,Y1.11,medium,no,Using literacy strategies is a learning-strategy behavior (rule 8); no gain stated.
+R034,Y7.1,high,no,Learning about career options.
+R035,Y1.4 | Y1.12,high,no,Skill gain and confidence are two results; STEM confidence is academic confidence.
+R036,Y1.9 | Y5.4 | Y1.12,medium,no,Three listed results: engagement (E-17); general self-perception; confidence as learners.
+R037,A3.1,medium,no,A school's institutional practice change beyond the program; A3.1 as written includes institutional practice.
+R038,Y4.2 | Y4.10,high,no,Coping strategies and decision-making strategies are two distinct skills.
+R039,Y8.6,medium,no,Fewer trauma-related behaviors is symptom reduction (rule 6; CF-031); no processing or healing named for Y8.8.
+R040,Y4.7,high,no,Teamwork and collaboration skills.
+R041,Y7.1,high,no,Seeing art careers as a pathway is career aspiration.
+R042,Y8.3,medium,no,Awareness is health knowledge; no behavior stated.
+R043,Y3.3,low,yes,Y4.8 excludes reduced incidence and 'the relationship outcome itself' (to Y3.3); conflict is not fighting (Y8.12).
+R044,Y1.12,medium,no,Confidence in a Y1.4 subject area is academic confidence; consistent with R035.
+R045,Y1.6,medium,no,Meeting repertory requirements is assessed artistic skill.
+R046,Y7.1 | Y3.2,high,no,Two results: workplace exposure and a mentor relationship.
+R047,Y4.2,high,no,Emotional regulation and coping.
+R048,Y6.6,medium,no,Emotional connection to animals is connection to nature in Y6.6's include.
+R049,Y7.7,medium,no,One cooking-skill result; kitchen organization is part of it (H048 and S224 keep skill bundles whole).
+R050,Y8 domain only,medium,no,"'Wellness activities' names Y8 but not which habit; like the prompt's 'increase wellness and health' example."
+R051,Y8.1,medium,no,Embracing cycling is physical activity; health/sport/transport are purposes not separate results; the count follows the construct.
+R052,Y3.1,low,no,Being in a supportive community is connectedness; no network used to open opportunities for Y3.5.
+R053,Y4.3 | Y5.5,medium,no,Two constructs: goal clarity (setting goals) and motivation toward the future (future orientation).
+R054,Y7.2,medium,no,Checklists and tools for entering the workforce are transition knowledge.
+R055,Y2.5 | Y1.6,medium,no,Expression as experience and a stated skill gain are two results (CF-026 split).
+R056,Y2.6,medium,no,Continued participation along a pipeline is one result; the internship is a stage of it.
+R057,Y5.4,medium,no,A positive sense of self is self-worth.
+R058,A1.2,high,no,Educators embedding practices is practice change.
+R059,A2.6,medium,no,Opportunities offered to families are the program's family-engagement events.
+R060,Y1.15 | Y1.7 | Y8.3,high,no,Three listed results: unspecified academic success; critical thinking; health literacy.
+R061,Y7.1,medium,no,Aspiration toward employment is career aspiration; Y5.5 excludes career aspirations.
+R062,Y1.12,medium,no,Asking and answering questions is a learning behavior; confidence about it is academic (Y4.6 excludes it).
+R063,Y1.6 | A3 domain only,low,yes,Split by subject; partners are not staff or volunteers (A1.1); partner learning has no code (E-37 analogy).
+R064,Y2.3,high,no,Continuing to engage in the arts beyond the program is sustained interest.
+R065,Y1.5,medium,no,Perspectives in history is history content.
+R066,Y5.6,medium,no,Understanding one's ability to affect one's surroundings is personal agency.
+R067,Y1 domain only,medium,yes,Placement in selective high schools is not promotion or credits; specific result with no code (G9 convention).
+R068,Y2.2,high,no,Curiosity and openness to new ideas (CF-032).
+R069,Y7.3,medium,no,One result: employability skills for getting and keeping work.
+R070,A2.3,low,no,More field-trip opportunities for teachers is access to the program's site and resources.
+R071,Y4.6,low,no,Subject unclear; read as youth communicating with adults; one behavior not split by audience.
+R072,Y1.6,high,no,Artistic knowledge and skills.
+R073,Y2.2,medium,no,Interest sparked in the school by watching a performance is triggered interest (phase 1); 'school benefits' is too vague to code.
+R074,Y5.4,high,no,Self-esteem; perseverance and success are the means.
+R075,Y4.3,medium,no,Self-motivation is in Y4.3's CASEL source; no learning context.
+R076,Y6.4,low,no,Reversing civic apathy means more civic participation; aim-like wording.
+R077,A3.2,high,no,Collaboration across an OST ecosystem.
+R078,Y3.5 | Y7.1 | Y3.5,medium,no,Three listed results; workplace knowledge is learning about the world of work (Y7.1) not workplace skill.
+R079,Y5.1,medium,no,Sense of identity is identity exploration.
+R080,Y1.1 | Y2.3,high,no,Writing skill and love of writing are two results.
+R081,Y1.15,high,no,GPA.
+R082,Y5.2,medium,no,"'Empowered' knowledge of their own cultural heritage is cultural identity, not art technique."
+R083,Y5.5,medium,no,Aspirations are future orientation.
+R084,Y8.6,medium,no,Lower rates of a mood or anxiety disorder is symptom reduction.
+R085,A1.2,medium,no,Delivering high-quality instructional materials is implementing a curriculum.
+R086,Y2.3,medium,no,Interest grown over a program is maintained interest (phase 2+); two objects with one construct are not split.
+R087,A3.2,medium,no,School-partner relationship and community of practice; the trailing header fragment is not coded.
+R088,Y1.1 | Y1.3,high,no,Phonics and numeracy are two subject gains.
+R089,Y1.6,high,no,Theatre knowledge.
+R090,Y4.2,high,no,Recognizing art as a regulation tool is coping.
+R091,Y6.3 | A3 domain only,low,yes,Split by subject; participants analyze justice systems (Y6.3); community partners' learning has no code.
+R092,Y1.4,high,no,Life science learning; the zebrafish research is the means.
+R093,Y7.5,high,no,Rule 4: mobility is coded through the named lever (labor market participation); not a separate result.
+R094,Y3.1,medium,no,Feeling supported and heard in program spaces is mattering; trauma-informed is the setting and no trauma recovery is named.
+R095,Y4.7,medium,no,Leadership with no setting goes to Y4.7 (DOMAIN ONLY bullet).
+R096,A2.5,low,no,Access to a program offering is reach; A2.3 is materials or facilities.
+R097,Y1.18,high,no,Postsecondary enrollment.
+R098,A1.2,low,no,Read as volunteers using resources in their role; ambiguous whether for mentees or themselves.
+R099,Y4.7,medium,no,Working together to create an event is collaboration.
+R100,Y6 domain only,low,no,Contribution to community names Y6's area without a specific act; borderline PYD label.
+R101,A3.1,medium,no,Integration into school climate and safety strategies is institutional practice change.
+R102,A1.1,high,no,Educators' awareness.
+R103,Y7.1,medium,no,College-student tutors are participants; career insight is career exploration; one result.
+R104,A2.1,low,yes,Recognition is the nearest to accreditation; organizational reputation has no code (E-36 open).
+R105,A1.2,high,no,Teachers applying museum content in lesson planning.
+R106,A2.3,high,no,Access to a facility.
+R107,Y1.6,high,no,Musical knowledge.
+R108,A1.2,medium,no,Staff refining curricula is practice change.
+R109,Y2 domain only | A1.1,low,yes,Split by subject; youth awareness of arts opportunities is neither interest nor participation; teachers' awareness is A1.1.
+R110,Y8.6,medium,no,Eating disorder risk is a mental health symptom measure.
+R111,A2.1,high,no,Instructional quality of the program model.
+R112,Y1.15,high,no,Academic achievement with no subject.
+R113,Y7.2,high,no,Financial aid knowledge.
+R114,Y4.8,high,no,Resolving conflicts.
+R115,Y1.6,high,no,Technical vocabulary of an art form.
+R116,Y2.5,high,no,Y2.5's include names connecting art to personal meaning; more specific than Y2.4.
+R117,A1.1,high,no,Staff awareness.
+R118,Y1.6,high,no,Technical theatre skills.
+R119,Y6.6,low,no,Design gold S247 codes gardening activity as Y6.6; apply that precedent over Y2.6.
+R120,Y6.4,medium,no,Acting as a leader in the community is Y6.4 (E-11).

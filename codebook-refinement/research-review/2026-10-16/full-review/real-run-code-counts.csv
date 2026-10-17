@@ -1,0 +1,98 @@
+code,logic_model_low_or_medium,no_logic_model_low_or_medium,logic_model_rows,no_logic_model_rows,logic_model_unique_texts,no_logic_model_unique_texts
+A1.1 Staff & Volunteer Knowledge & Skills,10.0,9.0,65.0,36.0,65.0,34.0
+A1.2 Practice Change,16.0,4.0,54.0,14.0,49.0,14.0
+A1.3 Workforce Stability & Well-Being,9.0,8.0,13.0,11.0,13.0,8.0
+A2.1 Program Quality,17.0,60.0,25.0,64.0,19.0,25.0
+A2.2 Participant & Family Satisfaction,7.0,2.0,7.0,3.0,4.0,3.0
+A2.3 Access to Resources,27.0,5.0,37.0,7.0,34.0,7.0
+"A2.4 Inclusion, Accommodations & Language Access",6.0,7.0,7.0,7.0,7.0,6.0
+"A2.5 Participation, Dosage & Reach (Output)",26.0,4.0,45.0,13.0,41.0,13.0
+A2.6 Family Engagement Systems,3.0,0.0,4.0,0.0,4.0,0.0
+A3.1 Policy & Institutional Change,23.0,9.0,34.0,11.0,28.0,11.0
+A3.2 Cross-Sector Partnerships,26.0,4.0,63.0,11.0,53.0,11.0
+A3.3 Community Conditions & Collective Efficacy,31.0,8.0,40.0,9.0,32.0,9.0
+F1.1 Parenting Knowledge & Practices,5.0,3.0,10.0,4.0,9.0,4.0
+F1.2 Home Learning Environment & Routines,0.0,0.0,2.0,2.0,2.0,2.0
+F1.3 Family Health Practices,0.0,24.0,0.0,24.0,0.0,4.0
+F1.5 Caregiver Social Connections,1.0,0.0,5.0,0.0,2.0,0.0
+"F1.6 Adult Education, Skills & Employment",2.0,0.0,3.0,0.0,3.0,0.0
+F1.7 System Navigation & Rights Knowledge,6.0,0.0,8.0,2.0,8.0,2.0
+F1.8 Family Connection & Trust with the Program,0.0,1.0,5.0,2.0,5.0,2.0
+F1.9 Family Participation & Leadership,7.0,5.0,15.0,5.0,13.0,4.0
+"F2.1 Income, Benefits & Financial Stability",8.0,8.0,9.0,10.0,9.0,5.0
+F2.2 Food Security,0.0,3.0,6.0,3.0,6.0,3.0
+F2.3 Housing Stability & Safe Living Situation,0.0,1.0,1.0,5.0,1.0,3.0
+Y1.1 Literacy: Reading & Writing,2.0,0.0,48.0,28.0,40.0,28.0
+Y1.10 Academic Perseverance,4.0,4.0,4.0,19.0,4.0,3.0
+Y1.11 Learning Strategies & Study Skills,4.0,3.0,6.0,4.0,6.0,4.0
+Y1.12 Academic Mindsets & Self-Efficacy,4.0,6.0,28.0,15.0,27.0,15.0
+Y1.13 Attendance & School Stability,7.0,2.0,27.0,35.0,21.0,17.0
+Y1.14 Exclusionary Discipline,3.0,3.0,12.0,6.0,7.0,5.0
+"Y1.15 Grades, Credits & On-Track Status",13.0,13.0,55.0,40.0,48.0,36.0
+Y1.16 Advanced Coursework & Dual Credit,3.0,3.0,7.0,22.0,7.0,17.0
+Y1.17 High School Completion & Re-engagement,1.0,2.0,12.0,15.0,12.0,13.0
+"Y1.18 Postsecondary Enrollment, Persistence & Completion",7.0,0.0,41.0,12.0,35.0,12.0
+Y1.2 English Language Development & Multilingualism,1.0,1.0,1.0,1.0,1.0,1.0
+Y1.3 Mathematics,0.0,0.0,13.0,5.0,9.0,5.0
+"Y1.4 Science, Technology & Engineering",3.0,7.0,25.0,26.0,23.0,26.0
+Y1.5 Other Academic Subjects,5.0,0.0,14.0,8.0,12.0,8.0
+Y1.6 Arts Learning,5.0,3.0,62.0,22.0,55.0,22.0
+"Y1.7 Critical Thinking, Inquiry & Media Literacy",7.0,5.0,36.0,24.0,30.0,20.0
+Y1.8 Early Learning & School Readiness,1.0,36.0,1.0,36.0,1.0,2.0
+Y1.9 Academic Engagement Behaviors,13.0,14.0,40.0,23.0,36.0,22.0
+Y2.1 Enjoyment & Joy,4.0,1.0,24.0,3.0,19.0,3.0
+Y2.2 Curiosity & Triggered Interest,14.0,6.0,39.0,14.0,35.0,13.0
+Y2.3 Sustained & Individual Interest,24.0,2.0,49.0,5.0,40.0,5.0
+Y2.4 Relevance & Utility Value,9.0,5.0,15.0,8.0,14.0,7.0
+Y2.5 Creative Expression & Performance,16.0,11.0,32.0,33.0,29.0,32.0
+Y2.6 Participation in Enriching Activities,24.0,7.0,43.0,10.0,41.0,10.0
+Y3.1 Belonging & Mattering,14.0,15.0,71.0,37.0,57.0,33.0
+Y3.2 Supportive Adult Relationships,9.0,5.0,47.0,10.0,40.0,10.0
+Y3.3 Peer Relationships & Friendship,9.0,4.0,35.0,10.0,26.0,9.0
+Y3.4 Family Relationships,0.0,9.0,2.0,10.0,1.0,3.0
+Y3.5 Social Capital & Networks,5.0,6.0,41.0,14.0,29.0,12.0
+Y4.1 Emotion Awareness,7.0,8.0,17.0,13.0,16.0,11.0
+Y4.10 Decision-Making & Problem-Solving,6.0,8.0,31.0,31.0,24.0,25.0
+Y4.11 Ethical & Prosocial Choices,6.0,2.0,7.0,3.0,7.0,3.0
+Y4.12 Risk Avoidance & Refusal Skills,2.0,2.0,5.0,9.0,4.0,9.0
+Y4.2 Emotion Regulation & Coping,7.0,16.0,34.0,50.0,32.0,48.0
+"Y4.3 Goal-Setting, Organization & Self-Discipline",18.0,12.0,44.0,29.0,33.0,25.0
+"Y4.4 Empathy, Perspective-Taking & Social Awareness",2.0,0.0,20.0,14.0,16.0,13.0
+Y4.5 Respect for Diversity & Cultural Competence,8.0,4.0,19.0,12.0,16.0,12.0
+Y4.6 Communication & Public Speaking,6.0,11.0,58.0,31.0,43.0,28.0
+"Y4.7 Teamwork, Collaboration & Group Leadership",16.0,11.0,72.0,52.0,61.0,47.0
+Y4.8 Relationship-Building & Conflict Resolution,7.0,6.0,24.0,22.0,21.0,19.0
+Y4.9 Help-Seeking & Offering Support,3.0,5.0,6.0,9.0,6.0,9.0
+Y5.1 Self-Understanding & Identity Exploration,8.0,8.0,18.0,18.0,18.0,17.0
+Y5.2 Cultural & Social Identity,1.0,0.0,6.0,0.0,6.0,0.0
+Y5.3 Domain Identity,3.0,2.0,13.0,5.0,13.0,5.0
+"Y5.4 Confidence, Self-Efficacy & Self-Worth",22.0,15.0,117.0,63.0,90.0,51.0
+Y5.5 Purpose & Future Orientation,4.0,6.0,22.0,14.0,19.0,14.0
+"Y5.6 Agency, Self-Determination & Self-Advocacy",6.0,16.0,27.0,21.0,25.0,17.0
+Y6.1 Positive Values & Character,1.0,10.0,9.0,27.0,8.0,25.0
+Y6.2 Civic Knowledge,2.0,3.0,6.0,8.0,5.0,8.0
+Y6.3 Critical Consciousness & Social Justice,4.0,2.0,6.0,5.0,6.0,5.0
+"Y6.4 Civic Voice, Leadership & Participation",13.0,7.0,29.0,19.0,27.0,18.0
+Y6.5 Community Service & Action,9.0,7.0,12.0,9.0,12.0,8.0
+Y6.6 Environmental Stewardship,4.0,3.0,17.0,10.0,17.0,10.0
+Y6.7 Digital Citizenship & Online Safety,0.0,1.0,1.0,4.0,1.0,4.0
+Y7.1 Career Awareness & Exploration,12.0,12.0,73.0,52.0,66.0,44.0
+Y7.2 College & Career Transition Knowledge,18.0,14.0,51.0,30.0,42.0,30.0
+Y7.3 Employability & Workplace Skills,9.0,8.0,29.0,23.0,25.0,21.0
+"Y7.4 Technical Skills, Credentials & Work-Based Learning",7.0,7.0,21.0,51.0,15.0,39.0
+Y7.5 Employment & Earnings,15.0,14.0,41.0,20.0,37.0,20.0
+Y7.6 Financial Capability,5.0,2.0,12.0,8.0,11.0,8.0
+Y7.7 Independent Living Skills,10.0,3.0,18.0,4.0,17.0,4.0
+Y8.1 Healthy Daily Habits,19.0,10.0,48.0,31.0,39.0,29.0
+Y8.10 Felt Safety,1.0,0.0,1.0,1.0,1.0,1.0
+Y8.11 Substance Use,1.0,4.0,8.0,15.0,8.0,15.0
+"Y8.12 Violence, Bullying & Victimization",1.0,1.0,7.0,16.0,7.0,15.0
+"Y8.13 Justice Involvement, Diversion & Reentry",0.0,1.0,4.0,16.0,4.0,7.0
+Y8.2 Motor & Sport Skills,0.0,4.0,3.0,20.0,3.0,20.0
+Y8.3 Health Knowledge & Safety Skills,2.0,7.0,17.0,21.0,17.0,19.0
+Y8.4 Sexual & Reproductive Health,0.0,0.0,5.0,11.0,5.0,11.0
+Y8.5 Health Care Access & Condition Management,0.0,0.0,1.0,24.0,1.0,21.0
+Y8.6 Mental Health Symptoms & Distress,2.0,4.0,5.0,9.0,5.0,9.0
+Y8.7 Flourishing & Life Satisfaction,4.0,9.0,15.0,18.0,15.0,18.0
+Y8.8 Healing & Trauma Recovery,0.0,1.0,1.0,5.0,1.0,5.0
+Y8.9 Mental Health Service Access & Use,0.0,1.0,0.0,5.0,0.0,5.0

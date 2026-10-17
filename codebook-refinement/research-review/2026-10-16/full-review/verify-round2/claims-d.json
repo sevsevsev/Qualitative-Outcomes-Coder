@@ -1,0 +1,100 @@
+[
+ {
+  "claim_id": "CP-12-09-V8",
+  "code": "F2.2",
+  "cite_as": "U.S. Department of Agriculture, Food, Nutrition, and Consumer Services Mission Area (2022, March). USDA Actions on Nutrition Security.",
+  "claimed_component": "The document's cover, header or first page prints the title 'USDA Actions on Nutrition Security', the issuing office (USDA Food, Nutrition, and Consumer Services Mission Area) and the date March 2022; USDA still hosts it and does not mark it archived or withdrawn.",
+  "url": "https://www.usda.gov/sites/default/files/documents/usda-actions-nutrition-security.pdf"
+ },
+ {
+  "claim_id": "CP-12-09-V9",
+  "code": "F2.1",
+  "cite_as": "Consumer Financial Protection Bureau (2015). Measuring financial well-being: A guide to using the CFPB Financial Well-Being Scale.",
+  "claimed_component": "The guide states the age range of the population the scale was developed and normed for (adults 18 and older).",
+  "url": "https://files.consumerfinance.gov/f/201512_cfpb_financial-well-being-user-guide-scale.pdf"
+ },
+ {
+  "claim_id": "CP-12-09-V11",
+  "code": "F2.3",
+  "cite_as": "McKinney-Vento Homeless Assistance Act, as amended by the HEARTH Act, 42 U.S.C. 11386a(b)(1)(A).",
+  "claimed_component": "This page is the official U.S. Code text of 42 U.S.C. 11386a(b)(1)(A)(i), (ii) and (vi), with the same wording as the law.cornell.edu text of those clauses.",
+  "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section11386a"
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-4",
+  "code": "Y1.13, F2.3",
+  "cite_as": "McKinney-Vento Homeless Assistance Act, Subtitle VII-B (Education for Homeless Children and Youths)",
+  "claimed_component": "This page is the official U.S. Code text of 42 U.S.C. 11432; 11432(g)(3)(A)-(B) (school of origin and 'School stability') contains 'continue the child's or youth's education in the school of origin for the duration of homelessness'. 42 U.S.C. 11434a defines homeless children and youths as individuals 'who lack a fixed, regular, and adequate nighttime residence'.",
+  "url": "https://www.govinfo.gov/link/uscode/42/11432"
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-1",
+  "code": "Y7.7",
+  "cite_as": "42 U.S.C. 677(a)(1), John H. Chafee Foster Care Program for Successful Transition to Adulthood",
+  "claimed_component": "This page is the official U.S. Code text of 42 U.S.C. 677 (Chafee program); its purpose in 677(a)(1) includes 'training and opportunities to practice daily living skills (such as financial literacy training and driving instruction)'. Section heading as printed on the official copy.",
+  "url": "https://www.govinfo.gov/link/uscode/42/677"
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-2",
+  "code": "F1.6, A2.3",
+  "cite_as": "Digital Equity Act of 2021, 47 U.S.C. 1721 and 1723(c)(1)(B)",
+  "claimed_component": "This page is the official U.S. Code text of 47 U.S.C. 1721 and 1723: 1721(12) defines digital literacy as 'The skills associated with using technology to enable users to find, evaluate, organize, create, and communicate information', and 1723(c)(1)(B) lists among State Digital Equity Plan measurable objectives 'the availability and affordability of consumer devices and technical support for those devices'.",
+  "url": "https://www.govinfo.gov/link/uscode/47/1721"
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-3",
+  "code": "F1.7",
+  "cite_as": "Individuals with Disabilities Education Act, section 671(b), 20 U.S.C. 1471(b): Parent Training and Information Centers",
+  "claimed_component": "This page is the official U.S. Code text of 20 U.S.C. 1471(b), whose required activities for Parent Training and Information Centers include 'assist parents and students with disabilities to understand their rights and responsibilities under this chapter'.",
+  "url": "https://www.govinfo.gov/link/uscode/20/1471"
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-5-conley-2007-college-readiness",
+  "code": "Y7.2",
+  "cite_as": "Conley, D. T. (2007). Redefining College Readiness. Educational Policy Improvement Center.",
+  "claimed_component": "This copy is the cited work: the authors, title, year and publisher printed on it match the citation. The publisher's own copy of the work is also available online.",
+  "url": "https://files.eric.ed.gov/fulltext/ED539251.pdf"
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-5-farrington-2012",
+  "code": "Y1.9, Y1.10, Y1.11, Y1.12",
+  "cite_as": "Farrington, C. A., Roderick, M., Allensworth, E., Nagaoka, J., Keyes, T. S., Johnson, D. W., & Beechum, N. O. (2012). Teaching Adolescents to Become Learners: The Role of Noncognitive Factors in Shaping School Performance: A Critical Literature Review. UChicago Consortium on Chicago School Research.",
+  "claimed_component": "This copy is the cited work: the authors, title, year and publisher printed on it match the citation. The publisher's own copy of the work is also available online.",
+  "url": "https://files.eric.ed.gov/fulltext/ED542543.pdf"
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-5-mapp-kuttner-2013",
+  "code": "F1.7, F1.8, A2.6",
+  "cite_as": "Mapp, K. L., & Kuttner, P. J. (2013). Partners in Education: A Dual Capacity-Building Framework for Family-School Partnerships. SEDL in collaboration with the U.S. Department of Education.",
+  "claimed_component": "This copy is the cited work: the authors, title, year and publisher printed on it match the citation. The publisher's own copy of the work is also available online.",
+  "url": "https://files.eric.ed.gov/fulltext/ED593896.pdf"
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-5-hulleman-2010-utility-value",
+  "code": "Y2.4",
+  "cite_as": "Hulleman, C. S., Godes, O., Hendricks, B. L., & Harackiewicz, J. M. (2010). Enhancing interest and performance with a utility value intervention. Journal of Educational Psychology, 102(4), 880-895.",
+  "claimed_component": "This copy is the cited work: the authors, title, year and publisher printed on it match the citation, including journal (Journal of Educational Psychology), volume 102, pages 880-895 and DOI. The publisher's own copy of the work is also available online.",
+  "url": "https://eric.ed.gov/?id=EJ910428"
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-7",
+  "code": "Y2.4",
+  "cite_as": "Wigfield, A., & Eccles, J. S. (2000). Expectancy-value theory of achievement motivation. Contemporary Educational Psychology",
+  "claimed_component": "This copy is the cited article, with journal, volume, pages and DOI as printed on it (Contemporary Educational Psychology, 25, 68-81); the printed DOI resolves to a landing page for this article.",
+  "url": "https://acmd615.pbworks.com/f/ExpectancyValueTheory.pdf"
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-6",
+  "code": "Y8.13",
+  "cite_as": "Harris, P. W., Lockwood, B., & Mengers, L. (2009, November). Defining and Measuring Recidivism: A CJCA White Paper. Council of Juvenile Correctional Administrators. NCJ 237765.",
+  "claimed_component": "The copy at this URL is the full 2009 CJCA white paper, with title page, authors and date matching the citation.",
+  "url": "https://www.doc.ks.gov/juvenile-services/committee/documentation/6-2017/CJCA/view"
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-8",
+  "code": "Y2.1, Y5.2, Y6.3",
+  "cite_as": "Muhammad, G. Five Pursuits Framework",
+  "claimed_component": "The page is the author's own description of the Five Pursuits framework, names the author, and names the book the framework comes from.",
+  "url": "https://www.hillpedagogies.com/"
+ }
+]

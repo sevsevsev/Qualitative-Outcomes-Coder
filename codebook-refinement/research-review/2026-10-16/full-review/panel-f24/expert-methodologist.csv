@@ -1,0 +1,26 @@
+proposal_id,determination,side_right,confidence,reason
+P-F24-01,A2.3,yes,high,Count of goods distributed is an output; no young person's state named. Rule 2 example nearly repeats it so the row tests recall.
+P-F24-02,A2.3,yes,high,"Receiving goods is provision (rule 2, S196); per-person receipt is not a youth choice, so not Y2.6."
+P-F24-03,A2.3,yes,high,Subject is the league providing gear; no state of players stated.
+P-F24-04,F2.4,yes,high,Young people stated to have coat and fitting shoes; result is the state of having. Near-copy of F2.4 include.
+P-F24-05,F2.4,yes,high,Going without needed school supplies framed as students' state; named good.
+P-F24-06,F2.4,yes,high,"Girl-level state of having enough menstrual materials, MHH Indicator 1 wording; near-copy of F2.4 include."
+P-F24-07,A2.3,yes,high,Devices and internet stay A2.3 when had (rule 15; S240); consistent with the stated asymmetry.
+P-F24-08,F2 domain only,yes,high,"Names F2's area (basic needs) but no specific good, food, housing or income result; family subject keeps Part F."
+P-F24-09,F2 domain only,yes,medium,"Material hardship spans food, housing and goods, even in EU-SILC child items; one domain, no single code."
+P-F24-10,F2 domain only,yes,medium,"Hygiene items are outside F2.4's closed list by CP decision 5; prompt text never says so, hence coders' F2.4."
+P-F24-11,F2.4,yes,high,"Named goods (clothes, shoes that fit) as children's state of no longer going without."
+P-F24-12,F2.4,yes,high,Every item on the supply list is school supplies had; start of year is timing not a further result.
+P-F24-13,Y1.13,yes,high,"Goods sit in the subject clause as means; attendance is the only predicate result; do not split off means."
+P-F24-14,Y1.13,yes,high,Products are means; the stated result is no missed school days.
+P-F24-15,Y2.6,yes,high,"Joining and staying on a team is individual participation; equipment is the means."
+P-F24-16,Y2.6,yes,high,Signing up for a sport is Y2.6; gear from the drive is the means.
+P-F24-17,Y8.1,yes,high,Physical activity is the result; bicycle is the means.
+P-F24-18,Y1.9,yes,medium,"Class participation is schoolwork behavior (Y1.9); Y2.6's 'participating fully' is for activities, not class. No goods named."
+P-F24-19,Y5.4,yes,high,General self-confidence is the result; new clothes are the means.
+P-F24-20,Y3.1,yes,high,"Feeling accepted, not singled out, at school is belonging; clothing is the reason. Y8.12 only if teasing or bullying named."
+P-F24-21,F2.1,yes,medium,Household spending relief is a money result (CF-034); goods are only the budget line.
+P-F24-22,F2.4,yes,medium,"Having gear is the only result, 'to play' is purpose; team gear may exceed 'outdoor leisure equipment' (decision 4)."
+P-F24-23,F2.4,yes,high,"'Ready to learn' is purpose, not a stated learning result; Y1.8 is pre-K only."
+P-F24-24,F2.4 | Y1.13,yes,high,"Two coordinated predicates, two results: having shoes and attending more; split per rule 2."
+P-F24-25,Y5.4,no,medium,"'Feel dignity' is the predicate, a felt self-worth; clothes are the means. Coding the goods drops the stated result, against rule 2."

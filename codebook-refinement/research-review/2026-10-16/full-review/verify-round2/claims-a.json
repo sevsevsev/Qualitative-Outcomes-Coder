@@ -1,0 +1,100 @@
+[
+ {
+  "claim_id": "CP-11-01-V1",
+  "code": "Y1.2",
+  "cite_as": "ACTFL, Californians Together, Modern Language Association, National Association for Bilingual Education, National Association of English Learner Program Administrators, National Council of State Supervisors for Languages, & TESOL International Association (2020). Guidelines for Implementing the Seal of Biliteracy.",
+  "claimed_component": "Author list (title page, credits or citation line) includes SealofBiliteracy.org as a co-author or issuing body, not only as a logo or sponsor.",
+  "url": "https://www.actfl.org/uploads/files/general/SOBL_Guidelines.pdf"
+ },
+ {
+  "claim_id": "CP-11-02-V2",
+  "code": "Y1.15",
+  "cite_as": "What Works Clearinghouse (2024, rev. 2025). Study Review Protocol, Version 5.1. National Center for Education Evaluation and Regional Assistance, Institute of Education Sciences, U.S. Department of Education.",
+  "claimed_component": "Outcome domain 'Academic Achievement—PK–12': academic measures based on broad standardized assessments across multiple subjects.",
+  "url": "https://ies.ed.gov/ncee/wwc/Docs/ReferenceResources/WWC-SRP51-508.pdf"
+ },
+ {
+  "claim_id": "CP-12-01-V1",
+  "code": "Y2.2",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Responsible Decision-Making, 'Demonstrating curiosity and open-mindedness': open-mindedness or curiosity is described as including willingness to try new or unfamiliar activities or experiences.",
+  "url": "https://casel.org/casel-sel-framework-11-2020/?view=1"
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.1",
+  "code": "Y4.1",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Self-Awareness: 'Identifying one's emotions'",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.3",
+  "code": "Y4.3",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Self-Management: 'Setting personal and collective goals'; 'Exhibiting self-discipline and self-motivation'; 'Using planning and organizational skills'",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.4",
+  "code": "Y4.4",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Social Awareness: 'Taking others' perspectives'; 'Demonstrating empathy and compassion'; 'Identifying diverse social norms, including unjust ones'",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.5",
+  "code": "Y4.5",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Relationship Skills: 'Demonstrating cultural competency'; Self-Awareness: 'Examining prejudices and biases'",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.6",
+  "code": "Y4.6",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Relationship Skills: 'Communicating effectively'",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.10",
+  "code": "Y4.10",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Responsible Decision-Making: 'Identifying solutions for personal and social problems'; 'Anticipating and evaluating the consequences of one's actions'",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y4.12",
+  "code": "Y4.12",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Relationship Skills: 'Resisting negative social pressure'",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y5.1",
+  "code": "Y5.1",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Self-Awareness: 'Integrating personal and social identities'",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y5.4",
+  "code": "Y5.4",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Self-Awareness: 'Experiencing self-efficacy'; 'Having a growth mindset'",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-Y2.2",
+  "code": "Y2.2",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "Responsible Decision-Making: 'Demonstrating curiosity and open-mindedness'",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+ },
+ {
+  "claim_id": "CP-12-20-V-CASEL-1-self-awareness-list",
+  "code": "Y4/Y5",
+  "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+  "claimed_component": "The complete list of bullets printed under Self-Awareness.",
+  "url": "https://casel.s3.us-east-2.amazonaws.com/CASEL-SEL-Framework-11.2020.pdf"
+ }
+]

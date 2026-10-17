@@ -13,7 +13,9 @@ import { parseDefinitions, splitCode } from '../services/codebookExplorer.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const registry = JSON.parse(fs.readFileSync(path.join(here, 'sources/original.sources.json'), 'utf-8'));
-const confusions = fs.readFileSync(path.join(here, 'CONFUSIONS.md'), 'utf-8');
+// Only the 2.x entries: the 3.x tie-breakers after this heading use 3.x code ids and are
+// checked in codebooks/youthOutcomesV3.test.ts (CP-12-15).
+const confusions = fs.readFileSync(path.join(here, 'CONFUSIONS.md'), 'utf-8').split(/^## Codebook 3\.x tie-breakers$/m)[0];
 const codebook = getCodebook('original');
 
 const subcategories = codebook.domains.flatMap(d => d.subcategories.map(s => ({ ...s, ...splitCode(s.code) })));

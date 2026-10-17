@@ -1,0 +1,282 @@
+[
+  {
+    "claim_id": "y5-01",
+    "code": "Y5.5",
+    "cite_as": "Catalano, R. F., Berglund, M. L., Ryan, J. A. M., Lonczak, H. S., & Hawkins, J. D. Positive Youth Development in the United States: Research Findings on Evaluations of Positive Youth Development Programs. Social Development Research Group, University of Washington School of Social Work; report published by U.S. HHS Office of the Assistant Secretary for Planning and Evaluation (ASPE).",
+    "claimed_component": "PYD construct 'Fosters spirituality' (Chapter Two): beliefs in a higher power, exploring a spiritual belief system, or sense of spiritual identity, meaning, or practice; supports Y5.5 spiritual purpose and growth in faith",
+    "url": "https://aspe.hhs.gov/reports/positive-youth-development-united-states-research-findings-evaluations-positive-youth-development-0"
+  },
+  {
+    "claim_id": "y5-02",
+    "code": "Y5.5",
+    "cite_as": "Catalano, R. F., Berglund, M. L., Ryan, J. A. M., Lonczak, H. S., & Hawkins, J. D. Positive Youth Development in the United States: Research Findings on Evaluations of Positive Youth Development Programs. Social Development Research Group, University of Washington School of Social Work; report published by U.S. HHS Office of the Assistant Secretary for Planning and Evaluation (ASPE).",
+    "claimed_component": "PYD construct 'Fosters belief in the future': 'the internalization of hope and optimism about possible outcomes'; supports Y5.5 optimism about the future, hopes and goals for life",
+    "url": "https://aspe.hhs.gov/reports/positive-youth-development-united-states-research-findings-evaluations-positive-youth-development-0"
+  },
+  {
+    "claim_id": "y5-03",
+    "code": "Y5.5",
+    "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+    "claimed_component": "Self-Awareness: 'Developing interests and a sense of purpose'; supports Y5.5 sense of purpose",
+    "url": "https://casel.s3.us-east-2.amazonaws.com/sites/5/CASEL-Framework-and-Skills.pdf"
+  },
+  {
+    "claim_id": "y5-04",
+    "code": "Y5.6",
+    "cite_as": "Catalano, R. F., Berglund, M. L., Ryan, J. A. M., Lonczak, H. S., & Hawkins, J. D. Positive Youth Development in the United States: Research Findings on Evaluations of Positive Youth Development Programs. Social Development Research Group, University of Washington School of Social Work; report published by U.S. HHS Office of the Assistant Secretary for Planning and Evaluation (ASPE).",
+    "claimed_component": "PYD construct 'Fosters self-determination': 'the ability to think for oneself, and to take action consistent with that thought'; programs classified by increasing capacity for empowerment, autonomy, independent thinking, or self-advocacy; supports Y5.6 making one's own choices and self-advocacy",
+    "url": "https://aspe.hhs.gov/reports/positive-youth-development-united-states-research-findings-evaluations-positive-youth-development-0"
+  },
+  {
+    "claim_id": "y5-05",
+    "code": "Y5.6",
+    "cite_as": "29 U.S.C. 733(b)(5) (Rehabilitation Act of 1973, as amended by WIOA), pre-employment transition services",
+    "claimed_component": "Required activity (b)(5): 'instruction in self-advocacy, which may include peer mentoring', for students with disabilities; supports Y5.6 self-advocacy by students with disabilities",
+    "url": "https://www.law.cornell.edu/uscode/text/29/733"
+  },
+  {
+    "claim_id": "y5-06",
+    "code": "Y5.3",
+    "cite_as": "National Research Council (2009). Learning Science in Informal Environments: People, Places, and Pursuits. Washington, DC: The National Academies Press.",
+    "claimed_component": "Strand 6 of science learning: 'Think about themselves as science learners and develop an identity as someone who knows about, uses, and sometimes contributes to science'; supports Y5.3 seeing oneself as a STEM or science person",
+    "url": "https://2014conf.asc.asn.au/files/2013/12/NAP.pdf"
+  },
+  {
+    "claim_id": "y5-07",
+    "code": "Y5.3",
+    "cite_as": "Farrington, C. A., Maurer, J., Aska McBride, M. R., Nagaoka, J., Puller, J. S., Shewfelt, S., Weiss, E. M., & Wright, L. (2019). Arts Education and Social-Emotional Learning Outcomes Among K-12 Students: Developing a Theory of Action. University of Chicago Consortium on School Research and Ingenuity.",
+    "claimed_component": "Social-emotional competency domain 'Self-expression and identity' (pp. 15, 22) and 'identities as artists' (p. 18); supports Y5.3 seeing oneself as an artist",
+    "url": "https://consortium.uchicago.edu/sites/default/files/2019-05/Arts%20Education%20and%20Social-Emotional-June2019-Consortium%20and%20Ingenuity.pdf"
+  },
+  {
+    "claim_id": "y5-08",
+    "code": "Y5.3",
+    "cite_as": "Nagaoka, J., Farrington, C. A., Ehrlich, S. B., & Heath, R. D., with Johnson, D. W., Dickson, S., Turner, A. C., Mayo, A., & Hayes, K. (2015). Foundations for Young Adult Success: A Developmental Framework. University of Chicago Consortium on Chicago School Research.",
+    "claimed_component": "Full report, Chapter 1 (integrated identity, songwriter example): 'a strong identity and a set of competencies that allow her to act with agency in one role or setting'; supports Y5.3 identity tied to a role or field",
+    "url": "https://consortium.uchicago.edu/sites/default/files/2018-10/Foundations%20for%20Young%20Adult-Jun2015-Consortium.pdf"
+  },
+  {
+    "claim_id": "y5-09",
+    "code": "Y5.2",
+    "cite_as": "National Academies of Sciences, Engineering, and Medicine (2019). The Promise of Adolescence: Realizing Opportunity for All Youth. Washington, DC: The National Academies Press.",
+    "claimed_component": "Chapter 2 Adolescent Development, identity: ethnic-racial identity as a normative developmental process beginning in adolescence; identities related to gender and sexuality developed and solidified in adolescence; supports Y5.2 racial, ethnic, gender and sexual identity",
+    "url": "https://www.nationalacademies.org/read/25388/chapter/5"
+  },
+  {
+    "claim_id": "y5-10",
+    "code": "Y5.2",
+    "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+    "claimed_component": "Self-Awareness: 'Identifying personal, cultural, and linguistic assets'; supports Y5.2 cultural and linguistic identity",
+    "url": "https://casel.s3.us-east-2.amazonaws.com/sites/5/CASEL-Framework-and-Skills.pdf"
+  },
+  {
+    "claim_id": "y5-11",
+    "code": "Y5.2",
+    "cite_as": "Learning for Justice (2022). Social Justice Standards: The Learning for Justice Anti-bias Framework, Second Edition. Southern Poverty Law Center.",
+    "claimed_component": "Identity anchor standard ID.1 'Students will develop positive social identities based on their membership in multiple groups in society' and grade outcome ID.9-12.4 'I express pride and confidence in my identity'; supports Y5.2 pride in one's social identities",
+    "url": "https://www.learningforjustice.org/sites/default/files/2022-09/LFJ-Social-Justice-Standards-September-2022-09292022.pdf"
+  },
+  {
+    "claim_id": "y5-12",
+    "code": "Y5.1",
+    "cite_as": "CASEL (2020), CASEL's SEL Framework: What Are the Core Competence Areas and Where Are They Promoted?",
+    "claimed_component": "Self-Awareness: 'Linking feelings, values, and thoughts'; supports Y5.1 articulating one's values",
+    "url": "https://casel.s3.us-east-2.amazonaws.com/sites/5/CASEL-Framework-and-Skills.pdf"
+  },
+  {
+    "claim_id": "y5-13",
+    "code": "Y5",
+    "cite_as": "Nagaoka, J., Farrington, C. A., Ehrlich, S. B., & Heath, R. D., with Johnson, D. W., Dickson, S., Turner, A. C., Mayo, A., & Hayes, K. (2015). Foundations for Young Adult Success: A Developmental Framework. University of Chicago Consortium on Chicago School Research.",
+    "claimed_component": "Publisher as printed on the report's copyright line: '©2015 University of Chicago Consortium on Chicago School Research'; full concept paper is the Y5 domain anchor",
+    "url": "https://consortium.uchicago.edu/sites/default/files/2018-10/Foundations%20for%20Young%20Adult-Jun2015-Consortium.pdf"
+  },
+  {
+    "claim_id": "y5-14",
+    "code": "Y5.5",
+    "cite_as": "Search Institute. Spiritual Development.",
+    "claimed_component": "Three core processes of spiritual development: 'Awareness or awakening', 'Interconnecting and belonging', 'Living an integrated life'; supports Y5.5 growth in faith or spiritual life",
+    "url": "https://www.search-institute.org/our-research/youth-development-research/spiritual-development/"
+  },
+  {
+    "claim_id": "y5-15",
+    "code": "Y5.5",
+    "cite_as": "Damon, W., Menon, J., & Bronk, K. C. (2003). The development of purpose during adolescence. Applied Developmental Science, 7(3), 119-128.",
+    "claimed_component": "Definition: 'Purpose is a stable and generalized intention to accomplish something that is at once meaningful to the self and of consequence to the world beyond the self'; supports Y5.5 sense of purpose",
+    "url": "https://coa.stanford.edu/sites/default/files/devofpurpose_0.pdf"
+  },
+  {
+    "claim_id": "y6-01",
+    "code": "Y6.3",
+    "cite_as": "Watts, R. J., Diemer, M. A., & Voight, A. M. (2011). Critical consciousness: Current status and future directions. New Directions for Child and Adolescent Development, 134, 43-57.",
+    "claimed_component": "Critical reflection (social analysis and moral rejection of societal inequities) and critical action (individual or collective action to change society): analyzing inequity and acting against injustice",
+    "url": "https://spherelab.psych.ucla.edu/wp-content/uploads/sites/301/2023/03/Critical-consciousness-Current-status-and-future-directions.pdf"
+  },
+  {
+    "claim_id": "y6-02",
+    "code": "Y6.4",
+    "cite_as": "Watts, R. J., Diemer, M. A., & Voight, A. M. (2011). Critical consciousness: Current status and future directions. New Directions for Child and Adolescent Development, 134, 43-57.",
+    "claimed_component": "Political efficacy (perceived capacity to effect social and political change): civic efficacy, believing one can influence community decisions",
+    "url": "https://spherelab.psych.ucla.edu/wp-content/uploads/sites/301/2023/03/Critical-consciousness-Current-status-and-future-directions.pdf"
+  },
+  {
+    "claim_id": "y6-03",
+    "code": "Y6.4",
+    "cite_as": "Search Institute, 40 Developmental Assets",
+    "claimed_component": "Empowerment asset, Youth as resources (young people given useful roles in the community): youth councils and advisory roles",
+    "url": "https://searchinstitute.org/resources-hub/developmental-assets-framework"
+  },
+  {
+    "claim_id": "y6-04",
+    "code": "Y6.5",
+    "cite_as": "Search Institute, 40 Developmental Assets",
+    "claimed_component": "Empowerment asset, Service to others (serves in the community one hour or more per week): community service",
+    "url": "https://searchinstitute.org/resources-hub/developmental-assets-framework"
+  },
+  {
+    "claim_id": "y6-05",
+    "code": "Y6.6",
+    "cite_as": "UNESCO, in co-operation with UNEP (1978). Intergovernmental Conference on Environmental Education, Tbilisi (USSR), 14-26 October 1977: Final Report (ED/MD/49).",
+    "claimed_component": "Recommendation No. 2, categories of environmental education objectives: Awareness (sensitivity to the total environment) and Attitudes (values and feelings of concern for the environment): connection to nature",
+    "url": "https://gdrc.org/uem/ee/EE-Tbilisi_1977.pdf"
+  },
+  {
+    "claim_id": "y6-06",
+    "code": "Y6.7",
+    "cite_as": "ISTE (2024). ISTE Standards for Students.",
+    "claimed_component": "Standard 1.2 Digital Citizen, indicators 1.2.d Digital Privacy and 1.2.b Online Interactions: protecting personal data and security online, respectful online conduct",
+    "url": "https://iste.org/standards/students"
+  },
+  {
+    "claim_id": "y6-07",
+    "code": "Y6.1",
+    "cite_as": "VIA Institute on Character, VIA Classification of Character Strengths",
+    "claimed_component": "Forgiveness (virtue of Temperance): forgiveness as a character trait",
+    "url": "https://www.viacharacter.org/character-strengths"
+  },
+  {
+    "claim_id": "y7-01",
+    "code": "Y7.1",
+    "cite_as": "Carl D. Perkins Career and Technical Education Act (Perkins V, Pub. L. 115-224), 20 U.S.C. 2302(5)(D)",
+    "claimed_component": "Definition of career and technical education, (5)(D): may include career exploration at the high school level or as early as the middle grades; supports Y7.1 career exploration",
+    "url": "https://www.govinfo.gov/link/uscode/20/2302"
+  },
+  {
+    "claim_id": "y7-02",
+    "code": "Y7.1",
+    "cite_as": "Carl D. Perkins Career and Technical Education Act (Perkins V, Pub. L. 115-224), 20 U.S.C. 2302(7)(A)",
+    "claimed_component": "Career guidance and academic counseling, (7)(A): information regarding career awareness exploration opportunities and planning with respect to an individual's occupational and academic future; supports Y7.1 career awareness and planning toward a career field",
+    "url": "https://www.govinfo.gov/link/uscode/20/2302"
+  },
+  {
+    "claim_id": "y7-03",
+    "code": "Y7.1",
+    "cite_as": "U.S. Department of Labor, WIOA Title I youth program elements, 20 CFR 681.460(a)(13)",
+    "claimed_component": "Program element 13: labor market and employment information about in-demand industry sectors or occupations, such as career awareness, career counseling, and career exploration services; supports Y7.1",
+    "url": "https://www.ecfr.gov/current/title-20/chapter-V/part-681/subpart-C/section-681.460"
+  },
+  {
+    "claim_id": "y7-04",
+    "code": "Y7.2",
+    "cite_as": "Carl D. Perkins Career and Technical Education Act (Perkins V, Pub. L. 115-224), 20 U.S.C. 2302(7)(B)",
+    "claimed_component": "Career guidance and academic counseling, (7)(B): information on career options, financial aid, job training, secondary and postsecondary options; supports Y7.2 knowledge of college and work transition steps",
+    "url": "https://www.govinfo.gov/link/uscode/20/2302"
+  },
+  {
+    "claim_id": "y7-05",
+    "code": "Y7.2",
+    "cite_as": "U.S. Department of Labor, WIOA Title I youth program elements, 20 CFR 681.460(a)(14)",
+    "claimed_component": "Program element 14: activities that help youth prepare for and transition to postsecondary education and training; supports Y7.2",
+    "url": "https://www.ecfr.gov/current/title-20/chapter-V/part-681/subpart-C/section-681.460"
+  },
+  {
+    "claim_id": "y7-06",
+    "code": "Y7.3",
+    "cite_as": "Workforce Innovation and Opportunity Act (2014), sec. 203(17), 29 U.S.C. 3272(17), workforce preparation activities",
+    "claimed_component": "Workforce preparation activities: acquire basic academic, critical thinking, digital literacy and self-management skills, including working with others, for transition into postsecondary education or training, or employment; supports Y7.3 digital literacy as a work-readiness skill",
+    "url": "https://www.govinfo.gov/link/uscode/29/3272"
+  },
+  {
+    "claim_id": "y7-07",
+    "code": "Y7.3",
+    "cite_as": "Casey Family Programs, Casey Life Skills Toolkit (v1.4, 2022)",
+    "claimed_component": "Life skill areas list: computer literacy and online safety; supports Y7.3 everyday digital skills for daily life",
+    "url": "https://www.casey.org/casey-life-skills/"
+  },
+  {
+    "claim_id": "y7-08",
+    "code": "Y7.4",
+    "cite_as": "Carl D. Perkins Career and Technical Education Act (Perkins V, Pub. L. 115-224), 20 U.S.C. 2302(5)(A)(ii) and (5)(B)",
+    "claimed_component": "Definition of career and technical education: provides technical skill proficiency or a recognized postsecondary credential; includes competency-based, work-based, or other applied learning; supports Y7.4 technical skills, credentials and work-based learning",
+    "url": "https://www.govinfo.gov/link/uscode/20/2302"
+  },
+  {
+    "claim_id": "y7-09",
+    "code": "Y7.4",
+    "cite_as": "U.S. Department of Labor, WIOA Title I youth program elements, 20 CFR 681.460(a)(3)-(4)",
+    "claimed_component": "Program elements 3 and 4: paid and unpaid work experiences including pre-apprenticeship programs, internships and job shadowing; occupational skill training leading to recognized postsecondary credentials; supports Y7.4",
+    "url": "https://www.ecfr.gov/current/title-20/chapter-V/part-681/subpart-C/section-681.460"
+  },
+  {
+    "claim_id": "y7-10",
+    "code": "Y7.4",
+    "cite_as": "U.S. Department of Labor, WIOA youth entrepreneurial skills training, 20 CFR 681.560",
+    "claimed_component": "Entrepreneurial skills training provides the basics of starting and operating a small business (taking initiative, finding business opportunities, budgeting, raising capital, marketing oneself and one's ideas); supports Y7.4 entrepreneurship skills",
+    "url": "https://www.ecfr.gov/current/title-20/chapter-V/part-681/subpart-C/section-681.560"
+  },
+  {
+    "claim_id": "y7-11",
+    "code": "Y7.5",
+    "cite_as": "Rehabilitation Act of 1973, as amended by WIOA, 29 U.S.C. 705(5), competitive integrated employment",
+    "claimed_component": "Definition of competitive integrated employment: work performed on a full-time or part-time basis (including self-employment); supports Y7.5 include term competitive integrated employment",
+    "url": "https://www.law.cornell.edu/uscode/text/29/705"
+  },
+  {
+    "claim_id": "y7-12",
+    "code": "Y7.6",
+    "cite_as": "U.S. Department of Labor, WIOA youth financial literacy education, 20 CFR 681.500",
+    "claimed_component": "Financial literacy education activities: creating budgets, opening bank accounts, managing spending, credit and debt, understanding credit reports; supports Y7.6 for youth",
+    "url": "https://www.ecfr.gov/current/title-20/chapter-V/part-681/subpart-C/section-681.500"
+  },
+  {
+    "claim_id": "y7-13",
+    "code": "Y7.7",
+    "cite_as": "Casey Family Programs, Casey Life Skills Toolkit (v1.4, 2022)",
+    "claimed_component": "Scope statement: can be used by all youth (ages 14-21) regardless of whether they are in foster care; life skill area daily living and self-care activities; supports Y7.7 daily living skills for any young person",
+    "url": "https://www.casey.org/casey-life-skills/"
+  },
+  {
+    "claim_id": "y7-14",
+    "code": "Y7.7",
+    "cite_as": "Casey Family Programs (2021), Casey Life Skills Practitioner's Guide",
+    "claimed_component": "Assessments appropriate for all youth ages 14 to 21 regardless of living circumstances; Daily Living (healthy meal planning, home maintenance); Housing, Money Management and Transportation (access to reliable transportation); Work and Study (time management); supports Y7.7 cooking, transportation, scheduling",
+    "url": "https://www.maine.gov/doe/sites/maine.gov.doe/files/2023-01/CLS%20Practitioners%20Guide.pdf"
+  },
+  {
+    "claim_id": "y7-15",
+    "code": "Y7.7",
+    "cite_as": "Individuals with Disabilities Education Act regulations, 34 CFR 300.43(a)(2)(v), transition services",
+    "claimed_component": "Transition services include, if appropriate, acquisition of daily living skills; supports Y7.7 daily living skills in the education sector",
+    "url": "https://www.ecfr.gov/current/title-34/subtitle-B/chapter-III/part-300/subpart-A/subject-group-ECFR4c0b2a4a4b7d4d5/section-300.43"
+  },
+  {
+    "claim_id": "y7-16",
+    "code": "Y7.7",
+    "cite_as": "Rehabilitation Act of 1973, as amended by WIOA, 29 U.S.C. 733(b)(4), pre-employment transition services",
+    "claimed_component": "Required activity: workplace readiness training to develop social skills and independent living; supports Y7.7 independent living skills",
+    "url": "https://www.law.cornell.edu/uscode/text/29/733"
+  },
+  {
+    "claim_id": "y7-17",
+    "code": "Y7.7",
+    "cite_as": "National Association of State Administrators of Family and Consumer Sciences (NASAFACS) (2018), FCS National Standards 3.0",
+    "claimed_component": "Content standard 14.3.3: select, store, prepare, and serve nutritious food; content standard 2.1.1: apply time management, organizational, and process skills to prioritize tasks; supports Y7.7 cooking and scheduling",
+    "url": "https://portal.ct.gov/-/media/sde/cte/national_standards_for_fcs.pdf"
+  },
+  {
+    "claim_id": "y7-18",
+    "code": "Y7.7",
+    "cite_as": "Social Security Act sec. 475(5)(I), 42 U.S.C. 675(5)(I)",
+    "claimed_component": "A child leaving foster care at 18 or older receives an official or certified copy of the U.S. birth certificate, a Social Security card, and a driver's license or state identification card; supports Y7.7 obtaining vital documents",
+    "url": "https://www.law.cornell.edu/uscode/text/42/675"
+  }
+]

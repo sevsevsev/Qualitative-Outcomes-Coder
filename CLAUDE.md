@@ -46,6 +46,11 @@ Read these before touching any codebook:
   applies the edge-case review: attendance thresholds and inclusion alongside peers go to A2.5
   and A2.4, college visits to Y7.2, everyday digital skills to Y7.3/F1.6. Enum +0. It awaits
   two live design-set runs before approval.
+- 3.2.1 (drafted as 3.1.5; 2026-10-16 research review, land-now parts of CP-11-01..CP-12-32) changes the registry,
+  `basis`, fidelity labels, DEVIATIONS.md and CONFUSIONS.md only; the coding prompt is byte-identical.
+  Y8 is over the S4.9 drift line (5 of 13), so its anchor frameworks are re-reviewed before any
+  further Y8 change. Prompt-text parts wait for one live design-set gate after PRs #62 and #66.
+  Details: `codebook-refinement/research-review/2026-10-16/full-review/applied-3.1.5.md`.
 - `codebooks/original.ts` (2.5.x) was retired on 2026-09-26: no picker offers it, but it stays registered (marked `deprecated`) so saved sessions, old exports, eval scripts and direct Codebook-tab links still resolve its codes. Older files may use
   pre-2.0.0 numbers; see `codebook-refinement/renumbering/`.
 - A public explorer-only site is built from this repo with `VITE_SITE=explorer` (README,

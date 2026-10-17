@@ -1,0 +1,114 @@
+[
+  {
+    "claim_id": "y1-mindsets-02",
+    "code": "Y1.11",
+    "cite_as": "Conley, D. T. (2007). Redefining College Readiness. Educational Policy Improvement Center.",
+    "claimed_component": "Academic Behaviors: self-monitoring as a form of metacognition, and study skills (time management, preparing for and taking examinations, taking class notes), supporting Y1.11 named study techniques and metacognition",
+    "url": "https://files.eric.ed.gov/fulltext/ED539251.pdf"
+  },
+  {
+    "claim_id": "y1-mindsets-03",
+    "code": "Y1.11",
+    "cite_as": "Pashler, H., Bain, P. M., Bottge, B. A., Graesser, A., Koedinger, K., McDaniel, M., & Metcalfe, J. (2007). Organizing Instruction and Study to Improve Student Learning (NCER 2007-2004). National Center for Education Research, Institute of Education Sciences, U.S. Department of Education.",
+    "claimed_component": "Recommendation 5 'Use quizzing to promote learning' and Recommendation 6 'Help students allocate study time efficiently' (identifying what material is known and what needs further study), supporting Y1.11 self-quizzing and metacognitive monitoring (partial: framed as teacher practice)",
+    "url": "https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/20072004.pdf"
+  },
+  {
+    "claim_id": "y1-mindsets-04",
+    "code": "Y1.12",
+    "cite_as": "Halpern, D. F., Aronson, J., Reimer, N., Simpkins, S., Star, J. R., & Wentzel, K. (2007). Encouraging Girls in Math and Science (NCER 2007-2003). National Center for Education Research, Institute of Education Sciences, U.S. Department of Education.",
+    "claimed_component": "Recommendation 1 'Teach students that academic abilities are expandable and improvable', supporting Y1.12 growth mindset about academic ability (partial: math and science focus)",
+    "url": "https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/20072003.pdf"
+  },
+  {
+    "claim_id": "y1-mindsets-05",
+    "code": "Y1.9",
+    "cite_as": "Farrington, C. A., Roderick, M., Allensworth, E., Nagaoka, J., Keyes, T. S., Johnson, D. W., & Beechum, N. O. (2012). Teaching Adolescents to Become Learners: The Role of Noncognitive Factors in Shaping School Performance: A Critical Literature Review. University of Chicago Consortium on Chicago School Research.",
+    "claimed_component": "Title page: exact title, author order, publisher name as printed ('University of Chicago Consortium on Chicago School Research') and date (June 2012); corrected attribution for the farrington-2012 entry used by Y1.9, Y1.10, Y1.11 and Y1.12",
+    "url": "https://files.eric.ed.gov/fulltext/ED542543.pdf"
+  },
+  {
+    "claim_id": "y1-taxonomy-01",
+    "code": "Y1.8",
+    "cite_as": "National Academies of Sciences, Engineering, and Medicine (2019). Monitoring Educational Equity. Washington, DC: The National Academies Press.",
+    "claimed_component": "Domain A Kindergarten Readiness, Indicator 1 'Disparities in Academic Readiness' (reading/literacy and numeracy/math skills at kindergarten entry): supports early literacy, numeracy and kindergarten readiness for children below kindergarten age.",
+    "url": "https://www.nationalacademies.org/read/25389/chapter/6"
+  },
+  {
+    "claim_id": "y1-taxonomy-02",
+    "code": "Y1.15",
+    "cite_as": "National Academies of Sciences, Engineering, and Medicine (2019). Monitoring Educational Equity. Washington, DC: The National Academies Press.",
+    "claimed_component": "Domain B, Indicator 4 'Disparities in Performance in Coursework' (success in classes, accumulating credits, grades/GPA): supports course grades, GPA, course passing and credit accumulation.",
+    "url": "https://www.nationalacademies.org/read/25389/chapter/2"
+  },
+  {
+    "claim_id": "y1-taxonomy-03",
+    "code": "Y1.15",
+    "cite_as": "National Academies of Sciences, Engineering, and Medicine (2019). Monitoring Educational Equity. Washington, DC: The National Academies Press.",
+    "claimed_component": "Domain B, Indicator 5 'Disparities in Performance on Tests' (achievement and learning growth): supports test-score achievement as a student outcome indicator, including achievement stated without a subject.",
+    "url": "https://www.nationalacademies.org/read/25389/chapter/2"
+  },
+  {
+    "claim_id": "y1-taxonomy-04",
+    "code": "Y1",
+    "cite_as": "National Academies of Sciences, Engineering, and Medicine (2019). Monitoring Educational Equity. Washington, DC: The National Academies Press.",
+    "claimed_component": "Student-outcome Domains A (Kindergarten Readiness), B (K-12 Learning and Engagement) and C (Educational Attainment), Indicators 1-7: supports Y1's grouping of demonstrated learning, engagement, and progress and attainment as one academic domain.",
+    "url": "https://www.nationalacademies.org/read/25389/chapter/2"
+  },
+  {
+    "claim_id": "y1-taxonomy-05",
+    "code": "Y1.9",
+    "cite_as": "U.S. Department of Education, Nita M. Lowey 21st Century Community Learning Centers (Title IV, Part B), Government Performance and Results Act (GPRA) Measure Indicators.",
+    "claimed_component": "GPRA measure 'Engagement in Learning': percentage of students in grades 1-5 who demonstrated an improvement in teacher-reported engagement in learning; supports observable engagement in schoolwork as an outcome.",
+    "url": "https://www.ed.gov/grants-and-programs/formula-grants/school-improvement-grants/nita-m-lowey-21st-century-community-learning-centers-title-iv-part-b"
+  },
+  {
+    "claim_id": "y1-taxonomy-06",
+    "code": "Y1.9",
+    "cite_as": "Elementary and Secondary Education Act as amended by the Every Student Succeeds Act, 20 U.S.C. 6311(c)(4)(B)(v)(II).",
+    "claimed_component": "Indicator of school quality or student success, measure 'student engagement': supports student engagement as an accountability-level outcome.",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm"
+  },
+  {
+    "claim_id": "y1-taxonomy-07",
+    "code": "Y1.16",
+    "cite_as": "Elementary and Secondary Education Act as amended by the Every Student Succeeds Act, 20 U.S.C. 6311(c)(4)(B)(v)(II).",
+    "claimed_component": "Indicator of school quality or student success, measure 'student access to and completion of advanced coursework': supports enrolling in and completing advanced courses.",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title20/html/USCODE-2023-title20-chap70-subchapI-partA-subpart1-sec6311.htm"
+  },
+  {
+    "claim_id": "y1-taxonomy-08",
+    "code": "Y1.15",
+    "cite_as": "U.S. Department of Education, Nita M. Lowey 21st Century Community Learning Centers (Title IV, Part B), Government Performance and Results Act (GPRA) Measure Indicators.",
+    "claimed_component": "GPRA measure 'Grade Point Average': percentage of students in grades 7-8 and 10-12 who demonstrated an improved GPA; supports GPA as an outcome.",
+    "url": "https://www.ed.gov/grants-and-programs/formula-grants/school-improvement-grants/nita-m-lowey-21st-century-community-learning-centers-title-iv-part-b"
+  },
+  {
+    "claim_id": "y1-taxonomy-09",
+    "code": "Y1.9",
+    "cite_as": "Fredricks, J. A., Blumenfeld, P. C., & Paris, A. H. (2004). School engagement: Potential of the concept, state of the evidence. Review of Educational Research, 74(1), 59-109.",
+    "claimed_component": "Three dimensions of school engagement (behavioral, emotional, cognitive): supports behavioral engagement as Y1.9 and the Y1.9 vs Y3.1 boundary for emotional engagement or connectedness.",
+    "url": "https://journals.sagepub.com/doi/10.3102/00346543074001059"
+  },
+  {
+    "claim_id": "y1-taxonomy-10",
+    "code": "Y1 category B",
+    "cite_as": "Nagaoka, J., Farrington, C. A., Ehrlich, S. B., & Heath, R. D. (2015). Foundations for Young Adult Success: A Developmental Framework. Chicago: The University of Chicago Consortium on Chicago School Research.",
+    "claimed_component": "Foundational components 'Mindsets' and 'Self-Regulation' as distinct from 'Knowledge and Skills': supports separating learning mindsets and behaviors (category B) from demonstrated learning (category A).",
+    "url": "https://wallacefoundation.org/report/developmental-framework-young-adult-success"
+  },
+  {
+    "claim_id": "y1-taxonomy-11",
+    "code": "Y1.13",
+    "cite_as": "U.S. Department of Education, Nita M. Lowey 21st Century Community Learning Centers (Title IV, Part B), Government Performance and Results Act (GPRA) Measure Indicators.",
+    "claimed_component": "GPRA measure 'School Day Attendance': percentage of students in grades 1-12 who demonstrated an improved attendance rate in the current school year; supports school attendance as an outcome.",
+    "url": "https://www.ed.gov/grants-and-programs/formula-grants/school-improvement-grants/nita-m-lowey-21st-century-community-learning-centers-title-iv-part-b"
+  },
+  {
+    "claim_id": "y1-taxonomy-12",
+    "code": "Y1.9",
+    "cite_as": "National Academies of Sciences, Engineering, and Medicine (2019). Monitoring Educational Equity. Washington, DC: The National Academies Press.",
+    "claimed_component": "Domain B, Indicator 3 'Disparities in Engagement in Schooling' (attendance/absenteeism and academic engagement, a multidimensional construct with behavioral, emotional and cognitive components): supports academic engagement as an outcome.",
+    "url": "https://www.nationalacademies.org/read/25389/chapter/6"
+  }
+]

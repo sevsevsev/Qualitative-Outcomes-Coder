@@ -1,0 +1,1677 @@
+[
+ {
+  "sid": "R001",
+  "outcomes": [
+   {
+    "text": "Strengthens educator capacity",
+    "code": "A1.1",
+    "confidence": "medium"
+   },
+   {
+    "text": "Strengthens caregiver capacity",
+    "code": "F1 (domain only)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "A1.2",
+  "codebook_issue": "",
+  "rationale": "Two subjects; caregiver capacity names Part F parenting area but no specific result."
+ },
+ {
+  "sid": "R002",
+  "outcomes": [
+   {
+    "text": "Collegians returning to college after first year",
+    "code": "Y1.18",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "College persistence is named in Y1.18."
+ },
+ {
+  "sid": "R003",
+  "outcomes": [
+   {
+    "text": "Increase student confidence in classroom",
+    "code": "Y1.12",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y5.4",
+  "codebook_issue": "",
+  "rationale": "Confidence tied to classroom reads as academic confidence."
+ },
+ {
+  "sid": "R004",
+  "outcomes": [
+   {
+    "text": "Awareness of anger triggers and emotional responses",
+    "code": "Y4.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y4.2",
+  "codebook_issue": "",
+  "rationale": "Recognizing own emotions and triggers."
+ },
+ {
+  "sid": "R005",
+  "outcomes": [
+   {
+    "text": "Increased confidence in public speaking and debate",
+    "code": "Y4.6",
+    "confidence": "medium"
+   },
+   {
+    "text": "Increased confidence in team leadership",
+    "code": "Y4.7",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y5.4",
+  "codebook_issue": "",
+  "rationale": "Confidence in named skills; coded to the skill areas."
+ },
+ {
+  "sid": "R006",
+  "outcomes": [
+   {
+    "text": "Improved attitude about reading",
+    "code": "Y1.12",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y2.3",
+  "codebook_issue": "Reading attitude/motivation has no clear home; Y1.1 excludes it, Y1.12 is self-beliefs.",
+  "rationale": "Beliefs about reading as a learner; nearest Y1.12."
+ },
+ {
+  "sid": "R007",
+  "outcomes": [
+   {
+    "text": "Alumni can identify an industry-related peer who can support them",
+    "code": "Y3.5",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y3.3",
+  "codebook_issue": "",
+  "rationale": "Professional network contact who helps with a goal."
+ },
+ {
+  "sid": "R008",
+  "outcomes": [
+   {
+    "text": "Increase high school graduation rates",
+    "code": "Y1.17",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Graduation."
+ },
+ {
+  "sid": "R009",
+  "outcomes": [
+   {
+    "text": "Competency in Music",
+    "code": "Y1.6",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y2.5",
+  "codebook_issue": "",
+  "rationale": "Music skill gain."
+ },
+ {
+  "sid": "R010",
+  "outcomes": [
+   {
+    "text": "Girls have a more physically active lifestyle",
+    "code": "Y8.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y8.2",
+  "codebook_issue": "",
+  "rationale": "Physical activity."
+ },
+ {
+  "sid": "R011",
+  "outcomes": [
+   {
+    "text": "Campus improvements promoting outdoor experiences",
+    "code": "A2.3",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "A2.1",
+  "codebook_issue": "",
+  "rationale": "Facility change by organization; forced fit."
+ },
+ {
+  "sid": "R012",
+  "outcomes": [
+   {
+    "text": "Ability to identify and speak about emotions",
+    "code": "Y4.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y4.6",
+  "codebook_issue": "",
+  "rationale": "Identifying and naming emotions."
+ },
+ {
+  "sid": "R013",
+  "outcomes": [
+   {
+    "text": "Increased literacy rates",
+    "code": "Y1.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Literacy gain."
+ },
+ {
+  "sid": "R014",
+  "outcomes": [
+   {
+    "text": "Declines in absenteeism",
+    "code": "Y1.13",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "A2.5",
+  "codebook_issue": "",
+  "rationale": "Absenteeism assumed school."
+ },
+ {
+  "sid": "R015",
+  "outcomes": [
+   {
+    "text": "Creative outlet for artistic students",
+    "code": "Y2.5",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "A2.3",
+  "codebook_issue": "",
+  "rationale": "Self-expression experience; phrased as opportunity."
+ },
+ {
+  "sid": "R016",
+  "outcomes": [
+   {
+    "text": "Enhanced comfort in school community",
+    "code": "Y3.1",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "F1.8",
+  "codebook_issue": "",
+  "rationale": "Feeling accepted in school community."
+ },
+ {
+  "sid": "R017",
+  "outcomes": [
+   {
+    "text": "Audition for dance companies, jobs",
+    "code": "Y7.2",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "Y2.6",
+  "codebook_issue": "No clear code for auditioning/applying in arts careers.",
+  "rationale": "Applying for arts jobs; forced fit."
+ },
+ {
+  "sid": "R018",
+  "outcomes": [
+   {
+    "text": "Improved critical thinking skills",
+    "code": "Y1.7",
+    "confidence": "medium"
+   },
+   {
+    "text": "Improved problem-solving and decision-making",
+    "code": "Y4.10",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y4.10",
+  "codebook_issue": "Generic critical thinking spans Y1.7 (academic) and Y4.10.",
+  "rationale": "Named skills split."
+ },
+ {
+  "sid": "R019",
+  "outcomes": [
+   {
+    "text": "Increased sense of pride in work/accomplishments",
+    "code": "Y5.4",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y2.1",
+  "codebook_issue": "",
+  "rationale": "Self-worth from accomplishment."
+ },
+ {
+  "sid": "R020",
+  "outcomes": [
+   {
+    "text": "Teachers aware of how HG resources help meet teaching goals",
+    "code": "A1.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Staff knowledge."
+ },
+ {
+  "sid": "R021",
+  "outcomes": [
+   {
+    "text": "Build students' collaboration and teamwork skills",
+    "code": "Y4.7",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Teamwork."
+ },
+ {
+  "sid": "R022",
+  "outcomes": [
+   {
+    "text": "Students think about what to do after high school",
+    "code": "Y5.5",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y7.1",
+  "codebook_issue": "",
+  "rationale": "Future orientation and aspirations."
+ },
+ {
+  "sid": "R023",
+  "outcomes": [
+   {
+    "text": "-20% disciplinary incidents, referral tracking",
+    "code": "Y1.14",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y8.12",
+  "codebook_issue": "",
+  "rationale": "Office referrals."
+ },
+ {
+  "sid": "R024",
+  "outcomes": [
+   {
+    "text": "Increased interest in STEAM-related electives",
+    "code": "Y2.3",
+    "confidence": "medium"
+   },
+   {
+    "text": "Increased interest in STEAM career pathways",
+    "code": "Y7.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y1.16",
+  "codebook_issue": "",
+  "rationale": "Subject interest vs career interest."
+ },
+ {
+  "sid": "R025",
+  "outcomes": [
+   {
+    "text": "Students grow in self-confidence",
+    "code": "Y5.4",
+    "confidence": "high"
+   },
+   {
+    "text": "Sense of identity",
+    "code": "Y5.1",
+    "confidence": "medium"
+   },
+   {
+    "text": "Ability to self-regulate",
+    "code": "Y4.2",
+    "confidence": "high"
+   },
+   {
+    "text": "Ability to express emotions",
+    "code": "Y4.1",
+    "confidence": "medium"
+   },
+   {
+    "text": "Growth mindset",
+    "code": "Y5.4",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y5.1",
+  "codebook_issue": "",
+  "rationale": "List of named skills split and coded."
+ },
+ {
+  "sid": "R026",
+  "outcomes": [
+   {
+    "text": "Academic persistence & retention (grade-to-grade transition)",
+    "code": "Y1.15",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y1.10",
+  "codebook_issue": "",
+  "rationale": "Promotion is on-track status."
+ },
+ {
+  "sid": "R027",
+  "outcomes": [
+   {
+    "text": "Students set two goals",
+    "code": "Y4.3",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "A2.5",
+  "codebook_issue": "",
+  "rationale": "Goal-setting; count framing."
+ },
+ {
+  "sid": "R028",
+  "outcomes": [
+   {
+    "text": "Students increase knowledge of design and discipline",
+    "code": "Y1.6",
+    "confidence": "low"
+   },
+   {
+    "text": "Teachers increase knowledge of design and discipline",
+    "code": "A1.1",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y1.4",
+  "codebook_issue": "'Design and discipline' ambiguous; art form not named.",
+  "rationale": "Two subjects; assumed arts design knowledge."
+ },
+ {
+  "sid": "R029",
+  "outcomes": [
+   {
+    "text": "Health literacy",
+    "code": "Y8.3",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y8.1",
+  "codebook_issue": "",
+  "rationale": "Health knowledge."
+ },
+ {
+  "sid": "R030",
+  "outcomes": [
+   {
+    "text": "Readiness for STEM Pathways",
+    "code": "Y7 (domain only)",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y1.4",
+  "codebook_issue": "",
+  "rationale": "Names career readiness area, no specific result."
+ },
+ {
+  "sid": "R031",
+  "outcomes": [
+   {
+    "text": "Quality programming leading to exemplary culminating events",
+    "code": "A2.1",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "A2.5",
+  "codebook_issue": "",
+  "rationale": "Program quality."
+ },
+ {
+  "sid": "R032",
+  "outcomes": [
+   {
+    "text": "Awareness of career pathways and industries",
+    "code": "Y7.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Career awareness."
+ },
+ {
+  "sid": "R033",
+  "outcomes": [
+   {
+    "text": "Students increase usage of literacy strategies",
+    "code": "Y1.11",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y1.1",
+  "codebook_issue": "",
+  "rationale": "Using learning strategies for reading."
+ },
+ {
+  "sid": "R034",
+  "outcomes": [
+   {
+    "text": "Learn about career options related to world affairs",
+    "code": "Y7.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y1.5",
+  "codebook_issue": "",
+  "rationale": "Career exploration."
+ },
+ {
+  "sid": "R035",
+  "outcomes": [
+   {
+    "text": "Students develop skills in STEM",
+    "code": "Y1.4",
+    "confidence": "high"
+   },
+   {
+    "text": "Students develop confidence in STEM",
+    "code": "Y1.12",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y5.3",
+  "codebook_issue": "",
+  "rationale": "Skill gain and academic confidence split."
+ },
+ {
+  "sid": "R036",
+  "outcomes": [
+   {
+    "text": "Students are engaged with their education",
+    "code": "Y1.9",
+    "confidence": "medium"
+   },
+   {
+    "text": "Positive self-perception",
+    "code": "Y5.4",
+    "confidence": "medium"
+   },
+   {
+    "text": "Self-confident learners",
+    "code": "Y1.12",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y2.1",
+  "codebook_issue": "",
+  "rationale": "Three distinct results."
+ },
+ {
+  "sid": "R037",
+  "outcomes": [
+   {
+    "text": "Promotion of healthy choices in school cafeteria",
+    "code": "A3.1",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "A2.1",
+  "codebook_issue": "",
+  "rationale": "Institutional practice change; forced."
+ },
+ {
+  "sid": "R038",
+  "outcomes": [
+   {
+    "text": "Use of healthy coping strategies",
+    "code": "Y4.2",
+    "confidence": "high"
+   },
+   {
+    "text": "Use of decision-making strategies",
+    "code": "Y4.10",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Two named skills."
+ },
+ {
+  "sid": "R039",
+  "outcomes": [
+   {
+    "text": "Reduction in trauma-related behaviors",
+    "code": "Y8.8",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y8.6",
+  "codebook_issue": "",
+  "rationale": "Trauma-related behaviors; healing vs symptoms."
+ },
+ {
+  "sid": "R040",
+  "outcomes": [
+   {
+    "text": "Improved teamwork and collaboration",
+    "code": "Y4.7",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Teamwork."
+ },
+ {
+  "sid": "R041",
+  "outcomes": [
+   {
+    "text": "See artistic careers as potential pathway",
+    "code": "Y7.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y5.3",
+  "codebook_issue": "",
+  "rationale": "Career aspiration in field."
+ },
+ {
+  "sid": "R042",
+  "outcomes": [
+   {
+    "text": "Awareness around healthy lifestyles",
+    "code": "Y8.3",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y8.1",
+  "codebook_issue": "",
+  "rationale": "Health knowledge."
+ },
+ {
+  "sid": "R043",
+  "outcomes": [
+   {
+    "text": "Decrease in conflict with peers",
+    "code": "Y4.8",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y8.12",
+  "codebook_issue": "Reduced conflict incidence: Y4.8 (skill) vs Y8.12 (fights) unclear.",
+  "rationale": "Interpersonal conflict, not violence."
+ },
+ {
+  "sid": "R044",
+  "outcomes": [
+   {
+    "text": "Confidence in tech and innovation",
+    "code": "Y1.12",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y5.4",
+  "codebook_issue": "",
+  "rationale": "Confidence in a learning domain."
+ },
+ {
+  "sid": "R045",
+  "outcomes": [
+   {
+    "text": "Students meet 100% of repertory requirements",
+    "code": "Y1.6",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y1.15",
+  "codebook_issue": "",
+  "rationale": "Assessed artistic proficiency."
+ },
+ {
+  "sid": "R046",
+  "outcomes": [
+   {
+    "text": "Students gain workplace/career exposure",
+    "code": "Y7.1",
+    "confidence": "high"
+   },
+   {
+    "text": "Build positive relationship with a mentor",
+    "code": "Y3.2",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y7.3",
+  "codebook_issue": "",
+  "rationale": "Two results."
+ },
+ {
+  "sid": "R047",
+  "outcomes": [
+   {
+    "text": "Improved emotional regulation and coping",
+    "code": "Y4.2",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Regulation."
+ },
+ {
+  "sid": "R048",
+  "outcomes": [
+   {
+    "text": "Positive emotional connections to animal ambassadors",
+    "code": "Y6.6",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "Y2.1",
+  "codebook_issue": "",
+  "rationale": "Connection to nature; forced."
+ },
+ {
+  "sid": "R049",
+  "outcomes": [
+   {
+    "text": "Follow a recipe and stay organized in the kitchen",
+    "code": "Y7.7",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y8.1",
+  "codebook_issue": "",
+  "rationale": "Cooking daily living skill."
+ },
+ {
+  "sid": "R050",
+  "outcomes": [
+   {
+    "text": "Begin participating in wellness activities",
+    "code": "Y8.1",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y2.6",
+  "codebook_issue": "",
+  "rationale": "Health behavior participation."
+ },
+ {
+  "sid": "R051",
+  "outcomes": [
+   {
+    "text": "Youth embrace cycling for health, sport, transportation",
+    "code": "Y8.1",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y2.6",
+  "codebook_issue": "",
+  "rationale": "Physical activity habit."
+ },
+ {
+  "sid": "R052",
+  "outcomes": [
+   {
+    "text": "In a community of support to pursue future dreams",
+    "code": "Y3.1",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "Y3.5",
+  "codebook_issue": "",
+  "rationale": "Supportive community; vague."
+ },
+ {
+  "sid": "R053",
+  "outcomes": [
+   {
+    "text": "Goal clarity and motivation toward future planning",
+    "code": "Y4.3",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y5.5",
+  "codebook_issue": "",
+  "rationale": "Goal setting."
+ },
+ {
+  "sid": "R054",
+  "outcomes": [
+   {
+    "text": "Have checklists and tools for entering the workforce",
+    "code": "Y7.2",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "A2.3",
+  "codebook_issue": "",
+  "rationale": "Transition knowledge/tools."
+ },
+ {
+  "sid": "R055",
+  "outcomes": [
+   {
+    "text": "Opportunities for creative expression",
+    "code": "Y2.5",
+    "confidence": "medium"
+   },
+   {
+    "text": "Build skill to achieve their vision",
+    "code": "Y1.6",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Expression and skill gain split."
+ },
+ {
+  "sid": "R056",
+  "outcomes": [
+   {
+    "text": "Participate in Mural Arts pipeline through high school and beyond",
+    "code": "Y2.6",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y2.3",
+  "codebook_issue": "",
+  "rationale": "Continued participation."
+ },
+ {
+  "sid": "R057",
+  "outcomes": [
+   {
+    "text": "Strong and positive sense of self",
+    "code": "Y5.4",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y5.1",
+  "codebook_issue": "",
+  "rationale": "Self-worth."
+ },
+ {
+  "sid": "R058",
+  "outcomes": [
+   {
+    "text": "Educators embed practices to support transitioned ELs",
+    "code": "A1.2",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Practice change."
+ },
+ {
+  "sid": "R059",
+  "outcomes": [
+   {
+    "text": "Families have opportunities to attend live performances",
+    "code": "A2.6",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "F1.9",
+  "codebook_issue": "",
+  "rationale": "Family events offered."
+ },
+ {
+  "sid": "R060",
+  "outcomes": [
+   {
+    "text": "Ongoing academic success",
+    "code": "Y1.15",
+    "confidence": "high"
+   },
+   {
+    "text": "Critical thinking skills",
+    "code": "Y1.7",
+    "confidence": "high"
+   },
+   {
+    "text": "Health literacy skills",
+    "code": "Y8.3",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Three results."
+ },
+ {
+  "sid": "R061",
+  "outcomes": [
+   {
+    "text": "Aspire to employment outside traditional education",
+    "code": "Y7.1",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y5.5",
+  "codebook_issue": "",
+  "rationale": "Career aspiration."
+ },
+ {
+  "sid": "R062",
+  "outcomes": [
+   {
+    "text": "Confidence asking and answering questions in academic and practical settings",
+    "code": "Y1.12",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y5.4",
+  "codebook_issue": "Spans academic and general confidence.",
+  "rationale": "Academic confidence leads."
+ },
+ {
+  "sid": "R063",
+  "outcomes": [
+   {
+    "text": "Students' understanding of diversity in the artform",
+    "code": "Y1.6",
+    "confidence": "medium"
+   },
+   {
+    "text": "Partners' understanding of diversity in the artform",
+    "code": "A1.1",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "Y4.5",
+  "codebook_issue": "Partner organizations' learning has no clear code.",
+  "rationale": "Arts knowledge; partners forced."
+ },
+ {
+  "sid": "R064",
+  "outcomes": [
+   {
+    "text": "Continue to engage in the arts",
+    "code": "Y2.3",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y2.6",
+  "codebook_issue": "",
+  "rationale": "Pursuing beyond program."
+ },
+ {
+  "sid": "R065",
+  "outcomes": [
+   {
+    "text": "Awareness of diverse perspectives in history",
+    "code": "Y1.5",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y4.4",
+  "codebook_issue": "",
+  "rationale": "History content."
+ },
+ {
+  "sid": "R066",
+  "outcomes": [
+   {
+    "text": "Understanding of ability to impact their environment",
+    "code": "Y5.6",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y6.6",
+  "codebook_issue": "'Environment' ambiguous (natural vs. surroundings).",
+  "rationale": "Agency belief."
+ },
+ {
+  "sid": "R067",
+  "outcomes": [
+   {
+    "text": "Students matriculate to priority high schools",
+    "code": "Y1.15",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "Y1.16",
+  "codebook_issue": "No code for selective high school admission.",
+  "rationale": "Educational progress status; forced."
+ },
+ {
+  "sid": "R068",
+  "outcomes": [
+   {
+    "text": "Curiosity and willingness to explore new ideas",
+    "code": "Y2.2",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Curiosity."
+ },
+ {
+  "sid": "R069",
+  "outcomes": [
+   {
+    "text": "Skills to obtain/retain jobs or internships",
+    "code": "Y7.3",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y7.2",
+  "codebook_issue": "",
+  "rationale": "Employability skills."
+ },
+ {
+  "sid": "R070",
+  "outcomes": [
+   {
+    "text": "Opportunity for field trip to support science teaching",
+    "code": "A2.3",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "A1.2",
+  "codebook_issue": "",
+  "rationale": "Resource for teachers; forced."
+ },
+ {
+  "sid": "R071",
+  "outcomes": [
+   {
+    "text": "Consistent communication with teachers, caregivers",
+    "code": "Y4.6",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "F1.8",
+  "codebook_issue": "Subject unstated.",
+  "rationale": "Communication; subject unclear."
+ },
+ {
+  "sid": "R072",
+  "outcomes": [
+   {
+    "text": "Increased artistic knowledge and skills",
+    "code": "Y1.6",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Arts learning."
+ },
+ {
+  "sid": "R073",
+  "outcomes": [
+   {
+    "text": "Performance increases interest in participating in arts",
+    "code": "Y2.3",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y2.2",
+  "codebook_issue": "",
+  "rationale": "Interest in arts participation."
+ },
+ {
+  "sid": "R074",
+  "outcomes": [
+   {
+    "text": "Self-esteem through perseverance and earned success",
+    "code": "Y5.4",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Self-esteem; perseverance is means."
+ },
+ {
+  "sid": "R075",
+  "outcomes": [
+   {
+    "text": "Increased motivation to excel at activity",
+    "code": "Y2.3",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y4.3",
+  "codebook_issue": "Motivation has no explicit home.",
+  "rationale": "Deepening interest/motivation."
+ },
+ {
+  "sid": "R076",
+  "outcomes": [
+   {
+    "text": "Reverse civic apathy",
+    "code": "Y6.4",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y6 (domain only)",
+  "codebook_issue": "",
+  "rationale": "Civic participation."
+ },
+ {
+  "sid": "R077",
+  "outcomes": [
+   {
+    "text": "Collaboration across OST ecosystem",
+    "code": "A3.2",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Cross-sector partnership."
+ },
+ {
+  "sid": "R078",
+  "outcomes": [
+   {
+    "text": "Gain career-connected relationships",
+    "code": "Y3.5",
+    "confidence": "high"
+   },
+   {
+    "text": "Workplace knowledge",
+    "code": "Y7.3",
+    "confidence": "medium"
+   },
+   {
+    "text": "Expanded professional networks",
+    "code": "Y3.5",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y7.1",
+  "codebook_issue": "",
+  "rationale": "Three results."
+ },
+ {
+  "sid": "R079",
+  "outcomes": [
+   {
+    "text": "Increase in sense of identity",
+    "code": "Y5.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y5.2",
+  "codebook_issue": "",
+  "rationale": "Identity."
+ },
+ {
+  "sid": "R080",
+  "outcomes": [
+   {
+    "text": "Hone writing skills",
+    "code": "Y1.1",
+    "confidence": "high"
+   },
+   {
+    "text": "Love of writing",
+    "code": "Y2.3",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Skill and passion split."
+ },
+ {
+  "sid": "R081",
+  "outcomes": [
+   {
+    "text": "Increased GPA",
+    "code": "Y1.15",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "GPA."
+ },
+ {
+  "sid": "R082",
+  "outcomes": [
+   {
+    "text": "Arab American students empowered with knowledge of artistic cultural heritage",
+    "code": "Y5.2",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y1.6",
+  "codebook_issue": "",
+  "rationale": "Cultural identity via heritage knowledge."
+ },
+ {
+  "sid": "R083",
+  "outcomes": [
+   {
+    "text": "Higher long-term academic aspirations",
+    "code": "Y5.5",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y1.12",
+  "codebook_issue": "",
+  "rationale": "Aspirations."
+ },
+ {
+  "sid": "R084",
+  "outcomes": [
+   {
+    "text": "Lowered rates of SAD",
+    "code": "Y8.6",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Symptom reduction."
+ },
+ {
+  "sid": "R085",
+  "outcomes": [
+   {
+    "text": "Sustainable HQIM delivery",
+    "code": "A1.2",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "A2.1",
+  "codebook_issue": "",
+  "rationale": "Curriculum implementation."
+ },
+ {
+  "sid": "R086",
+  "outcomes": [
+   {
+    "text": "Increased interest in agriculture and cooking",
+    "code": "Y2.3",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y2.2",
+  "codebook_issue": "",
+  "rationale": "Interest."
+ },
+ {
+  "sid": "R087",
+  "outcomes": [
+   {
+    "text": "Sustained relationship between school and partners",
+    "code": "A3.2",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Partnership."
+ },
+ {
+  "sid": "R088",
+  "outcomes": [
+   {
+    "text": "Fluency in phonics",
+    "code": "Y1.1",
+    "confidence": "high"
+   },
+   {
+    "text": "Fluency in numeracy",
+    "code": "Y1.3",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Two subjects."
+ },
+ {
+  "sid": "R089",
+  "outcomes": [
+   {
+    "text": "Increase theatre knowledge",
+    "code": "Y1.6",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Arts knowledge."
+ },
+ {
+  "sid": "R090",
+  "outcomes": [
+   {
+    "text": "Recognize poetry/artmaking as way to regulate emotions",
+    "code": "Y4.2",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y2.5",
+  "codebook_issue": "",
+  "rationale": "Coping strategy."
+ },
+ {
+  "sid": "R091",
+  "outcomes": [
+   {
+    "text": "Understand intersections of environmental and social justice",
+    "code": "Y6.3",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y6.6",
+  "codebook_issue": "",
+  "rationale": "Systems/injustice analysis."
+ },
+ {
+  "sid": "R092",
+  "outcomes": [
+   {
+    "text": "Life science learning via student-led zebrafish research",
+    "code": "Y1.4",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y1.7",
+  "codebook_issue": "",
+  "rationale": "Science learning."
+ },
+ {
+  "sid": "R093",
+  "outcomes": [
+   {
+    "text": "Increased labor market participation and economic mobility",
+    "code": "Y7.5",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Employment; mobility alone to Y7.5."
+ },
+ {
+  "sid": "R094",
+  "outcomes": [
+   {
+    "text": "Feeling supported, seen and heard in trauma-informed spaces",
+    "code": "Y3.1",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y8.8",
+  "codebook_issue": "",
+  "rationale": "Mattering; trauma-informed is setting."
+ },
+ {
+  "sid": "R095",
+  "outcomes": [
+   {
+    "text": "Develop leadership attitudes",
+    "code": "Y4.7",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y6.4",
+  "codebook_issue": "",
+  "rationale": "Leadership, no setting."
+ },
+ {
+  "sid": "R096",
+  "outcomes": [
+   {
+    "text": "Increase access to trauma-informed art-making",
+    "code": "A2.5",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "A2.3",
+  "codebook_issue": "Program access to services has no clear code.",
+  "rationale": "Access/reach; forced."
+ },
+ {
+  "sid": "R097",
+  "outcomes": [
+   {
+    "text": "Enroll in higher education by fall after graduation",
+    "code": "Y1.18",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Postsecondary enrollment."
+ },
+ {
+  "sid": "R098",
+  "outcomes": [
+   {
+    "text": "Volunteers' utilization of community resources",
+    "code": "A1.2",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "A1.1",
+  "codebook_issue": "",
+  "rationale": "Volunteers applying practice."
+ },
+ {
+  "sid": "R099",
+  "outcomes": [
+   {
+    "text": "Work together to create Cultural Fair",
+    "code": "Y4.7",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y2.5",
+  "codebook_issue": "",
+  "rationale": "Collaboration."
+ },
+ {
+  "sid": "R100",
+  "outcomes": [
+   {
+    "text": "Youth prepared to be positive contributors",
+    "code": "Y6 (domain only)",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "none",
+  "codebook_issue": "Broad contribution; near PYD label.",
+  "rationale": "Contribution to community area, nothing specific."
+ },
+ {
+  "sid": "R101",
+  "outcomes": [
+   {
+    "text": "Arts programs integrated into school climate/safety strategies",
+    "code": "A3.1",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "A3.2",
+  "codebook_issue": "",
+  "rationale": "Institutional practice."
+ },
+ {
+  "sid": "R102",
+  "outcomes": [
+   {
+    "text": "Educators increase awareness of youth-centered learning",
+    "code": "A1.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Staff knowledge."
+ },
+ {
+  "sid": "R103",
+  "outcomes": [
+   {
+    "text": "Tutors and students gain insight into careers",
+    "code": "Y7.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "A1.1",
+  "codebook_issue": "",
+  "rationale": "Career awareness for college students."
+ },
+ {
+  "sid": "R104",
+  "outcomes": [
+   {
+    "text": "Recognized excellence in arts education",
+    "code": "A2.1",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Program quality recognition."
+ },
+ {
+  "sid": "R105",
+  "outcomes": [
+   {
+    "text": "Incorporate museum inspiration into lesson planning",
+    "code": "A1.2",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Practice change."
+ },
+ {
+  "sid": "R106",
+  "outcomes": [
+   {
+    "text": "Access to working school library",
+    "code": "A2.3",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Facility access."
+ },
+ {
+  "sid": "R107",
+  "outcomes": [
+   {
+    "text": "Increased musical knowledge",
+    "code": "Y1.6",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Arts knowledge."
+ },
+ {
+  "sid": "R108",
+  "outcomes": [
+   {
+    "text": "Staff create and refine curricula",
+    "code": "A1.2",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "A2.1",
+  "codebook_issue": "",
+  "rationale": "Practice change."
+ },
+ {
+  "sid": "R109",
+  "outcomes": [
+   {
+    "text": "Students become aware of art venues and opportunities",
+    "code": "Y2.2",
+    "confidence": "low"
+   },
+   {
+    "text": "Teachers become aware of art venues and opportunities",
+    "code": "A1.1",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y1.6",
+  "codebook_issue": "Awareness of arts opportunities has no clear youth code.",
+  "rationale": "Two subjects."
+ },
+ {
+  "sid": "R110",
+  "outcomes": [
+   {
+    "text": "Decrease eating disorder risk",
+    "code": "Y8.6",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y8.1",
+  "codebook_issue": "",
+  "rationale": "Mental health symptom risk."
+ },
+ {
+  "sid": "R111",
+  "outcomes": [
+   {
+    "text": "Tutoring model with higher instructional quality",
+    "code": "A2.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Program quality."
+ },
+ {
+  "sid": "R112",
+  "outcomes": [
+   {
+    "text": "Increase academic achievement",
+    "code": "Y1.15",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "No subject named."
+ },
+ {
+  "sid": "R113",
+  "outcomes": [
+   {
+    "text": "Know how to access financial aid",
+    "code": "Y7.2",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Financial aid knowledge."
+ },
+ {
+  "sid": "R114",
+  "outcomes": [
+   {
+    "text": "Girls can resolve conflicts",
+    "code": "Y4.8",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Conflict resolution."
+ },
+ {
+  "sid": "R115",
+  "outcomes": [
+   {
+    "text": "Technical lexicon to describe music/live events",
+    "code": "Y1.6",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Arts vocabulary."
+ },
+ {
+  "sid": "R116",
+  "outcomes": [
+   {
+    "text": "Make connections between art and life",
+    "code": "Y2.5",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y2.4",
+  "codebook_issue": "",
+  "rationale": "Connecting art to personal meaning."
+ },
+ {
+  "sid": "R117",
+  "outcomes": [
+   {
+    "text": "Staff increase awareness of student health needs",
+    "code": "A1.1",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "",
+  "codebook_issue": "",
+  "rationale": "Staff knowledge."
+ },
+ {
+  "sid": "R118",
+  "outcomes": [
+   {
+    "text": "Knowledge of technical theatrical skills",
+    "code": "Y1.6",
+    "confidence": "high"
+   }
+  ],
+  "runner_up": "Y7.4",
+  "codebook_issue": "",
+  "rationale": "Arts technique."
+ },
+ {
+  "sid": "R119",
+  "outcomes": [
+   {
+    "text": "Engage in hands-on gardening activities",
+    "code": "Y2.6",
+    "confidence": "low"
+   }
+  ],
+  "runner_up": "A2.5",
+  "codebook_issue": "",
+  "rationale": "Activity participation; forced."
+ },
+ {
+  "sid": "R120",
+  "outcomes": [
+   {
+    "text": "Grow in community leadership",
+    "code": "Y6.4",
+    "confidence": "medium"
+   }
+  ],
+  "runner_up": "Y6.5",
+  "codebook_issue": "",
+  "rationale": "Civic leadership."
+ }
+]

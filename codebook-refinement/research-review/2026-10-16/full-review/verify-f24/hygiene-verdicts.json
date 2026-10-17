@@ -1,0 +1,32 @@
+[
+ {
+  "claim_id": "f2hyg-01",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://www.jrf.org.uk/deep-poverty-and-destitution/destitution-in-the-uk-income-thresholds-for-october-2025",
+  "fetched_url": "https://www.jrf.org.uk/deep-poverty-and-destitution/destitution-in-the-uk-income-thresholds-for-october-2025",
+  "source_kind": "primary",
+  "excerpt": "People are considered destitute if they have lacked 2 or more of the following essentials over the past month because they cannot afford them: ... Basic toiletries (such as soap, shampoo, toothpaste, and a toothbrush).",
+  "corrected_cite_as": "Bramley, G. and Ayed, N. (Heriot-Watt University) (2026). Destitution in the UK: income thresholds for October 2025. Joseph Rowntree Foundation (published 13 January 2026).",
+  "note": "The page is published by JRF and names the six essentials and the 'past month' period. Toiletries is the sixth item, and the wording matches the claim exactly. The year is wrong: the fetched page gives the date as 13 January 2026, not 2025, and the authors are Bramley and Ayed of Heriot-Watt. Please confirm the date on the page before it goes in the registry, because I got it from the fetch summary. Fit: the component's wording describes not being able to afford basic hygiene items."
+ },
+ {
+  "claim_id": "f2hyg-02",
+  "verdict": "SUPPORTED",
+  "url_checked": "https://i-sphere.site.hw.ac.uk/research-projects/destitution-in-the-uk/",
+  "fetched_url": "https://i-sphere.site.hw.ac.uk/research-projects/destitution-in-the-uk/",
+  "source_kind": "primary",
+  "excerpt": "People who have lacked two or more of six essentials over the past month, because they cannot afford them. ... Basic toiletries (soap, shampoo, toothpaste, toothbrush) ... including around one million children.",
+  "corrected_cite_as": "",
+  "note": "The page confirms the attribution: the study was 'undertaken by I-SPHERE on behalf of the Joseph Rowntree Foundation in 2016', with later reports in 2018, 2020 and 2023. It contains the toiletries essential and the 2022 estimate of about 3.8 million people, 'including around one million children'. The excerpt joins three separate passages with ellipses, and the summary tool returned the toiletries line as a quoted list item rather than a full sentence. Fit: the toiletries essential fits; the child count is background, not the construct."
+ },
+ {
+  "claim_id": "f2hyg-03",
+  "verdict": "PARTIAL",
+  "url_checked": "https://cwpm.acf.gov/pdfs/CW%20Policy%20Database%20-%20Section%208.3B.1%20Policy%20Questions%20&%20Answers.pdf",
+  "fetched_url": "https://cwpm.acf.gov/pdfs/CW%20Policy%20Database%20-%20Section%208.3B.1%20Policy%20Questions%20&%20Answers.pdf",
+  "source_kind": "primary",
+  "excerpt": "For title IV-E purposes, what does the term \"personal incidentals\" include? ... items related to personal hygiene; cosmetics; over-the-counter medications and special dietary foods;",
+  "corrected_cite_as": "",
+  "note": "The source is the ACF Children's Bureau CWPM, Section 8.3B.1 (Title IV-E Foster Care Maintenance Payments, Allowable costs), Question 9. The citation and the component are correct: the answer lists 'items related to personal hygiene' and the question cites 475(4)(A). It is PARTIAL because of fit. This is a rule about which costs a foster child's maintenance payment may reimburse, not a measure of a family or adult going without hygiene items. It can back the idea that hygiene items are a recognised basic need, not an F-part outcome directly. The answer text itself says 'section 475 (4)' without the '(A)'."
+ }
+]

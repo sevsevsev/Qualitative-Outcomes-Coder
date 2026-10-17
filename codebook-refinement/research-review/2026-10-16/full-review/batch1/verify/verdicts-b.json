@@ -1,0 +1,121 @@
+[
+ {
+  "claim_id": "y3-01",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://searchinstitute.org/resources-hub/developmental-assets-framework",
+  "excerpt": "Young person experiences caring neighbors.",
+  "note": "Both assets are present: 'Caring neighborhood' and 'Caring school climate: School provides a caring, encouraging environment.' The fit is partial because both describe a caring setting around the young person, not the young person's own felt acceptance or belonging."
+ },
+ {
+  "claim_id": "y3-02",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://searchinstitute.org/resources-hub/developmental-assets-framework",
+  "excerpt": "Young person perceives that adults in the community value youth.",
+  "note": "The Community values youth asset matches the claim word for word, and because it is framed as the young person's perception, it fits mattering. Attribution to Search Institute is correct."
+ },
+ {
+  "claim_id": "y3-03",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.nationalacademies.org/read/10022/chapter/7",
+  "excerpt": "Promoting a sense of belonging is fundamental to attracting and retaining the participation of young people,",
+  "note": "Correction: the chapter is titled 'Chapter 5: The Landscape of Community Programs for Youth'. 'Features of Community Programs for Youth' is a section inside it, and 'Opportunities to Belong' is a subsection of that section; cite_as should read Chapter 5, section 'Features of Community Programs for Youth', 'Opportunities to Belong'."
+ },
+ {
+  "claim_id": "y3-04",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf",
+  "excerpt": "A subjective distressing experience that results from perceived isolation or inadequate meaningful connections,",
+  "note": "The glossary on p. 7 defines Belonging ('A fundamental human need—the feeling of deep connection with social groups, physical places,'), Loneliness and Social Isolation. Title, year and authorship are correct."
+ },
+ {
+  "claim_id": "y3-05",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.law.cornell.edu/uscode/text/42/677",
+  "excerpt": "to help children who have experienced foster care at age 14 or older achieve meaningful, permanent connections",
+  "note": "The statute continues with 'with a caring adult', which the fetch tool returned as a separate fragment, so the excerpt stops at 'connections'. The section heading matches cite_as."
+ },
+ {
+  "claim_id": "y3-06",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://acf.gov/cb/fact-sheet/about-nytd",
+  "excerpt": "educational attainment, positive connections with adults, high-risk behavior, and access to health insurance.",
+  "note": "'Positive connections with adults' is one of the six outcomes NYTD surveys youth on, and the page is hosted on the ACF/Children's Bureau site. The page itself does not name a publisher, so attribution rests on the acf.gov/cb domain."
+ },
+ {
+  "claim_id": "y3-07",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://searchinstitute.org/resources-hub/developmental-assets-framework",
+  "excerpt": "Young person receives support from three or more nonparent adults.",
+  "note": "The Other adult relationships asset matches the claim word for word and fits caring relationships with adults outside the family."
+ },
+ {
+  "claim_id": "y3-08",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://searchinstitute.org/resources-hub/developmental-assets-framework",
+  "excerpt": "Parent(s) and other adults model positive, responsible behavior.",
+  "note": "The asset exists as worded, but it describes adults' modeling behavior, not a connection or relationship between the young person and an adult, so the fit to Y3.2 is partial."
+ },
+ {
+  "claim_id": "y3-09",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.law.cornell.edu/uscode/text/42/671",
+  "excerpt": "except as provided in subparagraph (D), reasonable efforts shall be made to preserve and reunify families—",
+  "note": "Clause (ii) adds 'to make it possible for a child to safely return to the child's home' (returned as a separate fragment). Citation and component are correct."
+ },
+ {
+  "claim_id": "y3-10",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.law.cornell.edu/uscode/text/34/11212",
+  "excerpt": "ensuring the safe return of the youth according to the best interests of the youth",
+  "note": "This text is in (b)(3), alongside contacting parents or other relatives and alternative living arrangements. The section heading is 'Eligibility; plan requirements'. The requirement is a grantee plan assurance rather than a youth outcome, but its wording directly names safe return to family."
+ },
+ {
+  "claim_id": "y3-11",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://searchinstitute.org/resources-hub/developmental-relationships-framework",
+  "excerpt": "Introduce me to people who can help me grow.",
+  "note": "This is the 'Connect' action under Expand Possibilities ('Connect me with people and places that broaden my world'). All five elements match cite_as."
+ },
+ {
+  "claim_id": "y4a-01",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://thecorestandards.org/ELA-Literacy/CCRA/SL/",
+  "excerpt": "Present information, findings, and supporting evidence such that listeners can follow the line of reasoning",
+  "note": "CCRA.SL.4 is under 'Presentation of Knowledge and Ideas'. In the standard, 'appropriate to task, purpose, and audience' modifies the organization, development and style, not the information itself; the component's paraphrase is close enough."
+ },
+ {
+  "claim_id": "y4a-02",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/sites/5/CASEL-Framework-and-Skills.pdf",
+  "excerpt": "This includes the capacities to communicate clearly, listen actively, cooperate, work collaboratively",
+  "note": "The fetched PDF has no title or date. The cited title appears on the same content at https://casel.org/casel-sel-framework-11-2020/?view=1, and the year 2020 comes only from that URL; consider citing that URL."
+ },
+ {
+  "claim_id": "y4a-03",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://www.learningforjustice.org/sites/default/files/2022-09/LFJ-Social-Justice-Standards-September-2022-09292022.pdf",
+  "excerpt": "Students will express comfort with people who are both similar to and different from them",
+  "note": "The standard continues 'and engage respectfully with all people.' (a separate fragment). The title, Second Edition and 2022 are confirmed."
+ },
+ {
+  "claim_id": "y4a-04",
+  "verdict": "PARTIAL",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/sites/5/CASEL-Framework-and-Skills.pdf",
+  "excerpt": "empathize with others, including those from diverse backgrounds, cultures, & contexts",
+  "note": "The wording is present, but it describes perspective-taking and empathy rather than respect for people of different backgrounds, so the fit to Y4.5 is partial. The same title/date caveat applies as in y4a-02: the title is confirmed only at https://casel.org/casel-sel-framework-11-2020/?view=1."
+ },
+ {
+  "claim_id": "y4a-05",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/sites/5/CASEL-Framework-and-Skills.pdf",
+  "excerpt": "Understanding and expressing gratitude",
+  "note": "This is a verbatim bullet under Social Awareness. The same title/date caveat applies as in y4a-02."
+ },
+ {
+  "claim_id": "y4a-06",
+  "verdict": "SUPPORTED",
+  "fetched_url": "https://casel.s3.us-east-2.amazonaws.com/sites/5/CASEL-Framework-and-Skills.pdf",
+  "excerpt": "Showing concern for the feelings of others",
+  "note": "Both bullets are verbatim under Social Awareness: 'Recognizing situational demands and opportunities' is three bullets later, so the excerpt covers only the first. The same title/date caveat applies as in y4a-02."
+ }
+]

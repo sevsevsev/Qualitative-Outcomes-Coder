@@ -1,0 +1,128 @@
+[
+ {
+  "claim_id": "y8a-01",
+  "code": "Y8",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), 2021 edition.",
+  "claimed_component": "HECAT topic modules (Food and Nutrition; Physical Activity; Personal Health and Wellness; Safety; Sexual Health) support category A (Physical health) of domain Y8.",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/index.html"
+ },
+ {
+  "claim_id": "y8a-02",
+  "code": "Y8.1",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module PA (Physical Activity).",
+  "claimed_component": "Healthy Behavior Outcome 1 (engage in moderate to vigorous physical activity for at least 60 minutes every day) supports the physical-activity part of Y8.1.",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_pa.pdf"
+ },
+ {
+  "claim_id": "y8a-03",
+  "code": "Y8.1",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module PA (Physical Activity).",
+  "claimed_component": "Healthy Behavior Outcome 2 (activities that enhance cardio-respiratory endurance, flexibility, muscle endurance and muscle strength) supports the fitness part of Y8.1.",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_pa.pdf"
+ },
+ {
+  "claim_id": "y8a-04",
+  "code": "Y8.1",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module FN (Food and Nutrition).",
+  "claimed_component": "Healthy Behavior Outcome 3 (eat lots of fruits and vegetables) supports the nutrition and fruit-and-vegetable-intake part of Y8.1.",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_fn.pdf"
+ },
+ {
+  "claim_id": "y8a-05",
+  "code": "Y8.1",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module FN (Food and Nutrition).",
+  "claimed_component": "Healthy Behavior Outcome 10 (prepare good-tasting, nutrient-dense foods for yourself and others) supports the healthy-cooking part of Y8.1.",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_fn.pdf"
+ },
+ {
+  "claim_id": "y8a-06",
+  "code": "Y8.1",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module PHW (Personal Health and Wellness).",
+  "claimed_component": "Healthy Behavior Outcome 1 (practice appropriate hygiene habits) supports the hygiene and handwashing part of Y8.1.",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_phw.pdf"
+ },
+ {
+  "claim_id": "y8a-07",
+  "code": "Y8.1",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module PHW (Personal Health and Wellness).",
+  "claimed_component": "Healthy Behavior Outcome 2 (get an appropriate amount of sleep and rest) supports the sleep part of Y8.1.",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_phw.pdf"
+ },
+ {
+  "claim_id": "y8a-08",
+  "code": "Y8.1",
+  "cite_as": "Centers for Disease Control and Prevention (2025). Youth Risk Behavior Survey, 2025 Standard High School Questionnaire.",
+  "claimed_component": "Sleep item (hours of sleep on an average school night) supports the sleep part of Y8.1.",
+  "url": "https://cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf"
+ },
+ {
+  "claim_id": "y8a-09",
+  "code": "Y8.1",
+  "cite_as": "Centers for Disease Control and Prevention (2025). Youth Risk Behavior Survey, 2025 Standard High School Questionnaire.",
+  "claimed_component": "Physical activity item (days physically active at least 60 minutes per day in the past 7 days) supports the physical-activity part of Y8.1.",
+  "url": "https://cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf"
+ },
+ {
+  "claim_id": "y8a-10",
+  "code": "Y8.1",
+  "cite_as": "Centers for Disease Control and Prevention (2025). Youth Risk Behavior Survey, 2025 Standard High School Questionnaire.",
+  "claimed_component": "Fruit and vegetable items (times eating fruit, green salad, carrots and other vegetables in the past 7 days) support the fruit-and-vegetable-intake part of Y8.1.",
+  "url": "https://cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf"
+ },
+ {
+  "claim_id": "y8a-11",
+  "code": "Y8.1",
+  "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, objective PA-06: Increase the proportion of adolescents who do enough aerobic physical activity.",
+  "claimed_component": "Objective PA-06 (adolescent aerobic physical activity) supports the physical-activity part of Y8.1.",
+  "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/physical-activity/increase-proportion-adolescents-who-do-enough-aerobic-physical-activity-pa-06"
+ },
+ {
+  "claim_id": "y8a-12",
+  "code": "Y8.1",
+  "cite_as": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion. Healthy People 2030, objective PA-R02: Increase the proportion of parents who follow AAP recommendations on limiting screen time for children aged 6 to 17 years.",
+  "claimed_component": "Research objective PA-R02 (limiting screen time for children aged 6 to 17) supports the recreational-screen-time part of Y8.1.",
+  "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/physical-activity/increase-proportion-parents-who-follow-aap-recommendations-limiting-screen-time-children-aged-6-17-years-pa-r02"
+ },
+ {
+  "claim_id": "y8a-13",
+  "code": "Y8.2",
+  "cite_as": "U.S. Department of Health and Human Services, Administration for Children and Families, Office of Head Start (2015). Head Start Early Learning Outcomes Framework: Ages Birth to Five.",
+  "claimed_component": "Perceptual, Motor, and Physical Development domain, Fine Motor sub-domain, supports the fine-motor part of Y8.2.",
+  "url": "https://headstart.gov/school-readiness/effective-practice-guides/perceptual-motor-physical-development"
+ },
+ {
+  "claim_id": "y8a-14",
+  "code": "Y8.2",
+  "cite_as": "SHAPE America (2024). National Physical Education Standards.",
+  "claimed_component": "Standard 1 grade-span indicators 1.8.1 (correct technique in a variety of outdoor activities) and 1.12.9 (water safety and basic swimming skills) support the outdoor-skill and swimming parts of Y8.2.",
+  "url": "https://shapeamerica.org/standards/pe/new-pe-standards/"
+ },
+ {
+  "claim_id": "y8a-15",
+  "code": "Y8.3",
+  "cite_as": "SHAPE America (2024). National Health Education Standards.",
+  "claimed_component": "Standard 3 (access valid and reliable resources to support health and well-being) and indicator 3.8.3 (access valid and reliable sources of health information) support the finding-reliable-health-information part of Y8.3.",
+  "url": "https://shapeamerica.org/standards/health/new-he-standards/"
+ },
+ {
+  "claim_id": "y8a-16",
+  "code": "Y8.3",
+  "cite_as": "SHAPE America (2024). National Health Education Standards.",
+  "claimed_component": "Standard 1 indicators 1.2.3, 1.5.3, 1.8.3 and 1.12.3 (prevent or reduce risks for illnesses and injuries) support the injury-prevention part of Y8.3.",
+  "url": "https://shapeamerica.org/standards/health/new-he-standards/"
+ },
+ {
+  "claim_id": "y8a-17",
+  "code": "Y8.3",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module S (Safety).",
+  "claimed_component": "Healthy Behavior Outcome 4 (apply safety rules and procedures to avoid risky behaviors and injury) supports the injury-prevention and outdoor-safety part of Y8.3.",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_s.pdf"
+ },
+ {
+  "claim_id": "y8a-18",
+  "code": "Y8.3",
+  "cite_as": "Centers for Disease Control and Prevention (2021). Health Education Curriculum Analysis Tool (HECAT), Module S (Safety).",
+  "claimed_component": "Healthy Behavior Outcome 7 (get help for oneself or others when injured or suddenly ill) supports the first-aid and responding-to-an-allergic-reaction part of Y8.3.",
+  "url": "https://www.cdc.gov/healthy-youth/hecat/pdfs/hecat_module_s.pdf"
+ }
+]

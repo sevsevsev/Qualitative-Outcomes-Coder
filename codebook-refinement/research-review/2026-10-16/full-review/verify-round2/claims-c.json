@@ -1,0 +1,86 @@
+[
+ {
+  "claim_id": "CP-12-04-V-Y5-1",
+  "code": "Y5.6",
+  "cite_as": "29 U.S.C. 733(b)(5), Rehabilitation Act of 1973, as amended by WIOA: pre-employment transition services, required activities.",
+  "claimed_component": "This page is the official U.S. Code text of 29 U.S.C. 733(b)(5), which lists as a required activity for students with disabilities 'instruction in self-advocacy, which may include peer mentoring'.",
+  "url": "https://www.govinfo.gov/link/uscode/29/733"
+ },
+ {
+  "claim_id": "CP-12-04-V-Y5-2",
+  "code": "Y5.3",
+  "cite_as": "National Research Council (2009). Learning Science in Informal Environments: People, Places, and Pursuits. Washington, DC: The National Academies Press.",
+  "claimed_component": "This National Academies Press copy contains Strand 6 of science learning: learners think about themselves as science learners and develop an identity as someone who knows about, uses, and sometimes contributes to science.",
+  "url": "https://www.nationalacademies.org/read/12190"
+ },
+ {
+  "claim_id": "CP-12-04-V-Y5-3",
+  "code": "Y5.3",
+  "cite_as": "Farrington, C. A., Maurer, J., Aska McBride, M. R., Nagaoka, J., Puller, J. S., Shewfelt, S., Weiss, E. M., & Wright, L. (2019). Arts Education and Social-Emotional Learning Outcomes Among K-12 Students: Developing a Theory of Action. University of Chicago Consortium on School Research and Ingenuity.",
+  "claimed_component": "The title page, copyright line or suggested citation prints the publication year 2019 and names the University of Chicago Consortium on School Research and Ingenuity as the publishing organizations.",
+  "url": "https://consortium.uchicago.edu/sites/default/files/2019-05/Arts%20Education%20and%20Social-Emotional-June2019-Consortium%20and%20Ingenuity.pdf"
+ },
+ {
+  "claim_id": "CP-12-05-V-Y6-1",
+  "code": "Y6.6",
+  "cite_as": "NAAEE (2019). K-12 Environmental Education: Guidelines for Excellence. North American Association for Environmental Education.",
+  "claimed_component": "The full K-12 guidelines document (not only its executive summary) contains a guideline or learner outcome on connection to nature (for example, feeling connected to, caring about, or valuing the natural world).",
+  "url": "https://naaee.org/programs/guidelines-excellence"
+ },
+ {
+  "claim_id": "CP-12-05-V-Y6-2",
+  "code": "Y6.4",
+  "cite_as": "Keeter, S., Zukin, C., Andolina, M., & Jenkins, K. (2002). The Civic and Political Health of the Nation: A Generational Portrait. CIRCLE.",
+  "claimed_component": "The report's 'engaged worldview' passage describes young people who feel they can make a difference in their community (civic efficacy).",
+  "url": "https://files.eric.ed.gov/fulltext/ED498892.pdf"
+ },
+ {
+  "claim_id": "CP-12-28-V-HOST-5-circle-2002-civic-indicators",
+  "code": "Y6.4, Y6.5",
+  "cite_as": "Keeter, S., Zukin, C., Andolina, M., & Jenkins, K. (2002). The Civic and Political Health of the Nation: A Generational Portrait. CIRCLE (Center for Information and Research on Civic Learning and Engagement).",
+  "claimed_component": "This copy is the cited work: the authors, title, year and publisher printed on it match the citation. The publisher's own copy of the work is also available online.",
+  "url": "https://files.eric.ed.gov/fulltext/ED498892.pdf"
+ },
+ {
+  "claim_id": "CP-12-08-V6",
+  "code": "F1.1",
+  "cite_as": "Center for the Study of Social Policy. Core Meanings of the Strengthening Families Protective Factors.",
+  "claimed_component": "The document, or CSSP's resource page for it, prints a publication year and the publisher (Center for the Study of Social Policy).",
+  "url": "https://cssp.org/wp-content/uploads/2025/03/Core-Meanings-of-the-SF-Protective-Factors-2015.pdf"
+ },
+ {
+  "claim_id": "CP-12-08-V7",
+  "code": "F1.3",
+  "cite_as": "U.S. Department of Agriculture, Food and Nutrition Service. SNAP-Ed Evaluation Framework, MT1: Nutrition-Related Behavioral Changes (archived copy).",
+  "claimed_component": "A dated archived snapshot (e.g. Internet Archive) of the MT1 page shows the text 'Changes in individual and family healthy eating behaviors'.",
+  "url": "https://web.archive.org/web/2025/https://snaped.fns.usda.gov/framework/components/mt1"
+ },
+ {
+  "claim_id": "CP-12-24-V-STATUS-2",
+  "code": "F1.3",
+  "cite_as": "U.S. Department of Agriculture, Food and Nutrition Service. SNAP-Ed Evaluation Framework, MT1.",
+  "claimed_component": "A USDA FNS page states, with a date, that federal SNAP-Ed funding has ended.",
+  "url": "https://snaped.fns.usda.gov/framework/components/mt1"
+ },
+ {
+  "claim_id": "CP-12-08-V10",
+  "code": "F1.6",
+  "cite_as": "Workforce Innovation and Opportunity Act, Title II (Adult Education and Family Literacy Act), 29 U.S.C. 3272(1) and 3272(6).",
+  "claimed_component": "This page is the official U.S. Code text of 29 U.S.C. 3272 paragraphs (1) and (6), with the same wording as the law.cornell.edu text of those paragraphs.",
+  "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title29-section3272"
+ },
+ {
+  "claim_id": "CP-12-08-V14",
+  "code": "F1.2",
+  "cite_as": "Epstein, J. L., et al. (2019). School, Family, and Community Partnerships: Your Handbook for Action (4th ed.). Corwin. Handout: Epstein's Six Types of Involvement.",
+  "claimed_component": "A Type 4 (Learning at Home) definition or sample practice names family or daily routines or schedules at home.",
+  "url": "https://resources.corwin.com/sites/default/files/5_4-keys_to_partnerships.pdf"
+ },
+ {
+  "claim_id": "CP-12-24-V-STATUS-1",
+  "code": "Y8",
+  "cite_as": "U.S. DHHS, ODPHP. Healthy People 2030, objective SH-04.",
+  "claimed_component": "The objective page shows a notice or banner at its top about a court order.",
+  "url": "https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/sleep/increase-proportion-high-school-students-who-get-enough-sleep-sh-04"
+ }
+]

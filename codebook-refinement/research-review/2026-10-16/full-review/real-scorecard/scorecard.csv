@@ -1,0 +1,121 @@
+sid,statement,panel,panel_how,gap,coder_2oct,coder_conf,exact,same_codes,same_domains,panel_codes_found
+R001,Strengthens educator and caregiver capacity,A1.1 | F1 domain only,4 of 4,no,A1.1 | F1.1,high | medium,False,False,True,0.50
+R002,Sustain percentage of Collegians returning to college immediately after their first year (persistence),Y1.18,4 of 4,no,Y1.18,high,True,True,True,1.00
+R003,Increase student confidence in classroom,Y1.12,4 of 4,no,Y1.12,high,True,True,True,1.00
+R004,Increase in awareness of anger triggers and emotional responses.,Y4.1,4 of 4,no,Y4.1,high,True,True,True,1.00
+R005,"Increased confidence in public speaking, debate, and team leadership.",Y4.6 | Y4.7,4 of 4,no,Y4.6 | Y4.7,high | high,True,True,True,1.00
+R006,Improved attitude about reading,Y2 domain only,chair,yes,Y1.12,medium,False,False,False,0.00
+R007,Increase in alumni who can identify an industry-related peer who can support their journey,Y3.5,4 of 4,no,Y3.5,high,True,True,True,1.00
+R008,Increase high school graduation rates among participating students,Y1.17,4 of 4,no,Y1.17,high,True,True,True,1.00
+R009,Competency in Music,Y1.6,4 of 4,no,Y1.6,high,True,True,True,1.00
+R010,Girls have a more physically active lifestyle,Y8.1,4 of 4,no,Y8.1,high,True,True,True,1.00
+R011,Thoughtful campus improvements promoting outdoor experiences,A2.3,4 of 4,no,A2.3,medium,True,True,True,1.00
+R012,Ability to identify and speak about emotions,Y4.1,4 of 4,no,Y4.1,high,True,True,True,1.00
+R013,Increased rates of literacy among participating students,Y1.1,4 of 4,no,Y1.1,high,True,True,True,1.00
+R014,Declines in absenteeism,Y1.13,4 of 4,no,Y1.13,high,True,True,True,1.00
+R015,Creative outlet for artistic students,Y2.5,4 of 4,no,Y2.5,high,True,True,True,1.00
+R016,Enhanced comfort in school community,Y3.1,4 of 4,no,Y3.1,high,True,True,True,1.00
+R017,"Audition for dance companies, jobs",Y7.2,4 of 4,no,Y7.2,high,True,True,True,1.00
+R018,"Improved critical thinking skills, including problem-solving and decision-making.",Y4.10,3 of 4,no,Y4.10,high,True,True,True,1.00
+R019,Increased sense of pride in their work / accomplishments,Y5.4,4 of 4,no,Y5.4,high,True,True,True,1.00
+R020,More aware of how HG sites & resources can help them meet teaching & learning goals,A1.1,4 of 4,no,A1.1,high,True,True,True,1.00
+R021,Build students’ collaboration and teamwork skills,Y4.7,4 of 4,no,Y4.7,high,True,True,True,1.00
+R022,Students begin thinking about what they want to do after high school.,Y5.5,3 of 4,no,Y7.1,high,False,False,False,0.00
+R023,−20% disciplinary incidents — Referral tracking,Y1.14,4 of 4,no,Y1.14,high,True,True,True,1.00
+R024,Increased interest in STEAM-related electives or career pathways,Y2.3 | Y7.1,4 of 4,no,Y7.1,high,False,False,False,0.50
+R025,"Interpersonal: students grow in self-confidence and sense of identity, ability to self-regulate and express emotions, and growth mindset",Y4.1 | Y4.2 | Y5.1 | Y5.4 | Y5.4,4 of 4,no,Y4.1 | Y4.2 | Y5.1 | Y5.4 | Y5.4,high | high | high | medium | high,True,True,True,1.00
+R026,"Increased rates of academic persistence & retention (e.g., grade-to-grade transition)",Y1.15,4 of 4,no,Y1.15,high,True,True,True,1.00
+R027,100 students set two goals (one for the school year and one for post-graduation) “Two Goals Set. Two Goals Met”,Y4.3,4 of 4,no,Y4.3,high,True,True,True,1.00
+R028,Students and teachers increase knowledge of design and discipline,A1.1 | Y1 domain only,chair,no,A1.1 | Y1.6,medium | high,False,False,True,0.50
+R029,Health Knowledge & Behaviors — Health literacy,Y8.3,4 of 4,no,Y8.3,high,True,True,True,1.00
+R030,Readiness for STEM Pathways,Y7 domain only,4 of 4,no,Y7.1,medium,False,False,True,0.00
+R031,Quality programming and competition leading to exemplary culminating events,A2.1,4 of 4,no,A2.1,high,True,True,True,1.00
+R032,Enhanced awareness of various career pathways and industries,Y7.1,4 of 4,no,Y7.1,high,True,True,True,1.00
+R033,Students increases usage of literacy strategies,Y1.11,4 of 4,no,Y1.11,high,True,True,True,1.00
+R034,Youth learn about career options related to world affairs,Y7.1,4 of 4,no,Y7.1,high,True,True,True,1.00
+R035,Students develop skills and confidence in STEM,Y1.12 | Y1.4,4 of 4,no,Y1.12 | Y1.4,high | high,True,True,True,1.00
+R036,"Students are engaged with their education, have positive self-perception, and are self-confident learners",Y1.12 | Y1.9 | Y5.4,4 of 4,no,Y1.12 | Y1.9 | Y5.4,high | high | high,True,True,True,1.00
+R037,More consistent and visible promotion of healthy choices in the school cafeteria,A3.1,4 of 4,no,A1.2,medium,False,False,False,0.00
+R038,Increased use of healthy coping and decision-making strategies,Y4.10 | Y4.2,4 of 4,no,Y4.10 | Y4.2,high | high,True,True,True,1.00
+R039,Sustained reduction in trauma-related behaviors,Y8.6,4 of 4,no,Y8.8,high,False,False,True,0.00
+R040,Improved teamwork and collaboration skills,Y4.7,4 of 4,no,Y4.7,high,True,True,True,1.00
+R041,See artistic careers as a potential post-secondary pathway,Y7.1,4 of 4,no,Y7.1,high,True,True,True,1.00
+R042,Improved awareness around healthy lifestyles (H),Y8.3,4 of 4,no,Y8.3,high,True,True,True,1.00
+R043,Decrease in conflict with peers,Y4.8,3 of 4,no,Y4.8,medium,True,True,True,1.00
+R044,Increase in students’ confidence in tech and innovation,Y1.12,4 of 4,no,Y1.12,high,True,True,True,1.00
+R045,Students Meet 100% of Repertory Requirements.,Y1.6,4 of 4,no,Y1.6,high,True,True,True,1.00
+R046,Students gain workplace/career exposure & build a positive relationship with a mentor,Y3.2 | Y7.1,4 of 4,no,Y3.2 | Y7.1,high | high,True,True,True,1.00
+R047,Improved emotional regulation and coping skills,Y4.2,4 of 4,no,Y4.2,high,True,True,True,1.00
+R048,Students will create positive emotional connections to the animal ambassadors,Y6.6,4 of 4,no,Y6.6,medium,True,True,True,1.00
+R049,Increase ability to follow a recipe and stay organized in the kitchen,Y7.7,4 of 4,no,Y7.7,high,True,True,True,1.00
+R050,Youth will begin participating in wellness activities.,Y8.1,chair,no,Y2.6,medium,False,False,False,0.00
+R051,"Increasing the number of youth from underserved neighborhoods who embrace cycling for health, sport and transportation purposes.",Y8.1,4 of 4,no,Y8.1,medium,True,True,True,1.00
+R052,Philadelphians are in a community of support to pursue their future dreams.,Y3.1,chair,no,A3.3,medium,False,False,False,0.00
+R053,Increased goal clarity and motivation toward future planning,Y4.3 | Y5.5,3 of 4,no,Y5.5,high,False,False,False,0.50
+R054,Young people have checklists and tools for entering the workforce and system.,Y7.2,4 of 4,no,Y7.2,high,True,True,True,1.00
+R055,Students have opportunities for creative expression and build skill to achieve their vision,Y1.6 | Y2.5,4 of 4,no,Y1.6 | Y2.5,high | medium,True,True,True,1.00
+R056,"Youth participate in “pipeline” of Mural Arts programming from middle school through high school, then to internship program and Teaching Artist opportunities after graduation",Y2.6,4 of 4,no,Y7.4,medium,False,False,False,0.00
+R057,Increased strong and positive sense of self,Y5.4,4 of 4,no,Y5.4,high,True,True,True,1.00
+R058,Traditional Educators embed practices to support transitioned ELs in across classroom settings.,A1.2,4 of 4,no,A1.2,high,True,True,True,1.00
+R059,RockReach families and school communities have opportunities to attend live performances where they see their students engage and succeed in new ways,A2.6,4 of 4,no,A2.6,medium,True,True,True,1.00
+R060,"Students demonstrate ongoing academic success, critical thinking skills, and health literacy skills",Y1.15 | Y1.7 | Y8.3,4 of 4,no,Y1.15 | Y1.7 | Y8.3,high | high | high,True,True,True,1.00
+R061,80% inspire to go to some sort of employment outside of the traditional education system.,Y7.1,4 of 4,no,Y7.1,high,True,True,True,1.00
+R062,Students will build their confidence in asking and answering questions in academic and practical settings,Y1.12,4 of 4,no,Y1.12,high,True,True,True,1.00
+R063,Students' and partners' increased understanding of diversity in the artform,A3 domain only | Y1.6,chair,yes,Y4.5,medium,False,False,False,0.00
+R064,"Continue to engage in the arts (as patrons, artists, board members, etc.)",Y2.3,4 of 4,no,Y2.3,high,True,True,True,1.00
+R065,Increased student awareness of diverse perspectives in history.,Y1.5,4 of 4,no,Y1.5,high,True,True,True,1.00
+R066,Increase students' understanding of their ability to manipulate/impact their environment.,Y5.6,4 of 4,no,Y5.6,high,True,True,True,1.00
+R067,Steppingstones Academy & TFS students matriculate to priority high schools,Y1 domain only,4 of 4,yes,Y1.15,medium,False,False,True,0.00
+R068,Increased curiosity and willingness to explore new ideas,Y2.2,4 of 4,no,Y2.2,high,True,True,True,1.00
+R069,Skills to obtain/retain jobs or internships,Y7.3,4 of 4,no,Y7.3,high,True,True,True,1.00
+R070,Increase opportunity for field trip to support science teaching,A2.3,4 of 4,no,A2.3,medium,True,True,True,1.00
+R071,"Consistent communication with teachers, caregivers",Y4.6,4 of 4,no,A1.2,medium,False,False,False,0.00
+R072,Increased artistic knowledge and skills,Y1.6,4 of 4,no,Y1.6,high,True,True,True,1.00
+R073,The entire school benefits from the student’s performance and this increases interest in participating in the arts.,Y2.2,4 of 4,no,Y2.2,medium,True,True,True,1.00
+R074,Students develop self-esteem through perseverance and earned success.,Y5.4,4 of 4,no,Y5.4,high,True,True,True,1.00
+R075,Increased motivation to excel at activity,Y4.3,4 of 4,no,Y2.3,medium,False,False,False,0.00
+R076,Want to reverse the trend of civic apathy,Y6.4,4 of 4,no,Y6.4,medium,True,True,True,1.00
+R077,Increased & improved collaboration across local OST ecosystem,A3.2,4 of 4,no,A3.2,high,True,True,True,1.00
+R078,"Littles gain career-connected relationships, workplace knowledge, and expanded professional networks",Y3.5 | Y3.5 | Y7.3,chair,no,Y3.5 | Y7.1,high | medium,False,False,True,0.50
+R079,Increase in sense of identity,Y5.1,4 of 4,no,Y5.1,high,True,True,True,1.00
+R080,Children hone their skills in and love of writing,Y1.1 | Y2.3,4 of 4,no,Y1.1 | Y2.3,high | high,True,True,True,1.00
+R081,Increased GPA – 70% 2.5 GPA or above,Y1.15,4 of 4,no,Y1.15,high,True,True,True,1.00
+R082,SDP Arab American students empowered with knowledge of their artistic cultural heritage.,Y5.2,4 of 4,no,Y5.2,high,True,True,True,1.00
+R083,Higher rates of long-term academic aspirations,Y5.5,4 of 4,no,Y5.5,medium,True,True,True,1.00
+R084,Lowered rates of SAD,Y8.6,4 of 4,no,Y8.6,high,True,True,True,1.00
+R085,Sustainable HQIM Delivery,A1.2,4 of 4,no,A1.2,medium,True,True,True,1.00
+R086,Increased interest in agriculture and cooking,Y2.3,4 of 4,no,Y2.3,medium,True,True,True,1.00
+R087,"A sustained and multifaceted relationship between a school and partners through improved communication and shared knowledge. The CoP can identify the needs of the students and partners to collectively address challenges that may inhibit success. Depending on the direction the pilot CoP takes, potential outcomes are as follows:",A3.2,4 of 4,no,A3.2,high,True,True,True,1.00
+R088,improved fluency in phonics and numeracy,Y1.1 | Y1.3,4 of 4,no,Y1.1 | Y1.3,high | high,True,True,True,1.00
+R089,Increase theatre knowledge,Y1.6,4 of 4,no,Y1.6,high,True,True,True,1.00
+R090,Students recognize poetry and artmaking as a way to regulate emotions or create calm.,Y4.2,4 of 4,no,Y4.2,high,True,True,True,1.00
+R091,Program participants and community partners understand the intersections of environmental and social justice and their impacts animals and wildlife.,A3 domain only | Y6.3,3 of 4,yes,Y6.3,medium,False,False,False,0.50
+R092,Enhance life science STEELS principles with a student-led research experience using live zebrafish.,Y1.4,4 of 4,no,Y1.4,high,True,True,True,1.00
+R093,Increased labor market participation and economic mobility,Y7.5,chair,no,Y7.5,high,True,True,True,1.00
+R094,"Youth report feeling supported, seen, and heard in trauma-informed spaces",Y3.1,4 of 4,no,Y3.1,high,True,True,True,1.00
+R095,Students begin to develop leadership attitudes.,Y4.7,4 of 4,no,Y4.7,medium,True,True,True,1.00
+R096,Increase access to trauma-informed art-making,A2.5,4 of 4,no,A2.3,medium,False,False,True,0.00
+R097,Postsecondary Enrollment — 60% of senior participants will enroll in an institution of higher education by the fall term immediately following high school graduation or by deferred enrollment to the spring term,Y1.18,4 of 4,no,Y1.18,high,True,True,True,1.00
+R098,Increase volunteers' utilization of community resources,A1.2,3 of 4,no,F1.7,medium,False,False,False,0.00
+R099,Work together with SPH students to create the innaugural Cultural Fair.,Y4.7,4 of 4,no,Y4.7,medium,True,True,True,1.00
+R100,"Youth are prepared to be positive contributors to their families, schools, and communities, fostering a healthier and safer environment for all.",Y6 domain only,chair,no,Y6.5,medium,False,False,True,0.00
+R101,"arts programs integrated into climate, culture, and safety strategies",A3.1,4 of 4,no,A3.1,high,True,True,True,1.00
+R102,Educators Increase their awareness of the benefits of youth-centered learning for at-risk high school students.,A1.1,4 of 4,no,A1.1,high,True,True,True,1.00
+R103,CCP tutors and CCP students gain insight into careers supporting K-8 students,Y7.1,4 of 4,no,Y7.1,high,True,True,True,1.00
+R104,Recognized excellence in Afro-Brazilian arts education,A2.1,4 of 4,yes,A2.1,medium,True,True,True,1.00
+R105,Incorporate inspiration from museum exhibits and initiatives into lesson planning,A1.2,4 of 4,no,A1.2,high,True,True,True,1.00
+R106,All students will have access to a working school library,A2.3,4 of 4,no,A2.3,high,True,True,True,1.00
+R107,"Increased musical knowledge (e.g., parts of an opera, composition)",Y1.6,4 of 4,no,Y1.6,high,True,True,True,1.00
+R108,"Program staff create and continually refine curricula to align to quality measures, student needs, and District priorities",A1.2,4 of 4,no,A1.2,high,True,True,True,1.00
+R109,"Students and classroom teachers become aware of art venues and opportunities through contact with artist, curricular resources and field trips.",A1.1 | Y2 domain only,4 of 4,yes,A1.1 | Y2.2,medium | high,False,False,True,0.50
+R110,Decrease eating disorder risk.,Y8.6,4 of 4,no,Y8.6,medium,True,True,True,1.00
+R111,"Joyful Readers strengthens a stable, replicable tutoring model with higher overall instructional quality each year.",A2.1,4 of 4,no,A2.1,high,True,True,True,1.00
+R112,Increase academic achievement,Y1.15,4 of 4,no,Y1.15,high,True,True,True,1.00
+R113,Students know how to access financial aid/scholarship support,Y7.2,4 of 4,no,Y7.2,high,True,True,True,1.00
+R114,3 Girls can resolve conflicts.,Y4.8,4 of 4,no,Y4.8,high,True,True,True,1.00
+R115,Development & understanding of technical lexicon to describe music/live event experiences.,Y1.6,4 of 4,no,Y1.6,high,True,True,True,1.00
+R116,Make connections between art and life,Y2.5,4 of 4,no,Y2.4,high,False,False,True,0.00
+R117,School staff increase awareness of student health needs and TMHH program goals,A1.1,4 of 4,no,A1.1,high,True,True,True,1.00
+R118,Increased knowledge of technical theatrical skills,Y1.6,4 of 4,no,Y1.6,high,True,True,True,1.00
+R119,Participants engage in hands-on gardening activities,Y6.6,chair,no,Y2.6,medium,False,False,False,0.00
+R120,Students grow in their community leadership,Y6.4,4 of 4,no,Y6.4,high,True,True,True,1.00

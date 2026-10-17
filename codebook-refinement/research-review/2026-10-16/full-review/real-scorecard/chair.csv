@@ -1,0 +1,10 @@
+sid,determination,gap,reason
+R006,Y2 domain only,yes,"Reading attitude is liking or valuing reading (Y2 area), not self-belief as a learner (Y1.12) nor stated lasting interest (Y2.3); spans Y2.1/Y2.3/Y2.4."
+R028,Y1 domain only | A1.1,no,"Split by subject (rule 1). 'Design and discipline' names no art form or engineering design, so Y1.4 vs Y1.6 is a guess; teachers' learning is A1.1."
+R050,Y8.1,no,"Taking up wellness activities is an everyday health behavior, which Y8.1's definition covers in general; the prompt's Y8 domain example names an area, not a behavior."
+R052,Y3.1,no,"Being in a supportive community is connectedness (Y3.1, as gold H063 'connected to their new community'); no network breadth or contacts used for an opportunity (CF-028)."
+R063,Y1.6 | A3 domain only,yes,"Students' art-form knowledge is Y1.6. Partners are not staff or volunteers (A1.1); outside-program learning goes A3 domain only with gap, matching R091 and E-35/E-37."
+R078,Y3.5 | Y7.3 | Y3.5,no,"Career relationships and professional networks are Y3.5; workplace knowledge is Y7.3, matching adjudicated gold S138 (understanding workplace culture and expectations)."
+R093,Y7.5,no,"Rule 4 and CF-027: mobility is the long-term aim, coded through the named lever (labor market participation, Y7.5); not a separate outcome."
+R100,Y6 domain only,no,"Contributing to family, school and community names Y6's area (relating to community) without a specific act or service; low confidence, borderline PYD label."
+R119,Y6.6,no,"Overrules Y2.6: adjudicated design gold S247 (growing vegetables in a community garden) is Y6.6; hands-on gardening follows that settled precedent."

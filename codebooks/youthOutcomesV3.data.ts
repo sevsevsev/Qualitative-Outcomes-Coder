@@ -1751,7 +1751,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "from2x": "new",
             "definition": "The education, training, English proficiency, digital or financial skills, and employment of a caregiver or other adult participant.",
             "include": "GED or job training for parents; adult ESL; digital literacy for family members or older adults.",
-            "exclude": "Household income; young people's own skills.",
+            "exclude": "Household income, savings, or confidence about money; young people's own skills.",
             "useInstead": "F2.1; the Y codes.",
             "example": {
               "text": "Parents will complete their GED or enroll in job training.",
@@ -1846,7 +1846,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "fidelity": "framework",
             "from2x": "12.5",
             "definition": "Household or independent-youth income, public benefits, and financial stability.",
-            "include": "Household income; SNAP/TANF/Medicaid enrollment; household savings.",
+            "include": "Household income; SNAP/TANF/Medicaid enrollment; household savings; families' confidence about money.",
             "exclude": "The youth's own money skills; caregiver job training.",
             "useInstead": "Y7.6; F1.6.",
             "example": {

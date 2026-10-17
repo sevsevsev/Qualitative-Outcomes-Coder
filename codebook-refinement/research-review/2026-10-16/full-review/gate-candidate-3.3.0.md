@@ -28,6 +28,7 @@ and #66). Not pushed, not merged. The live design-set gate decides whether it la
 | CP-12-29 | Y1–Y7, F1, F2, A1 | Secondary frameworks named in each domain's Framework Basis; `sync.test.ts` check that every framework a code cites is in its domain basis (known gaps: A2.6, Y8.4, Y8.5, Y8.10). Y8 clause, NRC and USDA omitted. |
 | CP-12-19 (bullet only) | rules | The DOMAIN ONLY bullet: an excluded specific result takes the domain. Example rebased to F2 ("material hardship in general"). |
 | CP-12-33 | F2.4 (new), F2, A2.3, rules 1 and 2 | F2.4 Material Necessities in full: data, F2 description, basis, category line and category B, A2.3 exclude/useInstead pointer, rule 1 and rule 2 wording, CF-037, DEVIATIONS drift row, 10 registry entries from `verify-f24/verdicts.json` and `hygiene-verdicts.json` (`v3/verification_2026_10_17_f24.py`). Example is the P-F24-04 text with no goldId. |
+| CP-12-31 (narrow hint, round 2) | F2.1, F1.6 | After the first gate run moved H027 from F2.1 to F1.6 in both runs, Severin chose to keep his ruling (2026-10-17). F2.1 include adds "families' confidence about money"; F1.6 exclude adds "savings, or confidence about money". Only the money-situation side of CF-034 ships (adjudicated rows H027, S006, H067; S118, H062, S206 on the other side); the caregiver money-skill bullet stays held (G11). This fix comes from a miss in the 90 older test rows, so they count even less as an independent check. |
 
 ## Excluded, and why
 
@@ -88,6 +89,10 @@ npx tsx scripts/codebook-eval.ts --codebook youth_outcomes_v3 --gold codebook-re
 The design run is the gate. Report the `--set heldout` run separately: those 90 rows have informed
 earlier fixes, so they are not a clean held-out set. Do not run the separate
 `youth_outcomes_v3.heldout.gold.csv` file (used once). `--include-proposed` gives a non-gating preview only.
+
+## Gate run 1 and the fix (2026-10-17)
+
+Run 1 results are in `codebook-refinement/eval/gate-3.3.0/` (README there). Design set: no regressions, S073 and S247 fixed. Older test rows: H027 moved F2.1 → F1.6 in both runs. Severin kept F2.1; the narrow CP-12-31 hint above was added and the gate is rerun on the new commit (round 2 files carry a `-r2` suffix).
 
 ## Open items
 

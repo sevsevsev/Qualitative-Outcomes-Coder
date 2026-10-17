@@ -549,7 +549,7 @@ _Renumbered from CF-019 by `v3/renumber_2x_refs.py`; do not edit by hand._
 
 **Gold:** S204 (A1.2), S078 (Y8.8)
 
-### CF-034: Money result or adult learning? · in force for reviewers; no hint yet (CP-12-31, decision F1-1)
+### CF-034: Money result or adult learning? · in force; confidence about money hinted in 3.3.0, the rest held (CP-12-31, decision F1-1)
 
 **Codes:** **F2.1** · F1.6
 

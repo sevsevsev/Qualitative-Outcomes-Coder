@@ -434,6 +434,9 @@ coders coded the rows from the 3.1.5 prompt with this CP's prompt changes; four 
 - Edits made from the panel: F2.4 definition (cause need not be stated), include, exclude and
   useInstead; A2.3 pointer lists the full set of goods; rule 2 examples; CF-037 dignity, count and
   access lines.
+- Retest with the revised wording (and CP-12-19's DOMAIN ONLY bullet): three fresh blind coders
+  coded 10 rows (P-F24-01, -02, -04, -10, -22, -25, -26 to -29) and matched the panel's side on all
+  30 codings (`panel-f24/retest/`). Rows invented and seen by the panel are design evidence only.
 - Logged, not changed here: Y2.6 should point class participation to Y1.9 (Y2 edits wait for its
   own CP); team-sport gear rests on reading it as "outdoor leisure equipment" (V-F24-2), so rows like
   P-F24-22 are medium confidence; hygiene kits are a common donor item, so expect many F2

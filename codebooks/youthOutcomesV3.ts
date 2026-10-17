@@ -97,6 +97,7 @@ RULES:
      - A broad label that spans more than one domain ("21st-century skills", "non-cognitive skills", "positive youth development", "well-rounded students") also stays uncoded: domain-only needs the text itself to name one domain's area.
      - A list of named skills is split and each skill coded, never coded domain-only.
      - A code whose definition already covers the general case keeps it: "academic performance" or test scores with no subject -> Y1.15; leadership with no setting -> Y4.7.
+     - A specific result that a code's Exclude or Use instead line sends to the domain with subcategory none also takes the domain-only code ("material hardship in general" -> Domain F2).
    - Whenever "Uncoded" is true, set primary_confidence to "none" and primary_subcategory to "none". Whenever you assign a real code or a domain-only code, set "Uncoded" to false and use high, medium, or low -- never "none". (The schema makes you name a primary_domain even for uncoded items; it is discarded.)
 
    - "Target Population":

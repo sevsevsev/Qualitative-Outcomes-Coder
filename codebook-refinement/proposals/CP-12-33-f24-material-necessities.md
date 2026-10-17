@@ -15,7 +15,7 @@ sources; nothing ships until Severin rules on 29 example statements and a test r
 | Field | Value |
 |---|---|
 | Type | ADD_CODE |
-| Codes touched | F2.4 (new). F2: `description`, `frameworkBasis`, `categoryLine`, category B `name` and `description`. A2.3: exclude, useInstead. rulesText: rule 1 (one clause), rule 2 (one sentence). `CONFUSIONS.md`: CF-037 (provisional id). `DEVIATIONS.md`: F2 drift row only (no FD). Registry: seven new entries, one note. Tests: code count 98 → 99. No change to F2.2, F2.3, Y8.1, Y2.6, Y1.13 (reasons under "Neighbouring codes"). |
+| Codes touched | F2.4 (new). F2: `description`, `frameworkBasis`, `categoryLine`, category B `name` and `description`. A2.3: exclude, useInstead. rulesText: rule 1 (one clause), rule 2 (one sentence). `CONFUSIONS.md`: CF-037 (provisional id). `DEVIATIONS.md`: F2 drift row only (no FD). Registry: ten new entries, one note. Tests: code count 98 → 99. No change to F2.2, F2.3, Y8.1, Y2.6, Y1.13 (reasons under "Neighbouring codes"). |
 | Version bump | MINOR: 3.2.0 if it is the first MINOR after 3.1.5, otherwise the next minor (version bumped at merge) |
 | Requirement served | R2 breadth (with R1 frameworks and R3 tie-breakers for the new code) |
 | Status | draft, 2026-10-17 (Severin asked for it). **Blocked** on: (1) Severin settling the 29 proposed rows P-F24-01 to P-F24-29 (decision G11); (2) the live design-set gate after PRs #62 and #66 (decision G10). |
@@ -26,11 +26,14 @@ Framework deviation: none. Every element the code text names has verified suppor
 and outdoor leisure equipment and the affordability condition directly (Eurostat 2023; Commission
 Regulation (EU) No 112/2013 items HD100, HD110, HD160), menstrual materials directly (Global MHH
 Monitoring Group 2022, Indicator 1), clothing in general and school supplies as statutory duties
-(42 U.S.C. 675(4)(A); 42 U.S.C. 11433(d)(15); partial, decision G4). The anchors are named in F2's
+(42 U.S.C. 675(4)(A); 42 U.S.C. 11433(d)(15); partial, decision G4), and basic toiletries directly
+for the item (Joseph Rowntree Foundation and I-SPHERE, Destitution in the UK, essential 6; an
+all-ages measure, broader than the code, decision G3) with the foster-care guidance as partial
+support (ACF Child Welfare Policy Manual 8.3B.1, Question 9, decision G4). The anchors are named in F2's
 Framework Basis with an "(F2.4 only)" tag, as F1 names MIECHV for F1.3 only. The text names no
-foster-care or homeless population (decision G1) and no general hygiene item. If Severin answers
-decision 2 were overruled, F2.4 becomes codebook-defined with an FD, F2 goes to 2 of 4 (50%, over the line),
-and the F2 anchor re-review (S4.9) comes first.
+foster-care or homeless population (decision G1). If any source above were dropped, the element it
+supports would make F2.4 codebook-defined with an FD, F2 would go to 2 of 4 (50%, over the line),
+and the F2 anchor re-review (S4.9) would come first.
 
 ## Decisions applied
 
@@ -43,7 +46,7 @@ and the F2 anchor re-review (S4.9) comes first.
 | G5 (a named instance of a cited general category is not a departure) | "Outdoor sports gear" in the include is read as an instance of HD160 "Outdoor leisure equipment"; "period products" as an instance of "menstrual materials". |
 | G7 (S4.9 as written; F2 is at the line) | Wording chosen so that F2.4 stays `framework`. Drift shown below. |
 | G8 (official copy; secondary host only with a recorded match), CP-12-28 | Innocenti Report Card 10 (claim f2new-04) was read only on a UNICEF Hong Kong test server: not cited; a lead with verification request V-F24-1. |
-| G9 (domain-only may hold a specific result with no code, with a `codebook_gap` flag) | General hygiene items and generic "basic needs" go to Domain F2, subcategory none. Relies on CP-12-19's DOMAIN ONLY bullet (shared with CP-12-32). |
+| G9 (domain-only may hold a specific result with no code, with a `codebook_gap` flag) | Generic "basic needs" and material hardship in general go to Domain F2, subcategory none. Relies on CP-12-19's DOMAIN ONLY bullet (shared with CP-12-32). |
 | G10 (prompt-reaching edits after PRs #62 and #66, in a gate) | Everything that reaches the prompt waits; see "What lands when". |
 | G11 (two adjudicated design rows per side before a hint or widening ships) | 29 proposed rows; the code, its CF and its example wait for Severin. |
 
@@ -122,13 +125,13 @@ CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); U
 After, if CP-12-29 has landed (its F2 text, with the new items inserted):
 
 ```
-CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); USDA Household Food Security Survey Module; ACF NYTD; Eurostat EU-SILC child-specific deprivation items (F2.4 only); Global MHH Monitoring Group (2022), girls' menstrual health indicators (F2.4 only); secondary: CFPB Financial Well-Being (financial cushion); Runaway and Homeless Youth Program, 45 CFR 1351 (stable housing and safe exits); Healthy People 2030, AHS-01, NWS-01 and SDOH-04; USDA nutrition security (2022); McKinney-Vento Act, including the HEARTH Act; Social Security Act, 42 U.S.C. 675(4)(A) (clothing and school supplies).
+CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); USDA Household Food Security Survey Module; ACF NYTD; Eurostat EU-SILC child-specific deprivation items (F2.4 only); Global MHH Monitoring Group (2022), girls' menstrual health indicators (F2.4 only); JRF and I-SPHERE, Destitution in the UK (basic toiletries; F2.4 only); secondary: CFPB Financial Well-Being (financial cushion); Runaway and Homeless Youth Program, 45 CFR 1351 (stable housing and safe exits); Healthy People 2030, AHS-01, NWS-01 and SDOH-04; USDA nutrition security (2022); McKinney-Vento Act, including the HEARTH Act; Social Security Act, 42 U.S.C. 675(4)(A) (clothing and school supplies).
 ```
 
 (CP-12-29's own rules for the USDA and HEARTH items still apply.) If CP-12-29 has not landed:
 
 ```
-CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); USDA Household Food Security Survey Module; ACF NYTD; Eurostat EU-SILC child-specific deprivation items (F2.4 only); Global MHH Monitoring Group (2022), girls' menstrual health indicators (F2.4 only); secondary: McKinney-Vento Act; Social Security Act, 42 U.S.C. 675(4)(A) (clothing and school supplies).
+CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); USDA Household Food Security Survey Module; ACF NYTD; Eurostat EU-SILC child-specific deprivation items (F2.4 only); Global MHH Monitoring Group (2022), girls' menstrual health indicators (F2.4 only); JRF and I-SPHERE, Destitution in the UK (basic toiletries; F2.4 only); secondary: McKinney-Vento Act; Social Security Act, 42 U.S.C. 675(4)(A) (clothing and school supplies).
 ```
 
 ### F2.4 (new), appended to category B after F2.3
@@ -141,16 +144,16 @@ CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); U
             "flag": "deductive",
             "fidelity": "framework",
             "from2x": "new",
-            "definition": "A young person having the basic goods a child needs, rather than going without them for lack of money (the statement need not name the cause): clothing, properly fitting shoes, outdoor leisure equipment, school supplies, and enough menstrual materials.",
-            "include": "Weather-appropriate clothing; shoes that fit; outdoor play gear such as a bike; school supplies, including students coming to class with the supplies they need; enough period products; the number of children who will have a coat or other goods.",
-            "exclude": "Goods given, received, distributed or counted, or access to them; devices and internet; food; housing; general hygiene items (soap, deodorant, toothpaste) and basic needs or material hardship in general; what having the goods leads to (school attendance, joining a team, physical activity, confidence or dignity, belonging, household costs).",
-            "useInstead": "A2.3 goods provided, counted or made accessible, and devices or internet; Domain F2 with subcategory none for general hygiene items or basic needs in general; F2.1 household costs; F2.2 food; F2.3 housing; Y1.13 attendance; Y1.9 class participation; Y2.6 joining or staying in an activity; Y8.1 physical activity; Y5.4 confidence, self-worth or dignity; Y3.1 belonging.",
+            "definition": "A young person having the basic goods a child needs, rather than going without them for lack of money (the statement need not name the cause): clothing, properly fitting shoes, outdoor leisure equipment, school supplies, enough menstrual materials, and basic toiletries.",
+            "include": "Weather-appropriate clothing; shoes that fit; outdoor play gear such as a bike; school supplies, including students coming to class with the supplies they need; enough period products; soap, shampoo, toothpaste, a toothbrush, deodorant and other basic toiletries; the number of children who will have a coat or other goods.",
+            "exclude": "Goods given, received, distributed or counted, or access to them; devices and internet; food; housing; basic needs or material hardship in general; what having the goods leads to (school attendance, joining a team, physical activity, confidence or dignity, belonging, household costs).",
+            "useInstead": "A2.3 goods provided, counted or made accessible, and devices or internet; Domain F2 with subcategory none for basic needs or material hardship in general; F2.1 household costs; F2.2 food; F2.3 housing; Y1.13 attendance; Y1.9 class participation; Y2.6 joining or staying in an activity; Y8.1 physical activity; Y5.4 confidence, self-worth or dignity; Y3.1 belonging.",
             "example": {
               "text": "<the first F2.4 row Severin confirms; draft: P-F24-04, \"Every student we serve will have a warm winter coat and properly fitting shoes by December.\">",
               "goldId": "<the design gold id Severin gives that row>"
             },
-            "source": "Eurostat, EU-SILC child-specific material deprivation items (Commission Regulation (EU) No 112/2013, HD100, HD110, HD160); Global MHH Monitoring Group (2022), Priority List of Indicators for Girls' Menstrual Health and Hygiene, Indicator 1; Social Security Act, 42 U.S.C. 675(4)(A); McKinney-Vento Act, 42 U.S.C. 11433(d)(15).",
-            "basis": "Eurostat (2023, 24 April), child-specific material deprivation rate (verified, direct: new clothes, two pairs of shoes, outdoor leisure equipment; only items lacked for affordability count; claim f2new-01); Commission Regulation (EU) No 112/2013, Annex, HD100, HD110, HD160 (verified, direct; claim f2new-02); CSO Ireland (2025), SILC Module on Child Deprivation 2024, Table 6.1 (verified, direct, supporting only; claim f2new-03); Global MHH Monitoring Group (2022), Indicator 1 (verified, direct: enough menstrual materials; claim f2new-05). Clothing in general, not only new clothes: 42 U.S.C. 675(4)(A) (verified, partial: a duty to pay for a child's clothing and school supplies, decision G4; claim f2new-07); UN Convention on the Rights of the Child, Art. 27(3) (verified, partial: a right broader than the code, decision G3; claim f2new-09). School supplies: 42 U.S.C. 675(4)(A) and 42 U.S.C. 11433(d)(15) (verified, partial: statutory duties, decision G4; claims f2new-07, f2new-08). Outdoor sports gear is an instance of 'outdoor leisure equipment' and period products of 'menstrual materials' (decision G5). The code names no foster-care or homeless population (decision G1). Innocenti Report Card 10 (claim f2new-04) waits for an official copy (decision G8). CSSP Concrete Support does not name clothing (claim f2new-13) and is not cited. No FD (CP-12-33)."
+            "source": "Eurostat, EU-SILC child-specific material deprivation items (Commission Regulation (EU) No 112/2013, HD100, HD110, HD160); Global MHH Monitoring Group (2022), Priority List of Indicators for Girls' Menstrual Health and Hygiene, Indicator 1; Social Security Act, 42 U.S.C. 675(4)(A); McKinney-Vento Act, 42 U.S.C. 11433(d)(15); Joseph Rowntree Foundation and I-SPHERE, Destitution in the UK (essential 6, basic toiletries).",
+            "basis": "Eurostat (2023, 24 April), child-specific material deprivation rate (verified, direct: new clothes, two pairs of shoes, outdoor leisure equipment; only items lacked for affordability count; claim f2new-01); Commission Regulation (EU) No 112/2013, Annex, HD100, HD110, HD160 (verified, direct; claim f2new-02); CSO Ireland (2025), SILC Module on Child Deprivation 2024, Table 6.1 (verified, direct, supporting only; claim f2new-03); Global MHH Monitoring Group (2022), Indicator 1 (verified, direct: enough menstrual materials; claim f2new-05). Clothing in general, not only new clothes: 42 U.S.C. 675(4)(A) (verified, partial: a duty to pay for a child's clothing and school supplies, decision G4; claim f2new-07); UN Convention on the Rights of the Child, Art. 27(3) (verified, partial: a right broader than the code, decision G3; claim f2new-09). School supplies: 42 U.S.C. 675(4)(A) and 42 U.S.C. 11433(d)(15) (verified, partial: statutory duties, decision G4; claims f2new-07, f2new-08). Outdoor sports gear is an instance of 'outdoor leisure equipment' and period products of 'menstrual materials' (decision G5). Basic toiletries: Bramley and Ayed (2026), Destitution in the UK: income thresholds for October 2025, Joseph Rowntree Foundation (verified, direct for the item: 'Basic toiletries (such as soap, shampoo, toothpaste, and a toothbrush)', lacked because unaffordable; an all-ages measure, broader than the code, decision G3; claim f2hyg-01); I-SPHERE, Destitution in the UK project page (verified, supporting only: counts about one million children; claim f2hyg-02); ACF Child Welfare Policy Manual 8.3B.1, Question 9 (verified, partial: a foster child's 'personal incidentals' include 'items related to personal hygiene', decision G4; claim f2hyg-03). Deodorant is an instance of basic toiletries (decision G5). The code names no foster-care or homeless population (decision G1). Innocenti Report Card 10 (claim f2new-04) waits for an official copy (decision G8). CSSP Concrete Support does not name clothing (claim f2new-13) and is not cited. No FD (CP-12-33)."
           }
 ```
 
@@ -164,10 +167,11 @@ Element check (what the text names, and what supports it):
 | outdoor leisure equipment; include "a bicycle or the outdoor gear they need to play" | HD160 "Outdoor leisure equipment"; Eurostat 2023 | direct; gear as instance (G5) | no |
 | school supplies | 675(4)(A) "school supplies"; 11433(d)(15) "The provision of school supplies" | partial (G4) | no |
 | enough menstrual materials; include "period products" | MHH Indicator 1 "having enough menstrual materials" | direct; products as instance (G5) | no |
-| *not named:* general hygiene items (soap, deodorant), indoor sports equipment and uniforms in general, devices | no verified source frames the first two as a child outcome; devices stay A2.3 | — | would need an FD if named; routed instead (CF-037) |
+| basic toiletries; include "soap, shampoo, toothpaste, a toothbrush, deodorant" | JRF Destitution essential 6 (all ages, G3); CWPM 8.3B.1 Q9 "items related to personal hygiene" (G4) | direct for the item; deodorant as instance (G5) | no |
+| *not named:* indoor sports equipment and uniforms in general, devices | no verified source frames the first as a child outcome; devices stay A2.3 | — | would need an FD if named; routed instead (CF-037) |
 
 Two wording choices keep it `framework`: "outdoor leisure equipment" in the definition (HD160's words,
-not "sports equipment"), and no hygiene items in any field. Both are open questions 4 and 5.
+not "sports equipment"), and "basic toiletries" (the destitution measure's words) for hygiene items.
 
 ### A2.3 Access to Resources (pointer only)
 
@@ -235,11 +239,12 @@ tie-breakers" (before: no entry):
 - The program giving, distributing or counting goods, or young people receiving them ("1,200 coats distributed", "students will receive a backpack of supplies") → **A2.3**.
 - Devices and internet → **A2.3** whether given or had (rule 15; S240). Only non-digital goods split by had or given.
 - What the goods lead to takes its own code; the goods are the means (rule 2): school attendance → Y1.13; joining or staying in a sport or activity → Y2.6; physical activity → Y8.1; taking part in class → Y1.9; confidence or self-worth → Y5.4; fitting in or not being singled out → Y3.1; less household spending → F2.1 (CF-034). When the statement names both having the goods and a further result, split (rule 2).
-- Basic needs in general, material hardship in general, or general hygiene items (named in F2.4's exclude) → **Domain F2, subcategory none**, with `codebook_gap` = 1 in gold for hygiene items (decision G9).
+- Basic toiletries (soap, shampoo, toothpaste, a toothbrush, deodorant) a young person has → **F2.4** (Severin, P-F24-10); hygiene kits given out → **A2.3**.
+- Basic needs in general or material hardship in general (named in F2.4's exclude) → **Domain F2, subcategory none** (decision G9).
 - Warmth or physical comfort alone ("clothes that keep them warm") → **F2.4**; dignity, pride or self-worth → **Y5.4** (the goods are the means).
 - A count of goods given out ("500 pairs of gloves handed out") or access to goods the program supplies ("access to free period products") → **A2.3**. A number of children who will have the goods ("put a warm coat on 1,200 kids") → **F2.4** (Severin, P-F24-26). Students coming to class with the supplies they need → **F2.4**, not Y1.9 (Severin, P-F24-28).
 
-**Rationale:** F2.4's anchors measure a child's state: the EU-SILC child items (Eurostat 2023; Regulation (EU) No 112/2013, HD100, HD110, HD160) count children lacking clothes, shoes or outdoor leisure equipment, and Global MHH Indicator 1 counts girls having enough menstrual materials. A2.3's definition is provision ("Providing materials ... including counts of resources distributed"), and the output/outcome line is the codebook's own (rule 2; CF-009 in 2.x). Devices stay with A2.3's digital-equity sources (47 CFR 54 Subpart Q; ESSA 7119(a)(2); Digital Equity Act), which frame device access as access, and S240 is adjudicated there.
+**Rationale:** F2.4's anchors measure a child's state: the EU-SILC child items (Eurostat 2023; Regulation (EU) No 112/2013, HD100, HD110, HD160) count children lacking clothes, shoes or outdoor leisure equipment, and Global MHH Indicator 1 counts girls having enough menstrual materials. The Joseph Rowntree Foundation's destitution measure counts people lacking basic toiletries they cannot afford. A2.3's definition is provision ("Providing materials ... including counts of resources distributed"), and the output/outcome line is the codebook's own (rule 2; CF-009 in 2.x). Devices stay with A2.3's digital-equity sources (47 CFR 54 Subpart Q; ESSA 7119(a)(2); Digital Equity Act), which frame device access as access, and S240 is adjudicated there.
 
 **Gold:** S196, S228, S240 (A2.3); <F2.4 rows Severin confirms from P-F24-04, -05, -06, -11, -12, -22, -23> (F2.4).
 ```
@@ -271,9 +276,10 @@ this CP lands.
 
 A new verification script, `codebook-refinement/v3/verification_2026_10_17_f24.py`, built like
 `verification_2026_10_16_b3.py`, with its record file `v3/source-verification-2026-10-17-f24.json`
-copied from `research-review/2026-10-16/full-review/verify-f24/verdicts.json`. `v3/hosts.py` gains
+copied from `research-review/2026-10-16/full-review/verify-f24/verdicts.json` and
+`verify-f24/hygiene-verdicts.json`. `v3/hosts.py` gains
 `ec.europa.eu`, `eur-lex.europa.eu`, `www.cso.ie`, `www.ohchr.org` and
-`www.publichealth.columbia.edu` as `official` (the issuing body's or publisher's own site; the MHH
+`www.publichealth.columbia.edu`, `www.jrf.org.uk`, `i-sphere.site.hw.ac.uk` and `cwpm.acf.gov` as `official` (the issuing body's or publisher's own site; the MHH
 document's recommended citation names Columbia University, verifier note on f2new-05).
 `build_registry.py` gains `'F2.4'` in its code-to-source map. Before: no entries. After:
 
@@ -285,11 +291,15 @@ document's recommended citation names Columbia University, verifier note on f2ne
 | `global-mhh-indicators-2022` | Global MHH Monitoring Group (2022). Priority List of Indicators for Girls' Menstrual Health and Hygiene: Technical Guidance for National Monitoring. Columbia University. Indicator 1. | B | F2.4: enough menstrual materials | direct | f2new-05 | "Global MHH Monitoring Group (2022)" |
 | `usc-42-675-4a-maintenance-payments` | Social Security Act sec. 475(4)(A), 42 U.S.C. 675(4)(A): foster care maintenance payments. | A | F2.4: clothing, school supplies (statutory duty, G4) | partial | f2new-07 | "Social Security Act, 42 U.S.C. 675(4)(A)" |
 | `usc-42-11433-d15-school-supplies` | McKinney-Vento Homeless Assistance Act, 42 U.S.C. 11433(d)(15): authorized activities, provision of school supplies. | A | F2.4: school supplies (statutory duty, G4) | partial | f2new-08 | "McKinney-Vento Act, 42 U.S.C. 11433(d)(15)" |
+| `jrf-destitution-thresholds-2026` | Bramley, G. and Ayed, N. (2026). Destitution in the UK: income thresholds for October 2025. Joseph Rowntree Foundation. | D | F2.4: basic toiletries (essential 6) | direct (item); all ages, broader than the code (G3) | f2hyg-01 | "Joseph Rowntree Foundation and I-SPHERE, Destitution in the UK"; "JRF and I-SPHERE, Destitution in the UK" |
+| `isphere-destitution-uk` | I-SPHERE, Heriot-Watt University, for the Joseph Rowntree Foundation. Destitution in the UK (2016, 2018, 2020, 2023), project page. | D | F2.4: same essential; about one million children, supporting only | direct | f2hyg-02 | none (not on the Source line) |
+| `acf-cwpm-8-3b1-q9-incidentals` | ACF Children's Bureau. Child Welfare Policy Manual 8.3B.1, Title IV-E Foster Care Maintenance Payments, Allowable costs, Question 9 (personal incidentals). | A | F2.4: hygiene items as a foster child's personal incidentals (statutory guidance, G4) | partial | f2hyg-03 | none (not on the Source line) |
 | `un-crc-art27` | United Nations (1989). Convention on the Rights of the Child, Article 27(1) and 27(3). | A (decision 2) | F2.4: clothing as a child's material need (a right broader than the code, G3) | partial | f2new-09 | none (not on the Source line) |
 
 Notes to carry: on `eurostat-child-deprivation-2023` and `eu-reg-112-2013-silc-child-items`, "HD100
 counts new (not second-hand) clothes; F2.4 does not require new clothes, which rests on 675(4)(A)
-and CRC 27(3) (CP-12-33)". On `usc-42-11433-d15-school-supplies`, "a provision duty; also a lead for
+and CRC 27(3) (CP-12-33)". On `jrf-destitution-thresholds-2026`, "publication date 13 January 2026
+taken from the verifier's fetch summary; confirm on the page when the entry is built". On `usc-42-11433-d15-school-supplies`, "a provision duty; also a lead for
 A2.3 'materials' (separate CP, A2 re-review)". On the existing `cssp-concrete-support`, a note only:
 "Does not name clothing (claim f2new-13, PARTIAL, 2026-10-17); not cited for F2.4. The verifier's
 corrected cite: Center for the Study of Social Policy (n.d.). Strengthening Families: Concrete
@@ -350,7 +360,7 @@ Nothing in this CP lands in the codebook now.
 bullet that sends excluded specific results to the domain is CP-12-19's (also carried by CP-12-32);
 this CP relies on it and does not carry it. F2's `frameworkBasis` "secondary:" clause is CP-12-29's;
 this CP inserts into whichever text is current. The `codebook_gap` flag is decision G9's app change
-(no owner yet, as CP-12-19 notes); until it exists, the hygiene-item rows carry the suggestion in
+(no owner yet, as CP-12-19 notes); until it exists, the domain-only rows carry the suggestion in
 their "why" text.
 
 ## Sources
@@ -364,6 +374,9 @@ their "why" text.
 | usc-42-675-4a-maintenance-payments (new) | verified once added (f2new-07 SUPPORTED; partial fit, G4) | "payments to cover the cost of (and the cost of providing) food, clothing, shelter, daily supervision, school supplies, a child's personal incidentals" |
 | usc-42-11433-d15-school-supplies (new) | verified once added (f2new-08 SUPPORTED; partial fit, G4) | "The provision of school supplies, including those supplies to be distributed at shelters or temporary housing facilities" |
 | un-crc-art27 (new) | verified once added (f2new-09 SUPPORTED; partial fit, G3) | "shall in case of need provide material assistance and support programmes, particularly with regard to nutrition, clothing and housing." |
+| jrf-destitution-thresholds-2026 (new) | verified once added (f2hyg-01 SUPPORTED; item direct, population broader, G3) | "People are considered destitute if they have lacked 2 or more of the following essentials over the past month because they cannot afford them: ... Basic toiletries (such as soap, shampoo, toothpaste, and a toothbrush)." |
+| isphere-destitution-uk (new) | verified once added (f2hyg-02 SUPPORTED; supporting only) | "People who have lacked two or more of six essentials over the past month, because they cannot afford them. ... Basic toiletries (soap, shampoo, toothpaste, toothbrush) ... including around one million children." |
+| acf-cwpm-8-3b1-q9-incidentals (new) | verified once added (f2hyg-03 PARTIAL; G4) | "For title IV-E purposes, what does the term \"personal incidentals\" include? ... items related to personal hygiene; cosmetics; over-the-counter medications and special dietary foods;" |
 | 47 CFR 54 Subpart Q; essa-4109-tech-capacity; digital-equity-act (existing, A2.3) | verified | device and connectivity access (CF-037 rationale for devices) |
 
 Leads, not cited: Innocenti Report Card 10 (f2new-04, PARTIAL: test-server copy only). Not support
@@ -407,7 +420,7 @@ rulings.
   | Boundary | Sides (rows) |
   |---|---|
   | F2.4 or A2.3 | A2.3: P-F24-01, -02, -03, -26, -27, and the device check -07; F2.4: -04, -05, -06 |
-  | F2.4 or F2 domain-only | F2 domain-only: -08, -09, -10 (hygiene items, suggest `codebook_gap` = 1); F2.4: -11, -12 |
+  | F2.4 or F2 domain-only | F2 domain-only: -08, -09; F2.4: -10 (basic toiletries, Severin), -11, -12 |
   | F2.4 or the downstream result | Y1.13: -13, -14; Y2.6: -15, -16; Y8.1: -17; Y1.9: -18, -28; Y5.4: -19, -25; Y3.1: -20; F2.1: -21, -29; F2.4: -22, -23; split F2.4 and Y1.13: -24 |
 
   Severin settles them before the code ships (G11). All 29 are invented, so none can repeat a
@@ -457,11 +470,12 @@ Severin ruled on the 11 flagged statements on the review page
   CF-037 updated.
 - P-F24-10 "Students will have the soap, deodorant and toothpaste they need each week": **F2.4**
   (panel: F2 domain only). This puts general hygiene items inside F2.4. No verified source names
-  them yet, so a search for one is running. If one is verified, F2.4 names hygiene items and stays
-  framework. If none is, hygiene items are a codebook-defined element of F2.4 with a counted
-  deviation; F2 goes to 2 of 4 (over the S4.9 line) and its anchor frameworks are re-reviewed
-  before the code ships. F2.4's text, the hygiene line in CF-037 and decision 5 above change once
-  the search is settled.
+  them at first, so a search ran. The independent verifier confirmed the Joseph Rowntree
+  Foundation's destitution measure (basic toiletries, claims f2hyg-01 and -02) and the foster-care
+  guidance (personal hygiene items, partial, f2hyg-03). F2.4 now names basic toiletries and stays
+  framework; F2 stays at 1 of 4. F2.4's definition, include, exclude and useInstead, CF-037 and
+  decision 5 are updated. The search files are `verify-f24/hygiene-research.md` and
+  `verify-f24/hygiene-verdicts.json`.
 
 ## Decisions
 
@@ -478,8 +492,11 @@ option and listed here so he can overrule any of them:
    logged for the Access domain's re-review.
 4. The code keeps the source's "outdoor leisure equipment" wording; uniforms and indoor-sport gear
    still go to F2.4 at medium confidence.
-5. General hygiene items (soap, deodorant, toothpaste) go to Basic Needs domain-only with the
-   codebook-gap flag.
+5. Basic toiletries (soap, shampoo, toothpaste, a toothbrush, deodorant) go to F2.4 (Severin,
+   P-F24-10), on the Joseph Rowntree Foundation's destitution measure. That measure is a
+   nonprofit and university measure, not official statistics, and covers all ages at a deeper
+   threshold than the EU child items; it is accepted because it names the items directly and is
+   broader than the code (G3).
 6. The code says "clothing", not "new clothing", resting on the foster-care payment law and the UN
    children's-rights treaty, so donated second-hand clothes count.
 7. School supplies stay in the code on the two U.S. laws (decision G4, partial support).

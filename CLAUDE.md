@@ -27,7 +27,7 @@ Read these before touching any codebook:
   coding CPs.
 - Codebook 3.0 (`youth_outcomes_v3`, `codebooks/youthOutcomesV3.data.ts`) is the default
   codebook since CP-08-02 (2026-09-26), and the only one on the public explorer. It has 3
-  parts, 13 domains, 39 categories and 98 codes. Gold: `gold/youth_outcomes_v3.gold.csv`
+  parts, 13 domains, 39 categories and 98 codes (99 from 3.3.0). Gold: `gold/youth_outcomes_v3.gold.csv`
   (345 design/old held-out rows) and `gold/youth_outcomes_v3.heldout.gold.csv` (100 fresh
   rows, now used once), all adjudicated by Severin. The v2 draft stays an input only.
 - 3.1.0 (CP-09-09, approved 2026-09-27) adds domain-only coding: a statement that names one
@@ -51,6 +51,12 @@ Read these before touching any codebook:
   Y8 is over the S4.9 drift line (5 of 13), so its anchor frameworks are re-reviewed before any
   further Y8 change. Prompt-text parts wait for one live design-set gate after PRs #62 and #66.
   Details: `codebook-refinement/research-review/2026-10-16/full-review/applied-3.1.5.md`.
+- 3.3.0 candidate (2026-10-17, branch `claude/y1-research-review-pilot-7z3jxj`) is the live design-set gate
+  (decision G10): the review's waiting Source lines and `frameworkBasis` "secondary:" clauses (CP-11-01, CP-12-04..06,
+  -16, -18, -21, -22, -29), the stale in-flight notes (CP-12-26), CP-12-01 (Y2 registry, FD-P37/P38), CP-12-19's
+  DOMAIN ONLY bullet, and CP-12-33's new code F2.4 Material Necessities (99 codes, enum 161). Y8 parts, G11-blocked
+  hints and held parts are left out. It awaits Severin's two-run gate; see
+  `codebook-refinement/research-review/2026-10-16/full-review/gate-candidate-3.3.0.md`.
 - `codebooks/original.ts` (2.5.x) was retired on 2026-09-26: no picker offers it, but it stays registered (marked `deprecated`) so saved sessions, old exports, eval scripts and direct Codebook-tab links still resolve its codes. Older files may use
   pre-2.0.0 numbers; see `codebook-refinement/renumbering/`.
 - A public explorer-only site is built from this repo with `VITE_SITE=explorer` (README,
@@ -75,7 +81,7 @@ Read these before touching any codebook:
   `DEVIATIONS.md` entry.
 - **Held-out gold never appears in a prompt**, as an example or anywhere else.
 - **Prefer fewer, well-defined codes.** Close a gap with the smallest fit (S2.2), and
-  check the enum footprint (3.0.0: 160; test cap 180; redesign line 165).
+  check the enum footprint (3.0.0: 160; 3.3.0: 161; test cap 180; redesign line 165).
 
 ## Hard rules
 

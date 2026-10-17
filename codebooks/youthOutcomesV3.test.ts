@@ -37,12 +37,12 @@ const parseCsv = (text: string): Record<string, string>[] => {
 };
 
 describe('codebook 3.x structure (CP-08-01)', () => {
-  it('has 3 parts, 13 domains, 39 categories and 98 codes', () => {
+  it('has 3 parts, 13 domains, 39 categories and 99 codes', () => {
     expect(new Set(V3_DOMAINS.map(d => d.part))).toEqual(new Set(['Y', 'F', 'A']));
     expect(V3_DOMAINS).toHaveLength(13);
     expect(V3_DOMAINS.flatMap(d => d.categories)).toHaveLength(39);
-    expect(codes).toHaveLength(98);
-    expect(allSubcategoryCodes(codebook)).toHaveLength(98);
+    expect(codes).toHaveLength(99);
+    expect(allSubcategoryCodes(codebook)).toHaveLength(99);
     expect(allDomainCodes(codebook)).toHaveLength(13);
   });
 
@@ -96,6 +96,15 @@ describe('codebook 3.x prompt', () => {
 
   it('names every code the schema accepts, and only those', () => {
     for (const c of codes) expect(codebook.definitionsText).toContain(`\n${v3Code(c)}\n`);
+  });
+
+  it('carries no proposal, PR or "in flight" notes in prompt text (CP-12-26)', () => {
+    const stale = /\bCP-\d{2}-\d{2}\b|\bPR #\d+|in flight/;
+    // Y8.10's note waits for the Y8 anchor re-review (S4.9: no Y8 change before it). Once it is
+    // removed, the second expectation fails: delete the exception then.
+    const y810 = codes.find(c => c.id === 'Y8.10')!;
+    expect(prompt.split(y810.useInstead).join('')).not.toMatch(stale);
+    expect(y810.useInstead, 'Y8.10 fixed: drop this exception').toMatch(stale);
   });
 });
 
@@ -283,6 +292,10 @@ describe('3.x confusion entries (S3.1)', () => {
   const heldOutIds = new Set(parseCsv(read('codebook-refinement/gold/youth_outcomes_v3.heldout.gold.csv')).map(r => r.gold_id));
   const liveIds = new Set(codes.map(c => c.id));
   const field = (b: string, label: string) => b.match(new RegExp(`^\\*\\*${label}:\\*\\*(.*)$`, 'm'))?.[1] ?? '';
+  // A new code whose example rows Severin has ruled but not yet added to design gold (only he adds
+  // them). The entry still needs two adjudicated rows for its other codes. Don't add to this map
+  // except for a code shipped through a CP with ruled rows; remove the code once a gold row covers it.
+  const AWAITING_GOLD: Record<string, string[]> = { 'CF-037': ['F2.4'] };
 
   it('has entries with unique CF ids after CF-028', () => {
     const ids = entries.map(b => b.slice(0, 6));
@@ -314,7 +327,13 @@ describe('3.x confusion entries (S3.1)', () => {
         expect(listed, `${id} ${g} -> ${code}`).toContain(code);
         covered.add(code);
       }
-      if (!isGenerated) for (const c of listed) expect(covered.has(c), `${id}: no gold row for ${c}`).toBe(true);
+      if (!isGenerated) for (const c of listed) {
+        if ((AWAITING_GOLD[id] ?? []).includes(c)) {
+          expect(covered.has(c), `${id}: ${c} now has a gold row; remove it from AWAITING_GOLD`).toBe(false);
+          continue;
+        }
+        expect(covered.has(c), `${id}: no gold row for ${c}`).toBe(true);
+      }
     }
   });
 });

@@ -4,6 +4,7 @@
 // approved on 2026-09-26 (docs/codebook/proposed-codebook.md): three parts by
 // who changes (Y young people, F families and other adult participants, A
 // staff, organizations and systems), 13 domains, 39 categories, 98 codes.
+// 3.3.0 (CP-12-33) adds F2.4 Material Necessities: 99 codes.
 //
 // Everything here is generated from youthOutcomesV3.data.ts: the prompt's
 // definitionsText, the domain and code strings the schema enums use, the
@@ -19,7 +20,7 @@ import { SUBJECT_AREA_OPTIONS, TARGET_POPULATION_OPTIONS } from './original.js';
 import { V3_DOMAINS } from './youthOutcomesV3.data.js';
 import type { V3Code, V3Domain } from './youthOutcomesV3.types.js';
 
-export const V3_VERSION = '3.2.1';
+export const V3_VERSION = '3.3.0';
 
 const PART_NAMES: Record<V3Domain['part'], string> = {
   Y: 'Part Y, young people: the change is in a young person.',
@@ -97,6 +98,7 @@ RULES:
      - A broad label that spans more than one domain ("21st-century skills", "non-cognitive skills", "positive youth development", "well-rounded students") also stays uncoded: domain-only needs the text itself to name one domain's area.
      - A list of named skills is split and each skill coded, never coded domain-only.
      - A code whose definition already covers the general case keeps it: "academic performance" or test scores with no subject -> Y1.15; leadership with no setting -> Y4.7.
+     - A specific result that a code's Exclude or Use instead line sends to the domain with subcategory none also takes the domain-only code ("material hardship in general" -> Domain F2).
    - Whenever "Uncoded" is true, set primary_confidence to "none" and primary_subcategory to "none". Whenever you assign a real code or a domain-only code, set "Uncoded" to false and use high, medium, or low -- never "none". (The schema makes you name a primary_domain even for uncoded items; it is discarded.)
 
    - "Target Population":
@@ -129,8 +131,8 @@ RULES:
    - Match the schema provided in the tool definition exactly.
 
 HOW TO CHOOSE A CODE:
-1. WHO CHANGES decides the part, first. Young people -> Part Y. Caregivers, households, and other adult participants who are not staff (adult learners, older adults) -> Part F. Staff, volunteers, the organization, or the wider system -> Part A. The sentence's subject decides: "Parents will communicate better with their children" -> F1.1; "Youth will communicate better with their parents" -> Y3.4. Parenting is Part F even when the parent is a teenager. A young person's own housing, food or income is F2, with target population "students_youth".
-2. OUTPUT OR OUTCOME. Attendance and dosage in this program -> A2.5, whether counted for the program ("served 300", "85% average daily attendance", "mentors completed 6 hours of training") or set as a per-person threshold ("attended at least 30 sessions", "parents will attend 4 workshops", "engaged year-round"). A young person's choice to return, join, or take part in activities beyond the program ("will return for a second year", "joined a sports team") -> Y2.6. Families volunteering or taking part in decisions -> F1.9. Youth with disabilities (or another group facing barriers) taking part alongside peers, when inclusion is the point -> A2.4. A specific student's school attendance -> Y1.13.
+1. WHO CHANGES decides the part, first. Young people -> Part Y. Caregivers, households, and other adult participants who are not staff (adult learners, older adults) -> Part F. Staff, volunteers, the organization, or the wider system -> Part A. The sentence's subject decides: "Parents will communicate better with their children" -> F1.1; "Youth will communicate better with their parents" -> Y3.4. Parenting is Part F even when the parent is a teenager. A young person's own housing, food, income, or clothing and supplies is F2, with target population "students_youth".
+2. OUTPUT OR OUTCOME. Attendance and dosage in this program -> A2.5, whether counted for the program ("served 300", "85% average daily attendance", "mentors completed 6 hours of training") or set as a per-person threshold ("attended at least 30 sessions", "parents will attend 4 workshops", "engaged year-round"). A young person's choice to return, join, or take part in activities beyond the program ("will return for a second year", "joined a sports team") -> Y2.6. Families volunteering or taking part in decisions -> F1.9. Youth with disabilities (or another group facing barriers) taking part alongside peers, when inclusion is the point -> A2.4. A specific student's school attendance -> Y1.13. Goods counted with no young people named or made accessible ("500 pairs of gloves handed out", "families can pick up free hats and scarves") -> A2.3; young people stated to have, or to be given, the clothing, shoes, gear, supplies, menstrual materials or toiletries they need -> F2.4, and what the goods lead to (attendance, joining a team, confidence) takes its own code. Devices and internet stay A2.3 either way (rule 15).
 3. MOST SPECIFIC DEFINITION WINS. Choose the code whose definition, not just its label, names the construct. The "Use instead" lines override this rule.
 4. SOCIAL AND ECONOMIC MOBILITY: code the concrete lever the statement names (a skill -> that skill's code; a credential or college completion -> Y7.4/Y1.18; a job or earnings -> Y7.5; household income or benefits -> F2.1). Mobility named alone -> Y7.5 for the young person, F2.1 for the household. Social mobility framed as wider connections or networks -> Y3.5. Understanding why education or training pays off (the value of a degree) -> Y2.4; knowing the steps to get there (applications, aid) -> Y7.2.
 5. SKILL vs. STATE: Domain Y4 is for skills ("uses coping strategies"). Domains Y2, Y3 and Y8 hold experiences and states ("feels happy", "feels safe"). Do not code a feeling as a skill unless the text implies growth in capacity.

@@ -1,0 +1,14 @@
+### round two vs baseline 3.2.1
+base 3.2.1 255 [(98.0, 99.2), (98.4, 100)] stab 98.8
+cand 3.3.0 255 [(98.4, 99.6), (98.8, 100)] stab 99.2
+S006 exp F2.1 | base F1.6 True | cand F2.1 True high
+S073 exp Y8.12 | base A2.5 False | cand Y8.12 True high
+cand misses: [('S011', 'none', 'A2.1'), ('S049', 'Y2.2', 'Y5.4'), ('S176', 'F1.9', 'A2.6'), ('S247', 'Y6.6', 'Y8.1')]
+
+### round two vs round one
+base 3.3.0 255 [(98.8, 100), (99.2, 100)] stab 98.8
+cand 3.3.0 255 [(98.4, 99.6), (98.8, 100)] stab 99.2
+S006 exp F2.1 | base A2.5 True | cand F2.1 True high
+S139 exp F2.1 | base F1.7 True | cand F2.1 True high
+S247 exp Y6.6 | base Y6.6 True | cand Y8.1 False low
+cand misses: [('S011', 'none', 'A2.1'), ('S049', 'Y2.2', 'Y5.4'), ('S176', 'F1.9', 'A2.6'), ('S247', 'Y6.6', 'Y8.1')]

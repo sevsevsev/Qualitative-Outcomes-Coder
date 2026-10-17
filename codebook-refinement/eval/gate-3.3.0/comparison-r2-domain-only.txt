@@ -1,0 +1,10 @@
+### round two vs baseline 3.2.1
+base 3.2.1 10 [(70.0, 70.0), (80.0, 80.0)] stab 90.0
+cand 3.3.0 10 [(70.0, 70.0), (70.0, 70.0)] stab 100
+cand misses: [('G-D07', 'Y3', 'Y3.1'), ('G-D09', 'Y2', 'none'), ('G-D10', 'Y5', 'none')]
+
+### round two vs round one
+base 3.3.0 10 [(80.0, 80.0), (80.0, 80.0)] stab 100
+cand 3.3.0 10 [(70.0, 70.0), (70.0, 70.0)] stab 100
+G-D07 exp Y3 | base Y3 True | cand Y3.1 False medium
+cand misses: [('G-D07', 'Y3', 'Y3.1'), ('G-D09', 'Y2', 'none'), ('G-D10', 'Y5', 'none')]

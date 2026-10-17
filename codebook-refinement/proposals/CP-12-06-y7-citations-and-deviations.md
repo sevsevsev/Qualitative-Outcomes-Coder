@@ -10,6 +10,7 @@
 | Requirement served | R1 frameworks, R4 drift |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
 | Applied | Applied 2026-10-16 in 3.1.5: registry rows (Perkins V govinfo URL, WIOA 681.460, Rehabilitation Act 705 CIE, Casey Life Skills, 42 U.S.C. 675(5)(I), IDEA transition); `basis` Y7.4, Y7.5, Y7.7; Y7.7 to framework (FD-P15 closed); Batch 2 bullets and drift row. Waits for the gate: Source lines Y7.4, Y7.5, Y7.7 and the Y7 `frameworkBasis` clause (CP-12-29). |
+| Gate candidate | Part (b) applied 2026-10-17 in the 3.3.0 gate candidate: Source lines Y7.4, Y7.5, Y7.7 as drafted. The Y7 secondary clause and the 681.460 fold-in are applied through CP-12-29. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | changed FD-P15 (closed: Y7.7's cross-sector scope now rests on the Casey Life Skills Toolkit, which is for youth "regardless of whether they are in foster care", claim y7-13; vital documents on 42 U.S.C. 675(5)(I), claim y7-18, partial-fit support as a statutory duty; decisions G1, G4 and Y7-1). None for Y7.4, Y7.5. Y7 drift: 1/7 → 0/7. |
 

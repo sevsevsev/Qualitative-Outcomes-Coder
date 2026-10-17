@@ -244,8 +244,8 @@ if stale:
 
 registry = {
     'codebook_id': 'youth_outcomes_v3',
-    'codebook_version_reviewed': '3.1.5',
-    'last_reviewed': '2026-10-16',
+    'codebook_version_reviewed': '3.3.0',
+    'last_reviewed': '2026-10-17',
     'status_legend': {
         **ORIG['status_legend'],
         'verified': 'A verifier who did not propose the source fetched the document itself and recorded a verbatim excerpt (`excerpt`). Whether it covers each code is recorded per support in `fit`.',

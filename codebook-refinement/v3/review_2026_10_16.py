@@ -38,6 +38,7 @@ MODULES = [
     'verification_2026_10_16_b3',
     'verification_2026_10_16_batch4',
     'verification_2026_10_16_hosts',
+    'verification_2026_10_17_f24',  # CP-12-33 (3.3.0); carries its own DATE, BY and record builder
 ]
 
 
@@ -116,11 +117,6 @@ def _fit(r, fit):
     return fit
 
 
-def _touch(src):
-    src['verified_on'] = DATE
-    src['verified_by'] = BY
-
-
 def _sup(out, key):
     """A support by (source, code), or by (source, code, component) where a source backs a code twice."""
     sid, code = key[0], key[1]
@@ -130,6 +126,7 @@ def _sup(out, key):
 
 
 def apply_module(out, codes, mod):
+    date, by = getattr(mod, 'DATE', DATE), getattr(mod, 'BY', BY)
     rec = load_record(mod.RECORD_FILE)
     rec['_secondary_ok'] = set(getattr(mod, 'SECONDARY_OK', ()))
 
@@ -149,8 +146,8 @@ def apply_module(out, codes, mod):
         out[n['id']] = {
             'id': n['id'], 'cite_as': n['cite_as'], 'codebook_names': list(n.get('codebook_names', [])),
             'tier': n['tier'], 'publisher': n['publisher'], 'year': n['year'],
-            'url': n.get('url') or first['url_checked'], 'status': 'verified', 'verified_on': DATE,
-            'verified_by': BY, 'excerpt': first['excerpt'],
+            'url': n.get('url') or first['url_checked'], 'status': 'verified', 'verified_on': date,
+            'verified_by': by, 'excerpt': first['excerpt'],
             'notes': f"Added by {n['cp']}." + (f" {n['notes_extra']}" if n.get('notes_extra') else ''),
             'supports': sups,
         }
@@ -209,8 +206,8 @@ def apply_module(out, codes, mod):
                                      'excerpt': r['excerpt'], 'verifier_note': note if note else r['notes']})
         touched.add(sid)
     for sid in touched:
-        if sid in out and out[sid].get('verified_on') != DATE:
-            _touch(out[sid])
+        if sid in out and out[sid].get('verified_on') != date:
+            out[sid]['verified_on'], out[sid]['verified_by'] = date, by
     for sid in list(out):
         if not out[sid]['supports']:
             del out[sid]
@@ -240,6 +237,9 @@ if __name__ == '__main__':
             if e.name == name:
                 continue
             raise
-        rows = [allc[c] for c in sorted(claims_used(mod))]
+        if hasattr(mod, 'build_record'):  # a module whose claims are not in the 2026-10-16 review folders
+            rows = mod.build_record()
+        else:
+            rows = [allc[c] for c in sorted(claims_used(mod))]
         (HERE / mod.RECORD_FILE).write_text(json.dumps(rows, indent=2, ensure_ascii=False) + '\n')
         print(f'wrote v3/{mod.RECORD_FILE}: {len(rows)} claims')

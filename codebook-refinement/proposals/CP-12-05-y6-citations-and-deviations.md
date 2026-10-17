@@ -10,6 +10,7 @@
 | Requirement served | R1 frameworks, R4 drift |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
 | Applied | Applied 2026-10-16 in 3.1.5: registry rows (VIA, Watts-Diemer-Voight, ISTE 2024, Developmental Assets Y6.4, NAAEE Y6.6 as a partial row after V-Y6-1 PARTIAL); `basis` Y6.1, Y6.3, Y6.4, Y6.6, Y6.7; Y6.6 adapted (FD-P27 stays open, G3); FD-P13 closure note; Batch 2 bullets and drift row. Waits for the gate: Source lines Y6.1, Y6.3, Y6.4, Y6.7 and the Y6 `frameworkBasis` (CP-12-29). |
+| Gate candidate | Part (b) applied 2026-10-17 in the 3.3.0 gate candidate: Source lines Y6.1, Y6.3, Y6.4, Y6.7 as drafted. The ISTE year and the Y6 secondary clause are applied through CP-12-29. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | new **FD-P27 (provisional id)**, Y6.6, codebook-defined element "connection to nature", counted (decision G3: the only partial source, Tbilisi, is narrower than the code); changed FD-P13 (closed entry; its closure note is rescoped to say what CIRCLE covers; stays closed). None for Y6.1 (decision G5), Y6.3, Y6.4 (decisions G3 and Y6-1), Y6.7; reasons recorded. Y6 drift: 0/7 → 1/7. |
 

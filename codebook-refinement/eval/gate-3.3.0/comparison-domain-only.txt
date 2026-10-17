@@ -1,0 +1,4 @@
+base 3.2.1 10 [(70.0, 70.0), (80.0, 80.0)] stab 90.0
+cand 3.3.0 10 [(80.0, 80.0), (80.0, 80.0)] stab 100
+G-D07 exp Y3 | base Y3.1 False | cand Y3 True medium
+cand misses: [('G-D09', 'Y2', 'none'), ('G-D10', 'Y5', 'none')]

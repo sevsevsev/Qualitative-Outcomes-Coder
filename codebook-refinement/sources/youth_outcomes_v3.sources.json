@@ -2430,15 +2430,8 @@
       "verified_on": "2026-09-27",
       "verified_by": "CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)",
       "excerpt": "No meaningful family engagement can be established until relationships of trust and respect are established between home and school.",
-      "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here. Round 2 (CP-12-28 V-HOST-5): the PDF prints '2013 © Copyright by SEDL'; SEDL's catalog page links its own copy (https://sedl.org/pubs/framework/FE-Cap-Building.pdf) but gives the year as 2014. The printed 2013 stands. Secondary host (files.eric.ed.gov); bibliographic match recorded in claim CP-12-28-V-HOST-5-mapp-kuttner-2013 (G8).",
+      "notes": "From v2/v2-candidate-sources.json (v2 status: verified). Only the SUPPORTED component is relied on here. F1.7 support removed in 3.3.0 (CP-12-22 part b): its capacities are broader than rights knowledge and system navigation (CP-10-01 verifier, fit partial). F1.8 and A2.6 keep it. Round 2 (CP-12-28 V-HOST-5): the PDF prints '2013 © Copyright by SEDL'; SEDL's catalog page links its own copy (https://sedl.org/pubs/framework/FE-Cap-Building.pdf) but gives the year as 2014. The printed 2013 stands. Secondary host (files.eric.ed.gov); bibliographic match recorded in claim CP-12-28-V-HOST-5-mapp-kuttner-2013 (G8).",
       "supports": [
-        {
-          "code": "F1.7",
-          "component": "family capacities",
-          "fit": "partial",
-          "excerpt": "Staff and families need access to social capital through strong, cross-cultural networks built on trust and respect.",
-          "verifier_note": "The source and attribution are correct. The 4 C's are shared by staff and families (capabilities, connections, cognition, confidence) and are broader than rights knowledge and system navigation. Only 'connections' relates loosely to F1.7."
-        },
         {
           "code": "F1.8",
           "component": "family-school partnership",

@@ -1775,8 +1775,8 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Parents of children with disabilities reported increased knowledge of their child's rights under IDEA.",
               "goldId": "H059"
             },
-            "source": "IDEA, 20 U.S.C. 1471(b); CSSP Strengthening Families, Concrete Support in Times of Need; Mapp & Kuttner (2013), Dual Capacity-Building Framework.",
-            "basis": "IDEA 20 U.S.C. 1471(b) (verified); CSSP Concrete Support in Times of Need (verified); Mapp & Kuttner (2013) (verified)."
+            "source": "IDEA, 20 U.S.C. 1471(b); CSSP Strengthening Families, Concrete Support in Times of Need.",
+            "basis": "IDEA 20 U.S.C. 1471(b) (verified); CSSP Concrete Support in Times of Need (verified). Mapp & Kuttner (2013) removed (CP-12-22): its capacities are broader than rights knowledge and navigation (CP-10-01 verifier, fit partial)."
           }
         ]
       },
@@ -2176,7 +2176,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "The coalition will establish a shared data system across five youth-serving agencies.",
               "goldId": "S195"
             },
-            "source": "Kania & Kramer (2011), Collective Impact.",
+            "source": "Reisman, Gienapp & Stachowiak (2007), A Guide to Measuring Advocacy and Policy (strengthened alliances); Kania & Kramer (2011), Collective Impact (shared agenda and shared measurement).",
             "basis": "Reisman, Gienapp & Stachowiak (2007), outcome category strengthened alliances (verified, direct; claim a3-01, CP-12-12); Coffman (2009), partnerships or alliances (verified, partial: advocacy framing; claim a3-02, registry only); Kania & Kramer (2011), Collective Impact (verified, direct for shared agenda and shared measurement)."
           },
           {

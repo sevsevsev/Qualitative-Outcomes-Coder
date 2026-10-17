@@ -273,3 +273,11 @@ TIER_PUBLISHER = {
 }
 COMPONENTS[('search-40-assets', 'Y8.10')] = 'Empowerment: Safety'  # drops "(live registry status: located)"
 NOTES['search-40-assets'] = 'Empowerment: Safety was re-checked in CP-10-01 (support excerpt for Y8.10), so it is no longer only located (CP-12-25).'
+
+# ---------------------------------------------------------------- CP-12-22 (part b, 3.3.0 gate)
+# The F1.7 Source line drops Mapp & Kuttner in the same release, so the registry never drops a
+# source the live line still names. No new claim: the CP-10-01 verifier judged the 4 C's broader
+# than rights knowledge and navigation ("Only 'connections' relates loosely to F1.7").
+REMOVE = {('mapp-kuttner-2013', 'F1.7')}
+NOTES['mapp-kuttner-2013'] = ('F1.7 support removed in 3.3.0 (CP-12-22 part b): its capacities are broader than '
+                              'rights knowledge and system navigation (CP-10-01 verifier, fit partial). F1.8 and A2.6 keep it.')

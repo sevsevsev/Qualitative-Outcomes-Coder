@@ -6,7 +6,7 @@
 | Codes touched | Y7.1 (narrowed), Y7.2 (widened) |
 | Version bump | MINOR (batched in 3.1.0) |
 | Requirement served | R3 tie-breakers |
-| Status | draft; blocked on verification EC-02 |
+| Status | ready-to-test; applied as candidate 3.2.0 on 2026-10-08 under Severin's delegation ("I defer to you on these"); awaits the live design-set gate |
 | Enum cost | +0 (160) |
 | Framework deviation | none if EC-02 is verified (college visits sit inside Conley's Key Transition Knowledge & Skills). If it fails, this CP is withdrawn rather than logged as a deviation. |
 
@@ -31,7 +31,7 @@ after: `College campus visits and college fairs; FAFSA completion; college appli
 
 | Registry ID | Status | Component relied on |
 |---|---|---|
-| Conley, Four Keys | located | Key Transition Knowledge & Skills [VERIFY: covers knowledge of postsecondary options and the college-going process] |
+| Conley, Four Keys | verified | Key Transition Knowledge & Skills (verified 2026-09-27 as `conley-four-keys` on Y7.2; covers knowledge of postsecondary options and the college-going process) |
 
 ## Verification requests
 

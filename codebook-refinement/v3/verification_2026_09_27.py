@@ -18,6 +18,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 RECORD = json.loads((HERE / 'source-verification-2026-09-27.json').read_text())
+# Later single-claim checks (CP-09-03, CP-09-06), kept in their own dated file.
+RECORD += json.loads((HERE / 'source-verification-2026-10-08.json').read_text())
 DATE = '2026-09-27'
 BY = 'CP-10-01 re-verification (independent codebook-citation-verifier, blind to proposer; WebFetch)'
 
@@ -155,6 +157,7 @@ CP_10_02_IDS = {'circle-2002-civic-indicators', 'coffman-2009-advocacy-evaluatio
 EXTRA_SUPPORTS = [
     ('casel-2020', 'Y4.12', "Relationship Skills: 'Resisting negative social pressure'", 'y412-casel-resisting'),
     ('shape-nhes-2024', 'Y4.12', "Standard 4: 'Demonstrate refusal skills to avoid or reduce health risks'", 'new-nhes-std4'),
+    ('octae-employability-skills-framework', 'Y7.3', 'Workplace Skills: Technology Use', 'y73-esf-technology-use'),  # CP-09-06
 ]
 
 

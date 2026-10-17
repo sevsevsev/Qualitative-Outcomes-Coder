@@ -40,6 +40,8 @@ Read these before touching any codebook:
   Y4.12, Y6.4, Y6.5 and A3.1; only A2.2 and A2.4 remain codebook-defined.
 - 3.1.3 (CP-10-03) gives each of the 39 categories a one-sentence `description`, for display
   only (outcomes dashboard, explorer); it is never part of the coding prompt.
+- 3.1.4 (CP-10-04) names racial identity in Y5.2 (definition, include), Y5.1 (exclude), Y4.5
+  (include) and the Y5.A description.
 - 3.2.0 candidate (CP-09-01..06, 08, 2026-10-08, PR on `claude/edge-case-determinations-t0kaje`)
   applies the edge-case review: attendance thresholds and inclusion alongside peers go to A2.5
   and A2.4, college visits to Y7.2, everyday digital skills to Y7.3/F1.6. Enum +0. It awaits
@@ -101,6 +103,12 @@ Read these before touching any codebook:
     output path.
   - Put inputs in a scratch directory outside `codebook-refinement/gold/`.
   - Compare their outputs yourself. Agreement is not accuracy; human adjudication is.
+
+- The `academic-research-skills` plugin (in `.claude/settings.json`, pinned to v3.23.1)
+  loads only in local Claude Code. Cloud and project-thread sessions ignore
+  repo-declared plugins, so they use the codebook agents above instead. Where the plugin
+  does run, its citation checks and fact-checks are leads only: the hard rules above
+  (verifier fetch, verbatim excerpt, independent checks, CPs) still decide.
 
 ## Checks
 

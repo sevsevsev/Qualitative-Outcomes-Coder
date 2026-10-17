@@ -732,7 +732,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "fidelity": "framework",
             "from2x": "4.3.2",
             "definition": "Respecting and including people of different backgrounds and identities, and examining one's own biases.",
-            "include": "Respect for peers of other cultures, religions, abilities; inclusive behavior; bias awareness.",
+            "include": "Respect for peers of other races, cultures, religions, abilities; inclusive behavior; bias awareness.",
             "exclude": "Pride in one's own identity; friendships across groups.",
             "useInstead": "Y5.2 own identity; Y3.3 friendships.",
             "example": {
@@ -900,7 +900,7 @@ export const V3_DOMAINS: V3Domain[] = [
       {
         "letter": "A",
         "name": "Identity",
-        "description": "Who a young person understands themselves to be: exploring their identity, taking pride in their cultural and social identities, and seeing themselves as part of a field such as STEM or the arts.",
+        "description": "Who a young person understands themselves to be: exploring their identity, taking pride in their racial, cultural and other social identities, and seeing themselves as part of a field such as STEM or the arts.",
         "codes": [
           {
             "id": "Y5.1",
@@ -911,7 +911,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "from2x": "4.1.2",
             "definition": "Understanding who one is, what matters to one, and how one is changing.",
             "include": "Identity exploration; articulating one's values and experiences.",
-            "exclude": "Pride in a cultural or social identity; self-confidence; purpose.",
+            "exclude": "Pride in a racial, cultural or other social identity; self-confidence; purpose.",
             "useInstead": "Y5.2; Y5.4; Y5.5.",
             "example": {
               "text": "Students will deepen their understanding of who they are and what is important to them."
@@ -926,8 +926,8 @@ export const V3_DOMAINS: V3Domain[] = [
             "flag": "deductive",
             "fidelity": "framework",
             "from2x": "3.4",
-            "definition": "Pride in, and acceptance of, one's own cultural, ethnic, linguistic, gender, sexual or other social identity.",
-            "include": "Pride in heritage; self-acceptance of sexual orientation or gender identity; bicultural identity.",
+            "definition": "Pride in, and acceptance of, one's own cultural, racial, ethnic, linguistic, gender, sexual or other social identity.",
+            "include": "Pride in heritage; positive racial or ethnic identity; self-acceptance of sexual orientation or gender identity; bicultural identity.",
             "exclude": "Respect for others' identities; home-language skill.",
             "useInstead": "Y4.5; Y1.2.",
             "example": {

@@ -4,5 +4,17 @@
       "WebFetch",
       "WebSearch"
     ]
+  },
+  "extraKnownMarketplaces": {
+    "academic-research-skills": {
+      "source": {
+        "source": "github",
+        "repo": "Imbad0202/academic-research-skills",
+        "ref": "v3.23.1"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "academic-research-skills@academic-research-skills": true
   }
 }

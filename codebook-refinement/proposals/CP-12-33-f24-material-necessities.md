@@ -10,7 +10,7 @@ out or counting the goods stays with Access to Resources (A2.3), and what the go
 to school more, joining a team, feeling confident) keeps its own code. The code rests on European
 Union child-poverty survey items for clothes, shoes and outdoor equipment, a girls' menstrual-health
 indicator, and two U.S. laws that name school supplies, so it needs no logged departure from its
-sources; nothing ships until Severin rules on 25 example statements and a test run has passed.
+sources; nothing ships until Severin rules on 29 example statements and a test run has passed.
 
 | Field | Value |
 |---|---|
@@ -18,7 +18,7 @@ sources; nothing ships until Severin rules on 25 example statements and a test r
 | Codes touched | F2.4 (new). F2: `description`, `frameworkBasis`, `categoryLine`, category B `name` and `description`. A2.3: exclude, useInstead. rulesText: rule 1 (one clause), rule 2 (one sentence). `CONFUSIONS.md`: CF-037 (provisional id). `DEVIATIONS.md`: F2 drift row only (no FD). Registry: seven new entries, one note. Tests: code count 98 → 99. No change to F2.2, F2.3, Y8.1, Y2.6, Y1.13 (reasons under "Neighbouring codes"). |
 | Version bump | MINOR: 3.2.0 if it is the first MINOR after 3.1.5, otherwise the next minor (version bumped at merge) |
 | Requirement served | R2 breadth (with R1 frameworks and R3 tie-breakers for the new code) |
-| Status | draft, 2026-10-17 (Severin asked for it). **Blocked** on: (1) Severin settling the 25 proposed rows P-F24-01 to P-F24-25 (decision G11); (2) the live design-set gate after PRs #62 and #66 (decision G10). |
+| Status | draft, 2026-10-17 (Severin asked for it). **Blocked** on: (1) Severin settling the 29 proposed rows P-F24-01 to P-F24-29 (decision G11); (2) the live design-set gate after PRs #62 and #66 (decision G10). |
 | Enum cost | +1 (160 → 161; redesign line 165; test cap 180) |
 | Framework deviation | none. F2.4 enters as `framework`; F2 drift 1 of 3 (33%, at the line) → 1 of 4 (25%, below it). |
 
@@ -45,7 +45,7 @@ and the F2 anchor re-review (S4.9) comes first.
 | G8 (official copy; secondary host only with a recorded match), CP-12-28 | Innocenti Report Card 10 (claim f2new-04) was read only on a UNICEF Hong Kong test server: not cited; a lead with verification request V-F24-1. |
 | G9 (domain-only may hold a specific result with no code, with a `codebook_gap` flag) | General hygiene items and generic "basic needs" go to Domain F2, subcategory none. Relies on CP-12-19's DOMAIN ONLY bullet (shared with CP-12-32). |
 | G10 (prompt-reaching edits after PRs #62 and #66, in a gate) | Everything that reaches the prompt waits; see "What lands when". |
-| G11 (two adjudicated design rows per side before a hint or widening ships) | 25 proposed rows; the code, its CF and its example wait for Severin. |
+| G11 (two adjudicated design rows per side before a hint or widening ships) | 29 proposed rows; the code, its CF and its example wait for Severin. |
 
 ## Problem
 
@@ -141,10 +141,10 @@ CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); U
             "flag": "deductive",
             "fidelity": "framework",
             "from2x": "new",
-            "definition": "A young person having the basic goods a child needs, rather than going without them for lack of money: clothing, properly fitting shoes, outdoor leisure equipment, school supplies, and enough menstrual materials.",
-            "include": "Students have a winter coat and shoes that fit; fewer students going without school supplies; youth have a bicycle or the outdoor gear they need to play; girls report having enough period products.",
-            "exclude": "Goods given, received, distributed or counted; devices and internet; food; housing; what having the goods leads to (school attendance, joining a team, physical activity, confidence, belonging).",
-            "useInstead": "A2.3 goods provided or counted, and devices or internet; F2.2 food; F2.3 housing; Y1.13 attendance; Y2.6 joining or staying in an activity; Y8.1 physical activity; Y5.4 confidence; Y3.1 belonging.",
+            "definition": "A young person having the basic goods a child needs, rather than going without them for lack of money (the statement need not name the cause): clothing, properly fitting shoes, outdoor leisure equipment, school supplies, and enough menstrual materials.",
+            "include": "Weather-appropriate clothing; shoes that fit; outdoor play gear such as a bike; school supplies; enough period products.",
+            "exclude": "Goods given, received, distributed or counted, or access to them; devices and internet; food; housing; general hygiene items (soap, deodorant, toothpaste) and basic needs or material hardship in general; what having the goods leads to (school attendance, coming to class prepared, joining a team, physical activity, confidence or dignity, belonging, household costs).",
+            "useInstead": "A2.3 goods provided, counted or made accessible, and devices or internet; Domain F2 with subcategory none for general hygiene items or basic needs in general; F2.1 household costs; F2.2 food; F2.3 housing; Y1.13 attendance; Y1.9 class participation or coming prepared; Y2.6 joining or staying in an activity; Y8.1 physical activity; Y5.4 confidence, self-worth or dignity; Y3.1 belonging.",
             "example": {
               "text": "<the first F2.4 row Severin confirms; draft: P-F24-04, \"Every student we serve will have a warm winter coat and properly fitting shoes by December.\">",
               "goldId": "<the design gold id Severin gives that row>"
@@ -174,7 +174,7 @@ not "sports equipment"), and no hygiene items in any field. Both are open questi
 | Field | Before | After |
 |---|---|---|
 | exclude | `Participants' digital skills.` | `Participants' digital skills; young people stated to have the clothing, shoes, gear, school supplies or menstrual materials they need (not given or counted).` |
-| useInstead | `Y1.4; F1.6.` | `Y1.4; F1.6; F2.4 when young people are stated to have the clothing or supplies they need.` |
+| useInstead | `Y1.4; F1.6.` | `Y1.4; F1.6; F2.4 when young people are stated to have the clothing, shoes, gear, school supplies or menstrual materials they need.` |
 
 Definition, include, fidelity and basis unchanged. A2.3 never covered a young person's state of
 having non-digital goods, so the pointer narrows nothing and moves no construct across a framework
@@ -212,7 +212,7 @@ A young person's own housing, food, income, or clothing and supplies is F2, with
 **Rule 2**, appended after "A specific student's school attendance -> Y1.13." (before: no text):
 
 ```
-Goods given, received, distributed or counted ("1,200 coats distributed", "students will receive school supplies") -> A2.3; young people stated to have the clothing, shoes, gear, supplies or menstrual materials they need -> F2.4, and what the goods lead to (attendance, joining a team, confidence) takes its own code. Devices and internet stay A2.3 either way (rule 15).
+Goods given, received, distributed, counted or made accessible ("500 pairs of gloves handed out", "families can pick up free hats and scarves") -> A2.3; young people stated to have the clothing, shoes, gear, supplies or menstrual materials they need -> F2.4, and what the goods lead to (attendance, joining a team, confidence) takes its own code. Devices and internet stay A2.3 either way (rule 15).
 ```
 
 Rule 15 is unchanged. The rule 2 sentence restates CF-037 (S3.2).
@@ -235,8 +235,9 @@ tie-breakers" (before: no entry):
 - The program giving, distributing or counting goods, or young people receiving them ("1,200 coats distributed", "students will receive a backpack of supplies") → **A2.3**.
 - Devices and internet → **A2.3** whether given or had (rule 15; S240). Only non-digital goods split by had or given.
 - What the goods lead to takes its own code; the goods are the means (rule 2): school attendance → Y1.13; joining or staying in a sport or activity → Y2.6; physical activity → Y8.1; taking part in class → Y1.9; confidence or self-worth → Y5.4; fitting in or not being singled out → Y3.1; less household spending → F2.1 (CF-034). When the statement names both having the goods and a further result, split (rule 2).
-- Basic needs in general, material hardship in general, or general hygiene items (not named in F2.4) → **Domain F2, subcategory none**, with `codebook_gap` = 1 in gold for hygiene items (decision G9).
-- "Comfort" or "dignity" alone names no Y5 result: code the goods (F2.4); Y5.4 only when self-worth or confidence is named.
+- Basic needs in general, material hardship in general, or general hygiene items (named in F2.4's exclude) → **Domain F2, subcategory none**, with `codebook_gap` = 1 in gold for hygiene items (decision G9).
+- Warmth or physical comfort alone ("clothes that keep them warm") → **F2.4**; dignity, pride or self-worth → **Y5.4** (the goods are the means).
+- A count of children reached, or access to goods the program supplies ("put a coat on 1,200 kids", "access to free period products") → **A2.3**; F2.4 needs young people stated to have, or no longer go without, the goods.
 
 **Rationale:** F2.4's anchors measure a child's state: the EU-SILC child items (Eurostat 2023; Regulation (EU) No 112/2013, HD100, HD110, HD160) count children lacking clothes, shoes or outdoor leisure equipment, and Global MHH Indicator 1 counts girls having enough menstrual materials. A2.3's definition is provision ("Providing materials ... including counts of resources distributed"), and the output/outcome line is the codebook's own (rule 2; CF-009 in 2.x). Devices stay with A2.3's digital-equity sources (47 CFR 54 Subpart Q; ESSA 7119(a)(2); Digital Equity Act), which frame device access as access, and S240 is adjudicated there.
 
@@ -334,7 +335,7 @@ supplies", f2new-08, verified) is a lead to ground it in a separate CITATION_FIX
 | Change | Reaches the coding prompt? | When |
 |---|---|---|
 | `verify-f24/verdicts.json` and `verify-f24/verification-table.md` | no | now (research record) |
-| `proposed-design-rows-f24.csv` (25 rows, `status=proposed`) | no | now, for Severin |
+| `proposed-design-rows-f24.csv` (29 rows, `status=proposed`) | no | now, for Severin |
 | F2.4 code; F2 `description`, `frameworkBasis`, `categoryLine`, category B name | yes | after the shared gate after PRs #62 and #66 (G10), after Severin's answers and his rulings on the rows (G11), then this CP's own two-run gate |
 | A2.3 exclude and useInstead; rule 1 and rule 2 text | yes | same commit as F2.4 |
 | Category B `description` | no (display) | same commit as F2.4 (it names F2.4's goods) |
@@ -391,27 +392,52 @@ rulings.
 - Rows that must not move: S196, S228, S240, H076 (A2.3); S106, S139, H027, S006, H067 (F2.1);
   S062, S210, H070 (F2.2); S198, S029, S035, S037, S200, S225 (F2.3); S233 (Y1.13); S003 (Y2.6);
   H013 (Y8.1); S235 (Y1.9); S158 (Y5.4); S163 (Y3.1); G-D01 to G-D10 (domain-only).
-- Rows expected to move: none of the adjudicated rows. The 25 proposed rows, once adjudicated,
+- Rows expected to move: none of the adjudicated rows. The 29 proposed rows, once adjudicated,
   should land as Severin rules; the gate reports them separately (they become design rows, never
   held-out).
 
 ## Gold impact
 
 - Rows expected to change code: none.
-- New proposed rows: P-F24-01 to P-F24-25 in
+- New proposed rows: P-F24-01 to P-F24-29 in
   `codebook-refinement/research-review/2026-10-16/full-review/proposed-design-rows-f24.csv`
   (`status=proposed`; same columns as `proposed-design-rows.csv`; all invented, because the real-run
   exports are not in this checkout). Per boundary:
 
   | Boundary | Sides (rows) |
   |---|---|
-  | F2.4 or A2.3 | A2.3: P-F24-01, -02, -03, and the device check -07; F2.4: -04, -05, -06 |
+  | F2.4 or A2.3 | A2.3: P-F24-01, -02, -03, -26, -27, and the device check -07; F2.4: -04, -05, -06 |
   | F2.4 or F2 domain-only | F2 domain-only: -08, -09, -10 (hygiene items, suggest `codebook_gap` = 1); F2.4: -11, -12 |
-  | F2.4 or the downstream result | Y1.13: -13, -14; Y2.6: -15, -16; Y8.1: -17; Y1.9: -18; Y5.4: -19; Y3.1: -20; F2.1: -21; F2.4: -22, -23, -25; split F2.4 and Y1.13: -24 |
+  | F2.4 or the downstream result | Y1.13: -13, -14; Y2.6: -15, -16; Y8.1: -17; Y1.9: -18, -28; Y5.4: -19, -25; Y3.1: -20; F2.1: -21, -29; F2.4: -22, -23; split F2.4 and Y1.13: -24 |
 
-  Severin settles them before the code ships (G11). All 25 are invented, so none can repeat a
+  Severin settles them before the code ships (G11). All 29 are invented, so none can repeat a
   held-out statement. No agent adds them to gold or marks them adjudicated.
 - Held-out gold (`youth_outcomes_v3.heldout.gold.csv`) was not read.
+
+## Expert panel (2026-10-17)
+
+Severin asked for "a team of coding agents to review and code the 25 statements". Three blind
+coders coded the rows from the 3.1.5 prompt with this CP's prompt changes; four experts
+(methodologist, youth development, frameworks, skeptic) then reviewed each row. Files:
+`research-review/2026-10-16/full-review/panel-f24/`.
+
+- Blind coders agreed on all 25 rows and matched the intended side on 23.
+- All four experts kept 24 intended sides and moved P-F24-25 ("feel dignity") to Y5.4: the feeling
+  is the result and the clothes are the means (rule 2). CF-037's dignity line is rewritten above.
+- P-F24-10 (soap, deodorant, toothpaste): the experts kept F2 domain-only, but the prompt could not
+  produce it: the hygiene rule was only in CF-037. F2.4's exclude and useInstead now name it, and the
+  row also needs CP-12-19's DOMAIN ONLY bullet (a specific result an Exclude line sends to the
+  domain). This CP lands after CP-12-19, or carries that bullet.
+- The prompt leaked answers: rule 2's examples nearly repeated P-F24-01 and -02, and F2.4's include
+  paraphrased -04, -05, -06 and -22. Both are reworded above. The skeptic's four harder rows are
+  added as P-F24-26 to -29.
+- Edits made from the panel: F2.4 definition (cause need not be stated), include, exclude and
+  useInstead; A2.3 pointer lists the full set of goods; rule 2 examples; CF-037 dignity, count and
+  access lines.
+- Logged, not changed here: Y2.6 should point class participation to Y1.9 (Y2 edits wait for its
+  own CP); team-sport gear rests on reading it as "outdoor leisure equipment" (V-F24-2), so rows like
+  P-F24-22 are medium confidence; hygiene kits are a common donor item, so expect many F2
+  domain-only rows with the gap flag.
 
 ## Decisions
 
@@ -436,7 +462,7 @@ option and listed here so he can overrule any of them:
 
 ## Open for Severin
 
-Will you rule on the 25 example statements in `proposed-design-rows-f24.csv` (which code each
+Will you rule on the 29 example statements in `proposed-design-rows-f24.csv` (which code each
 should get) before the code ships? **Yes (recommended; required by decision G11)** · No; ship the
 code as a non-scoring preview only.
 

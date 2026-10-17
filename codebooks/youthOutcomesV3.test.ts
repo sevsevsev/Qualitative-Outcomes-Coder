@@ -97,6 +97,15 @@ describe('codebook 3.x prompt', () => {
   it('names every code the schema accepts, and only those', () => {
     for (const c of codes) expect(codebook.definitionsText).toContain(`\n${v3Code(c)}\n`);
   });
+
+  it('carries no proposal, PR or "in flight" notes in prompt text (CP-12-26)', () => {
+    const stale = /\bCP-\d{2}-\d{2}\b|\bPR #\d+|in flight/;
+    // Y8.10's note waits for the Y8 anchor re-review (S4.9: no Y8 change before it). Once it is
+    // removed, the second expectation fails: delete the exception then.
+    const y810 = codes.find(c => c.id === 'Y8.10')!;
+    expect(prompt.split(y810.useInstead).join('')).not.toMatch(stale);
+    expect(y810.useInstead, 'Y8.10 fixed: drop this exception').toMatch(stale);
+  });
 });
 
 describe('codebook 3.x source registry (CP-10-01)', () => {

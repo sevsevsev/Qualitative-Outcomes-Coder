@@ -16,6 +16,7 @@ for the shared test run after the two open pull requests.
 | Version bump | PATCH, inside the single Source/`frameworkBasis`/stale-text PATCH after PRs #62 and #66 (G10) |
 | Requirement served | R3 tie-breakers (hint text agrees with the live rules) |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options) |
+| Gate candidate | Applied 2026-10-17 in the 3.3.0 gate candidate for Y1.12, Y3.1 and Y4.7 (Y1.12 on the string PR #66 left; CP-11-03 has not landed, so the line ends at "mindset."), with the consistency test. **Y8.10 is not applied**: Y8 is over the S4.9 line and no Y8 change lands before its anchor re-review; the test carries Y8.10 as a self-expiring exception. The Y8.13 fallback (CP-12-14 item 26) is not applied for the same reason. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none |
 

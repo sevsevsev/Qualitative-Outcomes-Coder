@@ -242,7 +242,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "definition": "Beliefs about oneself as a learner: academic self-efficacy, belonging in academic work, and growth mindset about intelligence or ability to learn.",
             "include": "'I can succeed in this class'; believing intelligence or math ability grows with effort; confidence in academic abilities.",
             "exclude": "General self-confidence; growth mindset about challenges in general.",
-            "useInstead": "Y5.4 general confidence and general growth mindset. CP-01-06 (in flight) sets the same line for 2.4.0.",
+            "useInstead": "Y5.4 general confidence and general growth mindset.",
             "example": {
               "text": "Students will believe they can pass their algebra class.",
               "goldId": "S216"
@@ -530,7 +530,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "definition": "Feeling accepted, valued, included and safe in the program, school or a community; mattering; less isolation.",
             "include": "Sense of belonging; feeling safe and accepted in program spaces; feeling connected to a new community; reduced loneliness.",
             "exclude": "Feeling safe in general (home, neighborhood); trauma-related safety; one named trusted adult; named friendships.",
-            "useInstead": "Y8.10 general felt safety; Y8.8 trauma recovery; Y3.2 a trusted adult; Y3.3 friends. Follows the safety tie-breaker being tested in PR #31.",
+            "useInstead": "Y8.10 general felt safety; Y8.8 trauma recovery; Y3.2 a trusted adult; Y3.3 friends.",
             "example": {
               "text": "Students will feel safe and accepted at the program.",
               "goldId": "S163"
@@ -781,7 +781,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "definition": "Working with others toward shared goals, including leading peers within a group task.",
             "include": "Collaboration on projects; teamwork; taking turns leading a small group; leadership within a team activity.",
             "exclude": "Leadership that influences a program, school or community decision; friendships; workplace leadership.",
-            "useInstead": "Y6.4 civic leadership; Y3.3 friendships; Y7.3 workplace. Same line as CP-01-06's leadership rule (in flight).",
+            "useInstead": "Y6.4 civic leadership; Y3.3 friendships; Y7.3 workplace.",
             "example": {
               "text": "Youth will learn to work as part of a team to achieve a common goal.",
               "goldId": "S054"

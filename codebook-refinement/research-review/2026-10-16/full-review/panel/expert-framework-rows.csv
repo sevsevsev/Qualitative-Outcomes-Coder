@@ -1,0 +1,76 @@
+proposal_id,determination,side_right,rule,confidence,reason
+P-01,Y4.2,yes,adopt,high,Coping mechanisms are CASEL Self-Management 'identifying and using stress-management strategies' (verified direct for Y4.2).
+P-02,Y4.2,yes,adopt,high,Exchanging coping strategies is using a coping skill; CASEL stress-management component; no deviation.
+P-03,Y5.4,yes,adopt,medium,Comfort with challenge is a belief about handling challenges: Y5.4 definition and CASEL growth mindset/self-efficacy (verified). Not a coping strategy.
+P-04,Y5.4,yes,adopt,high,Believing one can handle hard situations is self-efficacy: CASEL 'Experiencing self-efficacy' (verified direct for Y5.4).
+P-05,Y4.2,partly,change,medium,Bare resilience reads as coping (CASEL stress-management; CSSP resilience 'managing stress' already used for F1.4). CP must state FD reading; Y5.4 only if self-belief named.
+P-06,Y4.2,partly,change,medium,Same as P-05. Default Y4.2 by hint; split compounds like 'confidence and resilience' to Y5.4 + Y4.2.
+P-07,Y7.7,yes,adopt,high,Practical life skills match Chafee daily living skills and Casey Daily Living (both verified direct); FD-P15 closed so no deviation.
+P-08,Y7.7,yes,adopt,high,Life skills for adulthood is the Chafee transition construct; agrees with adjudicated Y7.7 rows (S120 H046 H048).
+P-09,Y4.7,yes,adopt,high,Named skill wins (rule 3): teamwork is CASEL Relationship Skills collaboration; 'life skills' is only a label.
+P-10,Y7.6,yes,adopt,high,Budgeting and managing money is Y7.6 (CFPB/National Standards); Y7.7 excludes money-only skills.
+P-11,Y7.4,yes,change,high,Business planning and market research sit in 20 CFR 681.560 (y7-10). Needs Y7.4 definition widened to name entrepreneurship; then fit is direct and FD none.
+P-12,Y7.4,partly,change,low,681.560 covers 'starting and operating a small business'; only under a widened Y7.4. Today Y7.5 (earnings) is the defensible code; needs a Y7.4/Y7.5 line.
+P-13,Y4.6,yes,adopt,medium,Pitching is presenting to an audience (Y4.6 include). But 681.560 names 'market oneself and one's ideas': a Y4.6/Y7.4 CF is needed if Y7.4 widens.
+P-14,Y4.6,yes,adopt,medium,Persuasive presentation to investors is communication; same Y4.6/Y7.4 CF caveat as P-13.
+P-15,Y7.4,partly,change,medium,681.560 lists 'take initiative' among entrepreneurial skills; with Y7.4 widened the mindset fundamentals sit there. Rule 14 (initiative to Y5.6) needs an entrepreneurship carve-out.
+P-16,Y7.4,partly,change,low,Bare entrepreneurial mindset names the 681.560 construct, not Nagaoka agency. If Y7.4 is not widened: Y7 domain-only with gap flag.
+P-17,Y4 domain only,yes,adopt,medium,Self-awareness names CASEL's Self-Awareness competency (category Y4.A) whose elements are split across Y4.1 and Y5; analogous to 'all five CASEL competencies'.
+P-18,Y4 domain only,yes,adopt,medium,Same as P-17. CP-09-07's 'SEL as a whole' uncoded bullet must not swallow a single named competency.
+P-19,Y4.1 (secondary Y4.2),yes,adopt,high,Identifying emotions is CASEL 'Identifying one's emotions' (Y4.1 direct); 'address' is managing them (Y4.2). Split.
+P-20,Y4.1,yes,adopt,high,Recognizing and naming feelings is the Y4.1 definition and its verified CASEL component.
+P-21,Y5.1,yes,adopt,medium,Self-discovery is identity exploration: Nagaoka integrated identity (verified direct for Y5.1). Vague verb but one domain and code.
+P-22,Y5.1,yes,adopt,high,Exploring identity and what matters is Y5.1's definition; Nagaoka integrated identity.
+P-23,A3.1,yes,adopt,medium,District integrating practice permanently is institutional adoption; rests on FD-P51 (codebook-defined: a3-04 PARTIAL). A3 goes 0/3 to 1/3.
+P-24,A3.1,yes,adopt,medium,Institution beyond the program adopting curriculum into routine (rule 18). FD-P51 evidence row; A1.2 needs named adults applying it.
+P-25,A3 domain only,yes,adopt,medium,School culture is not program quality (A2.1 anchored on YPQA-type program observation). No formal adoption so not A3.1. Gap flag.
+P-26,A3 domain only,yes,adopt,medium,College-going culture with no formal adoption falls outside A3.1's tightened wording; gap flag; school-climate code deferred pending EDSCLS primary source.
+P-27,A1.1,yes,adopt,high,Volunteer learning for the role: Guskey Level 2 participants' learning; volunteer sector already logged in FD-P36.
+P-28,A1.1,yes,adopt,high,Tutors' role skill (phonics support) is A1.1 regardless of age; rule 1 puts volunteers in Part A.
+P-29,A1.3,yes,adopt,medium,Satisfaction with serving is G15's A1.3 arm. Opens the A1.3 sector-widening FD: A1 goes to 2/3 and triggers re-review.
+P-30,A1.3,yes,adopt,high,Volunteer retention parallels JOLTS separations; volunteers are a logged sector widening (CP-12-32 FD). a1-08 is narrower, cannot avoid FD (G3).
+P-31,A1 domain only,yes,adopt,medium,Staying in the education field after service is a career path outside the role; A1.3 sources measure retention in the organization. Gap flag.
+P-32,A1 domain only,yes,adopt,medium,Volunteer's own well-being (G15). If the program serves older adults as participants it is a Part F gap; flag beneficiary.
+P-33,A1.1,no,change,medium,Count of certified teachers is aggregated credential attainment (learning), not retention or vacancies; JOLTS covers openings/hires, not certification.
+P-34,A1.3,yes,change,medium,Filling open positions matches JOLTS openings definition (a1-06 verbatim). Needs the staffing widening after A1 re-review; until then A1 domain-only.
+P-35,A1.1,yes,adopt,high,One person earning a credential is individual learning (Guskey L2); 12 NLM credential texts already code A1.1.
+P-36,A1.1,yes,adopt,high,Individual certification in trauma-informed care is learning; applying it would be A1.2 (SAMHSA TIC).
+P-37,Y8.1,yes,adopt,high,Youth fruit and vegetable consumption: HECAT FN HBO 3 and YRBS items (verified direct). Whose eating: the student's.
+P-38,Y8.1,yes,adopt,medium,Preference for healthy choices is the youth's eating behavior intent; HECAT FN. Not household access (F2.2).
+P-39,F1.3,yes,adopt,high,Household eating practice: SNAP-Ed MT1 'individual and family healthy eating behaviors' (verified direct). Not Y7.7 cooking skill.
+P-40,F1.3,yes,adopt,high,Caregiver health practice for children (F1.3 definition); SNAP-Ed MT1 family eating behaviors.
+P-41,F1 domain only,yes,adopt,high,G13. CSSP Protective Factors (F1 anchor) is a maltreatment-prevention framework; system entry names no single factor. Gap flag.
+P-42,F1 domain only,yes,adopt,high,Same as P-41; 'documented' adds measurement only.
+P-43,Y3.4,yes,adopt,high,Reunification is in Y3.4 include; 42 U.S.C. 671(a)(15)(B) partial-fit duty support, no FD (G4).
+P-44,Y3.4,yes,adopt,high,Rebuilding trust with parents from the youth side: Search Institute family support/Developmental Relationships (verified).
+P-45,Y1.1,yes,adopt,high,Elementary grade stated; Y1.8's ELOF anchor covers birth to five only. Literacy in school grades is ESSA reading standards.
+P-46,Y1.1,yes,adopt,high,Kindergartners are not below kindergarten age; letter sounds and blending are Y1.1 phonics.
+P-47,Y1.8,yes,adopt,high,Preschoolers are inside Head Start ELOF's population; pre-literacy is Y1.8 include.
+P-48,Y1.8,yes,adopt,high,Kindergarten readiness of four-year-olds is ELOF and ED-HHS school readiness.
+P-49,Y2.4,yes,adopt,high,Value of learning is Eccles utility value/Hulleman (Y2.4 anchor); Farrington's value mindset lives there by design.
+P-50,Y2.4,yes,adopt,high,Usefulness for the future is utility value; stays Y2.4 under either Y2.4 wording (E-42).
+P-51,Y1.12,yes,adopt,high,Academic self-efficacy: Farrington academic mindsets (verified); S216 pattern.
+P-52,Y1.12,yes,adopt,high,'I belong in this academic community' is a Farrington mindset; Y1.12 definition names belonging in academic work.
+P-53,Y1.3,yes,adopt,medium,Readiness with a named subject goes to the subject code; no course taken so not Y1.16.
+P-54,Y1.4,yes,adopt,medium,Named subject (science) with no course enrolled; subject code per hint 3.
+P-55,Y1.16,yes,adopt,high,Dual credit is Y1.16's definition.
+P-56,Y1.16,yes,adopt,high,AP exam passing is an advanced-coursework completion indicator; not a subject gain.
+P-57,Y8.5,yes,adopt,high,Youth's own coverage: NYTD access to health insurance and HP2030 AHS-01 (both verified direct for Y8.5).
+P-58,Y8.5,yes,adopt,high,Continuous youth coverage; same sources as P-57.
+P-59,F2.1,yes,change,high,Caregiver's own public coverage is household benefits (F2.1 include names Medicaid; AHS-01 partial, broader source, G3). Hint 29 wording must cover it.
+P-60,F2.1,yes,adopt,high,Household benefits enrollment (SNAP WIC Medicaid): F2.1 include; CSSP Concrete Support and Ascend Economic Assets.
+P-61,F2.1,partly,change,medium,Subject is the parent (rule 1) enrolling in public benefits; no F health-access code. Drop 'named among other benefits' from hint 29.
+P-62,F2.1,yes,adopt,high,Family-level enrollment rate names no young person's coverage; household benefit enrollment.
+P-63,F2.2,yes,adopt,high,Having enough food is USDA HFSSM and HP2030 NWS-01 (verified direct).
+P-64,F2.2,yes,adopt,medium,Access to affordable healthy food is the FD-P35 element (codebook-defined); code is right but the row rests on an open deviation.
+P-65,Y8.4,yes,adopt,high,NSES Puberty and Adolescent Sexual Development strand (y8a-20 SUPPORTED); include edit waits for the Y8 anchor re-review (S4.9).
+P-66,Y8.4,yes,adopt,high,Same NSES PD strand as P-65; same S4.9 wait.
+P-67,Y8.1,yes,adopt,high,Hygiene habits: HECAT PHW HBO 1 (verified direct for Y8.1).
+P-68,Y8.3,yes,adopt,high,Knowledge of changing sleep and nutrition needs is health education content (NHES Standard 1); not sexual development.
+P-69,F1.6,yes,adopt,medium,Adult financial literacy is F1.6 'financial skills' (FD-P33 codebook-defined element); 'community members' assumed adult participants.
+P-70,F1.6,yes,change,high,Completing a course is F1.6 per F1-1/CF-034; rule 11's 'financial coaching for adults to F2.1' contradicts and must be reworded.
+P-71,F2.1,yes,adopt,high,Household savings: F2.1 include; CFPB Financial Well-Being 'absorb a financial shock' area (verified direct for F2.1).
+P-72,F2.1,yes,change,medium,Stress about bills is financial well-being (CFPB, verified direct for F2.1) per CF-034's money-confidence line; F1.4 needs an exclude for money worry.
+P-73,A3.3,yes,adopt,medium,Residents acting together for the neighborhood fits Sampson's willingness to act (with CP-12-19 include). Parade is weak; joy alone would not suffice.
+P-74,A3 domain only,yes,adopt,medium,Community-level health is Reisman 'changes in impact', not Sampson cohesion; Y8.5 is an individual youth. Gap flag.
+P-75,A3 domain only,yes,adopt,medium,Regional workforce and prosperity is a community economic condition with no cohesion; not F1.6 (no adult participants). Gap flag.

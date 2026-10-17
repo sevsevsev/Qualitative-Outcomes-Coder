@@ -1,0 +1,76 @@
+proposal_id,determination,side_right,rule,confidence,reason
+P-01,Y4.2,yes,adopt,high,Coping mechanisms are a stress-management skill; partners mean emotional coping.
+P-02,Y4.2,yes,adopt,high,Sharing healthy coping strategies is a coping skill; no self-belief named.
+P-03,Y5.4,yes,adopt,medium,Comfort with challenge reads as belief one can handle hard things; Y4.3 persistence is a weaker alternative.
+P-04,Y5.4,yes,adopt,high,An explicit belief in handling hard situations is self-efficacy.
+P-05,Y4.2,partly,adopt,medium,"Default bare resilience to Y4.2: partners mean bouncing back from stress, and F1.4 treats caregiver resilience the same way."
+P-06,Y4.2,partly,adopt,medium,Same default as P-05; a therapeutic songwriting program targets coping with adversity.
+P-07,Y7.7,yes,adopt,medium,"Practical life skills, nothing named, means daily-living skills; matches existing Y7.7 gold."
+P-08,Y7.7,yes,adopt,high,Preparing for adulthood is the independent-living core.
+P-09,Y4.7,yes,adopt,high,A named skill outranks the umbrella term; teamwork is Y4.7.
+P-10,Y7.6,yes,adopt,high,Money-only life skills go to Y7.6 per the Y7.7 exclude.
+P-11,Y7.4,yes,adopt,medium,Business planning and market research are technical business skills; needs the deferred entrepreneurship include to land first.
+P-12,Y7.4 (Y7.5 secondary acceptable),partly,change,medium,Launching a business is work-based business creation; first sales add an earnings result. Rule must name self-employment explicitly.
+P-13,Y4.6,yes,adopt,high,Pitching is presenting to an audience; the business context does not change the skill.
+P-14,Y4.6,yes,adopt,high,Persuasive presentation is communication skill.
+P-15,Y7.3,no,change,medium,"Initiative in a work context is a Y7.3 element; Y5.6 agency means self-advocacy and own-life choices, not business risk-taking."
+P-16,Y7 domain only,no,change,medium,Bare entrepreneurial mindset names the work domain but no specific result; Y5.6 would inflate agency counts.
+P-17,Y4 domain only,yes,adopt,medium,"Self-awareness is a named CASEL competency, more specific than generic SEL, but splits Y4.1 and Y5.1."
+P-18,Y4 domain only,yes,adopt,medium,Same as P-17; live runs split it evenly so a default avoids noise.
+P-19,Y4.1; Y4.2 secondary,yes,adopt,high,Identifying emotions is Y4.1; addressing them is regulation.
+P-20,Y4.1,yes,adopt,high,Naming feelings is the Y4.1 core.
+P-21,Y5.1,yes,adopt,high,Self-discovery means understanding who one is.
+P-22,Y5.1,yes,adopt,high,Identity exploration and values are Y5.1.
+P-23,A3.1,yes,adopt,medium,District permanently integrating content is institutional practice; compound sentence makes a weak boundary row.
+P-24,A3.1,yes,adopt,medium,School adopting a curriculum into its regular block is institutionalization beyond the program; A1.2 is named adults applying practice.
+P-25,A3 domain only,yes,adopt,medium,School culture with no adoption is a school-wide condition; A2.1 is only the program's own environment.
+P-26,A3 domain only,yes,adopt,medium,College-going culture is a school condition; coders chose A3.1 so the A3.1 exclude must name culture and climate.
+P-27,A1.1,yes,adopt,high,A volunteer skill for the mentoring role.
+P-28,A1.1,yes,adopt,high,Tutors are the program's workforce here; route by whom the program serves not by age.
+P-29,A1.3,yes,adopt,medium,Satisfaction with serving is the A1.3 side of G15; needs CP-12-32's volunteer widening.
+P-30,A1.3,yes,adopt,high,Volunteer return is retention.
+P-31,A1 domain only,yes,adopt,medium,Staying in the education field is a career pipeline outcome beyond program retention; gap flag.
+P-32,A1 domain only,yes,adopt,medium,Volunteers' own well-being under G15; flag the gap and watch frequency.
+P-33,A1.1,no,change,medium,Code credentials by construct not by count; certified teachers is credential attainment. Staffing levels alone go to A1.3.
+P-34,A1.3,yes,adopt,medium,Filling vacancies is a staffing level; valid only once the A1.3 widening is re-justified.
+P-35,A1.1,yes,adopt,high,An individual credential is staff learning.
+P-36,A1.1,yes,adopt,high,A certification is staff learning.
+P-37,Y8.1,yes,adopt,high,Students' own eating changes; place does not matter.
+P-38,Y8.1,yes,adopt,high,The young person's own food preference.
+P-39,F1.3,yes,adopt,high,Household eating practice.
+P-40,F1.3,yes,adopt,high,Caregiver practice is the subject.
+P-41,F1 domain only,yes,adopt,high,Entry prevention is a family-strengthening result with no code (G13); gap flag.
+P-42,F1 domain only,yes,adopt,high,Same as P-41; Y3.4 is the youth's relationship and must not take it.
+P-43,Y3.4,yes,adopt,high,Reunification is in the Y3.4 include.
+P-44,Y3.4,yes,adopt,high,Youth's own family trust.
+P-45,Y1.1,yes,adopt,high,Elementary is a school grade; early-literacy wording does not make it Y1.8.
+P-46,Y1.1,yes,adopt,high,Kindergarten reading skills are Y1.1.
+P-47,Y1.8,yes,adopt,high,Preschool early literacy is the Y1.8 core.
+P-48,Y1.8,yes,adopt,high,Kindergarten readiness stays Y1.8.
+P-49,Y2.4,yes,adopt,high,Value of schoolwork is utility value.
+P-50,Y2.4,yes,adopt,high,Usefulness for the future is utility value.
+P-51,Y1.12,yes,adopt,high,Belief in succeeding in a class is academic self-efficacy.
+P-52,Y1.12,yes,adopt,medium,Class belonging is an academic mindset; school-wide belonging stays Y3.1.
+P-53,Y1.3,yes,adopt,high,Readiness with math named goes to the subject code not Y1.16.
+P-54,Y1.4,yes,adopt,high,Readiness in a named subject goes to that subject.
+P-55,Y1.16,yes,adopt,high,Dual credit earned is the Y1.16 core.
+P-56,Y1.16,yes,adopt,high,Passing an AP exam is completing advanced coursework.
+P-57,Y8.5,yes,adopt,high,Youth's own coverage.
+P-58,Y8.5,yes,adopt,high,Youth's own continuous coverage.
+P-59,F2.1,yes,adopt,high,Adult benefit enrollment.
+P-60,F2.1,yes,adopt,high,Medicaid listed among household benefits.
+P-61,F2.1 (Y8.5 secondary acceptable),partly,change,medium,"Parent as subject signals benefits navigation; F2.1 lists Medicaid. Not F1.3, which is health practice. Hint 29 should key on the subject."
+P-62,F2.1,yes,adopt,high,Family-level enrollment rate is household benefits.
+P-63,F2.2,yes,adopt,high,Having enough food is food security.
+P-64,F2.2,yes,adopt,high,Access to affordable produce is food access.
+P-65,Y8.4,yes,adopt,high,Puberty education is delivered in sexual health curricula; NSES supported.
+P-66,Y8.4,yes,adopt,high,Same as P-65.
+P-67,Y8.1,yes,adopt,high,Hygiene habits are daily health habits.
+P-68,Y8.3,yes,adopt,medium,General adolescent health knowledge without puberty content.
+P-69,F1.6,yes,adopt,high,Adults gaining financial literacy is learning a skill (CF-034).
+P-70,F1.6,yes,adopt,high,Completing a course is F1.6.
+P-71,F2.1,yes,adopt,high,Savings are money status.
+P-72,F2.1 (F1.4 secondary acceptable),yes,change,medium,Financial stress is financial well-being per CF-034; F1.4 exclude must point money stress to F2.1 or coders keep choosing F1.4.
+P-73,A3.3,yes,adopt,low,Residents' shared community action fits the A3.3 include; compound with joy and justice makes a weak row; replace with a cleaner one.
+P-74,A3 domain only,yes,adopt,medium,Community health is not cohesion and Y8.5 is youth only; gap flag.
+P-75,A3 domain only,yes,adopt,medium,Regional workforce and prosperity are distal community conditions with no code; gap flag.

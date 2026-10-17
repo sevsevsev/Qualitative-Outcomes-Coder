@@ -6,7 +6,7 @@
 | Codes touched | rulesText CODING PROCESS ("Uncoded" bullets); A2.5 by reference |
 | Version bump | PATCH (batched in 3.1.0) |
 | Requirement served | R2 breadth (consistent handling of non-outcome text) |
-| Status | draft; needs Severin to confirm the 2026-09-23 scope decision still holds for 3.0 |
+| Status | ready-to-test; applied as candidate 3.2.0 on 2026-10-08 under Severin's delegation ("I defer to you on these"); awaits the live design-set gate |
 | Enum cost | +0 (160) |
 | Framework deviation | none |
 

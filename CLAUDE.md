@@ -42,6 +42,10 @@ Read these before touching any codebook:
   only (outcomes dashboard, explorer); it is never part of the coding prompt.
 - 3.1.4 (CP-10-04) names racial identity in Y5.2 (definition, include), Y5.1 (exclude), Y4.5
   (include) and the Y5.A description.
+- 3.2.0 candidate (CP-09-01..06, 08, 2026-10-08, PR on `claude/edge-case-determinations-t0kaje`)
+  applies the edge-case review: attendance thresholds and inclusion alongside peers go to A2.5
+  and A2.4, college visits to Y7.2, everyday digital skills to Y7.3/F1.6. Enum +0. It awaits
+  two live design-set runs before approval.
 - `codebooks/original.ts` (2.5.x) was retired on 2026-09-26: no picker offers it, but it stays registered (marked `deprecated`) so saved sessions, old exports, eval scripts and direct Codebook-tab links still resolve its codes. Older files may use
   pre-2.0.0 numbers; see `codebook-refinement/renumbering/`.
 - A public explorer-only site is built from this repo with `VITE_SITE=explorer` (README,

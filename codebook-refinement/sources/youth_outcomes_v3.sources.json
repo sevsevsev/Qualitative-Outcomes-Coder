@@ -2040,6 +2040,13 @@
           "fit": "direct",
           "excerpt": "Workplace skills are the abilities employees need to successfully accomplish work tasks.",
           "verifier_note": "The OCTAE page says the U.S. Department of Education compiled the framework. It names all three categories: Applied Knowledge, Effective Relationships and Workplace Skills. It fits Y7.3."
+        },
+        {
+          "code": "Y7.3",
+          "component": "Workplace Skills: Technology Use",
+          "fit": "direct",
+          "excerpt": "Technology use skills enable employees to successfully perform work tasks by applying information technology ... Understands and uses technology",
+          "verifier_note": "CP-09-06, 2026-10-08. The given cte.ed.gov URL redirected to OCTAE's own page, which lists Technology Use as one of five Workplace Skills (Resource management, Information use, Communication skills, Systems thinking, Technology use), with the checklist item 'Understands and uses technology'. The excerpt joins two passages with '...' and came through the fetch summarizer, not a raw-HTML check."
         }
       ]
     },

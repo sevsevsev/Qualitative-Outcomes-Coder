@@ -88,10 +88,10 @@ export const V3_DOMAINS: V3Domain[] = [
             "flag": "deductive",
             "fidelity": "framework",
             "from2x": "1.8",
-            "definition": "A demonstrated gain in science (life, physical, earth, environmental), engineering design, or computing and coding, including digital-literacy skills.",
-            "include": "Science test proficiency; ecosystem or ecology knowledge; engineering design process; coding, computational thinking, digital skills.",
-            "exclude": "STEM interest; STEM identity; online safety; industry certifications; advanced course enrollment.",
-            "useInstead": "Y2.2/Y2.3 interest; Y5.3 'a STEM person'; Y6.7 online safety; Y7.4 certifications; Y1.16 enrolling in advanced STEM courses.",
+            "definition": "A demonstrated gain in science (life, physical, earth, environmental), engineering design, or computer science (coding, computational thinking, computing systems).",
+            "include": "Science test proficiency; ecosystem or ecology knowledge; engineering design process; coding, computational thinking.",
+            "exclude": "STEM interest; STEM identity; online safety; industry certifications; advanced course enrollment; everyday digital skills (email, video calls, online forms, office software).",
+            "useInstead": "Y2.2/Y2.3 interest; Y5.3 'a STEM person'; Y6.7 online safety; Y7.4 certifications; Y1.16 enrolling in advanced STEM courses; Y7.3 everyday digital skills (F1.6 for adults).",
             "example": {
               "text": "Students will apply the engineering design process to build and test a prototype.",
               "goldId": "S104"
@@ -469,7 +469,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "deviation": "FD-P16",
             "from2x": "2.4, 2.5",
             "definition": "Self-expression through making something (art, music, writing, design), presenting or performing finished work, or responding to art, as an experience rather than a stated skill gain.",
-            "include": "Composing, creating, exhibiting, performing, critiquing or connecting art to personal meaning.",
+            "include": "Composing, creating, exhibiting, performing, appreciating, critiquing or connecting art to personal meaning.",
             "exclude": "A stated technique or knowledge gain in an art form; a stated writing skill gain; teamwork during a production.",
             "useInstead": "Y1.6 arts skill; Y1.1 writing skill; Y4.7 collaboration.",
             "example": {
@@ -487,9 +487,9 @@ export const V3_DOMAINS: V3Domain[] = [
             "fidelity": "framework",
             "from2x": "6.3",
             "definition": "An individual young person's choice to take part in constructive activities, inside the program (returning, joining) or outside it (sports, arts, clubs, faith groups).",
-            "include": "Returning for another year; joining a team or club; participating fully alongside peers; per-person participation thresholds.",
-            "exclude": "Aggregate program attendance, counts or rates; the program's accommodations.",
-            "useInstead": "A2.5 program-level counts; A2.4 accommodations.",
+            "include": "Returning for another year; joining a team or club; taking part in activities outside the program.",
+            "exclude": "Attendance or dosage in the program, counted or per person; the program's accommodations; inclusion of youth with disabilities alongside peers.",
+            "useInstead": "A2.5 attendance and dosage; A2.4 accommodations and inclusion alongside peers.",
             "example": {
               "text": "Youth will choose to return to the program for a second year.",
               "goldId": "S003"
@@ -1212,9 +1212,9 @@ export const V3_DOMAINS: V3Domain[] = [
             "flag": "deductive",
             "fidelity": "framework",
             "from2x": "9.4",
-            "definition": "Learning about careers and pathways, interest inventories, workplace and campus visits, and interest in or aspiration toward a career field.",
-            "include": "Researching careers; exploring pathways; interest in a STEM career; college visits.",
-            "exclude": "Applications and FAFSA; lasting interest in an activity.",
+            "definition": "Learning about careers and pathways, interest inventories, workplace visits and job shadowing, and interest in or aspiration toward a career field.",
+            "include": "Researching careers; exploring pathways; interest in a STEM career; workplace visits.",
+            "exclude": "College visits, applications and FAFSA; lasting interest in an activity.",
             "useInstead": "Y7.2; Y2.3.",
             "example": {
               "text": "Youth will explore at least three career pathways aligned to their interests using labor market data.",
@@ -1231,7 +1231,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "fidelity": "framework",
             "from2x": "9.3",
             "definition": "Knowing and completing the process of moving to college or work: applications, FAFSA, financial aid, resumes, interviews.",
-            "include": "FAFSA completion; college applications; comparing aid letters; resume writing.",
+            "include": "College campus visits and college fairs; FAFSA completion; college applications; comparing aid letters; resume writing.",
             "exclude": "Enrolment itself; employability behaviors on the job.",
             "useInstead": "Y1.18; Y7.3.",
             "example": {
@@ -1256,7 +1256,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "fidelity": "framework",
             "from2x": "9.5",
             "definition": "Professionalism and workplace skills: punctuality, workplace communication, initiative, job performance.",
-            "include": "Professional conduct; supervisor evaluations; workplace communication.",
+            "include": "Professional conduct; supervisor evaluations; workplace communication; everyday digital skills for work or daily life (email, video calls, online forms, office software).",
             "exclude": "Having or keeping a job; general SEL skills outside a work context.",
             "useInstead": "Y7.5; Y4.",
             "example": {
@@ -1264,7 +1264,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "goldId": "S171"
             },
             "source": "U.S. Department of Education, OCTAE, Employability Skills Framework.",
-            "basis": "U.S. ED OCTAE Employability Skills Framework (verified)."
+            "basis": "U.S. ED OCTAE Employability Skills Framework (verified); Workplace Skills: Technology Use (verified, CP-09-06)."
           },
           {
             "id": "Y7.4",
@@ -1800,9 +1800,9 @@ export const V3_DOMAINS: V3Domain[] = [
             "flag": "deductive",
             "fidelity": "framework",
             "from2x": "new",
-            "definition": "Families attending, volunteering or taking part in program or school decisions.",
-            "include": "Serving on advisory councils; attending workshops (per-family thresholds); volunteering.",
-            "exclude": "Aggregate family attendance counts; the organization creating structures.",
+            "definition": "Families volunteering, leading family activities, or taking part in program or school decisions.",
+            "include": "Serving on advisory councils; volunteering; leading or co-hosting family events.",
+            "exclude": "Family attendance at workshops or events, counted or per family; the organization creating structures.",
             "useInstead": "A2.5; A2.6.",
             "example": {
               "text": "Parents will serve on the program's family advisory council.",
@@ -2055,8 +2055,8 @@ export const V3_DOMAINS: V3Domain[] = [
             "deviation": "FD-P19",
             "from2x": "10.2",
             "definition": "Removing barriers so that all participants can take part: accommodations, accessible formats, interpretation and translation.",
-            "include": "Sensory kits and visual schedules; accessible materials; interpreters; home-language communications.",
-            "exclude": "Youth participating alongside peers (their participation); families navigating systems.",
+            "include": "Sensory kits and visual schedules; accessible materials; interpreters; home-language communications; youth with disabilities (or another group facing barriers) taking part alongside peers, when inclusion is the point.",
+            "exclude": "A young person's choice to join or return; families learning to navigate systems.",
             "useInstead": "Y2.6; F1.7.",
             "example": {
               "text": "The program will provide accommodations (sensory kits, visual schedules) so all youth can participate.",
@@ -2080,7 +2080,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "fidelity": "framework",
             "from2x": "11.5",
             "definition": "Program-level counts, rates and dosage: youth served, attendance rates, sessions, match length, training hours, and services staff delivered.",
-            "include": "Number served; average daily attendance; match duration; sessions delivered; applications submitted by staff.",
+            "include": "Number served; average daily attendance; per-person attendance thresholds (sessions, workshops); match duration; sessions delivered; applications submitted by staff.",
             "exclude": "An individual youth's choice to return; a student's school attendance.",
             "useInstead": "Y2.6; Y1.13.",
             "example": {

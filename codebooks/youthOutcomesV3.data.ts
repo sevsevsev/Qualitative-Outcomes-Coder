@@ -60,7 +60,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will improve their English language proficiency.",
               "goldId": "S028"
             },
-            "source": "WIDA English Language Development Standards Framework (2020 edition); ESSA English language proficiency indicator, 20 U.S.C. 6311(c)(4)(B)(iv).",
+            "source": "WIDA English Language Development Standards Framework (2020 edition); ESSA English language proficiency indicator, 20 U.S.C. 6311(c)(4)(B)(iv); ACTFL et al. (2020), Guidelines for Implementing the Seal of Biliteracy (maintaining home or heritage languages).",
             "basis": "Re-verified 2026-09-27 (CP-10-01): WIDA 2020 (verified, direct for English proficiency); ESSA 6311(c)(4)(B)(iv) (verified, direct). CP-11-01 (2026-10-16): ACTFL et al. (2020), Guidelines for Implementing the Seal of Biliteracy, section 1 (verified, direct for home-language maintenance; claim y1-subject-04)."
           },
           {
@@ -273,7 +273,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Participating students will reduce chronic absenteeism from school.",
               "goldId": "S233"
             },
-            "source": "Attendance Works, chronic absence; McKinney-Vento Act, 42 U.S.C. 11432 (school stability).",
+            "source": "Attendance Works, chronic absence; McKinney-Vento Act, 42 U.S.C. 11432(g)(3)(A)-(B) (school of origin and school stability); 42 U.S.C. 675(1)(G), foster care case plan (educational stability).",
             "basis": "Attendance Works, chronic absence (verified); McKinney-Vento, 42 U.S.C. 11432(g)(3)(A)-(B) (verified, direct; pinpoint added by CP-11-01, claim y1-attainment-03); 42 U.S.C. 675(1)(G) (verified, direct for foster placement changes; claim y1-attainment-05)."
           },
           {
@@ -328,7 +328,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Students will earn college credit through dual enrollment in a CTE pathway.",
               "goldId": "S219"
             },
-            "source": "U.S. Department of Education, Office for Civil Rights (2024), Civil Rights Data Collection: student access to advanced courses, including AP and dual enrollment.",
+            "source": "ESSA State report cards, 20 U.S.C. 6311(h)(1)(C)(viii)(II)(bb) (accelerated coursework for postsecondary credit: AP, IB, dual or concurrent enrollment) and 6311(c)(4)(B)(v)(II) (access to and completion of advanced coursework); U.S. Department of Education, Office for Civil Rights (2024), Civil Rights Data Collection: student access to advanced courses, including AP and dual enrollment.",
             "basis": "ESSA 20 U.S.C. 6311(h)(1)(C)(viii)(II)(bb) and 6311(c)(4)(B)(v)(II) (verified, direct; claim y1-attainment-12, corroborated by y1-taxonomy-07). U.S. ED OCR (2024), 2020-21 CRDC: Student Access to and Enrollment in ... Courses and Academic Programs, AP and dual enrollment (verified, partial: the PDF returned 403 in CP-10-01, so only the landing page was read)."
           },
           {
@@ -376,7 +376,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Engagement, Interest & Creative Expression",
     "description": "How young people experience learning and activities: enjoyment, curiosity, lasting interest, seeing relevance, creative expression, and choosing to take part.",
-    "frameworkBasis": "Hidi & Renninger (2006), Four-Phase Model of Interest Development; Muhammad, Five Pursuits (Joy); National Core Arts Standards (artistic processes); Search Institute Developmental Assets (Constructive Use of Time).",
+    "frameworkBasis": "Hidi & Renninger (2006), Four-Phase Model of Interest Development; Pekrun (2024), control-value theory of achievement emotions (activity enjoyment); National Core Arts Standards (artistic processes); Search Institute Developmental Assets (Constructive Use of Time).",
     "categoryLine": "A. Enjoyment & interest (Y2.1–Y2.4) · B. Expression & participation (Y2.5–Y2.6)",
     "categories": [
       {
@@ -400,7 +400,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will report feeling excited and happy to attend program each day.",
               "goldId": "S234"
             },
-            "source": "Muhammad, Five Pursuits (Pursuit 5: Joy).",
+            "source": "Pekrun (2024), control-value theory: activity emotions (enjoyment during learning).",
             "basis": "Pekrun (2024), control-value theory: activity emotions, enjoyment during learning (verified, direct; claim y2-01); achievement settings beyond school (verified, partial; claim y2-02); outcome-emotion pride (verified, partial: achievement pride only; claim y2-03). Pride in being part of a program is codebook-defined (FD-P37). Muhammad, Five Pursuits, Joy (verified, partial: a teaching aim, not the learner's enjoyment) is kept as a pointer, not as the anchor."
           },
           {
@@ -419,7 +419,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Students will ask questions and show curiosity during science demonstrations.",
               "goldId": "S128"
             },
-            "source": "Hidi & Renninger (2006), Four-Phase Model of Interest Development, phase 1 (triggered situational interest).",
+            "source": "Hidi & Renninger (2006), Four-Phase Model of Interest Development, phase 1 (triggered situational interest); CASEL (2020) SEL Framework, Responsible Decision-Making: \"Demonstrating curiosity and open-mindedness\".",
             "basis": "Hidi & Renninger (2006), phase 1 triggered situational interest (verified, direct, full text; claim y2-07). CASEL (2020), Responsible Decision-Making: 'Demonstrating curiosity and open-mindedness' (verified, partial: a disposition broader than triggered interest; claims y2-05, CP-12-20-V-CASEL-1-Y2.2); OECD (2021), SSES Houston, Open-mindedness: Curiosity (verified, direct; claim y2-06). Willingness to try a new activity is codebook-defined (FD-P38; claims CP-12-01-V1, CP-12-01-V2)."
           },
           {
@@ -560,7 +560,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Mentees will report having a trusted adult they can go to with problems.",
               "goldId": "S026"
             },
-            "source": "Search Institute, Developmental Relationships Framework (Express Care; Challenge Growth; Provide Support); CDC (2009), School Connectedness (adult support).",
+            "source": "Search Institute, Developmental Relationships Framework (Express Care; Challenge Growth; Provide Support); CDC (2009), School Connectedness (adult support); Chafee, 42 U.S.C. 677(a)(2), and the National Youth in Transition Database (permanent connections with a caring adult for youth in foster care).",
             "basis": "Search Institute Developmental Relationships (Express Care; Challenge Growth; Provide Support) (verified); CDC (2009) (verified); Search Institute Developmental Assets, Other adult relationships (verified; claim y3-07). Youth in care: 42 U.S.C. 677(a)(2), Chafee, meaningful, permanent connections with a caring adult (verified; claim y3-05); ACF NYTD outcome 'positive connections with adults' (verified; claim y3-06)."
           },
           {
@@ -725,7 +725,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will express gratitude toward family and mentors.",
               "goldId": "S082"
             },
-            "source": "CASEL (2020) SEL Framework, Social Awareness: \"Taking others' perspectives\"; \"Demonstrating empathy and compassion\"; \"Identifying diverse social norms, including unjust ones\".",
+            "source": "CASEL (2020) SEL Framework, Social Awareness: \"Taking others' perspectives\"; \"Demonstrating empathy and compassion\"; \"Showing concern for the feelings of others\"; \"Understanding and expressing gratitude\"; \"Identifying diverse social norms, including unjust ones\".",
             "basis": "CASEL (2020) SEL Framework (verified), Social Awareness: 'Taking others' perspectives'; 'Demonstrating empathy and compassion'; 'Identifying diverse social norms, including unjust ones'; 'Understanding and expressing gratitude' (verified, direct; claim y4a-05); 'Showing concern for the feelings of others' (verified, direct; claim y4a-06)."
           },
           {
@@ -768,7 +768,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "4-H members will demonstrate public speaking skills by giving a demonstration at the county fair.",
               "goldId": "S132"
             },
-            "source": "CASEL (2020) SEL Framework, Relationship Skills: \"Communicating effectively\".",
+            "source": "CASEL (2020) SEL Framework, Relationship Skills: \"Communicating effectively\" (communicate clearly, listen actively); Common Core State Standards, Speaking and Listening anchor 4 (CCRA.SL.4): presenting information so listeners can follow the reasoning.",
             "basis": "CASEL (2020) SEL Framework (verified, partial), Relationship Skills: 'Communicating effectively'; competency definition 'communicate clearly, listen actively' (verified, direct; claim y4a-02). Common Core State Standards, CCRA.SL.4 (verified, direct for presenting to an audience; claim y4a-01)."
           },
           {
@@ -786,7 +786,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will learn to work as part of a team to achieve a common goal.",
               "goldId": "S054"
             },
-            "source": "CASEL (2020) SEL Framework, Relationship Skills: \"Practicing teamwork and collaborative problem-solving\".",
+            "source": "CASEL (2020) SEL Framework, Relationship Skills: \"Practicing teamwork and collaborative problem-solving\"; \"Showing leadership in groups\".",
             "basis": "CASEL (2020) SEL Framework (verified), Relationship Skills: 'Practicing teamwork and collaborative problem-solving'; 'Showing leadership in groups' (verified, direct; claim y4b-01)."
           },
           {
@@ -885,7 +885,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will develop skills to resist peer pressure and avoid risky behaviors.",
               "goldId": "S172"
             },
-            "source": "CASEL (2020) SEL Framework, Relationship Skills: \"Resisting negative social pressure\"; National Health Education Standards (2024), Standard 4: refusal skills.",
+            "source": "CASEL (2020) SEL Framework, Relationship Skills: \"Resisting negative social pressure\"; National Health Education Standards (SHAPE America, 2024), Standard 4 refusal-skills indicators (4.5.5, 4.8.5, 4.12.5).",
             "basis": "CASEL (2020), Relationship Skills: 'Resisting negative social pressure' (verified, partial: peer pressure only). National Health Education Standards (SHAPE America, 2024), Standard 4 refusal-skills indicators 4.5.5, 4.8.5, 4.12.5 (verified, partial: refusal only; claim y4b-10; the registry quotes 4.5.5, 'Demonstrate refusal skills to use in a variety of situations.', as read on the page in round 2, claim CP-12-03-V1, replacing the CP-10-02 quote, which came from the separate NCSHE set). Avoiding unsafe situations: CASEL Responsible Decision-Making 'consider ethical standards and safety concerns' and NHES 4.2.3 (both verified, partial; claims y4b-09, y4b-11), logged as codebook-defined (FD-P24). FD-P09 stays closed for refusal and peer pressure."
           }
         ]

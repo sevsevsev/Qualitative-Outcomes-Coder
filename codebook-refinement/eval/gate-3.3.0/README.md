@@ -19,3 +19,27 @@ finances": F2.1 → F1.6 Adult Education, Skills & Employment, in both candidate
 F2.4 must-not-move list.
 
 Domain-only: G-D07 now Y3 (was Y3.1). Still missed: G-D09 (Y2 → none), G-D10 (Y5 → none).
+
+## Files
+
+- `baseline-3.2.1-{design,heldout,domain-only}.json`: main 28c0068 (codebook 3.2.1).
+- `candidate-3.3.0-{design,heldout,domain-only}.json`: claude/y1-research-review-pilot-7z3jxj 204b7d3 (3.3.0).
+- `comparison-{design,heldout,domain-only}.txt`: per-run accuracy for both, then every row whose run-1 code or score changed, then the candidate's misses.
+
+Each JSON keeps per-row codes for run 1 only (the script's format); run 2 appears as accuracy and run-to-run stability.
+
+## Where the moved row came from
+
+H027 ("Families reported feeling more confident managing household finances"), file `candidate-3.3.0-heldout.json`, run 1 rows:
+old code (baseline 3.2.1, run 1) F2.1 Income, Benefits & Financial Stability; new code (candidate 3.3.0, run 1) F1.6 Adult Education, Skills & Employment, confidence high.
+Run 2 also moved: candidate run 2 scored the same 94.4% with 100% run-to-run agreement, and baseline run 2 kept 95.6%.
+
+## Commands
+
+Baseline from main checkout, candidate from a worktree of the branch (`--compare` was not used; comparisons were computed from the saved files, same row-level logic):
+
+```
+npx tsx scripts/codebook-eval.ts --codebook youth_outcomes_v3 --gold codebook-refinement/gold/youth_outcomes_v3.gold.csv --set design --runs 2 --out codebook-refinement/eval/gate-3.3.0/<baseline|candidate>-<ver>-design.json
+npx tsx scripts/codebook-eval.ts --codebook youth_outcomes_v3 --gold codebook-refinement/gold/youth_outcomes_v3.gold.csv --set heldout --runs 2 --out codebook-refinement/eval/gate-3.3.0/<baseline|candidate>-<ver>-heldout.json
+npx tsx scripts/codebook-eval.ts --codebook youth_outcomes_v3 --gold codebook-refinement/gold/youth_outcomes_v3.domain-only.gold.csv --set design --runs 2 --out codebook-refinement/eval/gate-3.3.0/<baseline|candidate>-<ver>-domain-only.json
+```

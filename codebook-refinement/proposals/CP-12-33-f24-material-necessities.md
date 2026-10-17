@@ -142,9 +142,9 @@ CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); U
             "fidelity": "framework",
             "from2x": "new",
             "definition": "A young person having the basic goods a child needs, rather than going without them for lack of money (the statement need not name the cause): clothing, properly fitting shoes, outdoor leisure equipment, school supplies, and enough menstrual materials.",
-            "include": "Weather-appropriate clothing; shoes that fit; outdoor play gear such as a bike; school supplies; enough period products.",
-            "exclude": "Goods given, received, distributed or counted, or access to them; devices and internet; food; housing; general hygiene items (soap, deodorant, toothpaste) and basic needs or material hardship in general; what having the goods leads to (school attendance, coming to class prepared, joining a team, physical activity, confidence or dignity, belonging, household costs).",
-            "useInstead": "A2.3 goods provided, counted or made accessible, and devices or internet; Domain F2 with subcategory none for general hygiene items or basic needs in general; F2.1 household costs; F2.2 food; F2.3 housing; Y1.13 attendance; Y1.9 class participation or coming prepared; Y2.6 joining or staying in an activity; Y8.1 physical activity; Y5.4 confidence, self-worth or dignity; Y3.1 belonging.",
+            "include": "Weather-appropriate clothing; shoes that fit; outdoor play gear such as a bike; school supplies, including students coming to class with the supplies they need; enough period products; the number of children who will have a coat or other goods.",
+            "exclude": "Goods given, received, distributed or counted, or access to them; devices and internet; food; housing; general hygiene items (soap, deodorant, toothpaste) and basic needs or material hardship in general; what having the goods leads to (school attendance, joining a team, physical activity, confidence or dignity, belonging, household costs).",
+            "useInstead": "A2.3 goods provided, counted or made accessible, and devices or internet; Domain F2 with subcategory none for general hygiene items or basic needs in general; F2.1 household costs; F2.2 food; F2.3 housing; Y1.13 attendance; Y1.9 class participation; Y2.6 joining or staying in an activity; Y8.1 physical activity; Y5.4 confidence, self-worth or dignity; Y3.1 belonging.",
             "example": {
               "text": "<the first F2.4 row Severin confirms; draft: P-F24-04, \"Every student we serve will have a warm winter coat and properly fitting shoes by December.\">",
               "goldId": "<the design gold id Severin gives that row>"
@@ -212,7 +212,7 @@ A young person's own housing, food, income, or clothing and supplies is F2, with
 **Rule 2**, appended after "A specific student's school attendance -> Y1.13." (before: no text):
 
 ```
-Goods given, received, distributed, counted or made accessible ("500 pairs of gloves handed out", "families can pick up free hats and scarves") -> A2.3; young people stated to have the clothing, shoes, gear, supplies or menstrual materials they need -> F2.4, and what the goods lead to (attendance, joining a team, confidence) takes its own code. Devices and internet stay A2.3 either way (rule 15).
+Goods given, received, distributed, counted or made accessible ("500 pairs of gloves handed out", "families can pick up free hats and scarves") -> A2.3; young people stated to have, or a number of children who will have, the clothing, shoes, gear, supplies or menstrual materials they need -> F2.4, and what the goods lead to (attendance, joining a team, confidence) takes its own code. Devices and internet stay A2.3 either way (rule 15).
 ```
 
 Rule 15 is unchanged. The rule 2 sentence restates CF-037 (S3.2).
@@ -237,7 +237,7 @@ tie-breakers" (before: no entry):
 - What the goods lead to takes its own code; the goods are the means (rule 2): school attendance → Y1.13; joining or staying in a sport or activity → Y2.6; physical activity → Y8.1; taking part in class → Y1.9; confidence or self-worth → Y5.4; fitting in or not being singled out → Y3.1; less household spending → F2.1 (CF-034). When the statement names both having the goods and a further result, split (rule 2).
 - Basic needs in general, material hardship in general, or general hygiene items (named in F2.4's exclude) → **Domain F2, subcategory none**, with `codebook_gap` = 1 in gold for hygiene items (decision G9).
 - Warmth or physical comfort alone ("clothes that keep them warm") → **F2.4**; dignity, pride or self-worth → **Y5.4** (the goods are the means).
-- A count of children reached, or access to goods the program supplies ("put a coat on 1,200 kids", "access to free period products") → **A2.3**; F2.4 needs young people stated to have, or no longer go without, the goods.
+- A count of goods given out ("500 pairs of gloves handed out") or access to goods the program supplies ("access to free period products") → **A2.3**. A number of children who will have the goods ("put a warm coat on 1,200 kids") → **F2.4** (Severin, P-F24-26). Students coming to class with the supplies they need → **F2.4**, not Y1.9 (Severin, P-F24-28).
 
 **Rationale:** F2.4's anchors measure a child's state: the EU-SILC child items (Eurostat 2023; Regulation (EU) No 112/2013, HD100, HD110, HD160) count children lacking clothes, shoes or outdoor leisure equipment, and Global MHH Indicator 1 counts girls having enough menstrual materials. A2.3's definition is provision ("Providing materials ... including counts of resources distributed"), and the output/outcome line is the codebook's own (rule 2; CF-009 in 2.x). Devices stay with A2.3's digital-equity sources (47 CFR 54 Subpart Q; ESSA 7119(a)(2); Digital Equity Act), which frame device access as access, and S240 is adjudicated there.
 
@@ -441,6 +441,27 @@ coders coded the rows from the 3.1.5 prompt with this CP's prompt changes; four 
   own CP); team-sport gear rests on reading it as "outdoor leisure equipment" (V-F24-2), so rows like
   P-F24-22 are medium confidence; hygiene kits are a common donor item, so expect many F2
   domain-only rows with the gap flag.
+
+## Severin's decisions on the example statements (2026-10-17)
+
+Severin ruled on the 11 flagged statements on the review page
+(https://claude.ai/artifact/UtpiYrSBsnyYioHhi9jtc5); the other 18 wait for his confirmation.
+
+- Agreed with the panel on 8: P-F24-08, -09 (F2 domain only), -18 (Y1.9), -21, -29 (F2.1), -22
+  (F2.4), -25 (Y5.4), -27 (A2.3).
+- P-F24-26 "Our coat drive will put a warm coat on 1,200 kids this winter": **F2.4** (panel: A2.3).
+  A number of children who will have the goods is F2.4; only counts of goods given out stay A2.3.
+  F2.4 include and CF-037 updated.
+- P-F24-28 "Students will come to class every day with their notebook, pencils and calculator":
+  **F2.4** (panel: Y1.9). Coming to class with supplies is having them. F2.4 exclude, useInstead and
+  CF-037 updated.
+- P-F24-10 "Students will have the soap, deodorant and toothpaste they need each week": **F2.4**
+  (panel: F2 domain only). This puts general hygiene items inside F2.4. No verified source names
+  them yet, so a search for one is running. If one is verified, F2.4 names hygiene items and stays
+  framework. If none is, hygiene items are a codebook-defined element of F2.4 with a counted
+  deviation; F2 goes to 2 of 4 (over the S4.9 line) and its anchor frameworks are re-reviewed
+  before the code ships. F2.4's text, the hygiene line in CF-037 and decision 5 above change once
+  the search is settled.
 
 ## Decisions
 

@@ -11,9 +11,11 @@ import { getSourceRegistry, SourceStatus } from '../services/codebookSources.js'
 import { FeedbackTargetType, GENERAL_TARGET_LABEL, PublicFeedback } from '../services/feedback.js';
 import { fetchApprovedFeedback } from '../services/feedbackClient.js';
 import FeedbackPanel from './FeedbackPanel.js';
+import { CodeIndicatorLinks, IndicatorLinksView } from './IndicatorLinks.js';
+import type { SpotlightLinks } from '../services/spotlightLinks.js';
 
 // Route shape (after "#/codebook/"): "<codebookId>[/<target>]", where target
-// is a domain ("d/3"), a code ("3.2.2" or "01"), or "sources".
+// is a domain ("d/3"), a code ("3.2.2" or "01"), "sources", or "indicators".
 export interface ExplorerRoute {
   codebookId: CodebookType;
   target?: string;
@@ -38,6 +40,11 @@ interface Props {
   withFeedback?: boolean;
   /** Codebooks offered in the switcher. Defaults to every codebook that isn't deprecated. */
   codebookIds?: readonly CodebookType[];
+  /**
+   * District SPOTlight indicator links keyed by codebook id (services/spotlightLinksData.ts).
+   * Internal app only: the public explorer site does not pass it.
+   */
+  indicatorLinks?: Record<string, SpotlightLinks | undefined>;
 }
 
 // ---------------------------------------------------------------------------
@@ -111,13 +118,14 @@ const highlight = (text: string, tokens: string[]): React.ReactNode => {
 // Component
 // ---------------------------------------------------------------------------
 
-const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebookIds }) => {
+const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebookIds, indicatorLinks }) => {
   const codebookList = SELECTABLE_CODEBOOK_LIST.filter(cb => !codebookIds || codebookIds.includes(cb.id as CodebookType));
   const codebook = CODEBOOK_REGISTRY[route.codebookId];
   // A deprecated codebook still opens from a direct link or a resumed session, with a notice.
   const replacement = codebook.deprecated ? CODEBOOK_REGISTRY[codebook.deprecated.replacedBy as CodebookType] : undefined;
   const data = useMemo(() => buildExplorerCodebook(codebook), [codebook]);
   const legend = getSourceRegistry(codebook.id)?.status_legend;
+  const spotlight = indicatorLinks?.[codebook.id];
 
   const [query, setQuery] = useState('');
   const [feedback, setFeedback] = useState<{ public: boolean; items: PublicFeedback[] }>({ public: true, items: [] });
@@ -169,6 +177,7 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
   // Resolve the route target to a view.
   const target = route.target;
   const showSources = target === 'sources';
+  const showIndicators = target === 'indicators' && !!spotlight;
   const targetCode = target && !target.startsWith('d/') ? codeIndex.get(target) : undefined;
   const targetDomainNumber = target?.startsWith('d/') ? target.slice(2) : undefined;
   const domainIndex = Math.max(
@@ -435,6 +444,13 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
               <div>
                 <SectionLabel>Notes from the field</SectionLabel>
                 {renderFeedback('code', code.number, code.code)}
+              </div>
+            )}
+
+            {spotlight && (
+              <div>
+                <SectionLabel>Connection to District indicators</SectionLabel>
+                <CodeIndicatorLinks data={spotlight} code={code.number} indicatorsHref={explorerHref(data.id, 'indicators')} />
               </div>
             )}
 
@@ -807,7 +823,7 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
         <aside className="min-w-0 lg:sticky lg:top-24 lg:self-start">
           <nav aria-label="Domains" className="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 lg:mx-0 lg:px-0 lg:pb-0 lg:flex-col lg:gap-0.5 lg:overflow-visible">
             {data.domains.map((d, i) => {
-              const active = !showSources && !tokens.length && i === domainIndex;
+              const active = !showSources && !showIndicators && !tokens.length && i === domainIndex;
               return (
                 <a
                   key={d.code}
@@ -845,11 +861,40 @@ const CodebookExplorer: React.FC<Props> = ({ route, withFeedback = false, codebo
                 <span className="hidden lg:inline ml-auto text-xs text-slate-400 tabular-nums">{data.sources.length}</span>
               </a>
             )}
+            {spotlight && (
+              <a
+                href={explorerHref(data.id, 'indicators')}
+                onClick={() => setQuery('')}
+                className={`shrink-0 flex items-center gap-3 rounded-lg px-2.5 py-2 text-sm transition-colors ${data.hasRegistry ? '' : 'lg:mt-3 lg:border-t lg:border-slate-200 lg:rounded-t-none lg:pt-3'} ${
+                  showIndicators && !tokens.length ? 'bg-white shadow-sm ring-1 ring-slate-200 text-slate-900 font-medium' : 'text-slate-600 hover:bg-white/70 hover:text-slate-900'
+                }`}
+              >
+                <span className="shrink-0 w-7 h-7 rounded-md flex items-center justify-center bg-sky-50 text-sky-700 ring-1 ring-inset ring-sky-200">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 19h16M7 15v-3m5 3V8m5 7v-6" />
+                  </svg>
+                </span>
+                <span className="whitespace-nowrap">District indicators</span>
+                <span className="hidden lg:inline ml-auto text-xs text-slate-400 tabular-nums">{spotlight.indicators.length}</span>
+              </a>
+            )}
           </nav>
         </aside>
 
         <main className="min-w-0">
-          {tokens.length ? renderResults() : showSources ? renderSources() : domain ? renderDomain() : null}
+          {tokens.length ? (
+            renderResults()
+          ) : showSources ? (
+            renderSources()
+          ) : showIndicators ? (
+            <IndicatorLinksView
+              data={spotlight}
+              codeTitle={c => codeIndex.get(c)?.code.title}
+              codeHref={c => explorerHref(data.id, c)}
+            />
+          ) : domain ? (
+            renderDomain()
+          ) : null}
         </main>
       </div>
 

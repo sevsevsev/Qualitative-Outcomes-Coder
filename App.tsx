@@ -8,6 +8,7 @@ import { loadReviewState, clearReviewState, SavedReviewState } from './services/
 import ReviewDashboard from './components/ReviewDashboard.js';
 import ProcessingStatus from './components/ProcessingStatus.js';
 import CodebookExplorer, { parseExplorerRoute } from './components/CodebookExplorer.js';
+import { SPOTLIGHT_LINKS } from './services/spotlightLinksData.js';
 
 // Screens are addressed by URL hash so the explorer can be linked to
 // directly: "#/codebook/<codebookId>/<code>". Anything else is the coder.
@@ -185,7 +186,7 @@ const App: React.FC = () => {
       {/* Main Content: Changed max-w-7xl to w-full to utilize full screen width */}
       {view === 'codebook' && (
         <div className="w-full px-4 sm:px-6 lg:px-8 py-10">
-          <CodebookExplorer route={parseExplorerRoute(hashPath.slice(1))} />
+          <CodebookExplorer route={parseExplorerRoute(hashPath.slice(1))} indicatorLinks={SPOTLIGHT_LINKS} />
         </div>
       )}
 

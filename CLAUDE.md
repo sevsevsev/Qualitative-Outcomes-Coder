@@ -129,3 +129,7 @@ Read these before touching any codebook:
   `npx tsx scripts/codebook-eval.ts --runs 2 --out codebook-refinement/eval/<name>.json`
   - Add `--include-proposed` for a non-gating preview.
   - Add `--compare <baseline.json>` for the regression gate.
+- Recode a whole real file the way the app does (needs `GEMINI_API_KEY`):
+  `npx tsx scripts/code-corpus.ts --codebook youth_outcomes_v3 --in <input.csv> --out <coded.csv>`
+  (add `--source-type logic_model` for a file with no `source_type` column). The output is the
+  review screen's download format, with the sample drawn, so it opens on the review screen.

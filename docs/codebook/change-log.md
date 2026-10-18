@@ -9,6 +9,16 @@ map below still holds; the references get refreshed after PR #34 (CP-01-12). The
 are in [`proposed-codebook.md`](proposed-codebook.md); the grounding is in
 [`research-basis.md`](research-basis.md).
 
+## After 3.0: 3.3.0 candidate (2026-10-17)
+
+The tables below describe the 2.4.0 → 3.0 redesign and are kept as written. Later releases are
+recorded in `CLAUDE.md` and the cycle and review folders. The one that changes a count here is
+3.3.0 (gate candidate, not yet approved): CP-12-33 adds **F2.4 Material Necessities (Clothing,
+Gear & Supplies)** in F2 category B, renamed "Food, housing & material necessities", so 3.x has
+**99 codes** (39 categories unchanged) and an enum footprint of **161**. The same candidate
+updates Source and Framework Basis lines from the 2026-10-16 research review; see
+`codebook-refinement/research-review/2026-10-16/full-review/gate-candidate-3.3.0.md`.
+
 ## Summary
 
 | | 2.4.0 | Proposed |

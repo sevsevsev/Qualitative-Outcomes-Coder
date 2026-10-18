@@ -25,6 +25,24 @@ Framework deviation: none. The entry sorts statements between two existing codes
 current text. It relies on F1.6 keeping "financial skills", which CP-12-08 logs as FD-P33
 (provisional id; a codebook-defined element of F1.6 that none of its sources names).
 
+## Applied in 3.3.0 (narrow hint, 2026-10-17)
+
+The first live gate run of candidate 3.3.0 moved H027 ("Families reported feeling more confident
+managing household finances.") from F2.1 to F1.6 in both runs. Severin chose to keep his ruling on the
+decision card (2026-10-17, "Keep F2.1"). The candidate therefore ships only the money-situation side
+of CF-034 as prompt text, which already has adjudicated rows on both sides (F2.1: H027, S006, H067;
+F1.6: S118, H062, S206):
+
+- F2.1 include: "Household income; SNAP/TANF/Medicaid enrollment; household savings." →
+  "Household income; SNAP/TANF/Medicaid enrollment; household savings; families' confidence about money."
+- F1.6 exclude: "Household income; young people's own skills." →
+  "Household income, savings, or confidence about money; young people's own skills."
+
+The caregiver money-skill bullet (budgeting class → F1.6), stress about money, rule 11 and the
+`useInstead` lines stay held for G11. Enum +0. H027 is one of the 90 older test rows in the main gold
+file; a fix drawn from its miss uses those rows further, so the round-2 result on them is not an
+independent check. The fresh held-out file was not read.
+
 ## Decisions applied
 
 | Decision | Effect on this CP |

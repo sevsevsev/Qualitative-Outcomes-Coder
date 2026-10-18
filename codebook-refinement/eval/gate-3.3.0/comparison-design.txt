@@ -1,0 +1,7 @@
+base 3.2.1 255 [(98.0, 99.2), (98.4, 100)] stab 98.8
+cand 3.3.0 255 [(98.8, 100), (99.2, 100)] stab 98.8
+S006 exp F2.1 | base F1.6 True | cand A2.5 True high
+S073 exp Y8.12 | base A2.5 False | cand Y8.12 True high
+S139 exp F2.1 | base F2.1 True | cand F1.7 True high
+S247 exp Y6.6 | base Y8.1 False | cand Y6.6 True low
+cand misses: [('S011', 'none', 'A2.1'), ('S049', 'Y2.2', 'Y5.4'), ('S176', 'F1.9', 'A2.6')]

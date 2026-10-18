@@ -19,7 +19,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Academic Learning & Achievement",
     "description": "What young people learn and how they progress through school: demonstrated learning by subject, the behaviors and beliefs that shape learning, and school and postsecondary status. All academic outcomes live here, in three categories.",
-    "frameworkBasis": "ESSA State academic standards, 20 U.S.C. 6311(b)(1)(C), and well-rounded education, 20 U.S.C. 7801(52); subject standards (Common Core writing anchors, NGSS, CSTA, National Core Arts Standards, WIDA); Farrington et al. (2012), academic mindsets and behaviors; UChicago On-Track Indicator; Civil Rights Data Collection; National Student Clearinghouse.",
+    "frameworkBasis": "ESSA State academic standards, 20 U.S.C. 6311(b)(1)(C), and well-rounded education, 20 U.S.C. 7801(52); subject standards (Common Core writing anchors, NGSS, CSTA, National Core Arts Standards, WIDA); Farrington et al. (2012), academic mindsets and behaviors; UChicago On-Track Indicator; Civil Rights Data Collection; National Student Clearinghouse; secondary: Seal of Biliteracy Guidelines (home-language maintenance); National Reading Panel (2000) (reading); NAEP (subjects of a well-rounded education); NAMLE, Core Principles of Media Literacy Education; Conley, Four Keys (key cognitive strategies); Head Start Early Learning Outcomes Framework (early childhood); Irvin et al. (2004) (office discipline referrals); Attendance Works (chronic absence); McKinney-Vento Act and 42 U.S.C. 675(1)(G) (school stability); ESSA State report cards (advanced coursework); ESSA graduation-rate indicator; WIOA youth program elements, 20 CFR 681.460 (dropout recovery).",
     "categoryLine": "A. Subject learning (Y1.1–Y1.8) · B. Learning behaviors & mindsets (Y1.9–Y1.12) · C. Educational progress & attainment (Y1.13–Y1.18)",
     "categories": [
       {
@@ -60,7 +60,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will improve their English language proficiency.",
               "goldId": "S028"
             },
-            "source": "WIDA English Language Development Standards Framework (2020 edition); ESSA English language proficiency indicator, 20 U.S.C. 6311(c)(4)(B)(iv).",
+            "source": "WIDA English Language Development Standards Framework (2020 edition); ESSA English language proficiency indicator, 20 U.S.C. 6311(c)(4)(B)(iv); ACTFL et al. (2020), Guidelines for Implementing the Seal of Biliteracy (maintaining home or heritage languages).",
             "basis": "Re-verified 2026-09-27 (CP-10-01): WIDA 2020 (verified, direct for English proficiency); ESSA 6311(c)(4)(B)(iv) (verified, direct). CP-11-01 (2026-10-16): ACTFL et al. (2020), Guidelines for Implementing the Seal of Biliteracy, section 1 (verified, direct for home-language maintenance; claim y1-subject-04)."
           },
           {
@@ -242,7 +242,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "definition": "Beliefs about oneself as a learner: academic self-efficacy, belonging in academic work, and growth mindset about intelligence or ability to learn.",
             "include": "'I can succeed in this class'; believing intelligence or math ability grows with effort; confidence in academic abilities.",
             "exclude": "General self-confidence; growth mindset about challenges in general.",
-            "useInstead": "Y5.4 general confidence and general growth mindset. CP-01-06 (in flight) sets the same line for 2.4.0.",
+            "useInstead": "Y5.4 general confidence and general growth mindset.",
             "example": {
               "text": "Students will believe they can pass their algebra class.",
               "goldId": "S216"
@@ -273,7 +273,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Participating students will reduce chronic absenteeism from school.",
               "goldId": "S233"
             },
-            "source": "Attendance Works, chronic absence; McKinney-Vento Act, 42 U.S.C. 11432 (school stability).",
+            "source": "Attendance Works, chronic absence; McKinney-Vento Act, 42 U.S.C. 11432(g)(3)(A)-(B) (school of origin and school stability); 42 U.S.C. 675(1)(G), foster care case plan (educational stability).",
             "basis": "Attendance Works, chronic absence (verified); McKinney-Vento, 42 U.S.C. 11432(g)(3)(A)-(B) (verified, direct; pinpoint added by CP-11-01, claim y1-attainment-03); 42 U.S.C. 675(1)(G) (verified, direct for foster placement changes; claim y1-attainment-05)."
           },
           {
@@ -328,7 +328,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Students will earn college credit through dual enrollment in a CTE pathway.",
               "goldId": "S219"
             },
-            "source": "U.S. Department of Education, Office for Civil Rights (2024), Civil Rights Data Collection: student access to advanced courses, including AP and dual enrollment.",
+            "source": "ESSA State report cards, 20 U.S.C. 6311(h)(1)(C)(viii)(II)(bb) (accelerated coursework for postsecondary credit: AP, IB, dual or concurrent enrollment) and 6311(c)(4)(B)(v)(II) (access to and completion of advanced coursework); U.S. Department of Education, Office for Civil Rights (2024), Civil Rights Data Collection: student access to advanced courses, including AP and dual enrollment.",
             "basis": "ESSA 20 U.S.C. 6311(h)(1)(C)(viii)(II)(bb) and 6311(c)(4)(B)(v)(II) (verified, direct; claim y1-attainment-12, corroborated by y1-taxonomy-07). U.S. ED OCR (2024), 2020-21 CRDC: Student Access to and Enrollment in ... Courses and Academic Programs, AP and dual enrollment (verified, partial: the PDF returned 403 in CP-10-01, so only the landing page was read)."
           },
           {
@@ -376,7 +376,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Engagement, Interest & Creative Expression",
     "description": "How young people experience learning and activities: enjoyment, curiosity, lasting interest, seeing relevance, creative expression, and choosing to take part.",
-    "frameworkBasis": "Hidi & Renninger (2006), Four-Phase Model of Interest Development; Muhammad, Five Pursuits (Joy); National Core Arts Standards (artistic processes); Search Institute Developmental Assets (Constructive Use of Time).",
+    "frameworkBasis": "Hidi & Renninger (2006), Four-Phase Model of Interest Development; Pekrun (2024), control-value theory of achievement emotions (activity enjoyment); National Core Arts Standards (artistic processes); Search Institute Developmental Assets (Constructive Use of Time); secondary: CASEL (2020) SEL Framework (curiosity and open-mindedness); Eccles and colleagues, expectancy-value theory (utility value); Hulleman et al. (2010), utility-value intervention.",
     "categoryLine": "A. Enjoyment & interest (Y2.1–Y2.4) · B. Expression & participation (Y2.5–Y2.6)",
     "categories": [
       {
@@ -389,7 +389,8 @@ export const V3_DOMAINS: V3Domain[] = [
             "name": "Enjoyment & Joy",
             "short": "Enjoyment",
             "flag": "deductive",
-            "fidelity": "framework",
+            "fidelity": "adapted",
+            "deviation": "FD-P37",
             "from2x": "2.1",
             "definition": "A positive emotional experience of the program or of learning: fun, happiness, excitement, pride in being part of it.",
             "include": "Reports of enjoying activities; excitement to attend; pride in the program.",
@@ -399,15 +400,16 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will report feeling excited and happy to attend program each day.",
               "goldId": "S234"
             },
-            "source": "Muhammad, Five Pursuits (Pursuit 5: Joy).",
-            "basis": "Muhammad, Five Pursuits, Joy (verified)."
+            "source": "Pekrun (2024), control-value theory: activity emotions (enjoyment during learning).",
+            "basis": "Pekrun (2024), control-value theory: activity emotions, enjoyment during learning (verified, direct; claim y2-01); achievement settings beyond school (verified, partial; claim y2-02); outcome-emotion pride (verified, partial: achievement pride only; claim y2-03). Pride in being part of a program is codebook-defined (FD-P37). Muhammad, Five Pursuits, Joy (verified, partial: a teaching aim, not the learner's enjoyment) is kept as a pointer, not as the anchor."
           },
           {
             "id": "Y2.2",
             "name": "Curiosity & Triggered Interest",
             "short": "Curiosity",
             "flag": "deductive",
-            "fidelity": "framework",
+            "fidelity": "adapted",
+            "deviation": "FD-P38",
             "from2x": "2.2",
             "definition": "Interest sparked in the moment: curiosity, asking questions about something new, willingness to try a new activity.",
             "include": "Asking questions during a demonstration; trying new activities; showing curiosity.",
@@ -417,8 +419,8 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Students will ask questions and show curiosity during science demonstrations.",
               "goldId": "S128"
             },
-            "source": "Hidi & Renninger (2006), Four-Phase Model of Interest Development, phase 1 (triggered situational interest).",
-            "basis": "Hidi & Renninger (2006), phase 1 triggered situational interest (verified)."
+            "source": "Hidi & Renninger (2006), Four-Phase Model of Interest Development, phase 1 (triggered situational interest); CASEL (2020) SEL Framework, Responsible Decision-Making: \"Demonstrating curiosity and open-mindedness\".",
+            "basis": "Hidi & Renninger (2006), phase 1 triggered situational interest (verified, direct, full text; claim y2-07). CASEL (2020), Responsible Decision-Making: 'Demonstrating curiosity and open-mindedness' (verified, partial: a disposition broader than triggered interest; claims y2-05, CP-12-20-V-CASEL-1-Y2.2); OECD (2021), SSES Houston, Open-mindedness: Curiosity (verified, direct; claim y2-06). Willingness to try a new activity is codebook-defined (FD-P38; claims CP-12-01-V1, CP-12-01-V2)."
           },
           {
             "id": "Y2.3",
@@ -436,7 +438,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "goldId": "S214"
             },
             "source": "Hidi & Renninger (2006), Four-Phase Model of Interest Development, phases 2-4.",
-            "basis": "Hidi & Renninger (2006), phases 2-4 (verified)."
+            "basis": "Hidi & Renninger (2006), phases 2-4 (verified, direct, full text; claim y2-08)."
           },
           {
             "id": "Y2.4",
@@ -454,7 +456,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "goldId": "S115"
             },
             "source": "Eccles and colleagues, expectancy-value theory (utility value); Hulleman et al. (2010), utility value intervention.",
-            "basis": "Re-verified 2026-09-27 (CP-10-01): Wigfield & Eccles (2000), utility value: 'how a task fits into an individual's future plans' (verified from a full-text copy, not the publisher's); Hulleman, Godes, Hendricks & Harackiewicz (2010) (verified, direct)."
+            "basis": "Re-verified 2026-09-27 (CP-10-01): Wigfield & Eccles (2000), utility value: 'how a task fits into an individual's future plans' (verified from a full-text copy, not the publisher's); Hulleman, Godes, Hendricks & Harackiewicz (2010) (verified, direct). Eccles & Wigfield (2020), Situated Expectancy-Value Theory, utility value: 'how well a particular task fits into an individual's present or future plans' (verified, direct; claims y2-09, y2-10)."
           }
         ]
       },
@@ -509,7 +511,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Belonging & Relationships",
     "description": "The relationships around a young person: belonging, supportive adults, friends, family, and wider networks.",
-    "frameworkBasis": "Search Institute Developmental Relationships Framework; CDC (2009) School Connectedness; Search Institute Developmental Assets (Support); Education-to-Workforce Indicator Framework (social capital).",
+    "frameworkBasis": "Search Institute Developmental Relationships Framework; CDC (2009) School Connectedness; Search Institute Developmental Assets (Support); Education-to-Workforce Indicator Framework (social capital); secondary: Chafee, 42 U.S.C. 677(a)(2), and the National Youth in Transition Database (permanent connections with caring adults for youth in foster care).",
     "categoryLine": "A. Connectedness (Y3.1) · B. Close relationships (Y3.2–Y3.4) · C. Networks (Y3.5)",
     "categories": [
       {
@@ -528,7 +530,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "definition": "Feeling accepted, valued, included and safe in the program, school or a community; mattering; less isolation.",
             "include": "Sense of belonging; feeling safe and accepted in program spaces; feeling connected to a new community; reduced loneliness.",
             "exclude": "Feeling safe in general (home, neighborhood); trauma-related safety; one named trusted adult; named friendships.",
-            "useInstead": "Y8.10 general felt safety; Y8.8 trauma recovery; Y3.2 a trusted adult; Y3.3 friends. Follows the safety tie-breaker being tested in PR #31.",
+            "useInstead": "Y8.10 general felt safety; Y8.8 trauma recovery; Y3.2 a trusted adult; Y3.3 friends.",
             "example": {
               "text": "Students will feel safe and accepted at the program.",
               "goldId": "S163"
@@ -558,7 +560,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Mentees will report having a trusted adult they can go to with problems.",
               "goldId": "S026"
             },
-            "source": "Search Institute, Developmental Relationships Framework (Express Care; Challenge Growth; Provide Support); CDC (2009), School Connectedness (adult support).",
+            "source": "Search Institute, Developmental Relationships Framework (Express Care; Challenge Growth; Provide Support); CDC (2009), School Connectedness (adult support); Chafee, 42 U.S.C. 677(a)(2), and the National Youth in Transition Database (permanent connections with a caring adult for youth in foster care).",
             "basis": "Search Institute Developmental Relationships (Express Care; Challenge Growth; Provide Support) (verified); CDC (2009) (verified); Search Institute Developmental Assets, Other adult relationships (verified; claim y3-07). Youth in care: 42 U.S.C. 677(a)(2), Chafee, meaningful, permanent connections with a caring adult (verified; claim y3-05); ACF NYTD outcome 'positive connections with adults' (verified; claim y3-06)."
           },
           {
@@ -631,7 +633,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Social & Emotional Skills (CASEL)",
     "description": "Social and emotional skills: what young people can do, organized by CASEL's five competencies. Beliefs about oneself are in Y5.",
-    "frameworkBasis": "CASEL (2020) SEL Framework: the five competencies are this domain's categories.",
+    "frameworkBasis": "CASEL (2020) SEL Framework: the five competencies are this domain's categories. Secondary: Common Core State Standards, Speaking and Listening anchor 4 (presenting to an audience); National Health Education Standards (SHAPE America, 2024), Standard 4 (refusal skills).",
     "categoryLine": "A. Self-awareness (Y4.1) · B. Self-management (Y4.2–Y4.3) · C. Social awareness (Y4.4–Y4.5) · D. Relationship skills (Y4.6–Y4.9) · E. Responsible decision-making (Y4.10–Y4.12)",
     "categories": [
       {
@@ -723,7 +725,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will express gratitude toward family and mentors.",
               "goldId": "S082"
             },
-            "source": "CASEL (2020) SEL Framework, Social Awareness: \"Taking others' perspectives\"; \"Demonstrating empathy and compassion\"; \"Identifying diverse social norms, including unjust ones\".",
+            "source": "CASEL (2020) SEL Framework, Social Awareness: \"Taking others' perspectives\"; \"Demonstrating empathy and compassion\"; \"Showing concern for the feelings of others\"; \"Understanding and expressing gratitude\"; \"Identifying diverse social norms, including unjust ones\".",
             "basis": "CASEL (2020) SEL Framework (verified), Social Awareness: 'Taking others' perspectives'; 'Demonstrating empathy and compassion'; 'Identifying diverse social norms, including unjust ones'; 'Understanding and expressing gratitude' (verified, direct; claim y4a-05); 'Showing concern for the feelings of others' (verified, direct; claim y4a-06)."
           },
           {
@@ -766,7 +768,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "4-H members will demonstrate public speaking skills by giving a demonstration at the county fair.",
               "goldId": "S132"
             },
-            "source": "CASEL (2020) SEL Framework, Relationship Skills: \"Communicating effectively\".",
+            "source": "CASEL (2020) SEL Framework, Relationship Skills: \"Communicating effectively\" (communicate clearly, listen actively); Common Core State Standards, Speaking and Listening anchor 4 (CCRA.SL.4): presenting information so listeners can follow the reasoning.",
             "basis": "CASEL (2020) SEL Framework (verified, partial), Relationship Skills: 'Communicating effectively'; competency definition 'communicate clearly, listen actively' (verified, direct; claim y4a-02). Common Core State Standards, CCRA.SL.4 (verified, direct for presenting to an audience; claim y4a-01)."
           },
           {
@@ -779,12 +781,12 @@ export const V3_DOMAINS: V3Domain[] = [
             "definition": "Working with others toward shared goals, including leading peers within a group task.",
             "include": "Collaboration on projects; teamwork; taking turns leading a small group; leadership within a team activity.",
             "exclude": "Leadership that influences a program, school or community decision; friendships; workplace leadership.",
-            "useInstead": "Y6.4 civic leadership; Y3.3 friendships; Y7.3 workplace. Same line as CP-01-06's leadership rule (in flight).",
+            "useInstead": "Y6.4 civic leadership; Y3.3 friendships; Y7.3 workplace.",
             "example": {
               "text": "Youth will learn to work as part of a team to achieve a common goal.",
               "goldId": "S054"
             },
-            "source": "CASEL (2020) SEL Framework, Relationship Skills: \"Practicing teamwork and collaborative problem-solving\".",
+            "source": "CASEL (2020) SEL Framework, Relationship Skills: \"Practicing teamwork and collaborative problem-solving\"; \"Showing leadership in groups\".",
             "basis": "CASEL (2020) SEL Framework (verified), Relationship Skills: 'Practicing teamwork and collaborative problem-solving'; 'Showing leadership in groups' (verified, direct; claim y4b-01)."
           },
           {
@@ -883,7 +885,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will develop skills to resist peer pressure and avoid risky behaviors.",
               "goldId": "S172"
             },
-            "source": "CASEL (2020) SEL Framework, Relationship Skills: \"Resisting negative social pressure\"; National Health Education Standards (2024), Standard 4: refusal skills.",
+            "source": "CASEL (2020) SEL Framework, Relationship Skills: \"Resisting negative social pressure\"; National Health Education Standards (SHAPE America, 2024), Standard 4 refusal-skills indicators (4.5.5, 4.8.5, 4.12.5).",
             "basis": "CASEL (2020), Relationship Skills: 'Resisting negative social pressure' (verified, partial: peer pressure only). National Health Education Standards (SHAPE America, 2024), Standard 4 refusal-skills indicators 4.5.5, 4.8.5, 4.12.5 (verified, partial: refusal only; claim y4b-10; the registry quotes 4.5.5, 'Demonstrate refusal skills to use in a variety of situations.', as read on the page in round 2, claim CP-12-03-V1, replacing the CP-10-02 quote, which came from the separate NCSHE set). Avoiding unsafe situations: CASEL Responsible Decision-Making 'consider ethical standards and safety concerns' and NHES 4.2.3 (both verified, partial; claims y4b-09, y4b-11), logged as codebook-defined (FD-P24). FD-P09 stays closed for refusal and peer pressure."
           }
         ]
@@ -895,7 +897,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Identity, Confidence & Agency",
     "description": "Who young people believe they are and what they believe they can do: identity, confidence, purpose and agency.",
-    "frameworkBasis": "Nagaoka et al. (2015), Foundations for Young Adult Success (agency, integrated identity, mindsets); Search Institute Developmental Assets (Positive Identity); Learning for Justice Social Justice Standards (Identity).",
+    "frameworkBasis": "Nagaoka et al. (2015), Foundations for Young Adult Success (agency, integrated identity, mindsets); Search Institute Developmental Assets (Positive Identity); Learning for Justice Social Justice Standards (Identity); secondary: CASEL (2020) SEL Framework (Self-Awareness); Muhammad, Five Pursuits (Identity); Search Institute, Spiritual Development (sense of purpose); Farrington et al. (2019), arts education and social-emotional learning (identity as an artist); Rehabilitation Act, 29 U.S.C. 733(b)(5) (self-advocacy).",
     "categoryLine": "A. Identity (Y5.1–Y5.3) · B. Self-beliefs (Y5.4) · C. Purpose & agency (Y5.5–Y5.6)",
     "categories": [
       {
@@ -935,7 +937,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will report greater self-acceptance of their sexual orientation and gender identity.",
               "goldId": "S129"
             },
-            "source": "Nagaoka et al. (2015), Foundations for Young Adult Success, integrated identity across social identities (race/ethnicity, culture); Learning for Justice, Social Justice Standards (Identity); Muhammad, Five Pursuits (Pursuit 1: Identity).",
+            "source": "Nagaoka et al. (2015), Foundations for Young Adult Success, integrated identity across social identities (race/ethnicity, culture); Learning for Justice (2022), Social Justice Standards, Second Edition (Identity); Muhammad, Five Pursuits (Pursuit 1: Identity).",
             "basis": "Learning for Justice (2022), Social Justice Standards, Second Edition, Identity anchor standard ID.1 (verified, direct; claim y5-11). Muhammad, Pursuit 1 Identity (verified, direct; names race, and is the source for \"racial\" added by CP-10-04). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) integrated identity names race/ethnicity and culture (verified, partial). Sexual, gender and linguistic identity are named instances of LFJ ID.1's \"multiple groups in society\", which the registry quotes (decision G5); no FD."
           },
           {
@@ -954,7 +956,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Girls in the program will increasingly see themselves as 'a STEM person.'",
               "goldId": "S036"
             },
-            "source": "Nagaoka et al. (2015), Foundations for Young Adult Success, integrated identity across social identities (including profession).",
+            "source": "Farrington et al. (2019), Arts Education and Social-Emotional Learning Outcomes Among K-12 Students (identities as artists); Nagaoka et al. (2015), Foundations for Young Adult Success, integrated identity across social identities (including profession).",
             "basis": "Farrington et al. (2019), arts education and SEL, \"identities as artists\" (verified, direct; claim y5-07; the year and publishers are not printed in the document and rest on the file path and a June 2019 press release, round-2 claim CP-12-04-V-Y5-3). National Research Council (2009), Strand 6, identity as a science learner: not added (round-2 claim CP-12-04-V-Y5-2 found the strand only on a secondary conference host, not a National Academies Press copy). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) integrated identity names profession among social identities (verified, partial; supporting only: the full report uses a role-bound identity as the contrast to integrated identity, claim y5-08). Science, athlete, reader and writer go past these sources: sector widening, FD-P26."
           }
         ]
@@ -1004,7 +1006,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will develop a sense of purpose for their lives.",
               "goldId": "S250"
             },
-            "source": "Search Institute, Developmental Assets Framework, Positive Identity (Sense of purpose; Positive view of personal future).",
+            "source": "Search Institute, Developmental Assets Framework, Positive Identity (Sense of purpose; Positive view of personal future); Search Institute, Spiritual Development (awareness or awakening; interconnecting and belonging; living an integrated life).",
             "basis": "Search Institute Positive Identity, Sense of purpose; Positive view of personal future (verified, direct). Re-review 2026-09-26 (STANDARDS S4.9): Search Institute sense of purpose and positive view of future assets (content verified). Nagaoka does not support purpose (verifier: unsupported). CP-12-04: Search Institute, Spiritual Development, three core developmental processes (verified, direct; claim y5-14) covers spiritual purpose and growth in faith. FD-P12 closed."
           },
           {
@@ -1022,7 +1024,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Students with IEPs will lead their own IEP meetings by the end of the school year.",
               "goldId": "S032"
             },
-            "source": "Nagaoka et al. (2015), Foundations for Young Adult Success, key outcome: agency; Search Institute, Developmental Assets Framework, Positive Identity (Personal power).",
+            "source": "Nagaoka et al. (2015), Foundations for Young Adult Success, key outcome: agency; Search Institute, Developmental Assets Framework, Positive Identity (Personal power); Rehabilitation Act, 29 U.S.C. 733(b)(5), pre-employment transition services (instruction in self-advocacy).",
             "basis": "Search Institute Personal Power (verified, partial); Nagaoka et al. (2015) agency (partial). Re-review 2026-09-26 (STANDARDS S4.9): Nagaoka et al. (2015) agency (verified); Search Institute personal power asset (content verified). CP-12-04: Rehabilitation Act, 29 U.S.C. 733(b)(5), pre-employment transition services, \"instruction in self-advocacy\" (verified on the official copy, round-2 claim CP-12-04-V-Y5-1; partial: a required service, counted as partial-fit support with no FD, decision G4). The code names IEPs, which is inside the statute's population (students with disabilities), so no FD (decision G1)."
           }
         ]
@@ -1034,7 +1036,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Character, Values & Civic Life",
     "description": "How young people relate to their community and its systems: values, civic knowledge, critical consciousness, civic action, environmental stewardship and digital citizenship.",
-    "frameworkBasis": "Search Institute Developmental Assets (Positive Values); NCSS (2013) C3 Framework (Civics); Muhammad, Five Pursuits (Criticality); NAAEE (2019) Guidelines for Excellence; ISTE Standards for Students (Digital Citizen); CIRCLE (2002) civic engagement indicators (civic voice and community action).",
+    "frameworkBasis": "Search Institute Developmental Assets (Positive Values); NCSS (2013) C3 Framework (Civics); Muhammad, Five Pursuits (Criticality); NAAEE (2019) Guidelines for Excellence; ISTE Standards for Students (2024) (Digital Citizen); CIRCLE (2002) civic engagement indicators (civic voice and community action); secondary: VIA Classification of Character Strengths (Forgiveness); Watts, Diemer & Voight (2011), critical consciousness.",
     "categoryLine": "A. Character (Y6.1) · B. Civic understanding (Y6.2–Y6.3) · C. Civic action (Y6.4–Y6.6) · D. Digital citizenship (Y6.7)",
     "categories": [
       {
@@ -1057,7 +1059,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will demonstrate honesty and integrity.",
               "goldId": "S012"
             },
-            "source": "Search Institute, 40 Developmental Assets, Positive Values.",
+            "source": "Search Institute, 40 Developmental Assets, Positive Values; VIA Institute on Character, VIA Classification of Character Strengths (Forgiveness).",
             "basis": "Search Institute 40 Developmental Assets, Positive Values (verified, direct: integrity, honesty, responsibility). VIA Institute on Character, VIA Classification of Character Strengths, Forgiveness (verified, direct; claim y6-07; cited for this component only). Sportsmanship and faith-grounded values are named instances of Positive Values (honesty, integrity) practised in a setting, which the registry quotes (decision G5); no FD."
           }
         ]
@@ -1100,7 +1102,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will articulate how systemic racism affects their community and advocate for policy change.",
               "goldId": "S123"
             },
-            "source": "Muhammad, Five Pursuits (Pursuit 4: Criticality).",
+            "source": "Muhammad, Five Pursuits (Pursuit 4: Criticality); Watts, Diemer & Voight (2011), critical consciousness (critical reflection and critical action).",
             "basis": "Muhammad, Five Pursuits, Pursuit 4 Criticality (verified, direct). Watts, Diemer & Voight (2011), critical consciousness: critical reflection and critical action (verified, direct; claim y6-01)."
           }
         ]
@@ -1125,7 +1127,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth organizers will present testimony to the city council on a policy issue affecting their neighborhood.",
               "goldId": "S136"
             },
-            "source": "Keeter, Zukin, Andolina & Jenkins (2002), CIRCLE, The Civic and Political Health of the Nation: political voice and electoral indicators.",
+            "source": "Keeter, Zukin, Andolina & Jenkins (2002), CIRCLE, The Civic and Political Health of the Nation: political voice and electoral indicators; Watts, Diemer & Voight (2011), critical consciousness (political efficacy); Search Institute, 40 Developmental Assets (young people given useful roles in the community).",
             "basis": "Re-verified 2026-09-27 (CP-10-02): CIRCLE (2002) core civic engagement indicators, political voice (contacting officials, petitions, protest, boycotts) and electoral participation (verified, direct). Now Framework; FD-P13 closed. NCSS C3 Dimension 4 (partial) no longer cited. CP-12-05: CIRCLE covers the behavioral core only. Civic efficacy rests on Watts, Diemer & Voight (2011), political efficacy (verified, partial; claim y6-02), and youth councils and advisory roles on Search Institute, 40 Developmental Assets, \"Young people are given useful roles on the community\" (verified, partial; claim y6-03). Both sources are broader than the code, so no FD (decision G3). \"Leadership\" in the name needs no FD (decision Y6-1); its rule 7 line and an exclude pointer to Y4.7 follow PR #62. Round 2 also found CIRCLE's own \"engaged worldview\" passage on civic efficacy (claim CP-12-05-V-Y6-2, verified), recorded for a later CP."
           },
           {
@@ -1187,7 +1189,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will learn to protect their personal information online.",
               "goldId": "S107"
             },
-            "source": "ISTE Standards for Students (2016), Standard 2: Digital Citizen.",
+            "source": "ISTE Standards for Students (2024), 1.2 Digital Citizen (1.2.b Online Interactions; 1.2.d Digital Privacy).",
             "basis": "ISTE Standards for Students (2024), 1.2 Digital Citizen: 1.2.b Online Interactions, 1.2.d Digital Privacy (verified, direct; claim y6-06). The 2016 edition, Standard 2 (verified 2026-09-27), is superseded and kept in the registry as history."
           }
         ]
@@ -1199,7 +1201,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "Y",
     "name": "Career & Economic Readiness",
     "description": "Readiness for and results in work and independent adult life: career exploration, transition steps, work skills, credentials, employment, money skills and daily living skills.",
-    "frameworkBasis": "Perkins V; WIOA performance indicators, 20 CFR 677.155; OCTAE Employability Skills Framework; CFPB Building Blocks and National Standards for Personal Financial Education; Conley, Four Keys; Chafee daily living skills.",
+    "frameworkBasis": "Perkins V; WIOA performance indicators, 20 CFR 677.155, and youth program elements, 20 CFR 681.460; OCTAE Employability Skills Framework; CFPB Building Blocks and National Standards for Personal Financial Education; Conley, Four Keys; Chafee daily living skills; secondary: Casey Life Skills Toolkit (2022) (daily living skills); 42 U.S.C. 675(5)(I) (documents for youth leaving foster care); 29 U.S.C. 705(5) (competitive integrated employment).",
     "categoryLine": "A. Exploration & navigation (Y7.1–Y7.2) · B. Work readiness (Y7.3–Y7.4) · C. Employment & independence (Y7.5–Y7.7)",
     "categories": [
       {
@@ -1283,7 +1285,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Apprentices will complete a registered apprenticeship program.",
               "goldId": "S166"
             },
-            "source": "Perkins V; WIOA performance indicators, 20 CFR 677.155 (credential attainment).",
+            "source": "Perkins V; WIOA performance indicators, 20 CFR 677.155 (credential attainment); WIOA youth program elements, 20 CFR 681.460(a)(3)-(4) (work experience, including internships and pre-apprenticeship; occupational skill training).",
             "basis": "Perkins V, 20 U.S.C. 2302(5)(A)(ii) and (5)(B) (verified, direct, on govinfo; claim y7-08); WIOA 20 CFR 677.155, credential attainment (verified); WIOA youth program elements, 20 CFR 681.460(a)(3)-(4), work experience (including pre-apprenticeship, internships and job shadowing) and occupational skill training (verified, partial: program elements a local area must provide, counted as partial-fit support with no FD, decision G4; claim y7-09)."
           }
         ]
@@ -1308,7 +1310,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Youth will secure a job within 90 days of release.",
               "goldId": "S218"
             },
-            "source": "WIOA performance indicators, 20 CFR 677.155.",
+            "source": "WIOA performance indicators, 20 CFR 677.155; Rehabilitation Act, 29 U.S.C. 705(5) (competitive integrated employment).",
             "basis": "WIOA, 20 CFR 677.155 (verified); Rehabilitation Act, 29 U.S.C. 705(5), competitive integrated employment (verified, direct; claim y7-11)."
           },
           {
@@ -1344,7 +1346,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Transition-age youth will obtain their birth certificate, Social Security card, and state ID before exiting care.",
               "goldId": "S120"
             },
-            "source": "Chafee Foster Care Program for Successful Transition to Adulthood, 42 U.S.C. 677(a)(1) (daily living skills).",
+            "source": "Chafee Foster Care Program for Successful Transition to Adulthood, 42 U.S.C. 677(a)(1) (daily living skills); Casey Family Programs (2022), Casey Life Skills Toolkit (daily living and self-care); Social Security Act sec. 475(5)(I), 42 U.S.C. 675(5)(I) (birth certificate, Social Security card and state ID for youth leaving foster care).",
             "basis": "Chafee, 42 U.S.C. 677(a)(1), daily living skills (verified). Casey Family Programs (2022), Casey Life Skills Toolkit v1.4, daily living and self-care activities, for any youth 14-21 \"regardless of whether they are in foster care\" (verified, direct; claim y7-13). 42 U.S.C. 675(5)(I), birth certificate, Social Security card and state ID for youth leaving foster care (verified, partial: a statutory duty, counted as partial-fit support with no FD, decision G4; claim y7-18). IDEA, 34 CFR 300.43(a)(2)(v), daily living skills in transition services (verified, partial; supporting only; claim y7-15). FD-P15 closed (CP-12-06)."
           }
         ]
@@ -1626,7 +1628,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "F",
     "name": "Family & Caregiver Strengthening",
     "description": "Caregivers and other adult participants: parenting and home learning, caregiver well-being and connections, adult education and system navigation, and the family's partnership with the program.",
-    "frameworkBasis": "CSSP Strengthening Families Protective Factors; Ascend 2Gen Approach; Epstein's six types of involvement; Mapp & Kuttner (2013) Dual Capacity-Building Framework; MIECHV (F1.3 only).",
+    "frameworkBasis": "CSSP Strengthening Families Protective Factors; Ascend 2Gen Approach; Epstein's six types of involvement; Mapp & Kuttner (2013) Dual Capacity-Building Framework; MIECHV (F1.3 only); secondary: WIOA Title II, Adult Education and Family Literacy Act (adult education); Digital Equity Act (digital skills); IDEA Parent Training and Information Centers, 20 U.S.C. 1471 (parent training); SNAP-Ed Evaluation Framework (family eating habits); Healthy People 2030, MICH-14 and MICH-15 (infant health practices).",
     "categoryLine": "A. Parenting & home learning (F1.1–F1.3) · B. Caregiver well-being & support (F1.4–F1.5) · C. Adult development & navigation (F1.6–F1.7) · D. Family-program partnership (F1.8–F1.9)",
     "categories": [
       {
@@ -1749,7 +1751,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "from2x": "new",
             "definition": "The education, training, English proficiency, digital or financial skills, and employment of a caregiver or other adult participant.",
             "include": "GED or job training for parents; adult ESL; digital literacy for family members or older adults.",
-            "exclude": "Household income; young people's own skills.",
+            "exclude": "Household income, savings, or confidence about money; young people's own skills.",
             "useInstead": "F2.1; the Y codes.",
             "example": {
               "text": "Parents will complete their GED or enroll in job training.",
@@ -1773,8 +1775,8 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "Parents of children with disabilities reported increased knowledge of their child's rights under IDEA.",
               "goldId": "H059"
             },
-            "source": "IDEA, 20 U.S.C. 1471(b); CSSP Strengthening Families, Concrete Support in Times of Need; Mapp & Kuttner (2013), Dual Capacity-Building Framework.",
-            "basis": "IDEA 20 U.S.C. 1471(b) (verified); CSSP Concrete Support in Times of Need (verified); Mapp & Kuttner (2013) (verified)."
+            "source": "IDEA, 20 U.S.C. 1471(b); CSSP Strengthening Families, Concrete Support in Times of Need.",
+            "basis": "IDEA 20 U.S.C. 1471(b) (verified); CSSP Concrete Support in Times of Need (verified). Mapp & Kuttner (2013) removed (CP-12-22): its capacities are broader than rights knowledge and navigation (CP-10-01 verifier, fit partial)."
           }
         ]
       },
@@ -1827,9 +1829,9 @@ export const V3_DOMAINS: V3Domain[] = [
     "id": "F2",
     "part": "F",
     "name": "Basic Needs & Economic Stability",
-    "description": "The material stability of a household or of a young person living independently: income and benefits, food, housing.",
-    "frameworkBasis": "CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); USDA Household Food Security Survey Module; ACF NYTD.",
-    "categoryLine": "A. Economic stability (F2.1) · B. Food & housing (F2.2–F2.3)",
+    "description": "The material stability of a household or of a young person living independently, and the basic goods a young person has: income and benefits, food, housing, clothing and supplies.",
+    "frameworkBasis": "CSSP Strengthening Families (Concrete Support); Ascend 2Gen (Economic Assets); USDA Household Food Security Survey Module; ACF NYTD; Eurostat EU-SILC child-specific deprivation items (Commission Regulation (EU) No 112/2013; F2.4 only); Global MHH Monitoring Group (2022), girls' menstrual health indicators (F2.4 only); JRF and I-SPHERE, Destitution in the UK (basic toiletries; F2.4 only); secondary: CFPB Financial Well-Being (financial cushion); Runaway and Homeless Youth Program, 45 CFR 1351 (stable housing and safe exits); Healthy People 2030, AHS-01, NWS-01 and SDOH-04; McKinney-Vento Act, including the HEARTH Act and 42 U.S.C. 11433(d)(15) (school supplies); Social Security Act, 42 U.S.C. 675(4)(A) (clothing and school supplies).",
+    "categoryLine": "A. Economic stability (F2.1) · B. Food, housing & material necessities (F2.2–F2.4)",
     "categories": [
       {
         "letter": "A",
@@ -1844,7 +1846,7 @@ export const V3_DOMAINS: V3Domain[] = [
             "fidelity": "framework",
             "from2x": "12.5",
             "definition": "Household or independent-youth income, public benefits, and financial stability.",
-            "include": "Household income; SNAP/TANF/Medicaid enrollment; household savings.",
+            "include": "Household income; SNAP/TANF/Medicaid enrollment; household savings; families' confidence about money.",
             "exclude": "The youth's own money skills; caregiver job training.",
             "useInstead": "Y7.6; F1.6.",
             "example": {
@@ -1858,8 +1860,8 @@ export const V3_DOMAINS: V3Domain[] = [
       },
       {
         "letter": "B",
-        "name": "Food & housing",
-        "description": "Having enough healthy food and a safe, stable place to live.",
+        "name": "Food, housing & material necessities",
+        "description": "Having enough healthy food, a safe, stable place to live, and the clothing, shoes, gear and supplies a young person needs.",
         "codes": [
           {
             "id": "F2.2",
@@ -1897,6 +1899,23 @@ export const V3_DOMAINS: V3Domain[] = [
             },
             "source": "ACF NYTD (housing); McKinney-Vento Act.",
             "basis": "RHY Program rule, 45 CFR 1351.30(a)(1) and 1351.31(a)(1) Stable Housing, and 1351.1 safe and appropriate exits (verified, direct; claims f2-06, f2-07, CP-12-09); Healthy People 2030 SDOH-04 rent burden (verified, direct; claim f2-09); ACF NYTD, experience with homelessness (verified, partial); McKinney-Vento, 42 U.S.C. 11434a definition (verified, partial); McKinney-Vento as amended by HEARTH, 42 U.S.C. 11386a(b)(1)(A) (verified, partial: performance criteria; claim f2-08, official copy matched in round 2, claim CP-12-09-V11). Young people living independently are covered by the RHY rule (decision G1)."
+          },
+          {
+            "id": "F2.4",
+            "name": "Material Necessities (Clothing, Gear & Supplies)",
+            "short": "Material necessities",
+            "flag": "deductive",
+            "fidelity": "framework",
+            "from2x": "new",
+            "definition": "A young person having, or being given, the basic goods a child needs, rather than going without them for lack of money (the statement need not name the cause): clothing, properly fitting shoes, outdoor leisure equipment, school supplies, enough menstrual materials, and basic toiletries.",
+            "include": "Weather-appropriate clothing; shoes that fit; outdoor play gear such as a bike; school supplies, including students coming to class with the supplies they need; enough period products; soap, shampoo, toothpaste, a toothbrush, deodorant and other basic toiletries; the number of children who will have a coat or other goods; goods distributed, provided or given to named young people (\"coats distributed to students\", \"each student will receive a backpack of supplies\", \"cleats and a uniform for every player\").",
+            "exclude": "Goods counted with no young people named, or access to goods (\"500 pairs of gloves handed out\", \"free period products available at school\"); devices and internet; food; housing; basic needs or material hardship in general; what having the goods leads to (school attendance, joining a team, physical activity, confidence or dignity, belonging, household costs).",
+            "useInstead": "A2.3 goods counted with no young people named, access to goods, and devices or internet; Domain F2 with subcategory none for basic needs or material hardship in general; F2.1 household costs; F2.2 food; F2.3 housing; Y1.13 attendance; Y1.9 class participation; Y2.6 joining or staying in an activity; Y8.1 physical activity; Y5.4 confidence, self-worth or dignity; Y3.1 belonging.",
+            "example": {
+              "text": "Every student we serve will have a warm winter coat and properly fitting shoes by December."
+            },
+            "source": "Eurostat, EU-SILC child-specific material deprivation items (Commission Regulation (EU) No 112/2013, HD100, HD110, HD160); Global MHH Monitoring Group (2022), Priority List of Indicators for Girls' Menstrual Health and Hygiene, Indicator 1; Social Security Act, 42 U.S.C. 675(4)(A); McKinney-Vento Act, 42 U.S.C. 11433(d)(15); Joseph Rowntree Foundation and I-SPHERE, Destitution in the UK (essential 6, basic toiletries).",
+            "basis": "Eurostat (2023, 24 April), child-specific material deprivation rate (verified, direct: new clothes, two pairs of shoes, outdoor leisure equipment; only items lacked for affordability count; claim f2new-01); Commission Regulation (EU) No 112/2013, Annex, HD100, HD110, HD160 (verified, direct; claim f2new-02); CSO Ireland (2025), SILC Module on Child Deprivation 2024, Table 6.1 (verified, direct, supporting only; claim f2new-03); Global MHH Monitoring Group (2022), Indicator 1 (verified, direct: enough menstrual materials; claim f2new-05). Clothing in general, not only new clothes: 42 U.S.C. 675(4)(A) (verified, partial: a duty to pay for a child's clothing and school supplies, decision G4; claim f2new-07); UN Convention on the Rights of the Child, Art. 27(3) (verified, partial: a right broader than the code, decision G3; claim f2new-09). School supplies: 42 U.S.C. 675(4)(A) and 42 U.S.C. 11433(d)(15) (verified, partial: statutory duties, decision G4; claims f2new-07, f2new-08). Outdoor sports gear is an instance of 'outdoor leisure equipment' and period products of 'menstrual materials' (decision G5). Goods given to young people, not only had (Severin, P-F24-01 to -03 and -26): 42 U.S.C. 675(4)(A) (payments to cover the cost of a child's clothing and school supplies) and 42 U.S.C. 11433(d)(15) ('The provision of school supplies') are provision duties (verified, partial, decision G4); gear and period products given are instances (G5). Basic toiletries: Bramley and Ayed (2026), Destitution in the UK: income thresholds for October 2025, Joseph Rowntree Foundation (verified, direct for the item: 'Basic toiletries (such as soap, shampoo, toothpaste, and a toothbrush)', lacked because unaffordable; an all-ages measure, broader than the code, decision G3; claim f2hyg-01); I-SPHERE, Destitution in the UK project page (verified, supporting only: counts about one million children; claim f2hyg-02); ACF Child Welfare Policy Manual 8.3B.1, Question 9 (verified, partial: a foster child's 'personal incidentals' include 'items related to personal hygiene', decision G4; claim f2hyg-03). Deodorant is an instance of basic toiletries (decision G5). The code names no foster-care or homeless population (decision G1). Innocenti Report Card 10 (claim f2new-04) waits for an official copy (decision G8). CSSP Concrete Support does not name clothing (claim f2new-13) and is not cited. No FD (CP-12-33)."
           }
         ]
       }
@@ -1907,7 +1926,7 @@ export const V3_DOMAINS: V3Domain[] = [
     "part": "A",
     "name": "Staff & Volunteer Capacity",
     "description": "The adults who serve young people: what they learn, what they change in practice, and whether the workforce is stable and well.",
-    "frameworkBasis": "Learning Forward (2022) Standards for Professional Learning; U.S. Surgeon General (2022) Framework for Workplace Mental Health & Well-Being.",
+    "frameworkBasis": "Learning Forward (2022) Standards for Professional Learning; U.S. Surgeon General (2022) Framework for Workplace Mental Health & Well-Being; secondary: Guskey (2002), Levels 2 and 4 (participants' learning, and their use of new knowledge and skills); SAMHSA (2014), trauma-informed approach; NIOSH WellBQ (2021); BLS Job Openings and Labor Turnover Survey.",
     "categoryLine": "A. Staff learning & practice (A1.1–A1.2) · B. Workforce (A1.3)",
     "categories": [
       {
@@ -2047,8 +2066,8 @@ export const V3_DOMAINS: V3Domain[] = [
             "from2x": "10.1",
             "definition": "Providing materials, devices, connectivity or facilities, including counts of resources distributed.",
             "include": "Laptops and hotspots; home internet; facilities access.",
-            "exclude": "Participants' digital skills.",
-            "useInstead": "Y1.4; F1.6.",
+            "exclude": "Participants' digital skills; clothing, shoes, gear, school supplies, menstrual materials or toiletries that young people are stated to have or to be given.",
+            "useInstead": "Y1.4; F1.6; F2.4 when young people are stated to have, or to be given, clothing, shoes, gear, school supplies, menstrual materials or toiletries.",
             "example": {
               "text": "Families will receive a laptop and home internet access.",
               "goldId": "S196"
@@ -2174,7 +2193,7 @@ export const V3_DOMAINS: V3Domain[] = [
               "text": "The coalition will establish a shared data system across five youth-serving agencies.",
               "goldId": "S195"
             },
-            "source": "Kania & Kramer (2011), Collective Impact.",
+            "source": "Reisman, Gienapp & Stachowiak (2007), A Guide to Measuring Advocacy and Policy (strengthened alliances); Kania & Kramer (2011), Collective Impact (shared agenda and shared measurement).",
             "basis": "Reisman, Gienapp & Stachowiak (2007), outcome category strengthened alliances (verified, direct; claim a3-01, CP-12-12); Coffman (2009), partnerships or alliances (verified, partial: advocacy framing; claim a3-02, registry only); Kania & Kramer (2011), Collective Impact (verified, direct for shared agenda and shared measurement)."
           },
           {

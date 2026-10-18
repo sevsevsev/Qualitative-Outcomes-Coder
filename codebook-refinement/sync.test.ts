@@ -4,6 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { getCodebook } from '../codebooks/index.js';
 import { parseDefinitions, splitCode } from '../services/codebookExplorer.js';
+import { V3_DOMAINS } from '../codebooks/youthOutcomesV3.data.js';
 
 // The same facts about a code live in more than one file: the prompt text in
 // codebooks/original.ts, the source registry, and CONFUSIONS.md. Nothing but
@@ -181,6 +182,62 @@ describe('hints match CONFUSIONS.md (STANDARDS S3.2)', () => {
         if (/proposed/i.test(part)) continue;
         for (const ref of part.match(CODE_REF) ?? []) if (!liveCodes.has(ref)) bad.push(`${e.id} -> ${ref}`);
         for (const m of part.matchAll(DOMAIN_REF)) if (!liveDomains.has(m[1])) bad.push(`${e.id} -> Domain ${m[1]}`);
+      }
+    }
+    expect(bad).toEqual([]);
+  });
+});
+
+describe('codebook 3.x: each cited framework is named in its domain line (G2, CP-12-29)', () => {
+  const v3reg = JSON.parse(fs.readFileSync(path.join(here, 'sources/youth_outcomes_v3.sources.json'), 'utf-8'));
+  const v3names: { name: string; source: any }[] = v3reg.sources
+    .flatMap((s: any) => (s.codebook_names ?? []).map((name: string) => ({ name, source: s })))
+    .sort((a: any, b: any) => b.name.length - a.name.length);
+  const spansIn = (text: string) => {
+    const spans: { start: number; end: number; source: any }[] = [];
+    for (const { name, source } of v3names) {
+      for (let at = text.indexOf(name); at !== -1; at = text.indexOf(name, at + name.length)) {
+        const end = at + name.length;
+        if (!spans.some(s => at < s.end && end > s.start)) spans.push({ start: at, end, source });
+      }
+    }
+    return spans;
+  };
+  const backsDomain = (s: any, domain: string) => s.supports.some((x: any) => !x.proposed && x.code.split('.')[0] === domain);
+
+  // Pairs that wait for an anchor re-review. Don't add to it; remove a pair once fixed.
+  // A2.6: the A2 anchor re-review (CP-12-18, held). Y8: the Y8 anchor re-review (S4.9, Y8 is over a
+  // third), which holds CP-12-29's Y8 clause.
+  const KNOWN_GAPS = new Set(['A2.6 epstein-six-types', 'Y8.4 nses-2020', 'Y8.5 acf-nytd', 'Y8.10 search-40-assets']);
+
+  it('names, in the domain line, every source a code line names', () => {
+    const missing = new Set<string>();
+    for (const d of V3_DOMAINS) for (const cat of d.categories) for (const c of cat.codes) {
+      for (const { source } of spansIn(c.source)) {
+        if (!(source.codebook_names ?? []).some((n: string) => d.frameworkBasis.includes(n))) missing.add(`${c.id} ${source.id}`);
+      }
+    }
+    expect([...missing].filter(m => !KNOWN_GAPS.has(m))).toEqual([]);
+    expect([...KNOWN_GAPS].filter(g => !missing.has(g)), 'fixed: remove from KNOWN_GAPS').toEqual([]);
+  });
+
+  it('resolves every "secondary:" item to a source that backs a code in the domain', () => {
+    const bad: string[] = [];
+    for (const d of V3_DOMAINS) {
+      const m = d.frameworkBasis.match(/secondary:\s*(.*)$/i);
+      if (!m) continue;
+      let depth = 0, start = 0;
+      const text = m[1].replace(/\.\s*$/, '');
+      const items: string[] = [];
+      [...text].forEach((ch, i) => {
+        if (ch === '(') depth++;
+        if (ch === ')') depth--;
+        if (ch === ';' && depth === 0) { items.push(text.slice(start, i).trim()); start = i + 1; }
+      });
+      items.push(text.slice(start).trim());
+      for (const item of items) {
+        const ok = v3names.some(({ name, source }) => item.includes(name) && backsDomain(source, d.id));
+        if (!ok) bad.push(`${d.id}: "${item}"`);
       }
     }
     expect(bad).toEqual([]);

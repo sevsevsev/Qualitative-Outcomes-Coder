@@ -41,6 +41,16 @@ HOSTS = {
     'www.nationalacademies.org': 'official',  # The National Academies Press
     'www.viacharacter.org': 'official',       # VIA Institute on Character
     'www.who.int': 'official',                # World Health Organization
+    'search.oecd.org': 'official',            # OECD's own site (oecd-sses-2021-houston, CP-12-01)
+    # CP-12-33 (F2.4, 3.3.0): each is the issuing body's or publisher's own site.
+    'ec.europa.eu': 'official',               # Eurostat
+    'eur-lex.europa.eu': 'official',          # EUR-Lex, the EU's official law site
+    'www.cso.ie': 'official',                 # Central Statistics Office Ireland
+    'www.ohchr.org': 'official',              # UN Office of the High Commissioner for Human Rights
+    'www.publichealth.columbia.edu': 'official',  # Columbia, named in the MHH document's recommended citation
+    'www.jrf.org.uk': 'official',             # Joseph Rowntree Foundation
+    'i-sphere.site.hw.ac.uk': 'official',     # I-SPHERE, Heriot-Watt University (the research team)
+    'cwpm.acf.gov': 'official',               # ACF Child Welfare Policy Manual
     # secondary: mirrors, repositories, course and third-party copies
     'www.law.cornell.edu': 'secondary', 'files.eric.ed.gov': 'secondary', 'eric.ed.gov': 'secondary',
     'measureresults.issuelab.org': 'secondary', 'www.countyhealthrankings.org': 'secondary',
@@ -73,6 +83,5 @@ SECONDARY_HOST_MATCH = {  # source id -> claim whose verifier recorded the bibli
 
 HOST_PENDING = {  # source id -> what clears it; shrinks to empty
     'essa-4109-tech-capacity': 'CP-12-11 (lands after PR #62)',
-    'hidi-renninger-2006': 'CP-12-01 (V3; lands after PR #62)',
     'muhammad-five-pursuits': 'V-HOST-8 came back PARTIAL: the page does not say it is the author\'s own',
 }

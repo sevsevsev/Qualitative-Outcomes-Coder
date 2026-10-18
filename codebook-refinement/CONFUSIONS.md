@@ -549,7 +549,7 @@ _Renumbered from CF-019 by `v3/renumber_2x_refs.py`; do not edit by hand._
 
 **Gold:** S204 (A1.2), S078 (Y8.8)
 
-### CF-034: Money result or adult learning? · in force for reviewers; no hint yet (CP-12-31, decision F1-1)
+### CF-034: Money result or adult learning? · in force; confidence about money hinted in 3.3.0, the rest held (CP-12-31, decision F1-1)
 
 **Codes:** **F2.1** · F1.6
 
@@ -593,3 +593,24 @@ _Renumbered from CF-019 by `v3/renumber_2x_refs.py`; do not edit by hand._
 **Rationale:** The outcome is about the family staying out of the system, so it belongs to the family domain (F1) by rule 1, but it names no parenting practice, protective factor or partnership that an F1 code covers. Y3.4's sources (Search Institute Support assets, Developmental Relationships with parents) describe the youth's relationship, which the template does not name.
 
 **Gold:** S024, S070 (Y3.4); S053, H068 (F1.1); S029 (F2.3).
+
+### CF-037: Goods had, goods given, or what they lead to · active with F2.4 (CP-12-33); F2.4 gold rows pending
+
+**Codes:** **F2.4** · A2.3
+
+**Rule:**
+
+- Young people stated to have, or no longer go without, clothing, shoes, outdoor leisure equipment, school supplies or menstrual materials ("every student will have a coat that fits", "fewer students without supplies", "girls report having enough period products") → **F2.4**.
+- Goods distributed, provided or given to named young people ("1,200 winter coats distributed to students", "each student will receive a backpack of supplies", "cleats and a uniform for every player") → **F2.4** (Severin, P-F24-01 to -03).
+- Devices and internet → **A2.3** whether given or had (rule 15; S240). Only non-digital goods split by had or given.
+- What the goods lead to takes its own code; the goods are the means (rule 2): school attendance → Y1.13; joining or staying in a sport or activity → Y2.6; physical activity → Y8.1; taking part in class → Y1.9; confidence or self-worth → Y5.4; fitting in or not being singled out → Y3.1; less household spending → F2.1 (CF-034). When the statement names both having the goods and a further result, split (rule 2).
+- Basic toiletries (soap, shampoo, toothpaste, a toothbrush, deodorant) a young person has → **F2.4** (Severin, P-F24-10); hygiene kits given out → **A2.3**.
+- Basic needs in general or material hardship in general (named in F2.4's exclude) → **Domain F2, subcategory none** (decision G9).
+- Warmth or physical comfort alone ("clothes that keep them warm") → **F2.4**; dignity, pride or self-worth → **Y5.4** (the goods are the means).
+- A count of goods with no young people named ("500 pairs of gloves handed out") or access to goods the program supplies ("access to free period products") → **A2.3** (Severin, P-F24-27). A number of children who will have the goods ("put a warm coat on 1,200 kids") → **F2.4** (Severin, P-F24-26). Students coming to class with the supplies they need → **F2.4**, not Y1.9 (Severin, P-F24-28).
+
+**Rationale:** F2.4's anchors measure a child's state: the EU-SILC child items (Eurostat 2023; Regulation (EU) No 112/2013, HD100, HD110, HD160) count children lacking clothes, shoes or outdoor leisure equipment, and Global MHH Indicator 1 counts girls having enough menstrual materials. The Joseph Rowntree Foundation's destitution measure counts people lacking basic toiletries they cannot afford. A2.3's definition is provision ("Providing materials ... including counts of resources distributed"), and the output/outcome line is the codebook's own (rule 2; CF-009 in 2.x). Devices stay with A2.3's digital-equity sources (47 CFR 54 Subpart Q; ESSA 7119(a)(2); Digital Equity Act), which frame device access as access, and S240 is adjudicated there.
+
+**Gold pending:** the F2.4 side rests on the CP-12-33 example rows Severin ruled F2.4 on 2026-10-17 (rows 04, 05, 06, 11, 12, 22 and 23 of `research-review/2026-10-16/full-review/proposed-design-rows-f24.csv`). They are not yet design gold; only Severin adds them. Until he does, the 3.x CF test lists F2.4 for this entry as awaiting gold, and it fails once a gold row covers F2.4, so the allowance is removed then.
+
+**Gold:** S196, S228, S240 (A2.3).

@@ -60,3 +60,46 @@ NOTES['digital-equity-act'] = (
     "re-verification. Shared with digital-equity-act-1723."
 )
 NOTES['digital-equity-act-1723'] = 'Status note: see digital-equity-act (CP-12-24, 2026-10-16).'
+
+# ---------------------------------------------------------------- CP-12-29 (3.3.0 gate): registry names
+# Table R. A name used in a Source line or a Framework Basis line goes into codebook_names (CLAUDE.md),
+# so the sync.test.ts check "each cited framework is named in its domain line" can see it. Part 1:
+# names already printed in the prompt. Part 2: names printed only by the new "secondary:" clauses.
+# The Y8-only part-2 names (HECAT, Monitoring the Future, About Youth Violence, OJJDP 2017) wait with
+# the Y8 clause for the Y8 anchor re-review (S4.9); "USDA nutrition security" has no entry (CP-12-09 V8).
+_NAMES_CP_12_29 = {
+    # Part 1
+    'search-40-assets': ['Search Institute Developmental Assets'],
+    'shape-nhes-2024': ['SHAPE America national standards'],
+    'shape-pe-2024': ['SHAPE America national standards'],
+    'cfpb-building-blocks-2016': ['CFPB Building Blocks'],
+    'allensworth-easton-2005': ['UChicago On-Track Indicator'],
+    'allensworth-easton-2007': ['UChicago On-Track Indicator'],
+    'namle-core-principles': ['NAMLE'],
+    'irvin-2004-odr': ['Irvin et al. (2004)'],
+    'wioa-20cfr681460': ['20 CFR 681.460'],
+    'hulleman-2010-utility-value': ['Hulleman et al. (2010)'],
+    'muhammad-five-pursuits': ['Muhammad, Five Pursuits'],
+    'digital-equity-act': ['Digital Equity Act'],
+    'digital-equity-act-1723': ['Digital Equity Act'],
+    'idea-671-pti': ['20 U.S.C. 1471', 'IDEA Parent Training and Information Centers'],
+    'hp2030-mich14': ['Healthy People 2030'], 'hp2030-mich15': ['Healthy People 2030'],
+    'hp2030-ah01-ahs01': ['Healthy People 2030'], 'hp2030-sh04': ['Healthy People 2030'],
+    'hp2030-su05': ['Healthy People 2030'],
+    'acf-nytd': ['ACF NYTD'],
+    'nses-2020': ['National Sex Education Standards'],
+    'niosh-wellbq-2021': ['NIOSH WellBQ'],
+    'bls-jolts-definitions': ['Job Openings and Labor Turnover Survey'],
+    # Part 2
+    'snap-ed-framework-mt1': ['SNAP-Ed'],
+    'wioa-title-ii-aefla': ['WIOA Title II'],
+    'cfpb-financial-well-being-2015': ['CFPB Financial Well-Being'],
+    'rhy-45cfr1351': ['45 CFR 1351'],
+    'hp2030-nws01': ['Healthy People 2030'], 'hp2030-sdoh04': ['Healthy People 2030'],
+    'hearth-42usc11386a': ['HEARTH Act'],
+    'usc-42-675-1g-educational-stability': ['42 U.S.C. 675(1)(G)'],
+    'essa-6311-advanced-coursework': ['ESSA State report cards'],
+}
+for _sid, _names in _NAMES_CP_12_29.items():
+    CODEBOOK_NAMES.setdefault(_sid, [])
+    CODEBOOK_NAMES[_sid] = CODEBOOK_NAMES[_sid] + [n for n in _names if n not in CODEBOOK_NAMES[_sid]]

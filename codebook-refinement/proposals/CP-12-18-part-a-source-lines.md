@@ -19,6 +19,7 @@ framework-line change you approved.
 | Requirement served | R1 frameworks |
 | Status | draft, decisions settled 2026-10-16 (Severin: recommended options). **The A3.2 part reaches the coding prompt: shared two-run design-set gate after PRs #62 and #66. The A2.6 part is held for the A2 anchor re-review.** |
 | Applied | Applied 2026-10-16 in 3.1.5: part (a): `codebook_names` "Guskey (2002)" and "Reisman, Gienapp & Stachowiak (2007)". Waits for the gate: the A3.2 Source line. Held for the A2 anchor re-review: the A2.6 Source line, `basis` and Epstein component. |
+| Gate candidate | Part (b) applied 2026-10-17 in the 3.3.0 gate candidate: the A3.2 Source line names Reisman, Gienapp & Stachowiak (2007) before Kania & Kramer. Part (c), A2.6, stays held for the A2 anchor re-review. |
 | Enum cost | +0 (160 → 160) |
 | Framework deviation | none. Reisman covers what A3.2 already codes; Kania & Kramer did not (closes an unlogged gap). Removing Epstein Type 6 drops a poor-fit link (A2.6 keeps Mapp & Kuttner, direct, and Type 3). No code's scope changes. |
 

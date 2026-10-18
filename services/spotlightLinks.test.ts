@@ -4,6 +4,9 @@ import { getCodebook } from '../codebooks/index.js';
 import { V3_DOMAINS } from '../codebooks/youthOutcomesV3.data.js';
 import { parseCsvRecords } from '../scripts/codebookEvalScoring.js';
 import {
+  associatedForIndicator,
+  associatedIndicatorsForCode,
+  associatedSpotlightLinksCell,
   codeIdOf,
   linksForCode,
   linksForIndicator,
@@ -26,13 +29,19 @@ describe('SPOTlight link data (codebook-refinement/spotlight)', () => {
   it('matches the recommendations in the evidence table it is built from', () => {
     const rows = parseCsvRecords(readFileSync(`${DIR}/spotlight_relevance_links.csv`, 'utf8'));
     const recommended = rows.filter(r => r.final_recommendation === 'recommend-with-conditions').map(r => r.link_id);
+    const associated = rows.filter(r => r.final_recommendation === 'associated').map(r => r.link_id);
     expect(data.links.map(l => l.id)).toEqual(recommended);
-    expect(data.links.length + data.notRecommended.length).toBe(rows.length);
+    expect(data.associated.map(l => l.id)).toEqual(associated);
+    expect(data.links.length + data.associated.length + data.notRecommended.length).toBe(rows.length);
   });
 
   it('names only real 3.x codes and known indicators', () => {
     const indicatorIds = new Set(data.indicators.map(i => i.id));
     for (const l of data.links) {
+      for (const c of l.codes) expect(CODE_IDS.has(c), `${l.id} ${c}`).toBe(true);
+      for (const i of l.indicators) expect(indicatorIds.has(i), `${l.id} ${i}`).toBe(true);
+    }
+    for (const l of data.associated) {
       for (const c of l.codes) expect(CODE_IDS.has(c), `${l.id} ${c}`).toBe(true);
       for (const i of l.indicators) expect(indicatorIds.has(i), `${l.id} ${i}`).toBe(true);
     }
@@ -42,15 +51,21 @@ describe('SPOTlight link data (codebook-refinement/spotlight)', () => {
     }
   });
 
+  const verdicts = new Map<string, string>();
+  for (const f of readdirSync(`${DIR}/verification`).filter(f => f.endsWith('_results.csv'))) {
+    for (const r of parseCsvRecords(readFileSync(`${DIR}/verification/${f}`, 'utf8'))) verdicts.set(r.claim_id, r.verdict);
+  }
+
   it('gives every recommended link a model to match, studies and checked claims', () => {
-    const verdicts = new Map<string, string>();
-    for (const f of readdirSync(`${DIR}/verification`).filter(f => f.endsWith('_results.csv'))) {
-      for (const r of parseCsvRecords(readFileSync(`${DIR}/verification/${f}`, 'utf8'))) verdicts.set(r.claim_id, r.verdict);
-    }
+    // A definitional link (the code names the indicator itself) rests on the SPOTlight's wording, not on a study.
+    const studied = data.links.filter(l => l.evidence !== 'definitional');
     for (const l of data.links) {
       expect(l.modelMatch, l.id).toBeTruthy();
       expect(l.pathway, l.id).toBeTruthy();
       expect(l.evidence, l.id).not.toBe('thin');
+      if (l.evidence === 'definitional') expect(l.pathway, l.id).toMatch(/is exactly what this indicator counts/);
+    }
+    for (const l of studied) {
       expect(l.studies.length, l.id).toBeGreaterThan(0);
       expect(l.links.length, l.id).toBeGreaterThan(0);
       for (const link of l.links) expect(link.url, l.id).toMatch(/^https?:\/\//);
@@ -61,8 +76,24 @@ describe('SPOTlight link data (codebook-refinement/spotlight)', () => {
     }
   });
 
+  it('words research-associated links as associations, each on checked studies', () => {
+    expect(data.associatedRule).toMatch(/meta-analysis/);
+    expect(data.associatedCaution).toMatch(/already more engaged/);
+    for (const l of data.associated) {
+      expect(l.pathway, l.id).toMatch(/\bassociated with\b/);
+      expect(l.pathway, l.id).not.toMatch(/contribut/i);
+      expect(l.basis, l.id).toBeTruthy();
+      expect(l.studies.length, l.id).toBeGreaterThan(0);
+      expect(l.links.length, l.id).toBeGreaterThan(0);
+      for (const link of l.links) expect(link.url, l.id).toMatch(/^https?:\/\//);
+      expect(l.claims.length, l.id).toBeGreaterThan(0);
+      for (const c of l.claims) expect(verdicts.has(c), `${l.id} ${c}`).toBe(true);
+      expect(l.claims.some(c => verdicts.get(c) === 'SUPPORTED'), l.id).toBe(true);
+    }
+  });
+
   it('names other rows in plain words, never by link id', () => {
-    for (const l of [...data.links, ...data.notRecommended]) {
+    for (const l of [...data.links, ...data.associated, ...data.notRecommended]) {
       const { id: _id, claims: _claims, ...shown } = l as typeof l & { claims?: string[] };
       expect(JSON.stringify(shown), l.id).not.toMatch(/\bL-\d+/);
     }
@@ -88,6 +119,20 @@ describe('SPOTlight link helpers', () => {
     expect(possibleIndicatorsForCode(data, 'Y5.4')).toEqual([]);
     expect(linksForIndicator(data, 'S9')).toEqual([]);
     expect(linksForIndicator(data, 'S1').map(l => l.id)).toEqual(['L-17', 'L-27', 'L-28', 'L-36']);
+    // On-time graduation is the graduation indicator by definition.
+    expect(possibleIndicatorsForCode(data, 'Y1.17').map(i => i.id)).toEqual(['S4']);
+  });
+
+  it('keeps research-associated links apart from tested links', () => {
+    expect(associatedIndicatorsForCode(data, 'Y3.2').map(i => i.id)).toEqual(['S3']);
+    expect(associatedIndicatorsForCode(data, 'Y1.12').map(i => i.id)).toEqual(['S5', 'S6', 'S7', 'S8']);
+    // General self-esteem stays out: no association once earlier achievement is counted.
+    expect(associatedIndicatorsForCode(data, 'Y5.4')).toEqual([]);
+    expect(associatedForIndicator(data, 'S3').map(l => l.id)).toEqual(['L-100', 'L-101', 'L-105', 'L-106']);
+    // Tested links are unchanged by the new tier.
+    expect(possibleIndicatorsForCode(data, 'Y3.2')).toEqual([]);
+    expect(associatedSpotlightLinksCell(data, 'Y3.2 Supportive Adult Relationships')).toBe('Dropouts');
+    expect(associatedSpotlightLinksCell(data, 'none')).toBe('');
   });
 
   it('writes the export cell from indicator names', () => {

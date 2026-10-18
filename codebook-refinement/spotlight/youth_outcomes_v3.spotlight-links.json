@@ -4,7 +4,9 @@
   "spotlightYear": "2024-25",
   "reviewedOn": "2026-10-18",
   "report": "https://claude.ai/code/artifact/4454bf45-2669-4a9f-bfdd-910ed96ac76f",
-  "rule": "A link is recommended only on good or strong checked evidence, and only when the program runs the studied model. A code alone never earns credit: a code says what a program works toward, and the evidence is about specific program models.",
+  "rule": "A tested link is recommended only on good or strong checked evidence, and only when the program runs the studied model. A code alone never earns credit: a code says what a program works toward, and the evidence is about specific program models.",
+  "associatedRule": "A research-associated link rests on consistent correlational evidence: a meta-analysis, or several long-term studies that point the same way and adjust for prior achievement or attendance. A single survey at one point in time does not count. These outcomes are associated with the indicator; the studies do not show that a program building them moves it.",
+  "associatedCaution": "Programs often attract students who are already more engaged, so an association can overstate what the program itself does.",
   "indicators": [
     {
       "id": "S1",
@@ -760,6 +762,346 @@
         "V-045",
         "V-056",
         "V-026"
+      ]
+    },
+    {
+      "id": "L-103",
+      "codes": [
+        "Y1.17"
+      ],
+      "indicators": [
+        "S4"
+      ],
+      "contribution": "direct",
+      "pathway": "Students graduating within four years of first entering ninth grade is exactly what this indicator counts. This is a definition, not evidence that any program type raises graduation.",
+      "evidence": "definitional",
+      "modelMatch": "Any program, provided the partner shows from school records that its own students graduated within four years at a higher rate than a comparison group. A program model with a tested graduation effect (paid summer jobs) gives a reason to expect it; other models need their own data.",
+      "conditions": "Counts only on-time graduation (within four years of first entering ninth grade) from school records, for the partner's own students, against a comparison group. A GED, an equivalency diploma, re-enrollment and graduation after more than four years are part of this code but not of this indicator.",
+      "typicalEffect": "Not applicable: the size depends on the program. The program model with a tested graduation effect is paid summer jobs for high school students; attendance gains may also help a little.",
+      "magnitude": "Each participant in the cohort who graduates on time instead of later or not at all adds one student to the count: in a cohort of 400, 4 more on-time graduates add 1 percentage point.",
+      "caveats": "Added 2026-10-18 after the review, on a lead from the extractor export thread: the attendance identity had a row and the graduation identity did not. The basis is the SPOTlight wording in Severin's 2026-10-18 paste, not a study. Reaching dropouts was not added: whether a student who re-enrolls leaves the District dropout count depends on District enrollment rules that were not checked. Monitoring and mentoring (Check and Connect) and case management did not raise completion in the checked trials.",
+      "philadelphia": {
+        "found": false
+      },
+      "studies": [],
+      "links": [],
+      "claims": []
+    }
+  ],
+  "associated": [
+    {
+      "id": "L-91",
+      "codes": [
+        "Y1.12"
+      ],
+      "indicators": [
+        "S5",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "pathway": "Academic self-concept (how capable students believe they are in school subjects) is associated with slightly higher later test scores, compared with students who started at the same achievement level.",
+      "basis": "Two meta-analyses of long-term studies, each adjusting for earlier achievement, plus a five-year study of 3,425 students.",
+      "typicalEffect": "A small path of about 0.08 from self-concept to later achievement, net of earlier achievement, in both meta-analyses. The path from achievement to later self-concept is about twice as large (0.16).",
+      "caveats": "Holds for academic self-concept, not for growth mindset or general self-esteem (Self-Worth, Y5.4), where national long-term studies found no association once earlier achievement is counted. For self-efficacy, a meta-analysis found that in children only earlier performance predicts later self-efficacy, not the reverse. A 2024 reanalysis argues that adjusting for an earlier score can produce spurious effects of this kind.",
+      "philadelphia": {
+        "found": false
+      },
+      "studies": [
+        "Valentine, J. C., DuBois, D. L., & Cooper, H. (2004). The relation between self-beliefs and academic achievement: A meta-analytic review. Educational Psychologist, 39(2), 111-133.",
+        "Wu, H., Guo, Y., Yang, Y., Zhao, L., & Guo, C. (2021). A meta-analysis of the longitudinal relationship between academic self-concept and academic achievement. Educational Psychology Review, 33(4), 1749-1778.",
+        "Marsh, H. W., Pekrun, R., & Lüdtke, O. (2022). Directional ordering of self-concept, school grades, and standardized tests over five years. Educational Psychology Review, 34(4), 2697-2744.",
+        "Talsma, K., Schüz, B., Schwarzer, R., & Norris, K. (2018). I believe, therefore I achieve (and vice versa). Learning and Individual Differences, 61, 136-150.",
+        "Sorjonen, K., Ingre, M., Melin, B., & Nilsonne, G. (2024). Questioning the reciprocal effects model of academic self-concept and achievement. SAGE Open, 14(4)."
+      ],
+      "links": [
+        {
+          "url": "https://eric.ed.gov/?id=EJ682816"
+        },
+        {
+          "url": "https://eric.ed.gov/?id=EJ1319468"
+        },
+        {
+          "url": "https://eric.ed.gov/?id=EJ1360158"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.lindif.2017.11.015",
+          "note": "abstract record"
+        },
+        {
+          "url": "https://ideas.repec.org/a/sae/sagope/v14y2024i4p21582440241292826.html"
+        }
+      ],
+      "claims": [
+        "V-022",
+        "R-06",
+        "B-002",
+        "B-003",
+        "B-004",
+        "B-005"
+      ]
+    },
+    {
+      "id": "L-100",
+      "codes": [
+        "Y1.15"
+      ],
+      "indicators": [
+        "S3"
+      ],
+      "pathway": "Failing courses and low grades in the middle grades or ninth grade are associated with later dropping out, beyond what eighth-grade test scores and background predict.",
+      "basis": "Long-term cohort studies in Philadelphia, Chicago and Baltimore, two of which compare against eighth-grade test scores or pre-high-school characteristics.",
+      "typicalEffect": "In Philadelphia, sixth graders who failed math were 54 percent less likely to graduate, and those who failed English 42 percent less likely. In Chicago, freshman grades and course failures explained about 39 percent of the variation in graduation, against about 12 percent for test scores and background.",
+      "caveats": "These are early-warning predictions, not effects of raising grades. Most studies count students who did not graduate rather than the District's dropout count. The Philadelphia cohorts are from the 1990s and 2000s.",
+      "philadelphia": {
+        "found": true,
+        "note": "Balfanz, Herzog and Mac Iver 2007; Neild, Stoner-Eby and Furstenberg 2008; Neild and Balfanz 2006"
+      },
+      "studies": [
+        "Balfanz, R., Herzog, L., & Mac Iver, D. J. (2007). Preventing student disengagement and keeping students on the graduation path in urban middle-grades schools. Educational Psychologist, 42(4), 223-235.",
+        "Allensworth, E. M., & Easton, J. Q. (2007). What matters for staying on-track and graduating in Chicago public high schools. Consortium on Chicago School Research.",
+        "Neild, R. C., Stoner-Eby, S., & Furstenberg, F. (2008). Connecting entrance and departure: The transition to ninth grade and high school dropout. Education and Urban Society, 40(5), 543-569.",
+        "Neild, R. C., & Balfanz, R. (2006). Unfulfilled Promise: The Dimensions and Characteristics of Philadelphia's Dropout Crisis, 2000-2005."
+      ],
+      "links": [
+        {
+          "url": "https://new.every1graduates.org/wp-content/uploads/2012/03/preventing_student_disengagement.pdf"
+        },
+        {
+          "url": "https://consortium.uchicago.edu/sites/default/files/2018-10/07%20What%20Matters%20Final.pdf"
+        },
+        {
+          "url": "https://eric.ed.gov/?id=EJ798244"
+        },
+        {
+          "url": "https://williampennfoundation.org/sites/default/files/2024-05/Unfulfilled%20Promise.pdf"
+        }
+      ],
+      "claims": [
+        "C-005",
+        "C-006",
+        "C-008",
+        "V-091"
+      ]
+    },
+    {
+      "id": "L-101",
+      "codes": [
+        "Y1.13"
+      ],
+      "indicators": [
+        "S3"
+      ],
+      "pathway": "Low attendance in the middle grades or ninth grade is associated with later dropping out, alongside course failure and test scores.",
+      "basis": "Long-term cohort studies in Philadelphia, Chicago and Baltimore, and a large study that adjusts for earlier test scores and grades.",
+      "typicalEffect": "Philadelphia sixth graders attending 80 percent of days or less were 68 percent less likely to graduate. In a large secondary-school study, 10 ninth-grade absences went with about a 1 percentage point lower on-time graduation rate, after adjusting for earlier test scores and grades.",
+      "caveats": "Early-warning predictions, not effects of a program. The Philadelphia model controls for the other warning flags but not earlier test scores. Most studies count students who did not graduate rather than the District's dropout count. Attendance itself is already the attendance indicator, so this adds the later dropout association only.",
+      "philadelphia": {
+        "found": true,
+        "note": "Balfanz, Herzog and Mac Iver 2007; Neild and Balfanz 2006"
+      },
+      "studies": [
+        "Balfanz, R., Herzog, L., & Mac Iver, D. J. (2007). Preventing student disengagement and keeping students on the graduation path in urban middle-grades schools. Educational Psychologist, 42(4), 223-235.",
+        "Allensworth, E. M., & Easton, J. Q. (2007). What matters for staying on-track and graduating in Chicago public high schools. Consortium on Chicago School Research.",
+        "Mac Iver, M. A., & Messel, M. (2013). The ABCs of keeping on track to graduation: Research findings from Baltimore. Journal of Education for Students Placed at Risk, 18(1), 50-67.",
+        "Liu, J., Lee, M., & Gershenson, S. (2021). The short- and long-run impacts of secondary school absences. Journal of Public Economics, 199, 104441.",
+        "Neild, R. C., & Balfanz, R. (2006). Unfulfilled Promise: The Dimensions and Characteristics of Philadelphia's Dropout Crisis, 2000-2005."
+      ],
+      "links": [
+        {
+          "url": "https://new.every1graduates.org/wp-content/uploads/2012/03/preventing_student_disengagement.pdf"
+        },
+        {
+          "url": "https://consortium.uchicago.edu/sites/default/files/2018-10/07%20What%20Matters%20Final.pdf"
+        },
+        {
+          "url": "https://eric.ed.gov/?id=EJ995401"
+        },
+        {
+          "url": "https://edworkingpapers.com/ai19-125"
+        },
+        {
+          "url": "https://williampennfoundation.org/sites/default/files/2024-05/Unfulfilled%20Promise.pdf"
+        }
+      ],
+      "claims": [
+        "V-057",
+        "C-005",
+        "C-006",
+        "C-007",
+        "C-011",
+        "V-091"
+      ]
+    },
+    {
+      "id": "L-102",
+      "codes": [
+        "Y1.13"
+      ],
+      "indicators": [
+        "S5",
+        "S7"
+      ],
+      "pathway": "More absences are associated with lower grade 3 reading and math scores, even comparing each student with their own record over time.",
+      "basis": "Long-term studies in North Carolina and Philadelphia that compare each student with themselves (fixed effects), two of them with an instrument for absences.",
+      "typicalEffect": "In North Carolina, each absence lowered grade 3 math by about 0.0025 and reading by about 0.0015 of a standard deviation, about three times more by grade 5. Ten fewer absences across grades went with about 5.5 percent of a standard deviation higher math and 2.9 percent higher reading.",
+      "caveats": "Effects per absence are small; they add up for chronically absent students. In Philadelphia the harm was mainly from unexcused absences and mainly in math. Attendance itself is the attendance indicator; this adds the test-score association.",
+      "philadelphia": {
+        "found": true,
+        "note": "Gottfried 2010; School District of Philadelphia 2023 attendance webinar"
+      },
+      "studies": [
+        "School District of Philadelphia, Office of Evaluation, Research, and Accountability (2023). Research Roundup Webinar Series #9: Focus on Student Attendance (slide deck, April 12, 2023).",
+        "Gottfried, M. A. (2010). Evaluating the Relationship between Student Attendance and Achievement in Urban Elementary and Middle Schools: An Instrumental Variables Approach. American Educational Research Journal, 47(2), 434-465. https://doi.org/10.3102/0002831209350494",
+        "Aucejo, E. M., & Romano, T. F. (2016). Assessing the effect of school days and absences on test score performance. Economics of Education Review, 55, 70-87 (CEP Discussion Paper 1302).",
+        "Gottfried, M. A. (2009). Excused versus unexcused: How student absences in elementary school affect academic achievement. Educational Evaluation and Policy Analysis, 31(4), 392-415."
+      ],
+      "links": [
+        {
+          "url": "https://www.philasd.org/research/wp-content/uploads/sites/90/2023/04/April-2023-Research-Roundup-Student-Attendance.pdf"
+        },
+        {
+          "url": "https://eric.ed.gov/?id=EJ887169"
+        },
+        {
+          "url": "https://cep.lse.ac.uk/pubs/download/dp1302.pdf"
+        },
+        {
+          "url": "https://ideas.repec.org/p/ehl/lserod/68655.html"
+        },
+        {
+          "url": "https://eric.ed.gov/?id=EJ866928"
+        }
+      ],
+      "claims": [
+        "V-026",
+        "V-056",
+        "C-001",
+        "C-002",
+        "C-003"
+      ]
+    },
+    {
+      "id": "L-104",
+      "codes": [
+        "Y1.10",
+        "Y4.2"
+      ],
+      "indicators": [
+        "S5",
+        "S7"
+      ],
+      "pathway": "Attention, task persistence and impulse control at school entry are associated with higher later reading and math scores, beyond children's early academic skills.",
+      "basis": "An analysis of six long-term datasets with a meta-analysis, replicated in two Canadian cohorts, plus two further long-term studies that adjust for earlier achievement.",
+      "typicalEffect": "Effects are small. Early math skills predicted later scores most, then reading, then attention. In a national study, kindergarten executive functions predicted grade 2 scores by about 0.05 to 0.12 of a standard deviation after earlier achievement.",
+      "caveats": "Holds for young children only: in two middle-school studies, self-control did not predict changes in test scores once earlier scores were counted (it did predict report-card grades). Academic Perseverance (Y1.10) fits early task persistence; Emotion Regulation and Coping (Y4.2) fits only its impulse-control part. Social skills and prosocial behavior were not associated with later scores in the same studies.",
+      "philadelphia": {
+        "found": false
+      },
+      "studies": [
+        "Duncan, G. J., Dowsett, C. J., Claessens, A., Magnuson, K., Huston, A. C., et al. (2007). School readiness and later achievement. Developmental Psychology, 43(6), 1428-1446.",
+        "Romano, E., Babchishin, L., Pagani, L. S., & Kohen, D. (2010). School readiness and later achievement: Replication and extension using a nationwide Canadian survey. Developmental Psychology, 46(5), 995-1007.",
+        "Pagani, L. S., Fitzpatrick, C., Archambault, I., & Janosz, M. (2010). School readiness and later achievement: A French Canadian replication and extension. Developmental Psychology, 46(5), 984-994.",
+        "McClelland, M. M., Acock, A. C., Piccinin, A., Rhea, S. A., & Stallings, M. C. (2013). Relations between preschool attention span-persistence and age 25 educational outcomes. Early Childhood Research Quarterly, 28(2), 314-324.",
+        "Morgan, P. L., Farkas, G., Hillemeier, M. M., Pun, W. H., & Maczuga, S. (2019). Kindergarten children's executive functions predict their second-grade academic achievement and behavior. Child Development, 90(5), 1802-1816.",
+        "Duckworth, A. L., Quinn, P. D., & Tsukayama, E. (2012). What No Child Left Behind leaves behind. Journal of Educational Psychology, 104(2), 439-451."
+      ],
+      "links": [
+        {
+          "url": "https://eric.ed.gov/?id=EJ779938"
+        },
+        {
+          "url": "https://eric.ed.gov/?id=EJ897252"
+        },
+        {
+          "url": "https://eric.ed.gov/?id=EJ897251"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23543916/"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7306289/"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3782117/"
+        }
+      ],
+      "claims": [
+        "B-008",
+        "B-010",
+        "B-012",
+        "B-013",
+        "B-014",
+        "B-015"
+      ]
+    },
+    {
+      "id": "L-105",
+      "codes": [
+        "Y3.2"
+      ],
+      "indicators": [
+        "S3"
+      ],
+      "pathway": "High schools where students report better relationships with teachers are associated with fewer students dropping out, after accounting for tenth-grade math scores and background.",
+      "basis": "Two separate national long-term studies (3,840 students in 190 schools; 7,779 students in 431 schools), both adjusting for tenth-grade math achievement.",
+      "typicalEffect": "In one study, a school one standard deviation higher on student-teacher relations had about 86 percent lower odds of a student dropping out, but only in schools under 1,500 students. In the other, a better relationship climate went with lower dropout by senior year.",
+      "caveats": "This is about a whole school's relationship climate, not one student's mentor or relationship. In the first study the association disappeared in schools over 1,500 students, which matters for large Philadelphia high schools. Both studies count dropping out by senior year, not the four-year graduation rate. A meta-analysis of unadjusted associations found only a non-significant trend for poor teacher relationships and dropout. The same studies found no association with test-score gains.",
+      "philadelphia": {
+        "found": false
+      },
+      "studies": [
+        "Lee, V. E., & Burkam, D. T. (2001). Dropping out of high school: The role of school organization and structure (published 2003 in American Educational Research Journal, 40(2), 353-393).",
+        "Barile, J. P., Donohue, D. K., Anthony, E. R., Baker, A. M., Weaver, S. R., & Henrich, C. C. (2012). Teacher-student relationship climate and school outcomes: Implications for educational policy initiatives. Journal of Youth and Adolescence, 41(3), 256-267.",
+        "Gubbels, J., van der Put, C. E., & Assink, M. (2019). Risk factors for school absenteeism and dropout: A meta-analytic review. Journal of Youth and Adolescence, 48(9), 1637-1667."
+      ],
+      "links": [
+        {
+          "url": "https://files.eric.ed.gov/fulltext/ED458694.pdf"
+        },
+        {
+          "url": "https://repository.up.ac.za/bitstreams/2e2e55b8-2bba-4c33-a7b0-be571e34f1a5/download"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6732159/"
+        }
+      ],
+      "claims": [
+        "A-001",
+        "A-002",
+        "A-005"
+      ]
+    },
+    {
+      "id": "L-106",
+      "codes": [
+        "Y1.9"
+      ],
+      "indicators": [
+        "S3"
+      ],
+      "pathway": "Students who do their homework, take part and pay attention in class are associated with lower dropout, compared with students at the same achievement level.",
+      "basis": "Two separate long-term studies (1,272 Maryland youth followed from grade 7; a national sample of high school students), both with achievement in the model.",
+      "typicalEffect": "In the national sample, teacher-rated academic engagement (standardized coefficient about -0.27) and student-reported behavioral engagement (about -0.30) each predicted lower dropout by grade 12, with test achievement (about -0.20) in the same model.",
+      "caveats": "Narrow: two studies. In the national sample, achievement was measured at the same time as engagement, not before it, and behavioral engagement includes skipping and lateness, which overlaps attendance.",
+      "philadelphia": {
+        "found": false
+      },
+      "studies": [
+        "Wang, M.-T., & Fredricks, J. A. (2014). The reciprocal links between school engagement, youth problem behaviors, and school dropout during adolescence. Child Development, 85(2), 722-737.",
+        "Fall, A.-M., & Roberts, G. (2012). High school dropouts: Interactions between social context, self-perceptions, school engagement, and student dropout. Journal of Adolescence, 35(4), 787-798."
+      ],
+      "links": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3815520/"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3478125/"
+        }
+      ],
+      "claims": [
+        "C-013",
+        "C-014"
       ]
     }
   ],
@@ -1791,25 +2133,6 @@
       "evidence": "thin"
     },
     {
-      "id": "L-91",
-      "codes": [
-        "Y1.12",
-        "Y5.3",
-        "Y5.4"
-      ],
-      "indicators": [
-        "S5",
-        "S6",
-        "S7",
-        "S8",
-        "S10",
-        "S11",
-        "S12"
-      ],
-      "pathway": "Positive academic self-beliefs slightly predict later achievement, and self-concept and achievement reinforce each other.",
-      "evidence": "suggestive"
-    },
-    {
       "id": "L-92",
       "codes": [
         "Y5.4"
@@ -1919,40 +2242,6 @@
         "S8"
       ],
       "pathway": "Out-of-school-time programs that follow the four recommended practices (sequenced, active, focused, explicit) showed achievement-test gains that other programs did not.",
-      "evidence": "suggestive"
-    },
-    {
-      "id": "L-100",
-      "codes": [
-        "Y1.15"
-      ],
-      "indicators": [
-        "S3"
-      ],
-      "pathway": "Failing ninth-grade courses flags students who later drop out (Philadelphia cohorts, 2000-2005).",
-      "evidence": "thin"
-    },
-    {
-      "id": "L-101",
-      "codes": [
-        "Y1.13"
-      ],
-      "indicators": [
-        "S3"
-      ],
-      "pathway": "Low attendance in the middle grades flags most Philadelphia students who later drop out.",
-      "evidence": "suggestive"
-    },
-    {
-      "id": "L-102",
-      "codes": [
-        "Y1.13"
-      ],
-      "indicators": [
-        "S5",
-        "S7"
-      ],
-      "pathway": "Grade 3 students who attend more are more likely to score proficient in English language arts (District correlation).",
       "evidence": "suggestive"
     }
   ]

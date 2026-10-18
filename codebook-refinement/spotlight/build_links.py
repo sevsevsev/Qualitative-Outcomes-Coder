@@ -1,9 +1,11 @@
 """Builds codebook-refinement/spotlight/youth_outcomes_v3.spotlight-links.json.
 
 The input is the SPOTlight relevance map (2026-10-18): spotlight_relevance_links.csv,
-102 links between codebook 3.3.0 codes and the 13 indicators on the District's
+106 links between codebook 3.3.0 codes and the 13 indicators on the District's
 2024-25 SPOTlight. Every claim in it was checked by an independent verifier who
 fetched the source and recorded a verbatim excerpt (verification/batch*_results.csv).
+Definitional links (the code names the indicator itself) rest on the SPOTlight's
+wording instead.
 Nothing here is cited from memory.
 
 The JSON is display data for the internal app (the Codebook tab's "Connection to
@@ -126,7 +128,7 @@ def codes_of(cell, domains_ok=False):
 def main():
     ids = {i[0] for i in INDICATORS}
     rows = list(csv.DictReader((HERE / 'spotlight_relevance_links.csv').open(newline='', encoding='utf-8')))
-    recommended, not_recommended = [], []
+    recommended, associated, not_recommended = [], [], []
     for r in rows:
         # One row (L-42, collective-impact networks) was checked against every indicator at once.
         cell = r['indicator_ids']
@@ -154,6 +156,27 @@ def main():
                 'links': links_to(r['urls']),
                 'claims': split(r['claim_ids'], ';'),
             })
+        elif r['final_recommendation'] == 'associated':
+            # Research-associated: consistent correlational evidence (a meta-analysis, or several
+            # long-term studies that adjust for prior achievement or attendance). Never "contributes to".
+            pathway = plain(r['pathway'])
+            if not re.search(r'\bassociated with\b', pathway) or re.search(r'\bcontribut', pathway, re.I):
+                raise SystemExit(f"{r['link_id']}: an associated link says 'is associated with', never 'contributes to'")
+            if not r['associated_basis'].strip():
+                raise SystemExit(f"{r['link_id']}: an associated link names its basis")
+            associated.append({
+                'id': r['link_id'],
+                'codes': codes_of(r['codes']),
+                'indicators': indicators,
+                'pathway': pathway,
+                'basis': plain(r['associated_basis']),
+                'typicalEffect': plain(r['typical_effect']),
+                'caveats': plain(r['caveats']),
+                'philadelphia': philadelphia(r['philadelphia_evidence']),
+                'studies': split(r['key_studies'], ' | '),
+                'links': links_to(r['urls']),
+                'claims': split(r['claim_ids'], ';'),
+            })
         elif r['final_recommendation'] == 'not-recommended':
             not_recommended.append({
                 'id': r['link_id'],
@@ -172,9 +195,19 @@ def main():
         'reviewedOn': '2026-10-18',
         'report': 'https://claude.ai/code/artifact/4454bf45-2669-4a9f-bfdd-910ed96ac76f',
         'rule': (
-            'A link is recommended only on good or strong checked evidence, and only when the program runs '
+            'A tested link is recommended only on good or strong checked evidence, and only when the program runs '
             'the studied model. A code alone never earns credit: a code says what a program works toward, '
             'and the evidence is about specific program models.'
+        ),
+        'associatedRule': (
+            'A research-associated link rests on consistent correlational evidence: a meta-analysis, or several '
+            'long-term studies that point the same way and adjust for prior achievement or attendance. A single '
+            'survey at one point in time does not count. These outcomes are associated with the indicator; the '
+            'studies do not show that a program building them moves it.'
+        ),
+        'associatedCaution': (
+            'Programs often attract students who are already more engaged, so an association can overstate '
+            'what the program itself does.'
         ),
         'indicators': [
             {'id': i, 'group': g, 'name': n, 'spotlightWording': w, 'value2024_25': v}
@@ -182,11 +215,13 @@ def main():
         ],
         'guardrails': GUARDRAILS,
         'links': recommended,
+        'associated': associated,
         'notRecommended': not_recommended,
     }
     path = HERE / 'youth_outcomes_v3.spotlight-links.json'
     path.write_text(json.dumps(out, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
-    print(f'{path.relative_to(ROOT)}: {len(recommended)} recommended, {len(not_recommended)} not recommended')
+    print(f'{path.relative_to(ROOT)}: {len(recommended)} tested, {len(associated)} research-associated, '
+          f'{len(not_recommended)} not recommended')
 
 
 if __name__ == '__main__':

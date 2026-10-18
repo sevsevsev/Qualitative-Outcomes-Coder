@@ -43,6 +43,8 @@ describe('SPOTlight link data (codebook-refinement/spotlight)', () => {
   });
 
   it('gives every recommended link a model to match, studies and checked claims', () => {
+    // A definitional link (the code names the indicator itself) rests on the SPOTlight's wording, not on a study.
+    const studied = data.links.filter(l => l.evidence !== 'definitional');
     const verdicts = new Map<string, string>();
     for (const f of readdirSync(`${DIR}/verification`).filter(f => f.endsWith('_results.csv'))) {
       for (const r of parseCsvRecords(readFileSync(`${DIR}/verification/${f}`, 'utf8'))) verdicts.set(r.claim_id, r.verdict);
@@ -51,6 +53,9 @@ describe('SPOTlight link data (codebook-refinement/spotlight)', () => {
       expect(l.modelMatch, l.id).toBeTruthy();
       expect(l.pathway, l.id).toBeTruthy();
       expect(l.evidence, l.id).not.toBe('thin');
+      if (l.evidence === 'definitional') expect(l.pathway, l.id).toMatch(/is exactly what this indicator counts/);
+    }
+    for (const l of studied) {
       expect(l.studies.length, l.id).toBeGreaterThan(0);
       expect(l.links.length, l.id).toBeGreaterThan(0);
       for (const link of l.links) expect(link.url, l.id).toMatch(/^https?:\/\//);
@@ -88,6 +93,8 @@ describe('SPOTlight link helpers', () => {
     expect(possibleIndicatorsForCode(data, 'Y5.4')).toEqual([]);
     expect(linksForIndicator(data, 'S9')).toEqual([]);
     expect(linksForIndicator(data, 'S1').map(l => l.id)).toEqual(['L-17', 'L-27', 'L-28', 'L-36']);
+    // On-time graduation is the graduation indicator by definition.
+    expect(possibleIndicatorsForCode(data, 'Y1.17').map(i => i.id)).toEqual(['S4']);
   });
 
   it('writes the export cell from indicator names', () => {

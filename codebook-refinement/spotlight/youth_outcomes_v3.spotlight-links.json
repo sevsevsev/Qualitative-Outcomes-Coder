@@ -761,6 +761,29 @@
         "V-056",
         "V-026"
       ]
+    },
+    {
+      "id": "L-103",
+      "codes": [
+        "Y1.17"
+      ],
+      "indicators": [
+        "S4"
+      ],
+      "contribution": "direct",
+      "pathway": "Students graduating within four years of first entering ninth grade is exactly what this indicator counts. This is a definition, not evidence that any program type raises graduation.",
+      "evidence": "definitional",
+      "modelMatch": "Any program, provided the partner shows from school records that its own students graduated within four years at a higher rate than a comparison group. A program model with a tested graduation effect (paid summer jobs) gives a reason to expect it; other models need their own data.",
+      "conditions": "Counts only on-time graduation (within four years of first entering ninth grade) from school records, for the partner's own students, against a comparison group. A GED, an equivalency diploma, re-enrollment and graduation after more than four years are part of this code but not of this indicator.",
+      "typicalEffect": "Not applicable: the size depends on the program. The program model with a tested graduation effect is paid summer jobs for high school students; attendance gains may also help a little.",
+      "magnitude": "Each participant in the cohort who graduates on time instead of later or not at all adds one student to the count: in a cohort of 400, 4 more on-time graduates add 1 percentage point.",
+      "caveats": "Added 2026-10-18 after the review, on a lead from the extractor export thread: the attendance identity had a row and the graduation identity did not. The basis is the SPOTlight wording in Severin's 2026-10-18 paste, not a study. Reaching dropouts was not added: whether a student who re-enrolls leaves the District dropout count depends on District enrollment rules that were not checked. Monitoring and mentoring (Check and Connect) and case management did not raise completion in the checked trials.",
+      "philadelphia": {
+        "found": false
+      },
+      "studies": [],
+      "links": [],
+      "claims": []
     }
   ],
   "notRecommended": [

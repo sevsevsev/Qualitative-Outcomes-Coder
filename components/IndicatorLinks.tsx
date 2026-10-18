@@ -53,25 +53,31 @@ const LinkDetails: React.FC<{ link: SpotlightLink }> = ({ link }) => (
         label="Philadelphia evidence"
         text={link.philadelphia.found ? `Yes: ${link.philadelphia.note ?? ''}` : `None found${link.philadelphia.note ? `: ${link.philadelphia.note}` : ''}.`}
       />
-      <div>
-        <Label>Studies</Label>
-        <ul className="space-y-1 text-xs text-slate-600 leading-relaxed list-disc pl-4">
-          {link.studies.map(s => <li key={s}>{s}</li>)}
-        </ul>
-      </div>
-      <div>
-        <Label>Sources the checkers fetched</Label>
-        <ul className="space-y-0.5 text-xs leading-relaxed">
-          {link.links.map(l => (
-            <li key={l.url} className="truncate">
-              <a href={l.url} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 underline decoration-blue-200 underline-offset-2">
-                {l.url.replace(/^https?:\/\/(www\.)?/, '')}
-              </a>
-              {l.note && <span className="text-slate-400"> ({l.note})</span>}
-            </li>
-          ))}
-        </ul>
-      </div>
+      {link.studies.length > 0 ? (
+        <>
+          <div>
+            <Label>Studies</Label>
+            <ul className="space-y-1 text-xs text-slate-600 leading-relaxed list-disc pl-4">
+              {link.studies.map(s => <li key={s}>{s}</li>)}
+            </ul>
+          </div>
+          <div>
+            <Label>Sources the checkers fetched</Label>
+            <ul className="space-y-0.5 text-xs leading-relaxed">
+              {link.links.map(l => (
+                <li key={l.url} className="truncate">
+                  <a href={l.url} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 underline decoration-blue-200 underline-offset-2">
+                    {l.url.replace(/^https?:\/\/(www\.)?/, '')}
+                  </a>
+                  {l.note && <span className="text-slate-400"> ({l.note})</span>}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
+      ) : (
+        <Detail label="Basis" text="The District SPOTlight's own wording of the indicator. No study is needed for a definition." />
+      )}
     </div>
   </details>
 );

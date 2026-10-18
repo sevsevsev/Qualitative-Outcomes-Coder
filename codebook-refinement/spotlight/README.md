@@ -4,9 +4,15 @@ Which codebook 3.x outcomes may contribute to the indicators on the District's
 2024-25 SPOTlight, from the SPOTlight relevance review of 2026-10-18
 ([report](https://claude.ai/code/artifact/4454bf45-2669-4a9f-bfdd-910ed96ac76f)).
 
-- `spotlight_relevance_links.csv`: the review's evidence table, 102 links (12
+- `spotlight_relevance_links.csv`: the review's evidence table, 103 links (13
   recommended with conditions, 90 not recommended). `final_recommendation` decides;
-  `model_match_required` says what program model a partner must run.
+  `model_match_required` says what program model a partner must run. The review made
+  102; L-103 (on-time graduation, High School Completion and Re-engagement, Y1.17, to
+  the four-year graduation rate) was added afterwards as the graduation counterpart of
+  the attendance definition row, L-27.
+- A definitional link ("by definition") is one where the code names the indicator
+  itself. It rests on the SPOTlight's wording, so it needs no study; every other
+  recommended link needs a claim a verifier marked supported.
 - `verification/batch*_results.csv`: the independent checks, one row per claim, each
   with the fetched link and a verbatim excerpt. Only these count as evidence.
 - `youth_outcomes_v3.spotlight-links.json`: built from the CSV by

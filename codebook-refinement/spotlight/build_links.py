@@ -1,9 +1,11 @@
 """Builds codebook-refinement/spotlight/youth_outcomes_v3.spotlight-links.json.
 
 The input is the SPOTlight relevance map (2026-10-18): spotlight_relevance_links.csv,
-102 links between codebook 3.3.0 codes and the 13 indicators on the District's
+103 links between codebook 3.3.0 codes and the 13 indicators on the District's
 2024-25 SPOTlight. Every claim in it was checked by an independent verifier who
 fetched the source and recorded a verbatim excerpt (verification/batch*_results.csv).
+Definitional links (the code names the indicator itself) rest on the SPOTlight's
+wording instead.
 Nothing here is cited from memory.
 
 The JSON is display data for the internal app (the Codebook tab's "Connection to

@@ -144,4 +144,14 @@ describe('atomicJsonToCSV', () => {
       '', // a codebook with no link data
     ]);
   });
+
+  it('puts research-associated links in their own column, after the tested links', () => {
+    const v3 = { ...baseItem, primary_domain: 'Domain Y3. Relationships', primary_subcategory: 'Y3.2 Supportive Adult Relationships', codebook_version: 'youth_outcomes_v3@3.3.0' };
+    const csv = atomicJsonToCSV([v3, { ...v3, uncoded: true }, baseItem]);
+    const header = csv.split('\n')[0].split(',');
+    expect(header.indexOf('associated_spotlight_links')).toBe(header.indexOf('possible_spotlight_links') + 1);
+    const records = parseCsvRecords(csv);
+    expect(records.map(r => r.associated_spotlight_links)).toEqual(['Dropouts', '', '']);
+    expect(records[0].possible_spotlight_links).toBe('');
+  });
 });

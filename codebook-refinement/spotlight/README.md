@@ -4,8 +4,8 @@ Which codebook 3.x outcomes may contribute to the indicators on the District's
 2024-25 SPOTlight, from the SPOTlight relevance review of 2026-10-18
 ([report](https://claude.ai/code/artifact/4454bf45-2669-4a9f-bfdd-910ed96ac76f)).
 
-- `spotlight_relevance_links.csv`: the review's evidence table, 103 links (13
-  recommended with conditions, 90 not recommended). `final_recommendation` decides;
+- `spotlight_relevance_links.csv`: the review's evidence table, 106 links (13 tested
+  and recommended with conditions, 7 research-associated, 86 not recommended). `final_recommendation` decides;
   `model_match_required` says what program model a partner must run. The review made
   102; L-103 (on-time graduation, High School Completion and Re-engagement, Y1.17, to
   the four-year graduation rate) was added afterwards as the graduation counterpart of
@@ -13,6 +13,16 @@ Which codebook 3.x outcomes may contribute to the indicators on the District's
 - A definitional link ("by definition") is one where the code names the indicator
   itself. It rests on the SPOTlight's wording, so it needs no study; every other
   recommended link needs a claim a verifier marked supported.
+- **Research-associated links** (`final_recommendation` = `associated`, added
+  2026-10-18 at Severin's request) are a second tier shown beside the tested links, never
+  mixed with them. They rest on consistent correlational evidence: a meta-analysis, or
+  several long-term studies pointing the same way that adjust for earlier achievement or
+  attendance. A single survey at one point in time does not count. Each is worded "is
+  associated with", never "contributes to", names its basis in `associated_basis`, and
+  carries the caution that programs often attract students who are already more engaged.
+  L-91, L-100, L-101 and L-102 were re-screened into this tier; L-104 to L-106 are new.
+  The searches and their claims are in `verification/batch7` to `batch10`
+  (`*_claims.csv` holds what each checker was given).
 - `verification/batch*_results.csv`: the independent checks, one row per claim, each
   with the fetched link and a verbatim excerpt. Only these count as evidence.
 - `youth_outcomes_v3.spotlight-links.json`: built from the CSV by
@@ -24,9 +34,12 @@ Which codebook 3.x outcomes may contribute to the indicators on the District's
 
 - **Export:** the `possible_spotlight_links` column lists, by name, the indicators the
   row's primary code may reach. It is blank for domain-only and uncoded rows, for codes
-  with no recommended link, and for codebooks with no link data.
+  with no recommended link, and for codebooks with no link data. The
+  `associated_spotlight_links` column next to it lists the research-associated
+  indicators the same way; the two columns are never merged.
 - **Codebook tab (internal app):** each code card has a "Connection to District
-  indicators" section, and the rail has a "District indicators" view.
+  indicators" section, with tested program models and research-associated links side by
+  side, and the rail has a "District indicators" view laid out the same way.
 - **Not shown:** the public explorer site (`VITE_SITE=explorer`) never imports this
   data; it needs district sign-off first. Never in the coding prompt.
 

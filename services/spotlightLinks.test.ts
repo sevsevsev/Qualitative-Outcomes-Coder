@@ -4,6 +4,9 @@ import { getCodebook } from '../codebooks/index.js';
 import { V3_DOMAINS } from '../codebooks/youthOutcomesV3.data.js';
 import { parseCsvRecords } from '../scripts/codebookEvalScoring.js';
 import {
+  associatedForIndicator,
+  associatedIndicatorsForCode,
+  associatedSpotlightLinksCell,
   codeIdOf,
   linksForCode,
   linksForIndicator,
@@ -118,6 +121,18 @@ describe('SPOTlight link helpers', () => {
     expect(linksForIndicator(data, 'S1').map(l => l.id)).toEqual(['L-17', 'L-27', 'L-28', 'L-36']);
     // On-time graduation is the graduation indicator by definition.
     expect(possibleIndicatorsForCode(data, 'Y1.17').map(i => i.id)).toEqual(['S4']);
+  });
+
+  it('keeps research-associated links apart from tested links', () => {
+    expect(associatedIndicatorsForCode(data, 'Y3.2').map(i => i.id)).toEqual(['S3']);
+    expect(associatedIndicatorsForCode(data, 'Y1.12').map(i => i.id)).toEqual(['S5', 'S6', 'S7', 'S8']);
+    // General self-esteem stays out: no association once earlier achievement is counted.
+    expect(associatedIndicatorsForCode(data, 'Y5.4')).toEqual([]);
+    expect(associatedForIndicator(data, 'S3').map(l => l.id)).toEqual(['L-100', 'L-101', 'L-105', 'L-106']);
+    // Tested links are unchanged by the new tier.
+    expect(possibleIndicatorsForCode(data, 'Y3.2')).toEqual([]);
+    expect(associatedSpotlightLinksCell(data, 'Y3.2 Supportive Adult Relationships')).toBe('Dropouts');
+    expect(associatedSpotlightLinksCell(data, 'none')).toBe('');
   });
 
   it('writes the export cell from indicator names', () => {

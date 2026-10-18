@@ -26,13 +26,19 @@ describe('SPOTlight link data (codebook-refinement/spotlight)', () => {
   it('matches the recommendations in the evidence table it is built from', () => {
     const rows = parseCsvRecords(readFileSync(`${DIR}/spotlight_relevance_links.csv`, 'utf8'));
     const recommended = rows.filter(r => r.final_recommendation === 'recommend-with-conditions').map(r => r.link_id);
+    const associated = rows.filter(r => r.final_recommendation === 'associated').map(r => r.link_id);
     expect(data.links.map(l => l.id)).toEqual(recommended);
-    expect(data.links.length + data.notRecommended.length).toBe(rows.length);
+    expect(data.associated.map(l => l.id)).toEqual(associated);
+    expect(data.links.length + data.associated.length + data.notRecommended.length).toBe(rows.length);
   });
 
   it('names only real 3.x codes and known indicators', () => {
     const indicatorIds = new Set(data.indicators.map(i => i.id));
     for (const l of data.links) {
+      for (const c of l.codes) expect(CODE_IDS.has(c), `${l.id} ${c}`).toBe(true);
+      for (const i of l.indicators) expect(indicatorIds.has(i), `${l.id} ${i}`).toBe(true);
+    }
+    for (const l of data.associated) {
       for (const c of l.codes) expect(CODE_IDS.has(c), `${l.id} ${c}`).toBe(true);
       for (const i of l.indicators) expect(indicatorIds.has(i), `${l.id} ${i}`).toBe(true);
     }
@@ -42,13 +48,14 @@ describe('SPOTlight link data (codebook-refinement/spotlight)', () => {
     }
   });
 
+  const verdicts = new Map<string, string>();
+  for (const f of readdirSync(`${DIR}/verification`).filter(f => f.endsWith('_results.csv'))) {
+    for (const r of parseCsvRecords(readFileSync(`${DIR}/verification/${f}`, 'utf8'))) verdicts.set(r.claim_id, r.verdict);
+  }
+
   it('gives every recommended link a model to match, studies and checked claims', () => {
     // A definitional link (the code names the indicator itself) rests on the SPOTlight's wording, not on a study.
     const studied = data.links.filter(l => l.evidence !== 'definitional');
-    const verdicts = new Map<string, string>();
-    for (const f of readdirSync(`${DIR}/verification`).filter(f => f.endsWith('_results.csv'))) {
-      for (const r of parseCsvRecords(readFileSync(`${DIR}/verification/${f}`, 'utf8'))) verdicts.set(r.claim_id, r.verdict);
-    }
     for (const l of data.links) {
       expect(l.modelMatch, l.id).toBeTruthy();
       expect(l.pathway, l.id).toBeTruthy();
@@ -66,8 +73,24 @@ describe('SPOTlight link data (codebook-refinement/spotlight)', () => {
     }
   });
 
+  it('words research-associated links as associations, each on checked studies', () => {
+    expect(data.associatedRule).toMatch(/meta-analysis/);
+    expect(data.associatedCaution).toMatch(/already more engaged/);
+    for (const l of data.associated) {
+      expect(l.pathway, l.id).toMatch(/\bassociated with\b/);
+      expect(l.pathway, l.id).not.toMatch(/contribut/i);
+      expect(l.basis, l.id).toBeTruthy();
+      expect(l.studies.length, l.id).toBeGreaterThan(0);
+      expect(l.links.length, l.id).toBeGreaterThan(0);
+      for (const link of l.links) expect(link.url, l.id).toMatch(/^https?:\/\//);
+      expect(l.claims.length, l.id).toBeGreaterThan(0);
+      for (const c of l.claims) expect(verdicts.has(c), `${l.id} ${c}`).toBe(true);
+      expect(l.claims.some(c => verdicts.get(c) === 'SUPPORTED'), l.id).toBe(true);
+    }
+  });
+
   it('names other rows in plain words, never by link id', () => {
-    for (const l of [...data.links, ...data.notRecommended]) {
+    for (const l of [...data.links, ...data.associated, ...data.notRecommended]) {
       const { id: _id, claims: _claims, ...shown } = l as typeof l & { claims?: string[] };
       expect(JSON.stringify(shown), l.id).not.toMatch(/\bL-\d+/);
     }

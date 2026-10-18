@@ -4,7 +4,9 @@
   "spotlightYear": "2024-25",
   "reviewedOn": "2026-10-18",
   "report": "https://claude.ai/code/artifact/4454bf45-2669-4a9f-bfdd-910ed96ac76f",
-  "rule": "A link is recommended only on good or strong checked evidence, and only when the program runs the studied model. A code alone never earns credit: a code says what a program works toward, and the evidence is about specific program models.",
+  "rule": "A tested link is recommended only on good or strong checked evidence, and only when the program runs the studied model. A code alone never earns credit: a code says what a program works toward, and the evidence is about specific program models.",
+  "associatedRule": "A research-associated link rests on consistent correlational evidence: a meta-analysis, or several long-term studies that point the same way and adjust for prior achievement or attendance. A single survey at one point in time does not count. These outcomes are associated with the indicator; the studies do not show that a program building them moves it.",
+  "associatedCaution": "Programs often attract students who are already more engaged, so an association can overstate what the program itself does.",
   "indicators": [
     {
       "id": "S1",
@@ -786,6 +788,7 @@
       "claims": []
     }
   ],
+  "associated": [],
   "notRecommended": [
     {
       "id": "L-04",

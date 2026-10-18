@@ -10,6 +10,11 @@
 // A link is "possible": a code says what a program works toward, and the
 // evidence is about specific program models. Credit needs a program that runs
 // the model in modelMatch, confirmed by a person.
+//
+// A research-associated link is a second, separate tier: consistent
+// correlational evidence (a meta-analysis, or several long-term studies that
+// adjust for prior achievement or attendance). It says the outcome "is
+// associated with" the indicator, never that a program contributes to it.
 
 export type EvidenceLevel = 'strong' | 'good' | 'suggestive' | 'thin' | 'definitional';
 
@@ -46,6 +51,22 @@ export interface SpotlightLink {
   claims: string[];
 }
 
+export interface AssociatedLink {
+  id: string;
+  codes: string[];
+  indicators: string[];
+  /** Always worded "is associated with". */
+  pathway: string;
+  /** The kind of evidence, e.g. "a meta-analysis of 99 studies". */
+  basis: string;
+  typicalEffect: string;
+  caveats: string;
+  philadelphia: { found: boolean; note?: string };
+  studies: string[];
+  links: { url: string; note?: string }[];
+  claims: string[];
+}
+
 export interface NotRecommendedLink {
   id: string;
   codes: string[];
@@ -61,9 +82,13 @@ export interface SpotlightLinks {
   reviewedOn: string;
   report: string;
   rule: string;
+  associatedRule: string;
+  /** Shown with every research-associated link. */
+  associatedCaution: string;
   indicators: SpotlightIndicator[];
   guardrails: { summary: string; quote: string; citation: string; url: string };
   links: SpotlightLink[];
+  associated: AssociatedLink[];
   notRecommended: NotRecommendedLink[];
 }
 
@@ -88,11 +113,24 @@ export const notRecommendedForCode = (data: SpotlightLinks, code: string): NotRe
 export const linksForIndicator = (data: SpotlightLinks, indicatorId: string): SpotlightLink[] =>
   data.links.filter(l => l.indicators.includes(indicatorId));
 
-/** Indicators a code may reach through a recommended link, in SPOTlight order. */
-export const possibleIndicatorsForCode = (data: SpotlightLinks, code: string): SpotlightIndicator[] => {
-  const ids = new Set(linksForCode(data, code).flatMap(l => l.indicators));
+export const associatedForCode = (data: SpotlightLinks, code: string): AssociatedLink[] =>
+  data.associated.filter(l => l.codes.includes(code));
+
+export const associatedForIndicator = (data: SpotlightLinks, indicatorId: string): AssociatedLink[] =>
+  data.associated.filter(l => l.indicators.includes(indicatorId));
+
+const inOrder = (data: SpotlightLinks, links: { indicators: string[] }[]): SpotlightIndicator[] => {
+  const ids = new Set(links.flatMap(l => l.indicators));
   return data.indicators.filter(i => ids.has(i.id));
 };
+
+/** Indicators a code may reach through a recommended link, in SPOTlight order. */
+export const possibleIndicatorsForCode = (data: SpotlightLinks, code: string): SpotlightIndicator[] =>
+  inOrder(data, linksForCode(data, code));
+
+/** Indicators a code is associated with through a research-associated link, in SPOTlight order. */
+export const associatedIndicatorsForCode = (data: SpotlightLinks, code: string): SpotlightIndicator[] =>
+  inOrder(data, associatedForCode(data, code));
 
 /**
  * The export's possible_spotlight_links cell for a coded value: the indicators
@@ -103,4 +141,15 @@ export const possibleSpotlightLinksCell = (data: SpotlightLinks | undefined, sub
   const code = codeIdOf(subcategory);
   if (!data || !code) return '';
   return possibleIndicatorsForCode(data, code).map(i => i.name).join('; ');
+};
+
+/**
+ * The export's associated_spotlight_links cell: the indicators the primary
+ * code is associated with in correlational research, by name. Kept apart from
+ * possible_spotlight_links so the two tiers are never mixed.
+ */
+export const associatedSpotlightLinksCell = (data: SpotlightLinks | undefined, subcategory: string | undefined): string => {
+  const code = codeIdOf(subcategory);
+  if (!data || !code) return '';
+  return associatedIndicatorsForCode(data, code).map(i => i.name).join('; ');
 };

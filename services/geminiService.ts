@@ -4,7 +4,7 @@ import { getCodebook } from "../codebooks/index.js";
 import { normalizeSecondarySubcategory } from "./reviewNormalization.js";
 import { applySourceType } from "./sourceType.js";
 import { getSpotlightLinks } from "./spotlightLinksData.js";
-import { possibleSpotlightLinksCell } from "./spotlightLinks.js";
+import { associatedSpotlightLinksCell, possibleSpotlightLinksCell } from "./spotlightLinks.js";
 import { expandExtractedRows, ExpandedRow, extractionKey, needsExtraction, StatedResult, verifyResults } from "./resultExtraction.js";
 
 // Trim/normalize a codebook string coming back from the model. Domain and
@@ -232,7 +232,7 @@ export const codingSpecificity = (item: { uncoded?: boolean; primary_domain?: st
 export const atomicJsonToCSV = (items: AtomicBatchItem[]): string => {
   if (items.length === 0) return "";
   const fixedStart = ["row_id", "is_corrected", "outcome_text_original", "outcome_text_atomic", "atomic_outcome_index", "atomic_outcome_id"];
-  const fixedEnd = ["primary_domain", "primary_subcategory", "primary_confidence", "primary_subject_area", "primary_target_population", "secondary_domain_1", "secondary_subcategory_1", "secondary_confidence_1", "secondary_domain_2", "secondary_subcategory_2", "secondary_confidence_2", "uncoded", "specificity", "possible_spotlight_links", "notes", "codebook_version", "model_used"];
+  const fixedEnd = ["primary_domain", "primary_subcategory", "primary_confidence", "primary_subject_area", "primary_target_population", "secondary_domain_1", "secondary_subcategory_1", "secondary_confidence_1", "secondary_domain_2", "secondary_subcategory_2", "secondary_confidence_2", "uncoded", "specificity", "possible_spotlight_links", "associated_spotlight_links", "notes", "codebook_version", "model_used"];
   const allKeys = new Set<string>();
   items.forEach(item => Object.keys(item).forEach(k => allKeys.add(k)));
   const dynamicKeys = Array.from(allKeys).filter(k => !fixedStart.includes(k) && !fixedEnd.includes(k) && k !== 'is_corrected').sort();
@@ -259,9 +259,16 @@ export const atomicJsonToCSV = (items: AtomicBatchItem[]): string => {
     const id = String(item.codebook_version ?? '').split('@')[0];
     return possibleSpotlightLinksCell(getSpotlightLinks(id), item.primary_subcategory);
   };
+  // The research-associated tier: correlational evidence only, in its own column.
+  const associatedOf = (item: AtomicBatchItem): string => {
+    if (item.uncoded) return '';
+    const id = String(item.codebook_version ?? '').split('@')[0];
+    return associatedSpotlightLinksCell(getSpotlightLinks(id), item.primary_subcategory);
+  };
   const derived: Record<string, (item: AtomicBatchItem) => string> = {
     specificity: specificityOf,
     possible_spotlight_links: spotlightOf,
+    associated_spotlight_links: associatedOf,
   };
   const rows = items.map(item => allHeaders.map(header => escapeCsv(derived[header] ? derived[header](item) : item[header])).join(","));
   return [headerRow, ...rows].join("\n");

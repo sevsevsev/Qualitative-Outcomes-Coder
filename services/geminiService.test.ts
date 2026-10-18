@@ -124,4 +124,24 @@ describe('atomicJsonToCSV', () => {
     // Codebooks without domain-only codes leave the column blank.
     expect(parseCsvRecords(atomicJsonToCSV([baseItem]))[0].specificity).toBe('');
   });
+
+  it('derives possible SPOTlight links from the primary code, after specificity', () => {
+    const v3 = { ...baseItem, primary_domain: 'Domain Y1. Academic', primary_subcategory: 'Y1.1 Literacy: Reading & Writing', codebook_version: 'youth_outcomes_v3@3.3.0' };
+    const csv = atomicJsonToCSV([
+      v3,
+      { ...v3, primary_subcategory: 'Y5.4 Self-Worth' },
+      { ...v3, primary_subcategory: 'none' },
+      { ...v3, uncoded: true },
+      baseItem,
+    ]);
+    const header = csv.split('\n')[0].split(',');
+    expect(header.indexOf('possible_spotlight_links')).toBe(header.indexOf('specificity') + 1);
+    expect(parseCsvRecords(csv).map(r => r.possible_spotlight_links)).toEqual([
+      'English language arts test, grade 3; English language arts test, grades 3 to 8',
+      '', // a code with no recommended link
+      '', // domain-only
+      '', // uncoded
+      '', // a codebook with no link data
+    ]);
+  });
 });

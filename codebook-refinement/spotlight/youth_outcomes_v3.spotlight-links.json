@@ -2,7 +2,7 @@
   "codebook": "youth_outcomes_v3",
   "codebookVersion": "3.3.0",
   "spotlightYear": "2024-25",
-  "reviewedOn": "2026-10-19",
+  "reviewedOn": "2026-10-20",
   "report": "https://claude.ai/code/artifact/4454bf45-2669-4a9f-bfdd-910ed96ac76f",
   "rule": "A tested link is recommended only on checked causal evidence (strong or good, or suggestive when it rests on a single clean trial), and only when the program runs the studied model. A code alone never earns credit: a code says what a program works toward, and the evidence is about specific program models.",
   "associatedRule": "A research-associated link rests on consistent correlational evidence: a meta-analysis, or several long-term studies that point the same way and adjust for prior achievement or attendance. A single survey at one point in time does not count. These outcomes are associated with the indicator; the studies do not show that a program building them moves it.",
@@ -346,13 +346,13 @@
         "S10"
       ],
       "contribution": "direct",
-      "pathway": "Daily small-group math tutoring in ninth and tenth grade raises high school math test scores.",
+      "pathway": "Daily small-group math tutoring, scheduled as a class period in ninth and tenth grade, raises high school math test scores, including New York's Algebra I end-of-course exam.",
       "evidence": "good",
-      "modelMatch": "Daily, in-school small-group math tutoring for ninth and tenth graders (Saga model, including the technology-blended version in which two students work with the tutor while two use software).",
-      "conditions": "Daily, in-school small-group math tutoring for ninth and tenth graders (Saga model, including the technology-blended version in which two students work with the tutor while two use software).",
+      "modelMatch": "A tutoring period every school day, built into the school schedule, with paid, trained tutors and groups of two to four students. A version that alternates tutor days with computer practice was tested in one randomized trial. A fully online version rests on one matched comparison only.",
+      "conditions": "A tutoring period every school day, built into the school schedule, with paid, trained tutors and groups of two to four students. A version that alternates tutor days with computer practice was tested in one randomized trial. A fully online version rests on one matched comparison only.",
       "typicalEffect": "Average 0.14 (three trials: 0.09, 0.14, 0.19); technology-blended version 0.23 for participants at about 30 percent lower cost. Meta-analysis: small-group instruction 0.38, math tests 0.34.",
-      "magnitude": "For participants, 0.16 to 0.37 standard deviations would move about 4 to 10 more in 100 to proficient on an exam where about 15.5 percent are proficient, if the effect carried over to the Keystone exam, which no study tested. Tutoring a quarter of a school's Algebra I takers would add about 1 to 2.5 percentage points to the school rate.",
-      "caveats": "Outcomes are district or national tests, not the Keystone exam. Population was mostly entering ninth graders.",
+      "magnitude": "In the trial, students offered tutoring scored 0.19 standard deviations higher on end-of-year standardized math tests (one cohort; Regents exams in New York, the PSAT in Chicago). In the online version's matched comparison, 8 more students in 100 passed New York's Algebra I exam by the end of ninth grade (39 versus 31 percent). For participants, 0.16 to 0.37 standard deviations would move about 4 to 10 more in 100 to proficient on an exam where about 15.5 percent are proficient, if the effect carried over to the Keystone exam, which no study tested. Tutoring a quarter of a school's Algebra I takers would add about 1 to 2.5 percentage points to the school rate.",
+      "caveats": "Outcomes are district or national tests, not the Keystone exam. Population was mostly entering ninth graders. The online version showed weaker effects for boys and for students who entered high school far behind. New York's Regents passing score is not the Keystone proficiency cut, so these rates do not translate into Keystone rates. The program needs a slot in the school day, so a partner runs it with a school, not on its own.",
       "philadelphia": {
         "found": false
       },
@@ -362,7 +362,9 @@
         "Bhatt, M. P., Guryan, J., Khan, S. A., LaForest-Tucker, M., & Mishra, B. (2024). Can Technology Facilitate Scale? Evidence from a Randomized Evaluation of High Dosage Tutoring. NBER Working Paper 32510.",
         "Evidence for ESSA program record: Saga Math (key studies Guryan et al. 2023, AER 113(3); Bhatt et al. 2024, NBER WP 32510).",
         "Dietrichson, J., Filges, T., Klokker, R. H., Viinholt, B. C. A., Bøg, M., & Jensen, U. H. (2020). Targeted school-based interventions for improving reading and mathematics for students with, or at risk of, academic difficulties in Grades 7-12: A systematic review. Campbell Systematic Reviews, 16(2), e1081.",
-        "Kraft, M. A. (2015). How to Make Additional Time Matter: Integrating Individualized Tutorials into an Extended Day. Education Finance and Policy, 10(1), 81-116."
+        "Kraft, M. A. (2015). How to Make Additional Time Matter: Integrating Individualized Tutorials into an Extended Day. Education Finance and Policy, 10(1), 81-116.",
+        "Bhatt, M. P., Guryan, J., Khan, S. A., LaForest-Tucker, M., & Mishra, B. (2024). Can Technology Facilitate Scale? Evidence from a Randomized Evaluation of High Dosage Tutoring. NBER Working Paper 32510.",
+        "Miller, C., Solís-Román, C., & Grossman, J. (2026). Expanding High-Dosage Tutoring: Evidence from Saga's Live-Online Math Model. MDRC."
       ],
       "links": [
         {
@@ -388,6 +390,12 @@
         },
         {
           "url": "https://api.ies.ed.gov/eric/?search=id:EJ1049742"
+        },
+        {
+          "url": "https://www.nber.org/system/files/working_papers/w32510/w32510.pdf"
+        },
+        {
+          "url": "https://www.mdrc.org/work/publications/expanding-high-dosage-tutoring-saga-education"
         }
       ],
       "claims": [
@@ -396,7 +404,10 @@
         "M-015",
         "M-016",
         "M-017",
-        "M-018"
+        "M-018",
+        "KV-003",
+        "KV-003b",
+        "KV-002"
       ]
     },
     {
@@ -3169,9 +3180,10 @@
         "Y1.17"
       ],
       "indicators": [
-        "S4"
+        "S4",
+        "S11"
       ],
-      "pathway": "Early college high schools raise graduation in lottery studies, but they are schools, not partner programs.",
+      "pathway": "Early college high schools raise graduation in lottery studies, but they are schools, not partner programs. In a North Carolina lottery study, 68 percent of early college students passed the Biology end-of-course exam in tenth grade, against 53 percent of other applicants.",
       "evidence": "None: null or below the bar in checked studies"
     },
     {
@@ -3647,6 +3659,42 @@
       ],
       "pathway": "No rigorous United States study has tested a staff-support program a partner could run on teacher attendance.",
       "evidence": "None: null or below the bar in checked studies"
+    },
+    {
+      "id": "L-174",
+      "codes": [
+        "Y1.13"
+      ],
+      "indicators": [
+        "S10",
+        "S12"
+      ],
+      "pathway": "Missing math or English classes in high school lowers that subject's state test score slightly. In one large California district, 10 missed classes cost 0.03 to 0.04 standard deviations.",
+      "evidence": "suggestive"
+    },
+    {
+      "id": "L-175",
+      "codes": [
+        "Y7.2"
+      ],
+      "indicators": [
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "pathway": "College-preparation programs have not been shown to raise high school test results. In the national Upward Bound trial, only math credits rose, and grades did not change.",
+      "evidence": "None: null or below the bar in checked studies"
+    },
+    {
+      "id": "L-176",
+      "codes": [
+        "Y1.1"
+      ],
+      "indicators": [
+        "S12"
+      ],
+      "pathway": "High school reading programs that raised test scores were school-run reading courses that replaced an elective; no partner-run high school reading model has been tested on a state English test.",
+      "evidence": "None: school model, not a partner link"
     }
   ]
 }

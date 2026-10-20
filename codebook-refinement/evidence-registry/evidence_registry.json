@@ -85,7 +85,7 @@
    "sourceLinks": [
     "L-03"
    ],
-   "description": "Daily, in-school small-group math tutoring for ninth and tenth graders (Saga model, including the technology-blended version in which two students work with the tutor while two use software).",
+   "description": "A tutoring period every school day, built into the school schedule, with paid, trained tutors and groups of two to four students. A version that alternates tutor days with computer practice was tested in one randomized trial. A fully online version rests on one matched comparison only.",
    "outcomes": [
     "Y1.3"
    ],
@@ -101,7 +101,10 @@
     "M-015",
     "M-016",
     "M-017",
-    "M-018"
+    "M-018",
+    "KV-003",
+    "KV-003b",
+    "KV-002"
    ]
   },
   {
@@ -330,17 +333,20 @@
     "S10"
    ],
    "tier": "tested",
-   "summary": "Daily small-group math tutoring in ninth and tenth grade raises high school math test scores.",
-   "programModel": "Daily, in-school small-group math tutoring for ninth and tenth graders (Saga model, including the technology-blended version in which two students work with the tutor while two use software).",
+   "summary": "Daily small-group math tutoring, scheduled as a class period in ninth and tenth grade, raises high school math test scores, including New York's Algebra I end-of-course exam.",
+   "programModel": "A tutoring period every school day, built into the school schedule, with paid, trained tutors and groups of two to four students. A version that alternates tutor days with computer practice was tested in one randomized trial. A fully online version rests on one matched comparison only.",
    "typicalEffect": "Average 0.14 (three trials: 0.09, 0.14, 0.19); technology-blended version 0.23 for participants at about 30 percent lower cost. Meta-analysis: small-group instruction 0.38, math tests 0.34.",
-   "caveats": "Outcomes are district or national tests, not the Keystone exam. Population was mostly entering ninth graders.",
+   "caveats": "Outcomes are district or national tests, not the Keystone exam. Population was mostly entering ninth graders. The online version showed weaker effects for boys and for students who entered high school far behind. New York's Regents passing score is not the Keystone proficiency cut, so these rates do not translate into Keystone rates. The program needs a slot in the school day, so a partner runs it with a school, not on its own.",
    "claims": [
     "V-003",
     "V-001",
     "M-015",
     "M-016",
     "M-017",
-    "M-018"
+    "M-018",
+    "KV-003",
+    "KV-003b",
+    "KV-002"
    ]
   },
   {
@@ -2291,7 +2297,8 @@
    "typicalEffect": "Core grade point average up 0.10 points among lower-achieving ninth graders.",
    "caveats": "Larger where peer norms support challenge.",
    "claims": [
-    "V-021"
+    "V-021",
+    "KV-032"
    ]
   },
   {
@@ -3250,15 +3257,17 @@
     "Y1.17"
    ],
    "to": [
-    "S4"
+    "S4",
+    "S11"
    ],
    "tier": "checked, not supported",
-   "summary": "Early college high schools raise graduation in lottery studies, but they are schools, not partner programs.",
+   "summary": "Early college high schools raise graduation in lottery studies, but they are schools, not partner programs. In a North Carolina lottery study, 68 percent of early college students passed the Biology end-of-course exam in tenth grade, against 53 percent of other applicants.",
    "programModel": "Not used for credit. A school model.",
-   "typicalEffect": "National lottery study: 86 versus 81 percent graduated. North Carolina lottery study: five-year graduation up 3.1 percentage points.",
+   "typicalEffect": "National lottery study: 86 versus 81 percent graduated. North Carolina lottery study: five-year graduation up 3.1 percentage points. North Carolina Biology end-of-course exam, grade 10: 68 versus 53 percent passed.",
    "caveats": "Partners cannot earn credit for a school model.",
    "claims": [
-    "Q-037"
+    "Q-037",
+    "KV-010"
    ]
   },
   {
@@ -4058,6 +4067,72 @@
     "T-020",
     "T-021"
    ]
+  },
+  {
+   "id": "L-174",
+   "source": "SPOTlight relevance review",
+   "from": [
+    "Y1.13"
+   ],
+   "to": [
+    "S10",
+    "S12"
+   ],
+   "tier": "checked, not supported",
+   "summary": "Missing math or English classes in high school lowers that subject's state test score slightly. In one large California district, 10 missed classes cost 0.03 to 0.04 standard deviations.",
+   "programModel": "Not used for credit.",
+   "typicalEffect": "Ten missed classes lower math or English state test scores by 0.03 to 0.04 standard deviations (grades 7 to 11); English absences matter only in high school.",
+   "caveats": "One district, and California's tests, not the Keystone exams. Biology was not studied. This is a mechanism step, not program credit: a partner first needs evidence that it moves attendance (see L-27 and L-28).",
+   "claims": [
+    "KV-034",
+    "KV-034b"
+   ]
+  },
+  {
+   "id": "L-175",
+   "source": "SPOTlight relevance review",
+   "from": [
+    "Y7.2"
+   ],
+   "to": [
+    "S10",
+    "S11",
+    "S12"
+   ],
+   "tier": "checked, not supported",
+   "summary": "College-preparation programs have not been shown to raise high school test results. In the national Upward Bound trial, only math credits rose, and grades did not change.",
+   "programModel": "Not used for credit.",
+   "typicalEffect": "Upward Bound: math credits 3.0 to 3.2, no change in other credits, honors or Advanced Placement credits, or grades. iMentor: few impacts on academic achievement.",
+   "caveats": "No checked study of these programs measured an end-of-course exam. A math-science version went with higher science grades in one matched study, and an Iowa program reported higher test scores in one quasi-experiment. Both are below the bar. See L-80 and L-138 for graduation.",
+   "claims": [
+    "KV-017",
+    "KV-021",
+    "KV-015",
+    "KV-018",
+    "KV-019"
+   ]
+  },
+  {
+   "id": "L-176",
+   "source": "SPOTlight relevance review",
+   "from": [
+    "Y1.1"
+   ],
+   "to": [
+    "S12"
+   ],
+   "tier": "checked, not supported",
+   "summary": "High school reading programs that raised test scores were school-run reading courses that replaced an elective; no partner-run high school reading model has been tested on a state English test.",
+   "programModel": "Not used for credit.",
+   "typicalEffect": "Supplemental ninth-grade reading courses: 0.11 standard deviations on state English tests, not significant the next year. Four of ten Striving Readers interventions were positive in grades 6 to 10.",
+   "caveats": "The ninth-grade state English gain (0.11 standard deviations) did not last into tenth grade. The reviews found no effective program set in a high school, and the qualifying secondary tutoring studies were all in England. See L-154 for one Boston charter school.",
+   "claims": [
+    "KV-005",
+    "KV-006",
+    "KV-009",
+    "KV-008",
+    "KV-039"
+   ]
   }
  ],
  "claims": {
@@ -4324,6 +4399,193 @@
    "effect_as_reported": "Behavioral engagement beta = -.30, academic engagement beta = -.27, achievement beta = -.20 on dropout (all p < .05)",
    "excerpt": "Behavioral and academic engagement and achievement were associated with decreased likelihood of dropping out of high school ( β = −.30, p < .05, β = −.27, p < .05, and β = −.20, p < .05, respectively).",
    "checked_in": "spotlight/verification/batch10_results.csv"
+  },
+  "KV-002": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Cite as: Miller, C., Solís-Román, C., & Grossman, J. (2026, June). Expanding High-Dosage Tutoring: Evidence from Saga's Live-Online Math Model. MDRC brief. Canonical URL: https://www.mdrc.org/work/publications/expanding-high-dosage-tutoring-saga-education",
+   "fetched_url": "https://mdrc.org/node/104746",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "Students who received tutoring using the model were more likely to pass the standardized state Algebra I Regents Exam by the end of ninth grade (39 percent compared with 31 percent for the comparison group)",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-003": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "",
+   "fetched_url": "https://www.nber.org/papers/w32510 ; https://www.nber.org/system/files/working_papers/w32510/w32510.pdf",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "We find gains in students’ math standardized test scores of 0.23 standard deviations for participating students, which are almost as large as the effect sizes of the 2-to-1 tutoring model reported in Guryan et al. (2023).",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-003b": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Bhatt, M. P., Guryan, J., Khan, S. A., LaForest-Tucker, M., & Mishra, B. (2024). Can Technology Facilitate Scale? Evidence from a Randomized Evaluation of High Dosage Tutoring. NBER Working Paper No. 32510 (May 2024).",
+   "fetched_url": "https://www.nber.org/system/files/working_papers/w32510/w32510.pdf",
+   "design": "RCT (pre-registered, OSF 10.17605/OSF.IO/UW8EH); entering first-time 9th graders randomized within school-by-gender-by-round blocks; 2,005 students in cohort 1 (AY2018-19), 1,841 in cohort 2 (AY2019-20), 3,906 total",
+   "population_location": "9th-grade students in 7 high schools in Chicago Public Schools and NYC DOE (about 91% FRPL-eligible in cohort 1)",
+   "outcome": "End-of-year standardized math test scores (pre-specified primary outcome): PSAT math in Chicago; New York State Regents math exams in NYC",
+   "effect_as_reported": "ITT 0.19 SD; TOT 0.23 SD (cohort 1 only). The abstract's headline 0.23 SD is the TOT effect for participants, not ITT",
+   "excerpt": "For the first cohort (AY2018-19), we estimate the Saga Technology tutoring model had intent-to-treat (ITT) effects on standardized math test scores of 0.19 standard deviations (SD) and treatment-on-the-treated (TOT) effects of 0.23 SD.",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-005": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "",
+   "fetched_url": "https://files.eric.ed.gov/fulltext/ED511811.pdf",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "the programs had a positive impact on students’ performance on state tests in English language arts (effect size = 0.11) and mathematics (effect size = 0.07). However, impacts on state test scores in the follow-up year were not statistically significant.",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-006": {
+   "verdict": "PARTIAL",
+   "correct_citation": "DOI: 10.1177/0022219413515511 (PMID 24395083; epub 2014-01-06).",
+   "fetched_url": "https://api.ies.ed.gov/eric/?search=id:EJ1070914&format=json ; https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=24395083",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "Students in reading treatment compared to students in BAU demonstrated significant gains on reading comprehension (effect size = 0.43), and improved reading was associated with better grades in social studies.",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-008": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Clarification: the paid-adult tutoring +0.24 pools 5 studies (k=5; Table 2); the EEF text says all seven qualifying tutoring studies (including volunteer and cross-age) were in England. Crossref DOI for RRQ article: 10.1002/rrq.229, 54(2) 133-166 (online 2018).",
+   "fetched_url": "https://files.eric.ed.gov/fulltext/ED612242.pdf ; https://api.ies.ed.gov/eric/?search=id:EJ1210152&format=json",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "Taken together, the overall weighted effect size for tutoring programmes provided by paid adults was +0.24 (p<.001). Effect sizes were +0.28 (p<.001) for three one-to-one programmes and +0.14 (n.s.) for two small-group programmes.",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-009": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "",
+   "fetched_url": "https://api.ies.ed.gov/eric/?search=id:ED568684&format=json",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "(3) None of the 12 identified programs and practices was conducted in a high school setting; and (4) Some of the programs and practices were identified as having potentially positive effects on high-stakes outcome assessments",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-010": {
+   "verdict": "PARTIAL",
+   "correct_citation": "Journal article (JREE 10(2) 297-325) has 7 authors: add Arshavsky, N. after Furey, J. (Crossref; ERIC EJ1135800). The 6-author list matches the Grantee Submission ED575019. WWC page shows improvement index 15, not an effect size; ES 0.38 not shown on the fetched page (index 15 is consistent with g of about 0.38).",
+   "fetched_url": "https://ies.ed.gov/ncee/wwc/Study/82192 ; https://api.ies.ed.gov/eric/?search=id:ED575019&format=json ; https://api.crossref.org/works/10.1080/19345747.2016.1191574",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "Passed the end-of-course exam in Biology (%) Early College High School vs. Business as usual 1 Years Grade: 10; 68.00 53.00 Yes 15",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-015": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "",
+   "fetched_url": "https://files.eric.ed.gov/fulltext/ED497631.pdf",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "increasing the average GPA in math courses from 2.7 to 2.8, the average GPA in science courses from 2.7 to 2.9 and the average GPA overall.",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-017": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "",
+   "fetched_url": "https://eric.ed.gov/?id=ED518667 (ERIC API record; full text https://files.eric.ed.gov/fulltext/ED518667.pdf)",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "Upward Bound: (1) increased the number of high school math credits earned by participants; (2) did not affect other measures of high school academic preparation;",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-018": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "",
+   "fetched_url": "https://eric.ed.gov/?id=ED497631 (ERIC API record)",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "Major findings of the impact analysis for UBMS include: (1) Improved high school grades in math and science and overall; (2) Increased likelihood of taking chemistry and physics in high school;",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-019": {
+   "verdict": "PARTIAL",
+   "correct_citation": "Venue details: JESPAR 26(4), 352-370 (Crossref); ERIC EJ1312655.",
+   "fetched_url": "https://api.ies.ed.gov/eric/?search=title:\"Narrowing the College Readiness Gap\" (ERIC EJ1312655)",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "This quasi-experimental study examined intermediate GEAR UP outcomes for GEAR UP Iowa 2.0 students (N = 4,845) and non-GEAR UP comparison students (N = 25,926).",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-021": {
+   "verdict": "PARTIAL",
+   "correct_citation": "Same ERIC abstract also reports 'some small positive and statistically significant impacts on critical thinking and internal resilience, as well as on career activities', so the direction is mostly but not uniformly null.",
+   "fetched_url": "https://eric.ed.gov/?id=ED591554 (ERIC API record); design checked in https://files.eric.ed.gov/fulltext/ED562481.pdf",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "Overall, few impacts were found from iMentor on students' college-related activities, non-cognitive skill development and academic achievement at this time.",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-032": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "",
+   "fetched_url": "https://eric.ed.gov/?id=ED601132 (ERIC API record)",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "The intervention produced statistically significant impacts on students' average academic performance, improving their average grade point average (GPA) as well as their math GPA, and reducing the proportion of students with failing grades",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-034": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "",
+   "fetched_url": "https://eric.ed.gov/?id=ED671028 (ERIC API record) ; https://files.eric.ed.gov/fulltext/ED671028.pdf ; https://api.crossref.org/works/10.1016/j.jpubeco.2021.104441",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "On average, missing 10 classes reduces math or English Language Arts test scores by 3-4% of a standard deviation and course grades by 17-18% of a standard deviation.",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-034b": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Liu, J., Lee, M., & Gershenson, S. (2021). The short- and long-run impacts of secondary school absences. Journal of Public Economics, 199, 104441. https://doi.org/10.1016/j.jpubeco.2021.104441",
+   "fetched_url": "https://files.eric.ed.gov/fulltext/ED671028.pdf",
+   "design": "Quasi-experimental panel: within-student, between-subject variation in class-period absences (proxy model and student-by-year FE); placebo using post-testing-window absences",
+   "population_location": "7th- to 11th-graders in a large urban school district in California, 2002-03 to 2012-13 (72,161 students, 43 schools)",
+   "outcome": "California state standardized math and ELA test scores (grades 7-11); course grades; on-time graduation and college enrollment",
+   "effect_as_reported": "10 absences reduce math or ELA test scores by 3-4% of an SD. ELA heterogeneity (Table 4): main effect 0.001 (middle school), x High School -0.048**; math HS interaction 0.018, not significant",
+   "excerpt": "In Panel A, the effect of absences is slightly less harmful in high school, though this difference is not statistically significant at traditional confidence levels. Panel B, however, shows that ELA absences are only harmful in high school.",
+   "checked_in": "spotlight/verification/batch25_results.csv"
+  },
+  "KV-039": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "ERIC lists publication year 2015 (NCEE 2016-4001). 12 of 17 met standards without reservations, 3 with reservations, 2 did not. The four rated: READ 180 positive; Xtreme Reading and Learning Strategies Curriculum potentially positive; Voyager Passport mixed.",
+   "fetched_url": "https://files.eric.ed.gov/fulltext/ED560732.pdf ; ERIC API record ED560732",
+   "design": "",
+   "population_location": "",
+   "outcome": "",
+   "effect_as_reported": "",
+   "excerpt": "Four of the ten interventions had at least one study showing a positive effect on reading achievement. The remaining six interventions had no discernible effects.",
+   "checked_in": "spotlight/verification/batch25_results.csv"
   },
   "M-001": {
    "verdict": "SUPPORTED",

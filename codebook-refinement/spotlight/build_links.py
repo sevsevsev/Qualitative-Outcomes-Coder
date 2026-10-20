@@ -1,7 +1,8 @@
 """Builds codebook-refinement/spotlight/youth_outcomes_v3.spotlight-links.json.
 
 The input is the SPOTlight relevance map (2026-10-18, extended by the exhaustive
-search of 2026-10-19): spotlight_relevance_links.csv, 173 links between codebook
+search of 2026-10-19 and the Keystone subjects search of 2026-10-20):
+spotlight_relevance_links.csv, 176 links between codebook
 3.3.0 codes and the 13 indicators on the District's 2024-25 SPOTlight. Every claim in it was checked by an independent verifier who
 fetched the source and recorded a verbatim excerpt (verification/batch*_results.csv).
 Definitional links (the code names the indicator itself) rest on the SPOTlight's
@@ -192,7 +193,7 @@ def main():
         'codebook': 'youth_outcomes_v3',
         'codebookVersion': '3.3.0',
         'spotlightYear': '2024-25',
-        'reviewedOn': '2026-10-19',
+        'reviewedOn': '2026-10-20',
         'report': 'https://claude.ai/code/artifact/4454bf45-2669-4a9f-bfdd-910ed96ac76f',
         'rule': (
             'A tested link is recommended only on checked causal evidence (strong or good, or suggestive when it '

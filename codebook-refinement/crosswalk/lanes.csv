@@ -1,0 +1,113 @@
+code,code_name,lane,serves
+Y1,Academic Learning & Achievement,step-toward-indicator,"Depends on the subject, which the statement does not name"
+Y1.1,Literacy: Reading & Writing,names-indicator,"English language arts tests (grade 3, grades 3 to 8, Keystone Literature)"
+Y1.2,English Language Development & Multilingualism,step-toward-indicator,English language arts tests
+Y1.3,Mathematics,names-indicator,"Math tests (grade 3, grades 3 to 8, Keystone Algebra I)"
+Y1.4,"Science, Technology & Engineering",names-indicator,"Science tests (grades 4 and 8, Keystone Biology), for the science part of the code"
+Y1.5,Other Academic Subjects,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y1.6,Arts Learning,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y1.7,"Critical Thinking, Inquiry & Media Literacy",guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y1.8,Early Learning & School Readiness,step-toward-indicator,Grade 3 reading and math tests
+Y1.9,Academic Engagement Behaviors,step-toward-indicator,Dropouts
+Y1.10,Academic Perseverance,step-toward-indicator,Reading and math tests
+Y1.11,Learning Strategies & Study Skills,step-toward-indicator,Reading and math tests
+Y1.12,Academic Mindsets & Self-Efficacy,step-toward-indicator,Reading and math tests
+Y1.13,Attendance & School Stability,names-indicator,Student attendance (90 percent or more of days)
+Y1.14,Exclusionary Discipline,step-toward-indicator,Attendance; graduation
+Y1.15,"Grades, Credits & On-Track Status",step-toward-indicator,Four-year graduation; dropouts
+Y1.16,Advanced Coursework & Dual Credit,college-career-goal,Graduate college and career ready
+Y1.17,High School Completion & Re-engagement,names-indicator,Four-year graduation; dropouts
+Y1.18,"Postsecondary Enrollment, Persistence & Completion",college-career-goal,Graduate college and career ready
+Y2,"Engagement, Interest & Creative Expression",guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y2.1,Enjoyment & Joy,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y2.2,Curiosity & Triggered Interest,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y2.3,Sustained & Individual Interest,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y2.4,Relevance & Utility Value,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y2.5,Creative Expression & Performance,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y2.6,Participation in Enriching Activities,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y3,Belonging & Relationships,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y3.1,Belonging & Mattering,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y3.2,Supportive Adult Relationships,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y3.3,Peer Relationships & Friendship,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y3.4,Family Relationships,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y3.5,Social Capital & Networks,college-career-goal,Graduate college and career ready
+Y4,Social & Emotional Skills (CASEL),guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y4.1,Emotion Awareness,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y4.2,Emotion Regulation & Coping,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y4.3,"Goal-Setting, Organization & Self-Discipline",guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y4.4,"Empathy, Perspective-Taking & Social Awareness",guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y4.5,Respect for Diversity & Cultural Competence,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y4.6,Communication & Public Speaking,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y4.7,"Teamwork, Collaboration & Group Leadership",guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y4.8,Relationship-Building & Conflict Resolution,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y4.9,Help-Seeking & Offering Support,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y4.10,Decision-Making & Problem-Solving,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y4.11,Ethical & Prosocial Choices,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y4.12,Risk Avoidance & Refusal Skills,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y5,"Identity, Confidence & Agency",guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y5.1,Self-Understanding & Identity Exploration,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y5.2,Cultural & Social Identity,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y5.3,Domain Identity,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y5.4,"Confidence, Self-Efficacy & Self-Worth",guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y5.5,Purpose & Future Orientation,college-career-goal,Graduate college and career ready
+Y5.6,"Agency, Self-Determination & Self-Advocacy",guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y6,"Character, Values & Civic Life",guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y6.1,Positive Values & Character,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y6.2,Civic Knowledge,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y6.3,Critical Consciousness & Social Justice,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y6.4,"Civic Voice, Leadership & Participation",guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y6.5,Community Service & Action,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y6.6,Environmental Stewardship,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y6.7,Digital Citizenship & Online Safety,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y7,Career & Economic Readiness,college-career-goal,Graduate college and career ready
+Y7.1,Career Awareness & Exploration,college-career-goal,Graduate college and career ready
+Y7.2,College & Career Transition Knowledge,college-career-goal,Graduate college and career ready
+Y7.3,Employability & Workplace Skills,college-career-goal,Graduate college and career ready
+Y7.4,"Technical Skills, Credentials & Work-Based Learning",names-indicator,"Career and technical education industry test, grade 12"
+Y7.5,Employment & Earnings,college-career-goal,Graduate college and career ready
+Y7.6,Financial Capability,college-career-goal,"Graduate college and career ready, on a broad reading of career ready"
+Y7.7,Independent Living Skills,college-career-goal,"Graduate college and career ready, on a broad reading of career ready"
+Y8,"Health, Safety & Well-Being",guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y8.1,Healthy Daily Habits,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y8.2,Motor & Sport Skills,guardrail-well-rounded,"A well-rounded education with co-curricular opportunities, including arts and athletics"
+Y8.3,Health Knowledge & Safety Skills,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y8.4,Sexual & Reproductive Health,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y8.5,Health Care Access & Condition Management,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y8.6,Mental Health Symptoms & Distress,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y8.7,Flourishing & Life Satisfaction,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y8.8,Healing & Trauma Recovery,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y8.9,Mental Health Service Access & Use,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y8.10,Felt Safety,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y8.11,Substance Use,guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y8.12,"Violence, Bullying & Victimization",guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+Y8.13,"Justice Involvement, Diversion & Reentry",guardrail-safe-welcoming,"Safe, welcoming and healthy schools with social, emotional and mental health supports"
+F1,Family & Caregiver Strengthening,family-outcome,"Family and caregiver well-being, skills and basic needs"
+F1.1,Parenting Knowledge & Practices,family-outcome,"Family and caregiver well-being, skills and basic needs"
+F1.2,Home Learning Environment & Routines,family-outcome,"Family and caregiver well-being, skills and basic needs"
+F1.3,Family Health Practices,family-outcome,"Family and caregiver well-being, skills and basic needs"
+F1.4,Caregiver Well-Being & Resilience,family-outcome,"Family and caregiver well-being, skills and basic needs"
+F1.5,Caregiver Social Connections,family-outcome,"Family and caregiver well-being, skills and basic needs"
+F1.6,"Adult Education, Skills & Employment",family-outcome,"Family and caregiver well-being, skills and basic needs"
+F1.7,System Navigation & Rights Knowledge,family-outcome,"Family and caregiver well-being, skills and basic needs"
+F1.8,Family Connection & Trust with the Program,guardrail-family-partners,Parents and guardians welcomed as partners
+F1.9,Family Participation & Leadership,guardrail-family-partners,Parents and guardians welcomed as partners
+F2,Basic Needs & Economic Stability,family-outcome,"Family and caregiver well-being, skills and basic needs"
+F2.1,"Income, Benefits & Financial Stability",family-outcome,"Family and caregiver well-being, skills and basic needs"
+F2.2,Food Security,family-outcome,"Family and caregiver well-being, skills and basic needs"
+F2.3,Housing Stability & Safe Living Situation,family-outcome,"Family and caregiver well-being, skills and basic needs"
+F2.4,"Material Necessities (Clothing, Gear & Supplies)",family-outcome,"Family and caregiver well-being, skills and basic needs"
+A1,Staff & Volunteer Capacity,quality-condition,"Staff, program, access and system conditions"
+A1.1,Staff & Volunteer Knowledge & Skills,quality-condition,"Staff, program, access and system conditions"
+A1.2,Practice Change,quality-condition,"Staff, program, access and system conditions"
+A1.3,Workforce Stability & Well-Being,quality-condition,"Staff, program, access and system conditions"
+A2,"Program Quality, Access & Reach",quality-condition,"Staff, program, access and system conditions"
+A2.1,Program Quality,quality-condition,"Staff, program, access and system conditions"
+A2.2,Participant & Family Satisfaction,quality-condition,"Staff, program, access and system conditions"
+A2.3,Access to Resources,quality-condition,"Staff, program, access and system conditions"
+A2.4,"Inclusion, Accommodations & Language Access",quality-condition,"Staff, program, access and system conditions"
+A2.5,"Participation, Dosage & Reach (Output)",quality-condition,"Staff, program, access and system conditions"
+A2.6,Family Engagement Systems,guardrail-family-partners,Parents and guardians welcomed as partners
+A3,"Systems, Policy & Community Conditions",quality-condition,"Staff, program, access and system conditions"
+A3.1,Policy & Institutional Change,quality-condition,"Staff, program, access and system conditions"
+A3.2,Cross-Sector Partnerships,quality-condition,"Staff, program, access and system conditions"
+A3.3,Community Conditions & Collective Efficacy,quality-condition,"Staff, program, access and system conditions"

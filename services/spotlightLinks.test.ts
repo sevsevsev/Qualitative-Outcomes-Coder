@@ -114,11 +114,13 @@ describe('SPOTlight link helpers', () => {
   });
 
   it('finds the links and indicators for a code', () => {
-    expect(linksForCode(data, 'Y1.1').map(l => l.id)).toEqual(['L-01']);
+    // Reading tutoring, and the tutoring-plus-family model tested on attendance.
+    expect(linksForCode(data, 'Y1.1').map(l => l.id)).toEqual(['L-01', 'L-113']);
     expect(possibleIndicatorsForCode(data, 'Y1.13').map(i => i.id)).toEqual(['S1', 'S4', 'S6', 'S8']);
     expect(possibleIndicatorsForCode(data, 'Y5.4')).toEqual([]);
     expect(linksForIndicator(data, 'S9')).toEqual([]);
-    expect(linksForIndicator(data, 'S1').map(l => l.id)).toEqual(['L-17', 'L-27', 'L-28', 'L-36']);
+    // The belonging exercise (L-17) left this list when its replication trial found no effect.
+    expect(linksForIndicator(data, 'S1').map(l => l.id)).toEqual(['L-27', 'L-28', 'L-36', 'L-109', 'L-111', 'L-113', 'L-114', 'L-115']);
     // On-time graduation is the graduation indicator by definition.
     expect(possibleIndicatorsForCode(data, 'Y1.17').map(i => i.id)).toEqual(['S4']);
   });
@@ -129,8 +131,8 @@ describe('SPOTlight link helpers', () => {
     // General self-esteem stays out: no association once earlier achievement is counted.
     expect(associatedIndicatorsForCode(data, 'Y5.4')).toEqual([]);
     expect(associatedForIndicator(data, 'S3').map(l => l.id)).toEqual(['L-100', 'L-101', 'L-105', 'L-106']);
-    // Tested links are unchanged by the new tier.
-    expect(possibleIndicatorsForCode(data, 'Y3.2')).toEqual([]);
+    // Check and Connect monitoring (grades 5 to 7) is a tested attendance link; the dropout tie stays associated.
+    expect(possibleIndicatorsForCode(data, 'Y3.2').map(i => i.id)).toEqual(['S1']);
     expect(associatedSpotlightLinksCell(data, 'Y3.2 Supportive Adult Relationships')).toBe('Dropouts');
     expect(associatedSpotlightLinksCell(data, 'none')).toBe('');
   });

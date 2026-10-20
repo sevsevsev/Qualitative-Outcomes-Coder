@@ -137,7 +137,7 @@ describe('atomicJsonToCSV', () => {
     const header = csv.split('\n')[0].split(',');
     expect(header.indexOf('possible_spotlight_links')).toBe(header.indexOf('specificity') + 1);
     expect(parseCsvRecords(csv).map(r => r.possible_spotlight_links)).toEqual([
-      'English language arts test, grade 3; English language arts test, grades 3 to 8',
+      'Student attendance; English language arts test, grade 3; English language arts test, grades 3 to 8',
       '', // a code with no recommended link
       '', // domain-only
       '', // uncoded
@@ -152,6 +152,6 @@ describe('atomicJsonToCSV', () => {
     expect(header.indexOf('associated_spotlight_links')).toBe(header.indexOf('possible_spotlight_links') + 1);
     const records = parseCsvRecords(csv);
     expect(records.map(r => r.associated_spotlight_links)).toEqual(['Dropouts', '', '']);
-    expect(records[0].possible_spotlight_links).toBe('');
+    expect(records[0].possible_spotlight_links).toBe('Student attendance');
   });
 });

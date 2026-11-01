@@ -1,5 +1,5 @@
 {
- "registryVersion": "1.0.0",
+ "registryVersion": "1.1.0",
  "rule": "Evidence credits program models, not wording. A code or wording alone never earns more than \"possible link, model not confirmed\". Only claims an independent verifier fetched, with a verbatim excerpt, enter this file.",
  "tiers": {
   "tested": "Causal studies of a matching program model.",
@@ -251,6 +251,144 @@
     "V-090",
     "V-091",
     "V-057"
+   ]
+  },
+  {
+   "id": "M-10",
+   "name": "Check and Connect monitoring for students in grades 5 to 7",
+   "sourceLinks": [
+    "L-109"
+   ],
+   "description": "Check and Connect delivered with fidelity: a trained monitor assigned to each student, regular review of the student's attendance from school records, and structured follow-up with student and family, for students in grades 5 to 7. General mentoring does not qualify.",
+   "outcomes": [
+    "Y1.13",
+    "Y3.2"
+   ],
+   "indicators": [
+    "S1"
+   ],
+   "typicalEffect": "Chicago randomized trial (grades 1 to 8): students who took part in grades 5 to 7 had 4.2 fewer absences a year (22.9 percent); no detectable effect in grades 1 to 4; no effect on test scores or grades.",
+   "requiredFeatures": [],
+   "featuresStatus": "awaiting check 3 rubric",
+   "claims": [
+    "P-022",
+    "P-023",
+    "P-024"
+   ]
+  },
+  {
+   "id": "M-11",
+   "name": "Education specialist for youth in foster care (Fostering Opportunities)",
+   "sourceLinks": [
+    "L-111"
+   ],
+   "description": "The Fostering Opportunities model: an education specialist for youth in foster care in grades 6 to 12, with weekly check-ins and liaison with child-welfare caseworkers.",
+   "outcomes": [
+    "Y1.13",
+    "Y3.2"
+   ],
+   "indicators": [
+    "S1"
+   ],
+   "typicalEffect": "Colorado randomized trial (230 students in Jefferson County): attendance rate 7 percentage points higher at one year and 9 points at two years; clearinghouse effect size 0.49 (84 against 75 percent attendance in its 116-student sample).",
+   "requiredFeatures": [],
+   "featuresStatus": "awaiting check 3 rubric",
+   "claims": [
+    "P-033"
+   ]
+  },
+  {
+   "id": "M-12",
+   "name": "School-day one-to-one reading tutoring with a family engagement worker (SPARK)",
+   "sourceLinks": [
+    "L-113"
+   ],
+   "description": "The SPARK (Future Forward) model as tested: paid tutors give kindergarten to grade 2 students one-to-one literacy sessions several times a week during the school day for at least a full school year, plus a family engagement worker who contacts and visits each family regularly. Tutoring alone or family engagement alone does not qualify.",
+   "outcomes": [
+    "A2.6",
+    "Y1.1"
+   ],
+   "indicators": [
+    "S1"
+   ],
+   "typicalEffect": "Milwaukee two-year trial (576 students, seven schools): absences effect size 0.20, significant (clearinghouse), with a literacy effect of about 0.23. Earlier Milwaukee cohort (496 students, six schools): about 3.3 fewer absences, effect size 0.18, not significant. One-semester trial in Alabama and rural Wisconsin (127 students): no attendance effect.",
+   "requiredFeatures": [],
+   "featuresStatus": "awaiting check 3 rubric",
+   "claims": [
+    "P-035",
+    "P-036",
+    "P-037"
+   ]
+  },
+  {
+   "id": "M-13",
+   "name": "Academic and enrichment summer program attended for two or more summers",
+   "sourceLinks": [
+    "L-114"
+   ],
+   "description": "Multi-summer programs that students attend for two or more summers, combining academic and enrichment activities, with school-record attendance tracked (for example Horizons or Aim High). One-off camps do not qualify.",
+   "outcomes": [
+    "Y1.13",
+    "Y2.6"
+   ],
+   "indicators": [
+    "S1"
+   ],
+   "typicalEffect": "Aim High, San Francisco: unexcused absence rate about 1.06 percentage points lower three years after first participation; students attending all three summers 58 percent less likely to be chronically absent in grade 8. Horizons (1,324 students, 15 sites): attendance 95.8 against 94.6 percent (effect size 0.15); elementary 1.1 points higher (about two days); chronic absence not significantly different.",
+   "requiredFeatures": [],
+   "featuresStatus": "awaiting check 3 rubric",
+   "claims": [
+    "P-040",
+    "P-041",
+    "P-043",
+    "R-040"
+   ]
+  },
+  {
+   "id": "M-14",
+   "name": "School-based health clinic or telehealth clinic treating students during the school day",
+   "sourceLinks": [
+    "L-115"
+   ],
+   "description": "The partner operates an on-site or telehealth clinic in the school that treats students during the school day. A nurse position alone, health education or health-system care coordination does not qualify.",
+   "outcomes": [
+    "Y8.5"
+   ],
+   "indicators": [
+    "S1"
+   ],
+   "typicalEffect": "Three rural North Carolina districts (staggered openings): chronic absence down 2.5 percentage points (29 percent) and about 0.8 fewer days absent (10 percent). Six elementary schools with telehealth (4,203 students, adjusting for prior absences): 7.7 percent fewer absences (0.6 days a year).",
+   "requiredFeatures": [],
+   "featuresStatus": "awaiting check 3 rubric",
+   "claims": [
+    "P-044",
+    "P-045",
+    "P-046",
+    "P-047",
+    "P-048"
+   ]
+  },
+  {
+   "id": "M-15",
+   "name": "Free child-selected books given every year for three or more years",
+   "sourceLinks": [
+    "L-150"
+   ],
+   "description": "Free, child-selected books given every year for at least three years (about a dozen a year, for example at the end of each school year or in fall and spring), to children in high-poverty elementary schools. A single summer's book mailing does not qualify (see the row from PR-07).",
+   "outcomes": [
+    "A2.3",
+    "F1.2"
+   ],
+   "indicators": [
+    "S5",
+    "S6"
+   ],
+   "typicalEffect": "Randomized trial, 17 high-poverty schools (852 treatment, 478 control): 0.14 standard deviations on the state reading test after three summers, 0.21 for the most disadvantaged. Milwaukee school-level randomized trial (60 schools, Bernie's Book Bank): about 0.10 on the Wisconsin state reading test after five years.",
+   "requiredFeatures": [],
+   "featuresStatus": "awaiting check 3 rubric",
+   "claims": [
+    "R-029",
+    "R-030"
    ]
   }
  ],
@@ -4133,6 +4271,113 @@
     "KV-008",
     "KV-039"
    ]
+  },
+  {
+   "id": "EP-01",
+   "source": "evidence registry",
+   "from": [
+    "Y1.1"
+   ],
+   "to": [
+    "S5,S6"
+   ],
+   "tier": "research-associated",
+   "summary": "Step finding: a child's reading level in kindergarten to grade 2 is associated with their later state reading test results in grade 3, and grade 3 reading with grade 8 reading. In Philadelphia, spring reading screener scores in kindergarten, grade 1 and grade 2 correlated 0.50, 0.53 and 0.73 with the grade 3 English language arts test, and kindergarten entry scores 0.42.",
+   "programModel": "",
+   "typicalEffect": "",
+   "caveats": "Correlations, not program effects: this says early reading level predicts later tests, not that a program which raises early reading will raise later tests. Programs attract already-engaged students. The Philadelphia studies are correlations and descriptive cohort results only. One early study had only 54 children; the long-term study across six data sets found early math predicted later achievement more strongly than early reading.",
+   "claims": [
+    "E-004",
+    "E-005",
+    "E-006",
+    "E-008",
+    "E-009",
+    "E-010",
+    "E-002"
+   ]
+  },
+  {
+   "id": "EP-02",
+   "source": "evidence registry",
+   "from": [
+    "Y1.1"
+   ],
+   "to": [
+    "S4"
+   ],
+   "tier": "checked, not supported",
+   "summary": "Step finding, checked and not supported on its own: students reading on grade level by grade 3 graduate at higher rates (national and Chicago studies), but in Chicago grade 3 reading level no longer predicted graduation once grade 8 reading and ninth-grade performance were taken into account.",
+   "programModel": "",
+   "typicalEffect": "",
+   "caveats": "The national figures are descriptive, with no adjustment. Grade 3 reading reaches graduation only through later reading and ninth-grade performance, which the registry already covers (ninth-grade on track). No Philadelphia study of grade 3 reading and graduation was found.",
+   "claims": [
+    "E-001",
+    "E-003",
+    "E-007"
+   ]
+  },
+  {
+   "id": "EP-03",
+   "source": "evidence registry",
+   "from": [
+    "Y1.14"
+   ],
+   "to": [
+    "S3,S4"
+   ],
+   "tier": "research-associated",
+   "summary": "Step finding: fewer suspensions are associated with less dropping out and more on-time graduation. Middle schools that suspend more raised dropout by 1.7 percentage points in Charlotte (school boundary change) and lowered on-time graduation by about 2 points in North Carolina; in Florida each added ninth-grade suspension cut the odds of graduating by 20 percent.",
+   "programModel": "",
+   "typicalEffect": "",
+   "caveats": "The strongest studies compare stricter and less strict schools or principals, not programs that reduce a student's suspensions. The North Carolina graduation result is only marginally significant, and the Charlotte study is a working paper. The Florida study adjusts for attendance and course performance but not earlier test scores. The meta-analysis pools mostly correlational studies. See EP-05: Philadelphia's own 2012-13 cut in suspensions brought no achievement gain.",
+   "claims": [
+    "E-014",
+    "E-015",
+    "E-016",
+    "E-017",
+    "E-020"
+   ]
+  },
+  {
+   "id": "EP-04",
+   "source": "evidence registry",
+   "from": [
+    "Y1.14"
+   ],
+   "to": [
+    "S6,S8"
+   ],
+   "tier": "research-associated",
+   "summary": "Step finding: being suspended is associated with lower math and reading test scores. A Philadelphia study following the same students over time found a suspension lowered the suspended student's math and reading achievement; a meta-analysis and studies in New York City, Arkansas and elsewhere found the same direction.",
+   "programModel": "",
+   "typicalEffect": "",
+   "caveats": "Effects on test scores are small or absent in the stronger designs: the Charlotte study found no achievement effect and the North Carolina study about 0.02 standard deviations. The Arkansas authors say the link may come from which students get suspended. See EP-05: Philadelphia's 2012-13 policy change did not raise achievement.",
+   "claims": [
+    "E-011",
+    "E-017",
+    "E-018",
+    "E-019",
+    "E-020"
+   ]
+  },
+  {
+   "id": "EP-05",
+   "source": "evidence registry",
+   "from": [
+    "Y1.14"
+   ],
+   "to": [
+    "S1,S6,S8"
+   ],
+   "tier": "checked, not supported",
+   "summary": "Step finding, checked and not supported: when Philadelphia cut suspensions for minor conduct in 2012-13, students with an earlier conduct suspension had 1.45 fewer absences but no change in achievement, and across the District truancy rose and math and English language arts achievement fell.",
+   "programModel": "",
+   "typicalEffect": "",
+   "caveats": "A District policy change, not a partner program. The student-level estimates are described by the authors as associational, and schools did not all follow the policy. Shown beside EP-03 and EP-04 so the null appears next to the associations.",
+   "claims": [
+    "E-012",
+    "E-013"
+   ]
   }
  ],
  "claims": {
@@ -4399,6 +4644,226 @@
    "effect_as_reported": "Behavioral engagement beta = -.30, academic engagement beta = -.27, achievement beta = -.20 on dropout (all p < .05)",
    "excerpt": "Behavioral and academic engagement and achievement were associated with decreased likelihood of dropping out of high school ( β = −.30, p < .05, β = −.27, p < .05, and β = −.20, p < .05, respectively).",
    "checked_in": "spotlight/verification/batch10_results.csv"
+  },
+  "E-001": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Hernandez, D. J. (2011). Double Jeopardy: How Third-Grade Reading Skills and Poverty Influence High School Graduation. Annie E. Casey Foundation. ERIC ED518818.",
+   "fetched_url": "https://files.eric.ed.gov/fulltext/ED518818.pdf",
+   "design": "descriptive (graduation rates by reading group and poverty; no regression adjustment)",
+   "population_location": "U.S. national, NLSY79 children born 1979-1989, n=3,975",
+   "outcome": "Not graduating from high school by age 19",
+   "effect_as_reported": "Not graduating by 19: 4% proficient vs 16% not proficient (four times); 9% basic; 23% below basic",
+   "excerpt": "The rates are highest for the low, below-basic readers: 23 percent of these children drop out or fail to finish high school on time, compared to 9 percent of children with basic reading skills and 4 percent of proficient readers.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-002": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Lesnick, J., Goerge, R. M., Smithgall, C., & Gwynne, J. (2010). Reading on Grade Level in Third Grade: How Is It Related to High School Performance and College Enrollment? Chapin Hall at the University of Chicago.",
+   "fetched_url": "https://www.chapinhall.org/wp-content/uploads/Reading_on_Grade_Level_111710.pdf",
+   "design": "longitudinal cohort; correlation plus multilevel regression (students in schools) controlling for demographics and third-grade school effects",
+   "population_location": "Chicago Public Schools, focus cohort of about 26,000 third graders (ITBS)",
+   "outcome": "Eighth-grade ITBS reading",
+   "effect_as_reported": "r=0.67 between grade 3 and grade 8 ITBS reading; about 40% of below-level third graders also below level in grade 8; group differences remain after covariates",
+   "excerpt": "about 40 percent were also below grade level in eighth grade. Multilevel regression models that take into account third-grade school effects and demographic characteristics of students affirm the importance of third-grade reading level.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-003": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Lesnick, J., Goerge, R. M., Smithgall, C., & Gwynne, J. (2010). Reading on Grade Level in Third Grade: How Is It Related to High School Performance and College Enrollment? Chapin Hall at the University of Chicago.",
+   "fetched_url": "https://www.chapinhall.org/wp-content/uploads/Reading_on_Grade_Level_111710.pdf",
+   "design": "longitudinal cohort; multilevel regression adding grade 8 reading, grade 9 school and grade 9 course performance",
+   "population_location": "Chicago Public Schools cohort of about 26,000 third graders followed to graduation and college",
+   "outcome": "Five-year high school graduation; college enrollment",
+   "effect_as_reported": "Graduated in 5 years: nearly 80% above level, 60% at level, 45% below level; with ninth-grade performance in the model, third-grade level no longer predicts graduation; only above-level predicts college attendance among graduates",
+   "excerpt": "When ninth-grade performance was included as a predictor, being below- or at-grade-level was no longer a significant predictor of high school graduation or college attendance.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-004": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Harding, J. F., Herrmann, M., Hanno, E. S., & Ross, C. (2019). Using kindergarten entry assessments to measure whether Philadelphia's students are on-track for reading proficiently. REL Mid-Atlantic / IES. ERIC ED599402.",
+   "fetched_url": "https://files.eric.ed.gov/fulltext/ED599402.pdf",
+   "design": "predictive validity study; correlations and a threshold classification index",
+   "population_location": "School District of Philadelphia kindergarten cohort 2014/15 (KEI) to grade 3 PSSA ELA 2017/18",
+   "outcome": "Grade 3 PSSA ELA score and proficiency",
+   "effect_as_reported": "r=0.42 (Emerging Academic Competencies) and 0.32 (Learning Engagement); threshold of 6 correctly predicted 53% of proficient and 73% of non-proficient students",
+   "excerpt": "Emerging Academic Competencies had a correlation of 0.42 with ELA scores on the grade 3 PSSA, and Learning Engagement Competencies had a correlation of 0.32 with the same grade 3 test scores",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-005": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Harding, J. F., Herrmann, M., Hanno, E. S., & Ross, C. (2019). Using kindergarten entry assessments to measure whether Philadelphia's students are on-track for reading proficiently. REL Mid-Atlantic / IES. ERIC ED599402.",
+   "fetched_url": "https://files.eric.ed.gov/fulltext/ED599402.pdf",
+   "design": "descriptive correlations (unweighted pairwise)",
+   "population_location": "School District of Philadelphia 2014/15 kindergarten cohort, random sample used to set the threshold",
+   "outcome": "Grade 3 PSSA ELA score",
+   "effect_as_reported": "Spring AIMSweb correlation with grade 3 PSSA ELA: K 0.50, G1 0.53, G2 0.73, G3 0.72",
+   "excerpt": "The strength of the associations between AIMSweb scores and grade 3 PSSA scores generally increased from kindergarten to grade 3 (0.50 to 0.73; table 6).",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-006": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Schlesinger, M., Saleet, G., Stewart, K., & Mosher, K. (2021). Four-year analysis of 2015-16 Kindergarteners' aimswebPlus reading and PSSA performance from 2015-16 to 2018-19. School District of Philadelphia, Office of Research and Evaluation.",
+   "fetched_url": "https://www.philasd.org/research/wp-content/uploads/sites/90/2021/10/Four-Year-Kindergarten-Aimsweb-PSSA-Cohort-Analysis-Research-Report-October-2021.pdf",
+   "design": "descriptive cohort analysis (average national percentile ranks; no covariates)",
+   "population_location": "Philadelphia 2015-16 kindergarten cohort with complete aimswebPlus and grade 3 ELA PSSA data, n=4,194",
+   "outcome": "aimswebPlus performance group; grade 3 ELA PSSA level",
+   "effect_as_reported": "Fall-K average NPR by later PSSA level: Advanced 72, Proficient 55, Basic 41, Below Basic 29",
+   "excerpt": "The average student generally fell in the same aimswebPlus performance group in spring of third grade (2018-19) as where they started in fall of kindergarten (2015-16).",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-007": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Jordan, E., McKenzie, S. C., & Ritter, G. W. (2018). Long-Term Outcomes of Low-Achieving Third Grade Readers. Arkansas Education Report, 16(3). Office for Education Policy, University of Arkansas.",
+   "fetched_url": "https://oep.uark.edu/files/2018/12/3rd-grade-reading-rq3ors.pdf",
+   "design": "descriptive longitudinal cohort analysis",
+   "population_location": "Arkansas public school students, three cohorts entering grade 3 in 2008-09 to 2010-11",
+   "outcome": "Reaching state-average reading by high school (average z-score of 0 over grades 8-10)",
+   "effect_as_reported": "11.5% of low-achieving third-grade readers caught up (14%, 11%, 10% by cohort); white, female and economically advantaged students more likely to catch up",
+   "excerpt": "Overall, 11.5% of students who demonstrated low reading ability in third grade had “caught up” to average reading performance by high school.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-008": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Duncan, G. J., Dowsett, C. J., Claessens, A., Magnuson, K., Huston, A. C., Klebanov, P., Pagani, L. S., Feinstein, L., Engel, M., Brooks-Gunn, J., Sexton, H., Duckworth, K., & Japel, C. (2007). School Readiness and Later Achievement. Developmental Psychology, 43(6), 1428-1446. ERIC EJ779938.",
+   "fetched_url": "https://eric.ed.gov/?id=EJ779938",
+   "design": "regression on six longitudinal data sets plus a meta-analysis of the coefficients",
+   "population_location": "Six longitudinal data sets (countries not named in the abstract)",
+   "outcome": "Later school reading and math achievement",
+   "effect_as_reported": "Strongest predictors: school-entry math, reading and attention; meta-analysis ranks math > reading > attention; socioemotional behaviors generally insignificant",
+   "excerpt": "A meta-analysis of the results shows that early math skills have the greatest predictive power, followed by reading and then attention skills.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-009": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Herbers, J. E., Cutuli, J. J., Supkoff, L. M., Heistad, D., Chan, C.-K., Hinz, E., & Masten, A. S. (2012). Early Reading Skills and Academic Achievement Trajectories of Students Facing Poverty, Homelessness, and High Residential Mobility. Educational Researcher, 41(9), 366-374. ERIC EJ987215.",
+   "fetched_url": "https://eric.ed.gov/?id=EJ987215",
+   "design": "longitudinal growth modeling",
+   "population_location": "18,011 students grouped by socioeconomic risk (location not stated in the abstract)",
+   "outcome": "Growth in reading and math achievement, grades 3-8",
+   "effect_as_reported": "First-grade oral reading and risk status predicted growth; risk predicted beyond early reading and moderated the early-reading link",
+   "excerpt": "Socioeconomic risk and oral reading ability in first grade predicted growth of reading and math achievement in Grades 3 through 8.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-010": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Juel, C. (1988). Learning to Read and Write: A Longitudinal Study of 54 Children from First through Fourth Grades. Journal of Educational Psychology, 80(4), 437-447. ERIC EJ389953.",
+   "fetched_url": "https://eric.ed.gov/?id=EJ389953",
+   "design": "small longitudinal study",
+   "population_location": "54 children, grades 1-4 (location not stated in the abstract)",
+   "outcome": "Reading and writing ability at grade 4",
+   "effect_as_reported": "Poor grade 1 readers almost invariably poor readers at end of grade 4; early reading predicted later ability better than early writing",
+   "excerpt": "Poor first-grade readers almost invariably were poor readers at completion of grade four. Poor readers tended to become poor writers. Early writing skill did not predict later ability as well as did early reading ability.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-011": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Lacoe, J., & Steinberg, M. P. (2019). Do Suspensions Affect Student Outcomes? Educational Evaluation and Policy Analysis, 41(1), 34-62. ERIC EJ1204837.",
+   "fetched_url": "https://eric.ed.gov/?id=EJ1204837",
+   "design": "student fixed effects and instrumental variables (district-wide policy change)",
+   "population_location": "School District of Philadelphia student panel data",
+   "outcome": "Math and reading achievement; peer achievement and absences",
+   "effect_as_reported": "Suspension decreases suspended students' math and reading achievement; very small negative peer achievement spillovers from serious-misconduct suspensions; no change in peer absences",
+   "excerpt": "A suspension decreases math and reading achievement for suspended students. The effects are robust to IV estimates leveraging a district-wide policy change in suspension use.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-012": {
+   "verdict": "PARTIAL",
+   "correct_citation": "Steinberg, M. P., & Lacoe, J. (2017). The Academic and Behavioral Consequences of Discipline Policy Reform: Evidence from Philadelphia. Thomas B. Fordham Institute. ERIC ED598616.",
+   "fetched_url": "https://files.eric.ed.gov/fulltext/ED598616.pdf",
+   "design": "difference-in-differences (district vs other PA districts for suspensions; student and school-compliance groups for outcomes, labelled 'associational' by the authors)",
+   "population_location": "School District of Philadelphia, 2012-13 code-of-conduct reform",
+   "outcome": "Suspensions, absences, math and ELA achievement",
+   "effect_as_reported": "Previously conduct-suspended students: 1.45 fewer absences, no change in achievement; no long-term impact on conduct suspensions; peers in partial- and non-complier schools -0.06 SD math (non-compliers also -0.03 SD ELA); full compliers no significant change",
+   "excerpt": "Students suspended prior to the policy change had 1.45 fewer school absences in the year after the change, compared to students who were not suspended pre-reform (see Figure 6, Panel B).",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-013": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Lacoe, J., & Steinberg, M. P. (2018). Rolling Back Zero Tolerance: The Effect of Discipline Policy Reform on Suspension Usage and Student Outcomes. Peabody Journal of Education, 93(2), 207-227. ERIC EJ1179434.",
+   "fetched_url": "https://eric.ed.gov/?id=EJ1179434",
+   "design": "difference-in-differences (district level)",
+   "population_location": "School District of Philadelphia, 2012-13 discipline reform",
+   "outcome": "Suspensions, serious incidents, truancy, district math and ELA achievement",
+   "effect_as_reported": "Modest decline in nonviolent-infraction suspensions in reform year; total suspensions unchanged; serious incidents up; truancy up; district math and ELA achievement down",
+   "excerpt": "Philadelphia's reform resulted in a modest decline in suspensions for nonviolent infractions in the year of reform; however, total suspensions remained unchanged while serious incidents of student misconduct increased.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-014": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Balfanz, R., Byrnes, V., & Fox, J. (2014). Sent Home and Put Off-Track: The Antecedents, Disproportionalities, and Consequences of Being Suspended in the Ninth Grade. Journal of Applied Research on Children, 5(2), Article 13. ERIC EJ1188519.",
+   "fetched_url": "https://files.eric.ed.gov/fulltext/EJ1188519.pdf",
+   "design": "longitudinal cohort; descriptive rates plus logistic regression controlling for demographics, attendance and course performance",
+   "population_location": "Florida statewide, 181,897 first-time ninth graders in 2000-01",
+   "outcome": "High school graduation; dropout; postsecondary enrollment",
+   "effect_as_reported": "First suspension: graduation chance drops from 3 in 4 to about half, dropout chance doubles; each additional suspension lowers graduation odds by 20% and postsecondary enrollment odds by 12%",
+   "excerpt": "each additional suspension further decreases a student’s odds of graduating high school by 20%, and decreases their odds of enrolling in post-secondary schooling by 12%.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-015": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Bacher-Hicks, A., Billings, S. B., & Deming, D. J. (2019). The School to Prison Pipeline: Long-Run Impacts of School Suspensions on Adult Crime. NBER Working Paper No. 26257.",
+   "fetched_url": "https://www.nber.org/system/files/working_papers/w26257/w26257.pdf",
+   "design": "quasi-experimental: school-boundary change (plus principal-switch design), conditioning on baseline test scores",
+   "population_location": "Charlotte-Mecklenburg Schools, middle school students around the 2002 boundary change",
+   "outcome": "Dropout, four-year college attendance, adult arrest and incarceration, achievement",
+   "effect_as_reported": "1 SD stricter middle school: +1.7 pp dropout (15%), -2.4 pp four-year college (11%), 15-20% more likely arrested and incarcerated; no significant achievement impact",
+   "excerpt": "schools that are one standard deviation stricter are 1.7 percentage points more likely to drop out of school (a 15 percent increase) and 2.4 percentage points less likely to attend a 4-year college (an 11 percent decrease).",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-016": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Sorensen, L. C., Bushway, S. D., & Gifford, E. J. (2021). Getting Tough? The Effects of Discretionary Principal Discipline on Student Outcomes. EdWorkingPaper No. 20-216, Annenberg Institute at Brown University (Education Finance and Policy, 2022, 17(2), 255-284).",
+   "fetched_url": "https://www.edworkingpapers.com/sites/default/files/ai20-216-v022021.pdf",
+   "design": "variation in principal propensity to remove (PTR) students; linked administrative records with fixed effects",
+   "population_location": "North Carolina middle schools, 2008-2016 linked discipline, education and justice records",
+   "outcome": "Minor misconduct, high school graduation, absences, test scores",
+   "effect_as_reported": "10th to 90th percentile PTR: on-time graduation -2 pp for all students (p<0.1); for students with minor infractions +0.5 absence days, -0.02 SD test scores, -2.7 pp graduation",
+   "excerpt": "to the 90th percentile of PTR would thereby increase absences by 0.5 days, reduce test scores by 0.02 standard deviations, increase grade retention rates by 0.4 percentage points, and decrease graduation rates by 2.7 percentage points.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-017": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Chu, E. M., & Ready, D. D. (2018). Exclusion and Urban Public High Schools: Short- and Long-Term Consequences of School Suspensions. American Journal of Education, 124(4), 479-509. ERIC EJ1186270.",
+   "fetched_url": "https://eric.ed.gov/?id=EJ1186270",
+   "design": "quasi-experimental methods with longitudinal data (abstract frames results as associations)",
+   "population_location": "New York City public high school students",
+   "outcome": "Attendance, course completion, test scores, dropout, 4/5/6-year graduation",
+   "effect_as_reported": "Suspended students had weaker attendance, course completion and test scores, more dropout, less graduation within 4, 5 or 6 years",
+   "excerpt": "suspended students had weaker attendance, course completion rates, and standardized test scores; were more likely to drop out; and were less likely to graduate within 4, 5, or 6 years.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-018": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Anderson, K. P., Ritter, G. W., & Zamarro, G. (2019). Understanding a Vicious Cycle: The Relationship between Student Discipline and Student Academic Outcomes. Educational Researcher, 48(5), 251-262. ERIC EJ1220624.",
+   "fetched_url": "https://eric.ed.gov/?id=EJ1220624",
+   "design": "regression with covariates, controlling for infraction type; sensitivity checks for selection",
+   "population_location": "Arkansas, all K-12 public schools, 10 years of student-level data",
+   "outcome": "Test scores and grade retention",
+   "effect_as_reported": "Exclusionary consequences related to worse test scores and more retention than less exclusionary ones; may be driven by selection bias",
+   "excerpt": "However, despite controlling for a robust set of covariates, sensitivity checks demonstrate that the estimated relationships between consequences and academic outcomes may still be driven by selection bias into consequence type.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-019": {
+   "verdict": "SUPPORTED",
+   "correct_citation": "Hwang, N. (2018). Suspensions and Achievement: Varying Links by Type, Frequency, and Subgroup. Educational Researcher, 47(6), 363-374. ERIC EJ1189786.",
+   "fetched_url": "https://eric.ed.gov/?id=EJ1189786",
+   "design": "within-student comparison across school quarters (student fixed effects style)",
+   "population_location": "Students in a dataset with 12 achievement time points over 3 years (location not stated in the abstract)",
+   "outcome": "Math and ELA achievement",
+   "effect_as_reported": "Multiple suspensions associated with lower math and ELA achievement after controlling for between-student differences; suggestively stronger for higher-risk students",
+   "excerpt": "Results show that multiple suspensions are associated with lower math and English language arts achievement even after controlling for differences between students.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
+  },
+  "E-020": {
+   "verdict": "PARTIAL",
+   "correct_citation": "Noltemeyer, A. L., Ward, R. M., & Mcloughlin, C. (2015). Relationship between School Suspension and Student Outcomes: A Meta-Analysis. School Psychology Review, 44(2), 224-240. ERIC EJ1141532.",
+   "fetched_url": "https://eric.ed.gov/?id=EJ1141532",
+   "design": "meta-analysis",
+   "population_location": "53 cases from 34 studies, 1986-2012",
+   "outcome": "Academic achievement; school dropout",
+   "effect_as_reported": "Significant inverse suspension-achievement relationship; significant positive suspension-dropout relationship; moderated by suspension type and study or participant characteristics",
+   "excerpt": "A meta-analysis was conducted on 53 cases from 34 studies. The results revealed a significant inverse relationship between suspensions and achievement, along with a significant positive relationship between suspensions and dropout.",
+   "checked_in": "evidence-registry/verification/batch1_results.csv"
   },
   "KV-002": {
    "verdict": "SUPPORTED",

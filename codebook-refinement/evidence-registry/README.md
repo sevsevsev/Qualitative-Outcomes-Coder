@@ -18,6 +18,9 @@ It is not part of the codebook and never part of the coding prompt.
 - `pathways.csv`: the registry's own pathways, beyond the SPOTlight links: a step from an
   outcome code or an activity to a result, with `tier` = `tested`, `research-associated`
   or `checked, not supported`.
+  Registry pathway ids are `EP-01`, `EP-02` and so on. A "step finding" (research that
+  reaching an outcome predicts a District indicator) has no program model and a summary that
+  starts with "Step finding:".
 - `verification/batchN_claims.csv` and `batchN_results.csv`: what each independent checker
   was given, and what it found. Registry claim ids are `E-001`, `E-002` and so on.
 - `evidence_registry.json`: built by `python3 codebook-refinement/evidence-registry/build_registry.py`.

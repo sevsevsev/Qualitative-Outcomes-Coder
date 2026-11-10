@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseCSV, atomicJsonToCSV, codingSpecificity } from './geminiService.js';
+import { parseCSV, atomicJsonToCSV, codingSpecificity, detectDelimiter, decodeTextFile } from './geminiService.js';
 import { parseCsvRecords } from '../scripts/codebookEvalScoring.js';
 import { AtomicBatchItem } from '../types.js';
 
@@ -48,10 +48,54 @@ describe('parseCSV', () => {
     expect(() => parseCSV('')).toThrow(/empty/i);
   });
 
+  it('reads a tab-separated file saved with a .csv name (Logic Model Extractor export)', () => {
+    const tsv =
+      'row_id\torganization\tprogram\tgroup\tdomain\toutcome_text\tsource_type\r\n' +
+      'abc-0\tGirls on the Run\tGirls on the Run\tyouth\tShort-Term Outcomes\t"Girls will build confidence, and make friends"\tlogic_model\r\n';
+    const rows = parseCSV(tsv);
+    expect(rows).toEqual([
+      {
+        row_id: 'abc-0',
+        organization: 'Girls on the Run',
+        program: 'Girls on the Run',
+        group: 'youth',
+        domain: 'Short-Term Outcomes',
+        outcome_text: 'Girls will build confidence, and make friends',
+        source_type: 'logic_model',
+      },
+    ]);
+  });
+
+  it('keeps tabs inside cells of a comma-separated file', () => {
+    const csv = 'outcome_text,organization\n"Read\tmore",Acme';
+    expect(parseCSV(csv)).toEqual([{ outcome_text: 'Read\tmore', organization: 'Acme' }]);
+  });
+
   it('pads missing trailing columns with empty strings', () => {
     const csv = 'outcome_text,organization,program\n"Hi"';
     const rows = parseCSV(csv);
     expect(rows).toEqual([{ outcome_text: 'Hi', organization: '', program: '' }]);
+  });
+});
+
+describe('detectDelimiter', () => {
+  it('picks tab when the header line has more tabs than commas', () => {
+    expect(detectDelimiter('a\tb\tc\n1,2\t3')).toBe('\t');
+  });
+  it('picks comma otherwise, and ignores delimiters inside quoted headers', () => {
+    expect(detectDelimiter('a,b\n1\t2\t3')).toBe(',');
+    expect(detectDelimiter('"x\ty\tz",b\n1,2')).toBe(',');
+  });
+});
+
+describe('decodeTextFile', () => {
+  it('reads UTF-8 bytes as UTF-8', () => {
+    expect(decodeTextFile(new TextEncoder().encode('caf\u00e9 \u2014 \u201chi\u201d'))).toBe('caf\u00e9 \u2014 \u201chi\u201d');
+  });
+  it('falls back to Windows-1252 for curly quotes and dashes saved by Excel', () => {
+    // 0x93 / 0x94 are curly double quotes, 0x97 is an em dash, 0x92 a curly apostrophe
+    const bytes = new Uint8Array([0x93, 0x68, 0x69, 0x94, 0x20, 0x97, 0x20, 0x69, 0x92, 0x73]);
+    expect(decodeTextFile(bytes)).toBe('\u201chi\u201d \u2014 i\u2019s');
   });
 });
 

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { processBatch, atomicJsonToCSV } from './services/geminiService.js';
+import { processBatch, atomicJsonToCSV, decodeTextFile } from './services/geminiService.js';
 import { SOURCE_TYPES, csvHasSourceType } from './services/sourceType.js';
 import { needsExtraction } from './services/resultExtraction.js';
 import { BatchAnalysisResult, LoadingState, CodebookType } from './types.js';
@@ -92,13 +92,13 @@ const App: React.FC = () => {
     
     const reader = new FileReader();
     reader.onload = (event) => {
-      const text = event.target?.result as string;
+      const text = decodeTextFile(event.target?.result as ArrayBuffer);
       setInputText(text);
     };
     reader.onerror = () => {
       setError('Failed to read file');
     };
-    reader.readAsText(file);
+    reader.readAsArrayBuffer(file);
   };
 
   const handleAnalyze = async (e: React.FormEvent) => {

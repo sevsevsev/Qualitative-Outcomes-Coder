@@ -14,6 +14,36 @@ import { expandExtractedRows, ExpandedRow, extractionKey, needsExtraction, State
 // defensive whitespace trim, not the string-surgery it used to be.
 const cleanCodebookString = (val: string | undefined): string => (val ?? "").trim();
 
+// Decode an uploaded file's bytes. Files saved from Excel on Windows (and the
+// Logic Model Extractor's exports) are often Windows-1252, not UTF-8: curly
+// quotes and dashes would turn into replacement characters if read as UTF-8.
+// Try strict UTF-8 first and fall back to Windows-1252 only when that fails.
+export const decodeTextFile = (bytes: ArrayBuffer | Uint8Array): string => {
+  try {
+    return new TextDecoder('utf-8', { fatal: true }).decode(bytes);
+  } catch {
+    return new TextDecoder('windows-1252').decode(bytes);
+  }
+};
+
+// Pick the field delimiter from the header line. Spreadsheet tools and the
+// Logic Model Extractor sometimes save tab-separated text under a .csv name;
+// reading that as comma-separated turns the whole header row into one cell.
+// A header line with more tabs than commas (outside quotes) is read as
+// tab-separated; anything else stays comma-separated.
+export const detectDelimiter = (text: string): ',' | '\t' => {
+  let tabs = 0;
+  let commas = 0;
+  let insideQuotes = false;
+  for (const char of text) {
+    if (char === '"') insideQuotes = !insideQuotes;
+    else if (!insideQuotes && char === '\n') break;
+    else if (!insideQuotes && char === '\t') tabs++;
+    else if (!insideQuotes && char === ',') commas++;
+  }
+  return tabs > commas ? '\t' : ',';
+};
+
 export const parseCSV = (text: string): any[] => {
   const rows: string[][] = [];
   let currentRow: string[] = [];
@@ -22,6 +52,7 @@ export const parseCSV = (text: string): any[] => {
 
   // Remove BOM and normalize newlines
   const cleanText = text.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+  const delimiter = detectDelimiter(cleanText);
 
   for (let i = 0; i < cleanText.length; i++) {
     const char = cleanText[i];
@@ -34,7 +65,7 @@ export const parseCSV = (text: string): any[] => {
       } else {
         insideQuotes = !insideQuotes;
       }
-    } else if (char === ',' && !insideQuotes) {
+    } else if (char === delimiter && !insideQuotes) {
       currentRow.push(currentCell);
       currentCell = '';
     } else if (char === '\n' && !insideQuotes) {

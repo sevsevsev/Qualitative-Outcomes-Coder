@@ -10,6 +10,7 @@ import { Codebook } from './types.js';
 import { originalCodebook } from './original.js';
 import { acceleratePhillyCodebook } from './acceleratePhilly.js';
 import { youthOutcomesV3Codebook } from './youthOutcomesV3.js';
+import { portraitOfAGraduateCodebook } from './portraitOfAGraduate.js';
 
 // Each value is already typed as Codebook at its own definition site
 // (codebooks/original.ts, codebooks/acceleratePhilly.ts), so a `satisfies`
@@ -20,6 +21,9 @@ export const CODEBOOK_REGISTRY = {
   original: originalCodebook,
   accelerate_philly: acceleratePhillyCodebook,
   youth_outcomes_v3: youthOutcomesV3Codebook,
+  // Testing codebook (CP-13-01, 2026-11-10): codes straight to the District
+  // Portrait of a Graduate competencies and skills.
+  portrait_of_a_graduate: portraitOfAGraduateCodebook,
 } as const;
 
 export type CodebookType = keyof typeof CODEBOOK_REGISTRY;

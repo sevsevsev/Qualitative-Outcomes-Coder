@@ -75,7 +75,9 @@ export interface ExplorerCodebook {
   sources: ExplorerSource[];
 }
 
-const CODE_RE = /^(?:(?:Domain|Code)\s+)?([A-Z]?\d+(?:\.\d+)*)[.:]?\s+(.+)$/;
+// Numbers look like "1.2", "Y1.4", "Code 01", or the Portrait of a Graduate's
+// "POG.1.1" and "OUT" (CP-13-01).
+const CODE_RE = /^(?:(?:Domain|Code)\s+)?([A-Z]{2,3}(?:\.\d+)+|[A-Z]{3}|[A-Z]?\d+(?:\.\d+)*)[.:]?\s+(.+)$/;
 const FIELD_RE = /^-?\s*([A-Z][A-Za-z /&-]{1,40}?):\s+(.*)$/;
 const GROUP_RE = /^([A-Z]?\d+(?:\.[\dA-Z]+)+)\s+(.+?)\s*\(Category Header[^)]*\)\s*$/;
 

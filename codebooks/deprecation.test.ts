@@ -12,7 +12,7 @@ import { parseExplorerRoute } from '../components/CodebookExplorer.js';
 describe('deprecated codebooks', () => {
   it('retires 2.5.x (original) from the pickers but keeps it registered', () => {
     expect(CODEBOOK_REGISTRY.original.deprecated).toEqual({ since: '2026-09-26', replacedBy: 'youth_outcomes_v3' });
-    expect(SELECTABLE_CODEBOOK_LIST.map(cb => cb.id)).toEqual(['accelerate_philly', 'youth_outcomes_v3']);
+    expect(SELECTABLE_CODEBOOK_LIST.map(cb => cb.id)).toEqual(['accelerate_philly', 'youth_outcomes_v3', 'portrait_of_a_graduate']);
     expect(isSelectableCodebook('original')).toBe(false);
     expect(getCodebook('original').version).toBe('2.5.2');
   });

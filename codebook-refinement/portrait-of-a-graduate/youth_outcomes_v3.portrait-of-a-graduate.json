@@ -1,0 +1,1712 @@
+{
+  "crosswalkVersion": "0.1.0",
+  "status": "draft for review",
+  "codebook": "youth_outcomes_v3",
+  "codebookVersion": "3.3.0",
+  "rule": "A link says which Portrait of a Graduate skills a partner outcome works toward. It never says what stage participants reach, and it is never a score for a partner.",
+  "source": {
+    "title": "School District of Philadelphia Portrait of a Graduate Competency Framework, Updated Skills Map 11.2",
+    "author": "Written by Building 21 for the School District of Philadelphia",
+    "license": "CC BY-NC-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "received": "2026-11-10",
+    "note": "Identifiers follow version 11.2 only; other versions number the skills differently. Only competencies 1 to 8 have progressions."
+  },
+  "fits": [
+    {
+      "id": "direct",
+      "description": "The code names the same result the Portrait skill describes."
+    },
+    {
+      "id": "partial",
+      "description": "Some statements under the code fit the Portrait skill and some do not, or the code sits next to the skill without matching it."
+    },
+    {
+      "id": "none",
+      "description": "The Portrait has no skill for this result: a feeling, a status, a health condition, a relationship received, or a result for families, staff or systems."
+    }
+  ],
+  "portrait": [
+    {
+      "id": "POG.1",
+      "type": "competency",
+      "group": "Lifelong Learner",
+      "competency": "POG.1",
+      "name": "Direct my own learning",
+      "statement": "I can take ownership of my learning by connecting it to what matters to me and the world around me, knowing how I think and learn, and adjusting how I work as I go.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.1.1",
+      "type": "skill",
+      "group": "Lifelong Learner",
+      "competency": "POG.1",
+      "name": "Connect what I'm learning to what matters to me",
+      "statement": "I can connect what I'm learning to my interests, goals, and the world around me.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.1.2",
+      "type": "skill",
+      "group": "Lifelong Learner",
+      "competency": "POG.1",
+      "name": "Understand how I learn and how I think",
+      "statement": "I can recognize how I learn best and how I think, and use that to guide my learning.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.1.3",
+      "type": "skill",
+      "group": "Lifelong Learner",
+      "competency": "POG.1",
+      "name": "Plan and manage my time, attention, and work",
+      "statement": "I can plan my work, manage my time and attention, and follow through.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.1.4",
+      "type": "skill",
+      "group": "Lifelong Learner",
+      "competency": "POG.1",
+      "name": "Monitor my progress and adjust my strategies",
+      "statement": "I can monitor my progress as I work and adjust my strategies to stay on track.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.1.5",
+      "type": "skill",
+      "group": "Lifelong Learner",
+      "competency": "POG.1",
+      "name": "Seek and use feedback to grow",
+      "statement": "I can seek feedback from others and use it to improve.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.2",
+      "type": "competency",
+      "group": "Lifelong Learner",
+      "competency": "POG.2",
+      "name": "Persist with purpose and adapt with confidence",
+      "statement": "I can understand myself, care for my well-being, take healthy risks, and persist through challenge and change in pursuit of what matters most to me.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.2.1",
+      "type": "skill",
+      "group": "Lifelong Learner",
+      "competency": "POG.2",
+      "name": "Know my values and aspirations",
+      "statement": "I can name my values, aspirations, and what matters most to me.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.2.2",
+      "type": "skill",
+      "group": "Lifelong Learner",
+      "competency": "POG.2",
+      "name": "Care for my well-being",
+      "statement": "I can take care of my physical, mental, and emotional well-being.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.2.3",
+      "type": "skill",
+      "group": "Lifelong Learner",
+      "competency": "POG.2",
+      "name": "Manage my emotions, stress, and impulses",
+      "statement": "I can recognize and manage my emotions, stress, and impulses.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.2.4",
+      "type": "skill",
+      "group": "Lifelong Learner",
+      "competency": "POG.2",
+      "name": "Navigate challenges and adapt through change",
+      "statement": "I can persevere through difficulty and adapt as circumstances change.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.3",
+      "type": "competency",
+      "group": "Culturally Responsive Communicator",
+      "competency": "POG.3",
+      "name": "Communicate Ideas",
+      "statement": "I can shape and share ideas, emotions, and information clearly and effectively across audiences, contexts, and forms of expression.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.3.1",
+      "type": "skill",
+      "group": "Culturally Responsive Communicator",
+      "competency": "POG.3",
+      "name": "Choose and introduce my message",
+      "statement": "I can identify my purpose, audience, and message, and introduce it clearly.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.3.2",
+      "type": "skill",
+      "group": "Culturally Responsive Communicator",
+      "competency": "POG.3",
+      "name": "Convey ideas in writing",
+      "statement": "I can write clearly and effectively for my purpose and audience.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.3.3",
+      "type": "skill",
+      "group": "Culturally Responsive Communicator",
+      "competency": "POG.3",
+      "name": "Present to an audience",
+      "statement": "I can present with focus, clarity, and impact to an audience.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.3.4",
+      "type": "skill",
+      "group": "Culturally Responsive Communicator",
+      "competency": "POG.3",
+      "name": "Communicate visually",
+      "statement": "I can communicate visually with clarity and impact.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.3.5",
+      "type": "skill",
+      "group": "Culturally Responsive Communicator",
+      "competency": "POG.3",
+      "name": "Craft stories",
+      "statement": "I can craft stories with arc and detail to build connection or communicate ideas.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.4",
+      "type": "competency",
+      "group": "Culturally Responsive Communicator",
+      "competency": "POG.4",
+      "name": "Engage in Dialogue and Advocacy",
+      "statement": "I can listen actively, engage with empathy across cultures and perspectives, and advocate for myself and others with respect and impact.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.4.1",
+      "type": "skill",
+      "group": "Culturally Responsive Communicator",
+      "competency": "POG.4",
+      "name": "Engage in discussion",
+      "statement": "I can listen with full presence and contribute meaningfully to discussion.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.4.2",
+      "type": "skill",
+      "group": "Culturally Responsive Communicator",
+      "competency": "POG.4",
+      "name": "Navigate difficult conversations with honesty and care",
+      "statement": "I can stay engaged in difficult conversations with honesty and care.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.4.3",
+      "type": "skill",
+      "group": "Culturally Responsive Communicator",
+      "competency": "POG.4",
+      "name": "Advocate for myself and articulate my own needs",
+      "statement": "I can articulate my needs, goals, and boundaries and advocate for myself.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.4.4",
+      "type": "skill",
+      "group": "Culturally Responsive Communicator",
+      "competency": "POG.4",
+      "name": "Advocate for others",
+      "statement": "I can recognize when others are not being heard and advocate for them.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.5",
+      "type": "competency",
+      "group": "Strong Community Builder and Collaborator",
+      "competency": "POG.5",
+      "name": "Collaborate effectively on teams",
+      "statement": "I can contribute my strengths, build inclusive teams, navigate disagreement, check in on progress, and help my team produce work no one of us could do alone.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.5.1",
+      "type": "skill",
+      "group": "Strong Community Builder and Collaborator",
+      "competency": "POG.5",
+      "name": "Establish shared purpose, norms, and roles",
+      "statement": "I can help establish shared purpose, norms, and roles on a team.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.5.2",
+      "type": "skill",
+      "group": "Strong Community Builder and Collaborator",
+      "competency": "POG.5",
+      "name": "Navigate conflicts and challenges productively",
+      "statement": "I can navigate conflicts and challenges productively.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.5.3",
+      "type": "skill",
+      "group": "Strong Community Builder and Collaborator",
+      "competency": "POG.5",
+      "name": "Monitor progress and share accountability",
+      "statement": "I can track my team's progress and share accountability.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.5.4",
+      "type": "skill",
+      "group": "Strong Community Builder and Collaborator",
+      "competency": "POG.5",
+      "name": "Reflect on our collaboration",
+      "statement": "I can reflect on how my team worked together and how to improve.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.6",
+      "type": "competency",
+      "group": "Strong Community Builder and Collaborator",
+      "competency": "POG.6",
+      "name": "Build relationships, networks, and strengthen community",
+      "statement": "I can foster belonging, build and draw on networks, take action, and engage in the communities I am part of to make them stronger.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.6.1",
+      "type": "skill",
+      "group": "Strong Community Builder and Collaborator",
+      "competency": "POG.6",
+      "name": "Foster belonging",
+      "statement": "I can foster belonging and welcome others into a community.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.6.2",
+      "type": "skill",
+      "group": "Strong Community Builder and Collaborator",
+      "competency": "POG.6",
+      "name": "Build and draw on my network",
+      "statement": "I can build and draw on a network of people and resources.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.6.3",
+      "type": "skill",
+      "group": "Strong Community Builder and Collaborator",
+      "competency": "POG.6",
+      "name": "Take action to improve my community",
+      "statement": "I can take action to improve my community.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.6.4",
+      "type": "skill",
+      "group": "Strong Community Builder and Collaborator",
+      "competency": "POG.6",
+      "name": "Build and engage in healthy online communities",
+      "statement": "I can build and engage in healthy online communities.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.7",
+      "type": "competency",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.7",
+      "name": "Think Critically",
+      "statement": "I can ask good questions, evaluate information and arguments, weigh perspectives, and improve my own reasoning to reach sound, well-supported conclusions.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.7.1",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.7",
+      "name": "Ask questions",
+      "statement": "I can ask questions that guide my thinking and inquiry.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.7.2",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.7",
+      "name": "Find and evaluate information",
+      "statement": "I can find relevant information and evaluate whether to trust it.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.7.3",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.7",
+      "name": "Analyze and evaluate media",
+      "statement": "I can analyze and evaluate media, including a creator's purpose and how it tries to persuade me.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.7.4",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.7",
+      "name": "Interpret and synthesize information, data, and representations",
+      "statement": "I can interpret and synthesize information, data, and representations to make meaning.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.7.5",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.7",
+      "name": "Evaluate evidence, reasoning, and arguments",
+      "statement": "I can evaluate evidence, reasoning, and arguments to reach a warranted judgment.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.7.6",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.7",
+      "name": "Think flexibly",
+      "statement": "I can consider multiple perspectives and revise my thinking when the evidence warrants.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.7.7",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.7",
+      "name": "Monitor and improve my reasoning",
+      "statement": "I can monitor my reasoning and take steps to improve it.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.8",
+      "type": "competency",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.8",
+      "name": "Solve Everyday and Real-World Problems",
+      "statement": "I can understand a problem, work toward the best solution while weighing its impact, test and improve it when I can, and reflect on my solution and what I learned.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.8.1",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.8",
+      "name": "Understand the problem",
+      "statement": "I can understand what a problem really is before trying to solve it.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.8.2",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.8",
+      "name": "Choose an approach",
+      "statement": "I can choose a problem-solving approach that fits the problem.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.8.3",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.8",
+      "name": "Develop, Test, and Improve Prototypes (When Appropriate)",
+      "statement": "I can develop, test, and improve prototypes when the problem calls for it.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.8.4",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.8",
+      "name": "Implement, evaluate, and reflect",
+      "statement": "I can implement my solution, evaluate how well it worked, and reflect on what I learned.",
+      "hasProgression": true
+    },
+    {
+      "id": "POG.9",
+      "type": "competency",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.9",
+      "name": "Create and Innovate",
+      "statement": "I can generate original ideas, develop and refine them into finished work, identify opportunities to create value for others, and turn promising ideas into action.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.9.1",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.9",
+      "name": "Generate original ideas",
+      "statement": "I can generate many and varied ideas, and combine, adapt, or build on ideas to create something new.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.9.2",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.9",
+      "name": "Develop and refine creative work",
+      "statement": "I can develop an idea into finished creative work, using critique and revision to strengthen its originality and craft.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.9.3",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.9",
+      "name": "Identify opportunities and create value",
+      "statement": "I can identify unmet needs or opportunities and develop ideas that create social, cultural, or economic value for others.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.9.4",
+      "type": "skill",
+      "group": "Ethical and Creative Problem Solver",
+      "competency": "POG.9",
+      "name": "Turn ideas into action",
+      "statement": "I can launch a venture, product, event, or initiative by organizing people and resources, weighing risks and rewards, and planning how to reach the people it serves.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.10",
+      "type": "competency",
+      "group": "Global Citizen",
+      "competency": "POG.10",
+      "name": "Engage as an Informed and Responsible Global Citizen",
+      "statement": "I can explain how people, communities, and systems are interconnected, investigate issues across perspectives, and use what I learn to participate in civic and global life.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.10.1",
+      "type": "skill",
+      "group": "Global Citizen",
+      "competency": "POG.10",
+      "name": "Explain global interconnections",
+      "statement": "I can explain how local choices and global social, economic, political, and environmental systems influence one another.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.10.2",
+      "type": "skill",
+      "group": "Global Citizen",
+      "competency": "POG.10",
+      "name": "Participate in civic and democratic life",
+      "statement": "I can explain how government works at the local, state, and national levels, including my rights and responsibilities, and use that knowledge to participate in civic and democratic processes.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.10.3",
+      "type": "skill",
+      "group": "Global Citizen",
+      "competency": "POG.10",
+      "name": "Examine global issues and perspectives",
+      "statement": "I can investigate global issues using evidence and perspectives from different places and people affected.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.10.4",
+      "type": "skill",
+      "group": "Global Citizen",
+      "competency": "POG.10",
+      "name": "Analyze how the past shapes the present",
+      "statement": "I can analyze primary and secondary sources in their historical context to explain causes, changes, and continuities, and how the past shapes present-day communities and issues.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.11",
+      "type": "competency",
+      "group": "Global Citizen",
+      "competency": "POG.11",
+      "name": "Make Ethical and Responsible Choices",
+      "statement": "I can weigh values, perspectives, and consequences when making choices that affect other people, communities, and the world, and act with integrity.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.11.1",
+      "type": "skill",
+      "group": "Global Citizen",
+      "competency": "POG.11",
+      "name": "Reason through ethical dilemmas",
+      "statement": "I can weigh competing values, responsibilities, and consequences to make and explain ethical choices.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.11.2",
+      "type": "skill",
+      "group": "Global Citizen",
+      "competency": "POG.11",
+      "name": "Weigh the impact of my choices",
+      "statement": "I can analyze how my choices affect people, communities, and the environment, now and in the future, and use that analysis to guide what I do.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.11.3",
+      "type": "skill",
+      "group": "Global Citizen",
+      "competency": "POG.11",
+      "name": "Use technology and AI ethically and responsibly",
+      "statement": "I can use digital technologies and AI responsibly by protecting privacy, crediting others' work, identifying bias and potential harm, and deciding when and how to use these tools.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.11.4",
+      "type": "skill",
+      "group": "Global Citizen",
+      "competency": "POG.11",
+      "name": "Act with integrity",
+      "statement": "I can act on my values when it is difficult, take responsibility for the impact of my actions, and take steps to make things right.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.12",
+      "type": "competency",
+      "group": "Scholar",
+      "competency": "POG.12",
+      "name": "Apply Academic Knowledge and Skills",
+      "statement": "I can read complex texts critically, analyze quantitative data, model with mathematics, develop and use models, investigate scientific questions, apply core disciplinary concepts in new situations, and strengthen my academic skills.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.12.1",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.12",
+      "name": "Read critically and make meaning of complex texts",
+      "statement": "I can read and analyze literary, informational, and subject-specific texts to understand ideas, evaluate arguments, and support interpretations with textual evidence.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.12.2",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.12",
+      "name": "Analyze and interpret quantitative data",
+      "statement": "I can organize, represent, analyze, and interpret quantitative data to identify patterns, evaluate claims, and draw supported conclusions.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.12.3",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.12",
+      "name": "Model with mathematics",
+      "statement": "I can use algebraic and other mathematical concepts, procedures, and representations (such as expressions, equations, inequalities, functions, and geometric figures) to represent real-world situations, solve problems, and interpret my results in context.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.12.4",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.12",
+      "name": "Develop and use models",
+      "statement": "I can develop, use, and refine models to represent real-world situations, explain relationships, make predictions, and evaluate how well the models represent reality.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.12.5",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.12",
+      "name": "Use scientific inquiry and reasoning",
+      "statement": "I can investigate scientific questions, gather and analyze evidence, and use scientific reasoning and core science concepts to develop and evaluate explanations.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.12.6",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.12",
+      "name": "Strengthen academic skills and prepare for assessments",
+      "statement": "I can identify areas for growth in my reading and math skills, use effective study and test-taking strategies and online learning programs, track my growth, and use assessment results to strengthen my academic performance and test scores.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.12.7",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.12",
+      "name": "Use digital and AI tools to learn and work",
+      "statement": "I can choose and use digital and AI tools, including tools used in my field of interest, to learn, investigate ideas, and produce quality work, checking the accuracy and usefulness of their outputs.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.13",
+      "type": "competency",
+      "group": "Scholar",
+      "competency": "POG.13",
+      "name": "Plan and Navigate My Postsecondary Future",
+      "statement": "I can explore opportunities that align with my interests, strengths, and goals, make informed decisions about my future, and take steps toward my chosen pathway, including managing my money and navigating new settings.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.13.1",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.13",
+      "name": "Explore my interests, strengths, and possibilities",
+      "statement": "I can connect my interests, strengths, and goals to possible education, training, career, and life pathways.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.13.2",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.13",
+      "name": "Investigate postsecondary and career pathways",
+      "statement": "I can research the requirements, costs, earnings, and job outlook of different pathways after high school, including college, apprenticeship, military, employment, and self-employment.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.13.3",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.13",
+      "name": "Evaluate options and make informed choices",
+      "statement": "I can compare possible pathways using my goals, values, opportunities, and constraints to make informed choices.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.13.4",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.13",
+      "name": "Plan and take steps toward my future",
+      "statement": "I can develop and carry out a plan for my next steps after high school, including coursework, work-based learning, credentials, continued learning, deadlines, and needed resources.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.13.5",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.13",
+      "name": "Navigate new settings",
+      "statement": "I can learn the expectations, rights, responsibilities, and supports in a new workplace, college, or training setting and use them to succeed and advocate for myself.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.13.6",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.13",
+      "name": "Manage my money",
+      "statement": "I can build and follow a budget and make informed decisions about earning, saving, spending, borrowing, and paying for education or training.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.14",
+      "type": "competency",
+      "group": "Scholar",
+      "competency": "POG.14",
+      "name": "Communicate my competencies, experiences, and goals",
+      "statement": "I can communicate my competencies, experiences, skills, and goals effectively in applications, interviews, portfolios, and other postsecondary opportunities.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.14.1",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.14",
+      "name": "Curate my portfolio",
+      "statement": "I can select, organize, and reflect on evidence of my competencies and experiences to show my growth and readiness.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.14.2",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.14",
+      "name": "Present and defend my portfolio",
+      "statement": "I can present my portfolio to an audience, explain what my evidence shows about my growth and readiness, and respond to questions about it.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.14.3",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.14",
+      "name": "Craft my application materials",
+      "statement": "I can create a resume, cover letter, personal statement, or online career profile tailored to a specific opportunity that shows why I am a strong fit.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.14.4",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.14",
+      "name": "Interview with confidence",
+      "statement": "I can prepare for and participate in interviews, answering questions with specific examples of my experiences and competencies, and follow up afterward.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.14.5",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.14",
+      "name": "Identify and secure references",
+      "statement": "I can identify people who know my work and character, ask them for references or recommendations, and keep them informed.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.14.6",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.14",
+      "name": "Communicate across workplace and community settings",
+      "statement": "I can communicate by email, phone, video, and in person in ways that fit the relationship, purpose, and setting, including workplaces, colleges, and community organizations.",
+      "hasProgression": false
+    },
+    {
+      "id": "POG.14.7",
+      "type": "skill",
+      "group": "Scholar",
+      "competency": "POG.14",
+      "name": "Manage my digital footprint and online presence",
+      "statement": "I can build and manage an online presence that represents me the way I intend to employers, colleges, and communities.",
+      "hasProgression": false
+    }
+  ],
+  "codes": [
+    {
+      "code": "Y1",
+      "name": "Academic Learning & Achievement",
+      "fit": "partial",
+      "portrait": [
+        "POG.12"
+      ],
+      "reason": "A broad academic result with no subject sits under Apply Academic Knowledge and Skills at the competency level only."
+    },
+    {
+      "code": "Y1.1",
+      "name": "Literacy: Reading & Writing",
+      "fit": "direct",
+      "portrait": [
+        "POG.12.1",
+        "POG.3.2"
+      ],
+      "reason": "Reading gains are Read Critically and Make Meaning of Complex Texts; writing gains are Convey Ideas in Writing."
+    },
+    {
+      "code": "Y1.2",
+      "name": "English Language Development & Multilingualism",
+      "fit": "none",
+      "portrait": [],
+      "reason": "The Portrait has no skill for learning English or keeping a home language."
+    },
+    {
+      "code": "Y1.3",
+      "name": "Mathematics",
+      "fit": "direct",
+      "portrait": [
+        "POG.12.3",
+        "POG.12.2"
+      ],
+      "reason": "Math skill and proficiency are Model with Mathematics and Analyze and Interpret Quantitative Data."
+    },
+    {
+      "code": "Y1.4",
+      "name": "Science, Technology & Engineering",
+      "fit": "partial",
+      "portrait": [
+        "POG.12.5",
+        "POG.12.4",
+        "POG.8.3"
+      ],
+      "reason": "Science inquiry and engineering design fit Use Scientific Inquiry, Develop and Use Models and the prototype skill; science content knowledge and coding have no Portrait skill."
+    },
+    {
+      "code": "Y1.5",
+      "name": "Other Academic Subjects",
+      "fit": "partial",
+      "portrait": [
+        "POG.10.4",
+        "POG.10.1"
+      ],
+      "reason": "History fits Analyze How the Past Shapes the Present and geography or economics fit Explain Global Interconnections; world languages have no Portrait skill."
+    },
+    {
+      "code": "Y1.6",
+      "name": "Arts Learning",
+      "fit": "partial",
+      "portrait": [
+        "POG.9.2",
+        "POG.3.4"
+      ],
+      "reason": "Art technique serves Develop and Refine Creative Work and Communicate Visually; the Portrait has no skill for art-form technique itself."
+    },
+    {
+      "code": "Y1.7",
+      "name": "Critical Thinking, Inquiry & Media Literacy",
+      "fit": "direct",
+      "portrait": [
+        "POG.7.1",
+        "POG.7.2",
+        "POG.7.3",
+        "POG.7.4",
+        "POG.7.5"
+      ],
+      "reason": "Evaluating sources, inquiry and media literacy are the Think Critically skills; one 3.3.0 code spreads across five of them."
+    },
+    {
+      "code": "Y1.8",
+      "name": "Early Learning & School Readiness",
+      "fit": "none",
+      "portrait": [],
+      "reason": "Covers children below kindergarten age; the Portrait stages start at kindergarten."
+    },
+    {
+      "code": "Y1.9",
+      "name": "Academic Engagement Behaviors",
+      "fit": "partial",
+      "portrait": [
+        "POG.1.3",
+        "POG.4.1"
+      ],
+      "reason": "Coming prepared and finishing homework touch Plan and Manage My Time; class participation touches Engage in Discussion. Much of the code is participation itself."
+    },
+    {
+      "code": "Y1.10",
+      "name": "Academic Perseverance",
+      "fit": "direct",
+      "portrait": [
+        "POG.2.4"
+      ],
+      "reason": "Sticking with hard schoolwork is Navigate Challenges and Adapt Through Change."
+    },
+    {
+      "code": "Y1.11",
+      "name": "Learning Strategies & Study Skills",
+      "fit": "direct",
+      "portrait": [
+        "POG.1.3",
+        "POG.1.4",
+        "POG.12.6"
+      ],
+      "reason": "Study methods and planners are Plan and Manage My Time and Monitor My Progress; test preparation is Strengthen Academic Skills and Prepare for Assessments."
+    },
+    {
+      "code": "Y1.12",
+      "name": "Academic Mindsets & Self-Efficacy",
+      "fit": "partial",
+      "portrait": [
+        "POG.2.4"
+      ],
+      "reason": "A growth mindset touches seeing setbacks as chances to learn; academic self-belief has no Portrait skill."
+    },
+    {
+      "code": "Y1.13",
+      "name": "Attendance & School Stability",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A status result; the Portrait describes skills."
+    },
+    {
+      "code": "Y1.14",
+      "name": "Exclusionary Discipline",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A status result; the Portrait describes skills."
+    },
+    {
+      "code": "Y1.15",
+      "name": "Grades, Credits & On-Track Status",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A status result. The nearest skill is Strengthen Academic Skills and Prepare for Assessments but that is the skill not the grade."
+    },
+    {
+      "code": "Y1.16",
+      "name": "Advanced Coursework & Dual Credit",
+      "fit": "partial",
+      "portrait": [
+        "POG.13.4"
+      ],
+      "reason": "Taking coursework and concurrent enrollment as steps of a plan fits Plan and Take Steps Toward My Future; enrollment alone is a status."
+    },
+    {
+      "code": "Y1.17",
+      "name": "High School Completion & Re-engagement",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A status result; the Portrait describes the graduate's skills not graduation itself."
+    },
+    {
+      "code": "Y1.18",
+      "name": "Postsecondary Enrollment, Persistence & Completion",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A status after high school; the Portrait describes skills."
+    },
+    {
+      "code": "Y2",
+      "name": "Engagement, Interest & Creative Expression",
+      "fit": "none",
+      "portrait": [],
+      "reason": "Too broad to place; most of the domain is enjoyment and interest."
+    },
+    {
+      "code": "Y2.1",
+      "name": "Enjoyment & Joy",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A feeling about the program; the Portrait describes skills."
+    },
+    {
+      "code": "Y2.2",
+      "name": "Curiosity & Triggered Interest",
+      "fit": "partial",
+      "portrait": [
+        "POG.7.1"
+      ],
+      "reason": "Asking questions out of curiosity is the early stages of Ask Questions; curiosity as a feeling has no skill."
+    },
+    {
+      "code": "Y2.3",
+      "name": "Sustained & Individual Interest",
+      "fit": "partial",
+      "portrait": [
+        "POG.1.1"
+      ],
+      "reason": "Pursuing a topic and naming what to learn next touch Connect What I'm Learning to What Matters to Me."
+    },
+    {
+      "code": "Y2.4",
+      "name": "Relevance & Utility Value",
+      "fit": "direct",
+      "portrait": [
+        "POG.1.1"
+      ],
+      "reason": "Seeing learning as useful for one's goals is Connect What I'm Learning to What Matters to Me."
+    },
+    {
+      "code": "Y2.5",
+      "name": "Creative Expression & Performance",
+      "fit": "partial",
+      "portrait": [
+        "POG.9.2",
+        "POG.3.4",
+        "POG.3.5"
+      ],
+      "reason": "Making and presenting creative work touches Develop and Refine Creative Work, Communicate Visually and Craft Stories; the code is the experience not a stated skill."
+    },
+    {
+      "code": "Y2.6",
+      "name": "Participation in Enriching Activities",
+      "fit": "partial",
+      "portrait": [
+        "POG.6.2"
+      ],
+      "reason": "Joining clubs or teams to meet new people is a stage of Build and Draw on My Network; returning to a program is participation."
+    },
+    {
+      "code": "Y3",
+      "name": "Belonging & Relationships",
+      "fit": "none",
+      "portrait": [],
+      "reason": "Too broad to place; most of the domain is relationships a young person has."
+    },
+    {
+      "code": "Y3.1",
+      "name": "Belonging & Mattering",
+      "fit": "none",
+      "portrait": [],
+      "reason": "Feeling one belongs. Foster Belonging is making others feel they belong; they are different results."
+    },
+    {
+      "code": "Y3.2",
+      "name": "Supportive Adult Relationships",
+      "fit": "partial",
+      "portrait": [
+        "POG.6.2"
+      ],
+      "reason": "Fits Build and Draw on My Network only when the young person seeks out and uses a mentor; having a caring adult is a relationship received."
+    },
+    {
+      "code": "Y3.3",
+      "name": "Peer Relationships & Friendship",
+      "fit": "none",
+      "portrait": [],
+      "reason": "The 11.2 version has no friendship or relationship skill."
+    },
+    {
+      "code": "Y3.4",
+      "name": "Family Relationships",
+      "fit": "none",
+      "portrait": [],
+      "reason": "The Portrait has no family relationship skill."
+    },
+    {
+      "code": "Y3.5",
+      "name": "Social Capital & Networks",
+      "fit": "direct",
+      "portrait": [
+        "POG.6.2"
+      ],
+      "reason": "Using a wider network for opportunities is Build and Draw on My Network."
+    },
+    {
+      "code": "Y4",
+      "name": "Social & Emotional Skills (CASEL)",
+      "fit": "partial",
+      "portrait": [
+        "POG.2",
+        "POG.4",
+        "POG.5"
+      ],
+      "reason": "Social and emotional skills with none named sit across Persist and Adapt, Dialogue and Advocacy and Collaborate at the competency level."
+    },
+    {
+      "code": "Y4.1",
+      "name": "Emotion Awareness",
+      "fit": "direct",
+      "portrait": [
+        "POG.2.3"
+      ],
+      "reason": "Naming one's emotions is the first part of Manage My Emotions, Stress and Impulses."
+    },
+    {
+      "code": "Y4.2",
+      "name": "Emotion Regulation & Coping",
+      "fit": "direct",
+      "portrait": [
+        "POG.2.3"
+      ],
+      "reason": "Managing emotions and coping with stress is Manage My Emotions, Stress and Impulses."
+    },
+    {
+      "code": "Y4.3",
+      "name": "Goal-Setting, Organization & Self-Discipline",
+      "fit": "direct",
+      "portrait": [
+        "POG.1.3",
+        "POG.1.4",
+        "POG.2.4"
+      ],
+      "reason": "Organization and follow-through are Plan and Manage My Time; goals and adjusting are Monitor My Progress; persistence is Navigate Challenges."
+    },
+    {
+      "code": "Y4.4",
+      "name": "Empathy, Perspective-Taking & Social Awareness",
+      "fit": "direct",
+      "portrait": [
+        "POG.4.1",
+        "POG.6.1"
+      ],
+      "reason": "Understanding others' perspectives is Engage in Discussion; responding to others' feelings with care is Foster Belonging."
+    },
+    {
+      "code": "Y4.5",
+      "name": "Respect for Diversity & Cultural Competence",
+      "fit": "partial",
+      "portrait": [
+        "POG.6.1",
+        "POG.4.1"
+      ],
+      "reason": "Including people of other backgrounds touches Foster Belonging and listening across differences; bias awareness has no single skill."
+    },
+    {
+      "code": "Y4.6",
+      "name": "Communication & Public Speaking",
+      "fit": "direct",
+      "portrait": [
+        "POG.3.3",
+        "POG.3.1",
+        "POG.4.1"
+      ],
+      "reason": "Public speaking is Present to an Audience and Choose and Introduce My Message; active listening is Engage in Discussion."
+    },
+    {
+      "code": "Y4.7",
+      "name": "Teamwork, Collaboration & Group Leadership",
+      "fit": "direct",
+      "portrait": [
+        "POG.5.1",
+        "POG.5.2",
+        "POG.5.3",
+        "POG.5.4"
+      ],
+      "reason": "Teamwork and leading within a team are the Collaborate skills; one 3.3.0 code spreads across all four."
+    },
+    {
+      "code": "Y4.8",
+      "name": "Relationship-Building & Conflict Resolution",
+      "fit": "direct",
+      "portrait": [
+        "POG.4.2",
+        "POG.5.2"
+      ],
+      "reason": "Resolving conflict and repairing relationships is Navigate Difficult Conversations and Navigate Conflicts on a team."
+    },
+    {
+      "code": "Y4.9",
+      "name": "Help-Seeking & Offering Support",
+      "fit": "partial",
+      "portrait": [
+        "POG.4.3",
+        "POG.6.2",
+        "POG.2.2"
+      ],
+      "reason": "Asking for help touches Advocate for Myself, knowing who to ask touches Build and Draw on My Network, and seeking support for mental health touches Care for My Well-Being."
+    },
+    {
+      "code": "Y4.10",
+      "name": "Decision-Making & Problem-Solving",
+      "fit": "direct",
+      "portrait": [
+        "POG.8.1",
+        "POG.8.2",
+        "POG.8.3",
+        "POG.8.4"
+      ],
+      "reason": "Working a problem through from naming it to acting is the Solve Problems skills; weighing consequences also touches Ethical Choices."
+    },
+    {
+      "code": "Y4.11",
+      "name": "Ethical & Prosocial Choices",
+      "fit": "direct",
+      "portrait": [
+        "POG.11.4",
+        "POG.4.4"
+      ],
+      "reason": "An ethical choice in the moment is Act with Integrity; standing up for a classmate is Advocate for Others."
+    },
+    {
+      "code": "Y4.12",
+      "name": "Risk Avoidance & Refusal Skills",
+      "fit": "partial",
+      "portrait": [
+        "POG.2.3"
+      ],
+      "reason": "Resisting pressure touches managing impulses; avoiding unsafe situations has no Portrait skill."
+    },
+    {
+      "code": "Y5",
+      "name": "Identity, Confidence & Agency",
+      "fit": "none",
+      "portrait": [],
+      "reason": "Too broad to place; most of the domain is identity and confidence."
+    },
+    {
+      "code": "Y5.1",
+      "name": "Self-Understanding & Identity Exploration",
+      "fit": "partial",
+      "portrait": [
+        "POG.2.1"
+      ],
+      "reason": "Articulating one's values fits Know My Values and Aspirations; identity exploration has no skill in the 11.2 version."
+    },
+    {
+      "code": "Y5.2",
+      "name": "Cultural & Social Identity",
+      "fit": "none",
+      "portrait": [],
+      "reason": "The 11.2 version dropped the identity and heritage skill that the Beacon version has."
+    },
+    {
+      "code": "Y5.3",
+      "name": "Domain Identity",
+      "fit": "none",
+      "portrait": [],
+      "reason": "Seeing oneself as a kind of person in a field has no Portrait skill."
+    },
+    {
+      "code": "Y5.4",
+      "name": "Confidence, Self-Efficacy & Self-Worth",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A belief about oneself. The nearest skill is taking healthy risks under Navigate Challenges but confidence is not a skill in the Portrait."
+    },
+    {
+      "code": "Y5.5",
+      "name": "Purpose & Future Orientation",
+      "fit": "direct",
+      "portrait": [
+        "POG.2.1"
+      ],
+      "reason": "Aspirations and a sense of purpose are Know My Values and Aspirations."
+    },
+    {
+      "code": "Y5.6",
+      "name": "Agency, Self-Determination & Self-Advocacy",
+      "fit": "direct",
+      "portrait": [
+        "POG.4.3"
+      ],
+      "reason": "Advocating for one's own needs and directing one's supports is Advocate for Myself."
+    },
+    {
+      "code": "Y6",
+      "name": "Character, Values & Civic Life",
+      "fit": "partial",
+      "portrait": [
+        "POG.10",
+        "POG.11"
+      ],
+      "reason": "Civic or character results with none named sit under Global Citizen and Ethical Choices at the competency level."
+    },
+    {
+      "code": "Y6.1",
+      "name": "Positive Values & Character",
+      "fit": "partial",
+      "portrait": [
+        "POG.11.4",
+        "POG.2.1"
+      ],
+      "reason": "Living out values touches Act with Integrity and Know My Values; character traits as such are not skills."
+    },
+    {
+      "code": "Y6.2",
+      "name": "Civic Knowledge",
+      "fit": "direct",
+      "portrait": [
+        "POG.10.2"
+      ],
+      "reason": "Knowing how government and elections work is Participate in Civic and Democratic Life."
+    },
+    {
+      "code": "Y6.3",
+      "name": "Critical Consciousness & Social Justice",
+      "fit": "direct",
+      "portrait": [
+        "POG.4.4",
+        "POG.10.3"
+      ],
+      "reason": "Recognizing and challenging patterns of injustice is the upper stages of Advocate for Others; analyzing issues across perspectives is Examine Global Issues."
+    },
+    {
+      "code": "Y6.4",
+      "name": "Civic Voice, Leadership & Participation",
+      "fit": "direct",
+      "portrait": [
+        "POG.10.2",
+        "POG.4.4"
+      ],
+      "reason": "Influencing collective decisions is Participate in Civic and Democratic Life; advocacy for change is Advocate for Others."
+    },
+    {
+      "code": "Y6.5",
+      "name": "Community Service & Action",
+      "fit": "direct",
+      "portrait": [
+        "POG.6.3"
+      ],
+      "reason": "Identifying a community issue and acting on it is Take Action to Improve My Community."
+    },
+    {
+      "code": "Y6.6",
+      "name": "Environmental Stewardship",
+      "fit": "partial",
+      "portrait": [
+        "POG.11.2"
+      ],
+      "reason": "Weighing one's impact on the environment touches Weigh the Impact of My Choices; connection to nature has no skill."
+    },
+    {
+      "code": "Y6.7",
+      "name": "Digital Citizenship & Online Safety",
+      "fit": "direct",
+      "portrait": [
+        "POG.6.4",
+        "POG.11.3"
+      ],
+      "reason": "Online safety and respectful conduct are Healthy Online Communities and Use Technology and AI Ethically."
+    },
+    {
+      "code": "Y7",
+      "name": "Career & Economic Readiness",
+      "fit": "partial",
+      "portrait": [
+        "POG.13"
+      ],
+      "reason": "Career readiness with none named sits under Plan and Navigate My Postsecondary Future at the competency level."
+    },
+    {
+      "code": "Y7.1",
+      "name": "Career Awareness & Exploration",
+      "fit": "direct",
+      "portrait": [
+        "POG.13.1",
+        "POG.13.2"
+      ],
+      "reason": "Exploring careers and interests is Explore My Interests and Investigate Postsecondary and Career Pathways."
+    },
+    {
+      "code": "Y7.2",
+      "name": "College & Career Transition Knowledge",
+      "fit": "direct",
+      "portrait": [
+        "POG.13.4",
+        "POG.13.2",
+        "POG.14.3",
+        "POG.14.4"
+      ],
+      "reason": "Applications and financial aid are Plan and Take Steps; resumes and interviews are Craft My Application Materials and Interview with Confidence. The few application portfolio statements would fit Curate My Portfolio, a second-pass question."
+    },
+    {
+      "code": "Y7.3",
+      "name": "Employability & Workplace Skills",
+      "fit": "direct",
+      "portrait": [
+        "POG.14.6",
+        "POG.13.5"
+      ],
+      "reason": "Workplace communication is Communicate Across Workplace Settings; professional conduct is Navigate New Settings."
+    },
+    {
+      "code": "Y7.4",
+      "name": "Technical Skills, Credentials & Work-Based Learning",
+      "fit": "partial",
+      "portrait": [
+        "POG.13.4"
+      ],
+      "reason": "Credentials and internships as steps of a plan fit Plan and Take Steps; trade skills themselves have no Portrait skill."
+    },
+    {
+      "code": "Y7.5",
+      "name": "Employment & Earnings",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A status result; the Portrait describes skills."
+    },
+    {
+      "code": "Y7.6",
+      "name": "Financial Capability",
+      "fit": "direct",
+      "portrait": [
+        "POG.13.6"
+      ],
+      "reason": "Budgeting saving and credit are Manage My Money."
+    },
+    {
+      "code": "Y7.7",
+      "name": "Independent Living Skills",
+      "fit": "none",
+      "portrait": [],
+      "reason": "Cooking transport and documents have no Portrait skill; money skills alone go to Financial Capability."
+    },
+    {
+      "code": "Y8",
+      "name": "Health, Safety & Well-Being",
+      "fit": "none",
+      "portrait": [],
+      "reason": "Too broad to place; most of the domain is health conditions and services."
+    },
+    {
+      "code": "Y8.1",
+      "name": "Healthy Daily Habits",
+      "fit": "direct",
+      "portrait": [
+        "POG.2.2"
+      ],
+      "reason": "Activity nutrition sleep and screen time habits are Care for My Well-Being."
+    },
+    {
+      "code": "Y8.2",
+      "name": "Motor & Sport Skills",
+      "fit": "none",
+      "portrait": [],
+      "reason": "The Portrait has no physical skill."
+    },
+    {
+      "code": "Y8.3",
+      "name": "Health Knowledge & Safety Skills",
+      "fit": "partial",
+      "portrait": [
+        "POG.2.2",
+        "POG.7.2"
+      ],
+      "reason": "Health knowledge touches Care for My Well-Being and finding reliable health information touches Find and Evaluate Information; first aid has no skill."
+    },
+    {
+      "code": "Y8.4",
+      "name": "Sexual & Reproductive Health",
+      "fit": "partial",
+      "portrait": [
+        "POG.2.2"
+      ],
+      "reason": "Health behavior touches Care for My Well-Being; the Portrait does not name sexual health."
+    },
+    {
+      "code": "Y8.5",
+      "name": "Health Care Access & Condition Management",
+      "fit": "none",
+      "portrait": [],
+      "reason": "Receiving care is a service result not a skill."
+    },
+    {
+      "code": "Y8.6",
+      "name": "Mental Health Symptoms & Distress",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A symptom level not a skill; coping skills go to Emotion Regulation."
+    },
+    {
+      "code": "Y8.7",
+      "name": "Flourishing & Life Satisfaction",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A state of well-being not a skill; the habits that support it go to Healthy Daily Habits."
+    },
+    {
+      "code": "Y8.8",
+      "name": "Healing & Trauma Recovery",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A recovery result not a skill."
+    },
+    {
+      "code": "Y8.9",
+      "name": "Mental Health Service Access & Use",
+      "fit": "none",
+      "portrait": [],
+      "reason": "Using services is a service result not a skill."
+    },
+    {
+      "code": "Y8.10",
+      "name": "Felt Safety",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A feeling not a skill."
+    },
+    {
+      "code": "Y8.11",
+      "name": "Substance Use",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A behavior result the Portrait does not name."
+    },
+    {
+      "code": "Y8.12",
+      "name": "Violence, Bullying & Victimization",
+      "fit": "none",
+      "portrait": [],
+      "reason": "An incidence result the Portrait does not name."
+    },
+    {
+      "code": "Y8.13",
+      "name": "Justice Involvement, Diversion & Reentry",
+      "fit": "none",
+      "portrait": [],
+      "reason": "A status result the Portrait does not name."
+    },
+    {
+      "code": "F1",
+      "name": "Family & Caregiver Strengthening",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F1.1",
+      "name": "Parenting Knowledge & Practices",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F1.2",
+      "name": "Home Learning Environment & Routines",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F1.3",
+      "name": "Family Health Practices",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F1.4",
+      "name": "Caregiver Well-Being & Resilience",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F1.5",
+      "name": "Caregiver Social Connections",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F1.6",
+      "name": "Adult Education, Skills & Employment",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F1.7",
+      "name": "System Navigation & Rights Knowledge",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F1.8",
+      "name": "Family Connection & Trust with the Program",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F1.9",
+      "name": "Family Participation & Leadership",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F2",
+      "name": "Basic Needs & Economic Stability",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F2.1",
+      "name": "Income, Benefits & Financial Stability",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F2.2",
+      "name": "Food Security",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F2.3",
+      "name": "Housing Stability & Safe Living Situation",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "F2.4",
+      "name": "Material Necessities (Clothing, Gear & Supplies)",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About families; the Portrait describes students."
+    },
+    {
+      "code": "A1",
+      "name": "Staff & Volunteer Capacity",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About staff; the Portrait describes students."
+    },
+    {
+      "code": "A1.1",
+      "name": "Staff & Volunteer Knowledge & Skills",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About staff; the Portrait describes students."
+    },
+    {
+      "code": "A1.2",
+      "name": "Practice Change",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About staff; the Portrait describes students."
+    },
+    {
+      "code": "A1.3",
+      "name": "Workforce Stability & Well-Being",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About staff; the Portrait describes students."
+    },
+    {
+      "code": "A2",
+      "name": "Program Quality, Access & Reach",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About programs; the Portrait describes students."
+    },
+    {
+      "code": "A2.1",
+      "name": "Program Quality",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About programs; the Portrait describes students."
+    },
+    {
+      "code": "A2.2",
+      "name": "Participant & Family Satisfaction",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About programs; the Portrait describes students."
+    },
+    {
+      "code": "A2.3",
+      "name": "Access to Resources",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About programs; the Portrait describes students."
+    },
+    {
+      "code": "A2.4",
+      "name": "Inclusion, Accommodations & Language Access",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About programs; the Portrait describes students."
+    },
+    {
+      "code": "A2.5",
+      "name": "Participation, Dosage & Reach (Output)",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About programs; the Portrait describes students."
+    },
+    {
+      "code": "A2.6",
+      "name": "Family Engagement Systems",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About programs; the Portrait describes students."
+    },
+    {
+      "code": "A3",
+      "name": "Systems, Policy & Community Conditions",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About systems; the Portrait describes students."
+    },
+    {
+      "code": "A3.1",
+      "name": "Policy & Institutional Change",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About systems; the Portrait describes students."
+    },
+    {
+      "code": "A3.2",
+      "name": "Cross-Sector Partnerships",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About systems; the Portrait describes students."
+    },
+    {
+      "code": "A3.3",
+      "name": "Community Conditions & Collective Efficacy",
+      "fit": "none",
+      "portrait": [],
+      "reason": "About systems; the Portrait describes students."
+    }
+  ]
+}

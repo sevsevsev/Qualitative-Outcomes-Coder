@@ -110,7 +110,8 @@ export interface AdminFeedback extends PublicFeedback {
 
 export const GENERAL_TARGET_LABEL = 'Whole codebook';
 
-const LEADING_NUMBER = /^(?:(?:Domain|Code)\s+)?([A-Z]?\d+(?:\.\d+)*)[.:]?\s+/;
+// Same number shapes as the explorer's CODE_RE, including "POG.1.1" and "OUT".
+const LEADING_NUMBER = /^(?:(?:Domain|Code)\s+)?([A-Z]{2,3}(?:\.\d+)+|[A-Z]{3}|[A-Z]?\d+(?:\.\d+)*)[.:]?\s+/;
 
 /** The leading number of a domain or subcategory code string ("1.3 Math" -> "1.3"). */
 export const codeNumber = (code: string): string => code.trim().match(LEADING_NUMBER)?.[1] ?? '';

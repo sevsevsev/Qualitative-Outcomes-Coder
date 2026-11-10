@@ -57,6 +57,11 @@ Read these before touching any codebook:
   DOMAIN ONLY bullet, and CP-12-33's new code F2.4 Material Necessities (99 codes, enum 161). Y8 parts, G11-blocked
   hints and held parts are left out. It awaits Severin's two-run gate; see
   `codebook-refinement/research-review/2026-10-16/full-review/gate-candidate-3.3.0.md`.
+- Portrait of a Graduate (2026-11-10, CP-13-01, `portrait_of_a_graduate` 0.1.0, testing): a separate codebook
+  that codes statements straight to the District's Portrait of a Graduate competencies and skills (version 11.2,
+  14 competencies, 69 skills, plus a codebook-defined OUT block for results the Portrait does not name). It never
+  codes progression stages. No gold set yet. `codebook-refinement/portrait-of-a-graduate/` also holds a draft
+  crosswalk from 3.3.0 codes to Portrait skills. The framework is CC BY-NC-SA 4.0 (Building 21 for the District).
 - `codebooks/original.ts` (2.5.x) was retired on 2026-09-26: no picker offers it, but it stays registered (marked `deprecated`) so saved sessions, old exports, eval scripts and direct Codebook-tab links still resolve its codes. Older files may use
   pre-2.0.0 numbers; see `codebook-refinement/renumbering/`.
 - A public explorer-only site is built from this repo with `VITE_SITE=explorer` (README,

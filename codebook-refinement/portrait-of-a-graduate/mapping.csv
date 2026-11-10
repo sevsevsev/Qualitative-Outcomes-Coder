@@ -1,0 +1,113 @@
+code,code_name,fit,portrait,reason
+Y1,Academic Learning & Achievement,partial,POG.12,A broad academic result with no subject sits under Apply Academic Knowledge and Skills at the competency level only.
+Y1.1,Literacy: Reading & Writing,direct,POG.12.1;POG.3.2,Reading gains are Read Critically and Make Meaning of Complex Texts; writing gains are Convey Ideas in Writing.
+Y1.2,English Language Development & Multilingualism,none,,The Portrait has no skill for learning English or keeping a home language.
+Y1.3,Mathematics,direct,POG.12.3;POG.12.2,Math skill and proficiency are Model with Mathematics and Analyze and Interpret Quantitative Data.
+Y1.4,"Science, Technology & Engineering",partial,POG.12.5;POG.12.4;POG.8.3,"Science inquiry and engineering design fit Use Scientific Inquiry, Develop and Use Models and the prototype skill; science content knowledge and coding have no Portrait skill."
+Y1.5,Other Academic Subjects,partial,POG.10.4;POG.10.1,History fits Analyze How the Past Shapes the Present and geography or economics fit Explain Global Interconnections; world languages have no Portrait skill.
+Y1.6,Arts Learning,partial,POG.9.2;POG.3.4,Art technique serves Develop and Refine Creative Work and Communicate Visually; the Portrait has no skill for art-form technique itself.
+Y1.7,"Critical Thinking, Inquiry & Media Literacy",direct,POG.7.1;POG.7.2;POG.7.3;POG.7.4;POG.7.5,"Evaluating sources, inquiry and media literacy are the Think Critically skills; one 3.3.0 code spreads across five of them."
+Y1.8,Early Learning & School Readiness,none,,Covers children below kindergarten age; the Portrait stages start at kindergarten.
+Y1.9,Academic Engagement Behaviors,partial,POG.1.3;POG.4.1,Coming prepared and finishing homework touch Plan and Manage My Time; class participation touches Engage in Discussion. Much of the code is participation itself.
+Y1.10,Academic Perseverance,direct,POG.2.4,Sticking with hard schoolwork is Navigate Challenges and Adapt Through Change.
+Y1.11,Learning Strategies & Study Skills,direct,POG.1.3;POG.1.4;POG.12.6,Study methods and planners are Plan and Manage My Time and Monitor My Progress; test preparation is Strengthen Academic Skills and Prepare for Assessments.
+Y1.12,Academic Mindsets & Self-Efficacy,partial,POG.2.4,A growth mindset touches seeing setbacks as chances to learn; academic self-belief has no Portrait skill.
+Y1.13,Attendance & School Stability,none,,A status result; the Portrait describes skills.
+Y1.14,Exclusionary Discipline,none,,A status result; the Portrait describes skills.
+Y1.15,"Grades, Credits & On-Track Status",none,,A status result. The nearest skill is Strengthen Academic Skills and Prepare for Assessments but that is the skill not the grade.
+Y1.16,Advanced Coursework & Dual Credit,partial,POG.13.4,Taking coursework and concurrent enrollment as steps of a plan fits Plan and Take Steps Toward My Future; enrollment alone is a status.
+Y1.17,High School Completion & Re-engagement,none,,A status result; the Portrait describes the graduate's skills not graduation itself.
+Y1.18,"Postsecondary Enrollment, Persistence & Completion",none,,A status after high school; the Portrait describes skills.
+Y2,"Engagement, Interest & Creative Expression",none,,Too broad to place; most of the domain is enjoyment and interest.
+Y2.1,Enjoyment & Joy,none,,A feeling about the program; the Portrait describes skills.
+Y2.2,Curiosity & Triggered Interest,partial,POG.7.1,Asking questions out of curiosity is the early stages of Ask Questions; curiosity as a feeling has no skill.
+Y2.3,Sustained & Individual Interest,partial,POG.1.1,Pursuing a topic and naming what to learn next touch Connect What I'm Learning to What Matters to Me.
+Y2.4,Relevance & Utility Value,direct,POG.1.1,Seeing learning as useful for one's goals is Connect What I'm Learning to What Matters to Me.
+Y2.5,Creative Expression & Performance,partial,POG.9.2;POG.3.4;POG.3.5,"Making and presenting creative work touches Develop and Refine Creative Work, Communicate Visually and Craft Stories; the code is the experience not a stated skill."
+Y2.6,Participation in Enriching Activities,partial,POG.6.2,Joining clubs or teams to meet new people is a stage of Build and Draw on My Network; returning to a program is participation.
+Y3,Belonging & Relationships,none,,Too broad to place; most of the domain is relationships a young person has.
+Y3.1,Belonging & Mattering,none,,Feeling one belongs. Foster Belonging is making others feel they belong; they are different results.
+Y3.2,Supportive Adult Relationships,partial,POG.6.2,Fits Build and Draw on My Network only when the young person seeks out and uses a mentor; having a caring adult is a relationship received.
+Y3.3,Peer Relationships & Friendship,none,,The 11.2 version has no friendship or relationship skill.
+Y3.4,Family Relationships,none,,The Portrait has no family relationship skill.
+Y3.5,Social Capital & Networks,direct,POG.6.2,Using a wider network for opportunities is Build and Draw on My Network.
+Y4,Social & Emotional Skills (CASEL),partial,POG.2;POG.4;POG.5,"Social and emotional skills with none named sit across Persist and Adapt, Dialogue and Advocacy and Collaborate at the competency level."
+Y4.1,Emotion Awareness,direct,POG.2.3,"Naming one's emotions is the first part of Manage My Emotions, Stress and Impulses."
+Y4.2,Emotion Regulation & Coping,direct,POG.2.3,"Managing emotions and coping with stress is Manage My Emotions, Stress and Impulses."
+Y4.3,"Goal-Setting, Organization & Self-Discipline",direct,POG.1.3;POG.1.4;POG.2.4,Organization and follow-through are Plan and Manage My Time; goals and adjusting are Monitor My Progress; persistence is Navigate Challenges.
+Y4.4,"Empathy, Perspective-Taking & Social Awareness",direct,POG.4.1;POG.6.1,Understanding others' perspectives is Engage in Discussion; responding to others' feelings with care is Foster Belonging.
+Y4.5,Respect for Diversity & Cultural Competence,partial,POG.6.1;POG.4.1,Including people of other backgrounds touches Foster Belonging and listening across differences; bias awareness has no single skill.
+Y4.6,Communication & Public Speaking,direct,POG.3.3;POG.3.1;POG.4.1,Public speaking is Present to an Audience and Choose and Introduce My Message; active listening is Engage in Discussion.
+Y4.7,"Teamwork, Collaboration & Group Leadership",direct,POG.5.1;POG.5.2;POG.5.3;POG.5.4,Teamwork and leading within a team are the Collaborate skills; one 3.3.0 code spreads across all four.
+Y4.8,Relationship-Building & Conflict Resolution,direct,POG.4.2;POG.5.2,Resolving conflict and repairing relationships is Navigate Difficult Conversations and Navigate Conflicts on a team.
+Y4.9,Help-Seeking & Offering Support,partial,POG.4.3;POG.6.2;POG.2.2,"Asking for help touches Advocate for Myself, knowing who to ask touches Build and Draw on My Network, and seeking support for mental health touches Care for My Well-Being."
+Y4.10,Decision-Making & Problem-Solving,direct,POG.8.1;POG.8.2;POG.8.3;POG.8.4,Working a problem through from naming it to acting is the Solve Problems skills; weighing consequences also touches Ethical Choices.
+Y4.11,Ethical & Prosocial Choices,direct,POG.11.4;POG.4.4,An ethical choice in the moment is Act with Integrity; standing up for a classmate is Advocate for Others.
+Y4.12,Risk Avoidance & Refusal Skills,partial,POG.2.3,Resisting pressure touches managing impulses; avoiding unsafe situations has no Portrait skill.
+Y5,"Identity, Confidence & Agency",none,,Too broad to place; most of the domain is identity and confidence.
+Y5.1,Self-Understanding & Identity Exploration,partial,POG.2.1,Articulating one's values fits Know My Values and Aspirations; identity exploration has no skill in the 11.2 version.
+Y5.2,Cultural & Social Identity,none,,The 11.2 version dropped the identity and heritage skill that the Beacon version has.
+Y5.3,Domain Identity,none,,Seeing oneself as a kind of person in a field has no Portrait skill.
+Y5.4,"Confidence, Self-Efficacy & Self-Worth",none,,A belief about oneself. The nearest skill is taking healthy risks under Navigate Challenges but confidence is not a skill in the Portrait.
+Y5.5,Purpose & Future Orientation,direct,POG.2.1,Aspirations and a sense of purpose are Know My Values and Aspirations.
+Y5.6,"Agency, Self-Determination & Self-Advocacy",direct,POG.4.3,Advocating for one's own needs and directing one's supports is Advocate for Myself.
+Y6,"Character, Values & Civic Life",partial,POG.10;POG.11,Civic or character results with none named sit under Global Citizen and Ethical Choices at the competency level.
+Y6.1,Positive Values & Character,partial,POG.11.4;POG.2.1,Living out values touches Act with Integrity and Know My Values; character traits as such are not skills.
+Y6.2,Civic Knowledge,direct,POG.10.2,Knowing how government and elections work is Participate in Civic and Democratic Life.
+Y6.3,Critical Consciousness & Social Justice,direct,POG.4.4;POG.10.3,Recognizing and challenging patterns of injustice is the upper stages of Advocate for Others; analyzing issues across perspectives is Examine Global Issues.
+Y6.4,"Civic Voice, Leadership & Participation",direct,POG.10.2;POG.4.4,Influencing collective decisions is Participate in Civic and Democratic Life; advocacy for change is Advocate for Others.
+Y6.5,Community Service & Action,direct,POG.6.3,Identifying a community issue and acting on it is Take Action to Improve My Community.
+Y6.6,Environmental Stewardship,partial,POG.11.2,Weighing one's impact on the environment touches Weigh the Impact of My Choices; connection to nature has no skill.
+Y6.7,Digital Citizenship & Online Safety,direct,POG.6.4;POG.11.3,Online safety and respectful conduct are Healthy Online Communities and Use Technology and AI Ethically.
+Y7,Career & Economic Readiness,partial,POG.13,Career readiness with none named sits under Plan and Navigate My Postsecondary Future at the competency level.
+Y7.1,Career Awareness & Exploration,direct,POG.13.1;POG.13.2,Exploring careers and interests is Explore My Interests and Investigate Postsecondary and Career Pathways.
+Y7.2,College & Career Transition Knowledge,direct,POG.13.4;POG.13.2;POG.14.3;POG.14.4,"Applications and financial aid are Plan and Take Steps; resumes and interviews are Craft My Application Materials and Interview with Confidence. The few application portfolio statements would fit Curate My Portfolio, a second-pass question."
+Y7.3,Employability & Workplace Skills,direct,POG.14.6;POG.13.5,Workplace communication is Communicate Across Workplace Settings; professional conduct is Navigate New Settings.
+Y7.4,"Technical Skills, Credentials & Work-Based Learning",partial,POG.13.4,Credentials and internships as steps of a plan fit Plan and Take Steps; trade skills themselves have no Portrait skill.
+Y7.5,Employment & Earnings,none,,A status result; the Portrait describes skills.
+Y7.6,Financial Capability,direct,POG.13.6,Budgeting saving and credit are Manage My Money.
+Y7.7,Independent Living Skills,none,,Cooking transport and documents have no Portrait skill; money skills alone go to Financial Capability.
+Y8,"Health, Safety & Well-Being",none,,Too broad to place; most of the domain is health conditions and services.
+Y8.1,Healthy Daily Habits,direct,POG.2.2,Activity nutrition sleep and screen time habits are Care for My Well-Being.
+Y8.2,Motor & Sport Skills,none,,The Portrait has no physical skill.
+Y8.3,Health Knowledge & Safety Skills,partial,POG.2.2;POG.7.2,Health knowledge touches Care for My Well-Being and finding reliable health information touches Find and Evaluate Information; first aid has no skill.
+Y8.4,Sexual & Reproductive Health,partial,POG.2.2,Health behavior touches Care for My Well-Being; the Portrait does not name sexual health.
+Y8.5,Health Care Access & Condition Management,none,,Receiving care is a service result not a skill.
+Y8.6,Mental Health Symptoms & Distress,none,,A symptom level not a skill; coping skills go to Emotion Regulation.
+Y8.7,Flourishing & Life Satisfaction,none,,A state of well-being not a skill; the habits that support it go to Healthy Daily Habits.
+Y8.8,Healing & Trauma Recovery,none,,A recovery result not a skill.
+Y8.9,Mental Health Service Access & Use,none,,Using services is a service result not a skill.
+Y8.10,Felt Safety,none,,A feeling not a skill.
+Y8.11,Substance Use,none,,A behavior result the Portrait does not name.
+Y8.12,"Violence, Bullying & Victimization",none,,An incidence result the Portrait does not name.
+Y8.13,"Justice Involvement, Diversion & Reentry",none,,A status result the Portrait does not name.
+F1,Family & Caregiver Strengthening,none,,About families; the Portrait describes students.
+F1.1,Parenting Knowledge & Practices,none,,About families; the Portrait describes students.
+F1.2,Home Learning Environment & Routines,none,,About families; the Portrait describes students.
+F1.3,Family Health Practices,none,,About families; the Portrait describes students.
+F1.4,Caregiver Well-Being & Resilience,none,,About families; the Portrait describes students.
+F1.5,Caregiver Social Connections,none,,About families; the Portrait describes students.
+F1.6,"Adult Education, Skills & Employment",none,,About families; the Portrait describes students.
+F1.7,System Navigation & Rights Knowledge,none,,About families; the Portrait describes students.
+F1.8,Family Connection & Trust with the Program,none,,About families; the Portrait describes students.
+F1.9,Family Participation & Leadership,none,,About families; the Portrait describes students.
+F2,Basic Needs & Economic Stability,none,,About families; the Portrait describes students.
+F2.1,"Income, Benefits & Financial Stability",none,,About families; the Portrait describes students.
+F2.2,Food Security,none,,About families; the Portrait describes students.
+F2.3,Housing Stability & Safe Living Situation,none,,About families; the Portrait describes students.
+F2.4,"Material Necessities (Clothing, Gear & Supplies)",none,,About families; the Portrait describes students.
+A1,Staff & Volunteer Capacity,none,,About staff; the Portrait describes students.
+A1.1,Staff & Volunteer Knowledge & Skills,none,,About staff; the Portrait describes students.
+A1.2,Practice Change,none,,About staff; the Portrait describes students.
+A1.3,Workforce Stability & Well-Being,none,,About staff; the Portrait describes students.
+A2,"Program Quality, Access & Reach",none,,About programs; the Portrait describes students.
+A2.1,Program Quality,none,,About programs; the Portrait describes students.
+A2.2,Participant & Family Satisfaction,none,,About programs; the Portrait describes students.
+A2.3,Access to Resources,none,,About programs; the Portrait describes students.
+A2.4,"Inclusion, Accommodations & Language Access",none,,About programs; the Portrait describes students.
+A2.5,"Participation, Dosage & Reach (Output)",none,,About programs; the Portrait describes students.
+A2.6,Family Engagement Systems,none,,About programs; the Portrait describes students.
+A3,"Systems, Policy & Community Conditions",none,,About systems; the Portrait describes students.
+A3.1,Policy & Institutional Change,none,,About systems; the Portrait describes students.
+A3.2,Cross-Sector Partnerships,none,,About systems; the Portrait describes students.
+A3.3,Community Conditions & Collective Efficacy,none,,About systems; the Portrait describes students.

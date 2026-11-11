@@ -23,7 +23,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 SPOT = HERE.parent / 'spotlight'
-VERSION = '1.0.0'
+VERSION = '1.1.0'
 ACCEPTED = {'SUPPORTED', 'PARTIAL'}
 TIERS = {'recommend-with-conditions': 'tested', 'associated': 'research-associated',
          'not-recommended': 'checked, not supported'}
